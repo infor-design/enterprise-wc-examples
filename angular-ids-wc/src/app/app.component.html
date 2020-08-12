@@ -1,0 +1,3 @@
+<ids-tag #myTag>{{ name }}</ids-tag>
+<ids-tag [color]="type"><span>{{ person }}</span></ids-tag>
+<ids-tag dismissible="true" (tagremoved)="onTagRemoved($event)"><slot>{{ person }}</slot></ids-tag>

@@ -1,1 +1,25 @@
-# enterprise-wc-examples
+# Enterprise Web Component Examples
+
+This repo has example projects for running the new IDS web-component version components in other frameworks like React, Angular and Vue.js. The hope is to be able to use the web components directly along with types include in the Web component project.
+
+Initially we want to test three projects with a preliminary tag component. We will test the following criteria
+
+1. Uses stackblitz.com starter project which can be downloaded as a locale project but we want simple starter projects and to share them in here.
+1. Show a tag in the page bound to data in the test framework
+1. Uses the tag component. Initially you may have to manually include the tag code in the project until we deploy to npm.
+1. Consider framework key features and document things we should probably want to do. For example for Angular:
+  - Provide binding to the model for values
+  - Catching and handling events emitted 
+  - Setting and changing settings (color for example) 
+  - Templating like loops or text values
+
+## Vue.js 
+Starter Project: https://stackblitz.com/edit/vue
+[See README](./vue-ids-wc/README.md)
+
+## React
+Starter Project: https://stackblitz.com/edit/react-un5ayt
+[See README](./react-ids-wc/README.md)
+
+## Angular
+[See README](./angular-ids-wc/README.md)
