@@ -8,10 +8,11 @@ Initially we want to test three projects with a preliminary tag component. We wi
 1. Show a tag in the page bound to data in the test framework
 1. Uses the tag component. Initially you may have to manually include the tag code in the project until we deploy to npm.
 1. Consider framework key features and document things we should probably want to do. For example for Angular:
-  - Provide binding to the model for values
-  - Catching and handling events emitted 
-  - Setting and changing settings (color for example) 
-  - Templating like loops or text values
+  * Provide binding to the model for values
+  * Catching and handling events emitted 
+  * Setting and changing settings (color for example) 
+  * Templating like loops or text values
+  * Research common framework features (forms ect)
 
 ## Vue.js 
 Starter Project: https://stackblitz.com/edit/vue
