@@ -23,8 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/@infor-ids/css/ids-tag/ids-tag.min.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
