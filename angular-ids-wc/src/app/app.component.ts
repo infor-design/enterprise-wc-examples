@@ -11,13 +11,19 @@ export class AppComponent {
 
   public name = 'Angular ' + VERSION.major;
   public person = 'John Smith';
-  public type = 'error';
+  public type = 'success';
+  public tagList = [
+    { type: '', name: 'Tag One' },
+    { type: 'success', name: 'Tag Two' },
+    { type: '', name: 'Tag Three' },
+    { type: 'error', name: 'Tag Four' },
+  ];
 
   ngAfterViewInit() {
-    this.tag.nativeElement.color = 'success';
+    this.tag.nativeElement.color = 'error';
   }
 
   onTagRemoved({ detail: component }) {
-    console.log(component);
+    console.log('tagremoved fired', component);
   }
 }
