@@ -1,17 +1,17 @@
-# Ids Web Component Used in Angular
+# Ids Web Components with Angular
 
-IDS comes with a typescript definition so can be used in angular now without a wrapper. Use the following steps to consume a ids web component.
+Ids Web Components now comes with custom elements and a typescript definition so can be used in angular now without a wrapper. Use the following steps to consume a ids web component.
 
-1. Added imports to main.ts
-1. Added imports to styles.css 
+1. Add ids-enterprise-wc with `npm install ids-enterprise-wc -D`
+1. Added imports to app/main.ts (this includes styles)
 1. Added `CUSTOM_ELEMENTS_SCHEMA` to src/app/app.module.ts
-1. In node_modules created a folder `@infor-ids` (TODO: Package our dist folder for npm)
-1. Copied the dist folder from enterprise-wc in it after building
 1. `npm run start`
 
 ## Issues
 
-- Why is the button prepending for John Smith
+- When using a template reference variable the types are on nativeElement
+- The types are not listing the colors
+- How do we type the events? 
 
 ## Articles
 

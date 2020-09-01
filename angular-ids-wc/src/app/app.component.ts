@@ -1,5 +1,5 @@
 import { Component, VERSION, ViewChild } from '@angular/core';
-import { IdsTag } from '@infor-ids/ids-tag/ids-tag.js';
+import { IdsTag } from 'ids-enterprise-wc/ids-tag/ids-tag.js';
 
 @Component({
   selector: 'my-app',

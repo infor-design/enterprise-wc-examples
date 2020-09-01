@@ -1,8 +1,13 @@
 import './polyfills';
 
-import { enableProdMode } from '@angular/core';
+// import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import '@infor-ids/ids-tag/ids-tag.js';
+
+// Import IDS Components Used in the App
+import 'ids-enterprise-wc/ids-tag/ids-tag.js';
+import 'ids-enterprise-wc/ids-label/ids-label.js';
+import 'ids-enterprise-wc/ids-icon/ids-icon.js';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js';
 
 import { AppModule } from './app/app.module';
 

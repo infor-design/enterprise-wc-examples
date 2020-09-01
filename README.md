@@ -6,13 +6,15 @@ Initially we want to test three projects with a preliminary tag component. We wi
 
 1. Uses stackblitz.com starter project which can be downloaded as a locale project but we want simple starter projects and to share them in here.
 1. Show a tag in the page bound to data in the test framework
-1. Uses the tag component. Initially you may have to manually include the tag code in the project until we deploy to npm.
+1. Show use of the tag component
 1. Consider framework key features and document things we should probably want to do. For example for Angular:
   * Provide binding to the model for values
   * Catching and handling events emitted 
   * Setting and changing settings (color for example) 
   * Templating like loops or text values
   * Research common framework features (forms ect)
+1. Test the type file is working as expected
+1. Make a test that includes the component
 
 ## Vue.js 
 Starter Project: https://stackblitz.com/edit/vue
