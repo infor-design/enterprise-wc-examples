@@ -1,19 +1,21 @@
 # Ids Web Component Used in React
 
-Use the following steps to consume Ids Web Components in to React Project.
+This project demonstrates how to use the IDS Web Components in a simple react app. The IDS Web Components are pretty simple to use with React and can basically just be imported from npm then used directly.
 
 ### Step 1: Create a new React Project
 
-_skip this step if already have React Project_
+You can skip this step if already have React Project. But if you are starting from scratch you can use the npx tooling. 
 
 ```bash
 npx create-react-app react-ids-wc
 cd react-ids-wc
 ```
 
+For more info see https://reactjs.org/docs/create-a-new-react-app.html
+
 ### Step 2: Install the polyfill
 
-To start using Web Components in React, we need to have a polyfill installed for Web Component support in all browsers. We use the webcomponentsjs polyfill. We also make use of vendor-copy to make the polyfill available on runtime.
+IDS does not support IE 11 so you might be able to skip this step. If you have the need to support IE you can try to add the  webcomponentsjs polyfill. (However, we do not support this). Once you do make use of vendor-copy to make the polyfill available on runtime.
 
 **1. Install**
 
@@ -67,7 +69,7 @@ Now we have to use the polyfills in runtime by adding them to our `public/index.
 npm i ids-enterprise-wc
 ````
 
-**2. Add general styles/fonts etc.**
+**2. Add The Custom Font**
 
 `@import` ids style file to `src/index.css`
 
@@ -75,7 +77,7 @@ npm i ids-enterprise-wc
 /* Add application styles & imports to this file! */
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap";
 ```
-**3. Use the components**
+**3. Use the Components**
 
 You can now use the Ids Web Components like any other HTML tag. Replace the contents of the src/App.js with the following
 
@@ -102,7 +104,7 @@ export default App;
 npm run start
 ```
 
-**5. See on browser**
+**5. See it in the browser**
 Navigate to: http://localhost:3000
 
 ---
