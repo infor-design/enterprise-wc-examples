@@ -15,6 +15,13 @@
 
 <ids-layout-grid>
   <ids-layout-column>
+    <ids-label font-size="12">Dismissible tag with keyboard events</ids-label>
+    <ids-tag [color]="type">{{person}}<ids-icon icon="caret-right" size="small"></ids-icon></ids-tag>
+  </ids-layout-column>
+</ids-layout-grid>
+
+<ids-layout-grid>
+  <ids-layout-column>
     <ids-label font-size="12">Tag with events</ids-label>
     <ids-tag dismissible="true" (tagremoved)="onTagRemoved($event)">
       <span>Dismissible Tags</span>
