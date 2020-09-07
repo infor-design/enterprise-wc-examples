@@ -23,7 +23,26 @@ IDS does not support IE 11 so you might be able to skip this step. If you have t
 npm install --save react-app-polyfill @webcomponents/webcomponentsjs
 ```
 
-**2. Use the polyfills**
+**2. Add** `"ie 11"` to browserslist in `package.json`
+
+```bash
+"browserslist": {
+  "production": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "ie 11"
+  ],
+  "development": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "ie 11"
+  ]
+}
+```
+
+**3. Use the polyfills**
 
 Add to the first line in `src/index.js`
 
