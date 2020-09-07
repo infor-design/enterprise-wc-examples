@@ -4,7 +4,7 @@ This project demonstrates how to use the IDS Web Components in a simple react ap
 
 ### Step 1: Create a new React Project
 
-You can skip this step if already have React Project. But if you are starting from scratch you can use the npx tooling. 
+You can skip this step if already have React Project. But if you are starting from scratch you can use the npx tooling.
 
 ```bash
 npx create-react-app react-ids-wc
@@ -15,50 +15,24 @@ For more info see https://reactjs.org/docs/create-a-new-react-app.html
 
 ### Step 2: Install the polyfill
 
-IDS does not support IE 11 so you might be able to skip this step. If you have the need to support IE you can try to add the  webcomponentsjs polyfill. (However, we do not support this). Once you do make use of vendor-copy to make the polyfill available on runtime.
+IDS does not support IE 11 so you might be able to skip this step. If you have the need to support IE you can try to add the react app polyfill and webcomponentsjs polyfill. (However, we do not support this).
 
 **1. Install**
 
 ```bash
-npm install --save @webcomponents/webcomponentsjs vendor-copy
+npm install --save react-app-polyfill @webcomponents/webcomponentsjs
 ```
 
-**2. Add to scripts in** `package.json`
+**2. Use the polyfills**
 
-Open `package.json` to enable vendor-copy. To the scripts block, add a `postinstall` which runs `vendor-copy` after every time npm install is invoked
-
-```javascript
-"scripts": {
-  "postinstall": "vendor-copy"
-}
-```
-
-**3. Set instructions to** `vendor-copy`
-
-Next, at the end of the same file `package.json`, give instructions to vendor-copy on what it should copy over when the install is run. We need `webcomponents-bundle.js` and `custom-elements-es5-adapter.js`
+Add to the first line in `src/index.js`
 
 ```javascript
-"vendorCopy": [
-  {
-    "from": "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js",
-    "to": "public/vendor/custom-elements-es5-adapter.js"
-  },
-  {
-    "from": "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
-    "to": "public/vendor/webcomponents-bundle.js"
-  }
-]
-```
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
 
-**4. Use the polyfills**
-
-Now we have to use the polyfills in runtime by adding them to our `public/index.html`. Add the following lines to the end of `<body>`
-
-```javascript
-<script src="%PUBLIC_URL%/vendor/webcomponents-bundle.js"></script>
-<script>if (!window.customElements) { document.write("<!--"); }</script>
-<script src="%PUBLIC_URL%/vendor/custom-elements-es5-adapter.js"></script>
-<!--! DO NOT REMOVE THIS COMMENT, WE NEED ITS CLOSING MARKER -->
+import "@webcomponents/webcomponentsjs/webcomponents-bundle";
+import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js';
 ```
 
 ### Step 3: Add the Ids Web Components to React

@@ -9,16 +9,15 @@
     "@webcomponents/webcomponentsjs": "^2.4.4",
     "ids-enterprise-wc": "0.0.0-beta.2",
     "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3",
-    "vendor-copy": "^2.0.0"
+    "react-scripts": "3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postinstall": "vendor-copy"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,22 +26,14 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "ie 11"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "ie 11"
     ]
-  },
-  "vendorCopy": [
-    {
-      "from": "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js",
-      "to": "public/vendor/custom-elements-es5-adapter.js"
-    },
-    {
-      "from": "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
-      "to": "public/vendor/webcomponents-bundle.js"
-    }
-  ]
+  }
 }
