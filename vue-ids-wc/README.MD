@@ -1,5 +1,24 @@
-# Ids Web Component Used in Vue.js
+# vue-ids-wc
 
-## Starter Project
+## Project setup
+```
+npm install
+```
 
-Starter Project: https://stackblitz.com/edit/vue
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
