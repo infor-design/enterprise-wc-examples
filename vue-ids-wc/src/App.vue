@@ -1,17 +1,15 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <IdsTagWc tagTitle="Tag Component" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import IdsTagWc from './components/Tag.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    IdsTagWc
   }
 }
 </script>
