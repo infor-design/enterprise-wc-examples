@@ -1,4 +1,7 @@
-# vue-ids-wc
+# IDS Web Components with Vue JS
+```
+This project shows the implementation of ids web components together with VueJS framework.
+```
 
 ## Project setup
 ```
