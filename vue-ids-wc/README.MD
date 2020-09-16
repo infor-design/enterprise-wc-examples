@@ -5,25 +5,33 @@ This project shows the implementation of ids web components together with VueJS 
 
 ## Adding IDS Web Components to the project folder
 
-Open terminal and run the command `npm install ids-enterprise-wc -D`.
+Open terminal and run the command
+```bash
+`npm install ids-enterprise-wc -D`.
+```
 
 Once this done, you can now proceed to implement the components in Vue.js
 
 ## Implementing the IDS Web Components
-```bash
-# 1. Add component file.
-Add a component file in src/components. For example,Tag.vue
 
-# 2. Import the ids component
+## 1. Add component file.
+
+Add a component file in `src/components`. For example,`Tag.vue`
+
+## 2. Import the IDS Component
+
 Now, you need to import the ids components that you will be using. In script tag,
 
+```javascript
 import "ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js";
 import "ids-enterprise-wc/ids-label/ids-label.js";
 import "ids-enterprise-wc/ids-icon/ids-icon.js";
 import "ids-enterprise-wc/ids-tag/ids-tag.js";
+```
 
-By then, you can now use the component in the template tag. For example
+By then, you can now use the component in the `template` tag. For example,
 
+```html
 <template>
   <div>
     <ids-layout-grid>
@@ -45,10 +53,13 @@ By then, you can now use the component in the template tag. For example
     </ids-layout-grid>
   </div>
 </template>
+```
 
-# 3. Register in App.vue
+## 3. Register in App.vue
+
 In App.vue, you need to import the component that you created. This will serve as the entry point to your app.
 
+```javascript
 <script>
 import IdsTagTestPage from './components/Tag.vue';
 export default {
@@ -58,15 +69,16 @@ export default {
   }
 }
 </script>
+```
 
-# 4. Add the component to the template
+## 4. Add the component to the template
 
+```html
 <template>
   <div id="app">
     <IdsTagTestPage />
   </div>
 </template>
-
 ```
 
 ## Project setup
