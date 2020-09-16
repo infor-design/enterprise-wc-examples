@@ -12,7 +12,7 @@ Once this done, you can now proceed to implement the components in Vue.js
 ## Implementing the IDS Web Components
 ```bash
 # 1. Add component file.
-Add a component file in __src/components__. For example, __Tag.vue__
+Add a component file in src/components. For example,Tag.vue
 
 # 2. Import the ids component
 Now, you need to import the ids components that you will be using. In script tag,
