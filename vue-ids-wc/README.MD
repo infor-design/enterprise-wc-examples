@@ -7,7 +7,7 @@ This project shows the implementation of ids web components together with VueJS 
 
 Open terminal and run the command
 ```bash
-`npm install ids-enterprise-wc -D`.
+npm install ids-enterprise-wc -D
 ```
 
 Once this done, you can now proceed to implement the components in Vue.js
@@ -18,7 +18,7 @@ Once this done, you can now proceed to implement the components in Vue.js
 
 Add a component file in `src/components`. For example,`Tag.vue`
 
-## 2. Import the IDS Component
+## 2. Import the IDS Components
 
 Now, you need to import the ids components that you will be using. In script tag,
 
@@ -60,7 +60,6 @@ By then, you can now use the component in the `template` tag. For example,
 In App.vue, you need to import the component that you created. This will serve as the entry point to your app.
 
 ```javascript
-<script>
 import IdsTagTestPage from './components/Tag.vue';
 export default {
   name: 'App',
@@ -68,7 +67,6 @@ export default {
     IdsTagTestPage
   }
 }
-</script>
 ```
 
 ## 4. Add the component to the template
