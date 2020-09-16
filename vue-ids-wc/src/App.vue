@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <IdsTagWc tagTitle="Tag Component" />
+    <IdsTagTestPage tagTitle="Tag Component" />
   </div>
 </template>
 
 <script>
-import IdsTagWc from './components/Tag.vue';
+import IdsTagTestPage from './components/Tag.vue';
 export default {
   name: 'App',
   components: {
-    IdsTagWc
+    IdsTagTestPage
   }
 }
 </script>
@@ -19,7 +19,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }

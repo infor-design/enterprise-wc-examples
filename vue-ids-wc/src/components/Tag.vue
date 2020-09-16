@@ -1,12 +1,25 @@
 <template>
   <div>
-    <h1>Tag Component</h1>
     <ids-layout-grid>
       <ids-layout-column>
+        <ids-label font-size="12">{{ title1 }}</ids-label>
         <ids-tag
           v-for="(tag, index) in tagList"
           :key="index"
           :color="tag.color"
+        >{{ tag.label }}</ids-tag>
+      </ids-layout-column>
+    </ids-layout-grid>
+
+    <ids-layout-grid>
+      <ids-layout-column>
+        <ids-label font-size="12">{{ title2 }}</ids-label>
+        <ids-tag
+          dismissible="true"
+          v-for="(tag, index) in tagList"
+          :key="index"
+          :color="tag.color"
+          v-on:click="onTagRemoved"
         >{{ tag.label }}</ids-tag>
       </ids-layout-column>
     </ids-layout-grid>
@@ -29,11 +42,18 @@ const data = [
 ];
 
 export default {
-  name: "IdsTagWc",
+  name: "TagTestPage",
   data: function() {
     return {
-      tagList: [...data]
+      tagList: [...data],
+      title1: 'Normal Tags',
+      title2: 'Dismissible Tags'
     };
+  },
+  methods: {
+    onTagRemoved: function (event) {
+      console.log('Tag Removed', event);
+    }
   },
   props: {
     tagTitle: String
