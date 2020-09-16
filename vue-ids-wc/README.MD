@@ -4,15 +4,15 @@ This project shows the implementation of ids web components together with VueJS 
 ```
 
 ## Adding IDS Web Components to the project folder
-```
+
 Open terminal and run the command `npm install ids-enterprise-wc -D`.
-```
+
 Once this done, you can now proceed to implement the components in Vue.js
 
 ## Implementing the IDS Web Components
-```bash
+```
 # 1. Add component file.
-Add a component file in `src/components`. For example, `Tag.vue`
+Add a component file in __src/components__. For example, __Tag.vue__
 
 # 2. Import the ids component
 Now, you need to import the ids components that you will be using. In script tag,
