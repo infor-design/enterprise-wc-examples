@@ -1,20 +1,21 @@
 <template>
-  <div id="app">
-    <IdsTagTestPage tagTitle="Tag Component" />
+  <div>
+    <IdsTagTestPage />
   </div>
 </template>
 
 <script>
-import IdsTagTestPage from './components/Tag.vue';
+import IdsTagTestPage from "./components/Tag.vue";
+
 export default {
-  name: 'App',
+  name: "App",
   components: {
     IdsTagTestPage
   }
-}
+};
 </script>
 
-<style lang="scss">
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -7,7 +7,9 @@
           v-for="(tag, index) in tagList"
           :key="index"
           :color="tag.color"
-        >{{ tag.label }}</ids-tag>
+        >
+          {{ tag.label }}
+        </ids-tag>
       </ids-layout-column>
     </ids-layout-grid>
 
@@ -20,7 +22,9 @@
           :key="index"
           :color="tag.color"
           v-on:click="onTagRemoved"
-        >{{ tag.label }}</ids-tag>
+        >
+          {{ tag.label }}
+        </ids-tag>
       </ids-layout-column>
     </ids-layout-grid>
   </div>
@@ -42,17 +46,17 @@ const data = [
 ];
 
 export default {
-  name: "TagTestPage",
+  name: "IdsTagTestPage",
   data: function() {
     return {
       tagList: [...data],
-      title1: 'Normal Tags',
-      title2: 'Dismissible Tags'
+      title1: "Normal Tags",
+      title2: "Dismissible Tags"
     };
   },
   methods: {
-    onTagRemoved: function (event) {
-      console.log('Tag Removed', event);
+    onTagRemoved: function(event) {
+      console.log("Tag Removed", event);
     }
   },
   props: {
@@ -61,5 +65,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
