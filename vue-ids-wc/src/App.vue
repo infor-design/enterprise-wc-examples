@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <IdsTagTestPage />
-  </div>
+  <IdsTagTestPage />
 </template>
 
 <script>

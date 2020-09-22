@@ -3,13 +3,7 @@
     <ids-layout-grid>
       <ids-layout-column>
         <ids-label font-size="12">{{ title1 }}</ids-label>
-        <ids-tag
-          v-for="(tag, index) in tagList"
-          :key="index"
-          :color="tag.color"
-        >
-          {{ tag.label }}
-        </ids-tag>
+        <ids-tag v-for="(tag, index) in tagList" :key="index" :color="tag.color">{{ tag.label }}</ids-tag>
       </ids-layout-column>
     </ids-layout-grid>
 
@@ -22,9 +16,7 @@
           :key="index"
           :color="tag.color"
           v-on:click="onTagRemoved"
-        >
-          {{ tag.label }}
-        </ids-tag>
+        >{{ tag.label }}</ids-tag>
       </ids-layout-column>
     </ids-layout-grid>
   </div>
@@ -65,4 +57,5 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+</style>
