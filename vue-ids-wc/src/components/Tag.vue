@@ -3,11 +3,7 @@
     <ids-layout-grid>
       <ids-layout-column>
         <ids-label font-size="12">{{ title1 }}</ids-label>
-        <ids-tag
-          v-for="(tag, index) in tagList"
-          :key="index"
-          :color="tag.color"
-        >{{ tag.label }}</ids-tag>
+        <ids-tag v-for="(tag, index) in tagList" :key="index" :color="tag.color">{{ tag.label }}</ids-tag>
       </ids-layout-column>
     </ids-layout-grid>
 
@@ -27,22 +23,22 @@
 </template>
 
 <script>
-import "ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js";
-import "ids-enterprise-wc/ids-label/ids-label.js";
-import "ids-enterprise-wc/ids-icon/ids-icon.js";
-import "ids-enterprise-wc/ids-tag/ids-tag.js";
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js';
+import 'ids-enterprise-wc/ids-label/ids-label.js';
+import 'ids-enterprise-wc/ids-icon/ids-icon.js';
+import 'ids-enterprise-wc/ids-tag/ids-tag.js';
 
 const data = [
-  { label: "Normal Tag", color: "" },
-  { label: "Secondary Tag", color: "secondary" },
-  { label: "Error Tag", color: "error" },
-  { label: "Success Tag", color: "success" },
-  { label: "Warning Tag", color: "caution" },
-  { label: "Custom Tag Color", color: "#EDE3FC" }
+  { label: 'Normal Tag', color: '' },
+  { label: 'Secondary Tag', color: 'secondary' },
+  { label: 'Error Tag', color: 'error' },
+  { label: 'Success Tag', color: 'success' },
+  { label: 'Warning Tag', color: 'caution' },
+  { label: 'Custom Tag Color', color: '#EDE3FC' }
 ];
 
 export default {
-  name: "TagTestPage",
+  name: 'IdsTagTestPage',
   data: function() {
     return {
       tagList: [...data],
@@ -51,7 +47,7 @@ export default {
     };
   },
   methods: {
-    onTagRemoved: function (event) {
+    onTagRemoved: function(event) {
       console.log('Tag Removed', event);
     }
   },
@@ -61,5 +57,5 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped lang='scss'>
 </style>

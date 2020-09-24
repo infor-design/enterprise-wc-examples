@@ -105,3 +105,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### External Links
+[Style Guide](https://vuejs.org/v2/style-guide/).
+[Vue 3 Upgrade Guide](https://dev.to/blacksonic/the-vue-3-upgrade-guide-4dc4)
