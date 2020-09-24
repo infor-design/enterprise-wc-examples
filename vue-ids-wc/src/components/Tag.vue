@@ -23,32 +23,32 @@
 </template>
 
 <script>
-import "ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js";
-import "ids-enterprise-wc/ids-label/ids-label.js";
-import "ids-enterprise-wc/ids-icon/ids-icon.js";
-import "ids-enterprise-wc/ids-tag/ids-tag.js";
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js';
+import 'ids-enterprise-wc/ids-label/ids-label.js';
+import 'ids-enterprise-wc/ids-icon/ids-icon.js';
+import 'ids-enterprise-wc/ids-tag/ids-tag.js';
 
 const data = [
-  { label: "Normal Tag", color: "" },
-  { label: "Secondary Tag", color: "secondary" },
-  { label: "Error Tag", color: "error" },
-  { label: "Success Tag", color: "success" },
-  { label: "Warning Tag", color: "caution" },
-  { label: "Custom Tag Color", color: "#EDE3FC" }
+  { label: 'Normal Tag', color: '' },
+  { label: 'Secondary Tag', color: 'secondary' },
+  { label: 'Error Tag', color: 'error' },
+  { label: 'Success Tag', color: 'success' },
+  { label: 'Warning Tag', color: 'caution' },
+  { label: 'Custom Tag Color', color: '#EDE3FC' }
 ];
 
 export default {
-  name: "IdsTagTestPage",
+  name: 'IdsTagTestPage',
   data: function() {
     return {
       tagList: [...data],
-      title1: "Normal Tags",
-      title2: "Dismissible Tags"
+      title1: 'Normal Tags',
+      title2: 'Dismissible Tags'
     };
   },
   methods: {
     onTagRemoved: function(event) {
-      console.log("Tag Removed", event);
+      console.log('Tag Removed', event);
     }
   },
   props: {
@@ -57,5 +57,5 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped lang='scss'>
 </style>
