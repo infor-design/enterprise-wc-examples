@@ -1,0 +1,20 @@
+.active {
+  display: none;
+}
+
+.link-list {
+  padding-left: 0;
+}
+
+.link-list li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+.link-list li a {
+  bottom: 5px;
+  margin-left: 5px;
+  position: relative;
+  text-transform: capitalize;
+  vertical-align: middle;
+}

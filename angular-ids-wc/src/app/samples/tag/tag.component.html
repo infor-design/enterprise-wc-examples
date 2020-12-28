@@ -1,0 +1,37 @@
+<ids-layout-grid>
+  <ids-layout-column>
+    <ids-label font-size="12">Tag with template reference variable</ids-label>
+    <ids-tag #myTag>{{name}}</ids-tag>
+  </ids-layout-column>
+</ids-layout-grid>
+
+<ids-layout-grid>
+  <ids-layout-column>
+    <ids-label font-size="12">Tag with bound property</ids-label>
+    <ids-tag [color]="type">{{person}}</ids-tag>
+    <input [(ngModel)]="type" value='{{type}}'/>
+  </ids-layout-column>
+</ids-layout-grid>
+
+<ids-layout-grid>
+  <ids-layout-column>
+    <ids-label font-size="12">Dismissible tag with keyboard events</ids-label>
+    <ids-tag [color]="type">{{person}}<ids-icon icon="caret-right" size="small"></ids-icon></ids-tag>
+  </ids-layout-column>
+</ids-layout-grid>
+
+<ids-layout-grid>
+  <ids-layout-column>
+    <ids-label font-size="12">Tag with events</ids-label>
+    <ids-tag dismissible="true" (tagremoved)="onTagRemoved($event)">
+      <span>Dismissible Tags</span>
+    </ids-tag>
+  </ids-layout-column>
+</ids-layout-grid>
+
+<ids-layout-grid>
+  <ids-layout-column>
+    <ids-label font-size="12">Tag list in a loop</ids-label>
+    <ids-tag *ngFor="let tag of tagList" [color]="tag.type">{{tag.name}}</ids-tag>
+  </ids-layout-column>
+</ids-layout-grid>

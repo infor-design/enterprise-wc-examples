@@ -1,5 +1,7 @@
-import { Component, VERSION, ViewChild } from '@angular/core';
-import { IdsTag } from 'ids-enterprise-wc/ids-tag/ids-tag.js';
+import { 
+  Component,
+  Input
+} from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -7,23 +9,8 @@ import { IdsTag } from 'ids-enterprise-wc/ids-tag/ids-tag.js';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent {
-  @ViewChild('myTag', { static: true }) tag: IdsTag; 
-
-  public name = 'Angular ' + VERSION.major;
-  public person = 'John Smith';
-  public type = 'success';
-  public tagList = [
-    { type: '', name: 'Tag One' },
-    { type: 'success', name: 'Tag Two' },
-    { type: '', name: 'Tag Three' },
-    { type: 'error', name: 'Tag Four' },
-  ];
-
-  ngAfterViewInit() {
-    this.tag.nativeElement.color = 'error';
-  }
-
-  onTagRemoved({ detail: component }) {
-    console.log('tagremoved fired', component);
+  @Input()
+    routerLinkActiveOptions: {
+    exact: boolean;
   }
 }

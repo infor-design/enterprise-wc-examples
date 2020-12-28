@@ -1,0 +1,6 @@
+<ids-layout-grid>
+  <ids-label [style.font-size]="sizeT">{{title}}</ids-label>
+</ids-layout-grid>
+<ids-layout-grid *ngFor="let pixel of fontSizePixels">
+<ids-label [style.font-size]="pixel">Size {{pixel}}</ids-label>
+</ids-layout-grid>
