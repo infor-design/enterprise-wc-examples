@@ -20,7 +20,7 @@ export class AppComponent {
   ];
 
   ngAfterViewInit() {
-    this.tag.nativeElement.color = 'error';
+    this.tag.color = 'error';
   }
 
   onTagRemoved({ detail: component }) {

@@ -7,7 +7,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "@webcomponents/webcomponentsjs": "^2.4.4",
-    "ids-enterprise-wc": "0.0.0-beta.2",
+    "ids-enterprise-wc": "0.0.0-beta.4",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
     "react-dom": "^16.13.1",
