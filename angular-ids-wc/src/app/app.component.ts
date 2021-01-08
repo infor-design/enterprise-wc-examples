@@ -23,7 +23,7 @@ export class AppComponent {
     this.tag.color = 'error';
   }
 
-  onTagRemoved({ detail: component }) {
-    console.log('tagremoved fired', component);
+  onTagRemoved(details: CustomEvent) {
+    console.log('tagremoved fired', details, details.detail);
   }
 }
