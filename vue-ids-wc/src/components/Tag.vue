@@ -1,14 +1,14 @@
 <template>
   <div>
     <ids-layout-grid>
-      <ids-layout-column>
+      <ids-layout-grid-cell>
         <ids-text font-size="12">{{ title1 }}</ids-text>
         <ids-tag v-for="(tag, index) in tagList" :key="index" :color="tag.color">{{ tag.label }}</ids-tag>
-      </ids-layout-column>
+      </ids-layout-grid-cell>
     </ids-layout-grid>
 
     <ids-layout-grid>
-      <ids-layout-column>
+      <ids-layout-grid-cell>
         <ids-text font-size="12">{{ title2 }}</ids-text>
         <ids-tag
           dismissible="true"
@@ -17,7 +17,7 @@
           :color="tag.color"
           v-on:click="onTagRemoved"
         >{{ tag.label }}</ids-tag>
-      </ids-layout-column>
+      </ids-layout-grid-cell>
     </ids-layout-grid>
   </div>
 </template>

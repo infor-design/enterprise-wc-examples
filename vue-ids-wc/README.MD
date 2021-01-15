@@ -35,7 +35,7 @@ By then, you can now use the component in the `template` tag. For example,
 <template>
   <div>
     <ids-layout-grid>
-      <ids-layout-column>
+      <ids-layout-grid-cell>
         <ids-tag>Normal Tag</ids-tag>
         <ids-tag color="secondary">Secondary Tags</ids-tag>
         <ids-tag color="error">Error Tag</ids-tag>
@@ -49,7 +49,7 @@ By then, you can now use the component in the `template` tag. For example,
             <span>Dismissible Tags</span>
             <ids-icon icon="close" size="small" id="ids-closable-btn"></ids-icon>
         </ids-tag>
-      </ids-layout-column>
+      </ids-layout-grid-cell>
     </ids-layout-grid>
   </div>
 </template>

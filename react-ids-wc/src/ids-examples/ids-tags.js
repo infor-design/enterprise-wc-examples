@@ -31,28 +31,28 @@ function IdsTags() {
       </ids-layout-grid>
 
       <ids-layout-grid>
-        <ids-layout-column>
+        <ids-layout-grid-cell>
           <ids-tag>Normal Tag</ids-tag>
           <ids-tag color="secondary">Secondary Tags</ids-tag>
           <ids-tag color="error">Error Tag</ids-tag>
           <ids-tag color="success">Success Tag</ids-tag>
           <ids-tag color="caution">Warning Tag</ids-tag>
           <ids-tag color="#EDE3FC">Custom Tag Color</ids-tag>
-        </ids-layout-column>
+        </ids-layout-grid-cell>
       </ids-layout-grid>
 
       <ids-layout-grid>
         <ids-text font-size="12">Dynamic Tags</ids-text>
       </ids-layout-grid>
       <ids-layout-grid>
-        <ids-layout-column>
+        <ids-layout-grid-cell>
           <ids-tag ref={ reactInfoTagRef }>{ reactInfoText }</ids-tag>
           <ids-tag color={ type }><span>{ person }</span></ids-tag>
           <ids-tag clickable="true" id="ids-clickable-tag">Clickable Tag
             <ids-icon icon="caret-right" size="small" onClick={ handleClickable }></ids-icon>
           </ids-tag>
           <ids-tag dismissible="true" ref={ dismissibleTagRef }><slot>{ person }</slot></ids-tag>
-        </ids-layout-column>
+        </ids-layout-grid-cell>
       </ids-layout-grid>
     </React.Fragment>
   );

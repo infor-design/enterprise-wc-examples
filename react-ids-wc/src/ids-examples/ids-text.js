@@ -1,7 +1,6 @@
 import React from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid-cell';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js';
 import 'ids-enterprise-wc/ids-text/ids-text.js';
 
 function IdsText() {
@@ -11,7 +10,7 @@ function IdsText() {
         <ids-text font-size="12">Labels / Typography</ids-text>
       </ids-layout-grid>
       <ids-layout-grid>
-        <ids-layout-column>
+        <ids-layout-grid-cell>
           <ids-text font-size="72">Size 72</ids-text>
           <ids-text font-size="60">Size 60</ids-text>
           <ids-text font-size="48">Size 48</ids-text>
@@ -24,7 +23,7 @@ function IdsText() {
           <ids-text font-size="14">Size 14 (sm)</ids-text>
           <ids-text font-size="12">Size 12 (xs)</ids-text>
           <ids-text font-size="10">Size 10</ids-text>
-        </ids-layout-column>
+        </ids-layout-grid-cell>
       </ids-layout-grid>
     </React.Fragment>
   );
