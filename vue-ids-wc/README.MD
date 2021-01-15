@@ -24,7 +24,7 @@ Now, you need to import the ids components that you will be using. In script tag
 
 ```javascript
 import "ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js";
-import "ids-enterprise-wc/ids-label/ids-label.js";
+import "ids-enterprise-wc/ids-text/ids-text.js";
 import "ids-enterprise-wc/ids-icon/ids-icon.js";
 import "ids-enterprise-wc/ids-tag/ids-tag.js";
 ```

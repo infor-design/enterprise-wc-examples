@@ -2,14 +2,14 @@
   <div>
     <ids-layout-grid>
       <ids-layout-column>
-        <ids-label font-size="12">{{ title1 }}</ids-label>
+        <ids-text font-size="12">{{ title1 }}</ids-text>
         <ids-tag v-for="(tag, index) in tagList" :key="index" :color="tag.color">{{ tag.label }}</ids-tag>
       </ids-layout-column>
     </ids-layout-grid>
 
     <ids-layout-grid>
       <ids-layout-column>
-        <ids-label font-size="12">{{ title2 }}</ids-label>
+        <ids-text font-size="12">{{ title2 }}</ids-text>
         <ids-tag
           dismissible="true"
           v-for="(tag, index) in tagList"
@@ -24,7 +24,7 @@
 
 <script>
 import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js';
-import 'ids-enterprise-wc/ids-label/ids-label.js';
+import 'ids-enterprise-wc/ids-text/ids-text.js';
 import 'ids-enterprise-wc/ids-icon/ids-icon.js';
 import 'ids-enterprise-wc/ids-tag/ids-tag.js';
 

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 
 import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js';
-import 'ids-enterprise-wc/ids-label/ids-label.js';
+import 'ids-enterprise-wc/ids-text/ids-text.js';
 import 'ids-enterprise-wc/ids-icon/ids-icon.js';
 import 'ids-enterprise-wc/ids-tag/ids-tag.js';
 
@@ -27,7 +27,7 @@ function IdsTags() {
   return (
     <React.Fragment>
       <ids-layout-grid>
-        <ids-label font-size="12">Normal Tags</ids-label>
+        <ids-text font-size="12">Normal Tags</ids-text>
       </ids-layout-grid>
 
       <ids-layout-grid>
@@ -42,7 +42,7 @@ function IdsTags() {
       </ids-layout-grid>
 
       <ids-layout-grid>
-        <ids-label font-size="12">Dynamic Tags</ids-label>
+        <ids-text font-size="12">Dynamic Tags</ids-text>
       </ids-layout-grid>
       <ids-layout-grid>
         <ids-layout-column>
