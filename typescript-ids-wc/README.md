@@ -8,8 +8,7 @@ Once you clone/download this repo go into the folder in the terminal where this 
 
 ```
 npm install
-npm run build
-npx http-server
+npm run start
 ```
 
 Then open [http://localhost:8080](http://localhost:8080) to view the sample page.

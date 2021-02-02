@@ -1,6 +1,5 @@
 // Import the components we want to use.
-// @ts-ignore
-import { default as IdsTag } from 'ids-enterprise-wc/ids-tag/ids-tag.js';
+import IdsTag from 'ids-enterprise-wc/ids-tag/ids-tag.js';
 
 // Initialize a component.
 const tag = new IdsTag();

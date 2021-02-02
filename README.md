@@ -16,6 +16,12 @@ Initially we want to test three projects with a preliminary tag component. We wi
 1. Test the type file is working as expected
 1. Make a test that includes the component
 
+## Using NPM Link
+
+- In the enterprise-wc project run `npm run build` to build the assets into `dist/`
+- In the enterprise-wc project run `npm link` to set up the symbolic link
+- Go to on of these project folders (for example typescript-ids-wc) and type `npm link ids-enterprise-wc`
+
 ## Vue.js 
 Starter Project: https://stackblitz.com/edit/vue
 [See README](./vue-ids-wc/README.md)
@@ -26,3 +32,6 @@ Starter Project: https://stackblitz.com/edit/react-un5ayt
 
 ## Angular
 [See README](./angular-ids-wc/README.md)
+
+## Typescript
+[See README](./typescript-ids-wc/README.md)

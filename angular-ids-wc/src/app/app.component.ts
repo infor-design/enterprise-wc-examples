@@ -1,5 +1,6 @@
-import { Component, VERSION, ViewChild } from '@angular/core';
+import { Component, VERSION, ViewChild, ElementRef } from '@angular/core';
 import { IdsTag } from 'ids-enterprise-wc/ids-tag/ids-tag.js';
+import { NativeElement } from '../helpers/native-element.decorator';
 
 @Component({
   selector: 'my-app',
@@ -7,7 +8,7 @@ import { IdsTag } from 'ids-enterprise-wc/ids-tag/ids-tag.js';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent {
-  @ViewChild('myTag', { static: true }) tag: IdsTag; 
+  @NativeElement('myTag') tag: IdsTag;
 
   public name = 'Angular ' + VERSION.major;
   public person = 'John Smith';
@@ -20,7 +21,7 @@ export class AppComponent {
   ];
 
   ngAfterViewInit() {
-    this.tag.color = 'error';
+    this.tag.color = '#F1EBFC';
   }
 
   onTagRemoved(details: CustomEvent) {
