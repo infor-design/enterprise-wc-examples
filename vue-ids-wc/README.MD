@@ -1,7 +1,9 @@
 # IDS Web Components with Vue JS
-```
+
+## Description
+
 This project shows the implementation of ids web components together with VueJS framework.
-```
+
 
 ## Adding IDS Web Components to the project folder
 
@@ -85,21 +87,21 @@ npm install
 ```
 
 ### Compiles and hot-reloads for development
-```
+
+```sh
 npm run serve
 ```
-
-```
-Go to http://localhost:8080/
-```
+Then go to http://localhost:8080/
 
 ### Compiles and minifies for production
-```
+
+```sh
 npm run build
 ```
 
 ### Lints and fixes files
-```
+
+```sh
 npm run lint
 ```
 

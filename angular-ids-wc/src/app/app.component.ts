@@ -1,5 +1,5 @@
 import { Component, VERSION, ViewChild, ElementRef } from '@angular/core';
-import { IdsTag } from 'ids-enterprise-wc/ids-tag/ids-tag.js';
+import IdsTag from 'ids-enterprise-wc/ids-tag/ids-tag.js';
 import { NativeElement } from '../helpers/native-element.decorator';
 
 @Component({
