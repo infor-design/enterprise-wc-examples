@@ -1,5 +1,6 @@
 import { Component, VERSION, ViewChild, ElementRef } from '@angular/core';
 import IdsTag from 'ids-enterprise-wc/ids-tag/ids-tag.js';
+import IdsText from 'ids-enterprise-wc/ids-text/ids-text.js';
 import { NativeElement } from '../helpers/native-element.decorator';
 
 @Component({
@@ -21,7 +22,7 @@ export class AppComponent {
   ];
 
   ngAfterViewInit() {
-    this.tag.color = '#F1EBFC';
+    this.tag.color = 'error';
   }
 
   onTagRemoved(details: CustomEvent) {

@@ -35,3 +35,28 @@
     <ids-tag *ngFor="let tag of tagList" [color]="tag.type">{{tag.name}}</ids-tag>
   </ids-layout-grid-cell>
 </ids-layout-grid>
+
+<ids-layout-grid>
+  <ids-text font-size="12" type="h1">Tooltips (when ellipsis text)</ids-text>
+</ids-layout-grid>
+<ids-layout-grid cols="11" gap="md">
+  <ids-layout-grid-cell>
+    <ids-text overflow="ellipsis" tooltip="true">Some long text that is overflowing and long</ids-text>
+  </ids-layout-grid-cell>
+  <ids-layout-grid-cell>
+  </ids-layout-grid-cell>
+  <ids-layout-grid-cell>
+  </ids-layout-grid-cell>
+  <ids-layout-grid-cell>
+  </ids-layout-grid-cell>
+  <ids-layout-grid-cell>
+  </ids-layout-grid-cell>
+  <ids-layout-grid-cell>
+  </ids-layout-grid-cell>
+  <ids-layout-grid-cell>
+  </ids-layout-grid-cell>
+  <ids-layout-grid-cell>
+  </ids-layout-grid-cell>
+  <ids-layout-grid-cell>
+  </ids-layout-grid-cell>
+</ids-layout-grid>
