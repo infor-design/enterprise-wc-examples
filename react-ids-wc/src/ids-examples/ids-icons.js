@@ -22,7 +22,7 @@ function IdsIcon() {
       <ids-layout-grid>
         <ids-text font-size="12">Icons</ids-text>
       </ids-layout-grid>
-      <ids-layout-grid className="ids-icon-list" fixed="true">
+      <ids-layout-grid className="ids-icon-list" auto="true" gap="md">
         {iconlist.map((iconName, i) => getIcon(iconName, i))}
       </ids-layout-grid>
     </React.Fragment>

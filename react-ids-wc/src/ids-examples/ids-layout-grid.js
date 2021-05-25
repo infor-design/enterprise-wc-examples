@@ -6,26 +6,45 @@ import 'ids-enterprise-wc/ids-text/ids-text.js';
 function IdsLayoutGrid() {
   return (
     <React.Fragment>
-      <ids-layout-grid>
-        <ids-text font-size="12">Layout Grid</ids-text>
-      </ids-layout-grid>
-      <ids-layout-grid>
-        <ids-layout-grid-cell fill="true"><ids-text font-size="12">A</ids-text></ids-layout-grid-cell>
-        <ids-layout-grid-cell fill="true"><ids-text font-size="12">B</ids-text></ids-layout-grid-cell>
-        <ids-layout-grid-cell fill="true"><ids-text font-size="12">C</ids-text></ids-layout-grid-cell>
-        <ids-layout-grid-cell fill="true"><ids-text font-size="12">D</ids-text></ids-layout-grid-cell>
-        <ids-layout-grid-cell fill="true"><ids-text font-size="12">E</ids-text></ids-layout-grid-cell>
+      <ids-layout-grid auto="true" gap="md">
+        <ids-text font-size="12" type="h1">Layout Grid</ids-text>
       </ids-layout-grid>
 
-      <ids-layout-grid>
-        <ids-text font-size="12">Layout Standalone CSS</ids-text>
+      <ids-layout-grid cols="3" gap="md">
+        <ids-layout-grid-cell fill="true" col-span="2" row-span="3">
+          <ids-text font-size="12">Grid Cell</ids-text>
+        </ids-layout-grid-cell>
+        <ids-layout-grid-cell fill="true">
+          <ids-text font-size="12">Grid Cell</ids-text>
+        </ids-layout-grid-cell>
+        <ids-layout-grid-cell fill="true">
+          <ids-text font-size="12">Grid Cell</ids-text>
+        </ids-layout-grid-cell>
+        <ids-layout-grid-cell fill="true">
+          <ids-text font-size="12">Grid Cell</ids-text>
+        </ids-layout-grid-cell>
+        <ids-layout-grid-cell fill="true">
+          <ids-text font-size="12">Grid Cell</ids-text>
+        </ids-layout-grid-cell>
+        <ids-layout-grid-cell fill="true">
+          <ids-text font-size="12">Grid Cell</ids-text>
+        </ids-layout-grid-cell>
+        <ids-layout-grid-cell fill="true">
+          <ids-text font-size="12">Grid Cell</ids-text>
+        </ids-layout-grid-cell>
+        <ids-layout-grid-cell fill="true">
+          <ids-text font-size="12">Grid Cell</ids-text>
+        </ids-layout-grid-cell>
+        <ids-layout-grid-cell fill="true">
+          <ids-text font-size="12">Grid Cell</ids-text>
+        </ids-layout-grid-cell>
+        <ids-layout-grid-cell fill="true">
+          <ids-text font-size="12">Grid Cell</ids-text>
+        </ids-layout-grid-cell>
+        <ids-layout-grid-cell fill="true">
+          <ids-text font-size="12">Grid Cell</ids-text>
+        </ids-layout-grid-cell>
       </ids-layout-grid>
-      <div className="ids-layout-grid">
-        <div className="ids-layout-grid-cell ids-background-fill"><ids-text font-size="12">A</ids-text></div>
-        <div className="ids-layout-grid-cell ids-background-fill"><ids-text font-size="12">B</ids-text></div>
-        <div className="ids-layout-grid-cell ids-background-fill"><ids-text font-size="12">C</ids-text></div>
-        <div className="ids-layout-grid-cell ids-background-fill"><ids-text font-size="12">D</ids-text></div>
-      </div>
     </React.Fragment>
   );
 }
