@@ -24,14 +24,14 @@ Initially we want to test three projects with a preliminary tag component. We wi
 
 ## Vue.js 
 Starter Project: https://stackblitz.com/edit/vue
-[See README](./vue-ids-wc/README.md)
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/vue-ids-wc/README.md)
 
 ## React
 Starter Project: https://stackblitz.com/edit/react-un5ayt
-[See README](./react-ids-wc/README.md)
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/react-ids-wc/README.MD)
 
 ## Angular
-[See README](./angular-ids-wc/README.md)
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/angular-ids-wc/README.MD)
 
 ## Typescript
-[See README](./typescript-ids-wc/README.md)
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/typescript-ids-wc/README.md)
