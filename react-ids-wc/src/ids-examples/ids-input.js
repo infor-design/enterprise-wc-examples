@@ -1,7 +1,7 @@
 import React from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js';
-import 'ids-enterprise-wc/ids-input/ids-input.js';
+import 'ids-enterprise-wc/components/ids-layout-grid';
+import 'ids-enterprise-wc/components/ids-input';
 
 function IdsInput() {
   const person = 'John Smith';

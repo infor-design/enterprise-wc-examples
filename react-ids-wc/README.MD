@@ -78,7 +78,7 @@ You can now use the Ids Web Components like any other HTML tag. Replace the cont
 import React from 'react';
 import './App.css';
 
-import 'ids-enterprise-wc/ids-tag/ids-tag.js';
+import 'ids-enterprise-wc/components/ids-tag';
 
 function App() {
   return (

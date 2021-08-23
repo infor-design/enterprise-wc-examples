@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js';
-import 'ids-enterprise-wc/ids-text/ids-text.js';
-import 'ids-enterprise-wc/ids-icon/ids-icon.js';
-import 'ids-enterprise-wc/ids-tag/ids-tag.js';
+import 'ids-enterprise-wc/components/ids-layout-grid';
+import 'ids-enterprise-wc/components/ids-text';
+import 'ids-enterprise-wc/components/ids-icon';
+import 'ids-enterprise-wc/components/ids-tag';
 
 function IdsTags() {
   const reactInfoTagRef = useRef();

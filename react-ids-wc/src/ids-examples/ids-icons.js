@@ -1,9 +1,9 @@
 import React from 'react';
 import iconlist from './ids-icons-list.js';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js';
-import 'ids-enterprise-wc/ids-text/ids-text.js';
-import 'ids-enterprise-wc/ids-icon/ids-icon.js';
+import 'ids-enterprise-wc/components/ids-layout-grid';
+import 'ids-enterprise-wc/components/ids-text';
+import 'ids-enterprise-wc/components/ids-icon';
 
 function getIcon(iconName, i) {
   return (
