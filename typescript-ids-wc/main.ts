@@ -1,5 +1,5 @@
 // Import the components we want to use.
-import IdsTag from 'ids-enterprise-wc/ids-tag/ids-tag.js';
+import IdsTag from 'ids-enterprise-wc/components/ids-tag';
 
 // Initialize a component.
 const tag = new IdsTag();

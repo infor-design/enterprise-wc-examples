@@ -23,10 +23,10 @@
 </template>
 
 <script>
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js';
-import 'ids-enterprise-wc/ids-text/ids-text.js';
-import 'ids-enterprise-wc/ids-icon/ids-icon.js';
-import 'ids-enterprise-wc/ids-tag/ids-tag.js';
+import 'ids-enterprise-wc/src/components/ids-layout-grid';
+import 'ids-enterprise-wc/src/components/ids-text';
+import 'ids-enterprise-wc/src/components/ids-icon';
+import 'ids-enterprise-wc/src/components/ids-tag';
 
 const data = [
   { label: 'Normal Tag', color: '' },
