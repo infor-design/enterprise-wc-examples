@@ -1,13 +1,13 @@
 import React from 'react';
-import iconlist from './ids-icons-list.js';
+import iconlist from './icons-list';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-icon';
+// import 'ids-enterprise-wc/components/ids-text';
+// import 'ids-enterprise-wc/components/ids-icon';
 
-function getIcon(iconName, i) {
+const getIcon = (iconName) => {
   return (
-    <span className="ids-icon-container" key={iconName + i}>
+    <span className="ids-icon-container" key={iconName}>
       <ids-text font-size="10">{'icon-' + iconName}</ids-text><br/>
       <ids-icon icon={iconName} size="large"></ids-icon>
       <ids-icon icon={iconName}></ids-icon>
@@ -16,16 +16,16 @@ function getIcon(iconName, i) {
   );
 }
 
-function IdsIcon() {
+const IdsIcon = () => {
   return (
-    <React.Fragment>
+    <>
       <ids-layout-grid>
         <ids-text font-size="12">Icons</ids-text>
       </ids-layout-grid>
       <ids-layout-grid className="ids-icon-list" auto="true" gap="md">
-        {iconlist.map((iconName, i) => getIcon(iconName, i))}
+        {iconlist.map((iconName) => getIcon(iconName))}
       </ids-layout-grid>
-    </React.Fragment>
+    </>
   );
 }
 

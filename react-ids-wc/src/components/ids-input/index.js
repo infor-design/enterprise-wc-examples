@@ -1,9 +1,9 @@
 import React from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-input';
+// import 'ids-enterprise-wc/components/ids-input';
 
-function IdsInput() {
+const IdsInput = () => {
   const person = 'John Smith';
 
   function handleClickable(e) {
@@ -11,7 +11,7 @@ function IdsInput() {
   }
 
   return (
-    <React.Fragment>
+    <>
       <ids-layout-grid>
         <ids-text font-size="12">Inputs</ids-text>
       </ids-layout-grid>
@@ -21,7 +21,7 @@ function IdsInput() {
           <ids-input label="Normal Input" value={ person } onChange={ handleClickable }></ids-input>
         </ids-layout-grid-cell>
       </ids-layout-grid>
-    </React.Fragment>
+    </>
   );
 }
 

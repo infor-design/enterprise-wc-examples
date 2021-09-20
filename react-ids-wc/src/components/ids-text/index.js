@@ -1,11 +1,11 @@
 import React from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
+// import 'ids-enterprise-wc/components/ids-text';
 
-function IdsText() {
+const IdsText = () => {
   return (
-    <React.Fragment>
+    <>
       <ids-layout-grid>
         <ids-text font-size="12">Labels / Typography</ids-text>
       </ids-layout-grid>
@@ -25,7 +25,7 @@ function IdsText() {
           <ids-text font-size="10">Size 10</ids-text>
         </ids-layout-grid-cell>
       </ids-layout-grid>
-    </React.Fragment>
+    </>
   );
 }
 

@@ -1,20 +1,27 @@
 import React from 'react';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 
-import IdsInput from './ids-examples/ids-input.js';
-import IdsTags from './ids-examples/ids-tags.js';
-import IdsText from './ids-examples/ids-text.js';
-import IdsIcons from './ids-examples/ids-icons.js';
-import IdsLayoutGrid from './ids-examples/ids-layout-grid.js';
+import * as Components from './components'
+import Home from './Home'
+import { routes } from './settings/routes'
 
-function App() {
+const App = () => {
   return (
     <div className="App" role="main">
-      <IdsInput />
-      <IdsTags />
-      <IdsText />
-      <IdsIcons />
-      <IdsLayoutGrid />
+      <Router>
+        <Switch>
+          {routes.map(({ route, name }) => {
+            const Component = Components[name]
+
+            return <Route key={route} path={`/${route}`}><Component /></Route>
+          })}
+          <Route path="/"><Home /></Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-icon';
-import 'ids-enterprise-wc/components/ids-tag';
+// import 'ids-enterprise-wc/components/ids-text';
+// import 'ids-enterprise-wc/components/ids-icon';
+// import 'ids-enterprise-wc/components/ids-tag';
 
-function IdsTags() {
+function IdsTag() {
   const reactInfoTagRef = useRef();
   const dismissibleTagRef = useRef();
 
@@ -25,7 +25,7 @@ function IdsTags() {
   });
 
   return (
-    <React.Fragment>
+    <>
       <ids-layout-grid>
         <ids-text font-size="12">Normal Tags</ids-text>
       </ids-layout-grid>
@@ -54,8 +54,8 @@ function IdsTags() {
           <ids-tag dismissible="true" ref={ dismissibleTagRef }><slot>{ person }</slot></ids-tag>
         </ids-layout-grid-cell>
       </ids-layout-grid>
-    </React.Fragment>
+    </>
   );
 }
 
-export default IdsTags;
+export default IdsTag;
