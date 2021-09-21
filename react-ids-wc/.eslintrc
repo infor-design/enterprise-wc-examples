@@ -23,7 +23,6 @@
   },
   "env": {
     "jest": true,
-    "puppeteer": true
   },
   "parser": "babel-eslint"
 }
