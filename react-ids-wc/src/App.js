@@ -5,7 +5,7 @@ import {
   Route,
 } from 'react-router-dom';
 
-import * as Components from './components'
+import * as Components from './examples'
 import Home from './Home'
 import { routes } from './settings/routes'
 

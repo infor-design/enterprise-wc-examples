@@ -1,7 +1,6 @@
 import React from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
-// Doesn't work yet, ids-locale dependency
 // import 'ids-enterprise-wc/components/ids-badge';
 // import 'ids-enterprise-wc/components/ids-text';
 
