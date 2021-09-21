@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 import { routes } from './settings/routes'
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell';
 import 'ids-enterprise-wc/components/ids-block-grid';
 import 'ids-enterprise-wc/components/ids-block-grid/ids-block-grid-item';
 // import 'ids-enterprise-wc/components/ids-card';
+// import 'ids-enterprise-wc/components/ids-text';
 
 const Home = () => {
   return (
