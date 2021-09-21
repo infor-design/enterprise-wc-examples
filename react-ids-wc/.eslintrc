@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "jsx-a11y",
+    "react",
+    "react-hooks"
+  ],
+  "rules": {
+    "react/no-unescaped-entities": 0
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "fetch": true,
+    "Promise": true,
+    "process": true,
+    "module": true,
+    "console": true
+  },
+  "parser": "babel-eslint"
+}
