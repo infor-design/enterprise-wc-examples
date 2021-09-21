@@ -18,7 +18,12 @@
     "Promise": true,
     "process": true,
     "module": true,
-    "console": true
+    "console": true,
+    "jestPuppeteer": true
+  },
+  "env": {
+    "jest": true,
+    "puppeteer": true
   },
   "parser": "babel-eslint"
 }
