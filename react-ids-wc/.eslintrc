@@ -19,10 +19,13 @@
     "process": true,
     "module": true,
     "console": true,
-    "jestPuppeteer": true
+    "jestPuppeteer": true,
+    "page": true,
+    "browser": true,
+    "context": true
   },
   "env": {
-    "jest": true,
+    "jest": true
   },
   "parser": "babel-eslint"
 }
