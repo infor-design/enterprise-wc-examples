@@ -13,6 +13,11 @@ export const routes = [
     title: 'Accordion'
   },
   {
+    route: 'ids-alert',
+    name: 'IdsAlert',
+    title: 'Alert'
+  },
+  {
     route: 'ids-badge',
     name: 'IdsBadge',
     title: 'Badge'
