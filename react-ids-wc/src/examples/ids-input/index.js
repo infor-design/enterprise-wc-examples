@@ -18,11 +18,15 @@ const IdsInput = () => {
 
       <ids-layout-grid>
         <ids-layout-grid-cell>
-          <ids-input label="Normal Input" value={ person } onChange={ handleClickable }></ids-input>
+          <ids-input
+            label="Normal Input"
+            value={person}
+            onChange={handleClickable}
+          ></ids-input>
         </ids-layout-grid-cell>
       </ids-layout-grid>
     </>
   );
-}
+};
 
 export default IdsInput;

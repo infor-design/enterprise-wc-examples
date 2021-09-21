@@ -27,6 +27,6 @@ const IdsText = () => {
       </ids-layout-grid>
     </>
   );
-}
+};
 
 export default IdsText;

@@ -15,7 +15,9 @@ const IdsBadge = () => {
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-badge>5</ids-badge>
-          <ids-badge color="alert" shape="round">10</ids-badge>
+          <ids-badge color="alert" shape="round">
+            10
+          </ids-badge>
           <ids-badge color="alert" shape="normal">
             10
           </ids-badge>
@@ -35,6 +37,6 @@ const IdsBadge = () => {
       </ids-layout-grid>
     </>
   );
-}
+};
 
 export default IdsBadge;

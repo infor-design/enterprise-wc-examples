@@ -46,12 +46,21 @@ function IdsTag() {
       </ids-layout-grid>
       <ids-layout-grid>
         <ids-layout-grid-cell>
-          <ids-tag ref={ reactInfoTagRef }>{ reactInfoText }</ids-tag>
-          <ids-tag color={ type }><span>{ person }</span></ids-tag>
-          <ids-tag clickable="true" id="ids-clickable-tag">Clickable Tag
-            <ids-icon icon="caret-right" size="small" onClick={ handleClickable }></ids-icon>
+          <ids-tag ref={reactInfoTagRef}>{reactInfoText}</ids-tag>
+          <ids-tag color={type}>
+            <span>{person}</span>
           </ids-tag>
-          <ids-tag dismissible="true" ref={ dismissibleTagRef }><slot>{ person }</slot></ids-tag>
+          <ids-tag clickable="true" id="ids-clickable-tag">
+            Clickable Tag
+            <ids-icon
+              icon="caret-right"
+              size="small"
+              onClick={handleClickable}
+            ></ids-icon>
+          </ids-tag>
+          <ids-tag dismissible="true" ref={dismissibleTagRef}>
+            <slot>{person}</slot>
+          </ids-tag>
         </ids-layout-grid-cell>
       </ids-layout-grid>
     </>

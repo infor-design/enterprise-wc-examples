@@ -1,5 +1,5 @@
-// import IdsAccordion from './ids-accordion';
-// import IdsAbout from './ids-about';
+import IdsAbout from './ids-about';
+import IdsAccordion from './ids-accordion';
 // import IdsAlert from './ids-alert';
 import IdsBadge from './ids-badge';
 // import IdsButton from './ids-button';
@@ -40,4 +40,13 @@ import IdsText from './ids-text';
 // import IdsThemeSwitcher from './ids-theme-switcher';
 // import IdsWizard from './ids-wizard';
 
-export { IdsBadge, IdsTag, IdsText, IdsIcon, IdsLayoutGrid, IdsInput }
+export {
+  IdsAbout,
+  IdsAccordion,
+  IdsBadge,
+  IdsTag,
+  IdsText,
+  IdsIcon,
+  IdsLayoutGrid,
+  IdsInput
+};

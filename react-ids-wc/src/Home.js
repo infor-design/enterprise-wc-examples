@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-import { routes } from './settings/routes'
+import { routes } from './settings/routes';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-block-grid';

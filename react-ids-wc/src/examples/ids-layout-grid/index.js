@@ -7,7 +7,9 @@ const IdsLayoutGrid = () => {
   return (
     <>
       <ids-layout-grid auto="true" gap="md">
-        <ids-text font-size="12" type="h1">Layout Grid</ids-text>
+        <ids-text font-size="12" type="h1">
+          Layout Grid
+        </ids-text>
       </ids-layout-grid>
 
       <ids-layout-grid cols="3" gap="md">
@@ -47,6 +49,6 @@ const IdsLayoutGrid = () => {
       </ids-layout-grid>
     </>
   );
-}
+};
 
 export default IdsLayoutGrid;
