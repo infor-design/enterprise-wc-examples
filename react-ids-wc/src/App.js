@@ -4,10 +4,11 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import * as Components from './examples';
 import Home from './Home';
 import { routes } from './settings/routes';
+import 'ids-enterprise-wc/components/ids-container';
 
 const App = () => {
   return (
-    <div className="App" role="main">
+    <ids-container>
       <Router>
         <Switch>
           {routes.map(({ route, name }) => {
@@ -24,7 +25,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </ids-container>
   );
 };
 
