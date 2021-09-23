@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { routes } from './settings/routes';
 
@@ -17,14 +17,18 @@ const Home = () => {
           {routes.map(({ route, title }) => (
             <ids-block-grid-item key={route}>
               <ids-card auto-height="true">
-                <ids-text
-                  type="h2"
-                  font-size="16"
-                  font-weight="bold"
-                  color="slate-100"
-                >
-                  {title}
-                </ids-text>
+                <div slot="card-content">
+                  <Link to={`/${route}`}>
+                    <ids-text
+                      type="h2"
+                      font-size="16"
+                      font-weight="bold"
+                      color="slate-100"
+                    >
+                      {title}
+                    </ids-text>
+                  </Link>
+                </div>
               </ids-card>
             </ids-block-grid-item>
           ))}
