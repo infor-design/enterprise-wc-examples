@@ -1,6 +1,5 @@
 // List of all pages with correspondant components
-// Used on homepage and app routes
-// TODO: alphabetical order
+// Used on homepage to render components list and in router to attach a component to a route
 export const routes = [
   {
     route: 'ids-about',
@@ -61,6 +60,16 @@ export const routes = [
     route: 'ids-counts',
     name: 'IdsCounts',
     title: 'Counts'
+  },
+  {
+    route: 'ids-data-grid',
+    name: 'IdsDataGrid',
+    title: 'Data Grid'
+  },
+  {
+    route: 'ids-draggable',
+    name: 'IdsDraggable',
+    title: 'Draggable'
   },
   {
     route: 'ids-tag',

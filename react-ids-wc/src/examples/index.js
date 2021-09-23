@@ -10,6 +10,8 @@ import IdsCheckbox from './ids-checkbox';
 import IdsColor from './ids-color';
 import IdsColorPicker from './ids-color-picker';
 import IdsCounts from './ids-counts';
+import IdsDataGrid from './ids-data-grid';
+import IdsDraggable from './ids-draggable';
 import IdsIcon from './ids-icon';
 import IdsInput from './ids-input';
 import IdsLayoutGrid from './ids-layout-grid';
@@ -29,6 +31,8 @@ export {
   IdsColor,
   IdsColorPicker,
   IdsCounts,
+  IdsDataGrid,
+  IdsDraggable,
   IdsTag,
   IdsText,
   IdsIcon,
