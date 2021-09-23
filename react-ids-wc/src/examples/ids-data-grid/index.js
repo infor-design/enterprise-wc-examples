@@ -17,7 +17,7 @@ const IdsDataGrid = () => {
     const data = await response.json()
 
     // Set columns
-    dataGridRef.current.columns = getGridColumns(dataGridRef.current)
+    dataGridRef.current.columns = getGridColumns(dataGridRef.current.formatters)
 
     // Set data
     dataGridRef.current.data = data

@@ -1,16 +1,17 @@
-export const getGridColumns = dataGrid => [
+// eslint-disable-next-line no-unused-vars
+export const getGridColumns = formatters => [
   {
     id: 'selectionCheckbox',
     sortable: false,
     resizable: false,
-    // formatter: dataGrid.formatters.text,
+    // formatter: formatters.text,
     align: 'center',
     width: 20
   },
   {
     id: 'rowNumber',
     name: '#',
-    // formatter: dataGrid.formatters.rowNumber,
+    // formatter: formatters.rowNumber,
     sortable: false,
     readonly: true,
     width: 65
@@ -20,100 +21,100 @@ export const getGridColumns = dataGrid => [
     name: 'Description',
     field: 'description',
     sortable: true,
-    // formatter: dataGrid.formatters.text
+    // formatter: formatters.text
   },
   {
     id: 'ledger',
     name: 'Ledger',
     field: 'ledger',
-    // formatter: dataGrid.formatters.text
+    // formatter: formatters.text
   },
   {
     id: 'publishDate',
     name: 'Pub. Date',
     field: 'publishDate',
-    // formatter: dataGrid.formatters.date
+    // formatter: formatters.date
   },
   {
     id: 'publishTime',
     name: 'Pub. Time',
     field: 'publishDate',
-    // formatter: dataGrid.formatters.time
+    // formatter: formatters.time
   },
   {
     id: 'price',
     name: 'Price',
     field: 'price',
-    // formatter: dataGrid.formatters.decimal,
+    // formatter: formatters.decimal,
     formatOptions: { locale: 'en-US' } // Data Values are in en-US
   },
   {
     id: 'bookCurrency',
     name: 'Currency',
     field: 'bookCurrency',
-    // formatter: dataGrid.formatters.text
+    // formatter: formatters.text
   },
   {
     id: 'transactionCurrency',
     name: 'Transaction Currency',
     field: 'transactionCurrency',
-    // formatter: dataGrid.formatters.text
+    // formatter: formatters.text
   },
   {
     id: 'integer',
     name: 'Price (Int)',
     field: 'price',
-    // formatter: dataGrid.formatters.integer,
+    // formatter: formatters.integer,
     formatOptions: { locale: 'en-US' } // Data Values are in en-US
   },
   {
     id: 'location',
     name: 'Location',
     field: 'location',
-    // formatter: dataGrid.formatters.hyperlink,
+    // formatter: formatters.hyperlink,
     href: '#'
   },
   {
     id: 'postHistory',
     name: 'Post History',
     field: 'postHistory',
-    // formatter: dataGrid.formatters.text
+    // formatter: formatters.text
   },
   {
     id: 'active',
     name: 'Active',
     field: 'active',
-    // formatter: dataGrid.formatters.text
+    // formatter: formatters.text
   },
   {
     id: 'convention',
     name: 'Convention',
     field: 'convention',
-    // formatter: dataGrid.formatters.text
+    // formatter: formatters.text
   },
   {
     id: 'methodSwitch',
     name: 'Method Switch',
     field: 'methodSwitch',
-    // formatter: dataGrid.formatters.text,
+    // formatter: formatters.text,
     filterType: 'select'
   },
   {
     id: 'trackDeprecationHistory',
     name: 'Track Deprecation History',
     field: 'trackDeprecationHistory',
-    // formatter: dataGrid.formatters.dropdown
+    // formatter: formatters.dropdown
   },
   {
     id: 'useForEmployee',
     name: 'Use For Employee',
     field: 'useForEmployee',
-    // formatter: dataGrid.formatters.password
+    // formatter: formatters.password
   },
   {
     id: 'deprecationHistory',
     name: 'Deprecation History',
     field: 'deprecationHistory',
-    // formatter: dataGrid.formatters.text
+    // formatter: formatters.text
   }
 ];

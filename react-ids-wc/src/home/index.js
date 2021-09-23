@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { routes } from './settings/routes';
+import { routes } from '../settings/routes';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-block-grid';
 import 'ids-enterprise-wc/components/ids-block-grid/ids-block-grid-item';
 import 'ids-enterprise-wc/components/ids-card';
 import 'ids-enterprise-wc/components/ids-text';
+
+import './example.css';
 
 const Home = () => {
   return (
@@ -16,9 +18,9 @@ const Home = () => {
         <ids-block-grid align="center">
           {routes.map(({ route, title }) => (
             <ids-block-grid-item key={route}>
-              <ids-card auto-height="true">
-                <div slot="card-content">
-                  <Link to={`/${route}`}>
+              <Link to={`/${route}`}>
+                <ids-card auto-height="true">
+                  <div slot="card-content" className="main-list">
                     <ids-text
                       type="h2"
                       font-size="16"
@@ -27,9 +29,9 @@ const Home = () => {
                     >
                       {title}
                     </ids-text>
-                  </Link>
-                </div>
-              </ids-card>
+                  </div>
+                </ids-card>
+              </Link>
             </ids-block-grid-item>
           ))}
         </ids-block-grid>

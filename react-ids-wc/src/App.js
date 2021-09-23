@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import * as Components from './examples';
-import Home from './Home';
+import Home from './home';
 import { routes } from './settings/routes';
+
 import 'ids-enterprise-wc/components/ids-container';
 
 const App = () => {
