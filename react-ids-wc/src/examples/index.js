@@ -5,6 +5,11 @@ import IdsBadge from './ids-badge';
 import IdsBlockgrid from './ids-block-grid';
 import IdsBreadcrumb from './ids-breadcrumb';
 import IdsButton from './ids-button';
+import IdsCard from './ids-card';
+import IdsCheckbox from './ids-checkbox';
+import IdsColor from './ids-color';
+import IdsColorPicker from './ids-color-picker';
+import IdsCounts from './ids-counts';
 import IdsIcon from './ids-icon';
 import IdsInput from './ids-input';
 import IdsLayoutGrid from './ids-layout-grid';
@@ -19,6 +24,11 @@ export {
   IdsBlockgrid,
   IdsBreadcrumb,
   IdsButton,
+  IdsCard,
+  IdsCheckbox,
+  IdsColor,
+  IdsColorPicker,
+  IdsCounts,
   IdsTag,
   IdsText,
   IdsIcon,

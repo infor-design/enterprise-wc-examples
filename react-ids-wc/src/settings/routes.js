@@ -38,6 +38,31 @@ export const routes = [
     title: 'Button'
   },
   {
+    route: 'ids-card',
+    name: 'IdsCard',
+    title: 'Card'
+  },
+  {
+    route: 'ids-checkbox',
+    name: 'IdsCheckbox',
+    title: 'Checkbox'
+  },
+  {
+    route: 'ids-color',
+    name: 'IdsColor',
+    title: 'Color'
+  },
+  {
+    route: 'ids-color-picker',
+    name: 'IdsColorPicker',
+    title: 'Color Picker'
+  },
+  {
+    route: 'ids-counts',
+    name: 'IdsCounts',
+    title: 'Counts'
+  },
+  {
     route: 'ids-tag',
     name: 'IdsTag',
     title: 'Tag'

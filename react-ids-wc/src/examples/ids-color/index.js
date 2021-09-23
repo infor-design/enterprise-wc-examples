@@ -1,0 +1,23 @@
+import React from 'react';
+
+import 'ids-enterprise-wc/components/ids-layout-grid';
+import 'ids-enterprise-wc/components/ids-text';
+import 'ids-enterprise-wc/components/ids-color';
+
+const IdsColor = () => {
+  return (
+    <>
+      <ids-layout-grid auto="true">
+        <ids-text font-size="12" type="h1">
+          Color
+        </ids-text>
+      </ids-layout-grid>
+
+      <ids-layout-grid auto="true">
+        <ids-color hex="#00000"></ids-color>
+      </ids-layout-grid>
+    </>
+  );
+};
+
+export default IdsColor;
