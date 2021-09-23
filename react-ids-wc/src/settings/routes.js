@@ -23,6 +23,21 @@ export const routes = [
     title: 'Badge'
   },
   {
+    route: 'ids-block-grid',
+    name: 'IdsBlockgrid',
+    title: 'Block Grid'
+  },
+  {
+    route: 'ids-breadcrumb',
+    name: 'IdsBreadcrumb',
+    title: 'Breadcrumb'
+  },
+  {
+    route: 'ids-button',
+    name: 'IdsButton',
+    title: 'Button'
+  },
+  {
     route: 'ids-tag',
     name: 'IdsTag',
     title: 'Tag'

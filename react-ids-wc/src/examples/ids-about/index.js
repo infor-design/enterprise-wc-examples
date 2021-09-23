@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
-// import 'ids-enterprise-wc/components/ids-about';
-// import 'ids-enterprise-wc/components/ids-text';
-// import 'ids-enterprise-wc/components/ids-button';
-// import 'ids-enterprise-wc/components/ids-icon';
+import 'ids-enterprise-wc/components/ids-about';
+import 'ids-enterprise-wc/components/ids-text';
+import 'ids-enterprise-wc/components/ids-button';
+import 'ids-enterprise-wc/components/ids-icon';
 
 const IdsAbout = () => {
   const aboutRef = useRef();
@@ -42,7 +42,7 @@ const IdsAbout = () => {
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
-          <ids-button type="secondary">Show About Screen</ids-button>
+          <ids-button ref={triggerRef} type="secondary">Show About Screen</ids-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>
     </>
