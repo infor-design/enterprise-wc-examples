@@ -122,6 +122,26 @@ export const routes = [
     title: 'Menu Button'
   },
   {
+    route: 'ids-message',
+    name: 'IdsMessage',
+    title: 'Message'
+  },
+  {
+    route: 'ids-modal',
+    name: 'IdsModal',
+    title: 'Modal'
+  },
+  {
+    route: 'ids-notification-banner',
+    name: 'IdsNotificationBanner',
+    title: 'Notification Banner'
+  },
+  {
+    route: 'ids-pager',
+    name: 'IdsPager',
+    title: 'Pager'
+  },
+  {
     route: 'ids-tag',
     name: 'IdsTag',
     title: 'Tag'

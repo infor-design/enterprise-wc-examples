@@ -22,6 +22,10 @@ import IdsLoadingIndicator from './ids-loading-indicator';
 import IdsMask from './ids-mask';
 import IdsMenu from './ids-menu';
 import IdsMenuButton from './ids-menu-button';
+import IdsMessage from './ids-message';
+import IdsModal from './ids-modal';
+import IdsNotificationBanner from './ids-notification-banner';
+import IdsPager from './ids-pager';
 import IdsIcon from './ids-icon';
 import IdsLayoutGrid from './ids-layout-grid';
 import IdsTag from './ids-tag';
@@ -52,6 +56,10 @@ export {
   IdsMask,
   IdsMenu,
   IdsMenuButton,
+  IdsMessage,
+  IdsModal,
+  IdsNotificationBanner,
+  IdsPager,
   IdsTag,
   IdsText,
   IdsIcon,
