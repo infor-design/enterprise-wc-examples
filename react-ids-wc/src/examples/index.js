@@ -30,6 +30,10 @@ import IdsPopup from './ids-popup';
 import IdsPopupMenu from './ids-popup-menu';
 import IdsProgressBar from './ids-progress-bar';
 import IdsProgressChart from './ids-progress-chart';
+import IdsRadio from './ids-radio';
+import IdsRating from './ids-rating';
+import IdsRenderLoop from './ids-render-loop';
+import IdsScrollView from './ids-scroll-view';
 import IdsIcon from './ids-icon';
 import IdsLayoutGrid from './ids-layout-grid';
 import IdsTag from './ids-tag';
@@ -68,6 +72,10 @@ export {
   IdsPopupMenu,
   IdsProgressBar,
   IdsProgressChart,
+  IdsRadio,
+  IdsRating,
+  IdsRenderLoop,
+  IdsScrollView,
   IdsTag,
   IdsText,
   IdsIcon,

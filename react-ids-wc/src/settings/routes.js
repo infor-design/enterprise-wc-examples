@@ -162,6 +162,26 @@ export const routes = [
     title: 'Progress Chart'
   },
   {
+    route: 'ids-radio',
+    name: 'IdsRadio',
+    title: 'Radio'
+  },
+  {
+    route: 'ids-rating',
+    name: 'IdsRating',
+    title: 'Rating'
+  },
+  {
+    route: 'ids-render-loop',
+    name: 'IdsRenderLoop',
+    title: 'Render Loop'
+  },
+  {
+    route: 'ids-scroll-view',
+    name: 'IdsScrollView',
+    title: 'Scroll View'
+  },
+  {
     route: 'ids-tag',
     name: 'IdsTag',
     title: 'Tag'
