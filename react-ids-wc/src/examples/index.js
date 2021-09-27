@@ -15,8 +15,14 @@ import IdsDraggable from './ids-draggable';
 import IdsExpandableArea from './ids-expandable-area';
 import IdsFieldset from './ids-fieldset';
 import IdsHeader from './ids-header';
-import IdsIcon from './ids-icon';
+import IdsHyperlink from './ids-hyperlink';
 import IdsInput from './ids-input';
+import IdsListView from './ids-list-view';
+import IdsLoadingIndicator from './ids-loading-indicator';
+import IdsMask from './ids-mask';
+import IdsMenu from './ids-menu';
+import IdsMenuButton from './ids-menu-button';
+import IdsIcon from './ids-icon';
 import IdsLayoutGrid from './ids-layout-grid';
 import IdsTag from './ids-tag';
 import IdsText from './ids-text';
@@ -39,9 +45,15 @@ export {
   IdsExpandableArea,
   IdsFieldset,
   IdsHeader,
+  IdsHyperlink,
+  IdsInput,
+  IdsListView,
+  IdsLoadingIndicator,
+  IdsMask,
+  IdsMenu,
+  IdsMenuButton,
   IdsTag,
   IdsText,
   IdsIcon,
-  IdsLayoutGrid,
-  IdsInput
+  IdsLayoutGrid
 };

@@ -87,6 +87,41 @@ export const routes = [
     title: 'Header'
   },
   {
+    route: 'ids-hyperlink',
+    name: 'IdsHyperlink',
+    title: 'Hyperlink'
+  },
+  {
+    route: 'ids-input',
+    name: 'IdsInput',
+    title: 'Input'
+  },
+  {
+    route: 'ids-list-view',
+    name: 'IdsListView',
+    title: 'List View'
+  },
+  {
+    route: 'ids-loading-indicator',
+    name: 'IdsLoadingIndicator',
+    title: 'Loading Indicator'
+  },
+  {
+    route: 'ids-mask',
+    name: 'IdsMask',
+    title: 'Mask'
+  },
+  {
+    route: 'ids-menu',
+    name: 'IdsMenu',
+    title: 'Menu'
+  },
+  {
+    route: 'ids-menu-button',
+    name: 'IdsMenuButton',
+    title: 'Menu Button'
+  },
+  {
     route: 'ids-tag',
     name: 'IdsTag',
     title: 'Tag'
@@ -105,10 +140,5 @@ export const routes = [
     route: 'ids-layout-grid',
     name: 'IdsLayoutGrid',
     title: 'Layout Grid'
-  },
-  {
-    route: 'ids-input',
-    name: 'IdsInput',
-    title: 'Input'
   }
 ];
