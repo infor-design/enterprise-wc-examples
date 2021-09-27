@@ -26,6 +26,10 @@ import IdsMessage from './ids-message';
 import IdsModal from './ids-modal';
 import IdsNotificationBanner from './ids-notification-banner';
 import IdsPager from './ids-pager';
+import IdsPopup from './ids-popup';
+import IdsPopupMenu from './ids-popup-menu';
+import IdsProgressBar from './ids-progress-bar';
+import IdsProgressChart from './ids-progress-chart';
 import IdsIcon from './ids-icon';
 import IdsLayoutGrid from './ids-layout-grid';
 import IdsTag from './ids-tag';
@@ -60,6 +64,10 @@ export {
   IdsModal,
   IdsNotificationBanner,
   IdsPager,
+  IdsPopup,
+  IdsPopupMenu,
+  IdsProgressBar,
+  IdsProgressChart,
   IdsTag,
   IdsText,
   IdsIcon,

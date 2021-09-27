@@ -142,6 +142,26 @@ export const routes = [
     title: 'Pager'
   },
   {
+    route: 'ids-popup',
+    name: 'IdsPopup',
+    title: 'Popup'
+  },
+  {
+    route: 'ids-popup-menu',
+    name: 'IdsPopupMenu',
+    title: 'Popup Menu'
+  },
+  {
+    route: 'ids-progress-bar',
+    name: 'IdsProgressBar',
+    title: 'Progress Bar'
+  },
+  {
+    route: 'ids-progress-chart',
+    name: 'IdsProgressChart',
+    title: 'Progress Chart'
+  },
+  {
     route: 'ids-tag',
     name: 'IdsTag',
     title: 'Tag'
