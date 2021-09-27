@@ -72,6 +72,21 @@ export const routes = [
     title: 'Draggable'
   },
   {
+    route: 'ids-expandable-area',
+    name: 'IdsExpandableArea',
+    title: 'Expandable Area'
+  },
+  {
+    route: 'ids-fieldset',
+    name: 'IdsFieldset',
+    title: 'Fieldset'
+  },
+  {
+    route: 'ids-header',
+    name: 'IdsHeader',
+    title: 'Header'
+  },
+  {
     route: 'ids-tag',
     name: 'IdsTag',
     title: 'Tag'

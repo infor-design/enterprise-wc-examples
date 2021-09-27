@@ -12,6 +12,9 @@ import IdsColorPicker from './ids-color-picker';
 import IdsCounts from './ids-counts';
 import IdsDataGrid from './ids-data-grid';
 import IdsDraggable from './ids-draggable';
+import IdsExpandableArea from './ids-expandable-area';
+import IdsFieldset from './ids-fieldset';
+import IdsHeader from './ids-header';
 import IdsIcon from './ids-icon';
 import IdsInput from './ids-input';
 import IdsLayoutGrid from './ids-layout-grid';
@@ -33,6 +36,9 @@ export {
   IdsCounts,
   IdsDataGrid,
   IdsDraggable,
+  IdsExpandableArea,
+  IdsFieldset,
+  IdsHeader,
   IdsTag,
   IdsText,
   IdsIcon,
