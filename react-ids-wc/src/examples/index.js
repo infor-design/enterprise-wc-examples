@@ -16,7 +16,9 @@ import IdsExpandableArea from './ids-expandable-area';
 import IdsFieldset from './ids-fieldset';
 import IdsHeader from './ids-header';
 import IdsHyperlink from './ids-hyperlink';
+import IdsIcon from './ids-icon';
 import IdsInput from './ids-input';
+import IdsLayoutGrid from './ids-layout-grid';
 import IdsListView from './ids-list-view';
 import IdsLoadingIndicator from './ids-loading-indicator';
 import IdsMask from './ids-mask';
@@ -42,14 +44,20 @@ import IdsSummaryField from './ids-summary-field';
 import IdsSwipeAction from './ids-swipe-action';
 import IdsSwitch from './ids-switch';
 import IdsTabs from './ids-tabs';
+import IdsTag from './ids-tag';
+import IdsText from './ids-text';
 import IdsTextarea from './ids-textarea';
 import IdsThemeSwitcher from './ids-theme-switcher';
 import IdsToast from './ids-toast';
 import IdsToggleButton from './ids-toggle-button';
-import IdsIcon from './ids-icon';
-import IdsLayoutGrid from './ids-layout-grid';
-import IdsTag from './ids-tag';
-import IdsText from './ids-text';
+import IdsToolbar from './ids-toolbar';
+import IdsTooltip from './ids-tooltip';
+import IdsTree from './ids-tree';
+import IdsTriggerField from './ids-trigger-field';
+import IdsUpload from './ids-upload';
+import IdsUploadAdvanced from './ids-upload-advanced';
+import IdsVirtualScroll from './ids-virtual-scroll';
+import IdsWizard from './ids-wizard';
 
 export {
   IdsAbout,
@@ -70,7 +78,9 @@ export {
   IdsFieldset,
   IdsHeader,
   IdsHyperlink,
+  IdsIcon,
   IdsInput,
+  IdsLayoutGrid,
   IdsListView,
   IdsLoadingIndicator,
   IdsMask,
@@ -96,12 +106,18 @@ export {
   IdsSwipeAction,
   IdsSwitch,
   IdsTabs,
+  IdsTag,
+  IdsText,
   IdsTextarea,
   IdsThemeSwitcher,
   IdsToast,
   IdsToggleButton,
-  IdsTag,
-  IdsText,
-  IdsIcon,
-  IdsLayoutGrid
+  IdsToolbar,
+  IdsTooltip,
+  IdsTree,
+  IdsTriggerField,
+  IdsUpload,
+  IdsUploadAdvanced,
+  IdsVirtualScroll,
+  IdsWizard
 };

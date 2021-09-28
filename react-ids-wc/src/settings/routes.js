@@ -92,9 +92,19 @@ export const routes = [
     title: 'Hyperlink'
   },
   {
+    route: 'ids-icon',
+    name: 'IdsIcon',
+    title: 'Icon'
+  },
+  {
     route: 'ids-input',
     name: 'IdsInput',
     title: 'Input'
+  },
+  {
+    route: 'ids-layout-grid',
+    name: 'IdsLayoutGrid',
+    title: 'Layout Grid'
   },
   {
     route: 'ids-list-view',
@@ -222,6 +232,16 @@ export const routes = [
     title: 'Tabs'
   },
   {
+    route: 'ids-tag',
+    name: 'IdsTag',
+    title: 'Tag'
+  },
+  {
+    route: 'ids-text',
+    name: 'IdsText',
+    title: 'Text'
+  },
+  {
     route: 'ids-text-area',
     name: 'IdsTextarea',
     title: 'Text Area'
@@ -242,23 +262,43 @@ export const routes = [
     title: 'Toggle Button'
   },
   {
-    route: 'ids-tag',
-    name: 'IdsTag',
-    title: 'Tag'
+    route: 'ids-toolbar',
+    name: 'IdsToolbar',
+    title: 'Toolbar'
   },
   {
-    route: 'ids-icon',
-    name: 'IdsIcon',
-    title: 'Icon'
+    route: 'ids-tooltip',
+    name: 'IdsTooltip',
+    title: 'Tooltip'
   },
   {
-    route: 'ids-text',
-    name: 'IdsText',
-    title: 'Text'
+    route: 'ids-tree',
+    name: 'IdsTree',
+    title: 'Tree'
   },
   {
-    route: 'ids-layout-grid',
-    name: 'IdsLayoutGrid',
-    title: 'Layout Grid'
+    route: 'ids-trigger-field',
+    name: 'IdsTriggerField',
+    title: 'Trigger Field'
+  },
+  {
+    route: 'ids-upload',
+    name: 'IdsUpload',
+    title: 'Upload'
+  },
+  {
+    route: 'ids-upload-advanced',
+    name: 'IdsUploadAdvanced',
+    title: 'Upload Advanced'
+  },
+  {
+    route: 'ids-virtual-scroll',
+    name: 'IdsVirtualScroll',
+    title: 'Virtual Scroll'
+  },
+  {
+    route: 'ids-wizard',
+    name: 'IdsWizard',
+    title: 'Wizard'
   }
 ];
