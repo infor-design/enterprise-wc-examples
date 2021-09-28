@@ -40,6 +40,12 @@ import IdsSpinbox from './ids-spinbox';
 import IdsStepChart from './ids-step-chart';
 import IdsSummaryField from './ids-summary-field';
 import IdsSwipeAction from './ids-swipe-action';
+import IdsSwitch from './ids-switch';
+import IdsTabs from './ids-tabs';
+import IdsTextarea from './ids-textarea';
+import IdsThemeSwitcher from './ids-theme-switcher';
+import IdsToast from './ids-toast';
+import IdsToggleButton from './ids-toggle-button';
 import IdsIcon from './ids-icon';
 import IdsLayoutGrid from './ids-layout-grid';
 import IdsTag from './ids-tag';
@@ -88,6 +94,12 @@ export {
   IdsStepChart,
   IdsSummaryField,
   IdsSwipeAction,
+  IdsSwitch,
+  IdsTabs,
+  IdsTextarea,
+  IdsThemeSwitcher,
+  IdsToast,
+  IdsToggleButton,
   IdsTag,
   IdsText,
   IdsIcon,

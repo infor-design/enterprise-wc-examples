@@ -212,6 +212,36 @@ export const routes = [
     title: 'Swipe Action'
   },
   {
+    route: 'ids-switch',
+    name: 'IdsSwitch',
+    title: 'Switch'
+  },
+  {
+    route: 'ids-tabs',
+    name: 'IdsTabs',
+    title: 'Tabs'
+  },
+  {
+    route: 'ids-text-area',
+    name: 'IdsTextarea',
+    title: 'Text Area'
+  },
+  {
+    route: 'ids-theme-switcher',
+    name: 'IdsThemeSwitcher',
+    title: 'Theme Switcher'
+  },
+  {
+    route: 'ids-toast',
+    name: 'IdsToast',
+    title: 'Toast'
+  },
+  {
+    route: 'ids-toggle-button',
+    name: 'IdsToggleButton',
+    title: 'Toggle Button'
+  },
+  {
     route: 'ids-tag',
     name: 'IdsTag',
     title: 'Tag'
