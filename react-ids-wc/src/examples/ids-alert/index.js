@@ -1,7 +1,8 @@
 import React from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid'
-import 'ids-enterprise-wc/components/ids-alert'
+import 'ids-enterprise-wc/components/ids-layout-grid';
+import 'ids-enterprise-wc/components/ids-text';
+import 'ids-enterprise-wc/components/ids-alert';
 
 const IdsAlert = () => {
   return (
@@ -73,4 +74,4 @@ const IdsAlert = () => {
   );
 };
 
-export default IdsAlert
+export default IdsAlert;

@@ -3,7 +3,7 @@ import React from 'react';
 import 'ids-enterprise-wc/components/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-text';
 import 'ids-enterprise-wc/components/ids-hyperlink';
-// import 'ids-enterprise-wc/components/ids-breadcrumb';
+import 'ids-enterprise-wc/components/ids-breadcrumb';
 
 const IdsBreadcrumb = () => {
   return (

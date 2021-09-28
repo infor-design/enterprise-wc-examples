@@ -1,8 +1,8 @@
 import React from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-badge';
 import 'ids-enterprise-wc/components/ids-text';
+import 'ids-enterprise-wc/components/ids-badge';
 
 const IdsBadge = () => {
   return (

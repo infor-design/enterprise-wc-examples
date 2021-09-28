@@ -8,7 +8,7 @@ export const routes = [
   },
   {
     route: 'ids-accordion',
-    name: 'IdsAbout',
+    name: 'IdsAccordion',
     title: 'Accordion'
   },
   {
@@ -180,6 +180,36 @@ export const routes = [
     route: 'ids-scroll-view',
     name: 'IdsScrollView',
     title: 'Scroll View'
+  },
+  {
+    route: 'ids-skip-link',
+    name: 'IdsSkipLink',
+    title: 'Skip Link'
+  },
+  {
+    route: 'ids-slider',
+    name: 'IdsSlider',
+    title: 'Slider'
+  },
+  {
+    route: 'ids-spinbox',
+    name: 'IdsSpinbox',
+    title: 'Spinbox'
+  },
+  {
+    route: 'ids-step-chart',
+    name: 'IdsStepChart',
+    title: 'Step Chart'
+  },
+  {
+    route: 'ids-summary-field',
+    name: 'IdsSummaryField',
+    title: 'Summary Field'
+  },
+  {
+    route: 'ids-swipe-action',
+    name: 'IdsSwipeAction',
+    title: 'Swipe Action'
   },
   {
     route: 'ids-tag',

@@ -34,6 +34,12 @@ import IdsRadio from './ids-radio';
 import IdsRating from './ids-rating';
 import IdsRenderLoop from './ids-render-loop';
 import IdsScrollView from './ids-scroll-view';
+import IdsSkipLink from './ids-skip-link';
+import IdsSlider from './ids-slider';
+import IdsSpinbox from './ids-spinbox';
+import IdsStepChart from './ids-step-chart';
+import IdsSummaryField from './ids-summary-field';
+import IdsSwipeAction from './ids-swipe-action';
 import IdsIcon from './ids-icon';
 import IdsLayoutGrid from './ids-layout-grid';
 import IdsTag from './ids-tag';
@@ -76,6 +82,12 @@ export {
   IdsRating,
   IdsRenderLoop,
   IdsScrollView,
+  IdsSkipLink,
+  IdsSlider,
+  IdsSpinbox,
+  IdsStepChart,
+  IdsSummaryField,
+  IdsSwipeAction,
   IdsTag,
   IdsText,
   IdsIcon,
