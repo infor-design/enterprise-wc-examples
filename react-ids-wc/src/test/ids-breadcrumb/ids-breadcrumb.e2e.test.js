@@ -1,5 +1,14 @@
-describe('Ids Breadcrumb e2e tests', () => {
+describe('ids-breadcrumb e2e tests', () => {
+  let errors = [];
+
   beforeAll(async () => {
+    page.on('pageerror', error => errors.push(error.text));
+
     await page.goto('http://localhost:3000/ids-breadcrumb');
   });
+
+  it('renders with no errors', () => {
+    expect(errors.length).toBe(0);
+  });
 });
+

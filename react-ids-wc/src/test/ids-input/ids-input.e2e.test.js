@@ -1,10 +1,10 @@
-describe('ids-layout-grid e2e tests', () => {
+describe('ids-input e2e tests', () => {
   let errors = [];
 
   beforeAll(async () => {
     page.on('pageerror', error => errors.push(error.text));
 
-    await page.goto('http://localhost:3000/ids-layout-grid');
+    await page.goto('http://localhost:3000/ids-input');
   });
 
   it('renders with no errors', () => {

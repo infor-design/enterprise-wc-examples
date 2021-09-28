@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-about';
 import 'ids-enterprise-wc/components/ids-text';
 import 'ids-enterprise-wc/components/ids-button';
 import 'ids-enterprise-wc/components/ids-icon';
+import 'ids-enterprise-wc/components/ids-about';
 
 const IdsAbout = () => {
   const aboutRef = useRef();

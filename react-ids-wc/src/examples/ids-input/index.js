@@ -25,7 +25,7 @@ const IdsInput = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      {/* <ids-layout-grid cols="3" gap="md">
+      <ids-layout-grid cols="3" gap="md">
         <ids-layout-grid-cell>
           <ids-input
             type="text"
@@ -131,7 +131,7 @@ const IdsInput = () => {
             text-align="right"
           ></ids-input>
         </ids-layout-grid-cell>
-      </ids-layout-grid> */}
+      </ids-layout-grid>
     </>
   );
 };
