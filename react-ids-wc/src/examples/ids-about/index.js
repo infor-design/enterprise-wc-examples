@@ -11,9 +11,33 @@ const IdsAbout = () => {
   const triggerRef = useRef();
 
   useEffect(() => {
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
+    const about = aboutRef.current;
+    const triggerBtn = triggerRef.current;
+
     // Link the About to its trigger button
-    aboutRef.current.target = triggerRef.current;
-    aboutRef.current.trigger = 'click';
+    about.target = triggerRef.current;
+    about.trigger = 'click';
+
+    // Event handler to be used in attach and cleanup event listener
+    const handleBeforeShow = () => {
+      triggerBtn.disabled = true;
+      return true;
+    };
+
+    const handleHide = () => {
+      triggerBtn.disabled = false;
+    };
+
+    // Attach event listener
+    about.addEventListener('beforeshow', handleBeforeShow);
+    about.addEventListener('hide', handleHide);
+
+    // Cleanup event listener on React component unmount
+    return () => [
+      about.removeEventListener('beforeshow', handleBeforeShow),
+      about.removeEventListener('hide', handleHide)
+    ];
   }, []);
 
   return (
@@ -42,7 +66,9 @@ const IdsAbout = () => {
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
-          <ids-button ref={triggerRef} type="secondary">Show About Screen</ids-button>
+          <ids-button ref={triggerRef} type="secondary">
+            Show About Screen
+          </ids-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>
     </>

@@ -1,6 +1,6 @@
-# Ids Alert Web Component React Example
+# Ids Block Grid Web Component React Example
 
-[ids-alert documentation](https://github.com/infor-design/enterprise-wc/blob/main/src/components/ids-alert/README.md)
+[ids-block-grid documentation](https://github.com/infor-design/enterprise-wc/blob/main/src/components/ids-block-grid/README.md)
 
 React passes all data to Custom Elements in the form of HTML attributes.
 

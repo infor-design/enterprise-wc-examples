@@ -10,5 +10,11 @@ describe('ids-about e2e tests', () => {
   it('renders with no errors', () => {
     expect(errors.length).toBe(0);
   });
-});
 
+  it('trigger should open modal', async () => {
+    await page.click('ids-button');
+    const visible = await page.$eval('ids-about', element => element.visible);
+
+    expect(visible).toBeTruthy();
+  });
+});
