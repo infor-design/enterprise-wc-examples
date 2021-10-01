@@ -242,7 +242,7 @@ export const routes = [
     title: 'Text'
   },
   {
-    route: 'ids-text-area',
+    route: 'ids-textarea',
     name: 'IdsTextarea',
     title: 'Text Area'
   },

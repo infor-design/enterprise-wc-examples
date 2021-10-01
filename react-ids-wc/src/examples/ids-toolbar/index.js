@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-text';
 import 'ids-enterprise-wc/components/ids-button';
 import 'ids-enterprise-wc/components/ids-menu-button';
 import 'ids-enterprise-wc/components/ids-icon';
+import 'ids-enterprise-wc/components/ids-popup-menu';
 import 'ids-enterprise-wc/components/ids-toolbar';
 
 const IdsToolbar = () => {
+  const menuBtnRef = useRef();
+  const menuRef = useRef();
+
+  useEffect(() => {
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
+    const menu = menuRef.current;
+    const menuBtn = menuBtnRef.current;
+
+    // Link trigger with target
+    menu.target = menuBtn;
+    menu.trigger = 'click';
+  }, []);
+
   return (
     <>
       <ids-layout-grid auto="true">
@@ -37,15 +51,14 @@ const IdsToolbar = () => {
                 <span slot="text">Text</span>
               </ids-button>
 
-              {/* <ids-menu-button
+              <ids-menu-button
+                ref={menuBtnRef}
                 role="button"
-                id="button-2"
-                menu="button-2-menu"
                 dropdown-icon
               >
                 <span slot="text">Menu</span>
               </ids-menu-button>
-              <ids-popup-menu id="button-2-menu" target="#button-2">
+              <ids-popup-menu ref={menuRef}>
                 <ids-menu-group>
                   <ids-menu-item value="1">Item One</ids-menu-item>
                   <ids-menu-item value="2">Item Two</ids-menu-item>
@@ -61,7 +74,7 @@ const IdsToolbar = () => {
                     </ids-popup-menu>
                   </ids-menu-item>
                 </ids-menu-group>
-              </ids-popup-menu> */}
+              </ids-popup-menu>
 
               <ids-button id="button-3" disabled>
                 <span slot="text" className="audible">
@@ -78,7 +91,7 @@ const IdsToolbar = () => {
               </ids-button>
             </ids-toolbar-section>
 
-            {/* <ids-toolbar-more-actions>
+            <ids-toolbar-more-actions>
               <ids-menu-group>
                 <ids-menu-item value="1">Option One</ids-menu-item>
                 <ids-menu-item value="2">Option Two</ids-menu-item>
@@ -94,7 +107,7 @@ const IdsToolbar = () => {
                   </ids-popup-menu>
                 </ids-menu-item>
               </ids-menu-group>
-            </ids-toolbar-more-actions> */}
+            </ids-toolbar-more-actions>
           </ids-toolbar>
         </ids-layout-grid-cell>
       </ids-layout-grid>

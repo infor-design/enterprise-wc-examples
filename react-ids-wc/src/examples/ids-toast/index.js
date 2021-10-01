@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-text';
@@ -6,26 +6,19 @@ import 'ids-enterprise-wc/components/ids-icon';
 import 'ids-enterprise-wc/components/ids-toast';
 
 const IdsToast = () => {
-  const triggerRef = useRef();
   const toastContainerRef = useRef();
 
-  useEffect(() => {
-    const btnToastDemo = triggerRef.current;
-    const toastContainer = toastContainerRef.current;
-
-    // Show toast message
-    btnToastDemo.addEventListener('click', () => {
-      let toast = toastContainer.querySelector('ids-toast');
-      if (!toast) {
-        toast = document.createElement('ids-toast');
-        toastContainer.appendChild(toast);
-      }
-      toast.show({
-        title: 'Application Offline',
-        message: 'This is a Toast message',
-      });
+  const handleToastAdd = () => {
+    let toast = toastContainerRef.current.querySelector('ids-toast');
+    if (!toast) {
+      toast = document.createElement('ids-toast');
+      toastContainerRef.current.appendChild(toast);
+    }
+    toast.show({
+      title: 'Application Offline',
+      message: 'This is a Toast message'
     });
-  }, []);
+  };
 
   return (
     <>
@@ -37,7 +30,7 @@ const IdsToast = () => {
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
-          <ids-button ref={triggerRef} type="secondary">
+          <ids-button onClick={handleToastAdd} type="secondary">
             <span slot="text">Toast Message</span>
           </ids-button>
         </ids-layout-grid-cell>

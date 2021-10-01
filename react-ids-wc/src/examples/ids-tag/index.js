@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
-// import 'ids-enterprise-wc/components/ids-text';
-// import 'ids-enterprise-wc/components/ids-icon';
-// import 'ids-enterprise-wc/components/ids-tag';
+import 'ids-enterprise-wc/components/ids-text';
+import 'ids-enterprise-wc/components/ids-icon';
+import 'ids-enterprise-wc/components/ids-tag';
 
 function IdsTag() {
   const reactInfoTagRef = useRef();
@@ -13,16 +13,28 @@ function IdsTag() {
   const person = 'John Smith';
   const type = 'error';
 
-  function handleClickable(e) {
-    console.log('Tag clicked:', e.target.parentNode.textContent);
+  const handleClickable = (e) => {
+    console.info('Tag clicked:', e.target.parentNode.textContent);
   }
 
   useEffect(() => {
+    // Dynamically set tag color
     reactInfoTagRef.current.color = 'success';
-    dismissibleTagRef.current.addEventListener('tagremoved', e => {
+
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
+    const dismissibleTag = dismissibleTagRef.current
+
+    // Event handler to be used in attach and cleanup event listener
+    const handleTagRemove = e => {
       console.log('Tag Removed:', e.detail.elem.textContent);
-    });
-  });
+    }
+
+    // Attach event listener
+    dismissibleTag.addEventListener('tagremove', handleTagRemove);
+
+    // Cleanup event listener on React component unmount
+    return () => dismissibleTag.removeEventListener('tagremove', handleTagRemove);
+  }, []);
 
   return (
     <>
@@ -50,7 +62,7 @@ function IdsTag() {
           <ids-tag color={type}>
             <span>{person}</span>
           </ids-tag>
-          <ids-tag clickable="true" id="ids-clickable-tag">
+          <ids-tag clickable="true">
             Clickable Tag
             <ids-icon
               icon="caret-right"

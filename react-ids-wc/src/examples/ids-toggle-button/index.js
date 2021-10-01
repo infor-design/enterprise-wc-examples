@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-text';
@@ -6,20 +6,6 @@ import 'ids-enterprise-wc/components/ids-icon';
 import 'ids-enterprise-wc/components/ids-toggle-button';
 
 const IdsToggleButton = () => {
-  const triggerRef = useRef();
-
-  useEffect(() => {
-    const trigger = triggerRef.current;
-
-    const handleClick = e => {
-      e.target.toggle();
-    };
-
-    trigger.addEventListener('click', handleClick);
-
-    return () => trigger.removeEventListener('click', handleClick);
-  }, []);
-
   return (
     <>
       <ids-layout-grid auto="true">
@@ -30,7 +16,7 @@ const IdsToggleButton = () => {
       <ids-layout-grid cols="4" gap="md">
         <ids-layout-grid-cell>
           <ids-toggle-button
-            ref={triggerRef}
+            onClick={e => e.target.toggle()}
             icon-on="star-filled"
             icon-off="star-outlined"
             text-off="Toggle Button (Off)"

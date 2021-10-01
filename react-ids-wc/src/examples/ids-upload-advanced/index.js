@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-text';
 import 'ids-enterprise-wc/components/ids-upload-advanced';
 
 const IdsUploadAdvanced = () => {
+  const extraHeadersRef = useRef();
+
+  useEffect(() => {
+    extraHeadersRef.current.insertAdjacentHTML(
+      'beforeend',
+      '<span slot="xhr-headers">[{ "name": "header1", "value": "header1-value" }]</span>'
+    );
+  }, []);
+
   return (
     <>
       <ids-layout-grid auto="true">
@@ -25,41 +34,37 @@ const IdsUploadAdvanced = () => {
       <ids-layout-grid cols="3" gap="md">
         <ids-layout-grid-cell>
           <ids-text>Basic</ids-text>
-          <ids-upload-advanced
-            id="elem-upload-advanced-basic"
-            url="http://localhost:4300/upload"
-          ></ids-upload-advanced>
+          <ids-upload-advanced url="http://localhost:3000/upload"></ids-upload-advanced>
         </ids-layout-grid-cell>
 
         <ids-layout-grid-cell>
           <ids-text>Disabled</ids-text>
           <ids-upload-advanced
-            id="elem-upload-advanced-disabled"
             disabled="true"
-            url="http://localhost:4300/upload"
+            url="http://localhost:3000/upload"
           ></ids-upload-advanced>
         </ids-layout-grid-cell>
 
         <ids-layout-grid-cell>
           <ids-text>Images &amp; PDF Only, Max (5) files</ids-text>
           <ids-upload-advanced
-            id="elem-upload-advanced-limit"
             accept="image/*, .pdf"
             max-files="5"
-            url="http://localhost:4300/upload"
+            url="http://localhost:3000/upload"
           ></ids-upload-advanced>
         </ids-layout-grid-cell>
 
         <ids-layout-grid-cell>
           <ids-text>Extra Headers to send with XHR</ids-text>
-          {/* <ids-upload-advanced id="elem-upload-advanced-extraheaders" url="http://localhost:4300/upload">
-            <span slot="xhr-headers">[{ "name": "header1", "value": "header1-value" }]</span>
-          </ids-upload-advanced> */}
+          <ids-upload-advanced
+            ref={extraHeadersRef}
+            url="http://localhost:3000/upload"
+          ></ids-upload-advanced>
         </ids-layout-grid-cell>
 
         <ids-layout-grid-cell>
           <ids-text>Custom Send Method</ids-text>
-          <ids-upload-advanced id="elem-upload-advanced-send"></ids-upload-advanced>
+          <ids-upload-advanced></ids-upload-advanced>
         </ids-layout-grid-cell>
       </ids-layout-grid>
     </>
