@@ -1,20 +1,12 @@
 <script>
     import 'ids-enterprise-wc/components/ids-tag/ids-tag.js';
+    import TAG_COLORS from '../../components/ids-tag/colors';
 
     // Supporting Components
     import 'ids-enterprise-wc/components/ids-icon/ids-icon.js';
     import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid.js';
     import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell.js';
     import 'ids-enterprise-wc/components/ids-text/ids-text.js';
-
-    const TAG_COLORS = [
-        { name: 'Default', value: '' },
-        { name: 'Secondary', value: 'secondary' },
-        { name: 'Error', value: 'error' },
-        { name: 'Success', value: 'success' },
-        { name: 'Warning', value: 'caution' },
-        { name: 'Custom Color 1', value: '#ede3fc' }
-    ];
 </script>
 
 <style></style>

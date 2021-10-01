@@ -32,9 +32,14 @@ export default {
 	input: 'src/main.js',
 	output: {
 		sourcemap: true,
-		format: 'iife',
+		format: 'es',
 		name: 'app',
-		file: 'public/build/bundle.js'
+		dir: 'public/build',
+		manualChunks: (id) => {
+			if (id.includes('node_modules')) {
+				return 'vendor';
+			}
+		}
 	},
 	plugins: [
 		svelte({
@@ -59,7 +64,10 @@ export default {
 			dedupe: [
 				'svelte',
 				'ids-enterprise-wc'
-			]
+			],
+			customResolveOptions: {
+				moduleDirectories: ['node_modules']
+			}
 		}),
 		commonjs(),
 
