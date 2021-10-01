@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text'
-import 'ids-enterprise-wc/components/ids-input'
+import 'ids-enterprise-wc/components/ids-text';
+import 'ids-enterprise-wc/components/ids-input';
 
 const IdsMask = () => {
   const maskPhoneRef = useRef();
@@ -11,7 +11,22 @@ const IdsMask = () => {
 
   useEffect(() => {
     // Phone Number Input - standard pattern mask
-    maskPhoneRef.current.mask = ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+    maskPhoneRef.current.mask = [
+      '(',
+      /[1-9]/,
+      /\d/,
+      /\d/,
+      ')',
+      ' ',
+      /\d/,
+      /\d/,
+      /\d/,
+      '-',
+      /\d/,
+      /\d/,
+      /\d/,
+      /\d/
+    ];
 
     // Date Input - use `date` string to pre-configure the internal Date Mask
     maskDateRef.current.mask = 'date';

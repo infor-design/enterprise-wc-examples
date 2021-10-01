@@ -24,7 +24,7 @@ const IdsPager = () => {
           >
             <ids-pager-button first></ids-pager-button>
             <ids-pager-button previous></ids-pager-button>
-            {/* <ids-pager-input></ids-pager-input> */}
+            <ids-pager-input></ids-pager-input>
             <ids-pager-button next></ids-pager-button>
             <ids-pager-button last></ids-pager-button>
           </ids-pager>

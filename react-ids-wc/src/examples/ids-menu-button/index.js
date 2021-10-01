@@ -1,11 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid'
-import 'ids-enterprise-wc/components/ids-text'
-import 'ids-enterprise-wc/components/ids-menu'
-import 'ids-enterprise-wc/components/ids-icon'
-import 'ids-enterprise-wc/components/ids-popup-menu'
-import 'ids-enterprise-wc/components/ids-menu-button'
+import 'ids-enterprise-wc/components/ids-layout-grid';
+import 'ids-enterprise-wc/components/ids-text';
+import 'ids-enterprise-wc/components/ids-icon';
+import 'ids-enterprise-wc/components/ids-popup-menu';
+import 'ids-enterprise-wc/components/ids-menu';
+import 'ids-enterprise-wc/components/ids-menu-button';
 
 const IdsMenuButton = () => {
   const settingsTriggerRef = useRef();
@@ -14,12 +14,38 @@ const IdsMenuButton = () => {
   const iconMenuRef = useRef();
 
   useEffect(() => {
-    settingsMenuRef.current.target = settingsTriggerRef.current
-    settingsMenuRef.current.trigger = 'click'
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
+    const settingsMenu = settingsMenuRef.current;
+    const settingsMenuBtn = settingsTriggerRef.current;
+    const iconMenu = iconMenuRef.current;
+    const iconMenuBtn = iconTriggerRef.current;
 
-    iconMenuRef.current.target = iconTriggerRef.current
-    iconMenuRef.current.trigger = 'click'
-  }, [])
+    // Link trigger with target
+    settingsMenu.target = settingsMenuBtn;
+    settingsMenu.trigger = 'click';
+
+    iconMenu.target = iconMenuBtn;
+    iconMenu.trigger = 'click';
+
+    // Event handler to be used in attach and cleanup event listener
+    const handleShow = () => {
+      console.info(`Menu Button items were displayed`);
+    };
+
+    const handleHide = () => {
+      console.info(`Menu Button items were hidden`);
+    };
+
+    // Attach event listeners
+    settingsMenu.popup.addEventListener('show', handleShow);
+    settingsMenu.popup.addEventListener('hide', handleHide);
+
+    // Cleanup event listener on React component unmount
+    return () => [
+      settingsMenu.popup.removeEventListener('show', handleShow),
+      settingsMenu.popup.removeEventListener('hide', handleHide)
+    ];
+  }, []);
 
   return (
     <>

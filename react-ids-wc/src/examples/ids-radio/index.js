@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-text';
 import 'ids-enterprise-wc/components/ids-radio';
 
 const IdsRadio = () => {
+  const radioGroupRef = useRef();
+
   return (
     <>
       <ids-layout-grid cols="3" gap="md">
@@ -119,9 +121,9 @@ const IdsRadio = () => {
         </ids-layout-grid-cell>
         <ids-layout-grid-cell>
           <ids-radio-group
+            ref={radioGroupRef}
             label="Radio with Validation"
             validate="required"
-            id="ids-radio-validation"
           >
             <ids-radio value="opt1" label="Option one"></ids-radio>
             <ids-radio value="opt2" label="Option two"></ids-radio>
@@ -131,10 +133,10 @@ const IdsRadio = () => {
               disabled="true"
             ></ids-radio>
           </ids-radio-group>
-          <ids-button type="secondary" id="btn-radio-clear">
+          <ids-button type="secondary" onClick={() => radioGroupRef.current.clear()}>
             <span slot="text">Clear</span>
           </ids-button>
-          <ids-button type="secondary" id="btn-radio-validate">
+          <ids-button type="secondary" onClick={() => radioGroupRef.current.checkValidation()}>
             <span slot="text">Validate</span>
           </ids-button>
 

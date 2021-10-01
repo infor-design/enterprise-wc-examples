@@ -11,8 +11,33 @@ const IdsMessage = () => {
   const triggerRef = useRef();
 
   useEffect(() => {
-    messageErrRef.current.target = triggerRef.current;
-    messageErrRef.current.trigger = 'click';
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
+    const messageErr = messageErrRef.current;
+    const triggerBtn = triggerRef.current;
+
+    // Link the About to its trigger button
+    messageErr.target = triggerRef.current;
+    messageErr.trigger = 'click';
+
+    // Event handler to be used in attach and cleanup event listener
+    const handleBeforeShow = () => {
+      triggerBtn.disabled = true;
+      return true;
+    };
+
+    const handleHide = () => {
+      triggerBtn.disabled = false;
+    };
+
+    // Attach event listener
+    messageErr.addEventListener('beforeshow', handleBeforeShow);
+    messageErr.addEventListener('hide', handleHide);
+
+    // Cleanup event listener on React component unmount
+    return () => [
+      messageErr.removeEventListener('beforeshow', handleBeforeShow),
+      messageErr.removeEventListener('hide', handleHide)
+    ];
   }, []);
 
   return (

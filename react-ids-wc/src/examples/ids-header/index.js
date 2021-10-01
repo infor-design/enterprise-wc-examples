@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import 'ids-enterprise-wc/components/ids-text';
 import 'ids-enterprise-wc/components/ids-toolbar';
-import 'ids-enterprise-wc/components/ids-toolbar/ids-toolbar-section';
 import 'ids-enterprise-wc/components/ids-button';
 import 'ids-enterprise-wc/components/ids-menu-button';
 import 'ids-enterprise-wc/components/ids-theme-switcher';
@@ -11,6 +10,19 @@ import 'ids-enterprise-wc/components/ids-popup-menu';
 import 'ids-enterprise-wc/components/ids-header';
 
 const IdsHeader = () => {
+  const menuBtnRef = useRef();
+  const menuRef = useRef();
+
+  useEffect(() => {
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
+    const menu = menuRef.current;
+    const menuBtn = menuBtnRef.current;
+
+    // Link trigger with target
+    menu.target = menuBtn;
+    menu.trigger = 'click';
+  }, []);
+
   return (
     <>
       <ids-text font-size="12" type="h1" audible="true">
@@ -35,20 +47,19 @@ const IdsHeader = () => {
             </ids-text>
           </ids-toolbar-section>
           <ids-toolbar-section type="buttonset" align="end">
-            <ids-button id="button-1" role="button" color-variant="alternate">
+            <ids-button role="button" color-variant="alternate">
               <span slot="text">Text</span>
             </ids-button>
 
             <ids-menu-button
+              ref={menuBtnRef}
               role="button"
-              id="button-2"
-              menu="button-2-menu"
               dropdown-icon
               color-variant="alternate"
             >
               <span slot="text">Menu</span>
             </ids-menu-button>
-            <ids-popup-menu>
+            <ids-popup-menu ref={menuRef}>
               <ids-menu-group>
                 <ids-menu-item value="1">Item One</ids-menu-item>
                 <ids-menu-item value="2">Item Two</ids-menu-item>
@@ -66,14 +77,14 @@ const IdsHeader = () => {
               </ids-menu-group>
             </ids-popup-menu>
 
-            <ids-button id="button-3" disabled color-variant="alternate">
+            <ids-button disabled color-variant="alternate">
               <span slot="text" className="audible">
                 Settings
               </span>
               <ids-icon slot="icon" icon="settings"></ids-icon>
             </ids-button>
 
-            <ids-button id="button-4" color-variant="alternate">
+            <ids-button color-variant="alternate">
               <span slot="text" className="audible">
                 Trash
               </span>

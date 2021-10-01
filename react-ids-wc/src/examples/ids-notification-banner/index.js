@@ -10,13 +10,14 @@ const IdsNotificationBanner = () => {
   const listViewRef = useRef();
 
   useEffect(async () => {
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
     const element = listViewRef.current;
 
     // Do an ajax request
     const response = await fetch('/data/products.json');
     const data = await response.json();
 
-    // Set template
+    // Set the default template
     element.defaultTemplate = [
       '<ids-text font-size="16" type="h2">${productName}</ids-text>',
       '<ids-text font-size="12" type="span">Count: ${units}</ids-text>',
@@ -36,17 +37,20 @@ const IdsNotificationBanner = () => {
       </ids-layout-grid>
 
       <ids-notification-banner
+        id="ids-notification-banner-0"
         message-text="DTO rejected by your manager for Sept 30, 2018."
         type="success"
         link="https://infor.com"
       ></ids-notification-banner>
 
       <ids-notification-banner
+        id="ids-notification-banner-1"
         message-text="Notification Banner with no link"
         type="alert"
       ></ids-notification-banner>
 
       <ids-notification-banner
+        id="ids-notification-banner-2"
         message-text="Notification Banner with custom link text."
         type="info"
         link="https://infor.com"
@@ -54,12 +58,14 @@ const IdsNotificationBanner = () => {
       ></ids-notification-banner>
 
       <ids-notification-banner
+        id="ids-notification-banner-3"
         message-text="DTO rejected by your manager for Sept 30, 2018."
         type="error"
         link="https://infor.com"
       ></ids-notification-banner>
 
       <ids-notification-banner
+        id="ids-notification-banner-4"
         message-text="Notification Banner with no link"
         type="fakeType"
       ></ids-notification-banner>
@@ -104,8 +110,11 @@ const IdsNotificationBanner = () => {
                 type="error"
               ></ids-notification-banner>
 
-              <ids-list-view ref={listViewRef} virtual-scroll="true">
-              </ids-list-view>
+              <ids-list-view
+                id="list-view-1"
+                virtual-scroll="true"
+                ref={listViewRef}
+              ></ids-list-view>
             </div>
           </ids-card>
         </ids-layout-grid-cell>

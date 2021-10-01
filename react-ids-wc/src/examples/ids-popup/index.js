@@ -10,18 +10,23 @@ const IdsPopup = () => {
   const triggerRef = useRef();
 
   useEffect(() => {
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
     const trigger = triggerRef.current;
+    const popup = popupRef.current;
 
     // Sets the element to align with
-    popupRef.current.alignTarget = trigger;
+    popup.alignTarget = trigger;
 
-    // Toggle the Popup
+    // Event handler to be used in attach and cleanup event listener
+    // Toggles the Popup
     const handleVisible = () => {
-      popupRef.current.visible = !popupRef.current.visible;
+      popup.visible = !popup.visible;
     };
 
+    // Attach event listener
     trigger.addEventListener('click', handleVisible);
 
+    // Cleanup event listener on React component unmount
     return () => trigger.removeEventListener('click', handleVisible);
   }, []);
 

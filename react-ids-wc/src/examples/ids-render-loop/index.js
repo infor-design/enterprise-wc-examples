@@ -8,7 +8,7 @@ import renderLoop from 'ids-enterprise-wc/components/ids-render-loop/ids-render-
 import {
   // IdsRenderLoop,
   IdsRenderLoopItem
-} from 'ids-enterprise-wc/components/ids-render-loop';
+} from 'ids-enterprise-wc/mixins/ids-render-loop-mixin';
 
 const IdsRenderLoop = () => {
   const countdownTriggerRef = useRef();

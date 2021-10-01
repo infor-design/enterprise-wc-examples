@@ -11,36 +11,32 @@ const IdsModal = () => {
   const triggerRef = useRef();
 
   useEffect(() => {
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
     const modal = modalRef.current;
+    const triggerBtn = triggerRef.current;
 
-    // Links the Modal to its trigger button (sets up click/focus events)
-    modal.trigger = 'click';
+    // Link the About to its trigger button
     modal.target = triggerRef.current;
+    modal.trigger = 'click';
 
-    // Close the modal when its inner button is clicked.
-    modal.onButtonClick = () => {
-      modal.hide();
-    };
-
+    // Event handler to be used in attach and cleanup event listener
     const handleBeforeShow = () => {
-      triggerRef.current.disabled = true;
-
+      triggerBtn.disabled = true;
       return true;
     };
 
-    const handleOnHide = () => {
-      triggerRef.current.disabled = false;
+    const handleHide = () => {
+      triggerBtn.disabled = false;
     };
 
-    // Disable the trigger button when showing the Modal.
+    // Attach event listener
     modal.addEventListener('beforeshow', handleBeforeShow);
+    modal.addEventListener('hide', handleHide);
 
-    // After the modal is done hiding, re-enable its trigger button.
-    modal.addEventListener('hide', handleOnHide);
-
+    // Cleanup event listener on React component unmount
     return () => [
       modal.removeEventListener('beforeshow', handleBeforeShow),
-      modal.removeEventListener('hide', handleOnHide)
+      modal.removeEventListener('hide', handleHide)
     ];
   }, []);
 

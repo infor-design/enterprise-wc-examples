@@ -12,12 +12,16 @@ const IdsProgressBar = () => {
   const progressRef = useRef();
 
   useEffect(() => {
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
     const btnUpdateVal = setValueRef.current;
     const btnDisable = setDisableRef.current;
     const btnSetLabel = setLabelRef.current;
     const element = progressRef.current;
+
+    // Get original value
     const orgValue = element.value;
 
+    // Event handler to be used in attach and cleanup event listener
     // Update and reset value
     const handleUpdateVal = e => {
       if (element.disabled) {
@@ -28,15 +32,11 @@ const IdsProgressBar = () => {
       element.value = element.value === max ? orgValue : max;
     };
 
-    btnUpdateVal.addEventListener('click', handleUpdateVal);
-
     // Toggle disable/enable
     const handleDisabled = e => {
       e.target.toggle();
       element.disabled = !element.disabled;
     };
-
-    btnDisable.addEventListener('click', handleDisabled);
 
     // Toggle label audible
     const handleLabel = e => {
@@ -47,8 +47,12 @@ const IdsProgressBar = () => {
       element.labelAudible = !element.labelAudible;
     };
 
+    // Attach event listeners
+    btnUpdateVal.addEventListener('click', handleUpdateVal);
+    btnDisable.addEventListener('click', handleDisabled);
     btnSetLabel.addEventListener('click', handleLabel);
 
+    // Cleanup event listener on React component unmount
     return () => [
       btnUpdateVal.removeEventListener('click', handleUpdateVal),
       btnDisable.removeEventListener('click', handleDisabled),

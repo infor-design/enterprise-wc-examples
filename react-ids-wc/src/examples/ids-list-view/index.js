@@ -9,13 +9,14 @@ const IdsListView = () => {
   const listViewRef = useRef();
 
   useEffect(async () => {
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
     const element = listViewRef.current;
 
     // Do an ajax request
     const response = await fetch('/data/products.json');
     const data = await response.json();
 
-    // Set template
+    // Set the default template
     element.defaultTemplate = [
       '<ids-text font-size="16" type="h2">${productName}</ids-text>',
       '<ids-text font-size="12" type="span">Count: ${units}</ids-text>',

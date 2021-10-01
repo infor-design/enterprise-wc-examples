@@ -1,9 +1,9 @@
-import React from 'react'
-import iconList from './icons-list'
+import React from 'react';
+import iconList from './icons-list';
 
-import 'ids-enterprise-wc/components/ids-layout-grid'
-// import 'ids-enterprise-wc/components/ids-text';
-// import 'ids-enterprise-wc/components/ids-icon';
+import 'ids-enterprise-wc/components/ids-layout-grid';
+import 'ids-enterprise-wc/components/ids-text';
+import 'ids-enterprise-wc/components/ids-icon';
 
 const getIcon = iconName => {
   return (
@@ -14,8 +14,8 @@ const getIcon = iconName => {
       <ids-icon icon={iconName}></ids-icon>
       <ids-icon icon={iconName} size="small"></ids-icon>
     </span>
-  )
-}
+  );
+};
 
 const IdsIcon = () => {
   return (
@@ -23,11 +23,11 @@ const IdsIcon = () => {
       <ids-layout-grid>
         <ids-text font-size="12">Icons</ids-text>
       </ids-layout-grid>
-      <ids-layout-grid className="ids-icon-list" auto="true" gap="md">
+      <ids-layout-grid auto="true" gap="md">
         {iconList.map(iconName => getIcon(iconName))}
       </ids-layout-grid>
     </>
-  )
-}
+  );
+};
 
-export default IdsIcon
+export default IdsIcon;
