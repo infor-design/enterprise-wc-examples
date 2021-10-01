@@ -3,9 +3,9 @@ import React from 'react';
 import 'ids-enterprise-wc/components/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-text';
 import 'ids-enterprise-wc/components/ids-button';
-// import 'ids-enterprise-wc/components/ids-input';
-import 'ids-enterprise-wc/components/ids-fieldset';
+import 'ids-enterprise-wc/components/ids-input';
 import 'ids-enterprise-wc/components/ids-checkbox';
+import 'ids-enterprise-wc/components/ids-fieldset';
 
 const IdsFieldset = () => {
   return (
@@ -23,12 +23,12 @@ const IdsFieldset = () => {
                 User Information
               </ids-text>
             </legend>
-            {/* <ids-input type="text" label="User Name" id="user-name"></ids-input> */}
-            {/* <ids-input
+            <ids-input type="text" label="User Name" id="user-name"></ids-input>
+            <ids-input
               type="text"
               label="User Address"
               id="user-address"
-            ></ids-input> */}
+            ></ids-input>
           </ids-fieldset>
           <ids-fieldset>
             <legend>
@@ -36,17 +36,17 @@ const IdsFieldset = () => {
                 Company Information
               </ids-text>
             </legend>
-            {/* <ids-input
+            <ids-input
               type="text"
               label="Company Name"
               id="company-name"
-            ></ids-input> */}
-            {/* <ids-input type="text" label="Company Type" id="type"></ids-input>
+            ></ids-input>
+            <ids-input type="text" label="Company Type" id="type"></ids-input>
             <ids-input
               type="text"
               label="Company Address"
               id="company-address"
-            ></ids-input> */}
+            ></ids-input>
             <ids-checkbox label="Checked" checked="true"></ids-checkbox>
             <ids-button type="primary">Submit</ids-button>
           </ids-fieldset>

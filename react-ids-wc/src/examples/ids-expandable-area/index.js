@@ -12,11 +12,16 @@ const IdsExpandableArea = () => {
   const toggleRef = useRef();
 
   useEffect(() => {
-    const handleToggleClick = e => e.target.toggle();
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
     const element = toggleRef.current;
 
+    // Event handlers to be used in attach and cleanup event listener
+    const handleToggleClick = e => e.target.toggle();
+
+    // Attach event listeners
     element.addEventListener('click', handleToggleClick);
 
+    // Clean event listeners on component unmount
     return () => element.removeEventListener('click', handleToggleClick);
   }, []);
 
@@ -88,32 +93,32 @@ const IdsExpandableArea = () => {
             </ids-text>
             <ids-layout-grid slot="header" cols="2" gap="md" no-margins="true">
               <ids-layout-grid-cell>
-                {/* <ids-input
+                <ids-input
                   size="full"
                   type="text"
                   label="Customer Name"
                   name="customer-name"
                   placeholder="Normal text Field"
-                ></ids-input> */}
+                ></ids-input>
               </ids-layout-grid-cell>
               <ids-layout-grid-cell>
-                {/* <ids-input
+                <ids-input
                   size="full"
                   type="text"
                   label="Location"
                   name="location"
                   placeholder="Normal text Field"
-                ></ids-input> */}
+                ></ids-input>
               </ids-layout-grid-cell>
             </ids-layout-grid>
             <ids-layout-grid slot="pane" cols="2" gap="md" no-margins="true">
-              {/* <ids-input
+              <ids-input
                 size="full"
                 type="text"
                 label="More Customer Details"
                 name="more-customer-details"
                 placeholder="Normal text Field"
-              ></ids-input> */}
+              ></ids-input>
             </ids-layout-grid>
             <ids-hyperlink slot="expander-default">Show More</ids-hyperlink>
             <ids-hyperlink slot="expander-expanded">Show Less</ids-hyperlink>

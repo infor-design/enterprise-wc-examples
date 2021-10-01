@@ -10,13 +10,15 @@ const IdsDraggable = () => {
   const dragRef = useRef();
 
   useEffect(() => {
-    // Events
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
+    const element = dragRef.current
+
+    // Event handlers to be used in attach and cleanup event listener
     const handleDragStart = (e) => console.info('ids-dragstart', e.detail);
     const handleDrag = (e) => console.info('ids-drag', e.detail);
     const handleDragEnd = (e) => console.info('ids-dragend', e.detail);
 
-    const element = dragRef.current
-
+    // Attach event listeners
     element.addEventListener('ids-dragstart', handleDragStart);
     element.addEventListener('ids-drag', handleDrag);
     element.addEventListener('ids-dragend', handleDragEnd);

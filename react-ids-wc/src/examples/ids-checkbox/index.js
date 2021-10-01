@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-text';
 import 'ids-enterprise-wc/components/ids-checkbox';
 
 const IdsCheckbox = () => {
+  // Changing indeterminate ids-checkbox attributes with React state
+  const [indeterminate, setIndeterminate] = useState(true);
+
   return (
     <>
       <ids-layout-grid cols="3" gap="md">
@@ -81,13 +84,13 @@ const IdsCheckbox = () => {
           <br />
           <ids-checkbox
             label="Indeterminate"
-            indeterminate="true"
-            id="cb-indeterminate"
+            // Pass state value to web component attribute
+            indeterminate={indeterminate}
           ></ids-checkbox>
-          <ids-button type="secondary" id="btn-set-indeterminate">
+          <ids-button type="primary" onClick={() => setIndeterminate(true)}>
             <span slot="text">Set</span>
           </ids-button>
-          <ids-button type="secondary" id="btn-remove-indeterminate">
+          <ids-button type="secondary" onClick={() => setIndeterminate(false)}>
             <span slot="text">Remove</span>
           </ids-button>
 

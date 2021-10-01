@@ -14,7 +14,7 @@ const IdsColor = () => {
       </ids-layout-grid>
 
       <ids-layout-grid auto="true">
-        <ids-color hex="#00000"></ids-color>
+        <ids-color hex="#da9e2d"></ids-color>
       </ids-layout-grid>
     </>
   );
