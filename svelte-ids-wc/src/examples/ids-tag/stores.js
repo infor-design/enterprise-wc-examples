@@ -16,6 +16,10 @@ function createTagArray() {
         update(arr => {
             settings.id = count;
             count++;
+
+            // In Svelte, assignments are "reactive", so instead of using
+            // `.push()`, we just pass a newly constructed array to trigger an update
+            // on anything subscribed to the store.
             return [...arr, settings];
         })
     }
@@ -33,7 +37,8 @@ function createTagArray() {
         subscribe,
         add,
         remove,
-        reset
+        reset,
+        set
     }
 }
 
