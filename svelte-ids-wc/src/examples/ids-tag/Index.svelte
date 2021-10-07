@@ -11,7 +11,7 @@
 <style></style>
 
 <ids-layout-grid>
-    <ids-text font-size="12">Normal Tags (Svelte)</ids-text>
+    <ids-text font-size="12">Tag (Svelte)</ids-text>
 </ids-layout-grid>
 
 <ids-layout-grid>
