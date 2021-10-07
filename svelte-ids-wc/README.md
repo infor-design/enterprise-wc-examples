@@ -144,15 +144,20 @@ This may be caused by this specific IDS Component, since Tag currently works and
 
 This issue was also tested with `<ids-checkbox>` and the same problem was observed.
 
-### DOM order issue
+### DOM order issues
 
-There's an issue where when dismissible Tags are rendered, the dismissible icon is rendered on the wrong side of the text.  When you select one of these tags, and toggle off/on the "Make Dismissible" checkbox, the order is fixed due to the Webcomponent API re-render.
+In some cases, components are loading their internal DOM elements out of order:
+
+- `[Button]` When defining icon buttons, Icon + Text butons (icon on left, text on right) don't have the correct icon spacing. The internal button's CSS class for icon buttons isn't being applied when mounted.
+- `[Tag]` - There's an issue where when dismissible Tags are rendered, the dismissible icon is rendered on the wrong side of the text.  When you select one of these tags, and toggle off/on the "Make Dismissible" checkbox, the order is fixed due to the Webcomponent API re-render.
 
 ## Project Status
 
 ### Components used in basic examples
 
+- [x] IdsButton
 - [x] IdsInput (not currently working due to issue described above)
+- [x] IdsModal (works but appears to be broken, will be fixed once we can import a more recent version of `ids-enterprise-wc`)
 - [x] IdsTag
 
 ### Components used in Dynamic examples (Svelte-wrapped Components)

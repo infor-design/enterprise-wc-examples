@@ -85,7 +85,7 @@
 
     // Runs on the <ids-input>'s 'input' event
     const handleInput = (e) => {
-        const inputEl = e.detail.nativeEvent.target;
+        const inputEl = e.target;
         text = inputEl.value;
         return updateStoreValue(inputEl, 'text');
     }
