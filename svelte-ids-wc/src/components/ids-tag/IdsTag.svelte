@@ -1,9 +1,7 @@
-<svelte:options accessors />
-
 <script>
     import { createEventDispatcher } from 'svelte';
     import TAG_COLORS from './colors';
-    import 'ids-enterprise-wc/components/ids-tag/ids-tag.js';
+    import 'ids-enterprise-wc/components/ids-tag';
     
     const dispatch = createEventDispatcher();
 

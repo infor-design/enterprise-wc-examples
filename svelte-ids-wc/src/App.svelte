@@ -3,7 +3,7 @@
 	import { default as IdsTagDynamicExample } from "./examples/ids-tag/Dynamic.svelte";
 </script>
 
+<style></style>
+
 <IdsTagStaticExample />
 <IdsTagDynamicExample />
-
-<style></style>

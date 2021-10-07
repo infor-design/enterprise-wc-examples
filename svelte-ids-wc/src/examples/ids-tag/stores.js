@@ -2,13 +2,18 @@ import { writable } from 'svelte/store';
 import TAG_COLORS from '../../components/ids-tag/colors';
 
 const DEFAULTS = {
-    text: 'This is a Tag',
+    text: 'This is a Dynamic Tag',
     color: '',
     dismissible: true,
     clickable: true
 };
 
-function createTagArray() {
+/**
+ * Creates a Svelte writable store representing an array of data used for populating IdsTag components
+ * @param {Array<Object>} data array of plain objects representing component settings
+ * @returns {Object} containing an instance of a Svelte writable store
+ */
+function createTagArray(data = []) {
     const { subscribe, set, update } = writable([]);
     let count = 0;
 
@@ -33,6 +38,9 @@ function createTagArray() {
         return set([]);
     };
 
+    // Populate store from method
+    data.forEach(entry => add(entry));
+
     return {
         subscribe,
         add,
@@ -42,4 +50,4 @@ function createTagArray() {
     }
 }
 
-export let writableTagArray = createTagArray();
+export let writableTagArray = createTagArray([DEFAULTS]);

@@ -26,6 +26,10 @@ Initially we want to test three projects with a preliminary tag component. We wi
 Starter Project: https://stackblitz.com/edit/vue
 [See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/vue-ids-wc/README.md)
 
+## Svelte
+Starter Project: https://stackblitz.com/edit/svelte
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/svelte-ids-wc/README.md)
+
 ## React
 Starter Project: https://stackblitz.com/edit/react-un5ayt
 [See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/react-ids-wc/README.MD)

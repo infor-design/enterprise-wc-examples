@@ -5,11 +5,9 @@
     import { writableTagArray } from './stores';
 
     // Supporting IDS components
-    import 'ids-enterprise-wc/components/ids-fieldset/ids-fieldset.js';
-    import 'ids-enterprise-wc/components/ids-input/ids-input.js';
-    import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid.js';
-    import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell.js';
-    import 'ids-enterprise-wc/components/ids-text/ids-text.js';
+    import 'ids-enterprise-wc/components/ids-button';
+    import 'ids-enterprise-wc/components/ids-layout-grid';
+    import 'ids-enterprise-wc/components/ids-text';
 
     // `refs/selectedId/currentTag/currentTagStoreRecord` handle the target
     // of the form controls (eitehr a new or existing tag)
@@ -85,6 +83,13 @@
         select(selectedId);
     };
 
+    // Runs on the <ids-input>'s 'input' event
+    const handleInput = (e) => {
+        const inputEl = e.target;
+        text = inputEl.value;
+        return updateStoreValue(inputEl, 'text');
+    }
+
     // Updates the writable tag array when a specified value changes
     const updateStoreValue = (targetEl, prop) => {
         let targetProp = 'value';
@@ -107,13 +112,18 @@
 
 <style>
     /* 
-    NOTE: this is not needed for the actual Tag component.
-    This is only used for styling the block that displays the writable store.
+    NOTE: these are not needed for the actual Tag component.
+    These are only used for styling the block that displays the writable store,
+    as well as the page controls
     */
     .pre {
         font-family: 'Fira Code', monospace;
         font-size: 12px;
         white-space: pre;
+    }
+
+    .controls {
+        margin-bottom: 20px;
     }
 </style>
 
@@ -123,58 +133,70 @@
 
 <ids-layout-grid>
     <ids-layout-grid-cell>
-        {#each $writableTagArray as tag, i}
-            <IdsTag
-                bind:this={refs[i]}
-                bind:id={tag.id}
-                bind:text={tag.text}
-                bind:color={tag.color}
-                bind:dismissible={tag.dismissible}
-                bind:clickable={tag.clickable}
-                on:click={setAsCurrentTag}
-                on:beforetagremove={onBeforeTagRemove} />
-        {/each}
+        {#if $writableTagArray.length > 0}
+            {#each $writableTagArray as tag, i}
+                <IdsTag
+                    bind:this={refs[i]}
+                    bind:id={tag.id}
+                    bind:text={tag.text}
+                    bind:color={tag.color}
+                    bind:dismissible={tag.dismissible}
+                    bind:clickable={tag.clickable}
+                    on:click={setAsCurrentTag}
+                    on:beforetagremove={onBeforeTagRemove} />
+            {/each}
+        {:else}
+            <ids-text font-color="red">Use the form below to add a new tag</ids-text>
+        {/if}
     </ids-layout-grid-cell>
 </ids-layout-grid>
 
 <ids-layout-grid cols="2">
     <ids-layout-grid-cell>
-        <ids-fieldset>
-            <legend>
+        <form class="controls">
             {#if selectedId > -1}
                 <ids-text font-size="12">Update Dynamic Tag with ID "{selectedId}"</ids-text>
             {:else}
                 <ids-text font-size="12">Create a New Dynamic Tag</ids-text>
             {/if}
-            </legend>
 
-            <label for="text-contents">Text Contents:</label>
-            <input
-                type="text" 
-                id="text-contents"
-                bind:value={text}
-                on:input={(e) => updateStoreValue(e.target, 'text')} />
+            <p>
+                <label class="ids-text-14" for="text-content">Text Content:</label>
+                <input
+                    id="text-content"
+                    bind:value={text}
+                    on:input={handleInput} />
+            </p>
 
-            <label for="style">Normal Dropdown with Dirty Tracker</label>
-            <select id="style" bind:value="{color}" on:change={(e) => updateStoreValue(e.target, 'color')}>
-                {#each TAG_COLORS as option}
-                    <option id="color-{dashCase(option.name)}" value={option.value}>{option.name}</option>
-                {/each}
-            </select>
+            <p>
+                <label class="ids-text-14" for="style">Normal Dropdown with Dirty Tracker</label>
+                <select id="style" bind:value="{color}" on:change={(e) => updateStoreValue(e.target, 'color')}>
+                    {#each TAG_COLORS as option}
+                        <option id="color-{dashCase(option.name)}" value={option.value}>{option.name}</option>
+                    {/each}
+                </select>
+            </p>
 
-            <label for="use-clickable">Make Clickable</label>
-            <input bind:checked={clickable} type="checkbox" id="use-clickable" on:change={(e) => updateStoreValue(e.target, 'clickable')}>
+            <p>
+                <label for="use-clickable">
+                    <input bind:checked={clickable} type="checkbox" id="use-clickable" on:change={(e) => updateStoreValue(e.target, 'clickable')}>
+                    Make Clickable
+                </label>
+                <label for="use-dismissible">
+                    <input bind:checked={dismissible} type="checkbox" id="use-dismissible" on:change={(e) => updateStoreValue(e.target, 'dismissible')} />
+                Make Dismissible
+                </label>
+            </p>
 
-            <label for="use-clickable">Make Dismissible</label>
-            <input bind:checked={dismissible} type="checkbox" id="use-dismissible" on:change={(e) => updateStoreValue(e.target, 'dismissible')} />
-
-            <button id="add" on:click={add}>Add new tag</button>
-            <button id="deselect"
-                disabled={hasNoCurrentTag}
-                on:click={deselect}>Deselect Current Tag</button>
-            <button id="reset" on:click={reset}>Remove all tags</button>
-
-        </ids-fieldset>
+            <p>
+                <ids-button id="add" type="secondary" on:click={add}>Add new tag</ids-button>
+                <ids-button id="deselect"
+                    type="secondary"
+                    disabled={hasNoCurrentTag}
+                    on:click={deselect}>Deselect Current Tag</ids-button>
+                <ids-button type="secondary" id="reset" on:click={reset}>Remove all tags</ids-button>
+            </p>
+        </form>
     </ids-layout-grid-cell>
     <ids-layout-grid-cell>
         <ids-layout-grid cols="3">
