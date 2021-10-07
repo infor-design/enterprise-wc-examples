@@ -85,7 +85,7 @@
 
     // Runs on the <ids-input>'s 'input' event
     const handleInput = (e) => {
-        const inputEl = e.target;
+        const inputEl = e.detail.nativeEvent.target;
         text = inputEl.value;
         return updateStoreValue(inputEl, 'text');
     }
@@ -184,7 +184,7 @@
                 </label>
                 <label for="use-dismissible">
                     <input bind:checked={dismissible} type="checkbox" id="use-dismissible" on:change={(e) => updateStoreValue(e.target, 'dismissible')} />
-                Make Dismissible
+                    Make Dismissible
                 </label>
             </p>
 

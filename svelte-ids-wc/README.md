@@ -148,3 +148,13 @@ This issue was also tested with `<ids-checkbox>` and the same problem was observ
 
 There's an issue where when dismissible Tags are rendered, the dismissible icon is rendered on the wrong side of the text.  When you select one of these tags, and toggle off/on the "Make Dismissible" checkbox, the order is fixed due to the Webcomponent API re-render.
 
+## Project Status
+
+### Components used in basic examples
+
+- [x] IdsInput (not currently working due to issue described above)
+- [x] IdsTag
+
+### Components used in Dynamic examples (Svelte-wrapped Components)
+
+- [x] IdsTag
