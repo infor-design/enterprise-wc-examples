@@ -102,6 +102,21 @@ Navigate to: http://localhost:3000
 
 ---
 
+## Events
+React passes all data to Custom Elements in the form of HTML attributes.
+
+Because React implements its own synthetic event system, it cannot listen for DOM events coming from Custom Elements without the use of a workaround. Developers will need to reference their Custom Elements using a ref and manually attach event listeners with addEventListener.
+
+However in case of `onClick` event it will work on most components, `ids-button` example shows `onClick` event usage as well as `addEventListener`
+
+## JSX
+Some components like `ids-list-view` are using curly braces in HTML what also is a special syntax for JSX.
+It can be attached to the element as a string using a ref.
+
+```js
+listViewRef.current.defaultTemplate = '<ids-text font-size="16" type="h2">${productName}</ids-text>'
+```
+
 ## Articles
 
 https://reactjs.org/docs/web-components.html
