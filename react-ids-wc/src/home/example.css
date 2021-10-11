@@ -1,12 +1,13 @@
-.main-list[slot='card-content'] {
-  align-items: center;
+.main-list a {
+  text-decoration: none;
+}
+
+.main-list [slot='card-content'] {
   box-sizing: border-box;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 100px;
   justify-content: center;
+  height: 100px;
   padding: 0 8px;
-  text-align: center;
   width: 100%;
 }
