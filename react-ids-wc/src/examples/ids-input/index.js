@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 import 'ids-enterprise-wc/components/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-text';
 import 'ids-enterprise-wc/components/ids-input';
 
 const IdsInput = () => {
+  const sourceInputRef = useRef();
+  const destinationInputRef = useRef();
+  const [value, setValue] = useState('');
+
+  useEffect(() => {
+    // Adding ref current element to variable to be able cleanup event listeners on unmount
+    const sourceInput = sourceInputRef.current;
+    const destinationInput = destinationInputRef.current;
+
+    // Event handler to be used in attach and cleanup event listener
+    const handleChange = e => {
+      setValue(e.target.value);
+      destinationInput.value = e.target.value;
+    };
+
+    // Attach event listener
+    sourceInput.addEventListener('keyup', handleChange);
+
+    // Cleanup event listener on React component unmount
+    return () => sourceInput.removeEventListener('keyup', handleChange);
+  }, []);
+
   return (
     <>
       <ids-layout-grid cols="3" gap="md">
@@ -27,6 +49,23 @@ const IdsInput = () => {
 
       <ids-layout-grid cols="3" gap="md">
         <ids-layout-grid-cell>
+          <ids-input
+            ref={sourceInputRef}
+            type="text"
+            label="To change value of below readonly fields"
+          ></ids-input>
+          <ids-input
+            type="text"
+            label="Changing value with state"
+            readonly="true"
+            value={value}
+          ></ids-input>
+          <ids-input
+            ref={destinationInputRef}
+            type="text"
+            label="Changing value with events"
+            readonly="true"
+          ></ids-input>
           <ids-input
             type="text"
             label="First Name"
