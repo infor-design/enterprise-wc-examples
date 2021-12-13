@@ -25,7 +25,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/ids-enterprise-wc/enterprise-wc.js"
+            ],
             "aot": false,
             "vendorChunk": true,
             "extractLicenses": false,
