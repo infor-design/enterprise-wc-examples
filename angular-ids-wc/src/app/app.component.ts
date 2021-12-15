@@ -1,6 +1,7 @@
 import { Component, VERSION, ViewChild, ElementRef } from '@angular/core';
 
 import IdsTag from 'ids-enterprise-wc/ids-tag/ids-tag.js';
+import IdsAccordion from 'ids-enterprise-wc/ids-accordion/ids-accordion.js';
 
 import { NativeElement } from '../helpers/native-element.decorator';
 
@@ -11,6 +12,7 @@ import { NativeElement } from '../helpers/native-element.decorator';
 })
 export class AppComponent {
   @NativeElement('myTag') tag: IdsTag;
+  @NativeElement('myAccordion') accordion: IdsAccordion;
 
   public name = 'Angular ' + VERSION.major;
   public person = 'John Smith';
@@ -24,6 +26,7 @@ export class AppComponent {
 
   ngAfterViewInit() {
     this.tag.color='#ff0000';
+    console.log(this.accordion.headers);
   }
 
   onTagRemove(details: CustomEvent) {
