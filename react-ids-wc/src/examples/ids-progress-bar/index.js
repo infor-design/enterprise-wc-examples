@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-toggle-button';
-import 'ids-enterprise-wc/components/ids-progress-bar';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-toggle-button/ids-toggle-button';
+import 'ids-enterprise-wc/ids-progress-bar/ids-progress-bar';
 
 const IdsProgressBar = () => {
   const setValueRef = useRef();

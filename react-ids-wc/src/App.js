@@ -5,7 +5,7 @@ import * as Components from './examples';
 import Home from './home';
 import { routes } from './settings/routes';
 
-import 'ids-enterprise-wc/components/ids-container';
+import 'ids-enterprise-wc/ids-container/ids-container';
 
 const App = () => {
   return (

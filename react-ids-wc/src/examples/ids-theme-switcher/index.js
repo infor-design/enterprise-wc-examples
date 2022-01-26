@@ -1,9 +1,9 @@
 import React from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-tag';
-import 'ids-enterprise-wc/components/ids-theme-switcher';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-tag/ids-tag';
+import 'ids-enterprise-wc/ids-theme-switcher/ids-theme-switcher';
 
 const IdsThemeSwitcher = () => {
   return (

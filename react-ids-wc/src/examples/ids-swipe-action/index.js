@@ -1,12 +1,12 @@
 import React from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-button';
-import 'ids-enterprise-wc/components/ids-card';
-import 'ids-enterprise-wc/components/ids-icon';
-import 'ids-enterprise-wc/components/ids-menu-button';
-import 'ids-enterprise-wc/components/ids-swipe-action';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-button/ids-button';
+import 'ids-enterprise-wc/ids-card/ids-card';
+import 'ids-enterprise-wc/ids-icon/ids-icon';
+import 'ids-enterprise-wc/ids-menu-button/ids-menu-button';
+import 'ids-enterprise-wc/ids-swipe-action/ids-swipe-action';
 
 const IdsSwipeAction = () => {
   return (

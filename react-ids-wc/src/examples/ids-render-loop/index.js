@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-button';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-button/ids-button';
 
-import renderLoop from 'ids-enterprise-wc/components/ids-render-loop/ids-render-loop-global';
+import renderLoop from 'ids-enterprise-wc/ids-render-loop/ids-render-loop-global';
 import {
   // IdsRenderLoop,
   IdsRenderLoopItem

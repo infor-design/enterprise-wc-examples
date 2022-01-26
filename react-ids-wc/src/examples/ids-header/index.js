@@ -1,13 +1,13 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-toolbar';
-import 'ids-enterprise-wc/components/ids-button';
-import 'ids-enterprise-wc/components/ids-menu-button';
-import 'ids-enterprise-wc/components/ids-theme-switcher';
-import 'ids-enterprise-wc/components/ids-icon';
-import 'ids-enterprise-wc/components/ids-popup-menu';
-import 'ids-enterprise-wc/components/ids-header';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-toolbar/ids-toolbar';
+import 'ids-enterprise-wc/ids-button/ids-button';
+import 'ids-enterprise-wc/ids-menu-button/ids-menu-button';
+import 'ids-enterprise-wc/ids-theme-switcher/ids-theme-switcher';
+import 'ids-enterprise-wc/ids-icon/ids-icon';
+import 'ids-enterprise-wc/ids-popup-menu/ids-popup-menu';
+import 'ids-enterprise-wc/ids-header/ids-header';
 
 const IdsHeader = () => {
   const menuBtnRef = useRef();

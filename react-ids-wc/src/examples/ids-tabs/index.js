@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-tabs';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-tabs/ids-tabs';
 
 const IdsTabs = () => {
   const tabsRef = useRef();

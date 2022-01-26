@@ -15,15 +15,7 @@ For more info see https://reactjs.org/docs/create-a-new-react-app.html
 
 ### Step 2: Install the polyfill
 
-IDS does not support IE 11 so you might be able to skip this step. If you have the need to support IE you can try to add the react app polyfill and webcomponentsjs polyfill. (However, we do not support this).
-
-**1. Install**
-
-```bash
-npm install --save react-app-polyfill @webcomponents/webcomponentsjs
-```
-
-**2. Add** `"ie 11"` to browserslist in `package.json`
+IDS does not support IE 11 so you should add it to browserslist in `package.json`
 
 ```bash
 "browserslist": {
@@ -42,19 +34,7 @@ npm install --save react-app-polyfill @webcomponents/webcomponentsjs
 }
 ```
 
-**3. Use the polyfills**
-
-Add to the first line in `src/index.js`
-
-```javascript
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
-
-import "@webcomponents/webcomponentsjs/webcomponents-bundle";
-import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js';
-```
-
-### Step 3: Add the Ids Web Components to React
+### Add the Ids Web Components to React
 
 **1. Install**
 
@@ -78,7 +58,7 @@ You can now use the Ids Web Components like any other HTML tag. Replace the cont
 import React from 'react';
 import './App.css';
 
-import 'ids-enterprise-wc/components/ids-tag';
+import 'ids-enterprise-wc/ids-tag/ids-tag';
 
 function App() {
   return (

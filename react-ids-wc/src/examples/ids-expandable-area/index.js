@@ -1,12 +1,12 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-hyperlink';
-import 'ids-enterprise-wc/components/ids-input';
-import 'ids-enterprise-wc/components/ids-icon';
-import 'ids-enterprise-wc/components/ids-toggle-button';
-import 'ids-enterprise-wc/components/ids-expandable-area';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-hyperlink/ids-hyperlink';
+import 'ids-enterprise-wc/ids-input/ids-input';
+import 'ids-enterprise-wc/ids-icon/ids-icon';
+import 'ids-enterprise-wc/ids-toggle-button/ids-toggle-button';
+import 'ids-enterprise-wc/ids-expandable-area/ids-expandable-area';
 
 const IdsExpandableArea = () => {
   const toggleRef = useRef();

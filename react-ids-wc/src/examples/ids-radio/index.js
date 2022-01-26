@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-radio';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-radio/ids-radio';
 
 const IdsRadio = () => {
   const radioGroupRef = useRef();

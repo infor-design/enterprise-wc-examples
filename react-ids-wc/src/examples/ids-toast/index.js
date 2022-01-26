@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-icon';
-import 'ids-enterprise-wc/components/ids-toast';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-icon/ids-icon';
+import 'ids-enterprise-wc/ids-toast/ids-toast';
 
 const IdsToast = () => {
   const toastContainerRef = useRef();

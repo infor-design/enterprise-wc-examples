@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 import { categories, routes } from '../settings/routes';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-block-grid';
-import 'ids-enterprise-wc/components/ids-block-grid/ids-block-grid-item';
-import 'ids-enterprise-wc/components/ids-card';
-import 'ids-enterprise-wc/components/ids-text';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-block-grid/ids-block-grid';
+import 'ids-enterprise-wc/ids-block-grid/ids-block-grid-item';
+import 'ids-enterprise-wc/ids-card/ids-card';
+import 'ids-enterprise-wc/ids-text/ids-text';
 
 import './example.css';
 

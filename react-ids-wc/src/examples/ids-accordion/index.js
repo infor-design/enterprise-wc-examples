@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-accordion';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-accordion/ids-accordion';
 
 const IdsAccordion = () => {
   const [expanded, setExpanded] = useState(false)

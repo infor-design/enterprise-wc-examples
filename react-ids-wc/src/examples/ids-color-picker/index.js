@@ -1,9 +1,9 @@
 import React from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-color';
-import 'ids-enterprise-wc/components/ids-color-picker';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-color/ids-color';
+import 'ids-enterprise-wc/ids-color-picker/ids-color-picker';
 
 const IdsColorPicker = () => {
   return (

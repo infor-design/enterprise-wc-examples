@@ -1,11 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-icon';
-import 'ids-enterprise-wc/components/ids-popup-menu';
-import 'ids-enterprise-wc/components/ids-menu';
-import 'ids-enterprise-wc/components/ids-menu-button';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-icon/ids-icon';
+import 'ids-enterprise-wc/ids-popup-menu/ids-popup-menu';
+import 'ids-enterprise-wc/ids-menu/ids-menu';
+import 'ids-enterprise-wc/ids-menu-button/ids-menu-button';
 
 const IdsMenuButton = () => {
   const settingsTriggerRef = useRef();

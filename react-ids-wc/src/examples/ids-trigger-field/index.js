@@ -1,10 +1,10 @@
 import React from 'react';
 
-import 'ids-enterprise-wc/components/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-text';
-import 'ids-enterprise-wc/components/ids-icon';
-import 'ids-enterprise-wc/components/ids-input';
-import 'ids-enterprise-wc/components/ids-trigger-field';
+import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/ids-text/ids-text';
+import 'ids-enterprise-wc/ids-icon/ids-icon';
+import 'ids-enterprise-wc/ids-input/ids-input';
+import 'ids-enterprise-wc/ids-trigger-field/ids-trigger-field';
 
 const IdsTriggerField = () => {
   return (
