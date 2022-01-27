@@ -11,6 +11,7 @@ import { NativeElement } from '../helpers/native-element.decorator';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent {
+  // @ViewChild('tag') tag: IdsTag;
   @NativeElement('myTag') tag: IdsTag;
   @NativeElement('myAccordion') accordion: IdsAccordion;
 
@@ -25,7 +26,7 @@ export class AppComponent {
   ];
 
   ngAfterViewInit() {
-    this.tag.color='#ff0000';
+    this.tag.color = '#ff0000';
     console.log(this.accordion.headers);
   }
 
