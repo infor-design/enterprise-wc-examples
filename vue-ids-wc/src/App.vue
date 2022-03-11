@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import IdsTagTestPage from './components/Tag.vue';
+import IdsTagTestPage from './components/Example.vue';
 
 export default {
   name: 'App',

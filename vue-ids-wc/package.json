@@ -1,28 +1,24 @@
 {
-  "name": "vue-ids-wc",
+  "name": "ids-vue-examples",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.0.0-0"
+    "vue": "^3.2.13"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.11",
-    "@vue/cli-plugin-eslint": "~4.5.11",
-    "@vue/cli-service": "~4.5.11",
-    "@vue/compiler-sfc": "^3.0.5",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.19.0",
-    "eslint-plugin-vue": "^7.5.0",
-    "ids-enterprise-wc": "0.0.0-beta.15",
-    "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.1"
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "ids-enterprise-wc": "0.0.0-beta.18"
   },
   "eslintConfig": {
     "root": true,
@@ -34,13 +30,14 @@
       "eslint:recommended"
     ],
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "@babel/eslint-parser"
     },
     "rules": {}
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
+    "not dead",
+    "not ie 11"
   ]
 }

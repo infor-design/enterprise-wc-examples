@@ -1,113 +1,41 @@
-# IDS Web Components with Vue JS
+# Enterprise Web Component Examples
 
-## Description
+This repo has example projects for running the new IDS web-component version components in other frameworks like React, Angular and Vue.js. The hope is to be able to use the web components directly along with types include in the Web component project.
 
-This project shows the implementation of ids web components together with VueJS framework.
+Initially we want to test three projects with a preliminary tag component. We will test the following criteria
 
+1. Uses stackblitz.com starter project which can be downloaded as a locale project but we want simple starter projects and to share them in here.
+1. Show a tag in the page bound to data in the test framework
+1. Show use of the tag component
+1. Consider framework key features and document things we should probably want to do. For example for Angular:
+  * Provide binding to the model for values
+  * Catching and handling events emitted 
+  * Setting and changing settings (color for example) 
+  * Templating like loops or text values
+  * Research common framework features (forms ect)
+1. Test the type file is working as expected
+1. Make a test that includes the component
 
-## Adding IDS Web Components to the project folder
+## Using NPM Link
 
-Open terminal and run the command
-```bash
-npm install ids-enterprise-wc -D
-```
+- In the enterprise-wc project run `npm run build` to build the assets into `dist/`
+- In the enterprise-wc project run `npm link` to set up the symbolic link
+- Go to on of these project folders (for example typescript-ids-wc) and type `npm link ids-enterprise-wc`
 
-Once this done, you can now proceed to implement the components in Vue.js
+## Vue.js 
+Starter Project: https://stackblitz.com/edit/vue
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/vue-ids-wc/README.md)
 
-## Implementing the IDS Web Components
+## Svelte
+Starter Project: https://stackblitz.com/edit/svelte
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/svelte-ids-wc/README.md)
 
-## 1. Add component file.
+## React
+Starter Project: https://stackblitz.com/edit/react-un5ayt
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/react-ids-wc/README.MD)
 
-Add a component file in `src/components`. For example,`Tag.vue`
+## Angular
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/angular-ids-wc/README.MD)
 
-## 2. Import the IDS Components
-
-Now, you need to import the ids components that you will be using. In script tag,
-
-```javascript
-import "ids-enterprise-wc/ids-layout-grid/ids-layout-grid.js";
-import "ids-enterprise-wc/ids-text/ids-text.js";
-import "ids-enterprise-wc/ids-icon/ids-icon.js";
-import "ids-enterprise-wc/ids-tag/ids-tag.js";
-```
-
-By then, you can now use the component in the `template` tag. For example,
-
-```html
-<template>
-  <div>
-    <ids-layout-grid>
-      <ids-layout-grid-cell>
-        <ids-tag>Normal Tag</ids-tag>
-        <ids-tag color="secondary">Secondary Tags</ids-tag>
-        <ids-tag color="error">Error Tag</ids-tag>
-        <ids-tag color="success">Success Tag</ids-tag>
-        <ids-tag color="caution">Warning Tag</ids-tag>
-        <ids-tag color="#EDE3FC">Custom Tag Color</ids-tag>
-        <ids-tag clickable="true" id="ids-clickable-tag">Clickable Tag
-          <ids-icon icon="caret-right" size="small"></ids-icon>
-        </ids-tag>
-        <ids-tag dismissible="true">
-            <span>Dismissible Tags</span>
-            <ids-icon icon="close" size="small" id="ids-closable-btn"></ids-icon>
-        </ids-tag>
-      </ids-layout-grid-cell>
-    </ids-layout-grid>
-  </div>
-</template>
-```
-
-## 3. Register in App.vue
-
-In App.vue, you need to import the component that you created. This will serve as the entry point to your app.
-
-```javascript
-import IdsTagTestPage from './components/Tag.vue';
-export default {
-  name: 'App',
-  components: {
-    IdsTagTestPage
-  }
-}
-```
-
-## 4. Add the component to the template
-
-```html
-<template>
-  <div id="app">
-    <IdsTagTestPage />
-  </div>
-</template>
-```
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```sh
-npm run serve
-```
-Then go to http://localhost:8080/
-
-### Compiles and minifies for production
-
-```sh
-npm run build
-```
-
-### Lints and fixes files
-
-```sh
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-### External Links
-[Style Guide](https://vuejs.org/v2/style-guide/).
-[Vue 3 Upgrade Guide](https://dev.to/blacksonic/the-vue-3-upgrade-guide-4dc4)
+## Typescript
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/typescript-ids-wc/README.md)
