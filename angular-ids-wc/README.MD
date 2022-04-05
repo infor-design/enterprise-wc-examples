@@ -12,7 +12,7 @@ Ids Web Components use custom elements and have a typescript definition so in an
 
 - When working with Angular, we sometimes use a @ViewChild decorator to get access to specific instance from the containing element and call nativeElement to get the HTMLElement for DOM accessing. Web components work this way as underneath they are HTMLElement's. We included a helpers/native-element.decorator.ts to access view children directly without nativeElement
 
-## To Run this Examples
+## To Run these Examples
 
 - clone the main repo https://github.com/infor-design/enterprise-wc-examples
 - should be on node 14 or 16
