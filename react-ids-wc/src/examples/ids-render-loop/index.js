@@ -5,10 +5,7 @@ import 'ids-enterprise-wc/ids-text/ids-text';
 import 'ids-enterprise-wc/ids-button/ids-button';
 
 import renderLoop from 'ids-enterprise-wc/ids-render-loop/ids-render-loop-global';
-import {
-  // IdsRenderLoop,
-  IdsRenderLoopItem
-} from 'ids-enterprise-wc/mixins/ids-render-loop-mixin';
+import IdsRenderLoopItem from 'ids-enterprise-wc/ids-render-loop/ids-render-loop-item';
 
 const IdsRenderLoop = () => {
   const countdownTriggerRef = useRef();
