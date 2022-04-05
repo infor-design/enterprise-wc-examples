@@ -4,7 +4,7 @@ import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
 import 'ids-enterprise-wc/ids-text/ids-text';
 import 'ids-enterprise-wc/ids-draggable/ids-draggable';
 
-import './example.css';
+// import './example.css';
 
 const IdsDraggable = () => {
   const dragRef = useRef();

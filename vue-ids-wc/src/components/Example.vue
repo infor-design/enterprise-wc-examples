@@ -23,7 +23,7 @@
    <ids-layout-grid auto="true">
       <ids-layout-grid-cell>
         <ids-text font-size="12">{{ title3 }}</ids-text>
-        <ids-dropdown id="dropdown-1" label="Normal Dropdown with Dirty Tracker" :color="dropdownValue" v-bind:value="dropdownValue" dirty-tracker="true">
+        <ids-dropdown id="dropdown-1" label="Normal Dropdown with Dirty Tracker" :value="dropdownValue" dirty-tracker="true">
           <ids-list-box>
             <ids-list-box-option id="al" value="al">Alabama</ids-list-box-option>
             <ids-list-box-option id="ak" value="ak">Alaska</ids-list-box-option>
@@ -120,7 +120,8 @@ export default {
     }
   },
   props: {
-    tagTitle: String
+    tagTitle: String,
+    value: String
   }
 };
 </script>

@@ -1,5 +1,5 @@
 // Import the components we want to use.
-import IdsTag from 'ids-enterprise-wc/components/ids-tag';
+import IdsTag from 'ids-enterprise-wc/ids-tag/ids-tag';
 
 // Initialize a component.
 const tag = new IdsTag();
@@ -8,7 +8,7 @@ const tag = new IdsTag();
 tag.dismissible = true;
 tag.color = 'error';
 tag.innerText = 'Added in Code';
-tag.on('tagremoved', (a: any) => {
+tag.addEventListener('tagremoved', (a: any) => {
   console.log(a);
 });
 

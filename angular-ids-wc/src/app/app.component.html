@@ -1,4 +1,4 @@
-<ids-container language="de" locale='de-DE'>
+<ids-container language="de" locale="de-DE">
   <ids-layout-grid auto="true">
     <ids-layout-grid-cell>
       <ids-text font-size="12">Tag with template reference variable</ids-text>
@@ -9,15 +9,15 @@
   <ids-layout-grid auto="true">
     <ids-layout-grid-cell>
       <ids-text font-size="12">Tag with bound property</ids-text>
-      <ids-tag [color]="type">{{person}}</ids-tag>
-      <input [(ngModel)]="type" value='{{type}}'/>
+      <ids-tag [color]="type" color="">{{person}}</ids-tag>
+      <input [(ngModel)]="type" value="{{type}}"/>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
   <ids-layout-grid auto="true">
     <ids-layout-grid-cell>
       <ids-text font-size="12">Dismissible tag with keyboard events</ids-text>
-      <ids-tag [color]="type">{{person}}<ids-icon icon="caret-right" size="small"></ids-icon></ids-tag>
+      <ids-tag>{{person}}<ids-icon icon="caret-right" size="small"></ids-icon></ids-tag>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 

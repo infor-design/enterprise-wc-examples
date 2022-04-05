@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import * as Components from './examples';
 import Home from './home';
@@ -11,7 +11,7 @@ const App = () => {
   return (
     <ids-container>
       <Router>
-        <Switch>
+        <Routes>
           {routes.map(({ route, name }) => {
             const Component = Components[name];
 
@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/">
             <Home />
           </Route>
-        </Switch>
+        </Routes>
       </Router>
     </ids-container>
   );

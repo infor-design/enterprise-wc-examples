@@ -34,7 +34,6 @@ import IdsProgressBar from './ids-progress-bar';
 import IdsProgressChart from './ids-progress-chart';
 import IdsRadio from './ids-radio';
 import IdsRating from './ids-rating';
-import IdsRenderLoop from './ids-render-loop';
 import IdsScrollView from './ids-scroll-view';
 import IdsSkipLink from './ids-skip-link';
 import IdsSlider from './ids-slider';
@@ -96,7 +95,6 @@ export {
   IdsProgressChart,
   IdsRadio,
   IdsRating,
-  IdsRenderLoop,
   IdsScrollView,
   IdsSkipLink,
   IdsSlider,
