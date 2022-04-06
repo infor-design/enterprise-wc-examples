@@ -26,7 +26,7 @@ export class AppComponent {
   ];
 
   ngAfterViewInit() {
-    this.tag.color = '#ff0000';
+    this.tag.color = '#D7D7D8';
     console.log(this.accordion.headers);
   }
 

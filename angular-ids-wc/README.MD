@@ -12,6 +12,18 @@ Ids Web Components use custom elements and have a typescript definition so in an
 
 - When working with Angular, we sometimes use a @ViewChild decorator to get access to specific instance from the containing element and call nativeElement to get the HTMLElement for DOM accessing. Web components work this way as underneath they are HTMLElement's. We included a helpers/native-element.decorator.ts to access view children directly without nativeElement
 
+## To Run these Examples
+
+- clone the main repo https://github.com/infor-design/enterprise-wc-examples
+- should be on node 14 or 16
+
+```sh
+cd angular-ids-wc
+npm i
+npm run start
+```
+- open http://localhost:4200/ in the browser
+ 
 ## Working with the old components side by side
 
 We tested the older [Angular quick start](https://github.com/infor-design/enterprise-ng-quickstart) and its possible to use components sideby side in that as well. In order to add web components to the quickstart.
