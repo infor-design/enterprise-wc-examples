@@ -5,6 +5,8 @@ import * as Examples from './examples';
 import Home from './home';
 import { routes } from './settings/routes';
 
+import './index.css';
+
 import 'ids-enterprise-wc/ids-container/ids-container';
 
 const App = () => {
@@ -13,10 +15,12 @@ const App = () => {
       <Router>
         <Routes>
           {routes.map(({ route, name }) => {
-            const Component = Examples[name];
+            const Element = Examples[name];
+
+            if (!Element) return null;
 
             return (
-              <Route key={route} path={`/${route}`} element={<Component />} />
+              <Route key={route} path={`/${route}`} element={<Element />} />
             );
           })}
           <Route path="/" element={<Home />} />
