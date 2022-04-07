@@ -1,9 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-input/ids-input';
-
 const IdsMask = () => {
   const maskPhoneRef = useRef();
   const maskDateRef = useRef();

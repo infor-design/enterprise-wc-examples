@@ -1,10 +1,5 @@
 import React from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-card/ids-card';
-import 'ids-enterprise-wc/ids-virtual-scroll/ids-virtual-scroll';
-
 const IdsVirtualScroll = () => {
   return (
     <>

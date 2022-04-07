@@ -1,15 +1,12 @@
 import React from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-
 const IdsText = () => {
   return (
     <>
-      <ids-layout-grid>
+      <ids-layout-grid auto="true">
         <ids-text font-size="12">Labels / Typography</ids-text>
       </ids-layout-grid>
-      <ids-layout-grid>
+      <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-text font-size="72">Size 72</ids-text>
           <ids-text font-size="60">Size 60</ids-text>

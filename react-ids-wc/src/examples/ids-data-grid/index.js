@@ -1,9 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-data-grid/ids-data-grid';
-
 import { getGridColumns } from './columns';
 
 const IdsDataGrid = () => {
@@ -11,16 +7,19 @@ const IdsDataGrid = () => {
   // TODO: Update grid data from the state
   // const [gridData, setGridData] = useState();
 
-  useEffect(async () => {
-    // Do an ajax request
-    const response = await fetch('/data/books.json');
-    const data = await response.json()
+  useEffect(() => {
+    async function fetchData() {
+      // Do an ajax request
+      const response = await fetch('/data/books.json');
+      const data = await response.json()
 
-    // Set columns
-    dataGridRef.current.columns = getGridColumns(dataGridRef.current.formatters)
+      // Set columns
+      dataGridRef.current.columns = getGridColumns(dataGridRef.current.formatters)
 
-    // Set data
-    dataGridRef.current.data = data
+      // Set data
+      dataGridRef.current.data = data
+    }
+    fetchData();
   }, []);
 
   return (

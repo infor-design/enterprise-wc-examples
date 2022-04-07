@@ -2,6 +2,20 @@
 
 This project demonstrates how to use the IDS Web Components in a simple react app. The IDS Web Components are pretty simple to use with React and can basically just be imported from npm then used directly.
 
+## To Run these Examples
+
+- clone the main repo https://github.com/infor-design/enterprise-wc-examples
+- should be on node 16
+
+```sh
+cd react-ids-wc
+npm i
+npm run start
+```
+
+- open http://localhost:4200/ in the browser
+- if any errors and you have previously cloned try `rm -rf node_modules && npm i`
+
 ### Step 1: Create a new React Project
 
 You can skip this step if already have React Project. But if you are starting from scratch you can use the npx tooling.

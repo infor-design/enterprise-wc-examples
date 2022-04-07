@@ -1,9 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-tree/ids-tree';
-
 const IdsTree = () => {
   const treeRef = useRef();
 

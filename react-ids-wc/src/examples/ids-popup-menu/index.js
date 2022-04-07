@@ -1,9 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-popup-menu/ids-popup-menu';
-
 const IdsPopupMenu = () => {
   const popupRef = useRef();
 
@@ -11,7 +7,7 @@ const IdsPopupMenu = () => {
     const popupEl = popupRef.current;
 
     // Sets popup align related to right click cursor position
-    popupEl.popup.align = 'top, left';
+    popupEl.align = 'top, left';
   }, []);
 
   return (

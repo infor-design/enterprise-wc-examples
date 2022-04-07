@@ -1,11 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-button/ids-button';
-import 'ids-enterprise-wc/ids-modal/ids-modal';
-import 'ids-enterprise-wc/ids-modal-button/ids-modal-button';
-
 const IdsModal = () => {
   const modalRef = useRef();
   const triggerRef = useRef();

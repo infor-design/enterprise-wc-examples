@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-checkbox/ids-checkbox';
-
 const IdsCheckbox = () => {
   // Changing indeterminate ids-checkbox attributes with React state
   const [indeterminate, setIndeterminate] = useState(true);

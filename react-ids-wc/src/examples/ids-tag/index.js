@@ -1,10 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-icon/ids-icon';
-import 'ids-enterprise-wc/ids-tag/ids-tag';
-
 function IdsTag() {
   const reactInfoTagRef = useRef();
   const dismissibleTagRef = useRef();
