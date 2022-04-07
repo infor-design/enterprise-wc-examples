@@ -1,11 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-card/ids-card';
-import 'ids-enterprise-wc/ids-list-view/ids-list-view';
-import 'ids-enterprise-wc/ids-notification-banner/ids-notification-banner';
-
 const IdsNotificationBanner = () => {
   const listViewRef = useRef();
 

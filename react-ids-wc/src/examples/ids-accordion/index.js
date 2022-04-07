@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-accordion/ids-accordion';
-
-const IdsAccordion = () => {
+const IdsAccordion = ({ wcLoaded }) => {
+  const accordionRef = useRef()
   const [expanded, setExpanded] = useState(false)
+
+  useEffect(() => {
+    if (wcLoaded) {
+      const accordion = accordionRef.current
+
+      accordion.panels.forEach(el => {
+        el.expanded = expanded
+      })
+    }
+  }, [expanded, wcLoaded])
 
   return (
     <>
@@ -19,9 +26,9 @@ const IdsAccordion = () => {
 
       <ids-layout-grid cols="2" gap="md">
         <ids-layout-grid-cell>
-          <ids-accordion>
+          <ids-accordion ref={accordionRef}>
             {['Warehouse Location', 'Sort By', 'Brand Name', 'Material'].map(item => (
-              <ids-accordion-panel expanded={expanded} key={item}>
+              <ids-accordion-panel key={item}>
                 <ids-accordion-header slot="header">
                   <ids-text font-size="16">{item}</ids-text>
                 </ids-accordion-header>

@@ -1,9 +1,5 @@
 import React from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-progress-chart/ids-progress-chart';
-
 const IdsProgressChart = () => {
   return (
     <>

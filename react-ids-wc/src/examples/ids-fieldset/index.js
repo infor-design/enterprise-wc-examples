@@ -1,12 +1,5 @@
 import React from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-button/ids-button';
-import 'ids-enterprise-wc/ids-input/ids-input';
-import 'ids-enterprise-wc/ids-checkbox/ids-checkbox';
-import 'ids-enterprise-wc/ids-fieldset/ids-fieldset';
-
 const IdsFieldset = () => {
   return (
     <>

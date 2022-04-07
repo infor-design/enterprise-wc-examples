@@ -1,9 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-input/ids-input';
-
 const IdsInput = () => {
   const sourceInputRef = useRef();
   const destinationInputRef = useRef();

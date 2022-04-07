@@ -1,12 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-icon/ids-icon';
-import 'ids-enterprise-wc/ids-popup-menu/ids-popup-menu';
-import 'ids-enterprise-wc/ids-menu/ids-menu';
-import 'ids-enterprise-wc/ids-menu-button/ids-menu-button';
-
 const IdsMenuButton = () => {
   const settingsTriggerRef = useRef();
   const settingsMenuRef = useRef();
@@ -37,13 +30,13 @@ const IdsMenuButton = () => {
     };
 
     // Attach event listeners
-    settingsMenu.popup.addEventListener('show', handleShow);
-    settingsMenu.popup.addEventListener('hide', handleHide);
+    settingsMenu.addEventListener('show', handleShow);
+    settingsMenu.addEventListener('hide', handleHide);
 
     // Cleanup event listener on React component unmount
     return () => [
-      settingsMenu.popup.removeEventListener('show', handleShow),
-      settingsMenu.popup.removeEventListener('hide', handleHide)
+      settingsMenu.removeEventListener('show', handleShow),
+      settingsMenu.removeEventListener('hide', handleHide)
     ];
   }, []);
 

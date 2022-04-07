@@ -1,8 +1,5 @@
 import React, { useState, useRef } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-
 const IdsLayoutGrid = () => {
   const gridRef = useRef();
   const [formValues, setFormValues] = useState({
@@ -132,11 +129,11 @@ const IdsLayoutGrid = () => {
       </ids-layout-grid>
       <ids-layout-grid
         ref={gridRef}
+        auto={formValues.auto}
+        fixed={formValues.fixed}
         gap={formValues.gap}
         cols={formValues.cols}
         rows={formValues.rows}
-        auto={formValues.auto}
-        fixed={formValues.fixed}
         no-margins={formValues.noMargins}
       >
         <ids-layout-grid-cell col-span fill="true">

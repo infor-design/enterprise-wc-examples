@@ -1,10 +1,5 @@
 import React from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-color/ids-color';
-import 'ids-enterprise-wc/ids-color-picker/ids-color-picker';
-
 const IdsColorPicker = () => {
   return (
     <>
@@ -16,7 +11,7 @@ const IdsColorPicker = () => {
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
-          <ids-color-picker label="Regular Color Picker">
+          <ids-color-picker label="Regular Color Picker" value="#B94E4E">
             <ids-color hex="#1A1A1A"></ids-color>
             <ids-color hex="#292929"></ids-color>
             <ids-color hex="#383838"></ids-color>
@@ -103,7 +98,7 @@ const IdsColorPicker = () => {
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
-          <ids-color-picker label="Advanced Color Picker">
+          <ids-color-picker label="Advanced Color Picker" value="#B94E4E">
             <ids-color hex="#1A1A1A"></ids-color>
             <ids-color hex="#292929"></ids-color>
             <ids-color hex="#383838"></ids-color>

@@ -1,44 +1,40 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-button/ids-button';
-import 'ids-enterprise-wc/ids-icon/ids-icon';
-import 'ids-enterprise-wc/ids-about/ids-about';
-
-const IdsAbout = () => {
+const IdsAbout = ({ wcLoaded }) => {
   const aboutRef = useRef();
   const triggerRef = useRef();
 
   useEffect(() => {
-    // Adding ref current element to variable to be able cleanup event listeners on unmount
-    const about = aboutRef.current;
-    const triggerBtn = triggerRef.current;
+    if (wcLoaded) {
+      // Adding ref current element to variable to be able cleanup event listeners on unmount
+      const about = aboutRef.current;
+      const triggerBtn = triggerRef.current;
 
-    // Link the About to its trigger button
-    about.target = triggerRef.current;
-    about.trigger = 'click';
+      // Link the About to its trigger button
+      about.target = triggerBtn;
+      about.trigger = 'click';
 
-    // Event handler to be used in attach and cleanup event listener
-    const handleBeforeShow = () => {
-      triggerBtn.disabled = true;
-      return true;
-    };
+      // Event handler to be used in attach and cleanup event listener
+      const handleBeforeShow = () => {
+        triggerBtn.disabled = true;
+        return true;
+      };
 
-    const handleHide = () => {
-      triggerBtn.disabled = false;
-    };
+      const handleHide = () => {
+        triggerBtn.disabled = false;
+      };
 
-    // Attach event listener
-    about.addEventListener('beforeshow', handleBeforeShow);
-    about.addEventListener('hide', handleHide);
+      // Attach event listener
+      about.addEventListener('beforeshow', handleBeforeShow);
+      about.addEventListener('hide', handleHide);
 
-    // Cleanup event listener on React component unmount
-    return () => [
-      about.removeEventListener('beforeshow', handleBeforeShow),
-      about.removeEventListener('hide', handleHide)
-    ];
-  }, []);
+      // Cleanup event listener on React component unmount
+      return () => [
+        about.removeEventListener('beforeshow', handleBeforeShow),
+        about.removeEventListener('hide', handleHide)
+      ];
+    }
+  }, [wcLoaded]);
 
   return (
     <>

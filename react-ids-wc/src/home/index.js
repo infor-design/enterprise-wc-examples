@@ -1,13 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { categories, routes } from '../settings/routes';
-
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-block-grid/ids-block-grid';
-import 'ids-enterprise-wc/ids-block-grid/ids-block-grid-item';
-import 'ids-enterprise-wc/ids-card/ids-card';
-import 'ids-enterprise-wc/ids-text/ids-text';
 
 import './example.css';
 
@@ -27,7 +20,7 @@ const Home = () => {
                     .filter(route => route.category === category)
                     .map(({ route, title }) => (
                       <ids-block-grid-item key={route}>
-                        <Link to={`/${route}`}>
+                        <a href={`/${route}`} style={{ color: 'inherit' }}>
                           <ids-card auto-height="true">
                             <div slot="card-content">
                               <ids-text
@@ -40,7 +33,7 @@ const Home = () => {
                               </ids-text>
                             </div>
                           </ids-card>
-                        </Link>
+                        </a>
                       </ids-block-grid-item>
                     ))}
                 </ids-block-grid>
