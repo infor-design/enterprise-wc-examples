@@ -1,11 +1,5 @@
 <ids-layout-grid auto="true">
-  <ids-layout-grid-cell>
-    <ids-text>IDS Swaplist</ids-text>
-  </ids-layout-grid-cell>
-</ids-layout-grid>
-
-<ids-layout-grid auto="true">
-  <ids-layout-grid-cell>
-    <ids-swaplist></ids-swaplist>
-  </ids-layout-grid-cell>
+  <ids-layout-grid-item>
+    <ids-swaplist (click)="handleClick($event)" #mySwaplist count="3"></ids-swaplist>
+  </ids-layout-grid-item>
 </ids-layout-grid>

@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { NativeElement } from '../../../helpers/native-element.decorator';
 import IdsSwapList from 'ids-enterprise-wc/ids-swaplist/ids-swaplist.js';
 import 'ids-enterprise-wc/ids-swappable/ids-swappable';
 import 'ids-enterprise-wc/ids-swappable/ids-swappable-item';
-import { NativeElement } from '../../../helpers/native-element.decorator';
 
 @Component({
-  selector: 'ids-swaplist',
+  selector: 'app-ids-swaplist',
   templateUrl: './ids-swaplist.component.html',
   styleUrls: [ './ids-swaplist.component.css' ]
 })
-export class IdsSwaplistComponent {
+export class IdsSwaplistComponent implements AfterViewInit {
   @NativeElement('mySwaplist') swaplist: IdsSwapList;
 
   public periods = [
@@ -70,5 +70,9 @@ export class IdsSwaplistComponent {
     ].join('\n')
 
     this.swaplist['data'] = this.periods;
+  }
+
+  handleClick(e) {
+    console.log(e);
   }
 }
