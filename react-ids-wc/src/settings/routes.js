@@ -271,6 +271,12 @@ export const routes = [
     category: categories[0]
   },
   {
+    route: 'ids-swaplist',
+    name: 'IdsSwapList',
+    title: 'Swap List',
+    category: categories[3]
+  },
+  {
     route: 'ids-swipe-action',
     name: 'IdsSwipeAction',
     title: 'Swipe Action',

@@ -40,6 +40,7 @@ import IdsSlider from './ids-slider';
 import IdsSpinbox from './ids-spinbox';
 import IdsStepChart from './ids-step-chart';
 import IdsSummaryField from './ids-summary-field';
+import IdsSwapList from './ids-swaplist';
 import IdsSwipeAction from './ids-swipe-action';
 import IdsSwitch from './ids-switch';
 import IdsTabs from './ids-tabs';
@@ -101,6 +102,7 @@ export {
   IdsSpinbox,
   IdsStepChart,
   IdsSummaryField,
+  IdsSwapList,
   IdsSwipeAction,
   IdsSwitch,
   IdsTabs,
