@@ -1,12 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-swaplist/ids-swaplist';
-import 'ids-enterprise-wc/ids-swappable/ids-swappable';
-import 'ids-enterprise-wc/ids-swappable/ids-swappable-item';
-
-
 const IdsSwapList = () => {
   const swaplistRef = useRef();
 
@@ -40,8 +33,8 @@ const IdsSwapList = () => {
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
-          <ids-swaplist 
-            ref={swaplistRef} 
+          <ids-swaplist
+            ref={swaplistRef}
             count="3"
           >
           </ids-swaplist>
