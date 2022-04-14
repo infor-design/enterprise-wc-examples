@@ -1,5 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 
+import 'ids-enterprise-wc/ids-swaplist/ids-swaplist';
+import 'ids-enterprise-wc/ids-swappable/ids-swappable';
+import 'ids-enterprise-wc/ids-swappable/ids-swappable-item';
+
 const IdsSwapList = () => {
   const swaplistRef = useRef();
 
