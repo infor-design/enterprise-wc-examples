@@ -1,26 +1,19 @@
 # Enterprise Web Component Examples
 
-This repo has example projects for running the new IDS web-component version components in other frameworks like React, Angular and Vue.js. The hope is to be able to use the web components directly along with types include in the Web component project.
+This repo has example projects for running the new IDS web-component version components in other frameworks like React, Angular and Vue.js. The hope is to be able to use the web components directly. If using a typescript project you should get the types as well.
 
-Initially we want to test three projects with a preliminary tag component. We will test the following criteria
+We will test the following:
 
-1. Uses stackblitz.com starter project which can be downloaded as a locale project but we want simple starter projects and to share them in here.
-1. Show a tag in the page bound to data in the test framework
-1. Show use of the tag component
-1. Consider framework key features and document things we should probably want to do. For example for Angular:
+1. Show a component in the page bound to data in the framework
+2. Show use of the component works
+3. Consider special specific framework key features and document things we should probably want to do. For example for Angular:
   * Provide binding to the model for values
   * Catching and handling events emitted 
   * Setting and changing settings (color for example) 
   * Templating like loops or text values
   * Research common framework features (forms ect)
-1. Test the type file is working as expected
-1. Make a test that includes the component
-
-## Using NPM Link
-
-- In the enterprise-wc project run `npm run build` to build the assets into `dist/`
-- In the enterprise-wc project run `npm link` to set up the symbolic link
-- Go to on of these project folders (for example typescript-ids-wc) and type `npm link ids-enterprise-wc`
+4. Test the types are visible
+5. Make a unit test that includes the component
 
 ## Vue.js 
 Starter Project: https://stackblitz.com/edit/vue
@@ -39,3 +32,10 @@ Starter Project: https://stackblitz.com/edit/react-un5ayt
 
 ## Typescript
 [See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/typescript-ids-wc/README.md)
+
+## Using NPM Link
+
+- In the enterprise-wc project run `npm run build` to build the assets into `dist/`
+- In the enterprise-wc project run `npm link` to set up the symbolic link
+- Go to on of these project folders (for example typescript-ids-wc) and type `npm link ids-enterprise-wc`
+
