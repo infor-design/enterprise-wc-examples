@@ -1,35 +1,49 @@
 # Ids Web Components with Angular
 
-Ids Web Components use custom elements and have a typescript definition so in angular now work without a wrapper. Use the following steps to consume a ids web component in a simple angular project.
+Ids Web Components use custom elements and have a typescript definition so can work in angular now work without a wrapper. Use the following steps to consume a ids web component in a simple angular project.
 
-1. Add ids-enterprise-wc with `npm install ids-enterprise-wc -D`
-1. Added imports to app/main.ts (all imports also auto-include the styles) or angular.json at `projects/demo/architect/build/options/scripts`
-1. Add `CUSTOM_ELEMENTS_SCHEMA` to src/app/app.module.ts
-1. Optionally use `helpers/native-element.decorator.ts`
+1. Add `ids-enterprise-wc` with `npm install ids-enterprise-wc -D`
+1. Added imports to a`app/main.ts` (all imports also auto-include the styles)
+
+```js
+// Import for when the component is used in the code
+import IdsSwapList from 'ids-enterprise-wc/components/ids-swaplist/ids-swaplist.js';
+// Import for when the component is used in the code to  be included but not used in the JS
+import 'ids-enterprise-wc/components/ids-swappable/ids-swappable';
+```
+
+1. Use imports in the angular.json 
+
+```json
+  "scripts": [
+    "node_modules/ids-enterprise-wc/enterprise-wc.js", // Full package
+    "node_modules/ids-enterprise-wc/components/ids-tag/ids-tag.js"
+  ],
+``` 
+
+1. Add `CUSTOM_ELEMENTS_SCHEMA` to `src/app/app.module.ts`
 1. `npm run start`
-
-## Issues
-
-- When working with Angular, we sometimes use a @ViewChild decorator to get access to specific instance from the containing element and call nativeElement to get the HTMLElement for DOM accessing. Web components work this way as underneath they are HTMLElement's. We included a helpers/native-element.decorator.ts to access view children directly without nativeElement
+1. If wanted you can shorten the import paths using this feature https://blog.bitsrc.io/short-typescript-import-paths-in-angular9-22ce34bd424d 
 
 ## To Run these Examples
 
 - clone the main repo https://github.com/infor-design/enterprise-wc-examples
-- should be on node 14 or 16
+- should be on node 16
 
 ```sh
 cd angular-ids-wc
 npm i
 npm run start
 ```
+
 - open http://localhost:4200/ in the browser
  
 ## Working with the old components side by side
 
-We tested the older [Angular quick start](https://github.com/infor-design/enterprise-ng-quickstart) and its possible to use components sideby side in that as well. In order to add web components to the quickstart.
+We tested the older [Angular quick start](https://github.com/infor-design/enterprise-ng-quickstart) and its possible to use components side by side in that as well. In order to add web components to the quick start.
 
-1. Add ids-enterprise-wc with `npm install ids-enterprise-wc -D`
-1. Ensure `CUSTOM_ELEMENTS_SCHEMA` is used in src/app/app.module.ts (should already be)
+1. Add `ids-enterprise-wc with` `npm install ids-enterprise-wc -D`
+1. Ensure `CUSTOM_ELEMENTS_SCHEMA` is used in `src/app/app.module.ts` (should already be)
 1. Add each component you want to use in the [scripts section of angular json](https://github.com/infor-design/enterprise-ng-quickstart/blob/main/angular.json#L46-L47)
 1. [Use the components](https://github.com/infor-design/enterprise-ng-quickstart/blob/main/src/app/app.component.html#L24)
 

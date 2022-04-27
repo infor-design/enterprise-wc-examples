@@ -17,7 +17,10 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@ids-wc/*" : [ "node_modules/ids-enterprise-wc/components" ]
+    }
   },
   "angularCompilerOptions": {
     "enableIvy": true,

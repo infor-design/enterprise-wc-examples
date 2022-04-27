@@ -1,9 +1,7 @@
 import { Component, VERSION, ViewChild, ElementRef } from '@angular/core';
 
-import IdsTag from 'ids-enterprise-wc/ids-tag/ids-tag.js';
-import IdsAccordion from 'ids-enterprise-wc/ids-accordion/ids-accordion.js';
-
-import { NativeElement } from '../../../helpers/native-element.decorator';
+import IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag.js';
+import IdsAccordion from 'ids-enterprise-wc/components/ids-accordion/ids-accordion.js';
 
 @Component({
   selector: 'home',
@@ -11,8 +9,8 @@ import { NativeElement } from '../../../helpers/native-element.decorator';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  @NativeElement('myTag') tag: IdsTag;
-  @NativeElement('myAccordion') accordion: IdsAccordion;
+  @ViewChild('myTag') tag: IdsTag;
+  @ViewChild('myAccordion') accordion: IdsAccordion;
 
   public name = 'Angular ' + VERSION.major;
   public person = 'John Smith';
@@ -25,7 +23,7 @@ export class HomeComponent {
   ];
 
   ngAfterViewInit() {
-    this.tag.color = '#D7D7D8';
+    this.tag.nativeElement.color = 'success';
     console.log(this.accordion.headers);
   }
 

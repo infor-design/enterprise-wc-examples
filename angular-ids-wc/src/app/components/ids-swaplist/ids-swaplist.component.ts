@@ -1,8 +1,7 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { NativeElement } from '../../../helpers/native-element.decorator';
-import IdsSwapList from 'ids-enterprise-wc/ids-swaplist/ids-swaplist.js';
-import 'ids-enterprise-wc/ids-swappable/ids-swappable';
-import 'ids-enterprise-wc/ids-swappable/ids-swappable-item';
+import IdsSwapList from 'ids-enterprise-wc/components/ids-swaplist/ids-swaplist.js';
+import 'ids-enterprise-wc/components/ids-swappable/ids-swappable';
+import 'ids-enterprise-wc/components/ids-swappable/ids-swappable-item';
 
 @Component({
   selector: 'app-ids-swaplist',
@@ -10,7 +9,7 @@ import 'ids-enterprise-wc/ids-swappable/ids-swappable-item';
   styleUrls: [ './ids-swaplist.component.css' ]
 })
 export class IdsSwaplistComponent implements AfterViewInit {
-  @NativeElement('mySwaplist') swaplist: IdsSwapList;
+  @ViewChild('mySwaplist') swaplist: IdsSwapList;
 
   public periods = [
     {
@@ -65,11 +64,8 @@ export class IdsSwaplistComponent implements AfterViewInit {
   }
 
   setSwaplistData() {
-    this.swaplist['defaultTemplate'] = [
-      '<ids-swappable-item><ids-text>${city}</ids-text></ids-swappable-item>'
-    ].join('\n')
-
-    this.swaplist['data'] = this.periods;
+    this.swaplist.nativeElement.defaultTemplate = '<ids-swappable-item><ids-text>${city}</ids-text></ids-swappable-item>';
+    this.swaplist.nativeElement.data = this.periods;
   }
 
   handleClick(e) {

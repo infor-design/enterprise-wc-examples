@@ -2,7 +2,6 @@ import { ElementRef, ViewChild } from '@angular/core';
 
 /**
  * To get the native element instead of ElementRef.nativeElement
- * Caveats: it won’t work with AOT
  * @param selector Selector. Example: <div #selector></div>
  */
 export function NativeElement(selector: string): PropertyDecorator {
