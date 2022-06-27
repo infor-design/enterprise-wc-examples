@@ -1,14 +1,15 @@
-import { Component, VERSION, ViewChild, ElementRef } from '@angular/core';
+import { Component, VERSION, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 import IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag.js';
 import IdsAccordion from 'ids-enterprise-wc/components/ids-accordion/ids-accordion.js';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
   @ViewChild('myTag') tag: IdsTag;
   @ViewChild('myAccordion') accordion: IdsAccordion;
 
