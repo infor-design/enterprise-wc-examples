@@ -1,9 +1,9 @@
 # Ids Web Components with Angular
 
-Ids Web Components use custom elements and have a typescript definition so can work in angular now work without a wrapper. Use the following steps to consume a ids web component in a simple angular project.
+Ids Web Components use custom elements and have a typescript definition so can work in angular without a wrapper. Use the following steps to consume a ids web component in a simple angular project.
 
 1. Add `ids-enterprise-wc` with `npm install ids-enterprise-wc -D`
-1. Added imports to a`app/main.ts` (all imports also auto-include the styles)
+1. Added imports to `app/main.ts` (all imports also include the styles so no style sheets are needed)
 
 ```js
 // Import for when the component is used in the code
