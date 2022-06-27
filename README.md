@@ -11,7 +11,7 @@ We will test the following:
   * Catching and handling events emitted 
   * Setting and changing settings (color for example) 
   * Templating like loops or text values
-  * Research common framework features (forms ect)
+  * Research common framework features (forms etc)
 4. Test the types are visible
 5. Make a unit test that includes the component
 
@@ -35,7 +35,7 @@ Starter Project: https://stackblitz.com/edit/react-un5ayt
 
 ## Using NPM Link
 
-- In the enterprise-wc project run `npm run build` to build the assets into `dist/`
-- In the enterprise-wc project run `npm link` to set up the symbolic link
-- Go to on of these project folders (for example typescript-ids-wc) and type `npm link ids-enterprise-wc`
+- In the `enterprise-wc` project run `npm run build` to build the assets into `dist/`
+- In the `enterprise-wc` project run `npm link` to set up the symbolic link
+- Go to on of these project folders (for example `typescript-ids-wc`) and type `npm link ids-enterprise-wc`
 
