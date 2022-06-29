@@ -5,9 +5,9 @@
     import { writableTagArray } from './stores';
 
     // Supporting IDS components
-    import 'ids-enterprise-wc/components/ids-button';
-    import 'ids-enterprise-wc/components/ids-layout-grid';
-    import 'ids-enterprise-wc/components/ids-text';
+    import 'ids-enterprise-wc/components/ids-button/ids-button';
+    import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
+    import 'ids-enterprise-wc/components/ids-text/ids-text';
 
     // `refs/selectedId/currentTag/currentTagStoreRecord` handle the target
     // of the form controls (eitehr a new or existing tag)
@@ -162,10 +162,10 @@
 
             <p>
                 <label class="ids-text-14" for="text-content">Text Content:</label>
-                <input
+                <ids-input
                     id="text-content"
                     bind:value={text}
-                    on:input={handleInput} />
+                    on:input={handleInput}></ids-input>
             </p>
 
             <p>

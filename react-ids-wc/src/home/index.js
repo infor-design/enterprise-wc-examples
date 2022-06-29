@@ -20,20 +20,11 @@ const Home = () => {
                     .filter(route => route.category === category)
                     .map(({ route, title }) => (
                       <ids-block-grid-item key={route}>
-                        <a href={`/${route}`} style={{ color: 'inherit' }}>
-                          <ids-card auto-height="true">
-                            <div slot="card-content">
-                              <ids-text
-                                type="h2"
-                                font-size="16"
-                                font-weight="bold"
-                                color="slate-100"
-                              >
-                                {title}
-                              </ids-text>
-                            </div>
-                          </ids-card>
-                        </a>
+                        <ids-card actionable="true" height="65" href="/${component.link}" target="_self">
+                          <div slot="card-content">
+                          <ids-text type="h2" font-size="16" font-weight="bold" color="slate-100">{title}</ids-text>
+                          </div>
+                        </ids-card>
                       </ids-block-grid-item>
                     ))}
                 </ids-block-grid>

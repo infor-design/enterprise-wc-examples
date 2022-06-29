@@ -2,19 +2,22 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>TypeScript application using Ids Web Components</title>
+  <script src="node_modules/ids-enterprise-wc/components/ids-text/ids-text.js" type="module"></script>
+  <script src="node_modules/ids-enterprise-wc/components/ids-tag/ids-tag.js" type="module"></script>
+  <script src="node_modules/ids-enterprise-wc/components/ids-icon/ids-icon.js" type="module"></script>
   <script src="dist/build.js" type="module"></script>
-  
 </head>
 
 <body>
-  <p>
+  <ids-text>
     This page shows how Ids Web Components can be used in a TypeScript application. 
-  </p>
-  <ids-tag clickable="true" id="ids-clickable-tag">Added in Markup</ids-tag>
+  </ids-text>
+  <br>
+
+  <ids-tag clickable="true" id="ids-clickable-tag">Added in Markup1</ids-tag>
 </body>
 
 </html>

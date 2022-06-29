@@ -9,7 +9,5 @@
 
 <IdsTagStaticExample />
 <IdsTagDynamicExample />
-
 <IdsButtonIndexExample />
-
 <IdsModalIndexExample />

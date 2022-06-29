@@ -1,10 +1,10 @@
 <script>
-    import 'ids-enterprise-wc/components/ids-button';
-    import 'ids-enterprise-wc/components/ids-icon';
-    import 'ids-enterprise-wc/components/ids-text';
+    import 'ids-enterprise-wc/components/ids-button/ids-button';
+    import 'ids-enterprise-wc/components/ids-icon/ids-icon';
+    import 'ids-enterprise-wc/components/ids-text/ids-text';
 
     // Supporting Components
-    import 'ids-enterprise-wc/components/ids-layout-grid';
+    import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
 
     const BUTTON_DEFS = [
         { text: 'Default Button', id: 'test-button-default' },

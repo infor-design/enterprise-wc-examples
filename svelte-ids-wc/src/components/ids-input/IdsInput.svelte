@@ -1,6 +1,6 @@
 <script>
     import { createEventDispatcher } from 'svelte';
-    import 'ids-enterprise-wc/components/ids-input';
+    import 'ids-enterprise-wc/components/ids-input/ids-input';
     
     const dispatch = createEventDispatcher();
 

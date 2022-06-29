@@ -1,11 +1,11 @@
 <script>
     // @TODO: We currently can't import this component from `ids-enterprise-wc`
     // without causing a custom element error.
-    import 'ids-enterprise-wc/components/ids-input';
+    import 'ids-enterprise-wc/components/ids-input/ids-input';
 
     // Supporting Components
-    import 'ids-enterprise-wc/components/ids-layout-grid';
-    import 'ids-enterprise-wc/components/ids-text';
+    import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
+    import 'ids-enterprise-wc/components/ids-text/ids-text';
 </script>
 
 <style></style>

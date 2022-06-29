@@ -1,11 +1,11 @@
 <script>
-    import 'ids-enterprise-wc/components/ids-tag';
+    import 'ids-enterprise-wc/components/ids-tag/ids-tag';
     import TAG_COLORS from '../../components/ids-tag/colors';
 
     // Supporting Components
-    import 'ids-enterprise-wc/components/ids-icon';
-    import 'ids-enterprise-wc/components/ids-layout-grid';
-    import 'ids-enterprise-wc/components/ids-text';
+    import 'ids-enterprise-wc/components/ids-icon/ids-icon';
+    import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
+    import 'ids-enterprise-wc/components/ids-text/ids-text';
 </script>
 
 <style></style>

@@ -86,13 +86,13 @@
 
 <script>
 
-import 'ids-enterprise-wc/ids-container/ids-container.js';
-import 'ids-enterprise-wc/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/ids-text/ids-text';
-import 'ids-enterprise-wc/ids-icon/ids-icon';
-import 'ids-enterprise-wc/ids-tag/ids-tag';
-import 'ids-enterprise-wc/ids-dropdown/ids-dropdown';
-import 'ids-enterprise-wc/ids-list-box/ids-list-box.js';
+import 'ids-enterprise-wc/components/ids-container/ids-container.js';
+import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/components/ids-text/ids-text';
+import 'ids-enterprise-wc/components/ids-icon/ids-icon';
+import 'ids-enterprise-wc/components/ids-tag/ids-tag';
+import 'ids-enterprise-wc/components/ids-dropdown/ids-dropdown';
+import 'ids-enterprise-wc/components/ids-list-box/ids-list-box.js';
 
 const data = [
   { label: 'Normal Tag', color: '' },

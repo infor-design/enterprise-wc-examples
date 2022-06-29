@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-
 import { data } from './data';
+import 'ids-enterprise-wc/components/ids-alert/ids-alert';
+
 
 const IdsAlert = () => {
   // Using state to be able to manipulate the data on button click
@@ -24,7 +25,7 @@ const IdsAlert = () => {
       </ids-layout-grid>
       <ids-layout-grid cols="12" gap="md">
         <ids-layout-grid-cell>
-          <ids-button type="primary" onClick={() => setItems(items.slice(0, -1))}>
+          <ids-button type="secondary" onClick={() => setItems(items.slice(0, -1))}>
             <span slot="text">Remove item</span>
           </ids-button>
         </ids-layout-grid-cell>

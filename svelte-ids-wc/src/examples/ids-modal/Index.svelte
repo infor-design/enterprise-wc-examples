@@ -1,12 +1,12 @@
 <script>
     import { onMount } from 'svelte';
-    import 'ids-enterprise-wc/components/ids-modal';
+    import 'ids-enterprise-wc/components/ids-modal/ids-modal';
     
     // Supporting Components
-    import 'ids-enterprise-wc/components/ids-button';
-    import 'ids-enterprise-wc/components/ids-icon';
-    import 'ids-enterprise-wc/components/ids-text';
-    import 'ids-enterprise-wc/components/ids-layout-grid';
+    import 'ids-enterprise-wc/components/ids-button/ids-button';
+    import 'ids-enterprise-wc/components/ids-icon/ids-icon';
+    import 'ids-enterprise-wc/components/ids-text/ids-text';
+    import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
 
     let modal;
     let triggerBtn;

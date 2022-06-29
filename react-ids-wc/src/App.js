@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './home';
@@ -65,22 +65,23 @@ import IdsWizard from './examples/ids-wizard';
 
 import './index.css';
 
+import 'ids-enterprise-wc/components/ids-container/ids-container';
+import 'ids-enterprise-wc/components/ids-theme-switcher/ids-theme-switcher';
+import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell';
+import 'ids-enterprise-wc/components/ids-hyperlink/ids-hyperlink';
+import 'ids-enterprise-wc/components/ids-card/ids-card';
+import 'ids-enterprise-wc/components/ids-block-grid/ids-block-grid';
+
 const App = () => {
-  const [wcLoaded, setwcLoaded] = useState(false);
-
-  // Split wc components to another chunk file
-  import('ids-enterprise-wc/enterprise-wc').then(() =>
-    setwcLoaded(true)
-  );
-
   return (
-    <ids-container>
+    <ids-container hidden locale="en-US">
       <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
       <Router>
         <Routes>
           <Route element={<Home />} path="/" />
-          <Route element={<IdsAbout wcLoaded={wcLoaded} />} path="/ids-about" />
-          <Route element={<IdsAccordion wcLoaded={wcLoaded} />} path="/ids-accordion" />
+          <Route element={<IdsAbout path="/ids-about" />}  />
+          <Route element={<IdsAccordion path="/ids-accordion" />}  />
           <Route element={<IdsAlert />} path="/ids-alert" />
           <Route element={<IdsBadge />} path="/ids-badge" />
           <Route element={<IdsBlockgrid />} path="/ids-block-grid" />

@@ -52,3 +52,12 @@ tag.on('tagremoved', (a: any) => {
 
 document.body.appendChild(tag);
 ```
+
+# Known Issues
+
+- [ ] this code gives a no default constructor error:
+```js
+import IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag.js';
+const tag = new IdsTag();
+ ```
+- [ ] the components type to any due to https://github.com/infor-design/enterprise-wc/issues/650

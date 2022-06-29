@@ -1,7 +1,7 @@
 <script>
     import { createEventDispatcher } from 'svelte';
     import TAG_COLORS from './colors';
-    import 'ids-enterprise-wc/components/ids-tag';
+    import 'ids-enterprise-wc/components/ids-tag/ids-tag';
     
     const dispatch = createEventDispatcher();
 
