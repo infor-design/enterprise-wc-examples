@@ -20,6 +20,6 @@
     "svelte": "^3.48.0"
   },
   "dependencies": {
-    "ids-enterprise-wc": "0.0.0-beta.23"
+    "ids-enterprise-wc": "1.0.0-beta.0"
   }
 }
