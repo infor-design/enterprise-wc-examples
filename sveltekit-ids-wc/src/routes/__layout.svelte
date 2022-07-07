@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte';
     
     // IDS Components are rendered client-side.
     // This example demonstrates how dynamic imports can load IDS Components client-side while still allowing for Svelte SSR
-    onMount(async () => {
+    onMount(async (): Promise<void> => {
        await import('ids-enterprise-wc/components/ids-text/ids-text');
        await import('ids-enterprise-wc/components/ids-hyperlink/ids-hyperlink');
        await import('ids-enterprise-wc/components/ids-card/ids-card');

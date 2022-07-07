@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
     import IdsCheckbox from '../../components/ids-checkbox/IdsCheckbox.svelte';
 
-    let ref;
+    let ref: IdsCheckbox;
 
     const colors = [
         { id: 'azure07', name: 'AZURE' }, 
@@ -12,7 +12,7 @@
         { id: 'turquoise07', name: 'TURQUOISE' }
     ];
 
-    const handleChange = () => {
+    const handleChange = (): void => {
         const colorDef = colors[Math.floor(Math.random() * 6)];
         ref.color = colorDef.id;
         ref.label = `My ${colorDef.name} checkbox`

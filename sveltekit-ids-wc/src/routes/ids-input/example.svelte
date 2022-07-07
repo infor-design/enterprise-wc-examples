@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte';
 
-    onMount(async () => {
+    onMount(async (): Promise<void> => {
         await import('ids-enterprise-wc/components/ids-input/ids-input');
     });
 </script>

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { createEventDispatcher, onMount } from 'svelte';
 
     export let label = 'My Checkbox';
@@ -14,8 +14,8 @@
     });
 
     // Fires a Svelte event when IdsCheckbox's custom `change` event is fired
-    const onChange = ((e) => {
-        console.log('IdsCheckbox change event occured: ', e.target.checked ? 'checked' : 'unchecked');
+    const onChange = ((e: CustomEvent): void => {
+        console.log('IdsCheckbox change event occured: ', e.target?.checked ? 'checked' : 'unchecked');
         dispatch('change', { nativeEvent: e });
     });
 </script>

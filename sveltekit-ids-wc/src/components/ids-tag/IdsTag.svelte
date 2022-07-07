@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
     import { createEventDispatcher, onMount } from 'svelte';
     import TAG_COLORS from './colors';
 
-    onMount(async () => {
+    onMount(async (): Promise<void> => {
         await import('ids-enterprise-wc/components/ids-tag/ids-tag');
     });
     
@@ -19,13 +19,13 @@
 
     // Pass the native custom event to a Svelte Component Event
     // (This won't occur unless you return `true` in the response from the `onBeforeTagRemove` handler)
-    const onAfterTagRemove = (e) => {
+    const onAfterTagRemove = (e: CustomEvent) => {
         console.log('webcomponent\'s "aftertagremove" event captured');
         dispatch('aftertagremove', { nativeEvent: e });
     };
 
     // Log the `<ids-tag>` element when clicked
-    const testClick = (e) => {
+    const testClick = (e: CustomEvent) => {
         if (e.target.tagName === 'IDS-TAG') {
             console.dir(e.target);
             dispatch('click', { nativeEvent: e });

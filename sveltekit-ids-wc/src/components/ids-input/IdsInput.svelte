@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { createEventDispatcher, onMount } from 'svelte';
 
     onMount(async () => {
@@ -8,8 +8,8 @@
     const dispatch = createEventDispatcher();
 
     // Log the `<ids-input>` element when clicked
-    const onInput = (e) => {
-        if (e.target.tagName === 'IDS-INPUT') {
+    const onInput = (e: CustomEvent): void => {
+        if (e.target?.tagName === 'IDS-INPUT') {
             console.dir(e.target.value);
             dispatch('input', { nativeEvent: e });
         }
@@ -17,7 +17,7 @@
 
     export let id = '';
     export let label = '';
-    export let value;
+    export let value: string;
 </script>
 
 <ids-input

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     // Our stuff
     import IdsTag from '../../components/ids-tag/IdsTag.svelte';
     import IdsInput from '../../components/ids-input/IdsInput.svelte';
@@ -7,9 +7,9 @@
 
     // `refs/selectedId/currentTag/currentTagStoreRecord` handle the target
     // of the form controls (eitehr a new or existing tag)
-    let refs = [];
+    let refs: Array<IdsTag> = [];
     export let selectedId = -1;
-    export let currentTag;
+    export let currentTag: IdsTag;
     export let currentTagRecord;
 
     // Form Control Values

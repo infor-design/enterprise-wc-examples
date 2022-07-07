@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
     import TAG_COLORS from '../../components/ids-tag/colors';
     import { onMount } from 'svelte';
 
-    onMount(async () => {
+    onMount(async (): Promise<void> => {
         await import('ids-enterprise-wc/components/ids-tag/ids-tag');
     });
 </script>
