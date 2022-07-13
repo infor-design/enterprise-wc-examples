@@ -1,7 +1,5 @@
-import { Component, VERSION, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-
-import IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag.js';
-import IdsAccordion from 'ids-enterprise-wc/components/ids-accordion/ids-accordion.js';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { routes } from '../../app-routing.module';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -10,25 +8,9 @@ import IdsAccordion from 'ids-enterprise-wc/components/ids-accordion/ids-accordi
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
-  @ViewChild('myTag') tag: IdsTag;
-  @ViewChild('myAccordion') accordion: IdsAccordion;
-
-  public name = 'Angular ' + VERSION.major;
-  public person = 'John Smith';
-  public type = 'success';
-  public tagList = [
-    { type: '', name: 'Tag One' },
-    { type: 'success', name: 'Tag Two' },
-    { type: '', name: 'Tag Three' },
-    { type: 'error', name: 'Tag Four' },
-  ];
+  public routes = routes;
 
   ngAfterViewInit() {
-    this.tag.nativeElement.color = 'success';
-    console.log(this.accordion.headers);
-  }
-
-  onTagRemove(details: CustomEvent) {
-    console.log('tagremove fired', details, details.detail);
+    console.log('Homepage init');
   }
 }
