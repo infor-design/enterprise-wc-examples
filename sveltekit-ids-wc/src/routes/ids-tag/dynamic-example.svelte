@@ -97,8 +97,10 @@
     }
 
     if (selectedId > -1) {
-      const index = $writableTagArray.findIndex(i => i.id === selectedId)
-      $writableTagArray[selectedId][prop] = targetEl[targetProp];
+      $writableTagArray = $writableTagArray.map(i => {
+        if (i.id === selectedId) i[prop] = targetEl[targetProp];
+        return i;
+      });
     }
   }
 
@@ -215,7 +217,7 @@
       </ids-layout-grid-cell>
       <ids-layout-grid-cell>
         <ids-text font-size="12">Store Value Representing Currently Selected Tag</ids-text>
-        <code class="pre">{ prettyFormat($writableTagArray[selectedId]) }</code>
+        <code class="pre">{ prettyFormat(currentTagRecord) }</code>
       </ids-layout-grid-cell>
     </ids-layout-grid>
   </ids-layout-grid-cell>
