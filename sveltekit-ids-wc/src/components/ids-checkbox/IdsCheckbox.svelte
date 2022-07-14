@@ -1,7 +1,7 @@
 <svelte:options accessors />
 
 <script lang="ts">
-	import { createEventDispatcher, onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
   export let id = '';
 	export let label = 'My Checkbox';
@@ -9,8 +9,6 @@
 	export let checked = true;
 	export let disabled = false;
 	export let trackDirty = true;
-
-	const dispatch = createEventDispatcher();
 
 	onMount(async () => {
 		await import('ids-enterprise-wc/components/ids-checkbox/ids-checkbox');

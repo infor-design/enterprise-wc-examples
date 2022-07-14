@@ -29,10 +29,10 @@
   // This is automatically updated as new tag in the template below (see $writableTagArray) 
   const add = () => {
     writableTagArray.add({
-        text,
-        color,
-        dismissible,
-        clickable
+      text,
+      color,
+      dismissible,
+      clickable
     });
     deselect();
   };
@@ -40,7 +40,7 @@
   // Selects a tag by its ID
   const select = (id: number) => {
     currentTagRecord = $writableTagArray.find((item: Object) => { 
-        return item.id === id;
+      return item.id === id;
     });
 
     text = currentTag.textContent;
@@ -159,64 +159,64 @@
 </ids-layout-grid>
 
 <ids-layout-grid cols="2" auto="true">
-    <ids-layout-grid-cell>
-        <form class="controls">
-            {#if selectedId > -1}
-                <ids-text font-size="12">Update Dynamic Tag with ID "{selectedId}"</ids-text>
-            {:else}
-                <ids-text font-size="12">Create a New Dynamic Tag</ids-text>
-            {/if}
+  <ids-layout-grid-cell>
+    <form class="controls">
+      {#if selectedId > -1}
+        <ids-text font-size="12">Update Dynamic Tag with ID "{selectedId}"</ids-text>
+      {:else}
+        <ids-text font-size="12">Create a New Dynamic Tag</ids-text>
+      {/if}
 
-            <p>
-              <IdsInput
-                label="Text Content"
-                id="text-content"
-                bind:value={text}
-                on:input={handleInput}></IdsInput>
-            </p>
+      <p>
+        <IdsInput
+          label="Text Content"
+          id="text-content"
+          bind:value={text}
+          on:input={handleInput}></IdsInput>
+      </p>
 
-            <p>
-                <label class="ids-text-14" for="style">Normal Dropdown with Dirty Tracker</label>
-                <select id="style" bind:value="{color}" on:change={(e) => updateStoreValue(e.target, 'color')}>
-                    {#each TAG_COLORS as option}
-                        <option id="color-{dashCase(option.name)}" value={option.value}>{option.name}</option>
-                    {/each}
-                </select>
-            </p>
+      <p>
+        <label class="ids-text-14" for="style">Normal Dropdown with Dirty Tracker</label>
+        <select id="style" bind:value="{color}" on:change={(e) => updateStoreValue(e.target, 'color')}>
+          {#each TAG_COLORS as option}
+            <option id="color-{dashCase(option.name)}" value={option.value}>{option.name}</option>
+          {/each}
+        </select>
+      </p>
 
-            <p>
-              <IdsCheckbox
-                label="Make Clickable"
-                id="use-clickable"
-                bind:checked={clickable}
-                on:change={handleClickableChange}></IdsCheckbox>
-              <IdsCheckbox
-                label="Make Dismissible"
-                id="use-dismissible"
-                bind:checked={dismissible}
-                on:change={handleDismissibleChange}></IdsCheckbox>
-            </p>
+      <p>
+        <IdsCheckbox
+          label="Make Clickable"
+          id="use-clickable"
+          bind:checked={clickable}
+          on:change={handleClickableChange}></IdsCheckbox>
+        <IdsCheckbox
+          label="Make Dismissible"
+          id="use-dismissible"
+          bind:checked={dismissible}
+          on:change={handleDismissibleChange}></IdsCheckbox>
+      </p>
 
-            <p>
-                <ids-button id="add" type="secondary" on:click={add}>Add new tag</ids-button>
-                <ids-button id="deselect"
-                    type="secondary"
-                    disabled={hasNoCurrentTag}
-                    on:click={deselect}>Deselect Current Tag</ids-button>
-                <ids-button type="secondary" id="reset" on:click={reset}>Remove all tags</ids-button>
-            </p>
-        </form>
-    </ids-layout-grid-cell>
-    <ids-layout-grid-cell>
-        <ids-layout-grid cols="2">
-            <ids-layout-grid-cell>
-                <ids-text font-size="12">Current Values in the Writable Store</ids-text>
-                <code class="pre">{ tagStoreStringRecords }</code>
-            </ids-layout-grid-cell>
-            <ids-layout-grid-cell>
-                <ids-text font-size="12">Store Value Representing Currently Selected Tag</ids-text>
-                <code class="pre">{ prettyFormat($writableTagArray[selectedId]) }</code>
-            </ids-layout-grid-cell>
-        </ids-layout-grid>
-    </ids-layout-grid-cell>
+      <p>
+        <ids-button id="add" type="secondary" on:click={add}>Add new tag</ids-button>
+        <ids-button id="deselect"
+          type="secondary"
+          disabled={hasNoCurrentTag}
+          on:click={deselect}>Deselect Current Tag</ids-button>
+        <ids-button type="secondary" id="reset" on:click={reset}>Remove all tags</ids-button>
+      </p>
+    </form>
+  </ids-layout-grid-cell>
+  <ids-layout-grid-cell>
+    <ids-layout-grid cols="2">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12">Current Values in the Writable Store</ids-text>
+        <code class="pre">{ tagStoreStringRecords }</code>
+      </ids-layout-grid-cell>
+      <ids-layout-grid-cell>
+        <ids-text font-size="12">Store Value Representing Currently Selected Tag</ids-text>
+        <code class="pre">{ prettyFormat($writableTagArray[selectedId]) }</code>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+  </ids-layout-grid-cell>
 </ids-layout-grid>
