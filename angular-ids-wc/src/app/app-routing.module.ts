@@ -1,4 +1,5 @@
-import { IdsAccordionComponent } from './components/ids-accordion/ids-accordion.component';
+import { IdsColorPickerExampleComponent } from './components/ids-color-picker/demos/ids-color-picker-example/ids-color-picker-example.component';
+import { IdsColorPickerComponent } from './components/ids-color-picker/ids-color-picker.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
@@ -9,12 +10,21 @@ import { IdsSwaplistComponent } from './components/ids-swaplist/ids-swaplist.com
 import { IdsTagComponent } from './components/ids-tag/ids-tag.component';
 import { IdsTooltipComponent } from './components/ids-tooltip/ids-tooltip.component';
 
-// IDS Accordion Examples
+import { IdsAccordionComponent } from './components/ids-accordion/ids-accordion.component';
 import { IdsAccordionLpComponent } from './components/ids-accordion/ids-accordion-lp/ids-accordion-lp.component';
 import { IdsAccordionExampleComponent } from './components/ids-accordion/demos/ids-accordion-example/ids-accordion-example.component';
 import { IdsAccordionIconComponent } from './components/ids-accordion/demos/ids-accordion-icon/ids-accordion-icon.component';
 import { IdsAccordionDisabledComponent } from './components/ids-accordion/demos/ids-accordion-disabled/ids-accordion-disabled.component';
 import { IdsAccordionNestedComponent } from './components/ids-accordion/demos/ids-accordion-nested/ids-accordion-nested.component';
+
+import { IdsAlertComponent } from './components/ids-alert/ids-alert.component';
+import { IdsAlertExampleComponent } from './components/ids-alert/demos/ids-alert-example/ids-alert-example.component';
+
+import { IdsCheckboxComponent } from './components/ids-checkbox/ids-checkbox.component';
+import { IdsCheckboxExampleComponent } from './components/ids-checkbox/demos/ids-checkbox-example/ids-checkbox-example.component';
+
+import { IdsDataLabelComponent } from './components/ids-data-label/ids-data-label.component';
+import { IdsDataLabelExampleComponent } from './components/ids-data-label/demos/ids-data-label-example/ids-data-label-example.component';
 
 export const routes: Routes = [
   {
@@ -91,6 +101,86 @@ export const routes: Routes = [
           description: 'Shows a basic accordion'
         }
       },
+    ]
+  },
+  {
+    path: 'ids-alert',
+    component: IdsAlertComponent,
+    data: {
+      title: 'IDS Alert',
+      category: 'Form Inputs',
+      description: 'Alert Indicator/Icon'
+    },
+    children: [
+      { 
+        path: 'example', 
+        component: IdsAlertExampleComponent,
+        data: {
+          title: 'Example',
+          type: 'Main Example',
+          description: 'Shows all alert types'
+        }
+      }
+    ]
+  },
+  {
+    path: 'ids-checkbox',
+    component: IdsCheckboxComponent,
+    data: {
+      title: 'IDS Checkbox',
+      category: 'Form Inputs',
+      description: 'Checkbox Input Element'
+    },
+    children: [
+      { 
+        path: 'example', 
+        component: IdsCheckboxExampleComponent,
+        data: {
+          title: 'Example',
+          type: 'Main Example',
+          description: 'Shows all checkbox settings and states'
+        }
+      }
+    ]
+  },
+  {
+    path: 'ids-color-picker',
+    component: IdsColorPickerComponent,
+    data: {
+      title: 'IDS Color Picker',
+      category: 'Form Inputs',
+      description: 'Checkbox Input Element'
+    },
+    children: [
+      { 
+        path: 'example', 
+        component: IdsColorPickerExampleComponent,
+        data: {
+          title: 'Example',
+          type: 'Main Example',
+          description: 'Shows all color picker settings and states'
+        }
+      }
+    ]
+  },
+  {
+    path: 'ids-data-label',
+    component: IdsDataLabelComponent,
+    data: {
+      title: 'IDS Data Label',
+      category: 'Form Inputs',
+      description: 'Checkbox Input Element'
+    },
+    children: [
+      { 
+        path: 'example', 
+        component: IdsDataLabelExampleComponent,
+        data: {
+          title: 'Example',
+          type: 'Main Example',
+          description: 'Shows all color picker settings and states'
+        }
+      }
     ]
   },
   {
