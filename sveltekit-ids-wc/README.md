@@ -43,4 +43,18 @@ You can preview the production build with `npm run preview`.
 
 IDS Web Components are not currently designed for SSR (server-side rendering), so the following steps must be taken when including the components in a SvelteKit application
 
-- Adding the package `ids-enterprise-wc` to the project must be done under `devDependencies` and NOT `dependencies`.  This requirement is due to a difference in how the library is bundled because of the dependency type.  For a full explanation, see [the SvelteKit/Sapper README](https://github.com/sveltejs/sapper-template#using-external-components) and also read [this thread](https://github.com/sveltejs/sapper/issues/774#issuecomment-663048738)
+Adding the package `ids-enterprise-wc` to the project must be done under `devDependencies` and NOT `dependencies`.  This requirement is due to a difference in how the library is bundled because of the dependency type.  For a full explanation, see [the SvelteKit/Sapper README](https://github.com/sveltejs/sapper-template#using-external-components) and also read [this thread](https://github.com/sveltejs/sapper/issues/774#issuecomment-663048738)
+
+#### Dynamic Import and `onMount()`
+
+Importing IDS Components into a Svelte file must be done using a Dynamic Import inside the built-in Svelte `onMount()` function.  This ensures that SSR is bypassed and the IDS component is loaded in Svelte's client-side runtime:
+
+```svelte
+  <script lang="ts">
+    import { onMount } from 'svelte';
+
+    onMount(async () => {
+      await import('ids-enterprise-wc/components/ids-tag/ids-tag');
+    });
+  </script>
+```
