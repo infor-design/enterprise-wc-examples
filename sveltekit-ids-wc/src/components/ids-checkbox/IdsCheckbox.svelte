@@ -14,13 +14,7 @@
 
 	onMount(async () => {
 		await import('ids-enterprise-wc/components/ids-checkbox/ids-checkbox');
-	})
-
-	// Fires a Svelte event when IdsCheckbox's custom `change` event is fired
-	const onChange = (e: CustomEvent): void => {
-		console.log('IdsCheckbox change event occured: ', e.target?.checked ? 'checked' : 'unchecked');
-		// dispatch('change', { nativeEvent: e });
-	};
+	});
 </script>
 
 <ids-checkbox
