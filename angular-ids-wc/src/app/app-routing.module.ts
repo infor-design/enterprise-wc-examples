@@ -1,3 +1,5 @@
+import { IdsDatePickerExampleComponent } from './components/ids-date-picker/demos/ids-date-picker-example/ids-date-picker-example.component';
+import { IdsDatePickerComponent } from './components/ids-date-picker/ids-date-picker.component';
 import { IdsColorPickerExampleComponent } from './components/ids-color-picker/demos/ids-color-picker-example/ids-color-picker-example.component';
 import { IdsColorPickerComponent } from './components/ids-color-picker/ids-color-picker.component';
 import { NgModule, Component } from '@angular/core';
@@ -25,6 +27,12 @@ import { IdsCheckboxExampleComponent } from './components/ids-checkbox/demos/ids
 
 import { IdsDataLabelComponent } from './components/ids-data-label/ids-data-label.component';
 import { IdsDataLabelExampleComponent } from './components/ids-data-label/demos/ids-data-label-example/ids-data-label-example.component';
+
+import { IdsDropdownComponent } from './components/ids-dropdown/ids-dropdown.component';
+import { IdsDropdownExampleComponent } from './components/ids-dropdown/demos/ids-dropdown-example/ids-dropdown-example.component';
+
+import { IdsPopupExampleComponent } from './components/ids-popup/demos/ids-popup-example/ids-popup-example.component';
+import { IdsPopupComponent } from './components/ids-popup/ids-popup.component';
 
 export const routes: Routes = [
   {
@@ -179,6 +187,66 @@ export const routes: Routes = [
           title: 'Example',
           type: 'Main Example',
           description: 'Shows all color picker settings and states'
+        }
+      }
+    ]
+  },
+  {
+    path: 'ids-date-picker',
+    component: IdsDatePickerComponent,
+    data: {
+      title: 'IDS Date Picker',
+      category: 'Form Inputs',
+      description: 'Checkbox Input Element'
+    },
+    children: [
+      {
+        path: 'example', 
+        component: IdsDatePickerExampleComponent,
+        data: {
+          title: 'Example',
+          type: 'Main Example',
+          description: 'Shows all date picker settings and states'
+        }
+      }
+    ]
+  },
+  {
+    path: 'ids-dropdown',
+    component: IdsDropdownComponent,
+    data: {
+      title: 'IDS Dropdown',
+      category: 'Form Inputs',
+      description: 'Checkbox Input Element'
+    },
+    children: [
+      {
+        path: 'example', 
+        component: IdsDropdownExampleComponent,
+        data: {
+          title: 'Example',
+          type: 'Main Example',
+          description: 'Shows all date picker settings and states'
+        }
+      }
+    ]
+  },
+  {
+    path: 'ids-popup',
+    component: IdsPopupComponent,
+    data: {
+      title: 'IDS Dropdown',
+      category: 'Form Inputs',
+      description: 'Checkbox Input Element'
+    },
+    children: [
+      {
+        path: 'example', 
+        component: IdsPopupExampleComponent,
+        data: {
+          title: 'Example',
+          type: 'Main Example',
+          description: 'Shows all date picker settings and states'
         }
       }
     ]

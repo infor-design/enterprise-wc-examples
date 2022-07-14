@@ -1,4 +1,3 @@
-import { ActivatedRoute } from '@angular/router';
 import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
@@ -7,14 +6,8 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrls: ['./ids-accordion.component.css']
 })
 export class IdsAccordionComponent implements AfterViewInit {
-  children: any;
 
-  constructor(route: ActivatedRoute) {
-    // route.url.subscribe(() => {
-    //   this.children = route.snapshot.routeConfig.children;
-    //   console.log(this.children);
-    // });
-  }
+  constructor() {}
 
   ngAfterViewInit(): void { }
 

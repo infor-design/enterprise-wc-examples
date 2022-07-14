@@ -24,6 +24,12 @@ import { IdsColorPickerComponent } from './components/ids-color-picker/ids-color
 import { IdsColorPickerExampleComponent } from './components/ids-color-picker/demos/ids-color-picker-example/ids-color-picker-example.component';
 import { IdsDataLabelComponent } from './components/ids-data-label/ids-data-label.component';
 import { IdsDataLabelExampleComponent } from './components/ids-data-label/demos/ids-data-label-example/ids-data-label-example.component';
+import { IdsDatePickerComponent } from './components/ids-date-picker/ids-date-picker.component';
+import { IdsDatePickerExampleComponent } from './components/ids-date-picker/demos/ids-date-picker-example/ids-date-picker-example.component';
+import { IdsDropdownComponent } from './components/ids-dropdown/ids-dropdown.component';
+import { IdsDropdownExampleComponent } from './components/ids-dropdown/demos/ids-dropdown-example/ids-dropdown-example.component';
+import { IdsPopupComponent } from './components/ids-popup/ids-popup.component';
+import { IdsPopupExampleComponent } from './components/ids-popup/demos/ids-popup-example/ids-popup-example.component';
 
 @NgModule({
   imports:      [ 
@@ -51,6 +57,12 @@ import { IdsDataLabelExampleComponent } from './components/ids-data-label/demos/
     IdsColorPickerExampleComponent,
     IdsDataLabelComponent,
     IdsDataLabelExampleComponent,
+    IdsDatePickerComponent,
+    IdsDatePickerExampleComponent,
+    IdsDropdownComponent,
+    IdsDropdownExampleComponent,
+    IdsPopupComponent,
+    IdsPopupExampleComponent,
   ],
   bootstrap:    [ AppComponent ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
