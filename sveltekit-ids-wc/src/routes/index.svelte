@@ -32,6 +32,11 @@
   // Navigation & Interaction
   categories[1].components.push(
     {
+      link: 'ids-button',
+      component: 'Button',
+      description: 'Simple HTMLButtonElement'
+    },
+    {
       link: 'ids-tag',
       component: 'Tag',
       description: 'UI Classification'

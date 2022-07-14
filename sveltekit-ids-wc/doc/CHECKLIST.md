@@ -17,7 +17,7 @@ Components marked completed in this checklist will have both an example of direc
  - [ ] Block grid (ids-block-grid)
  - [ ] Breadcrumb (ids-bread-crumb)
  - [ ] Bubble (ids-bubble-chart)
- - [ ] Button (ids-button)
+ - [x] Button (ids-button)
  - [ ] Bullet (ids-bullet-chart) skipping until needed
  - [ ] Builder (ids-patterns) skipping until needed
  - [ ] Button (ids-button)
