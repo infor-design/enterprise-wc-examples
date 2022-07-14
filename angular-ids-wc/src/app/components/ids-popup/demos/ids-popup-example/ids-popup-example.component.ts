@@ -1,6 +1,5 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import IdsButton from 'ids-enterprise-wc/components/ids-button/ids-button';
-import IdsPopup from 'ids-enterprise-wc/components/ids-popup/ids-popup';
 
 @Component({
   selector: 'app-ids-popup-example',
@@ -13,9 +12,15 @@ export class IdsPopupExampleComponent implements AfterViewInit {
 
   constructor() { }
 
-  ngAfterViewInit(): void {
-    this.triggerButton.nativeElement.addEventListener('click', () => {
-      this.visible = !this.visible;
-    })
+  ngAfterViewInit(): void {    
+    this.triggerButton.nativeElement.addEventListener('click', this.handleVisible.bind(this));
+  }
+
+  handleVisible() {
+    this.visible = !this.visible;
+  }
+
+  ngOnDestroy() {
+    this.triggerButton.nativeElement.removeEventListener('click', this.handleVisible.bind(this))
   }
 }
