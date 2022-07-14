@@ -5,22 +5,22 @@
     {
       link: 'example',
       type: 'Main Example',
-      description: 'Simple usage of an IDS Checkbox within Svelte'
+      description: 'Simple usage of an IDS Tag within Svelte'
     },
     {
       link: 'dynamic-example',
       type: 'Dynamic Example',
-      description: 'IDS Checkbox wrapped in a Svelte component'
+      description: 'IDS Tag wrapped in a Svelte component, driven by a Svelte custom store'
     }
   ];
 </script>
 
 <ids-layout-grid auto="true">
-  <ids-text font-size="20" type="h1">Ids Checkbox Examples</ids-text>
+  <ids-text font-size="20" type="h1">Ids Tag Examples</ids-text>
 </ids-layout-grid>
 
 <ids-layout-grid auto="true">
   <ids-layout-grid-cell>
-    <IdsDemoListing data={listingData} componentName="ids-checkbox"></IdsDemoListing>
+    <IdsDemoListing data={listingData} componentName="ids-tag"></IdsDemoListing>
   </ids-layout-grid-cell>
 </ids-layout-grid>

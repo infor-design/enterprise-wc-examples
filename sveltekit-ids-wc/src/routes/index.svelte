@@ -10,17 +10,33 @@
 		{ name: 'Typography', icon: '', components: [] }
 	];
 
-	const addYaml = (yaml: any) => {
-		const index = categories.findIndex((element: any) => element.name === yaml.category);
-		categories[index].components.push(yaml);
-	};
-
-	// Temp (until we get YAML loading working)
-	categories[0].components.push({
-		component: 'Checkbox',
-		description: 'Checkbox Input Element',
-		link: 'ids-checkbox'
-	});
+	// Form Inputs
+	categories[0].components.push(
+    {
+      link: 'ids-checkbox',
+      component: 'Checkbox',
+      description: 'Checkbox Input Element'
+    },
+    {
+      link: 'ids-dropdown',
+      component: 'Dropdown',
+      description: 'Select from a list of items'
+    },
+    {
+      link: 'ids-input',
+      component: 'Input',
+      description: 'Input element and features'
+    }
+  );
+  
+  // Navigation & Interaction
+  categories[1].components.push(
+    {
+      link: 'ids-tag',
+      component: 'Tag',
+      description: 'UI Classification'
+    }
+  );
 </script>
 
 {#each categories as category}
