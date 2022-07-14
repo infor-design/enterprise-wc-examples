@@ -1,150 +1,161 @@
 <script lang="ts">
-    // Our stuff
-    import IdsTag from '../../components/ids-tag/IdsTag.svelte';
-    import IdsInput from '../../components/ids-input/IdsInput.svelte';
-    import TAG_COLORS from '../../components/ids-tag/colors';
-    import { writableTagArray } from './dynamic-example.stores';
+  // Main Component
+  import IdsTag from '../../components/ids-tag/IdsTag.svelte';
+  import TAG_COLORS from '../../components/ids-tag/colors';
+  import { writableTagArray } from './dynamic-example.stores';
 
-    // `refs/selectedId/currentTag/currentTagStoreRecord` handle the target
-    // of the form controls (eitehr a new or existing tag)
-    let refs: Array<IdsTag> = [];
-    export let selectedId = -1;
-    export let currentTag: IdsTag;
-    export let currentTagRecord;
+  // Supporting Components
+  import IdsCheckbox from '../../components/ids-checkbox/IdsCheckbox.svelte';
+  import IdsInput from '../../components/ids-input/IdsInput.svelte';
 
-    // Form Control Values
-    export let text = 'This is a tag';
-    export let color = TAG_COLORS[0].value;
-    export let dismissible = true;
-    export let clickable = true;
+  // `refs/selectedId/currentTag/currentTagStoreRecord` handle the target
+  // of the form controls (eitehr a new or existing tag)
+  $: refs = [];
+  export let selectedId = -1;
+  export let currentTag: IdsTag;
+  export let currentTagRecord;
 
-    const dashCase = (val = '') => {
-        return val.toLowerCase().split(' ').join('-');
-    };
+  // Form Control Values
+  export let text = 'This is a tag';
+  export let color = TAG_COLORS[0].value;
+  export let dismissible = true;
+  export let clickable = true;
 
-    // Adds the contents of the form as a new entry in the writable store.
-    // This is automatically updated as new tag in the template below (see $writableTagArray) 
-    const add = () => {
-        writableTagArray.add({
-            text,
-            color,
-            dismissible,
-            clickable
-        });
-        deselect();
-    };
+  const dashCase = (val = '') => {
+    return val.toLowerCase().split(' ').join('-');
+  };
 
-    // Selects a tag by its ID
-    const select = (id) => {
-        currentTagRecord = $writableTagArray.find((item) => { 
-            return item.id === id;
-        });
+  // Adds the contents of the form as a new entry in the writable store.
+  // This is automatically updated as new tag in the template below (see $writableTagArray) 
+  const add = () => {
+    writableTagArray.add({
+        text,
+        color,
+        dismissible,
+        clickable
+    });
+    deselect();
+  };
 
-        text = currentTag.textContent;
-        color = currentTag.color || '';
-        dismissible = currentTag.dismissible;
-        clickable = currentTag.clickable;
+  // Selects a tag by its ID
+  const select = (id: number) => {
+    currentTagRecord = $writableTagArray.find((item: Object) => { 
+        return item.id === id;
+    });
+
+    text = currentTag.textContent;
+    color = currentTag.color || '';
+    dismissible = currentTag.dismissible;
+    clickable = currentTag.clickable;
+  }
+
+  const deselect = () => {
+    currentTag = undefined;
+    currentTagRecord = undefined;
+    selectedId = -1;
+  }
+
+  // Resets the writeable store to have no contents, and clears the current tag
+  const reset = () => {
+    deselect();
+    writableTagArray.reset();
+    refs = [];
+  }
+
+  // Allows pretty-looking data formatting in the template
+  const prettyFormat = (str: string) => JSON.stringify( str, null, 2 );
+
+  // Listens for the Svelte "Component Event" dispatched by the dynamic `<IdsTag>` svelte component
+  const onBeforeTagRemove = (e) => {
+    const tagStoreId = parseInt(e.detail.nativeEvent.target.dataset.id);
+    writableTagArray.remove(tagStoreId);
+    deselect();
+    console.log('svelte component\'s "beforetagremove" event captured');
+  };
+
+  // When clicking on an existing tag in the list, 
+  // the form fields are updated to reflect its state.
+  const setAsCurrentTag = (e) => {
+    // NOTE: `e.detail` is the Svelte Component's event detail, NOT the IDS component's.
+    currentTag = e.detail.nativeEvent.target;
+    selectedId = parseInt(currentTag.dataset.id);
+    select(selectedId);
+  };
+
+  // Runs on the <ids-input>'s 'input' event
+  const handleInput = (e: CustomEvent) => {
+    const inputEl = e.detail.nativeEvent.target;
+    text = inputEl.value;
+    return updateStoreValue(inputEl, 'text');
+  }
+
+  // Updates the writable tag array when a specified value changes
+  const updateStoreValue = (targetEl, prop) => {
+    let targetProp = 'value';
+    if (['IDS-CHECKBOX', 'IDS-RADIO'].includes(targetEl.tagName)) {
+      targetProp = 'checked';
     }
 
-    const deselect = () => {
-        currentTag = undefined;
-        currentTagRecord = undefined;
-        selectedId = -1;
+    if (selectedId > -1) {
+      const index = $writableTagArray.findIndex(i => i.id === selectedId)
+      $writableTagArray[selectedId][prop] = targetEl[targetProp];
     }
+  }
 
-    // Resets the writeable store to have no contents, and clears the current tag
-    const reset = () => {
-        deselect();
-        writableTagArray.reset();
-        refs = [];
-    }
+  const handleClickableChange = (e: Event) => {
+    updateStoreValue(e.target, 'clickable')
+  }
 
-    // Allows pretty-looking data formatting in the template
-    const prettyFormat = (str) => JSON.stringify( str, null, 2 );
+  const handleDismissibleChange = (e: Event) => {
+    updateStoreValue(e.target, 'dismissible')
+  }
 
-    // Listens for the Svelte "Component Event" dispatched by the dynamic `<IdsTag>` svelte component
-    const onBeforeTagRemove = (e) => {
-        const tagStoreId = parseInt(e.detail.nativeEvent.target.dataset.id);
-        writableTagArray.remove(tagStoreId);
-        deselect();
-        console.log('svelte component\'s "beforetagremove" event captured')
-    };
+  // Makes the "Deselect" button in the template disabled/enabled based on whether or not a tag is selected
+  $: hasNoCurrentTag = currentTag === undefined;
 
-    // When clicking on an existing tag in the list, 
-    // the form fields are updated to reflect its state.
-    const setAsCurrentTag = (e) => {
-        // NOTE: `e.detail` is the Svelte Component's event detail, NOT the IDS component's.
-        currentTag = e.detail.nativeEvent.target;
-        selectedId = parseInt(currentTag.dataset.id);
-        select(selectedId);
-    };
-
-    // Runs on the <ids-input>'s 'input' event
-    const handleInput = (e) => {
-        const inputEl = e.target;
-        text = inputEl.value;
-        return updateStoreValue(inputEl, 'text');
-    }
-
-    // Updates the writable tag array when a specified value changes
-    const updateStoreValue = (targetEl, prop) => {
-        let targetProp = 'value';
-        if (['checkbox', 'radio'].includes(targetEl.type)) {
-            targetProp = 'checked';
-        }
-
-        if (selectedId > -1) {
-            const index = $writableTagArray.findIndex(i => i.id === selectedId)
-            $writableTagArray[index][prop] = targetEl[targetProp];
-        }
-    }
-
-    // Makes the "Deselect" button in the template disabled/enabled based on whether or not a tag is selected
-    $: hasNoCurrentTag = currentTag === undefined;
-
-    // Lists all records in the writable store in an easily-read format
-    $: tagStoreStringRecords = prettyFormat($writableTagArray);
+  // Lists all records in the writable store in an easily-read format
+  $: tagStoreStringRecords = prettyFormat($writableTagArray); // prettyFormat($writableTagArray);
 </script>
 
 <style>
-    /* 
-    NOTE: these are not needed for the actual Tag component.
-    These are only used for styling the block that displays the writable store,
-    as well as the page controls
-    */
-    .pre {
-        font-family: 'Fira Code', monospace;
-        font-size: 12px;
-        white-space: pre;
-    }
+  /* 
+  NOTE: these are not needed for the actual Tag component.
+  These are only used for styling the block that displays the writable store,
+  as well as the page controls
+  */
+  .pre {
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    white-space: pre;
+  }
 
-    .controls {
-        margin-bottom: 20px;
-    }
+  .controls {
+    margin-bottom: 20px;
+  }
 </style>
 
 <ids-layout-grid auto="true">
-    <ids-text font-size="12">Dynamic Tag (Svelte)</ids-text>
+  <ids-text font-size="12">Dynamic Tag (Svelte)</ids-text>
 </ids-layout-grid>
 
 <ids-layout-grid auto="true">
-    <ids-layout-grid-cell>
-        {#if $writableTagArray.length > 0}
-            {#each $writableTagArray as tag, i}
-                <IdsTag
-                    bind:this={refs[i]}
-                    bind:id={tag.id}
-                    bind:text={tag.text}
-                    bind:color={tag.color}
-                    bind:dismissible={tag.dismissible}
-                    bind:clickable={tag.clickable}
-                    on:click={setAsCurrentTag}
-                    on:beforetagremove={onBeforeTagRemove} />
-            {/each}
-        {:else}
-            <ids-text font-color="red">Use the form below to add a new tag</ids-text>
-        {/if}
-    </ids-layout-grid-cell>
+  <ids-layout-grid-cell>
+    {#if $writableTagArray.length > 0}
+      {#each $writableTagArray as tag, i}
+        <IdsTag
+          bind:this={refs[i]}
+          bind:id={tag.id}
+          bind:text={tag.text}
+          bind:color={tag.color}
+          bind:dismissible={tag.dismissible}
+          bind:clickable={tag.clickable}
+          on:click={setAsCurrentTag}
+          on:beforetagremove={onBeforeTagRemove} />
+      {/each}
+    {:else}
+      <ids-text color="red">Use the form below to add a new tag</ids-text>
+    {/if}
+  </ids-layout-grid-cell>
 </ids-layout-grid>
 
 <ids-layout-grid cols="2" auto="true">
@@ -157,11 +168,11 @@
             {/if}
 
             <p>
-                <label class="ids-text-14" for="text-content">Text Content:</label>
-                <IdsInput
-                    id="text-content"
-                    bind:value={text}
-                    on:input={handleInput}></IdsInput>
+              <IdsInput
+                label="Text Content"
+                id="text-content"
+                bind:value={text}
+                on:input={handleInput}></IdsInput>
             </p>
 
             <p>
@@ -174,14 +185,16 @@
             </p>
 
             <p>
-                <label for="use-clickable">
-                    <input bind:checked={clickable} type="checkbox" id="use-clickable" on:change={(e) => updateStoreValue(e.target, 'clickable')}>
-                    Make Clickable
-                </label>
-                <label for="use-dismissible">
-                    <input bind:checked={dismissible} type="checkbox" id="use-dismissible" on:change={(e) => updateStoreValue(e.target, 'dismissible')} />
-                    Make Dismissible
-                </label>
+              <IdsCheckbox
+                label="Make Clickable"
+                id="use-clickable"
+                bind:checked={clickable}
+                on:change={handleClickableChange}></IdsCheckbox>
+              <IdsCheckbox
+                label="Make Dismissible"
+                id="use-dismissible"
+                bind:checked={dismissible}
+                on:change={handleDismissibleChange}></IdsCheckbox>
             </p>
 
             <p>
@@ -195,20 +208,14 @@
         </form>
     </ids-layout-grid-cell>
     <ids-layout-grid-cell>
-        <ids-layout-grid cols="3">
+        <ids-layout-grid cols="2">
             <ids-layout-grid-cell>
                 <ids-text font-size="12">Current Values in the Writable Store</ids-text>
-                <code class="pre">{tagStoreStringRecords}</code>
+                <code class="pre">{ tagStoreStringRecords }</code>
             </ids-layout-grid-cell>
             <ids-layout-grid-cell>
                 <ids-text font-size="12">Store Value Representing Currently Selected Tag</ids-text>
-                <code class="pre">{prettyFormat($writableTagArray[selectedId])}</code>
-            </ids-layout-grid-cell>
-            <ids-layout-grid-cell>
-                <ids-text font-size="12">Svelte Component Refs</ids-text>
-                {#each refs as ref, i}
-                    <p><b>{i}:</b>{prettyFormat(ref)}</p>
-                {/each}
+                <code class="pre">{ prettyFormat($writableTagArray[selectedId]) }</code>
             </ids-layout-grid-cell>
         </ids-layout-grid>
     </ids-layout-grid-cell>
