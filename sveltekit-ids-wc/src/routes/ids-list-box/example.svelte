@@ -7,8 +7,9 @@
   });
 
   const handleClick = (e: MouseEvent) => {
-    if (e.target && e.target.tagName === 'IDS-LIST-BOX-OPTION') {
-      console.info(`Clicked on "${e.target?.textContent}"`);
+    const target: HTMLElement = (e.target as HTMLElement);
+    if (target && target.tagName === 'IDS-LIST-BOX-OPTION') {
+      console.info(`Clicked on "${target.textContent}"`);
     }
   };
 </script>
