@@ -1,7 +1,9 @@
-import { IdsDatePickerExampleComponent } from './components/ids-date-picker/demos/ids-date-picker-example/ids-date-picker-example.component';
-import { IdsDatePickerComponent } from './components/ids-date-picker/ids-date-picker.component';
-import { IdsColorPickerExampleComponent } from './components/ids-color-picker/demos/ids-color-picker-example/ids-color-picker-example.component';
-import { IdsColorPickerComponent } from './components/ids-color-picker/ids-color-picker.component';
+import { IdsLookupExampleComponent } from './components/ids-lookup/demos/ids-lookup-example/ids-lookup-example.component';
+import { IdsLookupComponent } from './components/ids-lookup/ids-lookup.component';
+import { IdsEditorExampleComponent } from './components/ids-editor/demos/ids-editor-example/ids-editor-example.component';
+import { IdsEditorComponent } from './components/ids-editor/ids-editor.component';
+import { IdsInputExampleComponent } from './components/ids-input/demos/ids-input-example/ids-input-example.component';
+import { IdsInputComponent } from './components/ids-input/ids-input.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
@@ -33,6 +35,12 @@ import { IdsDropdownExampleComponent } from './components/ids-dropdown/demos/ids
 
 import { IdsPopupExampleComponent } from './components/ids-popup/demos/ids-popup-example/ids-popup-example.component';
 import { IdsPopupComponent } from './components/ids-popup/ids-popup.component';
+
+import { IdsDatePickerComponent } from './components/ids-date-picker/ids-date-picker.component';
+import { IdsDatePickerExampleComponent } from './components/ids-date-picker/demos/ids-date-picker-example/ids-date-picker-example.component';
+
+import { IdsColorPickerComponent } from './components/ids-color-picker/ids-color-picker.component';
+import { IdsColorPickerExampleComponent } from './components/ids-color-picker/demos/ids-color-picker-example/ids-color-picker-example.component';
 
 export const routes: Routes = [
   {
@@ -247,6 +255,66 @@ export const routes: Routes = [
           title: 'Example',
           type: 'Main Example',
           description: 'Shows all date picker settings and states'
+        }
+      }
+    ]
+  },
+  {
+    path: 'ids-input',
+    component: IdsInputComponent,
+    data: {
+      title: 'IDS Input',
+      category: 'Form Inputs',
+      description: 'Input Element'
+    },
+    children: [
+      {
+        path: 'example', 
+        component: IdsInputExampleComponent,
+        data: {
+          title: 'Example',
+          type: 'Main Example',
+          description: 'Shows input'
+        }
+      }
+    ]
+  },
+  {
+    path: 'ids-editor',
+    component: IdsEditorComponent,
+    data: {
+      title: 'IDS Editor',
+      category: 'Form Inputs',
+      description: 'Editor Element'
+    },
+    children: [
+      {
+        path: 'example', 
+        component: IdsEditorExampleComponent,
+        data: {
+          title: 'Example',
+          type: 'Main Example',
+          description: 'Shows input'
+        }
+      }
+    ]
+  },
+  {
+    path: 'ids-lookup',
+    component: IdsLookupComponent,
+    data: {
+      title: 'IDS Lookup',
+      category: 'Form Inputs',
+      description: 'Lookup Element'
+    },
+    children: [
+      {
+        path: 'example', 
+        component: IdsLookupExampleComponent,
+        data: {
+          title: 'Example',
+          type: 'Main Example',
+          description: 'Shows input'
         }
       }
     ]

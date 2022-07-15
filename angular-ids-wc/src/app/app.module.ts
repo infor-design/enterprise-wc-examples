@@ -30,6 +30,12 @@ import { IdsDropdownComponent } from './components/ids-dropdown/ids-dropdown.com
 import { IdsDropdownExampleComponent } from './components/ids-dropdown/demos/ids-dropdown-example/ids-dropdown-example.component';
 import { IdsPopupComponent } from './components/ids-popup/ids-popup.component';
 import { IdsPopupExampleComponent } from './components/ids-popup/demos/ids-popup-example/ids-popup-example.component';
+import { IdsInputComponent } from './components/ids-input/ids-input.component';
+import { IdsInputExampleComponent } from './components/ids-input/demos/ids-input-example/ids-input-example.component';
+import { IdsEditorComponent } from './components/ids-editor/ids-editor.component';
+import { IdsEditorExampleComponent } from './components/ids-editor/demos/ids-editor-example/ids-editor-example.component';
+import { IdsLookupComponent } from './components/ids-lookup/ids-lookup.component';
+import { IdsLookupExampleComponent } from './components/ids-lookup/demos/ids-lookup-example/ids-lookup-example.component';
 
 @NgModule({
   imports:      [ 
@@ -63,6 +69,12 @@ import { IdsPopupExampleComponent } from './components/ids-popup/demos/ids-popup
     IdsDropdownExampleComponent,
     IdsPopupComponent,
     IdsPopupExampleComponent,
+    IdsInputComponent,
+    IdsInputExampleComponent,
+    IdsEditorComponent,
+    IdsEditorExampleComponent,
+    IdsLookupComponent,
+    IdsLookupExampleComponent,
   ],
   bootstrap:    [ AppComponent ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
