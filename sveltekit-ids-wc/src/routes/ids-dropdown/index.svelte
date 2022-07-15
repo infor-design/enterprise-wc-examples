@@ -10,7 +10,7 @@
     {
       link: 'dynamic-example',
       type: 'Dynamic Example',
-      description: 'IDS Dropdown wrapped in a Svelte component'
+      description: 'IDS Dropdown wrapped in a Svelte component, driven by a Svelte custom store'
     }
   ];
 </script>

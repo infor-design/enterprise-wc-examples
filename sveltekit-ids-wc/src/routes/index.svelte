@@ -42,6 +42,15 @@
       description: 'UI Classification'
     }
   );
+
+  // Layouts
+  categories[4].components.push(
+    {
+      link: 'ids-list-box',
+      component: 'List Box',
+      description: 'List Item Markup'
+    }
+  );
 </script>
 
 {#each categories as category}
