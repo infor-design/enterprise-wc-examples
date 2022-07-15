@@ -49,6 +49,11 @@
       link: 'ids-list-box',
       component: 'List Box',
       description: 'List Item Markup'
+    },
+    {
+      link: 'ids-popup',
+      component: 'Popup',
+      description: 'Displays a Popup Container'
     }
   );
 </script>
