@@ -1,3 +1,7 @@
+import { IdsColorPickerAxeComponent } from './components/ids-color-picker/demos/ids-color-picker-axe/ids-color-picker-axe.component';
+import { IdsColorPickerExampleSizesComponent } from './components/ids-color-picker/demos/ids-color-picker-example-sizes/ids-color-picker-example-sizes.component';
+import { IdsCheckboxGroupExampleComponent } from './components/ids-checkbox-group/demos/ids-checkbox-group-example/ids-checkbox-group-example.component';
+import { IdsCheckboxGroupComponent } from './components/ids-checkbox-group/ids-checkbox-group.component';
 import { IdsLookupExampleComponent } from './components/ids-lookup/demos/ids-lookup-example/ids-lookup-example.component';
 import { IdsLookupComponent } from './components/ids-lookup/ids-lookup.component';
 import { IdsEditorExampleComponent } from './components/ids-editor/demos/ids-editor-example/ids-editor-example.component';
@@ -160,6 +164,26 @@ export const routes: Routes = [
     ]
   },
   {
+    path: 'ids-checkbox-group',
+    component: IdsCheckboxGroupComponent,
+    data: {
+      title: 'IDS Lookup',
+      category: 'Form Inputs',
+      description: 'Lookup Element'
+    },
+    children: [
+      {
+        path: 'example', 
+        component: IdsCheckboxGroupExampleComponent,
+        data: {
+          title: 'Example',
+          type: 'Main Example',
+          description: 'Shows input'
+        }
+      }
+    ]
+  },
+  {
     path: 'ids-color-picker',
     component: IdsColorPickerComponent,
     data: {
@@ -174,6 +198,24 @@ export const routes: Routes = [
         data: {
           title: 'Example',
           type: 'Main Example',
+          description: 'Shows all color picker settings and states'
+        }
+      },
+      { 
+        path: 'example-sizes', 
+        component: IdsColorPickerExampleSizesComponent,
+        data: {
+          title: 'Example Sizes',
+          type: 'Main Example',
+          description: 'Shows all color picker settings and states'
+        }
+      },
+      { 
+        path: 'axe', 
+        component: IdsColorPickerAxeComponent,
+        data: {
+          title: 'Axe',
+          type: 'Axe Example',
           description: 'Shows all color picker settings and states'
         }
       }

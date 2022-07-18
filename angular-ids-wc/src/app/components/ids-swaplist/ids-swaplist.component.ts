@@ -1,5 +1,7 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import IdsSwapList from 'ids-enterprise-wc/components/ids-swaplist/ids-swaplist.js';
+// import 'ids-enterprise-wc/components/ids-swappable/ids-swappable';
+// import 'ids-enterprise-wc/components/ids-swappable/ids-swappable-item';
 
 @Component({
   selector: 'app-ids-swaplist',

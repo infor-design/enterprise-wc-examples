@@ -36,6 +36,10 @@ import { IdsEditorComponent } from './components/ids-editor/ids-editor.component
 import { IdsEditorExampleComponent } from './components/ids-editor/demos/ids-editor-example/ids-editor-example.component';
 import { IdsLookupComponent } from './components/ids-lookup/ids-lookup.component';
 import { IdsLookupExampleComponent } from './components/ids-lookup/demos/ids-lookup-example/ids-lookup-example.component';
+import { IdsCheckboxGroupComponent } from './components/ids-checkbox-group/ids-checkbox-group.component';
+import { IdsCheckboxGroupExampleComponent } from './components/ids-checkbox-group/demos/ids-checkbox-group-example/ids-checkbox-group-example.component';
+import { IdsColorPickerExampleSizesComponent } from './components/ids-color-picker/demos/ids-color-picker-example-sizes/ids-color-picker-example-sizes.component';
+import { IdsColorPickerAxeComponent } from './components/ids-color-picker/demos/ids-color-picker-axe/ids-color-picker-axe.component';
 
 @NgModule({
   imports:      [ 
@@ -75,6 +79,10 @@ import { IdsLookupExampleComponent } from './components/ids-lookup/demos/ids-loo
     IdsEditorExampleComponent,
     IdsLookupComponent,
     IdsLookupExampleComponent,
+    IdsCheckboxGroupComponent,
+    IdsCheckboxGroupExampleComponent,
+    IdsColorPickerExampleSizesComponent,
+    IdsColorPickerAxeComponent,
   ],
   bootstrap:    [ AppComponent ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
