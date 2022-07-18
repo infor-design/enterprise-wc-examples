@@ -4,18 +4,17 @@ import { ActivatedRoute } from '@angular/router';
 import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid.js';
 
 @Component({
-  selector: 'app-ids-accordion-lp',
-  templateUrl: './ids-accordion-lp.component.html',
-  styleUrls: ['./ids-accordion-lp.component.css']
+  selector: 'app-ids-accordion-landing',
+  templateUrl: './ids-accordion-landing.component.html',
+  styleUrls: ['./ids-accordion-landing.component.css']
 })
-export class IdsAccordionLpComponent implements AfterViewInit {
+export class IdsAccordionLandingComponent implements AfterViewInit {
   @ViewChild('exampleDatagrid', { read: ElementRef }) exampleDatagrid: IdsDataGrid;
   @Input() children: any;
   public columns = [];
 
   constructor(public route: ActivatedRoute) {
     route.url.subscribe(() => {
-      console.log(route.snapshot.parent.routeConfig.children);
       const childRoutes = route.snapshot.parent.routeConfig.children.filter((c) => c.path !== '');
       this.children = childRoutes;
     });
@@ -28,7 +27,7 @@ export class IdsAccordionLpComponent implements AfterViewInit {
       field: 'path',
       sortable: false,
       formatter: this.exampleDatagrid.nativeElement.formatters.hyperlink,
-      // href: 'ids-accordion/path'
+      href: 'ids-accordion/{{value}}'
     });
 
     this.columns.push({

@@ -2,11 +2,13 @@
 
 <ids-block-grid>
   <ids-block-grid-item *ngFor="let route of routes">
+    
     <ids-card actionable="true" routerLink="{{route.path}}" target="_self" [attr.height]="100">
       <div slot="card-content">
         <ids-text font-size="16" type="h2" font-weight="bold">{{route.data.title}}</ids-text>
         <ids-text font-size="16" type="p">{{route.data.description}}</ids-text>
       </div>
     </ids-card>
+
   </ids-block-grid-item>
 </ids-block-grid>

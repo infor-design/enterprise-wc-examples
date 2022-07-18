@@ -1,13 +1,3 @@
-import { IdsColorPickerAxeComponent } from './components/ids-color-picker/demos/ids-color-picker-axe/ids-color-picker-axe.component';
-import { IdsColorPickerExampleSizesComponent } from './components/ids-color-picker/demos/ids-color-picker-example-sizes/ids-color-picker-example-sizes.component';
-import { IdsCheckboxGroupExampleComponent } from './components/ids-checkbox-group/demos/ids-checkbox-group-example/ids-checkbox-group-example.component';
-import { IdsCheckboxGroupComponent } from './components/ids-checkbox-group/ids-checkbox-group.component';
-import { IdsLookupExampleComponent } from './components/ids-lookup/demos/ids-lookup-example/ids-lookup-example.component';
-import { IdsLookupComponent } from './components/ids-lookup/ids-lookup.component';
-import { IdsEditorExampleComponent } from './components/ids-editor/demos/ids-editor-example/ids-editor-example.component';
-import { IdsEditorComponent } from './components/ids-editor/ids-editor.component';
-import { IdsInputExampleComponent } from './components/ids-input/demos/ids-input-example/ids-input-example.component';
-import { IdsInputComponent } from './components/ids-input/ids-input.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
@@ -16,10 +6,10 @@ import { HomeComponent } from './components/home/home.component';
 // IDS Components
 import { IdsSwaplistComponent } from './components/ids-swaplist/ids-swaplist.component';
 import { IdsTagComponent } from './components/ids-tag/ids-tag.component';
-import { IdsTooltipComponent } from './components/ids-tooltip/ids-tooltip.component';
+// import { IdsTooltipComponent } from './components/ids-tooltip/ids-tooltip.component';
 
 import { IdsAccordionComponent } from './components/ids-accordion/ids-accordion.component';
-import { IdsAccordionLpComponent } from './components/ids-accordion/ids-accordion-lp/ids-accordion-lp.component';
+import { IdsAccordionLandingComponent } from './components/ids-accordion/ids-accordion-landing/ids-accordion-landing.component';
 import { IdsAccordionExampleComponent } from './components/ids-accordion/demos/ids-accordion-example/ids-accordion-example.component';
 import { IdsAccordionIconComponent } from './components/ids-accordion/demos/ids-accordion-icon/ids-accordion-icon.component';
 import { IdsAccordionDisabledComponent } from './components/ids-accordion/demos/ids-accordion-disabled/ids-accordion-disabled.component';
@@ -45,6 +35,21 @@ import { IdsDatePickerExampleComponent } from './components/ids-date-picker/demo
 
 import { IdsColorPickerComponent } from './components/ids-color-picker/ids-color-picker.component';
 import { IdsColorPickerExampleComponent } from './components/ids-color-picker/demos/ids-color-picker-example/ids-color-picker-example.component';
+
+import { IdsColorPickerAxeComponent } from './components/ids-color-picker/demos/ids-color-picker-axe/ids-color-picker-axe.component';
+import { IdsColorPickerExampleSizesComponent } from './components/ids-color-picker/demos/ids-color-picker-example-sizes/ids-color-picker-example-sizes.component';
+
+import { IdsCheckboxGroupComponent } from './components/ids-checkbox-group/ids-checkbox-group.component';
+import { IdsCheckboxGroupExampleComponent } from './components/ids-checkbox-group/demos/ids-checkbox-group-example/ids-checkbox-group-example.component';
+
+import { IdsLookupComponent } from './components/ids-lookup/ids-lookup.component';
+import { IdsLookupExampleComponent } from './components/ids-lookup/demos/ids-lookup-example/ids-lookup-example.component';
+
+import { IdsEditorComponent } from './components/ids-editor/ids-editor.component';
+import { IdsEditorExampleComponent } from './components/ids-editor/demos/ids-editor-example/ids-editor-example.component';
+
+import { IdsInputComponent } from './components/ids-input/ids-input.component';
+import { IdsInputExampleComponent } from './components/ids-input/demos/ids-input-example/ids-input-example.component';
 
 export const routes: Routes = [
   {
@@ -83,7 +88,7 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: IdsAccordionLpComponent
+        component: IdsAccordionLandingComponent
       },
       { 
         path: 'example', 
@@ -360,16 +365,7 @@ export const routes: Routes = [
         }
       }
     ]
-  },
-  {
-    path: 'ids-tooltip',
-    component: IdsTooltipComponent,
-    data: {
-      title: 'IDS Tooltip',
-      category: 'Layouts',
-      description: 'A container for buttons'
-    }
-  },
+  }
 ];
 
 @NgModule({

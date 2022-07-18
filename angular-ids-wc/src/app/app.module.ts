@@ -15,7 +15,7 @@ import { IdsAccordionExampleComponent } from './components/ids-accordion/demos/i
 import { IdsAccordionDisabledComponent } from './components/ids-accordion/demos/ids-accordion-disabled/ids-accordion-disabled.component';
 import { IdsAccordionIconComponent } from './components/ids-accordion/demos/ids-accordion-icon/ids-accordion-icon.component';
 import { IdsAccordionNestedComponent } from './components/ids-accordion/demos/ids-accordion-nested/ids-accordion-nested.component';
-import { IdsAccordionLpComponent } from './components/ids-accordion/ids-accordion-lp/ids-accordion-lp.component';
+import { IdsAccordionLandingComponent } from './components/ids-accordion/ids-accordion-landing/ids-accordion-landing.component';
 import { IdsAlertComponent } from './components/ids-alert/ids-alert.component';
 import { IdsAlertExampleComponent } from './components/ids-alert/demos/ids-alert-example/ids-alert-example.component';
 import { IdsCheckboxComponent } from './components/ids-checkbox/ids-checkbox.component';
@@ -58,7 +58,7 @@ import { IdsColorPickerAxeComponent } from './components/ids-color-picker/demos/
     IdsAccordionDisabledComponent,
     IdsAccordionIconComponent,
     IdsAccordionNestedComponent,
-    IdsAccordionLpComponent,
+    IdsAccordionLandingComponent,
     IdsAlertComponent,
     IdsAlertExampleComponent,
     IdsCheckboxComponent,

@@ -3,8 +3,15 @@
     <ids-text font-size="20" type="h1">Ids Accordion Examples</ids-text>
   </ids-layout-grid-cell>
 </ids-layout-grid>
+
 <ids-layout-grid cols="2" gap="md">
   <ids-layout-grid-cell>
     <ids-data-grid #exampleDatagrid list-style="true"></ids-data-grid>
   </ids-layout-grid-cell>
 </ids-layout-grid>
+
+<ul>
+  <li *ngFor="let child of children">
+    <a routerLink="{{child.path}}">{{child.data.title}}</a>
+  </li>
+</ul>
