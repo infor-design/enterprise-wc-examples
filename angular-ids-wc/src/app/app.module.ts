@@ -10,7 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { IdsSwaplistComponent } from './components/ids-swaplist/ids-swaplist.component';
 import { IdsTagComponent } from './components/ids-tag/ids-tag.component';
 import { IdsAccordionComponent } from './components/ids-accordion/ids-accordion.component';
-import { IdsTooltipComponent } from './components/ids-tooltip/ids-tooltip.component';
+// import { IdsTooltipComponent } from './components/ids-tooltip/ids-tooltip.component';
 import { IdsAccordionExampleComponent } from './components/ids-accordion/demos/ids-accordion-example/ids-accordion-example.component';
 import { IdsAccordionDisabledComponent } from './components/ids-accordion/demos/ids-accordion-disabled/ids-accordion-disabled.component';
 import { IdsAccordionIconComponent } from './components/ids-accordion/demos/ids-accordion-icon/ids-accordion-icon.component';
@@ -52,7 +52,7 @@ import { IdsColorPickerAxeComponent } from './components/ids-color-picker/demos/
     IdsSwaplistComponent,
     HomeComponent, 
     IdsTagComponent,
-    IdsTooltipComponent,
+    // IdsTooltipComponent,
     IdsAccordionComponent,
     IdsAccordionExampleComponent,
     IdsAccordionDisabledComponent,

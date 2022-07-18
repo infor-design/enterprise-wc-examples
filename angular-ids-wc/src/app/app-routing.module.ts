@@ -365,6 +365,15 @@ export const routes: Routes = [
         }
       }
     ]
+  },
+  { 
+    path: 'ids-mask', 
+    loadChildren: () => import('./components/ids-mask/ids-mask.module').then(m => m.IdsMaskModule),
+    data: {
+      title: 'IDS Mask',
+      category: 'Form Inputs',
+      description: 'Lookup Element'
+    },
   }
 ];
 
