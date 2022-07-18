@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IdsAccordionExampleComponent } from './ids-accordion-example.component';
+import { ExampleComponent } from './example.component';
 
 describe('ExampleComponent', () => {
-  let component: IdsAccordionExampleComponent;
-  let fixture: ComponentFixture<IdsAccordionExampleComponent>;
+  let component: ExampleComponent;
+  let fixture: ComponentFixture<ExampleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IdsAccordionExampleComponent ]
+      declarations: [ ExampleComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(IdsAccordionExampleComponent);
+    fixture = TestBed.createComponent(ExampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

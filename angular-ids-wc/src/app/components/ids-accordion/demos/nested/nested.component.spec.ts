@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IdsAccordionLpComponent } from './ids-accordion-lp.component';
+import { NestedComponent } from './nested.component';
 
-describe('IdsAccordionLpComponent', () => {
-  let component: IdsAccordionLpComponent;
-  let fixture: ComponentFixture<IdsAccordionLpComponent>;
+describe('NestedComponent', () => {
+  let component: NestedComponent;
+  let fixture: ComponentFixture<NestedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IdsAccordionLpComponent ]
+      declarations: [ NestedComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(IdsAccordionLpComponent);
+    fixture = TestBed.createComponent(NestedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
