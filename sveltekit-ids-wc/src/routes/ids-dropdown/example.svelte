@@ -1,8 +1,17 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { writable } from 'svelte/store';
+  import type { Writable } from 'svelte/store';
+
+  let ajaxItems: Writable<Array<{ id: string, name: string }>> = writable([]);
 
   onMount(async (): Promise<void> => {
     await import('ids-enterprise-wc/components/ids-dropdown/ids-dropdown');
+
+    // Populates the AJAX Dropdown
+    const res = await fetch('/data/states');
+    const json = await res.json();
+    $ajaxItems = json;
   });
 </script>
 
@@ -59,6 +68,97 @@
         <ids-list-box-option id="wv" value="wv">West Virginia</ids-list-box-option>
         <ids-list-box-option id="wi" value="wi">Wisconsin</ids-list-box-option>
         <ids-list-box-option id="wy" value="wy">Wyoming</ids-list-box-option>
+      </ids-list-box>
+    </ids-dropdown>
+
+    <ids-dropdown id="dropdown-2" readonly="true" label="Readonly Dropdown" value="opt3">
+      <ids-list-box>
+        <ids-list-box-option value="opt1" id="opt1-d2">Option One</ids-list-box-option>
+        <ids-list-box-option value="opt2" id="opt2-d2">Option Two</ids-list-box-option>
+        <ids-list-box-option value="opt3" id="opt3-d2">Option Three</ids-list-box-option>
+        <ids-list-box-option value="opt4" id="opt4-d2">Option Four</ids-list-box-option>
+        <ids-list-box-option value="opt5" id="opt5-d2">Option Five</ids-list-box-option>
+        <ids-list-box-option value="opt6" id="opt6-d2">Option Six</ids-list-box-option>
+      </ids-list-box>
+    </ids-dropdown>
+
+    <ids-dropdown id="dropdown-3" disabled="true" label="Disabled Dropdown" value="opt4">
+      <ids-list-box>
+        <ids-list-box-option value="opt1" id="opt1-d3">Option One</ids-list-box-option>
+        <ids-list-box-option value="opt2" id="opt2-d3">Option Two</ids-list-box-option>
+        <ids-list-box-option value="opt3" id="opt3-d3">Option Three</ids-list-box-option>
+        <ids-list-box-option value="opt4" id="opt4-d3">Option Four</ids-list-box-option>
+        <ids-list-box-option value="opt5" id="opt5-d3">Option Five</ids-list-box-option>
+        <ids-list-box-option value="opt6" id="opt6-d3">Option Six</ids-list-box-option>
+      </ids-list-box>
+    </ids-dropdown>
+
+    <ids-dropdown id="dropdown-4" label="Required Dropdown" value="opt1" validate="required">
+      <ids-list-box>
+        <ids-list-box-option value="blank" id="blank" aria-label="Blank"></ids-list-box-option>
+        <ids-list-box-option value="opt1" id="opt1-d4">Option One</ids-list-box-option>
+        <ids-list-box-option value="opt2" id="opt2-d4">Option Two</ids-list-box-option>
+        <ids-list-box-option value="opt3" id="opt3-d4">Option Three</ids-list-box-option>
+        <ids-list-box-option value="opt4" id="opt4-d4">Option Four</ids-list-box-option>
+        <ids-list-box-option value="opt5" id="opt5-d4">Option Five</ids-list-box-option>
+        <ids-list-box-option value="opt6" id="opt6-d4">Option Six</ids-list-box-option>
+      </ids-list-box>
+    </ids-dropdown>
+
+    <ids-dropdown id="dropdown-5" label="Dropdown with Icons" value="opt2">
+      <ids-list-box>
+        <ids-list-box-option value="opt1" id="opt1-d5">
+          <ids-icon icon="user-profile"></ids-icon>
+          <span>Option One</span>
+        </ids-list-box-option>
+        <ids-list-box-option value="opt2" id="opt2-d5">
+          <ids-icon icon="project"></ids-icon>
+          <span>Option Two</span>
+        </ids-list-box-option>
+        <ids-list-box-option value="opt3" id="opt3-d5">
+          <ids-icon icon="purchasing"></ids-icon>
+          <span>Option Three</span>
+        </ids-list-box-option>
+        <ids-list-box-option value="opt4" id="opt4-d5">
+          <ids-icon icon="quality"></ids-icon>
+          <span>Option Four</span></ids-list-box-option>
+        <ids-list-box-option value="opt5" id="opt5-d5">
+          <ids-icon icon="rocket"></ids-icon>
+          <span>Option Five</span>
+        </ids-list-box-option>
+        <ids-list-box-option value="opt6" id="opt6-d5">
+          <ids-icon icon="roles"></ids-icon>
+          <span>Option Six</span>
+        </ids-list-box-option>
+      </ids-list-box>
+    </ids-dropdown>
+
+    <ids-dropdown id="dropdown-6" label="Dropdown with Tooltips" tooltip="Additional Info" value="opt2">
+      <ids-list-box>
+        <ids-list-box-option value="opt1" id="opt1-d6" tooltip="Additional Info on Option One">Option One</ids-list-box-option>
+        <ids-list-box-option value="opt2" id="opt2-d6" tooltip="Additional Info on Option Two">Option Two</ids-list-box-option>
+        <ids-list-box-option value="opt3" id="opt3-d6" tooltip="Additional Info on Option Three">Option Three</ids-list-box-option>
+        <ids-list-box-option value="opt4" id="opt4-d6" tooltip="Additional Info on Option Four">Option Four</ids-list-box-option>
+        <ids-list-box-option value="opt5" id="opt5-d6" tooltip="Additional Info on Option Five">Option Five</ids-list-box-option>
+        <ids-list-box-option value="opt6" id="opt6-d6" tooltip="Additional Info on Option Six">Option Six</ids-list-box-option>
+      </ids-list-box>
+    </ids-dropdown>
+
+    <ids-dropdown id="dropdown-7" label="Dropdown Using Ajax" value="ak">
+      <ids-list-box>
+        {#each $ajaxItems as item}
+          <ids-list-box-option id={item.id} value={item.id}>{item.name}</ids-list-box-option>
+        {/each}
+      </ids-list-box>
+    </ids-dropdown>
+
+    <ids-dropdown id="dropdown-8" label="Dropdown with Allow Blank" allow-blank>
+      <ids-list-box>
+        <ids-list-box-option value="opt1" id="opt1-d8">
+          <span>Option One</span>
+        </ids-list-box-option>
+        <ids-list-box-option value="opt2" id="opt2-d8">
+          <span>Option Two</span>
       </ids-list-box>
     </ids-dropdown>
   </ids-layout-grid-cell>
