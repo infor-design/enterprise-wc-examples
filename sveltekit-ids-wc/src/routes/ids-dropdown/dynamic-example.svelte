@@ -6,7 +6,7 @@
   import IdsListBox from '../../components/ids-list-box/IdsListBox.svelte';
   import IdsListBoxOption from '../../components/ids-list-box/IdsListBoxOption.svelte';
 
-  let ref;
+  let ref: IdsDropdown;
 
   onMount(async () => {
     // Highlights "California" in the Listbox

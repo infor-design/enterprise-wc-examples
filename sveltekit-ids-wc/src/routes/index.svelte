@@ -56,6 +56,15 @@
       description: 'Displays a Popup Container'
     }
   );
+
+  // Typography
+  categories[7].components.push(
+    {
+      link: 'ids-hyperlink',
+      component: 'Hyperlink',
+      description: 'Linked text'
+    }
+  );
 </script>
 
 <ids-layout-grid auto="true" gap="md">
