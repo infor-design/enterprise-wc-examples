@@ -10,6 +10,7 @@ export class DisabledComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('disabled init')
   }
 
 }

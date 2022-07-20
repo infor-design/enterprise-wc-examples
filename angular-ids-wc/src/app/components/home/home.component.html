@@ -1,14 +1,21 @@
-<pre>{{routes | json}}</pre>
+<ids-layout-grid auto="true">
+  <ids-layout-grid-cell>
 
-<ids-block-grid>
-  <ids-block-grid-item *ngFor="let route of routes">
-    
-    <ids-card actionable="true" routerLink="{{route.path}}" target="_self" [attr.height]="100">
-      <div slot="card-content">
-        <ids-text font-size="16" type="h2" font-weight="bold">{{route.data.title}}</ids-text>
-        <ids-text font-size="16" type="p">{{route.data.description}}</ids-text>
-      </div>
-    </ids-card>
+    <ng-container *ngFor="let category of categories">
+      <ids-text font-size="24" type="h1">{{category.name}}</ids-text>
+      <ids-block-grid>
+        <ng-container *ngFor="let route of routes">
+          <ids-block-grid-item *ngIf="route.data.category === category.name">
+            <ids-card actionable="true" routerLink="{{route.path}}" target="_self" [attr.height]="100">
+              <div slot="card-content">
+                <ids-text font-size="16" type="h2" font-weight="bold">{{route.data.title}}</ids-text>
+                <ids-text font-size="16" type="p">{{route.data.description}}</ids-text>
+              </div>
+            </ids-card>
+          </ids-block-grid-item>
+        </ng-container>
+      </ids-block-grid>
+    </ng-container>
 
-  </ids-block-grid-item>
-</ids-block-grid>
+  </ids-layout-grid-cell>
+</ids-layout-grid>

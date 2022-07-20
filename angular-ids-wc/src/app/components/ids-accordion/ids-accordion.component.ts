@@ -10,6 +10,7 @@ export class IdsAccordionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('ids accordion init');
   }
 
 }

@@ -10,6 +10,7 @@ export class NestedComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('nested init');
   }
 
 }

@@ -1,3 +1,4 @@
+/* eslint-disable */
 const statesJSON = [
 	{
 		"value": "al",

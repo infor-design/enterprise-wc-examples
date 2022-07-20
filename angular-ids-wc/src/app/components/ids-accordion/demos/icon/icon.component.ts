@@ -10,6 +10,7 @@ export class IconComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('icon init');
   }
 
 }
