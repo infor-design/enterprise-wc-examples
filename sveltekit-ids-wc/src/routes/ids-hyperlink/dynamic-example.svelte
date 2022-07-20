@@ -17,7 +17,7 @@
 
   // Prevents any real navigation from occuring,
   // but logs the hyperlink's target URL if it's set
-  const handleClick = (e: CustomEvent): any => {
+  const handleClick = (e: MouseEvent): any => {
     e.preventDefault();
     const target = (e.target as unknown as IdsHyperLink);
 
