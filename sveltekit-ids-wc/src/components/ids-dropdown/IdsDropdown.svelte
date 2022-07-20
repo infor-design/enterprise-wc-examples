@@ -13,6 +13,11 @@
   });
 </script>
 
-<ids-dropdown {id} {label} dirty-tracker={dirtyTracker} {value}>
+<ids-dropdown
+  dirty-tracker={dirtyTracker}
+  {id}
+  {label}
+  {value}
+  on:change>
   <slot></slot>
 </ids-dropdown>

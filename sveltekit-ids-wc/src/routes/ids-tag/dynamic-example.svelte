@@ -6,14 +6,17 @@
 
   // Supporting Components
   import IdsCheckbox from '../../components/ids-checkbox/IdsCheckbox.svelte';
+  import IdsDropdown from '../../components/ids-dropdown/IdsDropdown.svelte';
   import IdsInput from '../../components/ids-input/IdsInput.svelte';
+  import IdsListBox from '../../components/ids-list-box/IdsListBox.svelte';
+  import IdsListBoxOption from '../../components/ids-list-box/IdsListBoxOption.svelte';
 
   // `refs/selectedId/currentTag/currentTagStoreRecord` handle the target
   // of the form controls (eitehr a new or existing tag)
   $: refs = [];
   export let selectedId = -1;
   export let currentTag: IdsTag;
-  export let currentTagRecord;
+  export let currentTagRecord: any;
 
   // Form Control Values
   export let text = 'This is a tag';
@@ -112,6 +115,10 @@
     updateStoreValue(e.target, 'dismissible')
   }
 
+  const handleTagColorChange = (e: Event) => {
+    updateStoreValue(e.target, 'color');
+  }
+
   // Makes the "Deselect" button in the template disabled/enabled based on whether or not a tag is selected
   $: hasNoCurrentTag = currentTag === undefined;
 
@@ -178,12 +185,13 @@
       </p>
 
       <p>
-        <label class="ids-text-14" for="style">Normal Dropdown with Dirty Tracker</label>
-        <select id="style" bind:value="{color}" on:change={(e) => updateStoreValue(e.target, 'color')}>
-          {#each TAG_COLORS as option}
-            <option id="color-{dashCase(option.name)}" value={option.value}>{option.name}</option>
-          {/each}
-        </select>
+        <IdsDropdown id="style" bind:value={color} on:change={handleTagColorChange} label="Tag Color">
+          <IdsListBox>
+            {#each TAG_COLORS as option}
+              <IdsListBoxOption id="color-{dashCase(option.name)}" value={option.value}>{option.name}</IdsListBoxOption>
+            {/each}
+          </IdsListBox>
+        </IdsDropdown>
       </p>
 
       <p>
