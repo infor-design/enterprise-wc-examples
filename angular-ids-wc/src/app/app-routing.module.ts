@@ -380,6 +380,42 @@ export const routes: Routes = [
       description: 'Upload multiple files'
     },
   },
+  { 
+    path: 'ids-toggle-button',
+    loadChildren: () => import('./components/ids-toggle-button/ids-toggle-button.module').then(m => m.IdsToggleButtonModule),
+    data: {
+      title: 'IDS Toggle Button',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-tree',
+    loadChildren: () => import('./components/ids-tree/ids-tree.module').then(m => m.IdsTreeModule),
+    data: {
+      title: 'IDS Tree',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-virtual-scroll',
+    loadChildren: () => import('./components/ids-virtual-scroll/ids-virtual-scroll.module').then(m => m.IdsVirtualScrollModule),
+    data: {
+      title: 'IDS Virtual Scroll',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-wizard',
+    loadChildren: () => import('./components/ids-wizard/ids-wizard.module').then(m => m.IdsWizardModule),
+    data: {
+      title: 'IDS Wizard',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
 ];
 
 @NgModule({
