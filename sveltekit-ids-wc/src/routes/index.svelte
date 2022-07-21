@@ -26,6 +26,11 @@
       link: 'ids-input',
       component: 'Input',
       description: 'Input element and features'
+    },
+    {
+      link: 'ids-mask',
+      component: 'Mask',
+      description: 'Util for masking input'
     }
   );
   

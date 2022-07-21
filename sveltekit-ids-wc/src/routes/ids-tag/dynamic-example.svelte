@@ -3,6 +3,7 @@
   import IdsTag from '../../components/ids-tag/IdsTag.svelte';
   import TAG_COLORS from '../../components/ids-tag/colors';
   import { writableTagArray } from './dynamic-example.stores';
+  import { dashCase, prettyFormat } from '../../utils/string';
 
   // Supporting Components
   import IdsCheckbox from '../../components/ids-checkbox/IdsCheckbox.svelte';
@@ -23,10 +24,6 @@
   export let color = TAG_COLORS[0].value;
   export let dismissible = true;
   export let clickable = true;
-
-  const dashCase = (val = '') => {
-    return val.toLowerCase().split(' ').join('-');
-  };
 
   // Adds the contents of the form as a new entry in the writable store.
   // This is automatically updated as new tag in the template below (see $writableTagArray) 
@@ -64,9 +61,6 @@
     writableTagArray.reset();
     refs = [];
   }
-
-  // Allows pretty-looking data formatting in the template
-  const prettyFormat = (str: string) => JSON.stringify( str, null, 2 );
 
   // Listens for the Svelte "Component Event" dispatched by the dynamic `<IdsTag>` svelte component
   const onBeforeTagRemove = (e) => {
