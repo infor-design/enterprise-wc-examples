@@ -10,6 +10,7 @@ export class IdsInputComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('example init');
   }
 
 }

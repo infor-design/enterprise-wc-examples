@@ -245,6 +245,141 @@ export const routes: Routes = [
       description: 'Upload multiple files'
     },
   },
+  { 
+    path: 'ids-action-sheet', 
+    loadChildren: () => import('./components/ids-action-sheet/ids-action-sheet.module').then(m => m.IdsActionSheetModule),
+    data: {
+      title: 'IDS Action Sheet',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-app-menu', 
+    loadChildren: () => import('./components/ids-app-menu/ids-app-menu.module').then(m => m.IdsAppMenuModule),
+    data: {
+      title: 'IDS App Menu',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-badge', 
+    loadChildren: () => import('./components/ids-badge/ids-badge.module').then(m => m.IdsBadgeModule),
+    data: {
+      title: 'IDS Badge',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-breadcrumb',
+    loadChildren: () => import('./components/ids-breadcrumb/ids-breadcrumb.module').then(m => m.IdsBreadcrumbModule),
+    data: {
+      title: 'IDS Breadcrumb',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-button',
+    loadChildren: () => import('./components/ids-button/ids-button.module').then(m => m.IdsButtonModule),
+    data: {
+      title: 'IDS Button',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-loading-indicator', 
+    loadChildren: () => import('./components/ids-loading-indicator/ids-loading-indicator.module').then(m => m.IdsLoadingIndicatorModule),
+    data: {
+      title: 'IDS Loading Indicator',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-menu',
+    loadChildren: () => import('./components/ids-menu/ids-menu.module').then(m => m.IdsMenuModule),
+    data: {
+      title: 'IDS Menu',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  {
+    path: 'ids-menu-button',
+    loadChildren: () => import('./components/ids-menu-button/ids-menu-button.module').then(m => m.IdsMenuButtonModule),
+    data: {
+      title: 'IDS Menu Button',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-modal',
+    loadChildren: () => import('./components/ids-modal/ids-modal.module').then(m => m.IdsModalModule),
+    data: {
+      title: 'IDS Modal',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-pager',
+    loadChildren: () => import('./components/ids-pager/ids-pager.module').then(m => m.IdsPagerModule),
+    data: {
+      title: 'IDS Pager',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-popup-menu',
+    loadChildren: () => import('./components/ids-popup-menu/ids-popup-menu.module').then(m => m.IdsPopupMenuModule),
+    data: {
+      title: 'IDS Popup Menu',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-scroll-view',
+    loadChildren: () => import('./components/ids-scroll-view/ids-scroll-view.module').then(m => m.IdsScrollViewModule),
+    data: {
+      title: 'IDS Scroll View',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-skip-link',
+    loadChildren: () => import('./components/ids-skip-link/ids-skip-link.module').then(m => m.IdsSkipLinkModule),
+    data: {
+      title: 'IDS Skip Link',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-tabs', 
+    loadChildren: () => import('./components/ids-tabs/ids-tabs.module').then(m => m.IdsTabModule),
+    data: {
+      title: 'IDS Tabs',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-theme-switcher', 
+    loadChildren: () => import('./components/ids-theme-switcher/ids-theme-switcher.module').then(m => m.IdsThemeSwitcherModule),
+    data: {
+      title: 'IDS Theme Switcher',
+      category: 'Navigation and Interaction',
+      description: 'Upload multiple files'
+    },
+  },
 ];
 
 @NgModule({

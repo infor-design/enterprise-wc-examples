@@ -6,7 +6,7 @@ import IdsButton from 'ids-enterprise-wc/components/ids-button/ids-button';
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })
-export class ExampleComponent implements AfterViewInit {
+export class ExampleComponent implements AfterViewInit, OnDestroy {
   @ViewChild('triggerButton', { read: ElementRef }) triggerButton: IdsButton;
   visible = false;
 

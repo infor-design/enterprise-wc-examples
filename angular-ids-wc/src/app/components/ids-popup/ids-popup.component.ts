@@ -10,6 +10,7 @@ export class IdsPopupComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('IdsPopup init');
   }
 
 }
