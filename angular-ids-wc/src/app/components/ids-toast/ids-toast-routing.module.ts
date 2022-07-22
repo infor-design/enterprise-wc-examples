@@ -1,27 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { IdsTooltipComponent } from './ids-tooltip.component';
+import { IdsToastComponent } from './ids-toast.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
-import { PerformanceComponent } from './demos/performance/performance.component';
 
 const routes: Routes = [
   { 
     path: '', 
-    component: IdsTooltipComponent 
+    component: IdsToastComponent 
   },
-  { 
-    path: 'example', 
+  {
+    path: 'example',
     component: ExampleComponent
   },
-  { 
-    path: 'sandbox', 
+  {
+    path: 'sandbox',
     component: SandboxComponent
-  },
-  { 
-    path: 'performance', 
-    component: PerformanceComponent
   }
 ];
 
@@ -29,4 +24,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class IdsTooltipRoutingModule { }
+export class IdsToastRoutingModule { }

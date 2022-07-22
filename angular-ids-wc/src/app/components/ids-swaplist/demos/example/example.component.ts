@@ -7,7 +7,7 @@ import IdsSwapList from 'ids-enterprise-wc/components/ids-swaplist/ids-swaplist.
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements AfterViewInit {
-  @ViewChild('mySwaplist') swaplist: IdsSwapList;
+  @ViewChild('mySwaplist', { read: ElementRef }) swaplist: IdsSwapList;
 
   public periods = [
     {
@@ -63,7 +63,10 @@ export class ExampleComponent implements AfterViewInit {
 
   setSwaplistData() {
     this.swaplist.nativeElement.defaultTemplate = '<ids-swappable-item><ids-text>${city}</ids-text></ids-swappable-item>';
-    this.swaplist.nativeElement.data = this.periods;
+    
+    setTimeout(() => {
+      this.swaplist.nativeElement.data = this.periods;
+    })
   }
 
   handleClick(e) {

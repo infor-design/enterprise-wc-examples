@@ -470,6 +470,24 @@ export const routes: Routes = [
       description: 'Upload multiple files'
     },
   },
+  { 
+    path: 'ids-progress-bar',
+    loadChildren: () => import('./components/ids-progress-bar/ids-progress-bar.module').then(m => m.IdsProgressBarModule),
+    data: {
+      title: 'IDS Progress Bar',
+      category: 'Messages and Alerts',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-toast',
+    loadChildren: () => import('./components/ids-toast/ids-toast.module').then(m => m.IdsToastModule),
+    data: {
+      title: 'IDS Toast',
+      category: 'Messages and Alerts',
+      description: 'Upload multiple files'
+    },
+  },
 ];
 
 @NgModule({
