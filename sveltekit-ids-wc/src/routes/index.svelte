@@ -42,6 +42,11 @@
       description: 'Simple HTMLButtonElement'
     },
     {
+      link: 'ids-modal',
+      component: 'Modal',
+      description: 'Displays a Modal Dialog'
+    },
+    {
       link: 'ids-tag',
       component: 'Tag',
       description: 'UI Classification'
@@ -68,6 +73,11 @@
       link: 'ids-hyperlink',
       component: 'Hyperlink',
       description: 'Linked text'
+    },
+    {
+      link: 'ids-text',
+      component: 'Text',
+      description: 'An element for plain text'
     }
   );
 </script>
