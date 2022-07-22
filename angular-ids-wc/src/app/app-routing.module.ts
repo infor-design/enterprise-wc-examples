@@ -416,6 +416,60 @@ export const routes: Routes = [
       description: 'Upload multiple files'
     },
   },
+  { 
+    path: 'ids-about',
+    loadChildren: () => import('./components/ids-about/ids-about.module').then(m => m.IdsAboutModule),
+    data: {
+      title: 'IDS About',
+      category: 'Messages and Alerts',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-empty-message',
+    loadChildren: () => import('./components/ids-empty-message/ids-empty-message.module').then(m => m.IdsEmptyMessageModule),
+    data: {
+      title: 'IDS Empty Message',
+      category: 'Messages and Alerts',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-error-page',
+    loadChildren: () => import('./components/ids-error-page/ids-error-page.module').then(m => m.IdsErrorPageModule),
+    data: {
+      title: 'IDS Error Page',
+      category: 'Messages and Alerts',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-icon',
+    loadChildren: () => import('./components/ids-icon/ids-icon.module').then(m => m.IdsIconModule),
+    data: {
+      title: 'IDS Icon',
+      category: 'Messages and Alerts',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-message', 
+    loadChildren: () => import('./components/ids-message/ids-message.module').then(m => m.IdsMessageModule),
+    data: {
+      title: 'IDS Message',
+      category: 'Messages and Alerts',
+      description: 'Upload multiple files'
+    },
+  },
+  { 
+    path: 'ids-notification-banner',
+    loadChildren: () => import('./components/ids-notification-banner/ids-notification-banner.module').then(m => m.IdsNotificationBannerModule),
+    data: {
+      title: 'IDS Notification Banner',
+      category: 'Messages and Alerts',
+      description: 'Upload multiple files'
+    },
+  },
 ];
 
 @NgModule({
