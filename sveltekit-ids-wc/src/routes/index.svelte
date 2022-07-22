@@ -53,6 +53,22 @@
     }
   );
 
+  // Messages and Alerts
+  /*
+  categories[2].components.push(
+    {}
+  );
+  */
+
+  // Lists
+  categories[3].components.push(
+    {
+      link: 'ids-swaplist',
+      component: 'SwapList',
+      description: 'Displays Swaplist Component'
+    }
+  );
+
   // Layouts
   categories[4].components.push(
     {
@@ -66,6 +82,20 @@
       description: 'Displays a Popup Container'
     }
   );
+
+  // Patterns
+  /*
+  categories[5].components.push(
+    {}
+  );
+  */
+
+  // Charts and Visualizations
+  /*
+  categories[6].components.push(
+    {}
+  );
+  */
 
   // Typography
   categories[7].components.push(
