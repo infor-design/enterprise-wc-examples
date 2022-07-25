@@ -12,15 +12,18 @@ export class ExampleComponent implements AfterViewInit, OnDestroy {
 
   constructor() { }
 
-  ngAfterViewInit(): void {    
-    this.triggerButton.nativeElement.addEventListener('click', this.handleVisible.bind(this));
+  ngAfterViewInit(): void {
+    console.log('popup afterViewInit');
+    // this.triggerButton.nativeElement.addEventListener('click', this.handleVisible.bind(this));
   }
 
-  handleVisible() {
+  handleVisible(e: Event) {
+    console.log(e);
     this.visible = !this.visible;
   }
 
   ngOnDestroy() {
-    this.triggerButton.nativeElement.removeEventListener('click', this.handleVisible.bind(this))
+    console.log('popup destroy');
+    // this.triggerButton.nativeElement.removeEventListener('click', this.handleVisible.bind(this))
   }
 }

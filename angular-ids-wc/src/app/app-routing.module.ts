@@ -497,6 +497,15 @@ export const routes: Routes = [
       description: 'Upload multiple files'
     },
   },
+  { 
+    path: 'ids-list-view',
+    loadChildren: () => import('./components/ids-list-view/ids-list-view.module').then(m => m.IdsListViewModule),
+    data: {
+      title: 'IDS List View',
+      category: 'Lists',
+      description: 'Upload multiple files'
+    },
+  },
 ];
 
 @NgModule({
