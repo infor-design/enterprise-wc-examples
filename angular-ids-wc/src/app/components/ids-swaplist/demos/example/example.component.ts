@@ -63,10 +63,7 @@ export class ExampleComponent implements AfterViewInit {
 
   setSwaplistData() {
     this.swaplist.nativeElement.defaultTemplate = '<ids-swappable-item><ids-text>${city}</ids-text></ids-swappable-item>';
-    
-    setTimeout(() => {
-      this.swaplist.nativeElement.data = this.periods;
-    })
+    this.swaplist.nativeElement.data = this.periods;
   }
 
   handleClick(e) {

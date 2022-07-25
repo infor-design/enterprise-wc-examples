@@ -488,6 +488,15 @@ export const routes: Routes = [
       description: 'Upload multiple files'
     },
   },
+  { 
+    path: 'ids-list-builder', 
+    loadChildren: () => import('./components/ids-list-builder/ids-list-builder.module').then(m => m.IdsListBuilderModule),
+    data: {
+      title: 'IDS List Builder',
+      category: 'Lists',
+      description: 'Upload multiple files'
+    },
+  },
 ];
 
 @NgModule({

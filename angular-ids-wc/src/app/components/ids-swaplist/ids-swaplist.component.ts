@@ -10,6 +10,7 @@ export class IdsSwaplistComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('IDS Swaplist init');
   }
 
 }

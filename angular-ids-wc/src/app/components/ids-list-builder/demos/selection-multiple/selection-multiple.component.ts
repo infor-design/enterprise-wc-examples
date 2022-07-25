@@ -1,0 +1,20 @@
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import bikesJSON from '../../../../assets/data/bikes.js';
+import IdsListBuilder from 'ids-enterprise-wc/components/ids-list-builder/ids-list-builder.js'
+
+@Component({
+  selector: 'app-selection-multiple',
+  templateUrl: './selection-multiple.component.html',
+  styleUrls: ['./selection-multiple.component.css']
+})
+export class SelectionMultipleComponent implements AfterViewInit {
+  @ViewChild('listBuilder', { read: ElementRef }) listBuilder: IdsListBuilder;
+
+  constructor() { }
+
+  ngAfterViewInit(): void {
+    this.listBuilder.nativeElement.defaultTemplate = '<ids-text font-size="16" type="span">${manufacturerName}</ids-text>';
+    this.listBuilder.nativeElement.data = bikesJSON;
+  }
+
+}
