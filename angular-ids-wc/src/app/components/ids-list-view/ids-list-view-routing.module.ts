@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IdsListViewComponent } from './ids-list-view.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SelectableSingleComponent } from './demos/selectable-single/selectable-single.component';
+import { SelectableMultipleComponent } from './demos/selectable-multiple/selectable-multiple.component';
 
 const routes: Routes = [
   { 
@@ -17,6 +18,10 @@ const routes: Routes = [
   { 
     path: 'selectable-single',
     component: SelectableSingleComponent
+  },
+  { 
+    path: 'selectable-multiple',
+    component: SelectableMultipleComponent
   }
 ];
 
