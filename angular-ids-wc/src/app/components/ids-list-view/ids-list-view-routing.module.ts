@@ -6,7 +6,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { SelectableSingleComponent } from './demos/selectable-single/selectable-single.component';
 import { SelectableMultipleComponent } from './demos/selectable-multiple/selectable-multiple.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsListViewComponent 

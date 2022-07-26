@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IdsScrollViewComponent } from './ids-scroll-view.component';
 import { ExampleComponent } from './demos/example/example.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsScrollViewComponent 

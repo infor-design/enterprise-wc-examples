@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IdsRadioComponent } from './ids-radio.component';
 import { ExampleComponent } from './demos/example/example.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsRadioComponent 

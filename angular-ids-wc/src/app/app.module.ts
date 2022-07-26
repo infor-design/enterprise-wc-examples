@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { ExampleTableComponent } from './components/example-table/example-table.component';
 
 @NgModule({
   imports:      [ 
@@ -14,7 +15,8 @@ import { HomeComponent } from './components/home/home.component';
   ],
   declarations: [ 
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ExampleTableComponent
   ],
   bootstrap:    [ AppComponent ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

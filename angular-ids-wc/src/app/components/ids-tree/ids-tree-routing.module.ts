@@ -6,7 +6,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { MultiSelectComponent } from './demos/multi-select/multi-select.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsTreeComponent

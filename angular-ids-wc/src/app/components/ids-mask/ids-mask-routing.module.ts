@@ -10,7 +10,7 @@ import { MaskAttributeComponent } from './demos/mask-attribute/mask-attribute.co
 import { NumberLeadingZerosComponent } from './demos/number-leading-zeros/number-leading-zeros.component';
 import { PrefixSuffixComponent } from './demos/prefix-suffix/prefix-suffix.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '', component: IdsMaskComponent
   },

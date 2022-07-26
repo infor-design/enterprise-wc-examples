@@ -8,7 +8,7 @@ import { FullsizeComponent } from './demos/fullsize/fullsize.component';
 import { KeepOpenComponent } from './demos/keep-open/keep-open.component';
 import { NestedComponent } from './demos/nested/nested.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsModalComponent

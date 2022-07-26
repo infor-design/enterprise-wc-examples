@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IdsVirtualScrollComponent } from './ids-virtual-scroll.component';
 import { ExampleComponent } from './demos/example/example.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsVirtualScrollComponent

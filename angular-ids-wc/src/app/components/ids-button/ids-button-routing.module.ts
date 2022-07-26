@@ -7,7 +7,7 @@ import { ResponsiveComponent } from './demos/responsive/responsive.component';
 import { TestFallbackSlotComponent } from './demos/test-fallback-slot/test-fallback-slot.component';
 import { PerformanceComponent } from './demos/performance/performance.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsButtonComponent

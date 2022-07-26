@@ -6,7 +6,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { LabelStateComponent } from './demos/label-state/label-state.component';
 import { TextSizesComponent } from './demos/text-sizes/text-sizes.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: IdsTriggerFieldComponent

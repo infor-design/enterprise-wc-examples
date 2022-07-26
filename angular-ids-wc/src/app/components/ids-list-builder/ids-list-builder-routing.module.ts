@@ -5,7 +5,7 @@ import { IdsListBuilderComponent } from './ids-list-builder.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SelectionMultipleComponent } from './demos/selection-multiple/selection-multiple.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '', 
     component: IdsListBuilderComponent

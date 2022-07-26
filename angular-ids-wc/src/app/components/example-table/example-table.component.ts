@@ -1,14 +1,14 @@
 import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { routes } from './ids-upload-routing.module';
+import { routes } from '../ids-accordion/ids-accordion-routing.module';
 import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid';
 
 @Component({
-  selector: 'app-ids-upload',
-  templateUrl: './ids-upload.component.html',
-  styleUrls: ['./ids-upload.component.css']
+  selector: 'app-example-table',
+  templateUrl: './example-table.component.html',
+  styleUrls: ['./example-table.component.css']
 })
-export class IdsUploadComponent implements AfterViewInit {
+export class ExampleTableComponent implements AfterViewInit {
   @ViewChild('table', { read: ElementRef }) table: IdsDataGrid;
   public routes = routes.filter(r => r.path !== '');
   public columns = [];

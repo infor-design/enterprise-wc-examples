@@ -6,7 +6,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { NotificationBadgeComponent } from './demos/notification-badge/notification-badge.component';
 import { VariantAlternateComponent } from './demos/variant-alternate/variant-alternate.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '', 
     component: IdsIconComponent

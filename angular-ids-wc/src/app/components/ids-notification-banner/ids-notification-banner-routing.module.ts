@@ -6,7 +6,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { CardComponent } from './demos/card/card.component';
 import { DynamicComponent } from './demos/dynamic/dynamic.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '', 
     component: IdsNotificationBannerComponent

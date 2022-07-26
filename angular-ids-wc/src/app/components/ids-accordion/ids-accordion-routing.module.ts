@@ -7,7 +7,7 @@ import { DisabledComponent } from './demos/disabled/disabled.component';
 import { IconComponent } from './demos/icon/icon.component';
 import { NestedComponent } from './demos/nested/nested.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '', 
     component: IdsAccordionComponent

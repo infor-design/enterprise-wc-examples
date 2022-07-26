@@ -7,7 +7,7 @@ import { TypesComponent } from './demos/types/types.component';
 import { OverlayOpacityComponent } from './demos/overlay-opacity/overlay-opacity.component';
 import { EventsComponent } from './demos/events/events.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsMessageComponent 

@@ -7,7 +7,7 @@ import { DataDrivenComponent } from './demos/data-driven/data-driven.component';
 import { SelectedStateComponent } from './demos/selected-state/selected-state.component';
 import { TriggerImmediateComponent } from './demos/trigger-immediate/trigger-immediate.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsPopupMenuComponent

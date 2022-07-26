@@ -10,7 +10,7 @@ import { ModuleComponent } from './demos/module/module.component';
 import { VerticalComponent } from './demos/vertical/vertical.component';
 import { SwappableComponent } from './demos/swappable/swappable.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '', 
     component: IdsTabsComponent

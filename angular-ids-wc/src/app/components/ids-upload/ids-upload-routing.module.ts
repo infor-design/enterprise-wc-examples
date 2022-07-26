@@ -5,7 +5,7 @@ import { IdsUploadComponent } from './ids-upload.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '', 
     component: IdsUploadComponent 

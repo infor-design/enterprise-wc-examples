@@ -5,7 +5,7 @@ import { IdsToggleButtonComponent } from './ids-toggle-button.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { IconAlignRightComponent } from './demos/icon-align-right/icon-align-right.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '', 
     component: IdsToggleButtonComponent

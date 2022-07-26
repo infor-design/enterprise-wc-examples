@@ -4,14 +4,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { IdsAboutComponent } from './ids-about.component';
 import { ExampleComponent } from './demos/example/example.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
-    component: IdsAboutComponent
+    component: IdsAboutComponent,
   },
   { 
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      name: 'Example',
+      type: 'Main Example',
+      description: 'Shows main example'
+    }
   }
 ];
 

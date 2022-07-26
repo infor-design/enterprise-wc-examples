@@ -6,7 +6,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { ExampleSizesComponent } from './demos/example-sizes/example-sizes.component';
 import { AxeComponent } from './demos/axe/axe.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '', 
     component: IdsColorPickerComponent 

@@ -6,7 +6,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { TruncatedComponent } from './demos/truncated/truncated.component';
 import { ToolbarComponent } from './demos/toolbar/toolbar.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsBreadcrumbComponent

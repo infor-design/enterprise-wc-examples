@@ -6,7 +6,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { DisabledComponent } from './demos/disabled/disabled.component';
 import { DisplaySelectedComponent } from './demos/display-selected/display-selected.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsMenuButtonComponent

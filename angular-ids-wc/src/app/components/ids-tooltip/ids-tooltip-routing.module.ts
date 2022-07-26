@@ -6,7 +6,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
 import { PerformanceComponent } from './demos/performance/performance.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '', 
     component: IdsTooltipComponent 

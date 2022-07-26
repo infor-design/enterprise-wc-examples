@@ -6,7 +6,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { ListComponent } from './demos/list/list.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsPagerComponent

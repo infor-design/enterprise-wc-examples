@@ -8,7 +8,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { SizesComponent } from './demos/sizes/sizes.component';
 import { OpenComponent } from './demos/open/open.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '', 
     component: IdsTimePickerComponent

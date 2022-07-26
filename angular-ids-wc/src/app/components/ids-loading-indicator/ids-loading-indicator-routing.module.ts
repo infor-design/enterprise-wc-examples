@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IdsLoadingIndicatorComponent } from './ids-loading-indicator.component';
 import { ExampleComponent } from './demos/example/example.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsLoadingIndicatorComponent

@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IdsCheckboxGroupComponent } from './ids-checkbox-group.component';
 import { ExampleComponent } from './demos/example/example.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { 
     path: '',
     component: IdsCheckboxGroupComponent 
