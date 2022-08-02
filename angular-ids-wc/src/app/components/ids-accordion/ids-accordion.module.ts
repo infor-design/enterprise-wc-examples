@@ -7,6 +7,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { DisabledComponent } from './demos/disabled/disabled.component';
 import { IconComponent } from './demos/icon/icon.component';
 import { NestedComponent } from './demos/nested/nested.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -15,11 +16,12 @@ import { NestedComponent } from './demos/nested/nested.component';
     ExampleComponent,
     DisabledComponent,
     IconComponent,
-    NestedComponent
+    NestedComponent,
   ],
   imports: [
     CommonModule,
-    IdsAccordionRoutingModule
+    IdsAccordionRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

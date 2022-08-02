@@ -9,10 +9,10 @@ import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-gri
 })
 export class DemoListingComponent implements AfterViewInit {
   @ViewChild('table', { read: ElementRef }) table: IdsDataGrid;
-  public columns = [];
   @Input() routes: any;
   @Input() title: any;
-
+  public columns = [];
+  
   constructor(
     public router: Router
   ) {}

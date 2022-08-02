@@ -14,7 +14,7 @@ export class IdsAboutComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit(): void {
-    console.log('after view init');
+    console.log('Ids About init');
   }
 
 }

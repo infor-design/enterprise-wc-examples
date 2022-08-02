@@ -4,18 +4,18 @@ import { CommonModule } from '@angular/common';
 import { IdsAboutRoutingModule } from './ids-about-routing.module';
 import { IdsAboutComponent } from './ids-about.component';
 import { ExampleComponent } from './demos/example/example.component';
-import { DemoListingComponent } from '../demo-listing/demo-listing.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
   declarations: [
     IdsAboutComponent,
     ExampleComponent,
-    DemoListingComponent
   ],
   imports: [
     CommonModule,
-    IdsAboutRoutingModule
+    IdsAboutRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
