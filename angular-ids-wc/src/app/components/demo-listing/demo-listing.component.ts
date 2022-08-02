@@ -1,21 +1,21 @@
-import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { routes } from '../ids-accordion/ids-accordion-routing.module';
 import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid';
 
 @Component({
-  selector: 'app-example-table',
-  templateUrl: './example-table.component.html',
-  styleUrls: ['./example-table.component.css']
+  selector: 'app-demo-listing',
+  templateUrl: './demo-listing.component.html',
+  styleUrls: ['./demo-listing.component.css']
 })
-export class ExampleTableComponent implements AfterViewInit {
+export class DemoListingComponent implements AfterViewInit {
   @ViewChild('table', { read: ElementRef }) table: IdsDataGrid;
-  public routes = routes.filter(r => r.path !== '');
   public columns = [];
+  @Input() routes: any;
+  @Input() title: any;
 
   constructor(
     public router: Router
-  ) { }
+  ) {}
 
   ngAfterViewInit(): void {
     this.columns.push({
