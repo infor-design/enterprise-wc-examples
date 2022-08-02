@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
-import IdsButton from 'ids-enterprise-wc/components/ids-button/ids-button';
 
 @Component({
   selector: 'app-example',
@@ -7,23 +6,19 @@ import IdsButton from 'ids-enterprise-wc/components/ids-button/ids-button';
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('triggerButton', { read: ElementRef }) triggerButton: IdsButton;
   visible = false;
 
   constructor() { }
 
   ngAfterViewInit(): void {
-    console.log('popup afterViewInit');
-    // this.triggerButton.nativeElement.addEventListener('click', this.handleVisible.bind(this));
+    console.log('popup AfterViewInit');
   }
 
-  handleVisible(e: Event) {
-    console.log(e);
+  handleVisible() {
     this.visible = !this.visible;
   }
 
   ngOnDestroy() {
-    console.log('popup destroy');
-    // this.triggerButton.nativeElement.removeEventListener('click', this.handleVisible.bind(this))
+    console.log('destroy triggerbutton event');
   }
 }
