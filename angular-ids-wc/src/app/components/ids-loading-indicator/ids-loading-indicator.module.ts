@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IdsLoadingIndicatorRoutingModule } from './ids-loading-indicator-routing.module';
 import { IdsLoadingIndicatorComponent } from './ids-loading-indicator.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ExampleComponent } from './demos/example/example.component';
   ],
   imports: [
     CommonModule,
-    IdsLoadingIndicatorRoutingModule
+    IdsLoadingIndicatorRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

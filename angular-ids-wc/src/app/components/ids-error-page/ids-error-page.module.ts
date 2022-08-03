@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IdsErrorPageRoutingModule } from './ids-error-page-routing.module';
 import { IdsErrorPageComponent } from './ids-error-page.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ExampleComponent } from './demos/example/example.component';
   ],
   imports: [
     CommonModule,
-    IdsErrorPageRoutingModule
+    IdsErrorPageRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

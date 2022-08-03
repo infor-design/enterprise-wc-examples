@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IdsTagRoutingModule } from './ids-tag-routing.module';
 import { IdsTagComponent } from './ids-tag.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ExampleComponent } from './demos/example/example.component';
   imports: [
     CommonModule,
     IdsTagRoutingModule,
-    FormsModule
+    FormsModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

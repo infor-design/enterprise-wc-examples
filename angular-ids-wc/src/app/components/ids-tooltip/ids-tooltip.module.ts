@@ -6,6 +6,7 @@ import { IdsTooltipComponent } from './ids-tooltip.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
 import { PerformanceComponent } from './demos/performance/performance.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PerformanceComponent } from './demos/performance/performance.component'
   ],
   imports: [
     CommonModule,
-    IdsTooltipRoutingModule
+    IdsTooltipRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

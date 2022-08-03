@@ -7,6 +7,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { TypesComponent } from './demos/types/types.component';
 import { OverlayOpacityComponent } from './demos/overlay-opacity/overlay-opacity.component';
 import { EventsComponent } from './demos/events/events.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { EventsComponent } from './demos/events/events.component';
   ],
   imports: [
     CommonModule,
-    IdsMessageRoutingModule
+    IdsMessageRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

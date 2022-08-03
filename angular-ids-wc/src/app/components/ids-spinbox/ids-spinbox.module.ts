@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IdsSpinboxRoutingModule } from './ids-spinbox-routing.module';
 import { IdsSpinboxComponent } from './ids-spinbox.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ExampleComponent } from './demos/example/example.component';
   ],
   imports: [
     CommonModule,
-    IdsSpinboxRoutingModule
+    IdsSpinboxRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

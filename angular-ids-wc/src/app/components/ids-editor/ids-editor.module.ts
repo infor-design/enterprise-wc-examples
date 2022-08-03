@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IdsEditorRoutingModule } from './ids-editor-routing.module';
 import { IdsEditorComponent } from './ids-editor.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ExampleComponent } from './demos/example/example.component';
   ],
   imports: [
     CommonModule,
-    IdsEditorRoutingModule
+    IdsEditorRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

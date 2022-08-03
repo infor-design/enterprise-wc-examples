@@ -5,6 +5,7 @@ import { IdsUploadRoutingModule } from './ids-upload-routing.module';
 import { IdsUploadComponent } from './ids-upload.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SandboxComponent } from './demos/sandbox/sandbox.component';
   ],
   imports: [
     CommonModule,
-    IdsUploadRoutingModule
+    IdsUploadRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

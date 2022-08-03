@@ -8,6 +8,7 @@ import { SizesComponent } from './demos/sizes/sizes.component';
 import { IntervalsComponent } from './demos/intervals/intervals.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
 import { OpenComponent } from './demos/open/open.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { OpenComponent } from './demos/open/open.component';
   ],
   imports: [
     CommonModule,
-    IdsTimePickerRoutingModule
+    IdsTimePickerRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

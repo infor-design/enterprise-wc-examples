@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IdsMenuRoutingModule } from './ids-menu-routing.module';
 import { IdsMenuComponent } from './ids-menu.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ExampleComponent } from './demos/example/example.component';
   ],
   imports: [
     CommonModule,
-    IdsMenuRoutingModule
+    IdsMenuRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

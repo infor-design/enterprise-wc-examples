@@ -6,6 +6,7 @@ import { IdsNotificationBannerComponent } from './ids-notification-banner.compon
 import { ExampleComponent } from './demos/example/example.component';
 import { DynamicComponent } from './demos/dynamic/dynamic.component';
 import { CardComponent } from './demos/card/card.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CardComponent } from './demos/card/card.component';
   ],
   imports: [
     CommonModule,
-    IdsNotificationBannerRoutingModule
+    IdsNotificationBannerRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

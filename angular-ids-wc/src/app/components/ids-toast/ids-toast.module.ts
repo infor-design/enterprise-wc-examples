@@ -5,6 +5,7 @@ import { IdsToastRoutingModule } from './ids-toast-routing.module';
 import { IdsToastComponent } from './ids-toast.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SandboxComponent } from './demos/sandbox/sandbox.component';
   ],
   imports: [
     CommonModule,
-    IdsToastRoutingModule
+    IdsToastRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

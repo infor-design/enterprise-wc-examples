@@ -14,20 +14,20 @@ export class ExampleComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const columns = [];
-    
+
     // Set up columns
     columns.push({
       id: 'selectionCheckbox',
       name: 'selection',
       sortable: false,
       resizable: false,
-      formatter: this.lookup1.nativeElement.dataGrid.formatters.selectionCheckbox,
+      formatter: this.lookup1.nativeElement.dataGrid?.formatters.selectionCheckbox,
       align: 'center'
     });
     columns.push({
       id: 'rowNumber',
       name: '#',
-      formatter: this.lookup1.nativeElement.dataGrid.formatters.rowNumber,
+      formatter: this.lookup1.nativeElement.dataGrid?.formatters.rowNumber,
       sortable: false,
       readonly: true,
       width: 65
@@ -37,26 +37,26 @@ export class ExampleComponent implements AfterViewInit {
       name: 'Description',
       field: 'description',
       sortable: true,
-      formatter: this.lookup1.nativeElement.dataGrid.formatters.text
+      formatter: this.lookup1.nativeElement.dataGrid?.formatters.text
     });
     columns.push({
       id: 'ledger',
       name: 'Ledger',
       field: 'ledger',
-      formatter: this.lookup1.nativeElement.dataGrid.formatters.text
+      formatter: this.lookup1.nativeElement.dataGrid?.formatters.text
     });
     columns.push({
       id: 'price',
       name: 'Price',
       field: 'price',
-      formatter: this.lookup1.nativeElement.dataGrid.formatters.decimal,
+      formatter: this.lookup1.nativeElement.dataGrid?.formatters.decimal,
       formatOptions: { locale: 'en-US' } // Data Values are in en-US
     });
     columns.push({
       id: 'bookCurrency',
       name: 'Currency',
       field: 'bookCurrency',
-      formatter: this.lookup1.nativeElement.dataGrid.formatters.text
+      formatter: this.lookup1.nativeElement.dataGrid?.formatters.text
     });
 
     console.log(booksJSON);

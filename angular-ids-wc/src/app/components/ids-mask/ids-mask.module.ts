@@ -10,6 +10,7 @@ import { LocalizedNumbersComponent } from './demos/localized-numbers/localized-n
 import { MaskAttributeComponent } from './demos/mask-attribute/mask-attribute.component';
 import { NumberLeadingZerosComponent } from './demos/number-leading-zeros/number-leading-zeros.component';
 import { PrefixSuffixComponent } from './demos/prefix-suffix/prefix-suffix.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { PrefixSuffixComponent } from './demos/prefix-suffix/prefix-suffix.compo
   imports: [
     CommonModule,
     IdsMaskRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

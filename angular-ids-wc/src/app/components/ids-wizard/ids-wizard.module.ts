@@ -5,6 +5,7 @@ import { IdsWizardRoutingModule } from './ids-wizard-routing.module';
 import { IdsWizardComponent } from './ids-wizard.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SandboxComponent } from './demos/sandbox/sandbox.component';
   ],
   imports: [
     CommonModule,
-    IdsWizardRoutingModule
+    IdsWizardRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

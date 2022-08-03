@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IdsDataLabelRoutingModule } from './ids-data-label-routing.module';
 import { IdsDataLabelComponent } from './ids-data-label.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ExampleComponent } from './demos/example/example.component';
   ],
   imports: [
     CommonModule,
-    IdsDataLabelRoutingModule
+    IdsDataLabelRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

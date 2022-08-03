@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IdsSwaplistRoutingModule } from './ids-swaplist-routing.module';
 import { IdsSwaplistComponent } from './ids-swaplist.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ExampleComponent } from './demos/example/example.component';
   ],
   imports: [
     CommonModule,
-    IdsSwaplistRoutingModule
+    IdsSwaplistRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

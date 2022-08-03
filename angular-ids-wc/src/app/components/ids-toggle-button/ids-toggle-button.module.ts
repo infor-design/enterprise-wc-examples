@@ -5,6 +5,7 @@ import { IdsToggleButtonRoutingModule } from './ids-toggle-button-routing.module
 import { IdsToggleButtonComponent } from './ids-toggle-button.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { IconAlignRightComponent } from './demos/icon-align-right/icon-align-right.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { IconAlignRightComponent } from './demos/icon-align-right/icon-align-rig
   ],
   imports: [
     CommonModule,
-    IdsToggleButtonRoutingModule
+    IdsToggleButtonRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

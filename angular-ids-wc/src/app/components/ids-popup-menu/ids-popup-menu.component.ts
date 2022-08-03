@@ -18,31 +18,7 @@ export class IdsPopupMenuComponent implements AfterViewInit {
   ) { }
 
   ngAfterViewInit(): void {
-    this.columns.push({
-      id: 'name',
-      name: 'Name',
-      field: 'path',
-      href: `${this.router.url}/{{value}}`,
-      sortable: true,
-      formatter: this.table.nativeElement.formatters.hyperlink
-    });
-    this.columns.push({
-      id: 'type',
-      name: 'Type',
-      field: 'data',
-      sortable: true,
-      formatter: this.table.nativeElement.formatters.text
-    });
-    this.columns.push({
-      id: 'description',
-      name: 'Description',
-      field: 'data',
-      sortable: true,
-      formatter: this.table.nativeElement.formatters.text
-    });
-
-    this.table.nativeElement.columns = this.columns;
-    this.table.nativeElement.data = this.routes;
+    console.log('Ids Popup init');
   }
 
 }

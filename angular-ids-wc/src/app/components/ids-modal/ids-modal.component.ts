@@ -1,7 +1,5 @@
-import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, AfterViewInit } from '@angular/core';
 import { routes } from './ids-modal-routing.module';
-import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid';
 
 @Component({
   selector: 'app-ids-modal',
@@ -9,40 +7,12 @@ import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-gri
   styleUrls: ['./ids-modal.component.css']
 })
 export class IdsModalComponent implements AfterViewInit {
-  @ViewChild('table', { read: ElementRef }) table: IdsDataGrid;
   public routes = routes.filter(r => r.path !== '');
-  public columns = [];
 
-  constructor(
-    public router: Router
-  ) { }
+  constructor() { }
 
   ngAfterViewInit(): void {
-    this.columns.push({
-      id: 'name',
-      name: 'Name',
-      field: 'path',
-      href: `${this.router.url}/{{value}}`,
-      sortable: true,
-      formatter: this.table.nativeElement.formatters.hyperlink
-    });
-    this.columns.push({
-      id: 'type',
-      name: 'Type',
-      field: 'data',
-      sortable: true,
-      formatter: this.table.nativeElement.formatters.text
-    });
-    this.columns.push({
-      id: 'description',
-      name: 'Description',
-      field: 'data',
-      sortable: true,
-      formatter: this.table.nativeElement.formatters.text
-    });
-
-    this.table.nativeElement.columns = this.columns;
-    this.table.nativeElement.data = this.routes;
+    console.log('Ids Modal init');
   }
 
 }

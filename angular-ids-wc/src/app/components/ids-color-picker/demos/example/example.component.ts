@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-example',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements OnInit {
+  @Input() routes: any;
+
+
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Ids Color Picker example init');
   }
 
 }

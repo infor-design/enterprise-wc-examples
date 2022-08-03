@@ -6,6 +6,7 @@ import { IdsIconComponent } from './ids-icon.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { NotificationBadgeComponent } from './demos/notification-badge/notification-badge.component';
 import { VariantAlternateComponent } from './demos/variant-alternate/variant-alternate.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { VariantAlternateComponent } from './demos/variant-alternate/variant-alt
   ],
   imports: [
     CommonModule,
-    IdsIconRoutingModule
+    IdsIconRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

@@ -8,6 +8,7 @@ import { ResponsiveComponent } from './demos/responsive/responsive.component';
 import { TestFallbackSlotComponent } from './demos/test-fallback-slot/test-fallback-slot.component';
 import { PerformanceComponent } from './demos/performance/performance.component';
 import { VariantAlternateComponent } from './demos/variant-alternate/variant-alternate.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { VariantAlternateComponent } from './demos/variant-alternate/variant-alt
   ],
   imports: [
     CommonModule,
-    IdsButtonRoutingModule
+    IdsButtonRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

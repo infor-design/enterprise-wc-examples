@@ -9,6 +9,7 @@ import { FullsizeComponent } from './demos/fullsize/fullsize.component';
 import { KeepOpenComponent } from './demos/keep-open/keep-open.component';
 import { NestedComponent } from './demos/nested/nested.component';
 import { VisibleComponent } from './demos/visible/visible.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { VisibleComponent } from './demos/visible/visible.component';
   ],
   imports: [
     CommonModule,
-    IdsModalRoutingModule
+    IdsModalRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

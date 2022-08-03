@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IdsCheckboxGroupRoutingModule } from './ids-checkbox-group-routing.module';
 import { IdsCheckboxGroupComponent } from './ids-checkbox-group.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ExampleComponent } from './demos/example/example.component';
   ],
   imports: [
     CommonModule,
-    IdsCheckboxGroupRoutingModule
+    IdsCheckboxGroupRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

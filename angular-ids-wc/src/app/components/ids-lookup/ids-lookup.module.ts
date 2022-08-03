@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IdsLookupRoutingModule } from './ids-lookup-routing.module';
 import { IdsLookupComponent } from './ids-lookup.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ExampleComponent } from './demos/example/example.component';
   ],
   imports: [
     CommonModule,
-    IdsLookupRoutingModule
+    IdsLookupRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

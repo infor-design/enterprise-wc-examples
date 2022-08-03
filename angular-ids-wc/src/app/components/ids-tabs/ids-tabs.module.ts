@@ -10,6 +10,7 @@ import { HeaderTabsComponent } from './demos/header-tabs/header-tabs.component';
 import { ModuleComponent } from './demos/module/module.component';
 import { VerticalComponent } from './demos/vertical/vertical.component';
 import { SwappableComponent } from './demos/swappable/swappable.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { SwappableComponent } from './demos/swappable/swappable.component';
   ],
   imports: [
     CommonModule,
-    IdsTabRoutingModule
+    IdsTabRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

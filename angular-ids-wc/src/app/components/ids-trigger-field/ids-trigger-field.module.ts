@@ -6,6 +6,7 @@ import { IdsTriggerFieldComponent } from './ids-trigger-field.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { LabelStateComponent } from './demos/label-state/label-state.component';
 import { TextSizesComponent } from './demos/text-sizes/text-sizes.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { TextSizesComponent } from './demos/text-sizes/text-sizes.component';
   ],
   imports: [
     CommonModule,
-    IdsTriggerFieldRoutingModule
+    IdsTriggerFieldRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

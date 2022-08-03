@@ -6,6 +6,7 @@ import { IdsBreadcrumbComponent } from './ids-breadcrumb.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { TruncatedComponent } from './demos/truncated/truncated.component';
 import { ToolbarComponent } from './demos/toolbar/toolbar.component';
+import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ToolbarComponent } from './demos/toolbar/toolbar.component';
   ],
   imports: [
     CommonModule,
-    IdsBreadcrumbRoutingModule
+    IdsBreadcrumbRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

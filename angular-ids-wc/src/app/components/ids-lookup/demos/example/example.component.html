@@ -4,8 +4,16 @@
 
 <ids-layout-grid auto="true">
   <ids-layout-grid-cell>
-    <!-- <ids-lookup #lookup1 id="lookup-1" label="Normal Lookup (dirty-tracker)" title="Select an Item" field="description" value="102,103" dirty-tracker="true"></ids-lookup> -->
-    <ids-lookup id="lookup-2" readonly="true" label="Readonly Lookup" value="102"></ids-lookup>
+    <ids-lookup 
+      #lookup1 
+      id="lookup-1" 
+      label="Normal Lookup (dirty-tracker)" 
+      title="Select an Item" 
+      field="description" 
+      value="102,103" 
+      dirty-tracker="true"
+    ></ids-lookup>
+    <!-- <ids-lookup id="lookup-2" readonly="true" label="Readonly Lookup" value="102"></ids-lookup>
     <ids-lookup id="lookup-3" disabled="true" label="Disabled Lookup" value="103"></ids-lookup>
     <ids-lookup id="lookup-4" label="Required Lookup" validate="required"></ids-lookup>
     <ids-lookup id="lookup-5" label="Custom Lookup">
@@ -23,6 +31,6 @@
       autocomplete
       field="description"
     >
-    </ids-lookup>
+    </ids-lookup> -->
   </ids-layout-grid-cell>
 </ids-layout-grid>
