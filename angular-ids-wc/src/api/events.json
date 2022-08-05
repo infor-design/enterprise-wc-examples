@@ -1,4 +1,4 @@
-const eventsJSON = [
+[
   {
     "id": "1",
     "subject": "Discretionary Time Off",
@@ -759,6 +759,4 @@ const eventsJSON = [
     "ends": "2020-09-23T09:00:00.000",
     "type": "dto"
   }
-];
-
-export default eventsJSON;
+]

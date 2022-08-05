@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import eventsJSON from '../../../../assets/data/events.js';
 import IdsListView from 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
+import eventsJSON from '../../../../../api/events.json';
 
 @Component({
   selector: 'app-example',

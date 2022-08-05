@@ -1,4 +1,4 @@
-const bikesJSON = [
+[
 	{"manufacturer":"1",	"manufacturerName":"Jamis Bicycles",			"inventoryValue":"2000000",		"customerSatisfaction":"1.25"},
 	{"manufacturer":"2",	"manufacturerName":"Trek Bicycle Corporation",	"inventoryValue":"16000000",	"customerSatisfaction":"0.30"},
 	{"manufacturer":"3",	"manufacturerName":"Santa Cruz",				"inventoryValue":"100000",		"customerSatisfaction":"0.60"},
@@ -19,6 +19,4 @@ const bikesJSON = [
 	{"manufacturer":"18",	"manufacturerName":"Specialized",				"inventoryValue":"3500000",		"customerSatisfaction":"0.37"},
 	{"manufacturer":"19",	"manufacturerName":"Yeti Cycles",				"inventoryValue":"300000",		"customerSatisfaction":"0.77"},
 	{"manufacturer":"20",	"manufacturerName":"Vitus",						"inventoryValue":"800000",		"customerSatisfaction":"0.21"}
-];
-
-export default bikesJSON;
+]

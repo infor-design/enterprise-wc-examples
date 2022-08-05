@@ -1,6 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-
-import products100JSON from '../../../../assets/data/products-100.js';
+import products100JSON from '../../../../../api/products-100.json';
 import IdsListView from 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
 
 @Component({

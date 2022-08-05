@@ -1,4 +1,4 @@
-const booksJSON = [
+[
   {
     "book": 101,
     "description": "101",
@@ -151,5 +151,3 @@ const booksJSON = [
     "location": "United States"
   }
 ]
-
-export default booksJSON;

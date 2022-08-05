@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import booksJSON from '../../../../assets/data/books.js';
+// import booksJSON from '../../../../assets/data/books.js';
 import IdsLookup from 'ids-enterprise-wc/components/ids-lookup/ids-lookup.js';
+import booksJSON from '../../../../../api/books.json';
 
 @Component({
   selector: 'app-example',

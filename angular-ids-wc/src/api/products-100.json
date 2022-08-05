@@ -1,4 +1,4 @@
-const products100JSON = [
+[
   {
     "id":1,
     "productId":"7439937961",
@@ -902,6 +902,4 @@ const products100JSON = [
     "unitPrice":46,
     "color":"Turquoise"
   }
-];
-
-export default products100JSON;
+]

@@ -2,7 +2,6 @@ import { Component, AfterViewInit, ViewChild, ElementRef, Input } from '@angular
 import IdsDropdown from 'ids-enterprise-wc/components/ids-dropdown/ids-dropdown';
 import { Subject } from 'rxjs';
 import { DataService } from 'src/app/shared/mock/data.service';
-// import statesJSON from '../../../../assets/data/states.json';
 
 @Component({
   selector: 'app-example',
@@ -19,13 +18,13 @@ export class ExampleComponent implements AfterViewInit {
   ) { }
 
   ngAfterViewInit(): void {
-    this.dataService.getJsonData()
+    this.dataService.getJsonData('states')
       .subscribe(res => {
-        console.log(res);
-      })
-    setTimeout(() => {
-      // this.dropdownAsync.nativeElement.beforeShow = this.beforeShow;
-    });
+        function beforeShow() {
+          return res;
+        }
+        this.dropdownAsync.nativeElement.beforeShow = beforeShow;
+      });
   }
 
   handleChange(e: any) {

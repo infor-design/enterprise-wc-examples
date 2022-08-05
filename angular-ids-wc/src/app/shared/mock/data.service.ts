@@ -16,7 +16,7 @@ export class DataService {
   ) { }
   
 
-  public getJsonData(): Observable<any> {
-    return this.http.get('api/states.json', { headers: headers });
+  public getJsonData(fileName: any): Observable<any> {
+    return this.http.get(`api/${fileName}.json`, { headers: headers });
   }
 }
