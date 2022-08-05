@@ -1,15 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
+import IdsDropdown from 'ids-enterprise-wc/components/ids-dropdown/ids-dropdown';
+import { Subject } from 'rxjs';
+import { DataService } from 'src/app/shared/mock/data.service';
+// import statesJSON from '../../../../assets/data/states.json';
 
 @Component({
   selector: 'app-example',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })
-export class ExampleComponent implements OnInit {
+export class ExampleComponent implements AfterViewInit {
+  @ViewChild('dropdown1', { read: ElementRef }) dropdown1: IdsDropdown;
+  @ViewChild('dropdownAsync', { read: ElementRef }) dropdownAsync: IdsDropdown;
+  @Input() options = new Subject<Array<any>>();
 
-  constructor() { }
+  constructor(
+    public dataService: DataService
+  ) { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    this.dataService.getJsonData()
+      .subscribe(res => {
+        console.log(res);
+      })
+    setTimeout(() => {
+      // this.dropdownAsync.nativeElement.beforeShow = this.beforeShow;
+    });
   }
 
+  handleChange(e: any) {
+    console.info(`Value Changed to ${e.target.value}: ${e.target.selectedOption.textContent}`);
+  }
+
+  handleFocus(e: any) {
+    console.info(`Focus Changed to ${e.target}`);
+  }
 }

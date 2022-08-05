@@ -3,7 +3,15 @@
 </ids-layout-grid>
 <ids-layout-grid auto="true">
   <ids-layout-grid-cell>
-    <ids-dropdown #dropdown1 id="dropdown-1" label="Normal Dropdown with Dirty Tracker" value="ca" dirty-tracker="true">
+    <ids-dropdown 
+      #dropdown1 
+      id="dropdown-1" 
+      label="Normal Dropdown with Dirty Tracker" 
+      value="ca" 
+      dirty-tracker="true"
+      (change)="handleChange($event)"
+      (focus)="handleFocus($event)"
+    >
       <ids-list-box>
         <ids-list-box-option id="ca" value="ca">California</ids-list-box-option>
         <ids-list-box-option id="hi" value="hi">Hawaii</ids-list-box-option>
@@ -122,7 +130,12 @@
       </ids-list-box>
     </ids-dropdown>
 
-    <ids-dropdown id="dropdown-7" label="Dropdown Using Ajax" value="ak">
+    <ids-dropdown 
+      #dropdownAsync
+      id="dropdown-7" 
+      label="Dropdown Using Ajax" 
+      value="ak"
+    >
       <ids-list-box>
         <ids-list-box-option value="ak">Alaska</ids-list-box-option>
       </ids-list-box>

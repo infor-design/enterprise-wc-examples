@@ -95,7 +95,7 @@ export class RangeComponent implements AfterViewInit {
 
   }
 
-  pickerSettingSelectDay(e: any) {
+  handleRangeSelected(e: any) {
     console.info('Range Selected', e.detail.rangeStart, e.detail.rangeEnd);
   }
 }

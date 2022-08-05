@@ -10,6 +10,7 @@ export class AxeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Ids Date Picker axe init');
   }
 
 }
