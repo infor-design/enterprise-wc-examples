@@ -31,6 +31,11 @@
       link: 'ids-mask',
       component: 'Mask',
       description: 'Util for masking input'
+    },
+    {
+      link: 'ids-textarea',
+      component: 'Text Area',
+      description: 'An input for multi line text'
     }
   );
   
@@ -45,6 +50,11 @@
       link: 'ids-modal',
       component: 'Modal',
       description: 'Displays a Modal Dialog'
+    },
+    {
+      link: 'ids-tabs',
+      component: 'Tabs',
+      description: 'Segment different areas'
     },
     {
       link: 'ids-tag',
