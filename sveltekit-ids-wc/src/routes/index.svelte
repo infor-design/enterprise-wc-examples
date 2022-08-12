@@ -52,6 +52,11 @@
       description: 'Displays a Modal Dialog'
     },
     {
+      link: 'ids-popup-menu',
+      component: 'Popup Menu',
+      description: 'Displays a Context Menu'
+    },
+    {
       link: 'ids-tabs',
       component: 'Tabs',
       description: 'Segment different areas'
@@ -64,11 +69,13 @@
   );
 
   // Messages and Alerts
-  /*
   categories[2].components.push(
-    {}
+    {
+      link: 'ids-icon',
+      component: 'Icon',
+      description: 'SVG Icons'
+    }
   );
-  */
 
   // Lists
   categories[3].components.push(
@@ -96,16 +103,22 @@
   // Patterns
   /*
   categories[5].components.push(
-    {}
+    {
+      link: 'ids-locale',
+      component: 'Locale',
+      description: 'Localization'
+    }
   );
   */
 
   // Charts and Visualizations
-  /*
   categories[6].components.push(
-    {}
+    {
+      link: 'ids-color',
+      component: 'Color',
+      description: 'Color Swatches'
+    }
   );
-  */
 
   // Typography
   categories[7].components.push(

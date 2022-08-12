@@ -2,7 +2,7 @@
 
 ## Components To Convert
 
-Components marked completed in this checklist will have both an example of direct usage AND an example using a Svelte component wrapper
+Components marked completed in this checklist will have an example of direct usage in Sveltekit.
 
  - [ ] About (ids-about)
  - [ ] Accordion (ids-accordion)
@@ -25,6 +25,7 @@ Components marked completed in this checklist will have both an example of direc
  - [ ] Cards (ids-card)
  - [x] Checkboxes (ids-checkbox)
  - [ ] Circle Pager (ids-scroll-view)
+ - [x] Color (swatch) (ids-color)
  - [ ] Color Picker (ids-color-picker)
  - [ ] Column (ids-column-chart or ids-bar with a orientation setting)
  - [ ] Completion Chart (ids-progress-chart)
@@ -41,13 +42,13 @@ Components marked completed in this checklist will have both an example of direc
  - [ ] Expandable area (ids-expandable-area)
  - [ ] Fieldset (ids-field-set)
  - [ ] Fontpicker (added as part of editor)
- - [ ] Form  (ids-form)
+ - [ ] Form (ids-form)
  - [ ] Grid (ids-layout-grid)
  - [ ] Header (ids-header)
  - [ ] Hierarchy (ids-hierarchy)
  - [ ] Homepage (ids-homepage)
- - [ ] Hyperlinks (ids-hyperlink)
- - [ ] Icons (ids-icon)
+ - [x] Hyperlinks (ids-hyperlink)
+ - [x] Icons (ids-icon)
  - [ ] Images (ids-image)
  - [x] Input (ids-input)
  - [ ] (Layout) Responsive Grid (ids-layout-grid)
@@ -58,12 +59,12 @@ Components marked completed in this checklist will have both an example of direc
  - [ ] Loading indicator (ids-loading-indicator) aka Busy Indicator / Loader
  - [ ] Locale (ids-locale)
  - [ ] Lookup (ids-lookup)
- - [ ] Mask (ids-mask)
+ - [x] Mask (ids-mask)
  - [ ] Masthead (ids-masthead)
  - [ ] Menu (ids-menu)
  - [ ] MenuButton (ids-menu-button)
  - [ ] Message (ids-message)
- - [ ] Modal (ids-modal)
+ - [x] Modal (ids-modal)
  - [ ] Monthview (ids-month-view)
  - [ ] Multiselect (ids-multi-select)
  - [ ] Notification (ids-notification-banner)
@@ -72,8 +73,8 @@ Components marked completed in this checklist will have both an example of direc
  - [ ] Pager (ids-pager)
  - [ ] Personalize (ids-personalize or as amixin on components thats support)
  - [ ] Pie (ids-pie-chart)
- - [ ] Popup (ids-popup)
- - [ ] Popupmenu (ids-men
+ - [x] Popup (ids-popup)
+ - [x] Popupmenu (ids-popup-menu)
  - [ ] Positive Negative (ids-positive-negative-chart) skipping until needed
  - [ ] Radar (ids-radar-chart) skipping until needed
  - [ ] Radios (ids-radio)
@@ -88,16 +89,16 @@ Components marked completed in this checklist will have both an example of direc
  - [ ] Spinbox (ids-spin-box)
  - [ ] Splitter (ids-splitter)
  - [ ] Stepchart (ids-step-chart)
- - [ ] Swaplist (ids-swap-list)
+ - [x] Swaplist (ids-swap-list)
  - [ ] Switch (ids-switch)
- - [ ] Tabs (ids-tabs)
- - [ ] Tabs Header (ids-tabs with option)
- - [ ] Tabs Module (ids-tabs with option)
+ - [x] Tabs (ids-tabs)
+ - [x] Tabs Header (ids-tabs with option)
+ - [x] Tabs Module (ids-tabs with option)
  - [ ] Tabs Multi (ids-tabs with option) skipping until needed
- - [ ] Tabs Vertical (ids-tabs with option)
+ - [x] Tabs Vertical (ids-tabs with option)
  - [x] Tag (ids-tag)
  - [ ] Targeted Achievement (ids-progress-chart)
- - [ ] Textarea (ids-textarea)
+ - [x] Textarea (ids-textarea)
  - [ ] Timeline (ids-time-line) skipping until needed (also have process indicator)
  - [ ] Timepicker (ids-time-picker)
  - [ ] Toast (ids-toast)
@@ -107,7 +108,7 @@ Components marked completed in this checklist will have both an example of direc
  - [ ] Tree (ids-tree)
  - [ ] Treemap (ids-tree-map)
  - [ ] Trigger Field (ids-trigger-field)
- - [ ] Typography (ids-text)
+ - [x] Typography (ids-text)
  - [ ] Upload (ids-upload)
  - [ ] Upload Advanced (ids-upload-advanced)
  - [ ] Validation (ids-validation-mixin)
