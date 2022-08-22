@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { appStore } from '../app.store';
   
   // IDS Components are rendered client-side.
   // This example demonstrates how dynamic imports can load IDS Components client-side while still allowing for Svelte SSR
@@ -17,9 +16,6 @@
   });
 </script>
 
-<ids-container padding="8">
-  {#if $appStore.allowThemeSwitcher}
-    <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
-  {/if}
+<ids-container padding="0">
   <slot></slot>
 </ids-container>

@@ -3,27 +3,27 @@
   import IdsTag from '../../components/ids-tag/IdsTag.svelte';
   import TAG_COLORS from '../../components/ids-tag/colors';
   import { writableTagArray } from './dynamic-example.stores';
+  import { dashCase, prettyFormat } from '../../utils/string';
 
   // Supporting Components
   import IdsCheckbox from '../../components/ids-checkbox/IdsCheckbox.svelte';
+  import IdsDropdown from '../../components/ids-dropdown/IdsDropdown.svelte';
   import IdsInput from '../../components/ids-input/IdsInput.svelte';
+  import IdsListBox from '../../components/ids-list-box/IdsListBox.svelte';
+  import IdsListBoxOption from '../../components/ids-list-box/IdsListBoxOption.svelte';
 
   // `refs/selectedId/currentTag/currentTagStoreRecord` handle the target
   // of the form controls (eitehr a new or existing tag)
   $: refs = [];
   export let selectedId = -1;
   export let currentTag: IdsTag;
-  export let currentTagRecord;
+  export let currentTagRecord: any;
 
   // Form Control Values
   export let text = 'This is a tag';
   export let color = TAG_COLORS[0].value;
   export let dismissible = true;
   export let clickable = true;
-
-  const dashCase = (val = '') => {
-    return val.toLowerCase().split(' ').join('-');
-  };
 
   // Adds the contents of the form as a new entry in the writable store.
   // This is automatically updated as new tag in the template below (see $writableTagArray) 
@@ -61,9 +61,6 @@
     writableTagArray.reset();
     refs = [];
   }
-
-  // Allows pretty-looking data formatting in the template
-  const prettyFormat = (str: string) => JSON.stringify( str, null, 2 );
 
   // Listens for the Svelte "Component Event" dispatched by the dynamic `<IdsTag>` svelte component
   const onBeforeTagRemove = (e) => {
@@ -110,6 +107,10 @@
 
   const handleDismissibleChange = (e: Event) => {
     updateStoreValue(e.target, 'dismissible')
+  }
+
+  const handleTagColorChange = (e: Event) => {
+    updateStoreValue(e.target, 'color');
   }
 
   // Makes the "Deselect" button in the template disabled/enabled based on whether or not a tag is selected
@@ -178,12 +179,13 @@
       </p>
 
       <p>
-        <label class="ids-text-14" for="style">Normal Dropdown with Dirty Tracker</label>
-        <select id="style" bind:value="{color}" on:change={(e) => updateStoreValue(e.target, 'color')}>
-          {#each TAG_COLORS as option}
-            <option id="color-{dashCase(option.name)}" value={option.value}>{option.name}</option>
-          {/each}
-        </select>
+        <IdsDropdown id="style" bind:value={color} on:change={handleTagColorChange} label="Tag Color">
+          <IdsListBox>
+            {#each TAG_COLORS as option}
+              <IdsListBoxOption id="color-{dashCase(option.name)}" value={option.value}>{option.name}</IdsListBoxOption>
+            {/each}
+          </IdsListBox>
+        </IdsDropdown>
       </p>
 
       <p>

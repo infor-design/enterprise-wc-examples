@@ -6,7 +6,7 @@
   import IdsListBox from '../../components/ids-list-box/IdsListBox.svelte';
   import IdsListBoxOption from '../../components/ids-list-box/IdsListBoxOption.svelte';
 
-  let ref;
+  let ref: IdsDropdown;
 
   onMount(async () => {
     // Highlights "California" in the Listbox
@@ -15,7 +15,9 @@
 </script>
 
 <ids-layout-grid auto="true">
-  <ids-text font-size="12" type="h1">IDS Dropdown (Imported into Svelte)</ids-text>
+  <ids-layout-grid-cell>
+    <ids-text font-size="12" type="h1">IDS Dropdown (Imported into Svelte)</ids-text>
+  </ids-layout-grid-cell>
 </ids-layout-grid>
 
 <ids-layout-grid auto="true">
