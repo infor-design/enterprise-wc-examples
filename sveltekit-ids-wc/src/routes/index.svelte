@@ -1,170 +1,49 @@
 <script lang="ts">
-	const categories: Array<any> = [
-		{ name: 'Form Inputs', icon: 'display', components: [] },
-		{ name: 'Navigation and Interaction', icon: 'map', components: [] },
-		{ name: 'Messages and Alerts', icon: 'success', components: [] },
-		{ name: 'Lists', icon: 'spreadsheet', components: [] },
-		{ name: 'Layouts', icon: 'project', components: [] },
-		{ name: 'Patterns', icon: 'design-mode', components: [] },
-		{ name: 'Charts and Visualizations', icon: 'line-bar-chart', components: [] },
-		{ name: 'Typography', icon: '', components: [] }
-	];
+  import { onMount } from 'svelte';
+  import { writable } from 'svelte/store';
+  import type { Writable } from 'svelte/store';
 
-	// Form Inputs
-	categories[0].components.push(
-    {
-      link: 'ids-checkbox',
-      component: 'Checkbox',
-      description: 'Checkbox Input Element'
-    },
-    {
-      link: 'ids-dropdown',
-      component: 'Dropdown',
-      description: 'Select from a list of items'
-    },
-    {
-      link: 'ids-input',
-      component: 'Input',
-      description: 'Input element and features'
-    },
-    {
-      link: 'ids-mask',
-      component: 'Mask',
-      description: 'Util for masking input'
-    },
-    {
-      link: 'ids-textarea',
-      component: 'Text Area',
-      description: 'An input for multi line text'
-    }
-  );
-  
-  // Navigation & Interaction
-  categories[1].components.push(
-    {
-      link: 'ids-button',
-      component: 'Button',
-      description: 'Simple HTMLButtonElement'
-    },
-    {
-      link: 'ids-modal',
-      component: 'Modal',
-      description: 'Displays a Modal Dialog'
-    },
-    {
-      link: 'ids-popup-menu',
-      component: 'Popup Menu',
-      description: 'Displays a Context Menu'
-    },
-    {
-      link: 'ids-tabs',
-      component: 'Tabs',
-      description: 'Segment different areas'
-    },
-    {
-      link: 'ids-tag',
-      component: 'Tag',
-      description: 'UI Classification'
-    }
-  );
+  let categories: Writable<Array<{ id: string, name: string }>> = writable([]);
 
-  // Messages and Alerts
-  categories[2].components.push(
-    {
-      link: 'ids-icon',
-      component: 'Icon',
-      description: 'SVG Icons'
-    }
-  );
-
-  // Lists
-  categories[3].components.push(
-    {
-      link: 'ids-swaplist',
-      component: 'SwapList',
-      description: 'Displays Swaplist Component'
-    }
-  );
-
-  // Layouts
-  categories[4].components.push(
-    {
-      link: 'ids-list-box',
-      component: 'List Box',
-      description: 'List Item Markup'
-    },
-    {
-      link: 'ids-popup',
-      component: 'Popup',
-      description: 'Displays a Popup Container'
-    }
-  );
-
-  // Patterns
-  /*
-  categories[5].components.push(
-    {
-      link: 'ids-locale',
-      component: 'Locale',
-      description: 'Localization'
-    }
-  );
-  */
-
-  // Charts and Visualizations
-  categories[6].components.push(
-    {
-      link: 'ids-color',
-      component: 'Color',
-      description: 'Color Swatches'
-    }
-  );
-
-  // Typography
-  categories[7].components.push(
-    {
-      link: 'ids-hyperlink',
-      component: 'Hyperlink',
-      description: 'Linked text'
-    },
-    {
-      link: 'ids-text',
-      component: 'Text',
-      description: 'An element for plain text'
-    }
-  );
+  onMount(async (): Promise<void> => {
+    const res = await fetch('/data/_components');
+    const json = await res.json();
+    $categories = json;
+  });
 </script>
 
 <ids-layout-grid auto="true" gap="md">
   <ids-layout-grid-cell>
 
-    {#each categories as category}
-      {#if category.components.length}
-        <ids-text type="h1" font-size="24">{category.name}</ids-text>
-        <ids-layout-grid auto="true">
-          <ids-layout-grid-cell>
-            <ids-block-grid align="center">
-              {#each category.components as component}
-                <ids-block-grid-item>
-                  <ids-card actionable="true" height="100" href="/{component.link}" target="_self">
-                    <div slot="card-content" class="fixed-height">
-                      <ids-text
-                        type="h2"
-                        font-size="16"
-                        font-weight="bold"
-                        color="slate-100"
-                        mode="light"
-                        version="new">{component.component}</ids-text>
-                      <ids-text type="h2" font-size="16" color="slate-60" mode="light" version="new">{component.description}</ids-text>
-                    </div>
-                  </ids-card>
-                </ids-block-grid-item>
-              {/each}
-            </ids-block-grid>
-          </ids-layout-grid-cell>
-        </ids-layout-grid>
-      {/if}
-    {/each}
+    {#if $categories.length}
+      {#each $categories as category}
+        {#if category.components.length}
+          <ids-text type="h1" font-size="24">{category.name}</ids-text>
+          <ids-layout-grid auto="true">
+            <ids-layout-grid-cell>
+              <ids-block-grid align="center">
+                {#each category.components as component}
+                  <ids-block-grid-item>
+                    <ids-card actionable="true" height="100" href="/{component.link}" target="_self">
+                      <div slot="card-content" class="fixed-height">
+                        <ids-text
+                          type="h2"
+                          font-size="16"
+                          font-weight="bold"
+                          color="slate-100"
+                          mode="light"
+                          version="new">{component.component}</ids-text>
+                        <ids-text type="h2" font-size="16" color="slate-60" mode="light" version="new">{component.description}</ids-text>
+                      </div>
+                    </ids-card>
+                  </ids-block-grid-item>
+                {/each}
+              </ids-block-grid>
+            </ids-layout-grid-cell>
+          </ids-layout-grid>
+        {/if}
+      {/each}
+    {/if}
 
   </ids-layout-grid-cell>
 </ids-layout-grid>

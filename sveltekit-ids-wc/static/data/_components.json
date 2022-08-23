@@ -1,0 +1,141 @@
+[
+  { 
+    "name": "Form Inputs", 
+    "icon": "display", 
+    "components": [
+      {
+        "link": "ids-checkbox",
+        "component": "Checkbox",
+        "description": "Checkbox Input Element"
+      },
+      {
+        "link": "ids-dropdown",
+        "component": "Dropdown",
+        "description": "Select from a list of items"
+      },
+      {
+        "link": "ids-input",
+        "component": "Input",
+        "description": "Input element and features"
+      },
+      {
+        "link": "ids-mask",
+        "component": "Mask",
+        "description": "Util for masking input"
+      },
+      {
+        "link": "ids-textarea",
+        "component": "Text Area",
+        "description": "An input for multi line text"
+      }
+    ]
+  },
+  { 
+    "name": "Navigation and Interaction", 
+    "icon": "map", 
+    "components": [
+      {
+        "link": "ids-button",
+        "component": "Button",
+        "description": "Simple HTMLButtonElement"
+      },
+      {
+        "link": "ids-modal",
+        "component": "Modal",
+        "description": "Displays a Modal Dialog"
+      },
+      {
+        "link": "ids-popup-menu",
+        "component": "Popup Menu",
+        "description": "Displays a Context Menu"
+      },
+      {
+        "link": "ids-tabs",
+        "component": "Tabs",
+        "description": "Segment different areas"
+      },
+      {
+        "link": "ids-tag",
+        "component": "Tag",
+        "description": "UI Classification"
+      }
+    ]
+  },
+  { 
+    "name": "Messages and Alerts", 
+    "icon": "success", 
+    "components": [
+      {
+        "link": "ids-about",
+        "component": "About",
+        "description": "Displays info about a product with copyright and browser specs"
+      },
+      {
+        "link": "ids-icon",
+        "component": "Icon",
+        "description": "SVG Icons"
+      }
+    ]
+  },
+  { 
+    "name": "Lists", 
+    "icon": "spreadsheet", 
+    "components": [
+      {
+        "link": "ids-swaplist",
+        "component": "SwapList",
+        "description": "Displays Swaplist Component"
+      }
+    ]
+  },
+  { 
+    "name": "Layouts", 
+    "icon": "project", 
+    "components": [
+      {
+        "link": "ids-list-box",
+        "component": "List Box",
+        "description": "List Item Markup"
+      },
+      {
+        "link": "ids-popup",
+        "component": "Popup",
+        "description": "Displays a Popup Container"
+      }
+    ]
+  },
+  { 
+    "name": "Patterns", 
+    "icon": "design-mode", 
+    "components": [
+
+    ]
+  },
+  { 
+    "name": "Charts and Visualizations", 
+    "icon": "line-bar-chart", 
+    "components": [
+      {
+        "link": "ids-color",
+        "component": "Color",
+        "description": "Color Swatches"
+      }
+    ]
+  },
+  { 
+    "name": "Typography", 
+    "icon": "", 
+    "components": [
+      {
+        "link": "ids-hyperlink",
+        "component": "Hyperlink",
+        "description": "Linked text"
+      },
+      {
+        "link": "ids-text",
+        "component": "Text",
+        "description": "An element for plain text"
+      }
+    ]
+  }
+]
