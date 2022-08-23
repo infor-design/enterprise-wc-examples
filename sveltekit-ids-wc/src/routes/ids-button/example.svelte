@@ -7,7 +7,10 @@
   });
 
   const log = (e: MouseEvent) => {
-    console.info(`"${e.target?.textContent.trim()}" was clicked.`, `ID: #${e.target?.id}`);
+    const target = (e.target as HTMLElement);
+    if (target !== null) {
+      console.info(`"${target.textContent?.trim()}" was clicked.`, `ID: #${target.id}`);
+    }
   }
 </script>
 

@@ -93,6 +93,11 @@
     "icon": "project", 
     "components": [
       {
+        "link": "ids-accordion",
+        "component": "Accordion",
+        "description": "Vertically Stacked Sections"
+      },
+      {
         "link": "ids-list-box",
         "component": "List Box",
         "description": "List Item Markup"
