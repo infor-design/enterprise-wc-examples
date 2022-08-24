@@ -35,6 +35,11 @@
     "icon": "map", 
     "components": [
       {
+        "link": "ids-action-panel",
+        "component": "Action Panel",
+        "description": "A modal component containing complicated forms"
+      },
+      {
         "link": "ids-button",
         "component": "Button",
         "description": "Simple HTMLButtonElement"
