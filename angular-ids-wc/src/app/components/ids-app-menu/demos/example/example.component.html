@@ -4,15 +4,21 @@
 
 <ids-layout-grid>
   <ids-layout-grid-cell>
-    <ids-button id="app-menu-trigger" icon="menu">
+    <ids-button id="app-menu-trigger" icon="menu" (click)="handleClick()">
       <span slot="text" class="audible">Open App Menu</span>
     </ids-button>
   </ids-layout-grid-cell>
 </ids-layout-grid>
 
-<ids-app-menu id="app-menu">
+<ids-app-menu id="app-menu" [visible]="visible">
   <!-- Avatar/Username Area -->
-  <img slot="avatar" id="avatar" alt="Picture of Richard Fairbanks" />
+  <img
+    #avatarImage
+    slot="avatar" 
+    id="avatar" 
+    alt="Picture of Richard Fairbanks" 
+    [attr.src]="'assets/images/avatar-placeholder.jpg'"
+  />
   <ids-text slot="username" font-size="24" font-weight="bold">Richard Fairbanks</ids-text>
 
   <!-- Header Toolbar -->
