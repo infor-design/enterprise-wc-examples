@@ -1,11 +1,11 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-sandbox',
-  templateUrl: './sandbox.component.html',
-  styleUrls: ['./sandbox.component.css']
+  selector: 'app-example-footer',
+  templateUrl: './example-footer.component.html',
+  styleUrls: ['./example-footer.component.css']
 })
-export class SandboxComponent implements OnInit, AfterViewInit {
+export class ExampleFooterComponent implements OnInit, AfterViewInit {
   @ViewChild('appMenuDrawer', { read: ElementRef }) appMenuDrawer;
   @ViewChild('appMenuTriggerBtn', { read: ElementRef }) appMenuTriggerBtn;
   public disabled: boolean;
@@ -31,5 +31,4 @@ export class SandboxComponent implements OnInit, AfterViewInit {
   handleSelected(e: CustomEvent) {
     console.info(`Header "${(e.target as any).textContent.trim()}" was selected.`);
   }
-
 }

@@ -1,4 +1,4 @@
-<ids-layout-grid auto="true">
+<ids-layout-grid>
   <ids-text font-size="12" type="h1">Ids App Menu</ids-text>
 </ids-layout-grid>
 
@@ -7,9 +7,8 @@
     <ids-button 
       #appMenuTriggerBtn 
       id="app-menu-trigger" 
-      icon="menu" 
+      icon="menu"
       (click)="disableTriggerButton()"
-      [attr.disabled]="disabled"
     >
       <span slot="text" class="audible">Open App Menu</span>
     </ids-button>
@@ -35,7 +34,7 @@
   <!-- Header Toolbar -->
   <ids-toolbar slot="header">
     <ids-toolbar-section [attr.align]="'center-even'" [attr.type]="'fluid'">
-      <ids-button id="header-btn-download" icon="download">
+      <ids-button id="header-btn-download" icon="download" padding="16px">
         <ids-text slot="text" audible>Download</ids-text>
       </ids-button>
       <ids-button id="header-btn-print" icon="print">
@@ -55,9 +54,9 @@
 
   <ids-search-field 
     id="search" 
-    clearable
-    label="Application Menu Search" 
+    [attr.clearable]="true"
     [attr.color-variant]="'app-menu'" 
+    [attr.label]="'Application Menu Search'" 
     [attr.label-state]="'collapsed'" 
     [attr.no-margins]="true"
     slot="search"
@@ -157,7 +156,7 @@
       <ids-button id="footer-btn-proxy" icon="employee-directory">
         <ids-text slot="text" audible>Proxy as User</ids-text>
       </ids-button>
-      <ids-button id="footer-btn-about" icon="info-linear">
+      <ids-button id="footer-btn-about" icon="info">
         <ids-text slot="text" audible>About This Application</ids-text>
       </ids-button>
       <ids-button id="footer-btn-logout" icon="logout">
