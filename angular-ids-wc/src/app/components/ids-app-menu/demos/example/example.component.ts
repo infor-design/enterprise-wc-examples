@@ -1,31 +1,33 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
-// import avatarPlaceHolder from '../../../../assets/images/avatar-placeholder.jpg';
 @Component({
   selector: 'app-example',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements OnInit, AfterViewInit {
-  @ViewChild('avatarImage', { read: ElementRef }) avatarImage;
-  public visible: boolean;
+  @ViewChild('appMenuDrawer', { read: ElementRef }) appMenuDrawer;
+  @ViewChild('appMenuTriggerBtn', { read: ElementRef }) appMenuTriggerBtn;
+  public disabled: boolean;
 
-  constructor(
-    private sanitizer: DomSanitizer
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
     console.log('example init');
   }
 
   ngAfterViewInit(): void {
-    console.log('afterViewInit');
-    // this.avatarImage.nativeElement.src = this.sanitizer
-    //   .bypassSecurityTrustResourceUrl(`data:image/png;base64, ${avatarPlaceHolder}`);
+    this.appMenuDrawer.nativeElement.target = this.appMenuTriggerBtn.nativeElement;
   }
 
-  handleClick() {
-    this.visible = !this.visible;
+  disableTriggerButton() {
+    this.disabled = true;
   }
 
+  enableTriggerButton() {
+    this.disabled = false;
+  }
+
+  handleSelected(e: CustomEvent) {
+    console.info(`Header "${(e.target as any).textContent.trim()}" was selected.`);
+  }
 }

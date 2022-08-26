@@ -4,13 +4,24 @@
 
 <ids-layout-grid>
   <ids-layout-grid-cell>
-    <ids-button id="app-menu-trigger" icon="menu" (click)="handleClick()">
+    <ids-button 
+      #appMenuTriggerBtn 
+      id="app-menu-trigger" 
+      icon="menu" 
+      (click)="disableTriggerButton()"
+      [attr.disabled]="disabled"
+    >
       <span slot="text" class="audible">Open App Menu</span>
     </ids-button>
   </ids-layout-grid-cell>
 </ids-layout-grid>
 
-<ids-app-menu id="app-menu" [visible]="visible">
+<ids-app-menu 
+  #appMenuDrawer 
+  id="app-menu"
+  (hide)="enableTriggerButton()"
+  (selected)="handleSelected($event)"
+>
   <!-- Avatar/Username Area -->
   <img
     #avatarImage
@@ -23,7 +34,7 @@
 
   <!-- Header Toolbar -->
   <ids-toolbar slot="header">
-    <ids-toolbar-section align="center-even" type="fluid">
+    <ids-toolbar-section [attr.align]="'center-even'" [attr.type]="'fluid'">
       <ids-button id="header-btn-download" icon="download">
         <ids-text slot="text" audible>Download</ids-text>
       </ids-button>
@@ -42,7 +53,15 @@
     </ids-toolbar-section>
   </ids-toolbar>
 
-  <ids-search-field id="search" clearable color-variant="app-menu" label="Application Menu Search" label-state="collapsed" no-margins slot="search"></ids-search-field>
+  <ids-search-field 
+    id="search" 
+    clearable
+    label="Application Menu Search" 
+    [attr.color-variant]="'app-menu'" 
+    [attr.label-state]="'collapsed'" 
+    [attr.no-margins]="true"
+    slot="search"
+  ></ids-search-field>
 
   <!-- Main Content (Accordion Navigation) -->
   <ids-accordion>
