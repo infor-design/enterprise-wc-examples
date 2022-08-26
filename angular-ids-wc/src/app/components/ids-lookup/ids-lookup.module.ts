@@ -6,16 +6,15 @@ import { IdsLookupComponent } from './ids-lookup.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
-
 @NgModule({
   declarations: [
     IdsLookupComponent,
-    ExampleComponent
+    ExampleComponent,
   ],
   imports: [
     CommonModule,
     IdsLookupRoutingModule,
-    DemoListingModule
+    DemoListingModule,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

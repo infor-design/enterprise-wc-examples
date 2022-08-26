@@ -15,3 +15,4 @@ export class IdsAppMenuComponent implements AfterViewInit {
     console.log('Ids App Menu init');
   }
 }
+ 

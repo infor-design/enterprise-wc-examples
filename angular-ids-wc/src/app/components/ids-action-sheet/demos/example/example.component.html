@@ -7,7 +7,11 @@
 <ids-layout-grid auto="true" gap="md">
   <ids-layout-grid-cell>
 
-    <ids-menu-button id="icon-button" menu="icon-menu">
+    <ids-menu-button 
+      (click)="handleClick($event)" 
+      id="icon-button" 
+      menu="icon-menu"
+    >
       <ids-icon slot="icon" icon="more"></ids-icon>
       <span class="audible">Icon Only Button</span>
     </ids-menu-button>
@@ -20,7 +24,7 @@
       </ids-menu-group>
     </ids-popup-menu>
 
-    <ids-action-sheet>
+    <ids-action-sheet [visible]="visible">
       <ids-menu>
         <ids-menu-group>
           <ids-menu-item icon="mail" text-align="center">Option One</ids-menu-item>

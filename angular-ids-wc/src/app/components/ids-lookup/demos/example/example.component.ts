@@ -1,8 +1,6 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-// import booksJSON from '../../../../assets/data/books.js';
+import { DataService } from 'src/app/shared/mock/data.service';
 import IdsLookup from 'ids-enterprise-wc/components/ids-lookup/ids-lookup.js';
-import booksJSON from '../../../../../api/books.json';
-
 @Component({
   selector: 'app-example',
   templateUrl: './example.component.html',
@@ -11,7 +9,9 @@ import booksJSON from '../../../../../api/books.json';
 export class ExampleComponent implements AfterViewInit {
   @ViewChild('lookup1', { read: ElementRef }) lookup1: IdsLookup;
 
-  constructor() { }
+  constructor(
+    private dateService: DataService
+  ) { }
 
   ngAfterViewInit(): void {
     const columns = [];
@@ -60,6 +60,10 @@ export class ExampleComponent implements AfterViewInit {
       formatter: this.lookup1.nativeElement.dataGrid?.formatters.text
     });
 
-    console.log(booksJSON);
+    this.lookup1.nativeElement.columns = columns;
+    this.dateService.getJsonData('books')
+      .subscribe(res => {
+        this.lookup1.nativeElement.data = res;
+      });
   }
 }
