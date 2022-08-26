@@ -7,7 +7,8 @@ import IdsPopupMenu from 'ids-enterprise-wc/components/ids-popup-menu/ids-popup-
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements OnInit, AfterViewInit {
-  @ViewChild('menuBtnEl', { read: ElementRef }) menuBtnEl: IdsPopupMenu;
+  @ViewChild('menuButton1', { read: ElementRef }) menuButton1;
+  @ViewChild('popupMenu1', { read: ElementRef }) popupMenu1: IdsPopupMenu;
 
   constructor() { }
 
@@ -16,17 +17,7 @@ export class ExampleComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.menuBtnEl.nativeElement.menuEl);
+    this.menuButton1.nativeElement.menu = this.popupMenu1.nativeElement;
+    this.popupMenu1.nativeElement.target = this.menuButton1.nativeElement;
   }
-
-  handleShow(e) {
-    console.log(e);
-    // this.menuBtnEl.nativeElement.menuEl.show();
-    // this.menuBtnEl.nativeElement.menuEl.trigger
-  }
-
-  handleBeforeShow(e) {
-    console.log(e);
-  }
-
 }
