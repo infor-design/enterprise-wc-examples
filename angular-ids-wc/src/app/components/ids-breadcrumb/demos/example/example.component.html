@@ -3,10 +3,10 @@
 </ids-layout-grid>
 
 <ids-layout-grid auto="true">
-  <ids-breadcrumb>
-    <ids-hyperlink font-size="14" text-decoration="hover" href="#">First Item</ids-hyperlink>
-    <ids-hyperlink font-size="14" text-decoration="hover" href="#">Second Item</ids-hyperlink>
-    <ids-hyperlink font-size="14" text-decoration="hover" disabled>Disabled Item</ids-hyperlink>
+  <ids-breadcrumb #breadcrumb>
+    <ids-hyperlink font-size="14" text-decoration="hover" href="#0">First Item</ids-hyperlink>
+    <ids-hyperlink font-size="14" text-decoration="hover" href="#0">Second Item</ids-hyperlink>
+    <ids-hyperlink font-size="14" text-decoration="hover" [disabled]="true">Disabled Item</ids-hyperlink>
     <ids-hyperlink font-size="14" text-decoration="hover">Current Item</ids-hyperlink>
   </ids-breadcrumb>
 </ids-layout-grid>
