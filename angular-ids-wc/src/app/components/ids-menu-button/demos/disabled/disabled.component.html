@@ -4,17 +4,38 @@
 
 <ids-layout-grid auto="true">
   <ids-layout-grid-cell>
-    <ids-checkbox id="toggle-disabled-menubutton" label="Toggle menu button's disabled state"></ids-checkbox>
-    <ids-checkbox id="force-menu-show" label="Force the Popup Menu to show"></ids-checkbox>
+    <ids-checkbox 
+      id="toggle-disabled-menubutton" 
+      label="Toggle menu button's disabled state"
+      (change)="handleDisabledCheck($event)"
+    >
+    </ids-checkbox>
+    <ids-checkbox
+      id="force-menu-show" 
+      label="Force the Popup Menu to show"
+      (change)="handleForceMenuCheck($event)"
+    >
+    </ids-checkbox>
   </ids-layout-grid-cell>
 </ids-layout-grid>
 
 <ids-layout-grid cols="4" gap="md">
   <ids-layout-grid-cell>
-    <ids-menu-button id="menu-button" icon="settings" type="tertiary" menu="my-menu" dropdown-icon>
+    <ids-menu-button
+      #menuBtnEl
+      id="menu-button" 
+      icon="settings" 
+      type="tertiary" 
+      dropdown-icon
+      [attr.menu]="'my-menu'" 
+      [attr.disabled]="disabled"
+    >
       <span slot="text">Settings</span>
     </ids-menu-button>
-    <ids-popup-menu id="my-menu" target="menu-button" trigger="click">
+    <ids-popup-menu 
+      id="my-menu" 
+      [attr.trigger]="'click'"
+    >
       <ids-menu-group>
         <ids-menu-item>Item One</ids-menu-item>
         <ids-menu-item disabled>Item Two</ids-menu-item>
