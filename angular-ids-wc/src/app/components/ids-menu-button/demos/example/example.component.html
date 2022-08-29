@@ -3,19 +3,21 @@
 </ids-layout-grid>
 <ids-layout-grid cols="4" gap="md">
   <ids-layout-grid-cell>
+    <!-- When target attribute is included the parent gets set as target -->
     <ids-menu-button
       #menuButton1
       id="menu-button" 
       icon="settings" 
-      [attr.type]="'tertiary'" 
-      [attr.menu]="'my-menu'" 
       dropdown-icon
+      [attr.type]="'tertiary'" 
+      [attr.menu]="'my-menu'"
     >
       <span slot="text">Settings</span>
     </ids-menu-button>
     <ids-popup-menu
-      #popupMenu1
-      id="my-menu" [attr.target]="'menu-button'" [attr.trigger]="'click'">
+      id="my-menu" 
+      [attr.trigger]="'click'"
+    >
       <ids-menu-group>
         <ids-menu-item>Personalize Columns...</ids-menu-item>
       </ids-menu-group>
@@ -36,16 +38,22 @@
       </ids-menu-group>
     </ids-popup-menu>
 
-    <!-- <ids-menu-button id="icon-button" [attr.menu]="'icon-menu'">
+    <ids-menu-button 
+      id="icon-button" 
+      [attr.menu]="'icon-menu'"
+    >
       <ids-icon slot="icon" icon="more"></ids-icon>
       <span class="audible">Icon Only Button</span>
     </ids-menu-button>
-    <ids-popup-menu id="icon-menu" [attr.target]="'icon-button'" [attr.trigger]="'click'">
+    <ids-popup-menu
+      id="icon-menu" 
+      [attr.trigger]="'click'"
+    >
       <ids-menu-group select="multiple" [attr.keep-open]="true">
         <ids-menu-item value="1">Option One</ids-menu-item>
         <ids-menu-item value="2">Option Two</ids-menu-item>
         <ids-menu-item value="3">Option Three</ids-menu-item>
       </ids-menu-group>
-    </ids-popup-menu> -->
+    </ids-popup-menu>
   </ids-layout-grid-cell>
 </ids-layout-grid>

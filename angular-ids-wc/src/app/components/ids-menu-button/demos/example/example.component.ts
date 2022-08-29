@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angular/core';
-import IdsPopupMenu from 'ids-enterprise-wc/components/ids-popup-menu/ids-popup-menu';
+import IdsMenuButton from 'ids-enterprise-wc/components/ids-menu-button/ids-menu-button';
 
 @Component({
   selector: 'app-example',
@@ -7,17 +7,37 @@ import IdsPopupMenu from 'ids-enterprise-wc/components/ids-popup-menu/ids-popup-
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements OnInit, AfterViewInit {
-  @ViewChild('menuButton1', { read: ElementRef }) menuButton1;
-  @ViewChild('popupMenu1', { read: ElementRef }) popupMenu1: IdsPopupMenu;
+  @ViewChild('menuButton1', { read: ElementRef }) menuButton1: IdsMenuButton;
 
   constructor() { }
 
   ngOnInit() {
-    console.log('on init');
+    console.log('ids-menu-button OnInit');
   }
 
   ngAfterViewInit(): void {
-    this.menuButton1.nativeElement.menu = this.popupMenu1.nativeElement;
-    this.popupMenu1.nativeElement.target = this.menuButton1.nativeElement;
+    this.menuButton1.nativeElement.menuEl.addEventListener('show', () => {
+      console.info(`Menu Button items were displayed`);
+    });
+
+    this.menuButton1.nativeElement.menuEl.addEventListener('hide', () => {
+      console.info(`Menu Button items were hidden`);
+    });
+
+    this.menuButton1.nativeElement.menuEl.addEventListener('selected', (e: Event) => {
+      this.menuItemResponse(e, 'selected');
+    });
+
+    this.menuButton1.nativeElement.menuEl.addEventListener('deselected', (e: Event) => {
+      this.menuItemResponse(e, 'deselected');
+    });
   }
+
+  menuItemResponse = (e: any, msg: string) => {
+    const target = e.detail.elem;
+    if (target !== null) {
+      const text = target.textContent.trim();
+      console.info(`Menu Item "${text}" was ${msg}`, e.detail.elem);
+    }
+  };
 }
