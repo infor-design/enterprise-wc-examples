@@ -8,15 +8,19 @@
   <ids-layout-grid-cell>
 
     <ids-menu-button 
-      (click)="handleClick($event)" 
       id="icon-button" 
-      menu="icon-menu"
+      [attr.menu]="'icon-menu'"
+      (click)="handleClick($event)"
     >
       <ids-icon slot="icon" icon="more"></ids-icon>
       <span class="audible">Icon Only Button</span>
     </ids-menu-button>
 
-    <ids-popup-menu id="icon-menu" class="hide-sm-down" target="icon-button" trigger="click">
+    <ids-popup-menu 
+      id="icon-menu" 
+      class="hide-sm-down"
+      [attr.trigger]="'click'"
+    >
       <ids-menu-group>
         <ids-menu-item icon="mail">Option One</ids-menu-item>
         <ids-menu-item icon="filter">Option Two</ids-menu-item>
