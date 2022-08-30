@@ -146,6 +146,11 @@
         "description": "Chart used to compare trends with solid colored areas"
       },
       {
+        "link": "ids-axis-chart",
+        "component": "Axis Chart",
+        "description": "Configurable chart with x and y axis"
+      },
+      {
         "link": "ids-color",
         "component": "Color",
         "description": "Color Swatches"
