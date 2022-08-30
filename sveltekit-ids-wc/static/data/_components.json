@@ -141,6 +141,11 @@
     "icon": "line-bar-chart", 
     "components": [
       {
+        "link": "ids-area-chart",
+        "component": "Area Chart",
+        "description": "Chart used to compare trends with solid colored areas"
+      },
+      {
         "link": "ids-color",
         "component": "Color",
         "description": "Color Swatches"
