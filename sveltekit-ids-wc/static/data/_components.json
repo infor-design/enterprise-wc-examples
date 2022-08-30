@@ -4,6 +4,11 @@
     "icon": "display", 
     "components": [
       {
+        "link": "ids-alert",
+        "component": "Alert",
+        "description": "Alert indicator/icon"
+      },
+      {
         "link": "ids-checkbox",
         "component": "Checkbox",
         "description": "Checkbox Input Element"
