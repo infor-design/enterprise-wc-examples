@@ -40,6 +40,11 @@
         "description": "A modal component containing complicated forms"
       },
       {
+        "link": "ids-action-sheet",
+        "component": "Action Sheet",
+        "description": "Displays a menu at the bottom of your screen on mobile devices"
+      },
+      {
         "link": "ids-button",
         "component": "Button",
         "description": "Simple HTMLButtonElement"
