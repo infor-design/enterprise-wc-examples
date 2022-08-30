@@ -50,6 +50,11 @@
         "description": "Displays a menu at the bottom of your screen on mobile devices"
       },
       {
+        "link": "ids-app-menu",
+        "component": "App Menu",
+        "description": "Application Nav"
+      },
+      {
         "link": "ids-button",
         "component": "Button",
         "description": "Simple HTMLButtonElement"
