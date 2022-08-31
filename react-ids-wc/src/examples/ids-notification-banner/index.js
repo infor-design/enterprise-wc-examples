@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-notification-banner/ids-notification-banner';
+
 
 const IdsNotificationBanner = () => {
   const listViewRef = useRef();

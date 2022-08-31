@@ -1,5 +1,7 @@
 import React from 'react';
+import 'ids-enterprise-wc/components/ids-icon/ids-icon';
 import iconList from './icons-list';
+
 
 const getIcon = iconName => {
   return (

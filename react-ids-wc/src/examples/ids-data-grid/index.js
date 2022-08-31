@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid';
 
 import { getGridColumns } from './columns';
 

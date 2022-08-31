@@ -1,4 +1,6 @@
 import React from 'react';
+import 'ids-enterprise-wc/components/ids-trigger-field/ids-trigger-field';
+
 
 const IdsTriggerField = () => {
   return (

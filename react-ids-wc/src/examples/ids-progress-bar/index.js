@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-progress-bar/ids-progress-bar';
+
 
 const IdsProgressBar = () => {
   const setValueRef = useRef();

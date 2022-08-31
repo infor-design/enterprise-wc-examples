@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-modal/ids-modal';
+
 
 const IdsModal = () => {
   const modalRef = useRef();

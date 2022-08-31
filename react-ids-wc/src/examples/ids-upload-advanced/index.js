@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-upload-advanced/ids-upload-advanced';
+
 
 const IdsUploadAdvanced = () => {
   const extraHeadersRef = useRef();

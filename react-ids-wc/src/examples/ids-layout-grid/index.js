@@ -1,4 +1,7 @@
 import React, { useState, useRef } from 'react';
+import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
+import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell';
+
 
 const IdsLayoutGrid = () => {
   const gridRef = useRef();

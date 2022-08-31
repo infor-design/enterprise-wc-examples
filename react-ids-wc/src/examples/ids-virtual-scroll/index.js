@@ -1,4 +1,6 @@
 import React from 'react';
+import 'ids-enterprise-wc/components/ids-virtual-scroll/ids-virtual-scroll';
+
 
 const IdsVirtualScroll = () => {
   return (

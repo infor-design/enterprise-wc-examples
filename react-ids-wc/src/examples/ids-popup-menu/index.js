@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-popup-menu/ids-popup-menu';
+
 
 const IdsPopupMenu = () => {
   const popupRef = useRef();

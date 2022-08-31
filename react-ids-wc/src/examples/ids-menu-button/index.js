@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-menu-button/ids-menu-button';
+
 
 const IdsMenuButton = () => {
   const settingsTriggerRef = useRef();

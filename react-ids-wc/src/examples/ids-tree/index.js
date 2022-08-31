@@ -1,17 +1,23 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-tree/ids-tree';
+
 
 const IdsTree = () => {
   const treeRef = useRef();
 
-  useEffect(async () => {
+  useEffect(() => {
     const tree = treeRef.current
 
-    // Do an ajax request
-    const response = await fetch('/data/tree-basic.json');
-    const data = await response.json()
+    const fetchData = async function () {
+      // Do an ajax request
+      const response = await fetch('/data/tree-basic.json');
+      const data = await response.json()
 
-    // Set data
-    tree.data = data
+      // Set data
+      tree.data = data
+    };
+
+    fetchData();
 
     const handleSelected = (e) => {
       console.info('selected:', e?.detail);

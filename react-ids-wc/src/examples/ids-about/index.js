@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 
+import 'ids-enterprise-wc/components/ids-about/ids-about';
+
 const IdsAbout = ({ wcLoaded }) => {
   const aboutRef = useRef();
   const triggerRef = useRef();

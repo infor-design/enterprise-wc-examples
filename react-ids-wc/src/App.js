@@ -80,8 +80,8 @@ const App = () => {
       <Router>
         <Routes>
           <Route element={<Home />} path="/" />
-          <Route element={<IdsAbout path="/ids-about" />}  />
-          <Route element={<IdsAccordion path="/ids-accordion" />}  />
+          <Route element={<IdsAbout />} path="/ids-about" />
+          <Route element={<IdsAccordion />} path="/ids-accordion" />
           <Route element={<IdsAlert />} path="/ids-alert" />
           <Route element={<IdsBadge />} path="/ids-badge" />
           <Route element={<IdsBlockgrid />} path="/ids-block-grid" />

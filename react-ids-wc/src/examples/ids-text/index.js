@@ -1,4 +1,6 @@
 import React from 'react';
+import 'ids-enterprise-wc/components/ids-text/ids-text';
+
 
 const IdsText = () => {
   return (

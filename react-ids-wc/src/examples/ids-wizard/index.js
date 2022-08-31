@@ -1,4 +1,6 @@
 import React from 'react';
+import 'ids-enterprise-wc/components/ids-wizard/ids-wizard';
+
 
 const IdsWizard = () => {
   return (

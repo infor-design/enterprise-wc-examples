@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-menu/ids-menu';
+
 
 const IdsMenu = () => {
   const noSelectRef = useRef();

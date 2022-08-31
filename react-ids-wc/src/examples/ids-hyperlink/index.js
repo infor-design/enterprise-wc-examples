@@ -1,4 +1,6 @@
 import React from 'react';
+import 'ids-enterprise-wc/components/ids-hyperlink/ids-hyperlink';
+
 
 const IdsHyperlink = () => {
   return (

@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-message/ids-message';
+
 
 const IdsMessage = () => {
   const messageErrRef = useRef();
