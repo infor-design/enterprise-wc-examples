@@ -1,13 +1,11 @@
 <svelte:options accessors />
 
 <script lang="ts">
-	import { createEventDispatcher, onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
 	onMount(async () => {
 		await import('ids-enterprise-wc/components/ids-hyperlink/ids-hyperlink');
 	});
-
-	const dispatch = createEventDispatcher();
 
   type IdsTextFontWeight = null | 'bold' | 'lighter';
   type IdsTextFontSize = null;

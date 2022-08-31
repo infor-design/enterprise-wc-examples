@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher, onMount } from 'svelte';
 	import TAG_COLORS from './colors';
+  import type IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag';
 
 	onMount(async (): Promise<void> => {
 		await import('ids-enterprise-wc/components/ids-tag/ids-tag');
@@ -11,7 +12,7 @@
 	// @TODO Native IDS WebComponents attempt to manually remove the Tag during the
 	// `dismiss()` lifecycle.  Svelte bindings require that it manages the DOM, so we
 	// hook into the `beforetagremove` event and prevent it from continuing.
-	const onBeforeTagRemove = (e) => {
+	const onBeforeTagRemove = (e: CustomEvent) => {
 		console.log('webcomponent\'s "beforetagremove" event captured');
 		e.detail.response(false);
 		dispatch('beforetagremove', { nativeEvent: e });
@@ -25,9 +26,10 @@
 	};
 
 	// Log the `<ids-tag>` element when clicked
-	const testClick = (e: CustomEvent) => {
-		if (e.target && e.target.tagName === 'IDS-TAG') {
-			console.dir(e.target);
+	const testClick = (e: Event) => {
+    const target = (e.target as unknown as IdsTag);
+		if (target && target.tagName === 'IDS-TAG') {
+			console.dir(target);
 			dispatch('click', { nativeEvent: e });
 		}
 	};

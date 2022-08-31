@@ -2,11 +2,11 @@
   import { onMount } from 'svelte';
   import { dropdownStatesStore } from './dynamic-example.stores'; 
 
-  import IdsDropdown from '../../components/ids-dropdown/IdsDropdown.svelte';
-  import IdsListBox from '../../components/ids-list-box/IdsListBox.svelte';
-  import IdsListBoxOption from '../../components/ids-list-box/IdsListBoxOption.svelte';
+  import DynamicIdsDropdown from '../../components/ids-dropdown/DynamicIdsDropdown.svelte';
+  import DynamicIdsListBox from '../../components/ids-list-box/DynamicIdsListBox.svelte';
+  import DynamicIdsListBoxOption from '../../components/ids-list-box/DynamicIdsListBoxOption.svelte';
 
-  let ref: IdsDropdown;
+  let ref: DynamicIdsDropdown;
 
   onMount(async () => {
     // Highlights "California" in the Listbox
@@ -22,12 +22,12 @@
 
 <ids-layout-grid auto="true">
   <ids-layout-grid-cell>
-    <IdsDropdown bind:this={ref} label="My Dropdown">
-      <IdsListBox>
+    <DynamicIdsDropdown bind:this={ref} label="My Dropdown">
+      <DynamicIdsListBox>
         {#each $dropdownStatesStore as state}
-          <IdsListBoxOption id={state.id} value={state.id}>{state.name}</IdsListBoxOption>
+          <DynamicIdsListBoxOption id={state.id} value={state.id}>{state.name}</DynamicIdsListBoxOption>
         {/each}
-      </IdsListBox>
-    </IdsDropdown>
+      </DynamicIdsListBox>
+    </DynamicIdsDropdown>
   </ids-layout-grid-cell>
 </ids-layout-grid>

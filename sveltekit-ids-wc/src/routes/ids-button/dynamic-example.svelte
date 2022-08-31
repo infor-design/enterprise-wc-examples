@@ -1,12 +1,10 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import DynamicIdsButton from '../../components/ids-button/DynamicIdsButton.svelte';
 
-  import IdsButton from '../../components/ids-button/IdsButton.svelte';
-
-  let ref: IdsButton;
+  let ref: DynamicIdsButton;
   let text: 'My default button';
   let type: 'default';
-  let colorVariant: '';
 
   const types = [
     '',
@@ -52,10 +50,10 @@
       {@debug ref}
     {/if}
 
-    <IdsButton
+    <DynamicIdsButton
       {text}
       {type}
       bind:this={ref}
-      on:click={handleClick}></IdsButton>
+      on:click={handleClick}></DynamicIdsButton>
   </ids-layout-grid-cell>
 </ids-layout-grid>

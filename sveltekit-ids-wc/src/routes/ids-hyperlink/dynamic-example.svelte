@@ -1,8 +1,9 @@
 <script lang="ts">
-  import IdsHyperLink from '../../components/ids-hyperlink/IdsHyperLink.svelte';
-  import type IdsButton from '../../components/ids-button/IdsButton.svelte';
+  import DynamicIdsHyperLink from '../../components/ids-hyperlink/DynamicIdsHyperLink.svelte';
+  import type IdsHyperLink from 'ids-enterprise-wc/components/ids-hyperlink/ids-hyperlink';
+  import type IdsButton from 'ids-enterprise-wc/components/ids-button/ids-button';
 
-  let ref: IdsHyperLink;
+  let ref: DynamicIdsHyperLink;
 
   // Generates the buttons with linking information
   const links = [
@@ -20,7 +21,6 @@
   const handleClick = (e: MouseEvent): any => {
     e.preventDefault();
     const target = (e.target as unknown as IdsHyperLink);
-
     if (target.href) {
       console.info(`Clicked hyperlink will go to ${target.href}`);
     } else {
@@ -29,7 +29,7 @@
   }
 
   const handleHrefChange = (e: CustomEvent): any => {
-    const target = (e.target as unknown as IdsButton); // IdsButton
+    const target = (e.target as unknown as IdsButton);
     if (ref && target) {
       ref.href = target.dataset.href;
       displayedHyperlinkText = target.dataset.linkText;
@@ -52,10 +52,10 @@
 
 <ids-layout-grid auto="true">
   <ids-layout-grid-cell>
-    <IdsHyperLink
+    <DynamicIdsHyperLink
       textDecoration="hover"
       bind:this={ref}
-      on:click={handleClick}>{ displayedHyperlinkText }</IdsHyperLink>
+      on:click={handleClick}>{ displayedHyperlinkText }</DynamicIdsHyperLink>
   </ids-layout-grid-cell>
 </ids-layout-grid>
 

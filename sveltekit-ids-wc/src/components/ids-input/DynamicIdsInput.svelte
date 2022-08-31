@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher, onMount } from 'svelte';
+  import type IdsInput from 'ids-enterprise-wc/components/ids-input/ids-input';
 
 	onMount(async () => {
 		await import('ids-enterprise-wc/components/ids-input/ids-input');
@@ -8,9 +9,10 @@
 	const dispatch = createEventDispatcher();
 
 	// Log the `<ids-input>` element when clicked
-	const onInput = (e: CustomEvent): void => {
-		if (e.target?.tagName === 'IDS-INPUT') {
-			console.dir(e.target.value);
+	const onInput = (e: InputEvent): void => {
+    const target = (e.target as unknown as IdsInput);
+    if (target && target.tagName === 'IDS-INPUT') {
+			console.dir(target.value);
 			dispatch('input', { nativeEvent: e });
 		}
 	};

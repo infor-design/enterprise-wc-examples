@@ -7,10 +7,10 @@
 		await import('ids-enterprise-wc/components/ids-button/ids-button');
 	});
 
-	export let id = '';
-	export let text = '';
-	export let type: '';
-  export let colorVariant: '';
+	export let id: string = '';
+	export let text: string = '';
+	export let type: string = '';
+  export let colorVariant: string = '';
   export let disabled = false;
 </script>
 

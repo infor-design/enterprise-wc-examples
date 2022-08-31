@@ -1,23 +1,25 @@
 <script lang="ts">
   // Main Component
-  import IdsTag from '../../components/ids-tag/IdsTag.svelte';
+  import DynamicIdsTag from '../../components/ids-tag/DynamicIdsTag.svelte';
+  import type IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag';
   import TAG_COLORS from '../../components/ids-tag/colors';
   import { writableTagArray } from './dynamic-example.stores';
+  import type { TagStoreEntry, TagStoreEntryArray } from './dynamic-example.stores';
   import { dashCase, prettyFormat } from '../../utils/string';
 
   // Supporting Components
-  import IdsCheckbox from '../../components/ids-checkbox/IdsCheckbox.svelte';
-  import IdsDropdown from '../../components/ids-dropdown/IdsDropdown.svelte';
-  import IdsInput from '../../components/ids-input/IdsInput.svelte';
-  import IdsListBox from '../../components/ids-list-box/IdsListBox.svelte';
-  import IdsListBoxOption from '../../components/ids-list-box/IdsListBoxOption.svelte';
+  import DynamicIdsCheckbox from '../../components/ids-checkbox/DynamicIdsCheckbox.svelte';
+  import DynamicIdsDropdown from '../../components/ids-dropdown/DynamicIdsDropdown.svelte';
+  import DynamicIdsInput from '../../components/ids-input/DynamicIdsInput.svelte';
+  import DynamicIdsListBox from '../../components/ids-list-box/DynamicIdsListBox.svelte';
+  import DynamicIdsListBoxOption from '../../components/ids-list-box/DynamicIdsListBoxOption.svelte';
 
   // `refs/selectedId/currentTag/currentTagStoreRecord` handle the target
-  // of the form controls (eitehr a new or existing tag)
-  $: refs = [];
+  // of the form controls (either a new or existing tag)
+  let refs: Array<DynamicIdsTag> = [];
   export let selectedId = -1;
-  export let currentTag: IdsTag;
-  export let currentTagRecord: any;
+  export let currentTag: IdsTag | null;
+  export let currentTagRecord: TagStoreEntry | null;
 
   // Form Control Values
   export let text = 'This is a tag';
@@ -39,19 +41,23 @@
 
   // Selects a tag by its ID
   const select = (id: number) => {
-    currentTagRecord = $writableTagArray.find((item: Object) => { 
+    const newRecord = $writableTagArray.find((item: TagStoreEntry) => { 
       return item.id === id;
     });
-
-    text = currentTag.textContent;
-    color = currentTag.color || '';
-    dismissible = currentTag.dismissible;
-    clickable = currentTag.clickable;
+    if (newRecord) {
+      currentTagRecord = newRecord;
+      if (currentTag) {
+        text = currentTag.textContent;
+        color = currentTag.color || '';
+        dismissible = currentTag.dismissible;
+        clickable = currentTag.clickable;
+      }
+    }
   }
 
   const deselect = () => {
-    currentTag = undefined;
-    currentTagRecord = undefined;
+    currentTag = null;
+    currentTagRecord = null;
     selectedId = -1;
   }
 
@@ -63,7 +69,7 @@
   }
 
   // Listens for the Svelte "Component Event" dispatched by the dynamic `<IdsTag>` svelte component
-  const onBeforeTagRemove = (e) => {
+  const onBeforeTagRemove = (e: CustomEvent) => {
     const tagStoreId = parseInt(e.detail.nativeEvent.target.dataset.id);
     writableTagArray.remove(tagStoreId);
     deselect();
@@ -72,11 +78,13 @@
 
   // When clicking on an existing tag in the list, 
   // the form fields are updated to reflect its state.
-  const setAsCurrentTag = (e) => {
+  const setAsCurrentTag = (e: CustomEvent) => {
     // NOTE: `e.detail` is the Svelte Component's event detail, NOT the IDS component's.
     currentTag = e.detail.nativeEvent.target;
-    selectedId = parseInt(currentTag.dataset.id);
-    select(selectedId);
+    if (currentTag) {
+      selectedId = parseInt(currentTag.dataset.id);
+      select(selectedId);
+    }
   };
 
   // Runs on the <ids-input>'s 'input' event
@@ -87,15 +95,19 @@
   }
 
   // Updates the writable tag array when a specified value changes
-  const updateStoreValue = (targetEl, prop) => {
+  const updateStoreValue = (targetEl: any, prop: string) => {
     let targetProp = 'value';
     if (['IDS-CHECKBOX', 'IDS-RADIO'].includes(targetEl.tagName)) {
       targetProp = 'checked';
     }
 
     if (selectedId > -1) {
-      $writableTagArray = $writableTagArray.map(i => {
-        if (i.id === selectedId) i[prop] = targetEl[targetProp];
+      $writableTagArray = $writableTagArray.map((i: TagStoreEntry) => {
+        if (i.id === selectedId) {
+          if (targetEl[prop]) {
+            i[prop] = targetEl[targetProp];
+          }
+        }
         return i;
       });
     }
@@ -114,7 +126,7 @@
   }
 
   // Makes the "Deselect" button in the template disabled/enabled based on whether or not a tag is selected
-  $: hasNoCurrentTag = currentTag === undefined;
+  $: hasNoCurrentTag = currentTag === null;
 
   // Lists all records in the writable store in an easily-read format
   $: tagStoreStringRecords = prettyFormat($writableTagArray); // prettyFormat($writableTagArray);
@@ -145,7 +157,7 @@
   <ids-layout-grid-cell>
     {#if $writableTagArray.length > 0}
       {#each $writableTagArray as tag, i}
-        <IdsTag
+        <DynamicIdsTag
           bind:this={refs[i]}
           bind:id={tag.id}
           bind:text={tag.text}
@@ -171,34 +183,34 @@
       {/if}
 
       <p>
-        <IdsInput
+        <DynamicIdsInput
           label="Text Content"
           id="text-content"
           bind:value={text}
-          on:input={handleInput}></IdsInput>
+          on:input={handleInput}></DynamicIdsInput>
       </p>
 
       <p>
-        <IdsDropdown id="style" bind:value={color} on:change={handleTagColorChange} label="Tag Color">
-          <IdsListBox>
+        <DynamicIdsDropdown id="style" bind:value={color} on:change={handleTagColorChange} label="Tag Color">
+          <DynamicIdsListBox>
             {#each TAG_COLORS as option}
-              <IdsListBoxOption id="color-{dashCase(option.name)}" value={option.value}>{option.name}</IdsListBoxOption>
+              <DynamicIdsListBoxOption id="color-{dashCase(option.name)}" value={option.value}>{option.name}</DynamicIdsListBoxOption>
             {/each}
-          </IdsListBox>
-        </IdsDropdown>
+          </DynamicIdsListBox>
+        </DynamicIdsDropdown>
       </p>
 
       <p>
-        <IdsCheckbox
+        <DynamicIdsCheckbox
           label="Make Clickable"
           id="use-clickable"
           bind:checked={clickable}
-          on:change={handleClickableChange}></IdsCheckbox>
-        <IdsCheckbox
+          on:change={handleClickableChange}></DynamicIdsCheckbox>
+        <DynamicIdsCheckbox
           label="Make Dismissible"
           id="use-dismissible"
           bind:checked={dismissible}
-          on:change={handleDismissibleChange}></IdsCheckbox>
+          on:change={handleDismissibleChange}></DynamicIdsCheckbox>
       </p>
 
       <p>

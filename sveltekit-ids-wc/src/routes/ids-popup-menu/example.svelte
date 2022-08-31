@@ -1,7 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import type IdsPopupMenu from 'ids-enterprise-wc/components/ids-popup-menu/ids-popup-menu';
 
-  let ref;
+  let ref: IdsPopupMenu;
 
   onMount(async (): Promise<void> => {
     await import('ids-enterprise-wc/components/ids-popup-menu/ids-popup-menu');

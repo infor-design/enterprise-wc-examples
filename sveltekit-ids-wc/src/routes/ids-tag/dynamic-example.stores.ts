@@ -1,5 +1,16 @@
 import { writable } from 'svelte/store';
 
+export type TagStoreEntry = {
+  [index: string]: unknown,
+  id?: number,
+  text: string,
+  color?: string,
+  dismissible?: boolean,
+  clickable?: boolean,
+}
+
+export type TagStoreEntryArray = Array<TagStoreEntry>;
+
 const DEFAULTS = {
   text: 'This is a Dynamic Tag',
   color: '',
@@ -12,12 +23,12 @@ const DEFAULTS = {
  * @param {Array<Object>} data array of plain objects representing component settings
  * @returns {Object} containing an instance of a Svelte writable store
  */
-function createTagArray(data = []) {
-  const { subscribe, set, update } = writable([]);
+function createTagArray(data: TagStoreEntryArray = []) {
+  const { subscribe, set, update } = writable(data);
   let count = 0;
 
-  const add = (settings) => {
-    update(arr => {
+  const add = (settings: TagStoreEntry) => {
+    update((arr: TagStoreEntryArray) => {
       settings.id = count;
       count++;
 
@@ -28,7 +39,7 @@ function createTagArray(data = []) {
     });
   };
 
-  const remove = (id) => {
+  const remove = (id: number) => {
     update(arr => arr.filter(tagDef => tagDef.id !== id));
   };
 
