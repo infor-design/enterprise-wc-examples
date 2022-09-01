@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { appStore } from '../../app.store';
+  import { appStore } from '../../../../app.store';
 
   onMount(async (): Promise<void> => {
     await Promise.all([

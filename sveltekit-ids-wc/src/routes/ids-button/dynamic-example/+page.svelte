@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import DynamicIdsButton from '../../components/ids-button/DynamicIdsButton.svelte';
+  import DynamicIdsButton from '../../../components/ids-button/DynamicIdsButton.svelte';
 
   let ref: DynamicIdsButton;
   let text: 'My default button';

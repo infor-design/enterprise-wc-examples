@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { deepClone } from '../../utils/deepClone';
+  import { deepClone } from '../../../utils/deepClone';
 
   onMount(async () => {
     await import('ids-enterprise-wc/components/ids-input/ids-input');

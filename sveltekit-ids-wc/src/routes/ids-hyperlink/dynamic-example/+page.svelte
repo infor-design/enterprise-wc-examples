@@ -1,5 +1,5 @@
 <script lang="ts">
-  import DynamicIdsHyperLink from '../../components/ids-hyperlink/DynamicIdsHyperLink.svelte';
+  import DynamicIdsHyperLink from '../../../components/ids-hyperlink/DynamicIdsHyperLink.svelte';
   import type IdsHyperLink from 'ids-enterprise-wc/components/ids-hyperlink/ids-hyperlink';
   import type IdsButton from 'ids-enterprise-wc/components/ids-button/ids-button';
 

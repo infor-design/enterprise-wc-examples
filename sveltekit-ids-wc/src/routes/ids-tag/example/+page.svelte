@@ -1,5 +1,5 @@
 <script lang="ts">
-  import TAG_COLORS from '../../components/ids-tag/colors';
+  import TAG_COLORS from '../../../components/ids-tag/colors';
   import { onMount } from 'svelte';
 
   onMount(async (): Promise<void> => {

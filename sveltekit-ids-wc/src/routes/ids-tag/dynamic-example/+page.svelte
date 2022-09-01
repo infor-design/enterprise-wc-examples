@@ -1,18 +1,20 @@
 <script lang="ts">
+  // throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
   // Main Component
-  import DynamicIdsTag from '../../components/ids-tag/DynamicIdsTag.svelte';
+  import DynamicIdsTag from '../../../components/ids-tag/DynamicIdsTag.svelte';
   import type IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag';
-  import TAG_COLORS from '../../components/ids-tag/colors';
-  import { writableTagArray } from './dynamic-example.stores';
-  import type { TagStoreEntry, TagStoreEntryArray } from './dynamic-example.stores';
-  import { dashCase, prettyFormat } from '../../utils/string';
+  import TAG_COLORS from '../../../components/ids-tag/colors';
+  import { writableTagArray } from './+page';
+  import type { TagStoreEntry } from './+page';
+  import { dashCase, prettyFormat } from '../../../utils/string';
 
   // Supporting Components
-  import DynamicIdsCheckbox from '../../components/ids-checkbox/DynamicIdsCheckbox.svelte';
-  import DynamicIdsDropdown from '../../components/ids-dropdown/DynamicIdsDropdown.svelte';
-  import DynamicIdsInput from '../../components/ids-input/DynamicIdsInput.svelte';
-  import DynamicIdsListBox from '../../components/ids-list-box/DynamicIdsListBox.svelte';
-  import DynamicIdsListBoxOption from '../../components/ids-list-box/DynamicIdsListBoxOption.svelte';
+  import DynamicIdsCheckbox from '../../../components/ids-checkbox/DynamicIdsCheckbox.svelte';
+  import DynamicIdsDropdown from '../../../components/ids-dropdown/DynamicIdsDropdown.svelte';
+  import DynamicIdsInput from '../../../components/ids-input/DynamicIdsInput.svelte';
+  import DynamicIdsListBox from '../../../components/ids-list-box/DynamicIdsListBox.svelte';
+  import DynamicIdsListBoxOption from '../../../components/ids-list-box/DynamicIdsListBoxOption.svelte';
 
   // `refs/selectedId/currentTag/currentTagStoreRecord` handle the target
   // of the form controls (either a new or existing tag)

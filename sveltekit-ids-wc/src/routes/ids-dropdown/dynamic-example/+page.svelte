@@ -1,10 +1,10 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { dropdownStatesStore } from './dynamic-example.stores'; 
+  import { dropdownStatesStore } from './+page.server'; 
 
-  import DynamicIdsDropdown from '../../components/ids-dropdown/DynamicIdsDropdown.svelte';
-  import DynamicIdsListBox from '../../components/ids-list-box/DynamicIdsListBox.svelte';
-  import DynamicIdsListBoxOption from '../../components/ids-list-box/DynamicIdsListBoxOption.svelte';
+  import DynamicIdsDropdown from '../../../components/ids-dropdown/DynamicIdsDropdown.svelte';
+  import DynamicIdsListBox from '../../../components/ids-list-box/DynamicIdsListBox.svelte';
+  import DynamicIdsListBoxOption from '../../../components/ids-list-box/DynamicIdsListBoxOption.svelte';
 
   let ref: DynamicIdsDropdown;
 

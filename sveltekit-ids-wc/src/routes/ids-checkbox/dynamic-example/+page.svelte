@@ -1,5 +1,5 @@
 <script lang="ts">
-  import DynamicIdsCheckbox from '../../components/ids-checkbox/DynamicIdsCheckbox.svelte';
+  import DynamicIdsCheckbox from '../../../components/ids-checkbox/DynamicIdsCheckbox.svelte';
   import type IdsCheckbox from 'ids-enterprise-wc/components/ids-checkbox/ids-checkbox';
 
   let ref: DynamicIdsCheckbox;
