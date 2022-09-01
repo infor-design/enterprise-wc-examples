@@ -16,6 +16,6 @@
 
 <ids-layout-grid auto="true">
   <ids-layout-grid-cell>
-    <IdsDemoListing data={listingData} componentName="ids-text"></IdsDemoListing>
+    <IdsDemoListing data={listingData} componentId="ids-text"></IdsDemoListing>
   </ids-layout-grid-cell>
 </ids-layout-grid>

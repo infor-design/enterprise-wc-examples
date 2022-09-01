@@ -5,9 +5,9 @@
     {
       link: 'example',
       type: 'Main Example',
-      description: 'Simple usage of an IDS Modal within Svelte'
+      description: 'Simple usage of an IDS Badge within Svelte'
     }
   ];
 </script>
 
-<IdsDemoListing data={listingData} componentName="Ids Modal" componentId="ids-modal"></IdsDemoListing>
+<IdsDemoListing data={listingData} componentName="Ids Badge" componentId="ids-badge"></IdsDemoListing>

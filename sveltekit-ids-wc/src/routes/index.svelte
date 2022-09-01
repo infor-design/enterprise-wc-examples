@@ -2,17 +2,7 @@
   import { onMount } from 'svelte';
   import { writable } from 'svelte/store';
   import type { Writable } from 'svelte/store';
-
-  type IdsComponentData = {
-    link: string;
-    description: string;
-    component: string;
-  }
-
-  type IdsComponentCategory = {
-    name: string;
-    components: Array<IdsComponentData>;
-  }
+  import type { IdsComponentCategory } from '../app';
 
   const DEFAULT_CATEGORIES: Array<IdsComponentCategory> = [];
   let categories: Writable<Array<IdsComponentCategory>> = writable(DEFAULT_CATEGORIES);
@@ -44,7 +34,7 @@
                           font-weight="bold"
                           color="slate-100"
                           mode="light"
-                          version="new">{component.component}</ids-text>
+                          version="new">{component.type}</ids-text>
                         <ids-text type="h2" font-size="16" color="slate-60" mode="light" version="new">{component.description}</ids-text>
                       </div>
                     </ids-card>

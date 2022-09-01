@@ -10,12 +10,4 @@
   ];
 </script>
 
-<ids-layout-grid auto="true">
-  <ids-text font-size="20" type="h1">Ids App Menu Examples</ids-text>
-</ids-layout-grid>
-
-<ids-layout-grid auto="true">
-  <ids-layout-grid-cell>
-    <IdsDemoListing data={listingData} componentName="ids-app-menu"></IdsDemoListing>
-  </ids-layout-grid-cell>
-</ids-layout-grid>
+<IdsDemoListing data={listingData} componentName="Ids App Menu" componentId="ids-app-menu"></IdsDemoListing>

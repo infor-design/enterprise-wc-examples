@@ -1,10 +1,13 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import type IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid';
+  import type { IdsComponentData } from '../../app';
 
-  export let data;
-  export let componentName = 'ids-component';
+  export let data: Array<IdsComponentData>;
+  export let componentId = 'ids-component';
+  export let componentName = 'Ids Component';
 
-  let dataGrid;
+  let dataGrid: IdsDataGrid;
 
   onMount(async (): Promise<void> => {
     await import('ids-enterprise-wc/components/ids-data-grid/ids-data-grid');
@@ -15,7 +18,7 @@
           id: 'link',
           name: 'Example Name',
           field: 'link',
-          href: `/${componentName}/{{value}}`,
+          href: `/${componentId}/{{value}}`,
           sortable: true,
           formatter: dataGrid.formatters.hyperlink
         },
@@ -42,4 +45,13 @@
   });
 </script>
 
-<ids-data-grid id="demo-listing" list-style="true" bind:this={dataGrid}></ids-data-grid>
+<ids-layout-grid auto="true">
+  <ids-text font-size="20" type="h1">{componentName} Examples</ids-text>
+</ids-layout-grid>
+
+<ids-layout-grid auto="true">
+  <ids-layout-grid-cell>
+    <ids-data-grid id="demo-listing" list-style="true" bind:this={dataGrid}></ids-data-grid>
+  </ids-layout-grid-cell>
+</ids-layout-grid>
+

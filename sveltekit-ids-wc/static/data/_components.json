@@ -5,32 +5,32 @@
     "components": [
       {
         "link": "ids-alert",
-        "component": "Alert",
+        "type": "Alert",
         "description": "Alert indicator/icon"
       },
       {
         "link": "ids-checkbox",
-        "component": "Checkbox",
+        "type": "Checkbox",
         "description": "Checkbox Input Element"
       },
       {
         "link": "ids-dropdown",
-        "component": "Dropdown",
+        "type": "Dropdown",
         "description": "Select from a list of items"
       },
       {
         "link": "ids-input",
-        "component": "Input",
+        "type": "Input",
         "description": "Input element and features"
       },
       {
         "link": "ids-mask",
-        "component": "Mask",
+        "type": "Mask",
         "description": "Util for masking input"
       },
       {
         "link": "ids-textarea",
-        "component": "Text Area",
+        "type": "Text Area",
         "description": "An input for multi line text"
       }
     ]
@@ -41,42 +41,42 @@
     "components": [
       {
         "link": "ids-action-panel",
-        "component": "Action Panel",
+        "type": "Action Panel",
         "description": "A modal component containing complicated forms"
       },
       {
         "link": "ids-action-sheet",
-        "component": "Action Sheet",
+        "type": "Action Sheet",
         "description": "Displays a menu at the bottom of your screen on mobile devices"
       },
       {
         "link": "ids-app-menu",
-        "component": "App Menu",
+        "type": "App Menu",
         "description": "Application Nav"
       },
       {
         "link": "ids-button",
-        "component": "Button",
+        "type": "Button",
         "description": "Simple HTMLButtonElement"
       },
       {
         "link": "ids-modal",
-        "component": "Modal",
+        "type": "Modal",
         "description": "Displays a Modal Dialog"
       },
       {
         "link": "ids-popup-menu",
-        "component": "Popup Menu",
+        "type": "Popup Menu",
         "description": "Displays a Context Menu"
       },
       {
         "link": "ids-tabs",
-        "component": "Tabs",
+        "type": "Tabs",
         "description": "Segment different areas"
       },
       {
         "link": "ids-tag",
-        "component": "Tag",
+        "type": "Tag",
         "description": "UI Classification"
       }
     ]
@@ -87,12 +87,12 @@
     "components": [
       {
         "link": "ids-about",
-        "component": "About",
+        "type": "About",
         "description": "Displays info about a product with copyright and browser specs"
       },
       {
         "link": "ids-icon",
-        "component": "Icon",
+        "type": "Icon",
         "description": "SVG Icons"
       }
     ]
@@ -103,7 +103,7 @@
     "components": [
       {
         "link": "ids-swaplist",
-        "component": "SwapList",
+        "type": "SwapList",
         "description": "Displays Swaplist Component"
       }
     ]
@@ -114,17 +114,17 @@
     "components": [
       {
         "link": "ids-accordion",
-        "component": "Accordion",
+        "type": "Accordion",
         "description": "Vertically Stacked Sections"
       },
       {
         "link": "ids-list-box",
-        "component": "List Box",
+        "type": "List Box",
         "description": "List Item Markup"
       },
       {
         "link": "ids-popup",
-        "component": "Popup",
+        "type": "Popup",
         "description": "Displays a Popup Container"
       }
     ]
@@ -142,17 +142,17 @@
     "components": [
       {
         "link": "ids-area-chart",
-        "component": "Area Chart",
+        "type": "Area Chart",
         "description": "Chart used to compare trends with solid colored areas"
       },
       {
         "link": "ids-axis-chart",
-        "component": "Axis Chart",
+        "type": "Axis Chart",
         "description": "Configurable chart with x and y axis"
       },
       {
         "link": "ids-color",
-        "component": "Color",
+        "type": "Color",
         "description": "Color Swatches"
       }
     ]
@@ -163,12 +163,12 @@
     "components": [
       {
         "link": "ids-hyperlink",
-        "component": "Hyperlink",
+        "type": "Hyperlink",
         "description": "Linked text"
       },
       {
         "link": "ids-text",
-        "component": "Text",
+        "type": "Text",
         "description": "An element for plain text"
       }
     ]

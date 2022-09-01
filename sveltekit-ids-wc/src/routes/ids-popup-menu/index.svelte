@@ -15,12 +15,4 @@
   ];
 </script>
 
-<ids-layout-grid auto="true">
-  <ids-text font-size="20" type="h1">Ids Popup Menu Examples</ids-text>
-</ids-layout-grid>
-
-<ids-layout-grid auto="true">
-  <ids-layout-grid-cell>
-    <IdsDemoListing data={listingData} componentName="ids-popup-menu"></IdsDemoListing>
-  </ids-layout-grid-cell>
-</ids-layout-grid>
+<IdsDemoListing data={listingData} componentName="Ids Popup Menu" componentId="ids-popup-menu"></IdsDemoListing>
