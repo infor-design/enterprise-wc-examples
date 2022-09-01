@@ -1,4 +1,8 @@
 <script lang="ts">
+  // @TODO Move all `export let [whatever]` statements into a `data` prop,
+  // and create an endpoint.ts file with a `load()` function for setting these props.
+  // See https://www.netlify.com/blog/migrating-breaking-changes-in-sveltekit/#migrating-changes
+
   // Main Component
   import DynamicIdsTag from '../../../components/ids-tag/DynamicIdsTag.svelte';
   import type IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag';
