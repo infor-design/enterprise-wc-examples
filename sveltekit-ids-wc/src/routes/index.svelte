@@ -3,7 +3,19 @@
   import { writable } from 'svelte/store';
   import type { Writable } from 'svelte/store';
 
-  let categories: Writable<Array<{ id: string, name: string }>> = writable([]);
+  type IdsComponentData = {
+    link: string;
+    description: string;
+    component: string;
+  }
+
+  type IdsComponentCategory = {
+    name: string;
+    components: Array<IdsComponentData>;
+  }
+
+  const DEFAULT_CATEGORIES: Array<IdsComponentCategory> = [];
+  let categories: Writable<Array<IdsComponentCategory>> = writable(DEFAULT_CATEGORIES);
 
   onMount(async (): Promise<void> => {
     const res = await fetch('/data/_components');
