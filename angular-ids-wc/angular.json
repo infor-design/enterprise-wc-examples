@@ -8,7 +8,11 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": false
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -29,11 +33,14 @@
             "scripts": [
               "node_modules/ids-enterprise-wc/enterprise-wc.js"
             ],
-            "aot": false,
             "vendorChunk": true,
             "extractLicenses": false,
             "buildOptimizer": false,
-            "sourceMap": true,
+            "sourceMap": {
+              "scripts": true,
+              "styles": true,
+              "vendor": true
+            },
             "optimization": false,
             "namedChunks": true,
             "preserveSymlinks": true
@@ -54,9 +61,21 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": {
+                "scripts": true,
+                "styles": true,
+                "vendor": true
+              },
+              "namedChunks": true
             }
           },
-          "defaultConfiguration": ""
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -66,6 +85,9 @@
           "configurations": {
             "production": {
               "browserTarget": "demo:build:production"
+            },
+            "development": {
+              "browserTarget": "demo:build:development"
             }
           }
         },

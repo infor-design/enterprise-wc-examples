@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild, Input } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, Input, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid';
 
@@ -22,9 +22,9 @@ export class DemoListingComponent implements AfterViewInit {
       id: 'name',
       name: 'Name',
       field: 'path',
-      href: `${this.router.url}/{{value}}`,
       sortable: true,
-      formatter: this.table.nativeElement.formatters.hyperlink
+      formatter: this.table.nativeElement.formatters.hyperlink,
+      href: `${this.router.url}/{{value}}`,
     });
     this.columns.push({
       id: 'type',
@@ -43,6 +43,16 @@ export class DemoListingComponent implements AfterViewInit {
 
     this.table.nativeElement.columns = this.columns;
     this.table.nativeElement.data = this.routes;
+  }
+
+  @HostListener('document:click', ['$event'])
+  public handleClick(event: Event): void {
+    event.preventDefault();
+    const element = event.target as HTMLAnchorElement;
+    const route = element?.shadowRoot.querySelector('ids-hyperlink').shadowRoot.querySelector('a')?.getAttribute('href');
+    if (route) {
+      this.router.navigateByUrl(`/${route}`);
+    }
   }
 
 }
