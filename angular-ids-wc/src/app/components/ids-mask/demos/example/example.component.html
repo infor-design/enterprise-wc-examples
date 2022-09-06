@@ -1,20 +1,24 @@
-<ids-layout-grid cols="3" gap="md">
-  <ids-layout-grid-cell>
-    <ids-text font-size="12" type="h1">Ids Input (Masked)</ids-text>
-  </ids-layout-grid-cell>
-</ids-layout-grid>
+<ids-container language="en" locale="en-US" padding="8" hidden>
+  <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
+  
+  <ids-layout-grid cols="3" gap="md">
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">Ids Input (Masked)</ids-text>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
 
-<ids-layout-grid cols="3" gap="md">
-  <ids-layout-grid-cell>
-    <ids-input id="mask-phone-number" label="Phone Number"
-      placeholder="(###) ###-####"></ids-input>
-  </ids-layout-grid-cell>
-  <ids-layout-grid-cell>
-    <ids-input id="mask-date" label="Date/Time"
-      placeholder="M/d/yyyy hh:mm a"></ids-input>
-  </ids-layout-grid-cell>
-  <ids-layout-grid-cell>
-    <ids-input id="mask-number" label="Formatted Number"
-      placeholder="-1,000,000.00" text-align="right"></ids-input>
-  </ids-layout-grid-cell>
-</ids-layout-grid>
+  <ids-layout-grid cols="3" gap="md">
+    <ids-layout-grid-cell>
+      <ids-input id="mask-phone-number" label="Phone Number"
+        placeholder="(###) ###-####"></ids-input>
+    </ids-layout-grid-cell>
+    <ids-layout-grid-cell>
+      <ids-input id="mask-date" label="Date/Time"
+        placeholder="M/d/yyyy hh:mm a"></ids-input>
+    </ids-layout-grid-cell>
+    <ids-layout-grid-cell>
+      <ids-input id="mask-number" label="Formatted Number"
+        placeholder="-1,000,000.00" text-align="right"></ids-input>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>

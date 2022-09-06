@@ -1,18 +1,22 @@
-<ids-layout-grid auto="true">
-  <ids-layout-grid-cell>
-    <ids-text font-size="12" type="h1">Data Label</ids-text>
-  </ids-layout-grid-cell>
-</ids-layout-grid>
-<ids-layout-grid auto="true" id="ids-data-label-list" gap="md">
+<ids-container language="en" locale="en-US" padding="8" hidden>
+  <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
   
-  <!-- LabelPosition needs to be set first -->
-  <ids-data-label 
-    #dataLabelLabelLeft
-    label-position="left" 
-    label="Shipping to"
-  >
-    Los Angeles, California 90001 USA
-  </ids-data-label>
+  <ids-layout-grid auto="true">
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">Data Label</ids-text>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+  <ids-layout-grid auto="true" id="ids-data-label-list" gap="md">
+    
+    <!-- LabelPosition needs to be set first -->
+    <ids-data-label 
+      #dataLabelLabelLeft
+      label-position="left" 
+      label="Shipping to"
+    >
+      Los Angeles, California 90001 USA
+    </ids-data-label>
 
-  <ids-data-label label="Shipping to">Los Angeles, California 90001 USA</ids-data-label>
-</ids-layout-grid>
+    <ids-data-label label="Shipping to">Los Angeles, California 90001 USA</ids-data-label>
+  </ids-layout-grid>
+</ids-container>

@@ -49,9 +49,11 @@ export class DemoListingComponent implements AfterViewInit {
   public handleClick(event: Event): void {
     event.preventDefault();
     const element = event.target as HTMLAnchorElement;
-    const route = element?.shadowRoot.querySelector('ids-hyperlink').shadowRoot.querySelector('a')?.getAttribute('href');
-    if (route) {
-      this.router.navigateByUrl(`/${route}`);
+    if (element.shadowRoot) {
+      const route = element?.shadowRoot?.querySelector('ids-hyperlink').shadowRoot?.querySelector('a')?.getAttribute('href');
+      if (route) {
+        this.router.navigateByUrl(`/${route}`);
+      }
     }
   }
 
