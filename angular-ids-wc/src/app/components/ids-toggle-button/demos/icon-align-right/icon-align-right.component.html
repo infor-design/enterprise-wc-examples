@@ -6,8 +6,15 @@
   </ids-layout-grid>
   <ids-layout-grid cols="4" gap="md">
     <ids-layout-grid-cell>
-      <ids-toggle-button id="test-toggle-button" icon-align="end" icon-on="heart-filled" icon-off="heart-outlined"
-          text-off="Favorite (Off)" text-on="Favorite (On)">
+      <ids-toggle-button 
+        id="test-toggle-button" 
+        [attr.icon-align]="'end'" 
+        [attr.icon-on]="'heart-filled'" 
+        [attr.icon-off]="'heart-outlined'"
+        [attr.text-off]="'Favorite (Off)'" 
+        [attr.text-on]="'Favorite (On)'"
+        (click)="handleToggle($event)"
+      >
         <ids-icon slot="icon" icon="settings"></ids-icon>
         <span slot="text"></span>
       </ids-toggle-button>

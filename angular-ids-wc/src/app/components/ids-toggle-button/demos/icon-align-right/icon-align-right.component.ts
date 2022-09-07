@@ -10,7 +10,10 @@ export class IconAlignRightComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('icon-align-right init');
+    console.log('IdsToggleButton icon-align-right OnInit');
   }
 
+  handleToggle(e: Event | any) {
+    e.target.toggle();
+  }
 }

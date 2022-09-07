@@ -10,7 +10,10 @@ export class ExampleComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('example init');
+    console.log('IdsToggleButton example OnInit');
   }
 
+  handleToggle(e: Event | any) {
+    e.target.toggle();
+  }
 }
