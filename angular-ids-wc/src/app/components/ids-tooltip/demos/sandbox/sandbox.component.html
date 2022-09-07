@@ -7,13 +7,13 @@
   <ids-layout-grid auto="true">
     <ids-layout-grid-cell>
       <ids-button id="tooltip-top" type="secondary">Tooltip on Top</ids-button>
-      <ids-tooltip target="#tooltip-top" placement="top">Additional Information</ids-tooltip>
+      <ids-tooltip [attr.target]="'#tooltip-top'" placement="top">Additional Information</ids-tooltip>
       <ids-button id="tooltip-bottom" type="secondary">Tooltip on Bottom</ids-button>
-      <ids-tooltip target="#tooltip-bottom" placement="bottom">Additional Information</ids-tooltip>
+      <ids-tooltip [attr.target]="'#tooltip-bottom'" placement="bottom">Additional Information</ids-tooltip>
       <ids-button id="tooltip-left" type="secondary">Tooltip on Left</ids-button>
-      <ids-tooltip target="#tooltip-left" placement="left">Additional Information</ids-tooltip>
+      <ids-tooltip [attr.target]="'#tooltip-left'" placement="left">Additional Information</ids-tooltip>
       <ids-button id="tooltip-right" type="secondary">Tooltip on Right</ids-button>
-      <ids-tooltip target="#tooltip-right" placement="right">Additional Information</ids-tooltip>
+      <ids-tooltip [attr.target]="'#tooltip-right'" placement="right">Additional Information</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
@@ -23,7 +23,7 @@
   <ids-layout-grid auto="true">
     <ids-layout-grid-cell>
       <ids-button id="tooltip-disabed" type="secondary" disabled="true">Tooltip on Disabled</ids-button>
-      <ids-tooltip target="#tooltip-disabed" placement="top">Additional Information</ids-tooltip>
+      <ids-tooltip [attr.target]="'#tooltip-disabed'" placement="top">Additional Information</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
@@ -33,9 +33,9 @@
   <ids-layout-grid auto="true">
     <ids-layout-grid-cell>
       <ids-button id="tooltip-click" type="secondary">Tooltip on Click</ids-button>
-      <ids-tooltip target="#tooltip-click" trigger="click">Additional Information 1</ids-tooltip>
+      <ids-tooltip [attr.target]="'#tooltip-click'" trigger="click">Additional Information 1</ids-tooltip>
       <ids-button id="tooltip-focus" type="secondary">Tooltip on Focus</ids-button>
-      <ids-tooltip target="#tooltip-focus" trigger="focus">Additional Information 2</ids-tooltip>
+      <ids-tooltip [attr.target]="'#tooltip-focus'" trigger="focus">Additional Information 2</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
@@ -45,7 +45,7 @@
   <ids-layout-grid auto="true">
     <ids-layout-grid-cell>
       <ids-button id="tooltip-parts" type="secondary">Custom Tooltip Css</ids-button>
-      <ids-tooltip target="#tooltip-parts" placement="top">Customized Text</ids-tooltip>
+      <ids-tooltip [attr.target]="'#tooltip-parts'" placement="top">Customized Text</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
@@ -56,7 +56,7 @@
     <ids-layout-grid-cell>
       <ids-button id="tooltip-shared-1" type="secondary">Button 1</ids-button>
       <ids-button id="tooltip-shared-2" type="secondary">Button 2</ids-button>
-      <ids-tooltip target="#tooltip-shared-1, #tooltip-shared-2" placement="top">Shared Tooltip</ids-tooltip>
+      <ids-tooltip [attr.target]="'#tooltip-shared-1, #tooltip-shared-2'" placement="top">Shared Tooltip</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
@@ -66,7 +66,7 @@
   <ids-layout-grid auto="true">
     <ids-layout-grid-cell>
       <ids-button id="tooltip-async" type="secondary">Ajax Tooltip Content</ids-button>
-      <ids-tooltip target="#tooltip-async" placement="top">Shared Tooltip</ids-tooltip>
+      <ids-tooltip [attr.target]="'#tooltip-async'" placement="top">Shared Tooltip</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
