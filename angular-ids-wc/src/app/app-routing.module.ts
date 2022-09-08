@@ -251,7 +251,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Action Sheet',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Displays a menu at the bottom of your screen on mobile devices'
     },
   },
   { 
@@ -260,7 +260,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS App Menu',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Application Nav'
     },
   },
   { 
@@ -269,7 +269,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Badge',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Ui Text decoration'
     },
   },
   { 
@@ -278,7 +278,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Breadcrumb',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Navigational Wayfinding'
     },
   },
   { 
@@ -287,7 +287,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Button',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Simple HTMLButtonElement'
     },
   },
   { 
@@ -296,7 +296,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Loading Indicator',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Animation for loading'
     },
   },
   { 
@@ -305,7 +305,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Menu',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'A static UI menu'
     },
   },
   {
@@ -314,7 +314,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Menu Button',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'A button with a popup menu'
     },
   },
   { 
@@ -323,7 +323,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Modal',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Displays a Modal Dialog'
     },
   },
   { 
@@ -332,7 +332,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Pager',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Displays a Pager for lists'
     },
   },
   { 
@@ -341,7 +341,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Popup Menu',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Displays a context menu'
     },
   },
   { 
@@ -350,7 +350,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Scroll View',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Swipe / Scroll Container'
     },
   },
   { 
@@ -359,7 +359,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Skip Link',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Accessibile Navigation'
     },
   },
   { 
@@ -368,7 +368,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Tabs',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Segment different areas'
     },
   },
   { 
@@ -377,7 +377,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Theme Switcher',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Set and control themes'
     },
   },
   { 
@@ -386,7 +386,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Toggle Button',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'An on/off toggle button'
     },
   },
   { 
@@ -395,7 +395,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Tree',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Hierarchical view of items and subitems'
     },
   },
   { 
@@ -404,7 +404,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Virtual Scroll',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'Fast scrolling for lots of data'
     },
   },
   { 
@@ -413,7 +413,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Wizard',
       category: 'Navigation and Interaction',
-      description: 'Upload multiple files'
+      description: 'A clickable 4 step wizard'
     },
   },
   { 
@@ -422,7 +422,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS About',
       category: 'Messages and Alerts',
-      description: 'Upload multiple files'
+      description: 'Displays info about a product with copyright and browser specs'
     },
   },
   { 
@@ -431,7 +431,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Empty Message',
       category: 'Messages and Alerts',
-      description: 'Upload multiple files'
+      description: 'Format for empty message alert'
     },
   },
   { 
@@ -440,7 +440,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Error Page',
       category: 'Messages and Alerts',
-      description: 'Upload multiple files'
+      description: 'Displays error message'
     },
   },
   { 
@@ -449,7 +449,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Icon',
       category: 'Messages and Alerts',
-      description: 'Upload multiple files'
+      description: 'SVG icons'
     },
   },
   { 
@@ -458,7 +458,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Message',
       category: 'Messages and Alerts',
-      description: 'Upload multiple files'
+      description: 'Displays a Message Dialog'
     },
   },
   { 
@@ -467,7 +467,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Notification Banner',
       category: 'Messages and Alerts',
-      description: 'Upload multiple files'
+      description: 'Displays a Top Level Application Message'
     },
   },
   { 
@@ -476,7 +476,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Progress Bar',
       category: 'Messages and Alerts',
-      description: 'Upload multiple files'
+      description: 'Displays feedback on a process'
     },
   },
   { 
@@ -485,7 +485,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS Toast',
       category: 'Messages and Alerts',
-      description: 'Upload multiple files'
+      description: 'Provides feedback after an action has taken place'
     },
   },
   { 
@@ -494,7 +494,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS List Builder',
       category: 'Lists',
-      description: 'Upload multiple files'
+      description: 'Displays List Builder component'
     },
   },
   { 
@@ -503,7 +503,7 @@ export const routes: Routes = [
     data: {
       title: 'IDS List View',
       category: 'Lists',
-      description: 'Upload multiple files'
+      description: 'Use to display a list of records'
     },
   },
 ];

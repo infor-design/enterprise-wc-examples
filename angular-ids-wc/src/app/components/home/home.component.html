@@ -6,9 +6,9 @@
       <ids-block-grid>
         <ng-container *ngFor="let route of routes">
           <ids-block-grid-item *ngIf="route.data.category === category.name">
-            <ids-card actionable="true" routerLink="{{route.path}}" target="_self" [attr.height]="100">
+            <ids-card [attr.actionable]="'true'" routerLink="{{route.path}}" href="{{route.path}}" target="_self" [attr.height]="100">
               <div slot="card-content">
-                <ids-text font-size="16" type="h2" font-weight="bold">{{route.data.title}}</ids-text>
+                <ids-text font-size="16" [attr.type]="'h2'" font-weight="bold">{{route.data.title}}</ids-text>
                 <ids-text font-size="16" type="p">{{route.data.description}}</ids-text>
               </div>
             </ids-card>
