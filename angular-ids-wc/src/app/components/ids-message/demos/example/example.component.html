@@ -1,9 +1,15 @@
 <ids-container language="en" locale="en-US" padding="8" hidden>
   <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
   
-  <ids-message id="message-example-error" status="error">
+  <ids-message
+    #messageError
+    id="message-example-error" 
+    [attr.status]="'error'"
+    (beforeshow)="handleBeforeShow()"
+    (hide)="handleHide()"
+  >
     <ids-text slot="title" font-size="24" type="h2" id="my-message-title">Lost connection</ids-text>
-    <ids-text id="my-message-contents" align="left">This application has experienced a system error due to the lack of internet access. Please restart the
+    <ids-text id="my-message-contents" [attr.align]="'left'">This application has experienced a system error due to the lack of internet access. Please restart the
       application in order to proceed.</ids-text>
     <ids-modal-button slot="buttons" type="secondary" id="my-message-cancel" cancel>Cancel</ids-modal-button>
     <ids-modal-button slot="buttons" type="primary" id="my-message-confirm">Restart</ids-modal-button>
@@ -17,7 +23,13 @@
 
   <ids-layout-grid auto="true">
     <ids-layout-grid-cell>
-      <ids-button type="secondary" id="message-example-error-trigger">Error Example</ids-button>
+      <ids-button
+        #messageErrorTrigger
+        type="secondary" 
+        id="message-example-error-trigger"
+      >
+        Error Example
+      </ids-button>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 </ids-container>

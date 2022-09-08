@@ -1,7 +1,14 @@
 <ids-container language="en" locale="en-US" padding="8" hidden>
   <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
   
-  <ids-message id="message-example-event" status="info">
+  <ids-message 
+    #messageEvent  
+    id="message-example-event" 
+    status="info"
+    (beforeshow)="handleBeforeShow()"
+    (show)="handleShow()"
+    (hide)="handleHide()"
+  >
     <ids-text slot="title" font-size="24" type="h2" id="my-message-title">Modal Event Trigger</ids-text>
     <ids-text id="my-message-contents" align="left">Modal events will be triggered on this message.</ids-text>
     <ids-modal-button slot="buttons" type="secondary" id="my-message-cancel" cancel>Cancel</ids-modal-button>
@@ -16,7 +23,13 @@
 
   <ids-layout-grid auto="true">
     <ids-layout-grid-cell>
-      <ids-button type="secondary" id="message-example-event-trigger">Events Example</ids-button>
+      <ids-button 
+        #messageEventTrigger 
+        type="secondary" 
+        id="message-example-event-trigger"
+      >
+        Events Example
+      </ids-button>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 </ids-container>
