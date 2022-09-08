@@ -45,19 +45,16 @@ export class DemoListingComponent implements AfterViewInit {
     this.table.nativeElement.data = this.routes;
   }
 
-  // @HostListener('document:click', ['$event'])
-  // public handleClick(event: Event): void {
-  //   event.preventDefault();
-  //   const element = event.target as HTMLAnchorElement | any;
-  //   if (element.shadowRoot) {
-  //     const routes = element?.shadowRoot?.querySelectorAll('ids-hyperlink');
-  //     console.log(element);
-  //     const activeRoute = [...routes].filter((r) => r.shadowRoot?.querySelector('a')?.getAttribute('href'))
-  //     console.log(activeRoute);
-  //     const route = element?.shadowRoot?.querySelector('ids-hyperlink').shadowRoot?.querySelector('a')?.getAttribute('href');
-  //     if (route) {
-  //       this.router.navigateByUrl(`/${route}`);
-  //     }
-  //   }
-  // }
+  @HostListener('document:click', ['$event'])
+  public handleClick(event: Event): void {
+    event.preventDefault();
+    const element = event.target as HTMLAnchorElement | any;
+    if (element.shadowRoot) {
+      const path = event['path'].filter((p) => p.tagName === 'IDS-HYPERLINK');
+      const route = path[0].href;
+      if (route) {
+        this.router.navigateByUrl(`/${route}`);
+      }
+    }
+  }
 }
