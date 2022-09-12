@@ -29,14 +29,14 @@ export class DemoListingComponent implements AfterViewInit {
     this.columns.push({
       id: 'type',
       name: 'Type',
-      field: 'data',
+      field: 'data.title',
       sortable: true,
       formatter: this.table.nativeElement.formatters.text
     });
     this.columns.push({
       id: 'description',
       name: 'Description',
-      field: 'data',
+      field: 'data.description',
       sortable: true,
       formatter: this.table.nativeElement.formatters.text
     });
