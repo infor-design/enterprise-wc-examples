@@ -10,6 +10,7 @@ export class MaskAttributeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('IdsMask mask-attribute OnInit');
   }
 
 }
