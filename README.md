@@ -19,9 +19,9 @@ We will test the following:
 Starter Project: https://stackblitz.com/edit/vue
 [See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/vue-ids-wc/README.md)
 
-## Svelte
+## SvelteKit
 Starter Project: https://stackblitz.com/edit/svelte
-[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/svelte-ids-wc/README.md)
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/sveltekit-ids-wc/README.md)
 
 ## React
 Starter Project: https://stackblitz.com/edit/react-un5ayt
@@ -35,7 +35,4 @@ Starter Project: https://stackblitz.com/edit/react-un5ayt
 
 ## Using NPM Link
 
-- In the `enterprise-wc` project run `npm run build` to build the assets into `dist/`
-- In the `enterprise-wc` project run `npm link` to set up the symbolic link
-- Go to on of these project folders (for example `typescript-ids-wc`) and type `npm link ids-enterprise-wc`
-
+See the [WebComponents documentation about NPM Link](https://github.com/infor-design/enterprise-wc/blob/main/doc/PUBLISH.md#publishing-a-test-package-your-local-npm-repo) for more information
