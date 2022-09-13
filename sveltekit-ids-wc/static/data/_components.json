@@ -1,0 +1,176 @@
+[
+  { 
+    "name": "Form Inputs", 
+    "icon": "display", 
+    "components": [
+      {
+        "link": "ids-alert",
+        "type": "Alert",
+        "description": "Alert indicator/icon"
+      },
+      {
+        "link": "ids-checkbox",
+        "type": "Checkbox",
+        "description": "Checkbox Input Element"
+      },
+      {
+        "link": "ids-dropdown",
+        "type": "Dropdown",
+        "description": "Select from a list of items"
+      },
+      {
+        "link": "ids-input",
+        "type": "Input",
+        "description": "Input element and features"
+      },
+      {
+        "link": "ids-mask",
+        "type": "Mask",
+        "description": "Util for masking input"
+      },
+      {
+        "link": "ids-textarea",
+        "type": "Text Area",
+        "description": "An input for multi line text"
+      }
+    ]
+  },
+  { 
+    "name": "Navigation and Interaction", 
+    "icon": "map", 
+    "components": [
+      {
+        "link": "ids-action-panel",
+        "type": "Action Panel",
+        "description": "A modal component containing complicated forms"
+      },
+      {
+        "link": "ids-action-sheet",
+        "type": "Action Sheet",
+        "description": "Displays a menu at the bottom of your screen on mobile devices"
+      },
+      {
+        "link": "ids-app-menu",
+        "type": "App Menu",
+        "description": "Application Nav"
+      },
+      {
+        "link": "ids-button",
+        "type": "Button",
+        "description": "Simple HTMLButtonElement"
+      },
+      {
+        "link": "ids-modal",
+        "type": "Modal",
+        "description": "Displays a Modal Dialog"
+      },
+      {
+        "link": "ids-popup-menu",
+        "type": "Popup Menu",
+        "description": "Displays a Context Menu"
+      },
+      {
+        "link": "ids-tabs",
+        "type": "Tabs",
+        "description": "Segment different areas"
+      },
+      {
+        "link": "ids-tag",
+        "type": "Tag",
+        "description": "UI Classification"
+      }
+    ]
+  },
+  { 
+    "name": "Messages and Alerts", 
+    "icon": "success", 
+    "components": [
+      {
+        "link": "ids-about",
+        "type": "About",
+        "description": "Displays info about a product with copyright and browser specs"
+      },
+      {
+        "link": "ids-icon",
+        "type": "Icon",
+        "description": "SVG Icons"
+      }
+    ]
+  },
+  { 
+    "name": "Lists", 
+    "icon": "spreadsheet", 
+    "components": [
+      {
+        "link": "ids-swaplist",
+        "type": "SwapList",
+        "description": "Displays Swaplist Component"
+      }
+    ]
+  },
+  { 
+    "name": "Layouts", 
+    "icon": "project", 
+    "components": [
+      {
+        "link": "ids-accordion",
+        "type": "Accordion",
+        "description": "Vertically Stacked Sections"
+      },
+      {
+        "link": "ids-list-box",
+        "type": "List Box",
+        "description": "List Item Markup"
+      },
+      {
+        "link": "ids-popup",
+        "type": "Popup",
+        "description": "Displays a Popup Container"
+      }
+    ]
+  },
+  { 
+    "name": "Patterns", 
+    "icon": "design-mode", 
+    "components": [
+
+    ]
+  },
+  { 
+    "name": "Charts and Visualizations", 
+    "icon": "line-bar-chart", 
+    "components": [
+      {
+        "link": "ids-area-chart",
+        "type": "Area Chart",
+        "description": "Chart used to compare trends with solid colored areas"
+      },
+      {
+        "link": "ids-axis-chart",
+        "type": "Axis Chart",
+        "description": "Configurable chart with x and y axis"
+      },
+      {
+        "link": "ids-color",
+        "type": "Color",
+        "description": "Color Swatches"
+      }
+    ]
+  },
+  { 
+    "name": "Typography", 
+    "icon": "", 
+    "components": [
+      {
+        "link": "ids-hyperlink",
+        "type": "Hyperlink",
+        "description": "Linked text"
+      },
+      {
+        "link": "ids-text",
+        "type": "Text",
+        "description": "An element for plain text"
+      }
+    ]
+  }
+]

@@ -9,3 +9,14 @@ declare namespace App {
 	// interface Session {}
 	// interface Stuff {}
 }
+
+export type IdsComponentData = {
+  link: string;
+  description: string;
+  type: string;
+}
+
+export type IdsComponentCategory = {
+  name: string;
+  components: Array<IdsComponentData>;
+}
