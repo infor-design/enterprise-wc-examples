@@ -61,9 +61,10 @@ export class ExampleComponent implements AfterViewInit {
     });
 
     this.lookup1.nativeElement.columns = columns;
+
     this.dateService.getJsonData('books')
       .subscribe(res => {
         this.lookup1.nativeElement.data = res;
-      });
+      });    
   }
 }
