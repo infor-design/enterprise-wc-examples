@@ -12,15 +12,6 @@ export const routes: Routes = [
     }
   },
   { 
-    path: 'ids-accordion', 
-    loadChildren: () => import('./components/ids-accordion/ids-accordion.module').then(m => m.IdsAccordionModule),
-    data: {
-      title: 'IDS Accordion',
-      category: 'Layouts',
-      description: 'Vertically Stacked Sections'
-    },
-  },
-  { 
     path: 'ids-alert', 
     loadChildren: () => import('./components/ids-alert/ids-alert.module').then(m => m.IdsAlertModule),
     data: {
@@ -118,15 +109,6 @@ export const routes: Routes = [
       category: 'Form Inputs',
       description: 'Util for masking input'
     },
-  },
-  { 
-    path: 'ids-popup', 
-    loadChildren: () => import('./components/ids-popup/ids-popup.module').then(m => m.IdsPopupModule),
-    data: {
-      title: 'IDS Popup',
-      category: 'Layouts',
-      description: 'Displays a Popup container'
-    }
   },
   { 
     path: 'ids-swaplist', 
@@ -523,6 +505,33 @@ export const routes: Routes = [
       category: 'Lists',
       description: 'Drag API'
     },
+  },
+  { 
+    path: 'ids-accordion', 
+    loadChildren: () => import('./components/ids-accordion/ids-accordion.module').then(m => m.IdsAccordionModule),
+    data: {
+      title: 'IDS Accordion',
+      category: 'Layouts',
+      description: 'Vertically Stacked Sections'
+    },
+  },
+  {
+    path: 'ids-block-grid',
+    loadChildren: () => import('./components/ids-block-grid/ids-block-grid.module').then(m => m.IdsBlockGridModule),
+    data: {
+      title: 'IDS Block Grid',
+      category: 'Layouts',
+      description: 'Box/Block Grid Layout'
+    },
+  },
+  { 
+    path: 'ids-popup', 
+    loadChildren: () => import('./components/ids-popup/ids-popup.module').then(m => m.IdsPopupModule),
+    data: {
+      title: 'IDS Popup',
+      category: 'Layouts',
+      description: 'Displays a Popup container'
+    }
   },
 ];
 
