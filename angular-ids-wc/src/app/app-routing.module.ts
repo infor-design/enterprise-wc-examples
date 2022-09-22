@@ -497,13 +497,31 @@ export const routes: Routes = [
       description: 'Displays List Builder component'
     },
   },
-  { 
+  {
     path: 'ids-list-view',
     loadChildren: () => import('./components/ids-list-view/ids-list-view.module').then(m => m.IdsListViewModule),
     data: {
       title: 'IDS List View',
       category: 'Lists',
       description: 'Use to display a list of records'
+    },
+  },
+  {
+    path: 'ids-data-grid',
+    loadChildren: () => import('./components/ids-data-grid/ids-data-grid.module').then(m => m.IdsDataGridModule),
+    data: {
+      title: 'IDS Data Grid',
+      category: 'Lists',
+      description: 'Tabular Data'
+    },
+  },
+  {
+    path: 'ids-draggable',
+    loadChildren: () => import('./components/ids-draggable/ids-draggable.module').then(m => m.IdsDraggableModule),
+    data: {
+      title: 'IDS Draggable',
+      category: 'Lists',
+      description: 'Drag API'
     },
   },
 ];

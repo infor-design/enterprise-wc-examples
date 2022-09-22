@@ -10,7 +10,7 @@ export class ExampleComponent implements AfterViewInit {
   @ViewChild('lookup1', { read: ElementRef }) lookup1: IdsLookup;
 
   constructor(
-    private dateService: DataService
+    private dataService: DataService
   ) { }
 
   ngAfterViewInit(): void {
@@ -62,7 +62,7 @@ export class ExampleComponent implements AfterViewInit {
 
     this.lookup1.nativeElement.columns = columns;
 
-    this.dateService.getJsonData('books')
+    this.dataService.getJsonData('books')
       .subscribe(res => {
         this.lookup1.nativeElement.data = res;
       });    
