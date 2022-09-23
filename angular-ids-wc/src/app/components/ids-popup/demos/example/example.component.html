@@ -1,0 +1,35 @@
+<ids-container language="en" locale="en-US" padding="8" hidden>
+  <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
+  
+  <ids-layout-grid auto="true">
+    <ids-text font-size="12" type="h1">Popup</ids-text>
+  </ids-layout-grid>
+  <ids-layout-grid auto="true">
+    <ids-layout-grid-cell>
+      <ids-button
+        (click)="handleVisible()"
+        id="popup-trigger-btn"
+        type="secondary"
+      >
+        <span slot="text">Trigger a Popup</span>
+      </ids-button>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+
+  <ids-popup 
+    x="15" 
+    y="0" 
+    align-target="#popup-trigger-btn" 
+    align="right" 
+    animated="true" 
+    type="menu" 
+    id="popup-1"
+    [visible]="visible"
+  >
+    <div slot="content">
+      <div class="demo-popup">
+        <ids-text font-size="12" type="span">My Popup Content</ids-text>
+      </div>
+    </div>
+  </ids-popup>
+</ids-container>

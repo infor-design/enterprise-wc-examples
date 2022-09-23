@@ -11,9 +11,7 @@ describe('IdsSwaplistComponent', () => {
       declarations: [ IdsSwaplistComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(IdsSwaplistComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
