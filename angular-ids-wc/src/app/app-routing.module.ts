@@ -524,6 +524,15 @@ export const routes: Routes = [
       description: 'Box/Block Grid Layout'
     },
   },
+  {
+    path: 'ids-calendar',
+    loadChildren: () => import('./components/ids-calendar/ids-calendar.module').then(m => m.IdsCalendarModule),
+    data: {
+      title: 'IDS Calendar',
+      category: 'Layouts',
+      description: 'Displays month, week, day views'
+    },
+  },
   { 
     path: 'ids-popup', 
     loadChildren: () => import('./components/ids-popup/ids-popup.module').then(m => m.IdsPopupModule),
