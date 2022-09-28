@@ -4,15 +4,14 @@
 
 Components marked completed in this checklist will have an example of direct usage in Sveltekit.
 
- - [ ] About (ids-about)
- - [ ] Accordion (ids-accordion)
- - [ ] Action Sheet (ids-action-sheet)
- - [ ] Alerts (ids-alert)
- - [ ] Application menu (ids-application-menu)
- - [ ] Area (ids-area-chart)
- - [ ] Arrange (ids-swapabble)
- - [ ] Autocomplete (ids-autocomplete)
- - [ ] Badges (ids-badge)
+ - [x] About (ids-about)
+ - [x] Accordion (ids-accordion)
+ - [x] Action Panel (ids-action-panel)
+ - [x] Action Sheet (ids-action-sheet)
+ - [x] Alerts (ids-alert)
+ - [x] Application menu (ids-application-menu)
+ - [x] Area (ids-area-chart)
+ - [x] Badges (ids-badge)
  - [ ] Bar (ids-bar-chart)
  - [ ] Block grid (ids-block-grid)
  - [ ] Breadcrumb (ids-bread-crumb)
@@ -20,7 +19,6 @@ Components marked completed in this checklist will have an example of direct usa
  - [x] Button (ids-button)
  - [ ] Bullet (ids-bullet-chart) skipping until needed
  - [ ] Builder (ids-patterns) skipping until needed
- - [ ] Button (ids-button)
  - [ ] Calendar (ids-calendar)
  - [ ] Cards (ids-card)
  - [x] Checkboxes (ids-checkbox)
@@ -29,7 +27,6 @@ Components marked completed in this checklist will have an example of direct usa
  - [ ] Color Picker (ids-color-picker)
  - [ ] Column (ids-column-chart or ids-bar with a orientation setting)
  - [ ] Completion Chart (ids-progress-chart)
- - [ ] Contextual Action Panel (ids-contextual-action-panel)
  - [ ] Datagrid (ids-data-grid)
  - [ ] Data Label (ids-data-label)
  - [ ] Datepicker (ids-date-picker)
@@ -79,7 +76,6 @@ Components marked completed in this checklist will have an example of direct usa
  - [ ] Radar (ids-radar-chart) skipping until needed
  - [ ] Radios (ids-radio)
  - [ ] Rating (ids-rating)
- - [ ] Renderloop (mixin)
  - [ ] Scatterplot (ids-scatter-plot-chart)
  - [ ] Searchfield (ids-search-field)
  - [ ] Sign-in (ids-layouts)
@@ -90,6 +86,7 @@ Components marked completed in this checklist will have an example of direct usa
  - [ ] Splitter (ids-splitter)
  - [ ] Stepchart (ids-step-chart)
  - [x] Swaplist (ids-swap-list)
+ - [ ] Swappable (ids-swapabble)
  - [ ] Switch (ids-switch)
  - [x] Tabs (ids-tabs)
  - [x] Tabs Header (ids-tabs with option)
