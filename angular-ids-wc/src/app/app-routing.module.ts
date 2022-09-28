@@ -551,6 +551,15 @@ export const routes: Routes = [
       description: 'Main container for themes / locale'
     },
   },
+  {
+    path: 'ids-expandable-area',
+    loadChildren: () => import('./components/ids-expandable-area/ids-expandable-area.module').then(m => m.IdsExpandableAreaModule),
+    data: {
+      title: 'IDS Expandable Area',
+      category: 'Layouts',
+      description: 'Collapsible form sections'
+    },
+  },
   { 
     path: 'ids-popup', 
     loadChildren: () => import('./components/ids-popup/ids-popup.module').then(m => m.IdsPopupModule),
