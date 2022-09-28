@@ -12,14 +12,14 @@
         id="menu-button" 
         icon="settings" 
         dropdown-icon
-        [attr.type]="'tertiary'" 
-        [attr.menu]="'my-menu'"
+        [type]="'tertiary'" 
+        [menu]="'my-menu'"
       >
         <span slot="text">Settings</span>
       </ids-menu-button>
       <ids-popup-menu
         id="my-menu" 
-        [attr.trigger]="'click'"
+        trigger="'click'"
       >
         <ids-menu-group>
           <ids-menu-item>Personalize Columns...</ids-menu-item>

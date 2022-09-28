@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import IdsListView from 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
+import { DataService } from 'src/app/shared/mock/data.service';
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.css']
 })
-export class ToolbarComponent implements OnInit {
+export class ToolbarComponent implements AfterViewInit {
+  @ViewChild('listView', { read: ElementRef }) listView: IdsListView;
 
-  constructor() { }
+  constructor(
+    private dataService: DataService
+  ) { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    this.listView.nativeElement.defaultTemplate = '<ids-text font-size="16" type="h2">${subject}</ids-text><ids-text font-size="12" type="span">Comments: ${comments}</ids-text>';
+    this.dataService.getJsonData('events')
+      .subscribe(res => {
+        this.listView.nativeElement.data = res;
+      });
   }
 
 }

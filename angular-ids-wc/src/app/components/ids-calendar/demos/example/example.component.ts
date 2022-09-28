@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import IdsCalendar from 'ids-enterprise-wc/components/ids-calendar/ids-calendar';
 import { DataService } from 'src/app/shared/mock/data.service';
-import IdsMonthView from 'ids-enterprise-wc/components/ids-month-view/ids-month-view';
+// import IdsMonthView from 'ids-enterprise-wc/components/ids-month-view/ids-month-view';
 
 @Component({
   selector: 'app-example',
