@@ -1,5 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DemoListingModule } from './../demo-listing/demo-listing.module';
 
 import { IdsCardRoutingModule } from './ids-card-routing.module';
 import { IdsCardComponent } from './ids-card.component';
@@ -29,7 +30,8 @@ import { FooterComponent } from './demos/footer/footer.component';
   ],
   imports: [
     CommonModule,
-    IdsCardRoutingModule
+    IdsCardRoutingModule,
+    DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

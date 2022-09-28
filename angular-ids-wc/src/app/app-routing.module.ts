@@ -533,6 +533,15 @@ export const routes: Routes = [
       description: 'Displays month, week, day views'
     },
   },
+  {
+    path: 'ids-card',
+    loadChildren: () => import('./components/ids-card/ids-card.module').then(m => m.IdsCardModule),
+    data: {
+      title: 'IDS Card',
+      category: 'Layouts',
+      description: 'Card / Widget Layout'
+    },
+  },
   { 
     path: 'ids-popup', 
     loadChildren: () => import('./components/ids-popup/ids-popup.module').then(m => m.IdsPopupModule),

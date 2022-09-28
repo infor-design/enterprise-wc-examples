@@ -29,14 +29,14 @@ export class DemoListingComponent implements AfterViewInit {
     this.columns.push({
       id: 'type',
       name: 'Type',
-      field: 'data.title',
+      field: 'data?.type',
       sortable: true,
       formatter: this.table.nativeElement.formatters.text
     });
     this.columns.push({
       id: 'description',
       name: 'Description',
-      field: 'data.description',
+      field: 'data?.description',
       sortable: true,
       formatter: this.table.nativeElement.formatters.text
     });
@@ -51,7 +51,7 @@ export class DemoListingComponent implements AfterViewInit {
     const element = event.target as HTMLAnchorElement | any;
     if (element.shadowRoot) {
       const path = event['path'].filter((p) => p.tagName === 'IDS-HYPERLINK');
-      const route = path[0].href;
+      const route = path[0]?.href;
       if (route) {
         this.router.navigateByUrl(`/${route}`);
       }
