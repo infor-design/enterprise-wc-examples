@@ -542,6 +542,15 @@ export const routes: Routes = [
       description: 'Card / Widget Layout'
     },
   },
+  {
+    path: 'ids-container',
+    loadChildren: () => import('./components/ids-container/ids-container.module').then(m => m.IdsContainerModule),
+    data: {
+      title: 'IDS Container',
+      category: 'Layouts',
+      description: 'Main container for themes / locale'
+    },
+  },
   { 
     path: 'ids-popup', 
     loadChildren: () => import('./components/ids-popup/ids-popup.module').then(m => m.IdsPopupModule),
