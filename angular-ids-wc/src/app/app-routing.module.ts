@@ -578,6 +578,15 @@ export const routes: Routes = [
       description: 'Masthead component'
     }
   },
+  { 
+    path: 'ids-fieldset', 
+    loadChildren: () => import('./components/ids-fieldset/ids-fieldset.module').then(m => m.IdsFieldsetModule),
+    data: {
+      title: 'IDS Field Set',
+      category: 'Layouts',
+      description: 'Divide Form Areas'
+    }
+  },
 ];
 
 @NgModule({
