@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import IdsDatePicker from 'ids-enterprise-wc/components/ids-date-picker/ids-date-picker';
 
 @Component({
   selector: 'app-disabled-dates',
@@ -7,10 +6,10 @@ import IdsDatePicker from 'ids-enterprise-wc/components/ids-date-picker/ids-date
   styleUrls: ['./disabled-dates.component.css']
 })
 export class DisabledDatesComponent implements AfterViewInit {
-  @ViewChild('disabledDates', { read: ElementRef }) disabledDates: IdsDatePicker;
-  @ViewChild('disabledYears', { read: ElementRef }) disabledYears: IdsDatePicker;
-  @ViewChild('disabledMinMax', { read: ElementRef }) disabledMinMax: IdsDatePicker;
-  @ViewChild('disabledReverse', { read: ElementRef }) disabledReverse: IdsDatePicker;
+  @ViewChild('disabledDates', { read: ElementRef }) disabledDates;
+  @ViewChild('disabledYears', { read: ElementRef }) disabledYears;
+  @ViewChild('disabledMinMax', { read: ElementRef }) disabledMinMax;
+  @ViewChild('disabledReverse', { read: ElementRef }) disabledReverse;
 
   constructor() { }
 

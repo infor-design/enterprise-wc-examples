@@ -1,13 +1,12 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from 'src/app/shared/mock/data.service';
-import IdsLookup from 'ids-enterprise-wc/components/ids-lookup/ids-lookup.js';
 @Component({
   selector: 'app-example',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements AfterViewInit {
-  @ViewChild('lookup1', { read: ElementRef }) lookup1: IdsLookup;
+  @ViewChild('lookup1', { read: ElementRef }) lookup1;
 
   constructor(
     private dataService: DataService

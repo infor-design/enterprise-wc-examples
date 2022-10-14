@@ -1,6 +1,5 @@
 import { Component, AfterViewInit, ElementRef, ViewChild, Input, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid';
 
 @Component({
   selector: 'app-demo-listing',
@@ -8,7 +7,7 @@ import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-gri
   styleUrls: ['./demo-listing.component.css']
 })
 export class DemoListingComponent implements AfterViewInit {
-  @ViewChild('table', { read: ElementRef }) table: IdsDataGrid;
+  @ViewChild('table', { read: ElementRef }) table;
   @Input() routes: any;
   @Input() title: any;
   public columns = [];

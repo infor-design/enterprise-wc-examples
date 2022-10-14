@@ -1,6 +1,5 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import bikesJSON from '../../../../../api/bikes.json';
-import IdsListBuilder from 'ids-enterprise-wc/components/ids-list-builder/ids-list-builder.js'
 
 @Component({
   selector: 'app-example',
@@ -8,7 +7,7 @@ import IdsListBuilder from 'ids-enterprise-wc/components/ids-list-builder/ids-li
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements AfterViewInit {
-  @ViewChild('listBuilder', { read: ElementRef }) listBuilder: IdsListBuilder;
+  @ViewChild('listBuilder', { read: ElementRef }) listBuilder;
 
   constructor() { }
 

@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import IdsDatePicker from 'ids-enterprise-wc/components/ids-date-picker/ids-date-picker';
 
 @Component({
   selector: 'app-sandbox',
@@ -7,7 +6,7 @@ import IdsDatePicker from 'ids-enterprise-wc/components/ids-date-picker/ids-date
   styleUrls: ['./sandbox.component.css']
 })
 export class SandboxComponent implements AfterViewInit {
-  @ViewChild('datePickerAvailable', { read: ElementRef }) datePickerAvailable: IdsDatePicker;
+  @ViewChild('datePickerAvailable', { read: ElementRef }) datePickerAvailable;
 
   constructor() { }
 

@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import IdsSwapList from 'ids-enterprise-wc/components/ids-swaplist/ids-swaplist.js';
 
 @Component({
   selector: 'app-example',
@@ -7,7 +6,7 @@ import IdsSwapList from 'ids-enterprise-wc/components/ids-swaplist/ids-swaplist.
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements AfterViewInit {
-  @ViewChild('mySwaplist', { read: ElementRef }) swaplist: IdsSwapList;
+  @ViewChild('mySwaplist', { read: ElementRef }) swaplist;
 
   public periods = [
     {

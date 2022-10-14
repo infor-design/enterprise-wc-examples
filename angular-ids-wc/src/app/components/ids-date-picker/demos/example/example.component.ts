@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import IdsDatePicker from 'ids-enterprise-wc/components/ids-date-picker/ids-date-picker';
 
 @Component({
   selector: 'app-example',
@@ -7,7 +6,7 @@ import IdsDatePicker from 'ids-enterprise-wc/components/ids-date-picker/ids-date
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements AfterViewInit {
-  @ViewChild('datePickerLegend', { read: ElementRef }) datePickerLegend: IdsDatePicker;
+  @ViewChild('datePickerLegend', { read: ElementRef }) datePickerLegend;
 
   constructor() { }
 

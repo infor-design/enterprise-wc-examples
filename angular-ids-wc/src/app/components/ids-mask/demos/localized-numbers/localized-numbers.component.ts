@@ -89,7 +89,7 @@ export function deepCloneArray(this: any, arr: any, fn?: any) {
   styleUrls: ['./localized-numbers.component.css']
 })
 export class LocalizedNumbersComponent implements OnInit, AfterViewInit {
-  @ViewChildren('idsInput', { read: ElementRef }) idsInput: QueryList<IdsInput>
+  @ViewChildren('idsInput', { read: ElementRef }) idsInput: QueryList<any>;
   @ViewChild('pageContainer', { read: ElementRef }) pageContainer;
 
   constructor() { }

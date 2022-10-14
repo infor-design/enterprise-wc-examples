@@ -1,5 +1,4 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import IdsMenuButton from 'ids-enterprise-wc/components/ids-menu-button/ids-menu-button';
 
 @Component({
   selector: 'app-disabled',
@@ -7,7 +6,7 @@ import IdsMenuButton from 'ids-enterprise-wc/components/ids-menu-button/ids-menu
   styleUrls: ['./disabled.component.css']
 })
 export class DisabledComponent implements OnInit, AfterViewInit {
-  @ViewChild('menuBtnEl', { read: ElementRef }) menuBtnEl: IdsMenuButton;
+  @ViewChild('menuBtnEl', { read: ElementRef }) menuBtnEl;
   public disabled: boolean;
   public defaultOnOutsideClick: Function;
 

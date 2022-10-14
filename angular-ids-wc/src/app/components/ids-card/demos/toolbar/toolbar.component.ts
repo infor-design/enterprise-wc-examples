@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import IdsListView from 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
 import { DataService } from 'src/app/shared/mock/data.service';
 @Component({
   selector: 'app-toolbar',
@@ -7,7 +6,7 @@ import { DataService } from 'src/app/shared/mock/data.service';
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent implements AfterViewInit {
-  @ViewChild('listView', { read: ElementRef }) listView: IdsListView;
+  @ViewChild('listView', { read: ElementRef }) listView;
 
   constructor(
     private dataService: DataService

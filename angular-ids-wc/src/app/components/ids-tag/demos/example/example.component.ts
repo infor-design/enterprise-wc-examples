@@ -1,5 +1,4 @@
 import { Component, ViewChild, VERSION, AfterViewInit } from '@angular/core';
-import IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag.js';
 
 @Component({
   selector: 'app-example',
@@ -7,7 +6,7 @@ import IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag.js';
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements AfterViewInit {
-  @ViewChild('myTag') tag: IdsTag;
+  @ViewChild('myTag') tag;
 
   public name = 'Angular ' + VERSION.major;
   public person = 'John Smith';

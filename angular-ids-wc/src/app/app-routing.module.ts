@@ -569,6 +569,15 @@ export const routes: Routes = [
       description: 'Displays a Popup container'
     }
   },
+  { 
+    path: 'ids-masthead', 
+    loadChildren: () => import('./components/ids-masthead/ids-masthead.module').then(m => m.IdsMastheadModule),
+    data: {
+      title: 'IDS Masthead',
+      category: 'Layouts',
+      description: 'Masthead component'
+    }
+  },
 ];
 
 @NgModule({

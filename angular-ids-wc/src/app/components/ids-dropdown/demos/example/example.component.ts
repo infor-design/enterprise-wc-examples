@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
-import IdsDropdown from 'ids-enterprise-wc/components/ids-dropdown/ids-dropdown';
 import { Subject } from 'rxjs';
 import { DataService } from 'src/app/shared/mock/data.service';
 
@@ -9,8 +8,8 @@ import { DataService } from 'src/app/shared/mock/data.service';
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements AfterViewInit {
-  @ViewChild('dropdown1', { read: ElementRef }) dropdown1: IdsDropdown;
-  @ViewChild('dropdownAsync', { read: ElementRef }) dropdownAsync: IdsDropdown;
+  @ViewChild('dropdown1', { read: ElementRef }) dropdown1;
+  @ViewChild('dropdownAsync', { read: ElementRef }) dropdownAsync;
   @Input() options = new Subject<Array<any>>();
 
   constructor(
