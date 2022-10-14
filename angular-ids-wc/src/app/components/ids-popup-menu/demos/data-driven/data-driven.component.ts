@@ -1,6 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from 'src/app/shared/mock/data.service';
-import IdsPopupMenu from 'ids-enterprise-wc/components/ids-popup-menu/ids-popup-menu';
 
 @Component({
   selector: 'app-data-driven',
@@ -8,7 +7,7 @@ import IdsPopupMenu from 'ids-enterprise-wc/components/ids-popup-menu/ids-popup-
   styleUrls: ['./data-driven.component.css']
 })
 export class DataDrivenComponent implements OnInit, AfterViewInit {
-  @ViewChild('popupmenuEl', { read: ElementRef }) popupmenuEl: IdsPopupMenu;
+  @ViewChild('popupmenuEl', { read: ElementRef }) popupmenuEl;
 
   constructor(
     private dataService: DataService

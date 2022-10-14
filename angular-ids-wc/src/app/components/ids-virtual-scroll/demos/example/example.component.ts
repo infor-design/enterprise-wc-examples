@@ -1,6 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { DataService } from 'src/app/shared/mock/data.service';
-
 @Component({
   selector: 'app-example',
   templateUrl: './example.component.html',

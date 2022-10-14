@@ -1,6 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import products100JSON from '../../../../../api/products-100.json';
-import IdsListView from 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
 
 @Component({
   selector: 'app-selectable-multiple',
@@ -8,7 +7,7 @@ import IdsListView from 'ids-enterprise-wc/components/ids-list-view/ids-list-vie
   styleUrls: ['./selectable-multiple.component.css']
 })
 export class SelectableMultipleComponent implements AfterViewInit {
-  @ViewChild('listView', { read: ElementRef }) listView: IdsListView;
+  @ViewChild('listView', { read: ElementRef }) listView;
   template = '<ids-text font-size="16" type="h2">${productName}</ids-text><ids-text font-size="12" type="span">Count: ${units}</ids-text><ids-text font-size="12" type="span">Price: $ ${unitPrice}</ids-text>';
 
   constructor() { }

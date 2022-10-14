@@ -524,6 +524,42 @@ export const routes: Routes = [
       description: 'Box/Block Grid Layout'
     },
   },
+  {
+    path: 'ids-calendar',
+    loadChildren: () => import('./components/ids-calendar/ids-calendar.module').then(m => m.IdsCalendarModule),
+    data: {
+      title: 'IDS Calendar',
+      category: 'Layouts',
+      description: 'Displays month, week, day views'
+    },
+  },
+  {
+    path: 'ids-card',
+    loadChildren: () => import('./components/ids-card/ids-card.module').then(m => m.IdsCardModule),
+    data: {
+      title: 'IDS Card',
+      category: 'Layouts',
+      description: 'Card / Widget Layout'
+    },
+  },
+  {
+    path: 'ids-container',
+    loadChildren: () => import('./components/ids-container/ids-container.module').then(m => m.IdsContainerModule),
+    data: {
+      title: 'IDS Container',
+      category: 'Layouts',
+      description: 'Main container for themes / locale'
+    },
+  },
+  {
+    path: 'ids-expandable-area',
+    loadChildren: () => import('./components/ids-expandable-area/ids-expandable-area.module').then(m => m.IdsExpandableAreaModule),
+    data: {
+      title: 'IDS Expandable Area',
+      category: 'Layouts',
+      description: 'Collapsible form sections'
+    },
+  },
   { 
     path: 'ids-popup', 
     loadChildren: () => import('./components/ids-popup/ids-popup.module').then(m => m.IdsPopupModule),
@@ -531,6 +567,24 @@ export const routes: Routes = [
       title: 'IDS Popup',
       category: 'Layouts',
       description: 'Displays a Popup container'
+    }
+  },
+  { 
+    path: 'ids-masthead', 
+    loadChildren: () => import('./components/ids-masthead/ids-masthead.module').then(m => m.IdsMastheadModule),
+    data: {
+      title: 'IDS Masthead',
+      category: 'Layouts',
+      description: 'Masthead component'
+    }
+  },
+  { 
+    path: 'ids-fieldset', 
+    loadChildren: () => import('./components/ids-fieldset/ids-fieldset.module').then(m => m.IdsFieldsetModule),
+    data: {
+      title: 'IDS Field Set',
+      category: 'Layouts',
+      description: 'Divide Form Areas'
     }
   },
 ];
