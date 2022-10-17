@@ -1,6 +1,5 @@
 import { Component, AfterViewInit, ElementRef, ViewChild, Input, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid';
 
 @Component({
   selector: 'app-demo-listing',
@@ -8,7 +7,7 @@ import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-gri
   styleUrls: ['./demo-listing.component.css']
 })
 export class DemoListingComponent implements AfterViewInit {
-  @ViewChild('table', { read: ElementRef }) table: IdsDataGrid;
+  @ViewChild('table', { read: ElementRef }) table;
   @Input() routes: any;
   @Input() title: any;
   public columns = [];
@@ -29,14 +28,14 @@ export class DemoListingComponent implements AfterViewInit {
     this.columns.push({
       id: 'type',
       name: 'Type',
-      field: 'data.title',
+      field: 'data?.type',
       sortable: true,
       formatter: this.table.nativeElement.formatters.text
     });
     this.columns.push({
       id: 'description',
       name: 'Description',
-      field: 'data.description',
+      field: 'data?.description',
       sortable: true,
       formatter: this.table.nativeElement.formatters.text
     });
@@ -51,7 +50,7 @@ export class DemoListingComponent implements AfterViewInit {
     const element = event.target as HTMLAnchorElement | any;
     if (element.shadowRoot) {
       const path = event['path'].filter((p) => p.tagName === 'IDS-HYPERLINK');
-      const route = path[0].href;
+      const route = path[0]?.href;
       if (route) {
         this.router.navigateByUrl(`/${route}`);
       }

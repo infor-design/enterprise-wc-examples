@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import IdsListView from 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
 import eventsJSON from '../../../../../api/events.json';
 
 @Component({
@@ -8,7 +7,7 @@ import eventsJSON from '../../../../../api/events.json';
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements AfterViewInit {
-  @ViewChild('listView', { read: ElementRef }) listView: IdsListView;
+  @ViewChild('listView', { read: ElementRef }) listView;
   template = '<ids-text font-size="16" type="h2">${subject}</ids-text><ids-text font-size="12" type="span">ID: ${id}</ids-text><ids-text font-size="12" type="span">Comments: ${comments}</ids-text>'
 
   constructor() { }

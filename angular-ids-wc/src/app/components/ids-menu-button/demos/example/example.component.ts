@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angular/core';
-import IdsMenuButton from 'ids-enterprise-wc/components/ids-menu-button/ids-menu-button';
 
 @Component({
   selector: 'app-example',
@@ -7,7 +6,7 @@ import IdsMenuButton from 'ids-enterprise-wc/components/ids-menu-button/ids-menu
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements OnInit, AfterViewInit {
-  @ViewChild('menuButton1', { read: ElementRef }) menuButton1: IdsMenuButton;
+  @ViewChild('menuButton1', { read: ElementRef }) menuButton1;
 
   constructor() { }
 

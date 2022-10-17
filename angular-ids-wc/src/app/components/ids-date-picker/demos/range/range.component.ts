@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import IdsDatePicker from 'ids-enterprise-wc/components/ids-date-picker/ids-date-picker';
 
 @Component({
   selector: 'app-range',
@@ -7,15 +6,15 @@ import IdsDatePicker from 'ids-enterprise-wc/components/ids-date-picker/ids-date
   styleUrls: ['./range.component.css']
 })
 export class RangeComponent implements AfterViewInit {
-  @ViewChild('rangePickerSettings', { read: ElementRef }) rangePickerSettings: IdsDatePicker;
-  @ViewChild('rangePickerForward', { read: ElementRef }) rangePickerForward: IdsDatePicker;
-  @ViewChild('rangePickerBackward', { read: ElementRef }) rangePickerBackward: IdsDatePicker;
-  @ViewChild('rangePickerMax', { read: ElementRef }) rangePickerMax: IdsDatePicker;
-  @ViewChild('rangePickerMin', { read: ElementRef }) rangePickerMin: IdsDatePicker;
-  @ViewChild('rangePickerNotIncluded', { read: ElementRef }) rangePickerNotIncluded: IdsDatePicker;
-  @ViewChild('rangePickerIncluded', { read: ElementRef }) rangePickerIncluded: IdsDatePicker;
-  @ViewChild('rangePickerLegend', { read: ElementRef }) rangePickerLegend: IdsDatePicker;
-  @ViewChild('rangePickerWeek', { read: ElementRef }) rangePickerWeek: IdsDatePicker;
+  @ViewChild('rangePickerSettings', { read: ElementRef }) rangePickerSettings;
+  @ViewChild('rangePickerForward', { read: ElementRef }) rangePickerForward;
+  @ViewChild('rangePickerBackward', { read: ElementRef }) rangePickerBackward;
+  @ViewChild('rangePickerMax', { read: ElementRef }) rangePickerMax;
+  @ViewChild('rangePickerMin', { read: ElementRef }) rangePickerMin;
+  @ViewChild('rangePickerNotIncluded', { read: ElementRef }) rangePickerNotIncluded;
+  @ViewChild('rangePickerIncluded', { read: ElementRef }) rangePickerIncluded;
+  @ViewChild('rangePickerLegend', { read: ElementRef }) rangePickerLegend;
+  @ViewChild('rangePickerWeek', { read: ElementRef }) rangePickerWeek;
 
   constructor() { }
 

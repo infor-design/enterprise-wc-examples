@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid';
 import { DataService } from 'src/app/shared/mock/data.service';
 
 @Component({
@@ -8,7 +7,7 @@ import { DataService } from 'src/app/shared/mock/data.service';
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements AfterViewInit {
-  @ViewChild('dataGrid', { read: ElementRef }) dataGrid: IdsDataGrid;
+  @ViewChild('dataGrid', { read: ElementRef }) dataGrid;
   public columns = [];
 
   constructor(
