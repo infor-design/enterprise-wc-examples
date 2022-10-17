@@ -569,6 +569,14 @@ export const routes: Routes = [
       description: 'Displays a Popup container'
     }
   },
+  {
+    path: 'ids-toolbar',
+    loadChildren: () => import('./components/ids-toolbar/ids-toolbar.module').then(m => m.IdsToolbarModule),
+    data: {
+      title: 'IDS Toolbar',
+      category: 'Layouts',
+      description: 'A container for buttons'
+    },
   { 
     path: 'ids-masthead', 
     loadChildren: () => import('./components/ids-masthead/ids-masthead.module').then(m => m.IdsMastheadModule),
