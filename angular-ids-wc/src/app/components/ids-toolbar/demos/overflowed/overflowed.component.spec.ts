@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OverflowedComponent } from './overflowed.component';
 
-describe('ExampleComponent', () => {
+describe('OverflowedComponent', () => {
   let component: OverflowedComponent;
   let fixture: ComponentFixture<OverflowedComponent>;
 
