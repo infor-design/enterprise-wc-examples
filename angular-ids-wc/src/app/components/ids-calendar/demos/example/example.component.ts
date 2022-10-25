@@ -1,14 +1,15 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from 'src/app/shared/mock/data.service';
-
+import IdsCalender from 'ids-enterprise-wc/components/ids-calendar/ids-calendar';
+import IdsPopupMenu from 'ids-enterprise-wc/components/ids-popup-menu/ids-popup-menu';
 @Component({
   selector: 'app-example',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })
 export class ExampleComponent implements AfterViewInit {
-  @ViewChild('calendar', { read: ElementRef }) calendar;
-  @ViewChild('addMenu', { read: ElementRef }) addMenu;
+  @ViewChild('calendar', { read: ElementRef }) calendar: ElementRef<IdsCalender>;
+  @ViewChild('addMenu', { read: ElementRef }) addMenu: ElementRef<IdsPopupMenu>;
 
   constructor(
     private dataService: DataService
@@ -23,7 +24,7 @@ export class ExampleComponent implements AfterViewInit {
 
     this.dataService.getJsonData('events')
       .subscribe(res => {
-        this.calendar.nativeElement.eventData = res;
+        this.calendar.nativeElement.eventsData = res;
       });
 
     this.addMenu.nativeElement?.addEventListener('selected', (evt: any) => {
