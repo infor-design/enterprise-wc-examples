@@ -11,6 +11,9 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2020",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -26,6 +29,9 @@
     "enableIvy": true,
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
-    "allowJs": true
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
   }
 }

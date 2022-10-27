@@ -1,5 +1,5 @@
 import { Component, VERSION } from '@angular/core';
-
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-ids-wc',
   templateUrl: './app.component.html',
@@ -8,5 +8,7 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent {
   public name = 'Angular ' + VERSION.major;
   
-  constructor() {}
+  constructor(
+    private router: Router
+  ) {}
 }

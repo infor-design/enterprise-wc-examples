@@ -1,7 +1,5 @@
-import { Component, VERSION, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-
-import IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag.js';
-import IdsAccordion from 'ids-enterprise-wc/components/ids-accordion/ids-accordion.js';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { routes } from '../../app-routing.module';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -10,25 +8,23 @@ import IdsAccordion from 'ids-enterprise-wc/components/ids-accordion/ids-accordi
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
-  @ViewChild('myTag') tag: IdsTag;
-  @ViewChild('myAccordion') accordion: IdsAccordion;
+  public routes = routes;
+  public categories: Array<any>;
 
-  public name = 'Angular ' + VERSION.major;
-  public person = 'John Smith';
-  public type = 'success';
-  public tagList = [
-    { type: '', name: 'Tag One' },
-    { type: 'success', name: 'Tag Two' },
-    { type: '', name: 'Tag Three' },
-    { type: 'error', name: 'Tag Four' },
-  ];
-
-  ngAfterViewInit() {
-    this.tag.nativeElement.color = 'success';
-    console.log(this.accordion.headers);
+  constructor() {
+    this.categories = [
+      { name: 'Form Inputs', icon: 'display' },
+      { name: 'Navigation and Interaction', icon: 'map' },
+      { name: 'Messages and Alerts', icon: 'success' },
+      { name: 'Lists', icon: 'spreadsheet' },
+      { name: 'Layouts', icon: 'project' },
+      { name: 'Patterns', icon: 'design-mode' },
+      { name: 'Charts and Visualizations', icon: 'line-bar-chart' },
+      { name: 'Typography', icon: '' },
+    ];
   }
 
-  onTagRemove(details: CustomEvent) {
-    console.log('tagremove fired', details, details.detail);
+  ngAfterViewInit() {
+    console.log('Homepage init');
   }
 }
