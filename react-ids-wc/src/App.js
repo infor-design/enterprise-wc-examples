@@ -43,7 +43,6 @@ import IdsSkipLink from './examples/ids-skip-link';
 import IdsSlider from './examples/ids-slider';
 import IdsSpinbox from './examples/ids-spinbox';
 import IdsStepChart from './examples/ids-step-chart';
-import IdsSummaryField from './examples/ids-summary-field';
 import IdsSwapList from './examples/ids-swaplist';
 import IdsSwipeAction from './examples/ids-swipe-action';
 import IdsSwitch from './examples/ids-switch';
@@ -127,7 +126,6 @@ const App = () => {
           <Route element={<IdsSlider />} path="/ids-slider" />
           <Route element={<IdsSpinbox />} path="/ids-spinbox" />
           <Route element={<IdsStepChart />} path="/ids-step-chart" />
-          <Route element={<IdsSummaryField />} path="/ids-summary-field" />
           <Route element={<IdsSwapList />} path="/ids-swaplist" />
           <Route element={<IdsSwipeAction />} path="/ids-swipe-action" />
           <Route element={<IdsSwitch />} path="/ids-switch" />

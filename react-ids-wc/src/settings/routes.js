@@ -229,12 +229,6 @@ export const routes = [
     category: categories.CHARTS,
   },
   {
-    route: 'ids-render-loop',
-    name: 'IdsRenderLoop',
-    title: 'Render Loop',
-    category: categories.NAVS,
-  },
-  {
     route: 'ids-scroll-view',
     name: 'IdsScrollView',
     title: 'Scroll View',
@@ -263,12 +257,6 @@ export const routes = [
     name: 'IdsStepChart',
     title: 'Step Chart',
     category: categories.NAVS,
-  },
-  {
-    route: 'ids-summary-field',
-    name: 'IdsSummaryField',
-    title: 'Summary Field',
-    category: categories.FORMS,
   },
   {
     route: 'ids-swaplist',
