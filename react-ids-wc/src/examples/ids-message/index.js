@@ -1,44 +1,13 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
+
 import 'ids-enterprise-wc/components/ids-message/ids-message';
 
-
 const IdsMessage = () => {
-  const messageErrRef = useRef();
-  const triggerRef = useRef();
-
-  useEffect(() => {
-    // Adding ref current element to variable to be able cleanup event listeners on unmount
-    const messageErr = messageErrRef.current;
-    const triggerBtn = triggerRef.current;
-
-    // Link the About to its trigger button
-    messageErr.target = triggerRef.current;
-    messageErr.trigger = 'click';
-
-    // Event handler to be used in attach and cleanup event listener
-    const handleBeforeShow = () => {
-      triggerBtn.disabled = true;
-      return true;
-    };
-
-    const handleHide = () => {
-      triggerBtn.disabled = false;
-    };
-
-    // Attach event listener
-    messageErr.addEventListener('beforeshow', handleBeforeShow);
-    messageErr.addEventListener('hide', handleHide);
-
-    // Cleanup event listener on React component unmount
-    return () => [
-      messageErr.removeEventListener('beforeshow', handleBeforeShow),
-      messageErr.removeEventListener('hide', handleHide)
-    ];
-  }, []);
+  const messageRef = useRef();
 
   return (
     <>
-      <ids-message ref={messageErrRef} status="error">
+      <ids-message ref={messageRef} status="error">
         <ids-text slot="title" font-size="24" type="h2">
           Lost connection
         </ids-text>
@@ -64,7 +33,14 @@ const IdsMessage = () => {
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
-          <ids-button type="secondary" ref={triggerRef}>
+          <ids-button
+            type="secondary"
+            // Trigger ids-message visibility with React onClick synthetic event
+            onClick={() => {
+              messageRef.current?.show()
+            }}
+            disabled={messageRef.current?.visible}
+          >
             Error Example
           </ids-button>
         </ids-layout-grid-cell>

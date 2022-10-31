@@ -1,42 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 
 import 'ids-enterprise-wc/components/ids-about/ids-about';
 
-const IdsAbout = ({ wcLoaded }) => {
+const IdsAbout = () => {
   const aboutRef = useRef();
-  const triggerRef = useRef();
-
-  useEffect(() => {
-    if (wcLoaded) {
-      // Adding ref current element to variable to be able cleanup event listeners on unmount
-      const about = aboutRef.current;
-      const triggerBtn = triggerRef.current;
-
-      // Link the About to its trigger button
-      about.target = triggerBtn;
-      about.trigger = 'click';
-
-      // Event handler to be used in attach and cleanup event listener
-      const handleBeforeShow = () => {
-        triggerBtn.disabled = true;
-        return true;
-      };
-
-      const handleHide = () => {
-        triggerBtn.disabled = false;
-      };
-
-      // Attach event listener
-      about.addEventListener('beforeshow', handleBeforeShow);
-      about.addEventListener('hide', handleHide);
-
-      // Cleanup event listener on React component unmount
-      return () => [
-        about.removeEventListener('beforeshow', handleBeforeShow),
-        about.removeEventListener('hide', handleHide)
-      ];
-    }
-  }, [wcLoaded]);
 
   return (
     <>
@@ -45,7 +12,7 @@ const IdsAbout = ({ wcLoaded }) => {
         product-name="Controls Example Application"
         product-version="Version No. XX"
       >
-        <ids-icon slot="icon" icon="logo-trademark" size="largex3"></ids-icon>
+        <ids-icon slot="icon" icon="logo" viewbox="0 0 35 34" size="xxl"></ids-icon>
         <ids-text slot="appName" type="h1" font-size="24" font-weight="bold">
           IDS Enterprise
         </ids-text>
@@ -64,7 +31,12 @@ const IdsAbout = ({ wcLoaded }) => {
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
-          <ids-button ref={triggerRef} type="secondary">
+          <ids-button
+            type="secondary"
+            // Trigger ids-about visibility with React onClick synthetic event
+            onClick={() => aboutRef.current?.show()}
+            disabled={aboutRef.current?.visible}
+          >
             Show About Screen
           </ids-button>
         </ids-layout-grid-cell>
