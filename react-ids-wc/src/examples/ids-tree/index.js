@@ -39,7 +39,7 @@ const IdsTree = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid>
+      <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-tree ref={treeRef} label="Tree Demo"></ids-tree>
         </ids-layout-grid-cell>

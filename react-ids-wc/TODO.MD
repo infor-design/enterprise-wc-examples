@@ -13,7 +13,7 @@
 - [x] Missing: http://localhost:3000/ids-render-loop
 - [x] Missing: http://localhost:3000/ids-summary-field
 - [ ] Styles: http://localhost:3000/ids-progress-chart
-- [ ] Styles: http://localhost:3000/ids-swipe-action
-- [ ] Styles: http://localhost:3000/ids-tag
-- [ ] Styles: http://localhost:3000/ids-tree
+- [x] Styles: http://localhost:3000/ids-swipe-action
+- [x] Styles: http://localhost:3000/ids-tag
+- [x] Styles: http://localhost:3000/ids-tree
 - [ ] `Uncaught TypeError: Illegal constructor` error on http://localhost:3000/ids-message
