@@ -11,6 +11,7 @@ import IdsBreadcrumb from './examples/ids-breadcrumb';
 import IdsButton from './examples/ids-button';
 import IdsCard from './examples/ids-card';
 import IdsCheckbox from './examples/ids-checkbox';
+import IdsCheckboxGroup from './examples/ids-checkbox-group';
 import IdsColor from './examples/ids-color';
 import IdsColorPicker from './examples/ids-color-picker';
 import IdsCounts from './examples/ids-counts';
@@ -90,6 +91,7 @@ const App = () => {
           <Route element={<IdsButton />} path="/ids-button" />
           <Route element={<IdsCard />} path="/ids-card" />
           <Route element={<IdsCheckbox />} path="/ids-checkbox" />
+          <Route element={<IdsCheckboxGroup />} path="/ids-checkbox-group" />
           <Route element={<IdsColor />} path="/ids-color" />
           <Route element={<IdsColorPicker />} path="/ids-color-picker" />
           <Route element={<IdsCounts />} path="/ids-counts" />

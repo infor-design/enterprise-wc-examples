@@ -67,6 +67,12 @@ export const routes = [
     category: categories.FORMS,
   },
   {
+    route: 'ids-checkbox-group',
+    name: 'IdsCheckboxGroup',
+    title: 'Checkbox Group',
+    category: categories.FORMS,
+  },
+  {
     route: 'ids-color',
     name: 'IdsColor',
     title: 'Color',
