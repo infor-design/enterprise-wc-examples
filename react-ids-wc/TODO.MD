@@ -12,7 +12,7 @@
 - [ ] Lacking: http://localhost:3000/ids-virtual-scroll
 - [x] Missing: http://localhost:3000/ids-render-loop
 - [x] Missing: http://localhost:3000/ids-summary-field
-- [ ] Styles: http://localhost:3000/ids-progress-chart
+- [x] Styles: http://localhost:3000/ids-progress-chart
 - [x] Styles: http://localhost:3000/ids-swipe-action
 - [x] Styles: http://localhost:3000/ids-tag
 - [x] Styles: http://localhost:3000/ids-tree

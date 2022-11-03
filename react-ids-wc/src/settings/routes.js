@@ -91,6 +91,12 @@ export const routes = [
     category: categories.LISTS
   },
   {
+    route: 'ids-date-picker',
+    name: 'IdsDatePicker',
+    title: 'Date Picker',
+    category: categories.FORMS
+  },
+  {
     route: 'ids-draggable',
     name: 'IdsDraggable',
     title: 'Draggable',
