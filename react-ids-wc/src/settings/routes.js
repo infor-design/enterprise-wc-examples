@@ -97,6 +97,12 @@ export const routes = [
     category: categories.LISTS
   },
   {
+    route: 'ids-data-label',
+    name: 'IdsDataLabel',
+    title: 'Data Label',
+    category: categories.FORMS
+  },
+  {
     route: 'ids-date-picker',
     name: 'IdsDatePicker',
     title: 'Date Picker',
