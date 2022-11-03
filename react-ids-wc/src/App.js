@@ -31,6 +31,7 @@ import IdsInput from './examples/ids-input';
 import IdsLayoutGrid from './examples/ids-layout-grid';
 import IdsListView from './examples/ids-list-view';
 import IdsLoadingIndicator from './examples/ids-loading-indicator';
+import IdsLookup from './examples/ids-lookup';
 import IdsMask from './examples/ids-mask';
 import IdsMenu from './examples/ids-menu';
 import IdsMenuButton from './examples/ids-menu-button';
@@ -117,6 +118,7 @@ const App = () => {
             element={<IdsLoadingIndicator />}
             path="/ids-loading-indicator"
           />
+          <Route element={<IdsLookup />} path="/ids-lookup" />
           <Route element={<IdsMask />} path="/ids-mask" />
           <Route element={<IdsMenu />} path="/ids-menu" />
           <Route element={<IdsMenuButton />} path="/ids-menu-button" />

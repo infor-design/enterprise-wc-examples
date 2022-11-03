@@ -187,6 +187,12 @@ export const routes = [
     category: categories.NAVS,
   },
   {
+    route: 'ids-lookup',
+    name: 'IdsLookup',
+    title: 'Lookup',
+    category: categories.FORMS,
+  },
+  {
     route: 'ids-mask',
     name: 'IdsMask',
     title: 'Mask',
