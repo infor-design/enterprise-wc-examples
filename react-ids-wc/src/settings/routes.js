@@ -139,6 +139,12 @@ export const routes = [
     category: categories.LAYOUTS,
   },
   {
+    route: 'ids-form',
+    name: 'IdsForm',
+    title: 'Form',
+    category: categories.FORMS,
+  },
+  {
     route: 'ids-header',
     name: 'IdsHeader',
     title: 'Header',

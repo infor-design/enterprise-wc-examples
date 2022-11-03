@@ -16,13 +16,14 @@ import IdsColor from './examples/ids-color';
 import IdsColorPicker from './examples/ids-color-picker';
 import IdsCounts from './examples/ids-counts';
 import IdsDataGrid from './examples/ids-data-grid';
-import IdsDatePicker from './examples/ids-date-picker';
 import IdsDataLabel from './examples/ids-data-label';
+import IdsDatePicker from './examples/ids-date-picker';
 import IdsDraggable from './examples/ids-draggable';
 import IdsDropdown from './examples/ids-dropdown';
 import IdsEditor from './examples/ids-editor';
 import IdsExpandableArea from './examples/ids-expandable-area';
 import IdsFieldset from './examples/ids-fieldset';
+import IdsForm from './examples/ids-form';
 import IdsHeader from './examples/ids-header';
 import IdsHyperlink from './examples/ids-hyperlink';
 import IdsIcon from './examples/ids-icon';
@@ -105,6 +106,7 @@ const App = () => {
           <Route element={<IdsEditor />} path="/ids-editor" />
           <Route element={<IdsExpandableArea />} path="/ids-expandable-area" />
           <Route element={<IdsFieldset />} path="/ids-fieldset" />
+          <Route element={<IdsForm />} path="/ids-form" />
           <Route element={<IdsHeader />} path="/ids-header" />
           <Route element={<IdsHyperlink />} path="/ids-hyperlink" />
           <Route element={<IdsIcon />} path="/ids-icon" />
