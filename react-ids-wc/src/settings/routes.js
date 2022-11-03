@@ -121,6 +121,12 @@ export const routes = [
     category: categories.FORMS
   },
   {
+    route: 'ids-editor',
+    name: 'IdsEditor',
+    title: 'Editor',
+    category: categories.FORMS,
+  },
+  {
     route: 'ids-expandable-area',
     name: 'IdsExpandableArea',
     title: 'Expandable Area',
