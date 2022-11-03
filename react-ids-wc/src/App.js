@@ -17,6 +17,7 @@ import IdsCounts from './examples/ids-counts';
 import IdsDataGrid from './examples/ids-data-grid';
 import IdsDatePicker from './examples/ids-date-picker';
 import IdsDraggable from './examples/ids-draggable';
+import IdsDropdown from './examples/ids-dropdown';
 import IdsExpandableArea from './examples/ids-expandable-area';
 import IdsFieldset from './examples/ids-fieldset';
 import IdsHeader from './examples/ids-header';
@@ -95,6 +96,7 @@ const App = () => {
           <Route element={<IdsDataGrid />} path="/ids-data-grid" />
           <Route element={<IdsDatePicker />} path="/ids-date-picker" />
           <Route element={<IdsDraggable />} path="/ids-draggable" />
+          <Route element={<IdsDropdown />} path="/ids-dropdown" />
           <Route element={<IdsExpandableArea />} path="/ids-expandable-area" />
           <Route element={<IdsFieldset />} path="/ids-fieldset" />
           <Route element={<IdsHeader />} path="/ids-header" />

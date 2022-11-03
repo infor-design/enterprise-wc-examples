@@ -103,6 +103,12 @@ export const routes = [
     category: categories.LISTS
   },
   {
+    route: 'ids-dropdown',
+    name: 'IdsDropdown',
+    title: 'Dropdown',
+    category: categories.FORMS
+  },
+  {
     route: 'ids-expandable-area',
     name: 'IdsExpandableArea',
     title: 'Expandable Area',
