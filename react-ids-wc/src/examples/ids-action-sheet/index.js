@@ -16,7 +16,7 @@ const IdsActionSheet = () => {
         <ids-layout-grid-cell>
           <ids-menu-button id="icon-button" menu="icon-menu">
             <ids-icon slot="icon" icon="more"></ids-icon>
-            <span classNa="audible">Icon Only Button</span>
+            <span className="audible">Icon Only Button</span>
           </ids-menu-button>
 
           <ids-popup-menu
