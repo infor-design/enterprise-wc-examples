@@ -1,4 +1,6 @@
 import React from 'react';
+import 'ids-enterprise-wc/components/ids-toggle-button/ids-toggle-button';
+
 
 const IdsToggleButton = () => {
   return (

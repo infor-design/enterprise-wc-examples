@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-toolbar/ids-toolbar';
+
 
 const IdsToolbar = () => {
   const menuBtnRef = useRef();

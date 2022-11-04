@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-tag/ids-tag';
+
 
 function IdsTag() {
   const reactInfoTagRef = useRef();

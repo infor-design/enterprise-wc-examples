@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-tooltip/ids-tooltip';
+
 
 const IdsTooltip = () => {
   const triggerRef = useRef();

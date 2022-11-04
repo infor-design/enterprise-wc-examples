@@ -1,5 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 
+import 'ids-enterprise-wc/components/ids-accordion/ids-accordion';
+
 const IdsAccordion = ({ wcLoaded }) => {
   const accordionRef = useRef()
   const [expanded, setExpanded] = useState(false)

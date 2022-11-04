@@ -1,4 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
+import 'ids-enterprise-wc/components/ids-input/ids-input';
+
 
 const IdsInput = () => {
   const sourceInputRef = useRef();

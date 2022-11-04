@@ -1,4 +1,6 @@
 import React from 'react';
+import 'ids-enterprise-wc/components/ids-loading-indicator/ids-loading-indicator';
+
 
 const IdsLoadingIndicator = () => {
   return (

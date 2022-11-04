@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import 'ids-enterprise-wc/components/ids-toast/ids-toast';
+
 
 const IdsToast = () => {
   const toastContainerRef = useRef();

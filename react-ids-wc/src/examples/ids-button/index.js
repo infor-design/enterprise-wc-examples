@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-button/ids-button';
+
 
 const IdsButton = () => {
   const buttonRef = useRef();

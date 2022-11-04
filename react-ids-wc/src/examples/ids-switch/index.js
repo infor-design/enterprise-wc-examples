@@ -1,4 +1,6 @@
 import React from 'react';
+import 'ids-enterprise-wc/components/ids-switch/ids-switch';
+
 
 const IdsSwitch = () => {
   return (

@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import 'ids-enterprise-wc/components/ids-radio/ids-radio';
+
 
 const IdsRadio = () => {
   const radioGroupRef = useRef();

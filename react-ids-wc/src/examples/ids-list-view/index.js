@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
+
 
 const IdsListView = () => {
   const listViewRef = useRef();

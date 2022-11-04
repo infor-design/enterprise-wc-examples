@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-header/ids-header';
+
 
 const IdsHeader = () => {
   const menuBtnRef = useRef();

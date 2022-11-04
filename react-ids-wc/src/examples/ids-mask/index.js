@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import 'ids-enterprise-wc/components/ids-mask/ids-masks';
+
 
 const IdsMask = () => {
   const maskPhoneRef = useRef();

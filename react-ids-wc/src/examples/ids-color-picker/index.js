@@ -1,4 +1,6 @@
 import React from 'react';
+import 'ids-enterprise-wc/components/ids-color-picker/ids-color-picker';
+
 
 const IdsColorPicker = () => {
   return (

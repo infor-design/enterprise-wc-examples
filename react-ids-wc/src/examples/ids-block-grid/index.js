@@ -1,4 +1,6 @@
 import React from 'react';
+import 'ids-enterprise-wc/components/ids-block-grid/ids-block-grid';
+
 
 const IdsBlockGrid = () => {
   return (

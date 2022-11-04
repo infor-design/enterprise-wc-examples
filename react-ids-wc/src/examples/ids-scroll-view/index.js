@@ -1,4 +1,6 @@
 import React from 'react';
+import 'ids-enterprise-wc/components/ids-scroll-view/ids-scroll-view';
+
 
 const IdsScrollView = () => {
   return (

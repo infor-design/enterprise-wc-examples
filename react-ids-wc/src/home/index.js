@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <ids-layout-grid auto="true" gap="md" class="main-list">
       <ids-layout-grid-cell>
-        {categories.map(category => (
+        {Object.values(categories).map(category => (
           <div key={category}>
             <ids-text type="h1" font-size="24">
               {category}
