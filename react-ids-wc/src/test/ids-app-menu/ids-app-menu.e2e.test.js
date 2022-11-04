@@ -1,10 +1,10 @@
-describe('ids-badge e2e tests', () => {
+describe('ids-app-menu e2e tests', () => {
   let errors = [];
 
   beforeAll(async () => {
     page.on('pageerror', error => errors.push(error.text));
 
-    await page.goto('http://localhost:3000/ids-badge');
+    await page.goto('http://localhost:3000/ids-app-menu');
   });
 
   it('renders with no errors', () => {
