@@ -5,6 +5,7 @@ describe('ids-button e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-button');
+    await page.waitForSelector('ids-button');
   });
 
   it('renders with no errors', () => {

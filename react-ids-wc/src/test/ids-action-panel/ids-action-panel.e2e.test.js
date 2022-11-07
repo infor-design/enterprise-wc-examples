@@ -5,6 +5,7 @@ describe('ids-action-panel e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-action-panel');
+    await page.waitForSelector('ids-action-panel');
   });
 
   it('renders with no errors', () => {

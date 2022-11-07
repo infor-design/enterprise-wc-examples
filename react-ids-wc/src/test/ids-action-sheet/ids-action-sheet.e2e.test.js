@@ -5,6 +5,7 @@ describe('ids-action-sheet e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-action-sheet');
+    await page.waitForSelector('ids-action-sheet');
   });
 
   it('renders with no errors', () => {
