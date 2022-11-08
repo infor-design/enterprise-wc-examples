@@ -18,8 +18,9 @@ const IdsTag = () => {
     dismissibleTag.addEventListener('tagremove', handleTagRemove);
 
     // Cleanup event listener on React component unmount
-    return () =>
+    return () => {
       dismissibleTag.removeEventListener('tagremove', handleTagRemove);
+    }
   }, []);
 
   return (
