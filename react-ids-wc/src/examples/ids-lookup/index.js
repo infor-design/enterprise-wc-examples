@@ -1,7 +1,70 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import 'ids-enterprise-wc/components/ids-lookup/ids-lookup';
 
 const IdsLookup = () => {
+  const lookupRef = useRef();
+
+  useEffect(() => {
+    const lookup = lookupRef.current;
+    const columns = [
+      {
+        id: 'selectionCheckbox',
+        name: 'selection',
+        sortable: false,
+        resizable: false,
+        formatter: lookup.dataGrid.formatters.selectionCheckbox,
+        align: 'center'
+      },
+      {
+        id: 'rowNumber',
+        name: '#',
+        formatter: lookup.dataGrid.formatters.rowNumber,
+        sortable: false,
+        readonly: true,
+        width: 65
+      },
+      {
+        id: 'description',
+        name: 'Description',
+        field: 'description',
+        sortable: true,
+        formatter: lookup.dataGrid.formatters.text
+      },
+      {
+        id: 'ledger',
+        name: 'Ledger',
+        field: 'ledger',
+        formatter: lookup.dataGrid.formatters.text
+      },
+      {
+        id: 'price',
+        name: 'Price',
+        field: 'price',
+        formatter: lookup.dataGrid.formatters.decimal,
+        formatOptions: { locale: 'en-US' } // Data Values are in en-US
+      },
+      {
+        id: 'bookCurrency',
+        name: 'Currency',
+        field: 'bookCurrency',
+        formatter: lookup.dataGrid.formatters.text
+      }
+    ];
+
+    // Set up columns
+    lookup.columns = columns;
+
+    async function fetchData() {
+      // Do an ajax request
+      const response = await fetch('/data/books.json');
+      const data = await response.json();
+      console.log('data', data);
+      // Set data
+      lookup.data = data;
+    }
+    fetchData();
+  }, []);
+
   return (
     <>
       <ids-layout-grid>
@@ -13,14 +76,14 @@ const IdsLookup = () => {
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-lookup
-            id="lookup-1"
-            label="Normal Lookup (dirty-tracker)"
+            ref={lookupRef}
+            label="Lookup Field"
             title="Select an Item"
             field="description"
             value="102,103"
-            dirty-tracker="true"
+            // dirty-tracker="true"
           ></ids-lookup>
-          <ids-lookup
+          {/* <ids-lookup
             id="lookup-2"
             readonly="true"
             label="Readonly Lookup"
@@ -36,11 +99,12 @@ const IdsLookup = () => {
             id="lookup-4"
             label="Required Lookup"
             validate="required"
-          ></ids-lookup>
+          ></ids-lookup> */}
           <ids-lookup id="lookup-5" label="Custom Lookup">
             <ids-modal
               slot="lookup-modal"
               id="custom-lookup-modal"
+              visible="false"
               aria-labelledby="custom-lookup-modal-title"
             >
               <ids-text
@@ -60,13 +124,13 @@ const IdsLookup = () => {
               </ids-modal-button>
             </ids-modal>
           </ids-lookup>
-          <ids-lookup
+          {/* <ids-lookup
             id="lookup-6"
             label="Autocomplete Lookup"
             title="Select an Item"
             autocomplete
             field="description"
-          ></ids-lookup>
+          ></ids-lookup> */}
         </ids-layout-grid-cell>
       </ids-layout-grid>
     </>
