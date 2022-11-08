@@ -5,6 +5,7 @@ export const categories = {
   MESSAGES: 'Messages and Alerts', // 2
   LISTS: 'Lists', // 3
   LAYOUTS: 'Layouts', // 4
+  PATTERNS: 'Patterns', // 7
   CHARTS: 'Charts and Visualizations', // 5
   FONTS: 'Typography' // 6
 };
@@ -49,6 +50,24 @@ export const routes = [
     category: categories.NAVS
   },
   {
+    route: 'ids-area-chart',
+    name: 'IdsAreaChart',
+    title: 'Area Chart',
+    category: categories.CHARTS
+  },
+  {
+    route: 'ids-axis-chart',
+    name: 'IdsAxisChart',
+    title: 'Axis Chart',
+    category: categories.CHARTS
+  },
+  {
+    route: 'ids-bar-chart',
+    name: 'IdsBarChart',
+    title: 'Bar Chart',
+    category: categories.CHARTS
+  },
+  {
     route: 'ids-badge',
     name: 'IdsBadge',
     title: 'Badge',
@@ -71,6 +90,18 @@ export const routes = [
     name: 'IdsButton',
     title: 'Button',
     category: categories.NAVS
+  },
+  {
+    route: 'ids-calendar',
+    name: 'IdsCalendar',
+    title: 'Calendar',
+    category: categories.LAYOUTS
+  },
+  {
+    route: 'ids-container',
+    name: 'IdsContainer',
+    title: 'Container',
+    category: categories.LAYOUTS
   },
   {
     route: 'ids-empty-message',
@@ -178,7 +209,31 @@ export const routes = [
     route: 'ids-header',
     name: 'IdsHeader',
     title: 'Header',
-    category: categories.NAVS
+    category: categories.LAYOUTS
+  },
+  {
+    route: 'ids-hidden',
+    name: 'IdsHidden',
+    title: 'Hidden',
+    category: categories.LAYOUTS
+  },
+  {
+    route: 'ids-hierarchy',
+    name: 'IdsHierarchy',
+    title: 'Hierarchy',
+    category: categories.LAYOUTS
+  },
+  {
+    route: 'ids-home-page',
+    name: 'IdsHomePage',
+    title: 'Home Page',
+    category: categories.LAYOUTS
+  },
+  {
+    route: 'ids-image',
+    name: 'IdsImage',
+    title: 'Image',
+    category: categories.LAYOUTS
   },
   {
     route: 'ids-hyperlink',
@@ -205,6 +260,18 @@ export const routes = [
     category: categories.LAYOUTS
   },
   {
+    route: 'ids-layout-flex',
+    name: 'IdsLayoutFlex',
+    title: 'Layout Flex',
+    category: categories.LAYOUTS
+  },
+  {
+    route: 'ids-list-box',
+    name: 'IdsListBox',
+    title: 'List Box',
+    category: categories.LAYOUTS
+  },
+  {
     route: 'ids-list-view',
     name: 'IdsListView',
     title: 'List View',
@@ -227,6 +294,18 @@ export const routes = [
     name: 'IdsListBuilder',
     title: 'List Builder',
     category: categories.LISTS
+  },
+  {
+    route: 'ids-locale',
+    name: 'IdsLocale',
+    title: 'Locale',
+    category: categories.PATTERNS
+  },
+  {
+    route: 'ids-line-chart',
+    name: 'IdsLineChart',
+    title: 'Line Chart',
+    category: categories.CHARTS
   },
   {
     route: 'ids-mask',
@@ -257,6 +336,18 @@ export const routes = [
     name: 'IdsModal',
     title: 'Modal',
     category: categories.NAVS
+  },
+  {
+    route: 'ids-masthead',
+    name: 'IdsMasthead',
+    title: 'Masthead',
+    category: categories.LAYOUTS
+  },
+  {
+    route: 'ids-month-view',
+    name: 'IdsMonthView',
+    title: 'Month View',
+    category: categories.LAYOUTS
   },
   {
     route: 'ids-multiselect',
@@ -298,6 +389,18 @@ export const routes = [
     route: 'ids-progress-chart',
     name: 'IdsProgressChart',
     title: 'Progress Chart',
+    category: categories.CHARTS
+  },
+  {
+    route: 'ids-pie-chart',
+    name: 'IdsPieChart',
+    title: 'Pie Chart',
+    category: categories.CHARTS
+  },
+  {
+    route: 'ids-process-indicator',
+    name: 'IdsProcessIndicator',
+    title: 'Process Indicator',
     category: categories.CHARTS
   },
   {
@@ -346,13 +449,25 @@ export const routes = [
     route: 'ids-step-chart',
     name: 'IdsStepChart',
     title: 'Step Chart',
-    category: categories.NAVS
+    category: categories.CHARTS
   },
   {
     route: 'ids-swaplist',
     name: 'IdsSwapList',
     title: 'Swap List',
     category: categories.LISTS
+  },
+  {
+    route: 'ids-separator',
+    name: 'IdsSeparator',
+    title: 'Separator',
+    category: categories.LAYOUTS
+  },
+  {
+    route: 'ids-splitter',
+    name: 'IdsSplitter',
+    title: 'Splitter',
+    category: categories.LAYOUTS
   },
   {
     route: 'ids-swipe-action',
@@ -365,6 +480,12 @@ export const routes = [
     name: 'IdsSwitch',
     title: 'Switch',
     category: categories.FORMS
+  },
+  {
+    route: 'ids-swappable',
+    name: 'IdsSwappable',
+    title: 'Swappable',
+    category: categories.PATTERNS
   },
   {
     route: 'ids-tabs',
@@ -439,6 +560,12 @@ export const routes = [
     category: categories.FORMS
   },
   {
+    route: 'ids-treemap',
+    name: 'IdsTreemap',
+    title: 'Treemap',
+    category: categories.CHARTS
+  },
+  {
     route: 'ids-upload',
     name: 'IdsUpload',
     title: 'Upload',
@@ -461,5 +588,11 @@ export const routes = [
     name: 'IdsWizard',
     title: 'Wizard',
     category: categories.NAVS
+  },
+  {
+    route: 'ids-week-view',
+    name: 'IdsWeekView',
+    title: 'Week View',
+    category: categories.LAYOUTS
   }
 ];

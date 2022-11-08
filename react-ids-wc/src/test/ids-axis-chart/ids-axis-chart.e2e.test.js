@@ -1,10 +1,11 @@
-describe('ids-card e2e tests', () => {
+describe('ids-axis-charte2e tests', () => {
   let errors = [];
 
   beforeAll(async () => {
     page.on('pageerror', error => errors.push(error.text));
 
-    await page.goto('http://localhost:3000/ids-card');
+    await page.goto('http://localhost:3000/ids-axis-chart');
+    await page.waitForSelector('ids-axis-chart');
   });
 
   it('renders with no errors', () => {

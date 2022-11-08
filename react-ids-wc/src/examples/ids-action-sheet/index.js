@@ -21,7 +21,7 @@ const IdsActionSheet = () => {
 
           <ids-popup-menu
             id="icon-menu"
-            class="hide-sm-down"
+            className="hide-sm-down"
             target="icon-button"
             trigger-type="click"
           >

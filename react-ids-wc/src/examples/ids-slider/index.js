@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import 'ids-enterprise-wc/components/ids-slider/ids-slider';
 
-
 const IdsSlider = () => {
   const surveyRef = useRef();
 
@@ -52,15 +51,27 @@ const IdsSlider = () => {
           <ids-slider type="single" vertical color="red"></ids-slider>
         </ids-layout-grid-cell>
         <ids-layout-grid-cell>
-          <ids-slider type="range" vertical color="green" show-tooltip></ids-slider>
+          <ids-slider
+            type="range"
+            vertical
+            color="green"
+            show-tooltip
+          ></ids-slider>
         </ids-layout-grid-cell>
         <ids-layout-grid-cell>
-          <ids-slider class="survey" type="step" vertical step-number="6" color="" label="Status"></ids-slider>
+          <ids-slider
+            className="survey"
+            type="step"
+            vertical
+            step-number="6"
+            color=""
+            label="Status"
+          ></ids-slider>
         </ids-layout-grid-cell>
         <ids-layout-grid-cell>
           <ids-slider
             ref={surveyRef}
-            class="survey"
+            className="survey"
             type="step"
             vertical
             step-number="5"
