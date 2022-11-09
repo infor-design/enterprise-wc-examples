@@ -1,10 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Outlet
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 
 import Home from './home';
 const IdsAbout = lazy(() => import('./examples/ids-about'));
@@ -51,9 +46,7 @@ const IdsLayoutGrid = lazy(() => import('./examples/ids-layout-grid'));
 const IdsLayoutFlex = lazy(() => import('./examples/ids-layout-flex'));
 const IdsListView = lazy(() => import('./examples/ids-list-view'));
 const IdsListBox = lazy(() => import('./examples/ids-list-box'));
-const IdsLoadingIndicator = lazy(() =>
-  import('./examples/ids-loading-indicator')
-);
+const IdsLoadingIndicator = lazy(() => import('./examples/ids-loading-indicator'));
 const IdsLookup = lazy(() => import('./examples/ids-lookup'));
 const IdsListBuilder = lazy(() => import('./examples/ids-list-builder'));
 const IdsLocale = lazy(() => import('./examples/ids-locale'));
@@ -66,18 +59,14 @@ const IdsMenuButton = lazy(() => import('./examples/ids-menu-button'));
 const IdsMessage = lazy(() => import('./examples/ids-message'));
 const IdsMultiselect = lazy(() => import('./examples/ids-multiselect'));
 const IdsModal = lazy(() => import('./examples/ids-modal'));
-const IdsNotificationBanner = lazy(() =>
-  import('./examples/ids-notification-banner')
-);
+const IdsNotificationBanner = lazy(() => import('./examples/ids-notification-banner'));
 const IdsPager = lazy(() => import('./examples/ids-pager'));
 const IdsPopup = lazy(() => import('./examples/ids-popup'));
 const IdsPopupMenu = lazy(() => import('./examples/ids-popup-menu'));
 const IdsProgressBar = lazy(() => import('./examples/ids-progress-bar'));
 const IdsProgressChart = lazy(() => import('./examples/ids-progress-chart'));
 const IdsPieChart = lazy(() => import('./examples/ids-pie-chart'));
-const IdsProcessIndicator = lazy(() =>
-  import('./examples/ids-process-indicator')
-);
+const IdsProcessIndicator = lazy(() => import('./examples/ids-process-indicator'));
 const IdsRadio = lazy(() => import('./examples/ids-radio'));
 const IdsRating = lazy(() => import('./examples/ids-rating'));
 const IdsScrollView = lazy(() => import('./examples/ids-scroll-view'));
@@ -131,7 +120,7 @@ const ThemeSwitcher = () => (
 const App = () => {
   return (
     <Router>
-      <Suspense fallback="">
+      <Suspense fallback="Loading...">
         <ids-container hidden locale="en-US">
           <Routes>
             {/* Examples where theme switcher should appear by default */}
@@ -153,10 +142,7 @@ const App = () => {
               <Route element={<IdsCalendar />} path="/ids-calendar" />
               <Route element={<IdsContainer />} path="/ids-container" />
               <Route element={<IdsCheckbox />} path="/ids-checkbox" />
-              <Route
-                element={<IdsCheckboxGroup />}
-                path="/ids-checkbox-group"
-              />
+              <Route element={<IdsCheckboxGroup />} path="/ids-checkbox-group" />
               <Route element={<IdsColor />} path="/ids-color" />
               <Route element={<IdsColorPicker />} path="/ids-color-picker" />
               <Route element={<IdsCounts />} path="/ids-counts" />
@@ -166,10 +152,7 @@ const App = () => {
               <Route element={<IdsDraggable />} path="/ids-draggable" />
               <Route element={<IdsDropdown />} path="/ids-dropdown" />
               <Route element={<IdsEditor />} path="/ids-editor" />
-              <Route
-                element={<IdsExpandableArea />}
-                path="/ids-expandable-area"
-              />
+              <Route element={<IdsExpandableArea />} path="/ids-expandable-area" />
               <Route element={<IdsEmptyMessage />} path="/ids-empty-message" />
               <Route element={<IdsErrorPage />} path="/ids-error-page" />
               <Route element={<IdsFieldset />} path="/ids-fieldset" />
@@ -186,10 +169,7 @@ const App = () => {
               <Route element={<IdsLayoutFlex />} path="/ids-layout-flex" />
               <Route element={<IdsListView />} path="/ids-list-view" />
               <Route element={<IdsListBox />} path="/ids-list-box" />
-              <Route
-                element={<IdsLoadingIndicator />}
-                path="/ids-loading-indicator"
-              />
+              <Route element={<IdsLoadingIndicator />} path="/ids-loading-indicator" />
               <Route element={<IdsLookup />} path="/ids-lookup" />
               <Route element={<IdsListBuilder />} path="/ids-list-builder" />
               <Route element={<IdsLocale />} path="/ids-locale" />
@@ -202,23 +182,14 @@ const App = () => {
               <Route element={<IdsMessage />} path="/ids-message" />
               <Route element={<IdsModal />} path="/ids-modal" />
               <Route element={<IdsMultiselect />} path="/ids-multiselect" />
-              <Route
-                element={<IdsNotificationBanner />}
-                path="/ids-notification-banner"
-              />
+              <Route element={<IdsNotificationBanner />} path="/ids-notification-banner" />
               <Route element={<IdsPager />} path="/ids-pager" />
               <Route element={<IdsPopup />} path="/ids-popup" />
               <Route element={<IdsPopupMenu />} path="/ids-popup-menu" />
               <Route element={<IdsProgressBar />} path="/ids-progress-bar" />
-              <Route
-                element={<IdsProgressChart />}
-                path="/ids-progress-chart"
-              />
+              <Route element={<IdsProgressChart />} path="/ids-progress-chart" />
               <Route element={<IdsPieChart />} path="/ids-pie-chart" />
-              <Route
-                element={<IdsProcessIndicator />}
-                path="/ids-process-indicator"
-              />
+              <Route element={<IdsProcessIndicator />} path="/ids-process-indicator" />
               <Route element={<IdsRadio />} path="/ids-radio" />
               <Route element={<IdsRating />} path="/ids-rating" />
               <Route element={<IdsScrollView />} path="/ids-scroll-view" />
@@ -250,14 +221,8 @@ const App = () => {
               <Route element={<IdsTriggerField />} path="/ids-trigger-field" />
               <Route element={<IdsTreemap />} path="/ids-treemap" />
               <Route element={<IdsUpload />} path="/ids-upload" />
-              <Route
-                element={<IdsUploadAdvanced />}
-                path="/ids-upload-advanced"
-              />
-              <Route
-                element={<IdsVirtualScroll />}
-                path="/ids-virtual-scroll"
-              />
+              <Route element={<IdsUploadAdvanced />} path="/ids-upload-advanced" />
+              <Route element={<IdsVirtualScroll />} path="/ids-virtual-scroll" />
               <Route element={<IdsWizard />} path="/ids-wizard" />
               <Route element={<IdsWeekView />} path="/ids-week-view" />
             </Route>
