@@ -24,7 +24,7 @@ const IdsStepChart = () => {
             </div>
             <div id="card-content" slot="card-content">
               <ids-step-chart
-                className="chart"
+                class="chart"
                 label="7 of 7 steps completed"
                 color="emerald06"
                 step-number="7"
@@ -34,14 +34,14 @@ const IdsStepChart = () => {
                 <ids-icon slot="icon" icon="success"></ids-icon>
               </ids-step-chart>
               <ids-step-chart
-                className="chart"
+                class="chart"
                 label="2 of 7 steps completed"
                 color="azure06"
                 step-number="7"
                 value="2"
               ></ids-step-chart>
               <ids-step-chart
-                className="chart"
+                class="chart"
                 label="2 of 7 steps completed"
                 color="azure06"
                 step-number="7"
@@ -49,7 +49,7 @@ const IdsStepChart = () => {
                 completed-label="5 days remaining"
               ></ids-step-chart>
               <ids-step-chart
-                className="chart"
+                class="chart"
                 label="2 of 7 steps completed"
                 color="azure06"
                 step-number="7"
@@ -60,7 +60,7 @@ const IdsStepChart = () => {
                 <ids-icon slot="icon" icon="alert"></ids-icon>
               </ids-step-chart>
               <ids-step-chart
-                className="chart"
+                class="chart"
                 label="2 of 7 steps completed"
                 color="azure06"
                 step-number="7"

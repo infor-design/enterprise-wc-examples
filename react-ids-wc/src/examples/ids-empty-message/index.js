@@ -12,7 +12,7 @@ const IdsEmptyMessage = () => {
       <ids-layout-grid
         cols="3"
         gap="md"
-        className="icon-examples"
+        class="icon-examples"
       ></ids-layout-grid>
       <ids-layout-grid auto="true">
         <ids-text font-size="12" type="h1">
@@ -31,11 +31,7 @@ const IdsEmptyMessage = () => {
                   Description of empty message that explains why and possible
                   contain a hyperlink.
                 </ids-text>
-                <ids-button
-                  className="action-button"
-                  slot="button"
-                  type="primary"
-                >
+                <ids-button class="action-button" slot="button" type="primary">
                   <span slot="text">Action</span>
                 </ids-button>
               </ids-empty-message>
@@ -75,7 +71,7 @@ const IdsEmptyMessage = () => {
         <ids-layout-grid-cell>
           <ids-card auto-height="true">
             <ids-empty-message
-              className="card-content"
+              class="card-content"
               slot="card-content"
               icon="empty-no-events"
             >

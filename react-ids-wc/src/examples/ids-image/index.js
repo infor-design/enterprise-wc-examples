@@ -13,7 +13,7 @@ const IdsImage = () => {
           <br />
           <br />
           <ids-image
-            className="ids-img-10"
+            class="ids-img-10"
             alt="Photo of Evyn"
             round
             tabindex="0"
@@ -21,7 +21,7 @@ const IdsImage = () => {
           <br />
           <br />
           <ids-image
-            className="ids-img-10"
+            class="ids-img-10"
             alt="Photo of Evyn"
             round
             user-status="available"
@@ -30,7 +30,7 @@ const IdsImage = () => {
           <br />
           <br />
           <ids-image
-            className="ids-img-10"
+            class="ids-img-10"
             alt="Photo of Evyn"
             round
             user-status="away"
@@ -39,7 +39,7 @@ const IdsImage = () => {
           <br />
           <br />
           <ids-image
-            className="ids-img-10"
+            class="ids-img-10"
             alt="Photo of Evyn"
             round
             user-status="busy"
@@ -48,7 +48,7 @@ const IdsImage = () => {
           <br />
           <br />
           <ids-image
-            className="ids-img-10"
+            class="ids-img-10"
             alt="Photo of Evyn"
             round
             user-status="do-not-disturb"
@@ -57,7 +57,7 @@ const IdsImage = () => {
           <br />
           <br />
           <ids-image
-            className="ids-img-10"
+            class="ids-img-10"
             alt="Photo of Evyn"
             round
             user-status="unknown"
@@ -69,7 +69,7 @@ const IdsImage = () => {
             Size SM - 60x60
           </ids-text>
           <ids-image
-            className="placeholder-60-60"
+            class="placeholder-60-60"
             id="e2e-image"
             alt="image-sm 60x60"
             size="sm"
@@ -79,7 +79,7 @@ const IdsImage = () => {
           <br />
           <br />
           <ids-image
-            className="non-existant"
+            class="non-existant"
             id="e2e-fallback"
             src="../assets/images/non-existant.jpg"
             alt="image-sm non-existant"
@@ -94,7 +94,7 @@ const IdsImage = () => {
             Size MD - 154x120
           </ids-text>
           <ids-image
-            className="placeholder-154-120"
+            class="placeholder-154-120"
             alt="image-md 154x120"
             size="md"
             tabindex="0"
@@ -116,7 +116,7 @@ const IdsImage = () => {
             Size LG - 300x350
           </ids-text>
           <ids-image
-            className="placeholder-300-350"
+            class="placeholder-300-350"
             alt="image-lg 300x350"
             size="lg"
             tabindex="0"
@@ -137,7 +137,7 @@ const IdsImage = () => {
             Size AUTO
           </ids-text>
           <ids-image
-            className="placeholder-500-200"
+            class="placeholder-500-200"
             alt="image-auto 500x200"
             tabindex="0"
           ></ids-image>
