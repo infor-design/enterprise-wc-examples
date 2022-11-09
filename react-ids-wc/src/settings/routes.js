@@ -1,13 +1,13 @@
 // Component categories appear on the homepage
 export const categories = {
-  CHARTS: 'Charts and Visualizations',
-  FONTS: 'Typography',
   FORMS: 'Form Inputs',
-  LAYOUTS: 'Layouts',
-  LISTS: 'Lists',
-  MESSAGES: 'Messages and Alerts',
   NAVS: 'Navigation and Interaction',
-  PATTERNS: 'Patterns'
+  MESSAGES: 'Messages and Alerts',
+  LISTS: 'Lists',
+  LAYOUTS: 'Layouts',
+  PATTERNS: 'Patterns',
+  CHARTS: 'Charts and Visualizations',
+  FONTS: 'Typography'
 };
 
 // List of all pages with correspondant components

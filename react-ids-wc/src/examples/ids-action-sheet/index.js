@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import 'ids-enterprise-wc/components/ids-action-sheet/ids-action-sheet';
 
 const IdsActionSheet = () => {
+  const actionSheetRef = useRef();
+
   return (
     <>
       <ids-layout-grid auto="true">
@@ -14,25 +16,40 @@ const IdsActionSheet = () => {
 
       <ids-layout-grid auto="true" gap="md">
         <ids-layout-grid-cell>
-          <ids-menu-button id="icon-button" menu="icon-menu">
+          <ids-menu-button
+            id="icon-button"
+            menu="icon-menu"
+            onClick={() => {
+              actionSheetRef.current.visible = !actionSheetRef.current.visible;
+            }}
+          >
             <ids-icon slot="icon" icon="more"></ids-icon>
             <span className="audible">Icon Only Button</span>
           </ids-menu-button>
 
           <ids-popup-menu
             id="icon-menu"
-            className="hide-sm-down"
-            target="icon-button"
+            class="hide-sm-down"
+            target="#icon-button"
             trigger-type="click"
           >
             <ids-menu-group>
-              <ids-menu-item icon="mail">Option One</ids-menu-item>
-              <ids-menu-item icon="filter">Option Two</ids-menu-item>
-              <ids-menu-item icon="profile">Option Three</ids-menu-item>
+              <ids-menu-item>
+                Option One
+                <ids-icon slot="icon" icon="mail"></ids-icon>
+              </ids-menu-item>
+              <ids-menu-item>
+                Option Two
+                <ids-icon slot="icon" icon="filter"></ids-icon>
+              </ids-menu-item>
+              <ids-menu-item>
+                Option Three
+                <ids-icon slot="icon" icon="profile"></ids-icon>
+              </ids-menu-item>
             </ids-menu-group>
           </ids-popup-menu>
 
-          <ids-action-sheet>
+          <ids-action-sheet ref={actionSheetRef}>
             <ids-menu>
               <ids-menu-group>
                 <ids-menu-item icon="mail" text-align="center">
