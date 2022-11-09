@@ -208,10 +208,6 @@ const App = () => {
               <Route element={<IdsTag />} path="/ids-tag" />
               <Route element={<IdsText />} path="/ids-text" />
               <Route element={<IdsTextarea />} path="/ids-textarea" />
-              <Route
-                element={<IdsThemeSwitcher />}
-                path="/ids-theme-switcher"
-              />
               <Route element={<IdsToast />} path="/ids-toast" />
               <Route element={<IdsToggleButton />} path="/ids-toggle-button" />
               <Route element={<IdsToolbar />} path="/ids-toolbar" />
@@ -228,6 +224,7 @@ const App = () => {
             </Route>
             {/* Examples don't requite theme switcher by default */}
             <Route element={<IdsAppMenu />} path="/ids-app-menu" />
+            <Route element={<IdsThemeSwitcher />} path="/ids-theme-switcher" />
           </Routes>
         </ids-container>
       </Suspense>
