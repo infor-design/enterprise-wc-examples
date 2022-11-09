@@ -1,28 +1,44 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import 'ids-enterprise-wc/components/ids-app-menu/ids-app-menu';
+import 'ids-enterprise-wc/components/ids-header/ids-header';
+import avatar from '../../assets/images/avatar-placeholder.jpg';
 
 const IdsAppMenu = () => {
+  const appMenuRef = useRef();
+
   return (
     <>
-      <ids-layout-grid>
-        <ids-layout-grid-cell>
-          <ids-button id="app-menu-trigger" icon="menu">
-            <span slot="text" className="audible">
-              Open App Menu
-            </span>
-          </ids-button>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+      <ids-header>
+        <ids-toolbar>
+          <ids-toolbar-section type="button">
+            <ids-button icon="menu" onClick={() => {
+              appMenuRef.current.visible = !appMenuRef.current.visible;
+            }}>
+              <span slot="text" className="audible">
+                Open App Menu
+              </span>
+            </ids-button>
+          </ids-toolbar-section>
+          <ids-toolbar-section type="title">
+            <ids-text font-size="20" type="h1">
+              App Menu Example
+            </ids-text>
+          </ids-toolbar-section>
+          <ids-toolbar-section align="end" type="button">
+            <ids-theme-switcher mode="light"></ids-theme-switcher>
+          </ids-toolbar-section>
+        </ids-toolbar>
+      </ids-header>
 
-      <ids-app-menu id="app-menu">
-        <img slot="avatar" id="avatar" alt="Picture of Richard Fairbanks" />
+      <ids-app-menu ref={appMenuRef}>
+        <img src={avatar} slot="avatar" id="avatar" alt="Picture of Richard Fairbanks" />
         <ids-text slot="username" font-size="24" font-weight="bold">
           Richard Fairbanks
         </ids-text>
 
         <ids-toolbar slot="header">
-          <ids-toolbar-section align="center-even" type="fluid">
-            <ids-button id="header-btn-download" icon="download" padding="16px">
+          <ids-toolbar-section align="center-even" type="buttonset">
+            <ids-button id="header-btn-download" icon="download">
               <ids-text slot="text" audible>
                 Download
               </ids-text>
@@ -144,30 +160,6 @@ const IdsAppMenu = () => {
             </ids-accordion-header>
           </ids-accordion-panel>
         </ids-accordion>
-
-        <ids-toolbar slot="footer">
-          <ids-toolbar-section align="center-even" type="fluid">
-            <ids-button id="footer-btn-settings">
-              <ids-icon slot="icon" icon="settings"></ids-icon>
-              <span slot="text">Settings</span>
-            </ids-button>
-            <ids-button id="footer-btn-proxy" icon="employee-directory">
-              <ids-text slot="text" audible>
-                Proxy as User
-              </ids-text>
-            </ids-button>
-            <ids-button id="footer-btn-about" icon="info">
-              <ids-text slot="text" audible>
-                About This Application
-              </ids-text>
-            </ids-button>
-            <ids-button id="footer-btn-logout" icon="logout">
-              <ids-text slot="text" audible>
-                Logout
-              </ids-text>
-            </ids-button>
-          </ids-toolbar-section>
-        </ids-toolbar>
       </ids-app-menu>
     </>
   );

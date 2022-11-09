@@ -1,5 +1,10 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet
+} from 'react-router-dom';
 
 import Home from './home';
 const IdsAbout = lazy(() => import('./examples/ids-about'));
@@ -116,130 +121,152 @@ import 'ids-enterprise-wc/components/ids-hyperlink/ids-hyperlink';
 import 'ids-enterprise-wc/components/ids-card/ids-card';
 import 'ids-enterprise-wc/components/ids-block-grid/ids-block-grid';
 
+const ThemeSwitcher = () => (
+  <>
+    <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
+    <Outlet />
+  </>
+);
+
 const App = () => {
   return (
-    <ids-container hidden locale="en-US">
-      <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
-      <Router>
-        <Suspense fallback="">
+    <Router>
+      <Suspense fallback="">
+        <ids-container hidden locale="en-US">
           <Routes>
-            <Route element={<Home />} path="/" />
-            <Route element={<IdsAbout />} path="/ids-about" />
-            <Route element={<IdsAccordion />} path="/ids-accordion" />
-            <Route element={<IdsAlert />} path="/ids-alert" />
-            <Route element={<IdsActionSheet />} path="/ids-action-sheet" />
+            {/* Examples where theme switcher should appear by default */}
+            <Route element={<ThemeSwitcher />}>
+              <Route element={<Home />} path="/" />
+              <Route element={<IdsAbout />} path="ids-about" />
+              <Route element={<IdsAccordion />} path="/ids-accordion" />
+              <Route element={<IdsAlert />} path="/ids-alert" />
+              <Route element={<IdsActionSheet />} path="/ids-action-sheet" />
+              <Route element={<IdsActionPanel />} path="/ids-action-panel" />
+              <Route element={<IdsAreaChart />} path="/ids-area-chart" />
+              <Route element={<IdsAxisChart />} path="/ids-axis-chart" />
+              <Route element={<IdsBarChart />} path="/ids-bar-chart" />
+              <Route element={<IdsBadge />} path="/ids-badge" />
+              <Route element={<IdsBlockgrid />} path="/ids-block-grid" />
+              <Route element={<IdsBreadcrumb />} path="/ids-breadcrumb" />
+              <Route element={<IdsButton />} path="/ids-button" />
+              <Route element={<IdsCard />} path="/ids-card" />
+              <Route element={<IdsCalendar />} path="/ids-calendar" />
+              <Route element={<IdsContainer />} path="/ids-container" />
+              <Route element={<IdsCheckbox />} path="/ids-checkbox" />
+              <Route
+                element={<IdsCheckboxGroup />}
+                path="/ids-checkbox-group"
+              />
+              <Route element={<IdsColor />} path="/ids-color" />
+              <Route element={<IdsColorPicker />} path="/ids-color-picker" />
+              <Route element={<IdsCounts />} path="/ids-counts" />
+              <Route element={<IdsDataGrid />} path="/ids-data-grid" />
+              <Route element={<IdsDataLabel />} path="/ids-data-label" />
+              <Route element={<IdsDatePicker />} path="/ids-date-picker" />
+              <Route element={<IdsDraggable />} path="/ids-draggable" />
+              <Route element={<IdsDropdown />} path="/ids-dropdown" />
+              <Route element={<IdsEditor />} path="/ids-editor" />
+              <Route
+                element={<IdsExpandableArea />}
+                path="/ids-expandable-area"
+              />
+              <Route element={<IdsEmptyMessage />} path="/ids-empty-message" />
+              <Route element={<IdsErrorPage />} path="/ids-error-page" />
+              <Route element={<IdsFieldset />} path="/ids-fieldset" />
+              <Route element={<IdsForm />} path="/ids-form" />
+              <Route element={<IdsHeader />} path="/ids-header" />
+              <Route element={<IdsHidden />} path="/ids-hidden" />
+              <Route element={<IdsHierarchy />} path="/ids-hierarchy" />
+              <Route element={<IdsHyperlink />} path="/ids-hyperlink" />
+              <Route element={<IdsHomePage />} path="/ids-home-page" />
+              <Route element={<IdsIcon />} path="/ids-icon" />
+              <Route element={<IdsInput />} path="/ids-input" />
+              <Route element={<IdsImage />} path="/ids-image" />
+              <Route element={<IdsLayoutGrid />} path="/ids-layout-grid" />
+              <Route element={<IdsLayoutFlex />} path="/ids-layout-flex" />
+              <Route element={<IdsListView />} path="/ids-list-view" />
+              <Route element={<IdsListBox />} path="/ids-list-box" />
+              <Route
+                element={<IdsLoadingIndicator />}
+                path="/ids-loading-indicator"
+              />
+              <Route element={<IdsLookup />} path="/ids-lookup" />
+              <Route element={<IdsListBuilder />} path="/ids-list-builder" />
+              <Route element={<IdsLocale />} path="/ids-locale" />
+              <Route element={<IdsLineChart />} path="/ids-line-chart" />
+              <Route element={<IdsMask />} path="/ids-mask" />
+              <Route element={<IdsMasthead />} path="/ids-masthead" />
+              <Route element={<IdsMonthView />} path="/ids-month-view" />
+              <Route element={<IdsMenu />} path="/ids-menu" />
+              <Route element={<IdsMenuButton />} path="/ids-menu-button" />
+              <Route element={<IdsMessage />} path="/ids-message" />
+              <Route element={<IdsModal />} path="/ids-modal" />
+              <Route element={<IdsMultiselect />} path="/ids-multiselect" />
+              <Route
+                element={<IdsNotificationBanner />}
+                path="/ids-notification-banner"
+              />
+              <Route element={<IdsPager />} path="/ids-pager" />
+              <Route element={<IdsPopup />} path="/ids-popup" />
+              <Route element={<IdsPopupMenu />} path="/ids-popup-menu" />
+              <Route element={<IdsProgressBar />} path="/ids-progress-bar" />
+              <Route
+                element={<IdsProgressChart />}
+                path="/ids-progress-chart"
+              />
+              <Route element={<IdsPieChart />} path="/ids-pie-chart" />
+              <Route
+                element={<IdsProcessIndicator />}
+                path="/ids-process-indicator"
+              />
+              <Route element={<IdsRadio />} path="/ids-radio" />
+              <Route element={<IdsRating />} path="/ids-rating" />
+              <Route element={<IdsScrollView />} path="/ids-scroll-view" />
+              <Route element={<IdsSearchField />} path="/ids-search-field" />
+              <Route element={<IdsSkipLink />} path="/ids-skip-link" />
+              <Route element={<IdsSlider />} path="/ids-slider" />
+              <Route element={<IdsSpinbox />} path="/ids-spinbox" />
+              <Route element={<IdsStepChart />} path="/ids-step-chart" />
+              <Route element={<IdsSwapList />} path="/ids-swaplist" />
+              <Route element={<IdsSwipeAction />} path="/ids-swipe-action" />
+              <Route element={<IdsSeparator />} path="/ids-separator" />
+              <Route element={<IdsSplitter />} path="/ids-splitter" />
+              <Route element={<IdsSwitch />} path="/ids-switch" />
+              <Route element={<IdsSwappable />} path="/ids-swappable" />
+              <Route element={<IdsTabs />} path="/ids-tabs" />
+              <Route element={<IdsTag />} path="/ids-tag" />
+              <Route element={<IdsText />} path="/ids-text" />
+              <Route element={<IdsTextarea />} path="/ids-textarea" />
+              <Route
+                element={<IdsThemeSwitcher />}
+                path="/ids-theme-switcher"
+              />
+              <Route element={<IdsToast />} path="/ids-toast" />
+              <Route element={<IdsToggleButton />} path="/ids-toggle-button" />
+              <Route element={<IdsToolbar />} path="/ids-toolbar" />
+              <Route element={<IdsTooltip />} path="/ids-tooltip" />
+              <Route element={<IdsTimePicker />} path="/ids-time-picker" />
+              <Route element={<IdsTree />} path="/ids-tree" />
+              <Route element={<IdsTriggerField />} path="/ids-trigger-field" />
+              <Route element={<IdsTreemap />} path="/ids-treemap" />
+              <Route element={<IdsUpload />} path="/ids-upload" />
+              <Route
+                element={<IdsUploadAdvanced />}
+                path="/ids-upload-advanced"
+              />
+              <Route
+                element={<IdsVirtualScroll />}
+                path="/ids-virtual-scroll"
+              />
+              <Route element={<IdsWizard />} path="/ids-wizard" />
+              <Route element={<IdsWeekView />} path="/ids-week-view" />
+            </Route>
+            {/* Examples don't requite theme switcher by default */}
             <Route element={<IdsAppMenu />} path="/ids-app-menu" />
-            <Route element={<IdsActionPanel />} path="/ids-action-panel" />
-            <Route element={<IdsAreaChart />} path="/ids-area-chart" />
-            <Route element={<IdsAxisChart />} path="/ids-axis-chart" />
-            <Route element={<IdsBarChart />} path="/ids-bar-chart" />
-            <Route element={<IdsBadge />} path="/ids-badge" />
-            <Route element={<IdsBlockgrid />} path="/ids-block-grid" />
-            <Route element={<IdsBreadcrumb />} path="/ids-breadcrumb" />
-            <Route element={<IdsButton />} path="/ids-button" />
-            <Route element={<IdsCard />} path="/ids-card" />
-            <Route element={<IdsCalendar />} path="/ids-calendar" />
-            <Route element={<IdsContainer />} path="/ids-container" />
-            <Route element={<IdsCheckbox />} path="/ids-checkbox" />
-            <Route element={<IdsCheckboxGroup />} path="/ids-checkbox-group" />
-            <Route element={<IdsColor />} path="/ids-color" />
-            <Route element={<IdsColorPicker />} path="/ids-color-picker" />
-            <Route element={<IdsCounts />} path="/ids-counts" />
-            <Route element={<IdsDataGrid />} path="/ids-data-grid" />
-            <Route element={<IdsDataLabel />} path="/ids-data-label" />
-            <Route element={<IdsDatePicker />} path="/ids-date-picker" />
-            <Route element={<IdsDraggable />} path="/ids-draggable" />
-            <Route element={<IdsDropdown />} path="/ids-dropdown" />
-            <Route element={<IdsEditor />} path="/ids-editor" />
-            <Route
-              element={<IdsExpandableArea />}
-              path="/ids-expandable-area"
-            />
-            <Route element={<IdsEmptyMessage />} path="/ids-empty-message" />
-            <Route element={<IdsErrorPage />} path="/ids-error-page" />
-            <Route element={<IdsFieldset />} path="/ids-fieldset" />
-            <Route element={<IdsForm />} path="/ids-form" />
-            <Route element={<IdsHeader />} path="/ids-header" />
-            <Route element={<IdsHidden />} path="/ids-hidden" />
-            <Route element={<IdsHierarchy />} path="/ids-hierarchy" />
-            <Route element={<IdsHyperlink />} path="/ids-hyperlink" />
-            <Route element={<IdsHomePage />} path="/ids-home-page" />
-            <Route element={<IdsIcon />} path="/ids-icon" />
-            <Route element={<IdsInput />} path="/ids-input" />
-            <Route element={<IdsImage />} path="/ids-image" />
-            <Route element={<IdsLayoutGrid />} path="/ids-layout-grid" />
-            <Route element={<IdsLayoutFlex />} path="/ids-layout-flex" />
-            <Route element={<IdsListView />} path="/ids-list-view" />
-            <Route element={<IdsListBox />} path="/ids-list-box" />
-            <Route
-              element={<IdsLoadingIndicator />}
-              path="/ids-loading-indicator"
-            />
-            <Route element={<IdsLookup />} path="/ids-lookup" />
-            <Route element={<IdsListBuilder />} path="/ids-list-builder" />
-            <Route element={<IdsLocale />} path="/ids-locale" />
-            <Route element={<IdsLineChart />} path="/ids-line-chart" />
-            <Route element={<IdsMask />} path="/ids-mask" />
-            <Route element={<IdsMasthead />} path="/ids-masthead" />
-            <Route element={<IdsMonthView />} path="/ids-month-view" />
-            <Route element={<IdsMenu />} path="/ids-menu" />
-            <Route element={<IdsMenuButton />} path="/ids-menu-button" />
-            <Route element={<IdsMessage />} path="/ids-message" />
-            <Route element={<IdsModal />} path="/ids-modal" />
-            <Route element={<IdsMultiselect />} path="/ids-multiselect" />
-            <Route
-              element={<IdsNotificationBanner />}
-              path="/ids-notification-banner"
-            />
-            <Route element={<IdsPager />} path="/ids-pager" />
-            <Route element={<IdsPopup />} path="/ids-popup" />
-            <Route element={<IdsPopupMenu />} path="/ids-popup-menu" />
-            <Route element={<IdsProgressBar />} path="/ids-progress-bar" />
-            <Route element={<IdsProgressChart />} path="/ids-progress-chart" />
-            <Route element={<IdsPieChart />} path="/ids-pie-chart" />
-            <Route
-              element={<IdsProcessIndicator />}
-              path="/ids-process-indicator"
-            />
-            <Route element={<IdsRadio />} path="/ids-radio" />
-            <Route element={<IdsRating />} path="/ids-rating" />
-            <Route element={<IdsScrollView />} path="/ids-scroll-view" />
-            <Route element={<IdsSearchField />} path="/ids-search-field" />
-            <Route element={<IdsSkipLink />} path="/ids-skip-link" />
-            <Route element={<IdsSlider />} path="/ids-slider" />
-            <Route element={<IdsSpinbox />} path="/ids-spinbox" />
-            <Route element={<IdsStepChart />} path="/ids-step-chart" />
-            <Route element={<IdsSwapList />} path="/ids-swaplist" />
-            <Route element={<IdsSwipeAction />} path="/ids-swipe-action" />
-            <Route element={<IdsSeparator />} path="/ids-separator" />
-            <Route element={<IdsSplitter />} path="/ids-splitter" />
-            <Route element={<IdsSwitch />} path="/ids-switch" />
-            <Route element={<IdsSwappable />} path="/ids-swappable" />
-            <Route element={<IdsTabs />} path="/ids-tabs" />
-            <Route element={<IdsTag />} path="/ids-tag" />
-            <Route element={<IdsText />} path="/ids-text" />
-            <Route element={<IdsTextarea />} path="/ids-textarea" />
-            <Route element={<IdsThemeSwitcher />} path="/ids-theme-switcher" />
-            <Route element={<IdsToast />} path="/ids-toast" />
-            <Route element={<IdsToggleButton />} path="/ids-toggle-button" />
-            <Route element={<IdsToolbar />} path="/ids-toolbar" />
-            <Route element={<IdsTooltip />} path="/ids-tooltip" />
-            <Route element={<IdsTimePicker />} path="/ids-time-picker" />
-            <Route element={<IdsTree />} path="/ids-tree" />
-            <Route element={<IdsTriggerField />} path="/ids-trigger-field" />
-            <Route element={<IdsTreemap />} path="/ids-treemap" />
-            <Route element={<IdsUpload />} path="/ids-upload" />
-            <Route
-              element={<IdsUploadAdvanced />}
-              path="/ids-upload-advanced"
-            />
-            <Route element={<IdsVirtualScroll />} path="/ids-virtual-scroll" />
-            <Route element={<IdsWizard />} path="/ids-wizard" />
-            <Route element={<IdsWeekView />} path="/ids-week-view" />
           </Routes>
-        </Suspense>
-      </Router>
-    </ids-container>
+        </ids-container>
+      </Suspense>
+    </Router>
   );
 };
 
