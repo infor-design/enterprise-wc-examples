@@ -155,7 +155,6 @@ const App = () => {
               <Route element={<IdsErrorPage />} path="/ids-error-page" />
               <Route element={<IdsFieldset />} path="/ids-fieldset" />
               <Route element={<IdsForm />} path="/ids-form" />
-              <Route element={<IdsHeader />} path="/ids-header" />
               <Route element={<IdsHidden />} path="/ids-hidden" />
               <Route element={<IdsHierarchy />} path="/ids-hierarchy" />
               <Route element={<IdsHyperlink />} path="/ids-hyperlink" />
@@ -223,6 +222,7 @@ const App = () => {
             {/* Examples don't requite theme switcher by default */}
             <Route element={<IdsAppMenu />} path="/ids-app-menu" />
             <Route element={<IdsThemeSwitcher />} path="/ids-theme-switcher" />
+            <Route element={<IdsHeader />} path="/ids-header" />
           </Routes>
         </ids-container>
       </Suspense>

@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import 'ids-enterprise-wc/components/ids-expandable-area/ids-expandable-area';
+import 'ids-enterprise-wc/components/ids-toggle-button/ids-toggle-button';
 
 
 const IdsExpandableArea = () => {
