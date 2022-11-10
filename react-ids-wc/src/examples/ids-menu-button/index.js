@@ -1,47 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import 'ids-enterprise-wc/components/ids-menu-button/ids-menu-button';
 
-
 const IdsMenuButton = () => {
-  const settingsTriggerRef = useRef();
-  const settingsMenuRef = useRef();
-  const iconTriggerRef = useRef();
-  const iconMenuRef = useRef();
-
-  useEffect(() => {
-    // Adding ref current element to variable to be able cleanup event listeners on unmount
-    const settingsMenu = settingsMenuRef.current;
-    const settingsMenuBtn = settingsTriggerRef.current;
-    const iconMenu = iconMenuRef.current;
-    const iconMenuBtn = iconTriggerRef.current;
-
-    // Link trigger with target
-    settingsMenu.target = settingsMenuBtn;
-    settingsMenu.trigger = 'click';
-
-    iconMenu.target = iconMenuBtn;
-    iconMenu.trigger = 'click';
-
-    // Event handler to be used in attach and cleanup event listener
-    const handleShow = () => {
-      console.info(`Menu Button items were displayed`);
-    };
-
-    const handleHide = () => {
-      console.info(`Menu Button items were hidden`);
-    };
-
-    // Attach event listeners
-    settingsMenu.addEventListener('show', handleShow);
-    settingsMenu.addEventListener('hide', handleHide);
-
-    // Cleanup event listener on React component unmount
-    return () => [
-      settingsMenu.removeEventListener('show', handleShow),
-      settingsMenu.removeEventListener('hide', handleHide)
-    ];
-  }, []);
-
   return (
     <>
       <ids-layout-grid auto="true">
@@ -51,45 +11,43 @@ const IdsMenuButton = () => {
       </ids-layout-grid>
       <ids-layout-grid cols="4" gap="md">
         <ids-layout-grid-cell>
-          <ids-menu-button
-            ref={settingsTriggerRef}
-            icon="settings"
-            type="tertiary"
-            dropdown-icon
-          >
+          <ids-menu-button id="menu-button" icon="settings" type="tertiary" menu="my-menu" dropdown-icon="dropdown">
             <span slot="text">Settings</span>
           </ids-menu-button>
-          <ids-popup-menu ref={settingsMenuRef}>
+          <ids-popup-menu id="my-menu" target="#menu-button" trigger-type="click">
             <ids-menu-group>
-              <ids-menu-item>Personalize Columns</ids-menu-item>
+              <ids-menu-item>Personalize Columns...</ids-menu-item>
             </ids-menu-group>
             <ids-separator></ids-separator>
-            <ids-menu-group select="single">
+            <ids-menu-group select="single" id="sizes">
               <ids-menu-header>Row Height</ids-menu-header>
-              <ids-menu-item disabled="true">Extra Small</ids-menu-item>
-              <ids-menu-item>Small</ids-menu-item>
-              <ids-menu-item>Medium</ids-menu-item>
-              <ids-menu-item selected="true">Large</ids-menu-item>
+              <ids-menu-item disabled="true" value="extra-small">
+                Extra Small
+              </ids-menu-item>
+              <ids-menu-item value="small">Small</ids-menu-item>
+              <ids-menu-item value="medium">Medium</ids-menu-item>
+              <ids-menu-item value="large" selected="true">
+                Large
+              </ids-menu-item>
             </ids-menu-group>
             <ids-separator></ids-separator>
             <ids-menu-group select="multiple" keep-open="true">
+              <ids-menu-header>Filtering Options</ids-menu-header>
               <ids-menu-item selected="true">Show Filter Row</ids-menu-item>
-            </ids-menu-group>
-            <ids-menu-group>
-              <ids-menu-item>Run Filter</ids-menu-item>
-              <ids-menu-item>Clear Filter</ids-menu-item>
+              <ids-menu-item value="run-filter">Run Filter</ids-menu-item>
+              <ids-menu-item value="clear-filter">Clear Filter</ids-menu-item>
             </ids-menu-group>
           </ids-popup-menu>
 
-          <ids-menu-button ref={iconTriggerRef}>
+          <ids-menu-button id="icon-button" menu="icon-menu">
             <ids-icon slot="icon" icon="more"></ids-icon>
             <span className="audible">Icon Only Button</span>
           </ids-menu-button>
-          <ids-popup-menu ref={iconMenuRef}>
-            <ids-menu-group>
-              <ids-menu-item>Option One</ids-menu-item>
-              <ids-menu-item>Option Two</ids-menu-item>
-              <ids-menu-item>Option Three</ids-menu-item>
+          <ids-popup-menu id="icon-menu" target="#icon-button" trigger-type="click">
+            <ids-menu-group select="multiple" keep-open="true">
+              <ids-menu-item value="1">Option One</ids-menu-item>
+              <ids-menu-item value="2">Option Two</ids-menu-item>
+              <ids-menu-item value="3">Option Three</ids-menu-item>
             </ids-menu-group>
           </ids-popup-menu>
         </ids-layout-grid-cell>
