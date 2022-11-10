@@ -98,12 +98,6 @@ export const routes = [
     category: categories.LAYOUTS
   },
   {
-    route: 'ids-container',
-    name: 'IdsContainer',
-    title: 'Container',
-    category: categories.LAYOUTS
-  },
-  {
     route: 'ids-empty-message',
     name: 'IdsEmptyMessage',
     title: 'Empty Message',

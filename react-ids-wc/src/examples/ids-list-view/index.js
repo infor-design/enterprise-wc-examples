@@ -1,27 +1,28 @@
 import React, { useRef, useEffect } from 'react';
 import 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
 
-
 const IdsListView = () => {
   const listViewRef = useRef();
 
-  useEffect(async () => {
-    // Adding ref current element to variable to be able cleanup event listeners on unmount
-    const element = listViewRef.current;
+  useEffect(() => {
+    const listView = listViewRef.current;
 
-    // Do an ajax request
-    const response = await fetch('/data/products.json');
-    const data = await response.json();
+    const fetchData = async () => {
+      // Do an ajax request
+      const response = await fetch('/data/events.json');
+      const data = await response.json();
+
+      listView.data = data;
+    }
 
     // Set the default template
-    element.defaultTemplate = [
-      '<ids-text font-size="16" type="h2">${productName}</ids-text>',
-      '<ids-text font-size="12" type="span">Count: ${units}</ids-text>',
-      '<ids-text font-size="12" type="span">Price: $ ${unitPrice}</ids-text>'
+    listView.defaultTemplate = [
+      '<ids-text font-size="16" type="h2">${subject}</ids-text>',
+      '<ids-text font-size="12" type="span">ID: ${id}</ids-text>',
+      '<ids-text font-size="12" type="span">Comments: ${comments}</ids-text>'
     ].join('\n');
 
-    // Set data
-    element.data = data;
+    fetchData();
   }, []);
 
   return (
@@ -31,21 +32,12 @@ const IdsListView = () => {
           List View
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid cols="2">
+
+      <ids-layout-grid cols="2" gap="xl">
         <ids-layout-grid-cell col-span="1">
-          <ids-card>
-            <div slot="card-header">
-              <ids-text font-size="20" type="h2">
-                Card Title One
-              </ids-text>
-            </div>
-            <div slot="card-content">
-              <ids-list-view
-                ref={listViewRef}
-                virtual-scroll="true"
-              ></ids-list-view>
-            </div>
-          </ids-card>
+          <div style={{ height: '70vh' }}>
+            <ids-list-view ref={listViewRef} item-height="76"></ids-list-view>
+          </div>
         </ids-layout-grid-cell>
       </ids-layout-grid>
     </>

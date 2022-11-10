@@ -17,7 +17,6 @@ const IdsBreadcrumb = lazy(() => import('./examples/ids-breadcrumb'));
 const IdsButton = lazy(() => import('./examples/ids-button'));
 const IdsCard = lazy(() => import('./examples/ids-card'));
 const IdsCalendar = lazy(() => import('./examples/ids-calendar'));
-const IdsContainer = lazy(() => import('./examples/ids-container'));
 const IdsCheckbox = lazy(() => import('./examples/ids-checkbox'));
 const IdsCheckboxGroup = lazy(() => import('./examples/ids-checkbox-group'));
 const IdsColor = lazy(() => import('./examples/ids-color'));
@@ -140,7 +139,6 @@ const App = () => {
               <Route element={<IdsButton />} path="/ids-button" />
               <Route element={<IdsCard />} path="/ids-card" />
               <Route element={<IdsCalendar />} path="/ids-calendar" />
-              <Route element={<IdsContainer />} path="/ids-container" />
               <Route element={<IdsCheckbox />} path="/ids-checkbox" />
               <Route element={<IdsCheckboxGroup />} path="/ids-checkbox-group" />
               <Route element={<IdsColor />} path="/ids-color" />
