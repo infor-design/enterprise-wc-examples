@@ -5,6 +5,7 @@ describe('ids-trigger-field e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-trigger-field');
+    await page.waitForSelector('ids-trigger-field');
   });
 
   it('renders with no errors', () => {

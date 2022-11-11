@@ -5,6 +5,7 @@ describe('ids-masthead e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-masthead');
+    await page.waitForSelector('ids-masthead');
   });
 
   it('renders with no errors', () => {

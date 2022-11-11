@@ -5,6 +5,7 @@ describe('ids-hidden e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-hidden');
+    await page.waitForSelector('ids-hidden');
   });
 
   it('renders with no errors', () => {

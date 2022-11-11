@@ -5,6 +5,7 @@ describe('ids-rating e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-rating');
+    await page.waitForSelector('ids-rating');
   });
 
   it('renders with no errors', () => {

@@ -5,6 +5,7 @@ describe('ids-hyperlink e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-hyperlink');
+    await page.waitForSelector('ids-hyperlink');
   });
 
   it('renders with no errors', () => {

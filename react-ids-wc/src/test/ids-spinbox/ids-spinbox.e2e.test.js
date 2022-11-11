@@ -5,6 +5,7 @@ describe('ids-spinbox e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-spinbox');
+    await page.waitForSelector('ids-spinbox');
   });
 
   it('renders with no errors', () => {

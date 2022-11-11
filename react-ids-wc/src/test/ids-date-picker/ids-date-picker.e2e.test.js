@@ -5,6 +5,7 @@ describe('ids-date-picker e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-date-picker');
+    await page.waitForSelector('ids-date-picker');
   });
 
   it('renders with no errors', () => {

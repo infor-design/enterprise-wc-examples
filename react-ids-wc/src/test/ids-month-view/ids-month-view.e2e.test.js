@@ -5,6 +5,7 @@ describe('ids-month-view e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-month-view');
+    await page.waitForSelector('ids-month-view');
   });
 
   it('renders with no errors', () => {

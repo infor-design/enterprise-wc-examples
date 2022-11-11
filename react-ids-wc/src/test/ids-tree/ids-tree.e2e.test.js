@@ -5,6 +5,7 @@ describe('ids-tree e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-tree');
+    await page.waitForSelector('ids-tree');
   });
 
   it('renders with no errors', () => {

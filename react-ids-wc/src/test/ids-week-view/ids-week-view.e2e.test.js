@@ -5,6 +5,7 @@ describe('ids-week-view e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-week-view');
+    await page.waitForSelector('ids-week-view');
   });
 
   it('renders with no errors', () => {

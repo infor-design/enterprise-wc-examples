@@ -5,6 +5,7 @@ describe('ids-pager e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-pager');
+    await page.waitForSelector('ids-pager');
   });
 
   it('renders with no errors', () => {

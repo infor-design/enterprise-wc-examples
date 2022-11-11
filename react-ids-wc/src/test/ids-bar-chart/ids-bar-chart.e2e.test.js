@@ -5,6 +5,7 @@ describe('ids-bar-chart e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-bar-chart');
+    await page.waitForSelector('ids-bar-chart');
   });
 
   it('renders with no errors', () => {

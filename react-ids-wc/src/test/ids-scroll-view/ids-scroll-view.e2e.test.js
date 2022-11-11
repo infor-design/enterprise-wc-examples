@@ -5,6 +5,7 @@ describe('ids-scroll-view e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-scroll-view');
+    await page.waitForSelector('ids-scroll-view');
   });
 
   it('renders with no errors', () => {

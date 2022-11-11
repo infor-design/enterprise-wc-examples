@@ -5,6 +5,7 @@ describe('ids-hierarchy e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-hierarchy');
+    await page.waitForSelector('ids-hierarchy');
   });
 
   it('renders with no errors', () => {
