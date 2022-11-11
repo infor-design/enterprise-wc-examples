@@ -24,3 +24,4 @@
 - [ ] Dirty tracker doesn't work: http://localhost:3000/ids-lookup
 - [ ] Placeholder via fallback doesn't work: http://localhost:3000/ids-image
 - [ ] Week/day toggle doesn't work in the calendar header, throwing an error: http://localhost:3000/ids-calendar
+- [ ] Add events data to ids-week-view and ids-calendar: http://localhost:3000/ids-week-view http://localhost:3000/ids-calendar

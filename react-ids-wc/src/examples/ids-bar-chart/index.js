@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import 'ids-enterprise-wc/components/ids-bar-chart/ids-bar-chart';
 
 const IdsBarChart = () => {
+  const barChartRef = useRef();
+
+  useEffect(() => {
+    const barChart = barChartRef.current;
+
+    async function fetchData() {
+      const response = await fetch('/data/components-colors.json');
+      const data = await response.json();
+
+      barChart.data = data;
+    }
+    fetchData();
+  }, []);
   return (
     <>
       <ids-layout-grid auto="true">
@@ -12,7 +25,7 @@ const IdsBarChart = () => {
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-bar-chart
-            id="index-example"
+            ref={barChartRef}
             title="Bar Chart - Component Adoption"
             width="700"
             height="500"

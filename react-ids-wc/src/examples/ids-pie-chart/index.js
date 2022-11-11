@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import 'ids-enterprise-wc/components/ids-pie-chart/ids-pie-chart';
 
 const IdsPieChart = () => {
+  const pieCharRef = useRef();
+
+  useEffect(() => {
+    const pieChart = pieCharRef.current;
+
+    async function fetchData() {
+      const response = await fetch('/data/items-single.json');
+      const data = await response.json();
+
+      pieChart.data = data;
+    }
+    fetchData();
+  }, []);
+
   return (
     <>
       <ids-layout-grid auto="true">
@@ -12,8 +26,8 @@ const IdsPieChart = () => {
       <ids-layout-grid cols="3" gap="md">
         <ids-layout-grid-cell>
           <ids-pie-chart
+            ref={pieCharRef}
             title="A pie chart showing component usage"
-            id="index-example"
           ></ids-pie-chart>
         </ids-layout-grid-cell>
       </ids-layout-grid>

@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import 'ids-enterprise-wc/components/ids-area-chart/ids-area-chart';
 
 const IdsAreaChart = () => {
+  const areaCharRef = useRef();
+
+  useEffect(() => {
+    const areaChart = areaCharRef.current;
+
+    async function fetchData() {
+      const response = await fetch('/data/components.json');
+      const data = await response.json();
+
+      areaChart.data = data;
+    }
+    fetchData();
+  }, []);
+
   return (
     <>
       <ids-layout-grid auto="true">
@@ -12,10 +26,10 @@ const IdsAreaChart = () => {
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-area-chart
+            ref={areaCharRef}
             title="An area chart showing component usage"
             width="800"
             height="500"
-            id="index-example"
           ></ids-area-chart>
         </ids-layout-grid-cell>
       </ids-layout-grid>
