@@ -1,5 +1,7 @@
 import React from 'react';
 import 'ids-enterprise-wc/components/ids-search-field/ids-search-field';
+import 'ids-enterprise-wc/components/ids-header/ids-header';
+import 'ids-enterprise-wc/components/ids-toolbar/ids-toolbar';
 
 const IdsSearchField = () => {
   return (
@@ -75,7 +77,7 @@ const IdsSearchField = () => {
           </ids-text>
           <ids-header>
             <ids-toolbar>
-              <ids-toolbar-section>
+              <ids-toolbar-section type="button">
                 <ids-button icon="menu" role="button">
                   <span slot="text" className="audible">
                     Application Menu Trigger
