@@ -7,13 +7,19 @@
 - [x] Broken: http://localhost:3000/ids-message
 - [x] Broken: http://localhost:3000/ids-modal
 - [x] Broken: http://localhost:3000/ids-pager
-- [ ] Broken: http://localhost:3000/ids-slider
+- [x] Broken: http://localhost:3000/ids-slider
 - [x] Broken: http://localhost:3000/ids-trigger-field
-- [ ] Lacking: http://localhost:3000/ids-virtual-scroll
+- [x] Lacking: http://localhost:3000/ids-virtual-scroll
 - [x] Missing: http://localhost:3000/ids-render-loop
 - [x] Missing: http://localhost:3000/ids-summary-field
 - [x] Styles: http://localhost:3000/ids-progress-chart
 - [x] Styles: http://localhost:3000/ids-swipe-action
 - [x] Styles: http://localhost:3000/ids-tag
 - [x] Styles: http://localhost:3000/ids-tree
-- [ ] `Uncaught TypeError: Illegal constructor` error on http://localhost:3000/ids-message
+- [ ] Popup menu opens in a wrong place: http://localhost:3000/ids-popup-menu
+- [ ] Popup menu appears in a wrong place when clicking to the swipe action component: http://localhost:3000/ids-swipe-action
+- [ ] Popup menu doesn't work in the toolbar component: http://localhost:3000/ids-toolbar
+- [ ] Checkboxes don't show up in the data grid and column width is incorrect: http://localhost:3000/ids-data-grid
+- [ ] Custom lookup doesn't work: http://localhost:3000/ids-lookup
+- [ ] Placeholder via fallback doesn't work: http://localhost:3000/ids-image
+- [ ] Week/day toggle doesn't work in the calendar header, throwing an error: http://localhost:3000/ids-calendar
