@@ -3,9 +3,13 @@ import 'ids-enterprise-wc/components/ids-lookup/ids-lookup';
 
 const IdsLookup = () => {
   const lookupRef = useRef();
+  const lookupRequiredRef = useRef();
+  const lookupAutocompleteRef = useRef();
 
   useEffect(() => {
     const lookup = lookupRef.current;
+    const lookupRequired = lookupRequiredRef.current;
+    const lookupAutocomplete = lookupAutocompleteRef.current;
     const columns = [
       {
         id: 'selectionCheckbox',
@@ -53,14 +57,18 @@ const IdsLookup = () => {
 
     // Set up columns
     lookup.columns = columns;
+    lookupRequired.columns = columns;
+    lookupAutocomplete.columns = columns;
 
     async function fetchData() {
       // Do an ajax request
       const response = await fetch('/data/books.json');
       const data = await response.json();
-      console.log('data', data);
       // Set data
       lookup.data = data;
+      lookupRequired.data = data;
+      lookupAutocomplete.data = data;
+      lookupAutocomplete.triggerField.data = data;
     }
     fetchData();
   }, []);
@@ -81,26 +89,25 @@ const IdsLookup = () => {
             title="Select an Item"
             field="description"
             value="102,103"
-            // dirty-tracker="true"
+            dirty-tracker="true"
           ></ids-lookup>
-          {/* <ids-lookup
-            id="lookup-2"
+          <ids-lookup
             readonly="true"
             label="Readonly Lookup"
             value="102"
           ></ids-lookup>
           <ids-lookup
-            id="lookup-3"
             disabled="true"
             label="Disabled Lookup"
             value="103"
           ></ids-lookup>
           <ids-lookup
-            id="lookup-4"
+            ref={lookupRequiredRef}
             label="Required Lookup"
             validate="required"
-          ></ids-lookup> */}
-          <ids-lookup id="lookup-5" label="Custom Lookup">
+          ></ids-lookup>
+          {/* Comment out since it doesn't work */}
+          {/* <ids-lookup id="lookup-5" label="Custom Lookup">
             <ids-modal
               slot="lookup-modal"
               id="custom-lookup-modal"
@@ -123,14 +130,14 @@ const IdsLookup = () => {
                 <span slot="text">Apply</span>
               </ids-modal-button>
             </ids-modal>
-          </ids-lookup>
-          {/* <ids-lookup
-            id="lookup-6"
+          </ids-lookup> */}
+          <ids-lookup
+            ref={lookupAutocompleteRef}
             label="Autocomplete Lookup"
             title="Select an Item"
             autocomplete
             field="description"
-          ></ids-lookup> */}
+          ></ids-lookup>
         </ids-layout-grid-cell>
       </ids-layout-grid>
     </>

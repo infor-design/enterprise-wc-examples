@@ -21,5 +21,6 @@
 - [ ] Popup menu doesn't work in the toolbar component: http://localhost:3000/ids-toolbar
 - [ ] Checkboxes don't show up in the data grid and column width is incorrect: http://localhost:3000/ids-data-grid
 - [ ] Custom lookup doesn't work: http://localhost:3000/ids-lookup
+- [ ] Dirty tracker doesn't work: http://localhost:3000/ids-lookup
 - [ ] Placeholder via fallback doesn't work: http://localhost:3000/ids-image
 - [ ] Week/day toggle doesn't work in the calendar header, throwing an error: http://localhost:3000/ids-calendar
