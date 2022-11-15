@@ -1,7 +1,6 @@
 import React from 'react';
 import 'ids-enterprise-wc/components/ids-step-chart/ids-step-chart';
 
-
 const IdsStepChart = () => {
   return (
     <>

@@ -2,19 +2,17 @@ import React, { useRef, useEffect, useState } from 'react';
 
 import 'ids-enterprise-wc/components/ids-accordion/ids-accordion';
 
-const IdsAccordion = ({ wcLoaded }) => {
+const IdsAccordion = () => {
   const accordionRef = useRef()
   const [expanded, setExpanded] = useState(false)
 
   useEffect(() => {
-    if (wcLoaded) {
-      const accordion = accordionRef.current
+    const accordion = accordionRef.current
 
-      accordion.panels.forEach(el => {
-        el.expanded = expanded
-      })
-    }
-  }, [expanded, wcLoaded])
+    accordion.panels.forEach(el => {
+      el.expanded = expanded
+    })
+  }, [expanded])
 
   return (
     <>

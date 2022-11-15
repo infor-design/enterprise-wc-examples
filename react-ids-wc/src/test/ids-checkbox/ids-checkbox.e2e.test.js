@@ -5,6 +5,7 @@ describe('ids-checkbox e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-checkbox');
+    await page.waitForSelector('ids-checkbox');
   });
 
   it('renders with no errors', () => {

@@ -5,6 +5,7 @@ describe('ids-icon e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-icon');
+    await page.waitForSelector('ids-icon');
   });
 
   it('renders with no errors', () => {

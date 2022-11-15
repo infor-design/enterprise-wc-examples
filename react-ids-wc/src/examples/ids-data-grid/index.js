@@ -12,13 +12,13 @@ const IdsDataGrid = () => {
     async function fetchData() {
       // Do an ajax request
       const response = await fetch('/data/books.json');
-      const data = await response.json()
+      const data = await response.json();
 
       // Set columns
-      dataGridRef.current.columns = getGridColumns(dataGridRef.current.formatters)
+      dataGridRef.current.columns = getGridColumns(dataGridRef.current.formatters);
 
       // Set data
-      dataGridRef.current.data = data
+      dataGridRef.current.data = data;
     }
     fetchData();
   }, []);
@@ -32,12 +32,7 @@ const IdsDataGrid = () => {
       </ids-layout-grid>
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
-          <ids-data-grid
-            ref={dataGridRef}
-            virtual-scroll="false"
-            label="Books"
-            row-height="medium"
-          ></ids-data-grid>
+          <ids-data-grid ref={dataGridRef} row-selection="multiple" label="Books" row-height="md"></ids-data-grid>
         </ids-layout-grid-cell>
       </ids-layout-grid>
     </>

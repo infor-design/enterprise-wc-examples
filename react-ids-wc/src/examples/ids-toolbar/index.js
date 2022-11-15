@@ -1,21 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import 'ids-enterprise-wc/components/ids-toolbar/ids-toolbar';
 
-
 const IdsToolbar = () => {
-  const menuBtnRef = useRef();
-  const menuRef = useRef();
-
-  useEffect(() => {
-    // Adding ref current element to variable to be able cleanup event listeners on unmount
-    const menu = menuRef.current;
-    const menuBtn = menuBtnRef.current;
-
-    // Link trigger with target
-    menu.target = menuBtn;
-    menu.trigger = 'click';
-  }, []);
-
   return (
     <>
       <ids-layout-grid auto="true">
@@ -26,33 +12,40 @@ const IdsToolbar = () => {
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
-          <ids-toolbar>
-            <ids-toolbar-section>
+          <ids-toolbar id="my-toolbar">
+            <ids-toolbar-section type="button">
               <ids-button icon="menu" role="button">
                 <span slot="text" className="audible">
                   Application Menu Trigger
                 </span>
               </ids-button>
             </ids-toolbar-section>
-            <ids-toolbar-section type="title">
+            <ids-toolbar-section type="title" favor>
               <ids-text font-size="20">My Toolbar</ids-text>
-              <ids-text font-size="14">
-                With some extra information below
-              </ids-text>
+              <ids-text font-size="14">With some extra information below</ids-text>
             </ids-toolbar-section>
             <ids-toolbar-section type="buttonset" align="end">
-              <ids-button id="button-1" role="button">
-                <span slot="text">Text</span>
+              <ids-button id="button-1" role="button" no-padding>
+                <span slot="text">Text 1</span>
+              </ids-button>
+              <ids-button id="button-2" role="button" no-padding>
+                <span slot="text">Text 2</span>
+              </ids-button>
+              <ids-button id="button-3" role="button" no-padding>
+                <span slot="text">Text 3</span>
               </ids-button>
 
               <ids-menu-button
-                ref={menuBtnRef}
+                menu="button-4-menu"
                 role="button"
-                dropdown-icon
+                trigger-type="click"
+                id="button-4"
+                dropdown-icon="dropdown"
+                no-padding
               >
                 <span slot="text">Menu</span>
               </ids-menu-button>
-              <ids-popup-menu ref={menuRef}>
+              <ids-popup-menu id="button-4-menu" target="#button-4">
                 <ids-menu-group>
                   <ids-menu-item value="1">Item One</ids-menu-item>
                   <ids-menu-item value="2">Item Two</ids-menu-item>
@@ -70,14 +63,14 @@ const IdsToolbar = () => {
                 </ids-menu-group>
               </ids-popup-menu>
 
-              <ids-button id="button-3" disabled>
+              <ids-button id="button-5" disabled>
                 <span slot="text" className="audible">
                   Settings
                 </span>
                 <ids-icon slot="icon" icon="settings"></ids-icon>
               </ids-button>
 
-              <ids-button id="button-4">
+              <ids-button id="button-6">
                 <span slot="text" className="audible">
                   Trash
                 </span>
@@ -85,7 +78,7 @@ const IdsToolbar = () => {
               </ids-button>
             </ids-toolbar-section>
 
-            <ids-toolbar-more-actions>
+            <ids-toolbar-more-actions overflow>
               <ids-menu-group>
                 <ids-menu-item value="1">Option One</ids-menu-item>
                 <ids-menu-item value="2">Option Two</ids-menu-item>

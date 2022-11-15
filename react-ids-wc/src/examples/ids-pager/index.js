@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
+
 import 'ids-enterprise-wc/components/ids-pager/ids-pager';
 
-
 const IdsPager = () => {
+  const pagerRef = useRef();
+
   return (
     <>
       <ids-layout-grid cols="3" gap="md">
@@ -14,10 +16,10 @@ const IdsPager = () => {
       <ids-layout-grid cols="3" gap="md">
         <ids-layout-grid-cell>
           <ids-pager
+            ref={pagerRef}
             page-size="20"
             page-number="10"
             total="200"
-            id="ids-pager-example"
           >
             <ids-pager-button first></ids-pager-button>
             <ids-pager-button previous></ids-pager-button>
@@ -30,11 +32,14 @@ const IdsPager = () => {
 
       <ids-layout-grid cols="3" gap="lg">
         <ids-layout-grid-cell>
-          <ids-button type="secondary" id="ids-pager-toggle-disable-button">
+          <ids-button
+            type="secondary"
+            // Changing 'disabled' attribute
+            onClick={() => {
+              pagerRef.current?.setAttribute('disabled', String(!pagerRef.current.disabled))
+            }}
+          >
             <span slot="text">Disable</span>
-          </ids-button>
-          <ids-button type="secondary" id="ids-pager-type-toggle-button">
-            <span slot="text">NumberList</span>
           </ids-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>

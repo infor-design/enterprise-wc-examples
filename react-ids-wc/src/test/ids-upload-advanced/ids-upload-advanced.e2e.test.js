@@ -5,6 +5,7 @@ describe('ids-upload-advanced e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-upload-advanced');
+    await page.waitForSelector('ids-upload-advanced');
   });
 
   it('renders with no errors', () => {

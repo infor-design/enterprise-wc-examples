@@ -5,6 +5,7 @@ describe('ids-about e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-about');
+    await page.waitForSelector('ids-about');
   });
 
   it('renders with no errors', () => {

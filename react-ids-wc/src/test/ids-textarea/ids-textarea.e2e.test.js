@@ -5,6 +5,7 @@ describe('ids-textarea e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-textarea');
+    await page.waitForSelector('ids-textarea');
   });
 
   it('renders with no errors', () => {

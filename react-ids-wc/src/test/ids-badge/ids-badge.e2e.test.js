@@ -5,10 +5,10 @@ describe('ids-badge e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-badge');
+    await page.waitForSelector('ids-badge');
   });
 
   it('renders with no errors', () => {
     expect(errors.length).toBe(0);
   });
 });
-

@@ -5,6 +5,7 @@ describe('ids-progress-chart e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-progress-chart');
+    await page.waitForSelector('ids-progress-chart');
   });
 
   it('renders with no errors', () => {

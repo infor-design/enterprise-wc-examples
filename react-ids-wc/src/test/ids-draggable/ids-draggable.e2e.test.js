@@ -5,6 +5,7 @@ describe('ids-draggable e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-draggable');
+    await page.waitForSelector('ids-draggable');
   });
 
   it('renders with no errors', () => {

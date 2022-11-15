@@ -5,6 +5,7 @@ describe('ids-data-grid e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-data-grid');
+    await page.waitForSelector('ids-data-grid');
   });
 
   it('renders with no errors', () => {

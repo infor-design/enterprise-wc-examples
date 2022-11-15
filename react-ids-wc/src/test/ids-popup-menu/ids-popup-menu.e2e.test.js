@@ -5,6 +5,7 @@ describe('ids-popup-menu e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-popup-menu');
+    await page.waitForSelector('ids-popup-menu');
   });
 
   it('renders with no errors', () => {
