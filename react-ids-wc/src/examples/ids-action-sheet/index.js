@@ -23,7 +23,7 @@ const IdsActionSheet = () => {
               actionSheetRef.current.visible = !actionSheetRef.current.visible;
             }}
           >
-            <ids-icon slot="icon" icon="more"></ids-icon>
+            <ids-icon icon="more"></ids-icon>
             <span className="audible">Icon Only Button</span>
           </ids-menu-button>
 
@@ -36,15 +36,15 @@ const IdsActionSheet = () => {
             <ids-menu-group>
               <ids-menu-item>
                 Option One
-                <ids-icon slot="icon" icon="mail"></ids-icon>
+                <ids-icon icon="mail"></ids-icon>
               </ids-menu-item>
               <ids-menu-item>
                 Option Two
-                <ids-icon slot="icon" icon="filter"></ids-icon>
+                <ids-icon icon="filter"></ids-icon>
               </ids-menu-item>
               <ids-menu-item>
                 Option Three
-                <ids-icon slot="icon" icon="profile"></ids-icon>
+                <ids-icon icon="profile"></ids-icon>
               </ids-menu-item>
             </ids-menu-group>
           </ids-popup-menu>

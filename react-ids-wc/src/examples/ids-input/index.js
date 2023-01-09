@@ -128,13 +128,13 @@ const IdsInput = () => {
           ></ids-input>
 
           <ids-button id="btn-input-enable" type="secondary">
-            <span slot="text">Enable</span>
+            <span>Enable</span>
           </ids-button>
           <ids-button id="btn-input-disable" type="secondary">
-            <span slot="text">Disable</span>
+            <span>Disable</span>
           </ids-button>
           <ids-button id="btn-input-readonly" type="secondary">
-            <span slot="text">Readonly</span>
+            <span>Readonly</span>
           </ids-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>

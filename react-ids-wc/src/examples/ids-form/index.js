@@ -143,7 +143,7 @@ const IdsForm = () => {
               field-height={height}
             ></ids-textarea>
             <ids-button id="btn-submit" type="primary">
-              <span slot="text">Submit</span>
+              <span>Submit</span>
             </ids-button>
           </ids-layout-grid-cell>
           <ids-layout-grid-cell>
@@ -271,7 +271,7 @@ const IdsForm = () => {
             modalRef.current?.hide();
           }}
         >
-          <span slot="text">OK</span>
+          <span>OK</span>
         </ids-modal-button>
       </ids-modal>
     </>

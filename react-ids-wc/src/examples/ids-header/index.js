@@ -14,7 +14,7 @@ const IdsHeader = () => {
         <ids-toolbar>
           <ids-toolbar-section type="button">
             <ids-button icon="menu" role="button">
-              <span slot="text" className="audible">
+              <span className="audible">
                 Application Menu Trigger
               </span>
             </ids-button>

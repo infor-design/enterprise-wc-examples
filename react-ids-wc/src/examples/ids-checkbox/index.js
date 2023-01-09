@@ -86,10 +86,10 @@ const IdsCheckbox = () => {
             indeterminate={indeterminate}
           ></ids-checkbox>
           <ids-button type="primary" onClick={() => setIndeterminate(true)}>
-            <span slot="text">Set</span>
+            <span>Set</span>
           </ids-button>
           <ids-button type="secondary" onClick={() => setIndeterminate(false)}>
-            <span slot="text">Remove</span>
+            <span>Remove</span>
           </ids-button>
 
           <br />

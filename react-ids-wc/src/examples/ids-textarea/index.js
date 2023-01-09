@@ -54,13 +54,13 @@ const IdsTextarea = () => {
             Line One
           </ids-textarea>
           <ids-button id="btn-textarea-enable" type="secondary">
-            <span slot="text">Enable</span>
+            <span>Enable</span>
           </ids-button>
           <ids-button id="btn-textarea-disable" type="secondary">
-            <span slot="text">Disable</span>
+            <span>Disable</span>
           </ids-button>
           <ids-button id="btn-textarea-readonly" type="secondary">
-            <span slot="text">Readonly</span>
+            <span>Readonly</span>
           </ids-button>
         </ids-layout-grid-cell>
         <ids-layout-grid-cell>
@@ -68,10 +68,10 @@ const IdsTextarea = () => {
             Line One
           </ids-textarea>
           <ids-button id="btn-textarea-update-value" type="secondary">
-            <span slot="text">Update Value</span>
+            <span>Update Value</span>
           </ids-button>
           <ids-button id="btn-textarea-reset-value" type="secondary">
-            <span slot="text">Reset Value</span>
+            <span>Reset Value</span>
           </ids-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>

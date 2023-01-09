@@ -55,7 +55,7 @@ const IdsSwipeAction = () => {
                   type="swipe-action-right"
                 >
                   <ids-icon slot="icon" icon="tack" size="xsmall"></ids-icon>
-                  <span slot="text">Right Action</span>
+                  <span>Right Action</span>
                 </ids-button>
               </ids-swipe-action>
             </div>
@@ -79,7 +79,7 @@ const IdsSwipeAction = () => {
                   type="swipe-action-left"
                 >
                   <ids-icon slot="icon" icon="reply" size="xsmall"></ids-icon>
-                  <span slot="text">Left Action</span>
+                  <span>Left Action</span>
                 </ids-button>
                 <div slot="contents">
                   <ids-layout-grid cols="2" no-margins="true">
@@ -121,7 +121,7 @@ const IdsSwipeAction = () => {
                   type="swipe-action-right"
                 >
                   <ids-icon slot="icon" icon="tack" size="xsmall"></ids-icon>
-                  <span slot="text">Right Action</span>
+                  <span>Right Action</span>
                 </ids-button>
               </ids-swipe-action>
             </div>
@@ -145,7 +145,7 @@ const IdsSwipeAction = () => {
                   type="swipe-action-left"
                 >
                   <ids-icon slot="icon" icon="reply" size="xsmall"></ids-icon>
-                  <span slot="text">Left Action</span>
+                  <span>Left Action</span>
                 </ids-button>
                 <div slot="contents">
                   <ids-layout-grid cols="2" no-margins="true">
@@ -187,7 +187,7 @@ const IdsSwipeAction = () => {
                   type="swipe-action-right"
                 >
                   <ids-icon slot="icon" icon="tack" size="xsmall"></ids-icon>
-                  <span slot="text">Right Action</span>
+                  <span>Right Action</span>
                 </ids-button>
               </ids-swipe-action>
             </div>

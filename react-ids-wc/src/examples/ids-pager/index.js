@@ -39,7 +39,7 @@ const IdsPager = () => {
               pagerRef.current?.setAttribute('disabled', String(!pagerRef.current.disabled))
             }}
           >
-            <span slot="text">Disable</span>
+            <span>Disable</span>
           </ids-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>

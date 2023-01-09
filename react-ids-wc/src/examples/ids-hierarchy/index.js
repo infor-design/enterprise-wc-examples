@@ -45,7 +45,7 @@ const IdsHierarchy = () => {
                 id="item-menu-btn-id-one"
               >
                 <span className="audible">Popup Menu Button</span>
-                <ids-icon slot="icon" icon="more"></ids-icon>
+                <ids-icon icon="more"></ids-icon>
               </ids-menu-button>
               <ids-popup-menu
                 id="item-menu-id-one"
@@ -71,7 +71,7 @@ const IdsHierarchy = () => {
                   id="item-menu-btn-id-two"
                 >
                   <span className="audible">Popup Menu Button</span>
-                  <ids-icon slot="icon" icon="more"></ids-icon>
+                  <ids-icon icon="more"></ids-icon>
                 </ids-menu-button>
                 <ids-popup-menu
                   id="item-menu-id-two"
@@ -107,7 +107,7 @@ const IdsHierarchy = () => {
                   id="item-menu-btn-id-three"
                 >
                   <span className="audible">Popup Menu Button</span>
-                  <ids-icon slot="icon" icon="more"></ids-icon>
+                  <ids-icon icon="more"></ids-icon>
                 </ids-menu-button>
                 <ids-popup-menu
                   id="item-menu-id-three"

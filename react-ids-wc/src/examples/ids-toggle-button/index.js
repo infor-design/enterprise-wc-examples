@@ -19,8 +19,8 @@ const IdsToggleButton = () => {
             text-off="Toggle Button (Off)"
             text-on="Toggle Button (On)"
           >
-            <ids-icon slot="icon" icon="settings"></ids-icon>
-            <span slot="text"></span>
+            <ids-icon icon="settings"></ids-icon>
+            <span></span>
           </ids-toggle-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>

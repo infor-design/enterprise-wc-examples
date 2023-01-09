@@ -15,7 +15,7 @@ const IdsToolbar = () => {
           <ids-toolbar id="my-toolbar">
             <ids-toolbar-section type="button">
               <ids-button icon="menu" role="button">
-                <span slot="text" className="audible">
+                <span className="audible">
                   Application Menu Trigger
                 </span>
               </ids-button>
@@ -26,13 +26,13 @@ const IdsToolbar = () => {
             </ids-toolbar-section>
             <ids-toolbar-section type="buttonset" align="end">
               <ids-button id="button-1" role="button" no-padding>
-                <span slot="text">Text 1</span>
+                <span>Text 1</span>
               </ids-button>
               <ids-button id="button-2" role="button" no-padding>
-                <span slot="text">Text 2</span>
+                <span>Text 2</span>
               </ids-button>
               <ids-button id="button-3" role="button" no-padding>
-                <span slot="text">Text 3</span>
+                <span>Text 3</span>
               </ids-button>
 
               <ids-menu-button
@@ -43,7 +43,7 @@ const IdsToolbar = () => {
                 dropdown-icon="dropdown"
                 no-padding
               >
-                <span slot="text">Menu</span>
+                <span>Menu</span>
               </ids-menu-button>
               <ids-popup-menu id="button-4-menu" target="#button-4">
                 <ids-menu-group>
@@ -64,17 +64,17 @@ const IdsToolbar = () => {
               </ids-popup-menu>
 
               <ids-button id="button-5" disabled>
-                <span slot="text" className="audible">
+                <span className="audible">
                   Settings
                 </span>
-                <ids-icon slot="icon" icon="settings"></ids-icon>
+                <ids-icon icon="settings"></ids-icon>
               </ids-button>
 
               <ids-button id="button-6">
-                <span slot="text" className="audible">
+                <span className="audible">
                   Trash
                 </span>
-                <ids-icon slot="icon" icon="delete"></ids-icon>
+                <ids-icon icon="delete"></ids-icon>
               </ids-button>
             </ids-toolbar-section>
 

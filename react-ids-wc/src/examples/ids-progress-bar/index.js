@@ -82,7 +82,7 @@ const IdsProgressBar = () => {
             text-off="Update Value"
             text-on="Reset Value"
           >
-            <span slot="text"></span>
+            <span></span>
           </ids-toggle-button>
 
           <ids-toggle-button
@@ -92,7 +92,7 @@ const IdsProgressBar = () => {
             text-off="Disable"
             text-on="Enable"
           >
-            <span slot="text"></span>
+            <span></span>
           </ids-toggle-button>
 
           <ids-toggle-button
@@ -102,7 +102,7 @@ const IdsProgressBar = () => {
             text-off="Audible label"
             text-on="Inaudible label"
           >
-            <span slot="text"></span>
+            <span></span>
           </ids-toggle-button>
         </ids-layout-grid-cell>
 

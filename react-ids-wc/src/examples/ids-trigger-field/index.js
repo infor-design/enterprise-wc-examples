@@ -20,7 +20,7 @@ const IdsTriggerField = () => {
         >
           <ids-trigger-button slot="trigger-end">
             <ids-text audible="true">Date Field trigger</ids-text>
-            <ids-icon slot="icon" icon="schedule"></ids-icon>
+            <ids-icon icon="schedule"></ids-icon>
           </ids-trigger-button>
         </ids-trigger-field>
 
@@ -28,7 +28,7 @@ const IdsTriggerField = () => {
           <ids-trigger-field id="trigger-field-2" size="md" label="Timepicker">
             <ids-trigger-button slot="trigger-end">
               <ids-text audible="true">Timepicker trigger</ids-text>
-              <ids-icon slot="icon" icon="clock"></ids-icon>
+              <ids-icon icon="clock"></ids-icon>
             </ids-trigger-button>
           </ids-trigger-field>
         </ids-layout-grid-cell>
@@ -42,7 +42,7 @@ const IdsTriggerField = () => {
           >
             <ids-trigger-button slot="trigger-end">
               <ids-text audible="true">Products trigger</ids-text>
-              <ids-icon slot="icon" icon="search-list"></ids-icon>
+              <ids-icon icon="search-list"></ids-icon>
             </ids-trigger-button>
           </ids-trigger-field>
         </ids-layout-grid-cell>
@@ -59,7 +59,7 @@ const IdsTriggerField = () => {
           >
             <ids-trigger-button disabled slot="trigger-end">
               <ids-text audible="true">Products trigger</ids-text>
-              <ids-icon slot="icon" icon="search-list"></ids-icon>
+              <ids-icon icon="search-list"></ids-icon>
             </ids-trigger-button>
           </ids-trigger-field>
         </ids-layout-grid-cell>
@@ -73,11 +73,11 @@ const IdsTriggerField = () => {
           >
             <ids-trigger-button slot="trigger-start">
               <ids-text audible="true">Products trigger</ids-text>
-              <ids-icon slot="icon" icon="caret-down"></ids-icon>
+              <ids-icon icon="caret-down"></ids-icon>
             </ids-trigger-button>
             <ids-trigger-button slot="trigger-end">
               <ids-text audible="true">Products trigger</ids-text>
-              <ids-icon slot="icon" icon="caret-down"></ids-icon>
+              <ids-icon icon="caret-down"></ids-icon>
             </ids-trigger-button>
           </ids-trigger-field>
         </ids-layout-grid-cell>
@@ -90,7 +90,7 @@ const IdsTriggerField = () => {
           >
             <ids-trigger-button>
               <ids-text audible="true">Search trigger</ids-text>
-              <ids-icon slot="icon" icon="search"></ids-icon>
+              <ids-icon icon="search"></ids-icon>
             </ids-trigger-button>
           </ids-trigger-field>
         </ids-layout-grid-cell>

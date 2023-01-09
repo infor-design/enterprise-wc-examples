@@ -132,10 +132,10 @@ const IdsRadio = () => {
             ></ids-radio>
           </ids-radio-group>
           <ids-button type="secondary" onClick={() => radioGroupRef.current.clear()}>
-            <span slot="text">Clear</span>
+            <span>Clear</span>
           </ids-button>
           <ids-button type="secondary" onClick={() => radioGroupRef.current.checkValidation()}>
-            <span slot="text">Validate</span>
+            <span>Validate</span>
           </ids-button>
 
           <br />
