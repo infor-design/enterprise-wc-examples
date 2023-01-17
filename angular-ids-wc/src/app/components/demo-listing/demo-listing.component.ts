@@ -49,8 +49,8 @@ export class DemoListingComponent implements AfterViewInit {
     event.preventDefault();
     const element = event.target as HTMLAnchorElement | any;
     if (element.shadowRoot) {
-      const path = event['path'].filter((p) => p.tagName === 'IDS-HYPERLINK');
-      const route = path[0]?.href;
+      const path = event.composedPath().filter((p: any) => p.tagName === 'IDS-HYPERLINK');
+      const route = (path[0] as HTMLAnchorElement)?.href;
       if (route) {
         this.router.navigateByUrl(`/${route}`);
       }
