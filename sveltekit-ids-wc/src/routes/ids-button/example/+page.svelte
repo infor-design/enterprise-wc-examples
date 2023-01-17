@@ -64,25 +64,25 @@
   <ids-layout-grid-cell>
     <ids-button id="icon-default-button" on:click={log}>
       <span class="audible">Default Button</span>
-      <ids-icon slot="icon" icon="settings"></ids-icon>
+      <ids-icon icon="settings"></ids-icon>
     </ids-button>
   </ids-layout-grid-cell>
   <ids-layout-grid-cell>
     <ids-button id="icon-primary-button" type="primary" on:click={log}>
       <span class="audible">Primary Button</span>
-      <ids-icon slot="icon" icon="settings"></ids-icon>
+      <ids-icon icon="settings"></ids-icon>
     </ids-button>
   </ids-layout-grid-cell>
   <ids-layout-grid-cell>
     <ids-button id="icon-secondary-button" type="secondary" on:click={log}>
       <span class="audible">Secondary Button</span>
-      <ids-icon slot="icon" icon="settings"></ids-icon>
+      <ids-icon icon="settings"></ids-icon>
     </ids-button>
   </ids-layout-grid-cell>
   <ids-layout-grid-cell>
     <ids-button id="icon-tertiary-button" type="tertiary" on:click={log}>
       <span class="audible">Tertiary Button</span>
-      <ids-icon slot="icon" icon="settings"></ids-icon>
+      <ids-icon icon="settings"></ids-icon>
     </ids-button>
   </ids-layout-grid-cell>
 </ids-layout-grid>

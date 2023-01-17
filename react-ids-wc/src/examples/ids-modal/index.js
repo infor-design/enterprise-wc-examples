@@ -18,7 +18,7 @@ const IdsModal = () => {
             modalRef.current?.hide()
           }}
         >
-          <span slot="text">OK</span>
+          <span>OK</span>
         </ids-modal-button>
         <ids-text type="p">This is an active IDS Modal component</ids-text>
       </ids-modal>
@@ -38,7 +38,7 @@ const IdsModal = () => {
             }}
             disabled={modalRef.current?.visible}
           >
-            <span slot="text">Trigger a Modal</span>
+            <span>Trigger a Modal</span>
           </ids-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>

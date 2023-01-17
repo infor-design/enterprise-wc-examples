@@ -37,7 +37,7 @@ const IdsPopup = () => {
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-button type="secondary" ref={triggerRef}>
-            <span slot="text">Trigger a Popup</span>
+            <span>Trigger a Popup</span>
           </ids-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>

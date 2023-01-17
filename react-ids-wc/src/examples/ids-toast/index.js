@@ -28,7 +28,7 @@ const IdsToast = () => {
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-button onClick={handleToastAdd} type="secondary">
-            <span slot="text">Toast Message</span>
+            <span>Toast Message</span>
           </ids-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>

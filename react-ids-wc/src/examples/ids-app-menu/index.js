@@ -14,7 +14,7 @@ const IdsAppMenu = () => {
             <ids-button icon="menu" onClick={() => {
               appMenuRef.current.visible = !appMenuRef.current.visible;
             }}>
-              <span slot="text" className="audible">
+              <span className="audible">
                 Open App Menu
               </span>
             </ids-button>
@@ -39,27 +39,27 @@ const IdsAppMenu = () => {
         <ids-toolbar slot="header">
           <ids-toolbar-section align="center-even" type="buttonset">
             <ids-button id="header-btn-download" icon="download">
-              <ids-text slot="text" audible>
+              <ids-text audible>
                 Download
               </ids-text>
             </ids-button>
             <ids-button id="header-btn-print" icon="print">
-              <ids-text slot="text" audible>
+              <ids-text audible>
                 Print
               </ids-text>
             </ids-button>
             <ids-button id="header-btn-purchasing" icon="purchasing">
-              <ids-text slot="text" audible>
+              <ids-text audible>
                 Purchasing
               </ids-text>
             </ids-button>
             <ids-button id="header-btn-notification" icon="notification">
-              <ids-text slot="text" audible>
+              <ids-text audible>
                 Notification
               </ids-text>
             </ids-button>
             <ids-button id="header-btn-inventory" icon="inventory">
-              <ids-text slot="text" audible>
+              <ids-text audible>
                 Inventory
               </ids-text>
             </ids-button>

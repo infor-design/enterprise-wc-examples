@@ -26,13 +26,13 @@ const IdsAlert = () => {
       <ids-layout-grid cols="12" gap="md">
         <ids-layout-grid-cell>
           <ids-button type="secondary" onClick={() => setItems(items.slice(0, -1))}>
-            <span slot="text">Remove item</span>
+            <span>Remove item</span>
           </ids-button>
         </ids-layout-grid-cell>
 
         <ids-layout-grid-cell>
           <ids-button type="secondary" onClick={() => setItems(data)}>
-            <span slot="text">Reset</span>
+            <span>Reset</span>
           </ids-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>

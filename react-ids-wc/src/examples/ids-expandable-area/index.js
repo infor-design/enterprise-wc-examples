@@ -130,7 +130,7 @@ const IdsExpandableArea = () => {
               icon-align="start"
             >
               <ids-icon slot="icon" icon="caret-up"></ids-icon>
-              <span slot="text">Default Button</span>
+              <span>Default Button</span>
             </ids-toggle-button>
             <ids-text slot="pane" font-size="14">
               Ubiquitous out-of-the-box, scalable; communities disintermediate

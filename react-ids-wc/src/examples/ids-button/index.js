@@ -36,13 +36,13 @@ const IdsButton = () => {
               e.target.text = 'Clicked';
             }}
           >
-            <span slot="text">React onClick synthetic event</span>
+            <span>React onClick synthetic event</span>
           </ids-button>
         </ids-layout-grid-cell>
 
         <ids-layout-grid-cell>
           <ids-button type="secondary" ref={buttonRef}>
-            <span slot="text">Manually attached event listener</span>
+            <span>Manually attached event listener</span>
           </ids-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>

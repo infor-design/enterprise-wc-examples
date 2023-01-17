@@ -17,35 +17,35 @@ const IdsMasthead = () => {
           <ids-masthead title="Infor Application" icon="logo" role="navigation">
             <section title="start" slot="start">
               <ids-button icon="grid">
-                <span slot="text" className="audible">
+                <span className="audible">
                   Grid Button
                 </span>
               </ids-button>
             </section>
             <section title="center" slot="center">
               <ids-button icon="home">
-                <span slot="text">Home</span>
+                <span>Home</span>
               </ids-button>
               <ids-button icon="star-outlined">
-                <span slot="text">Star</span>
+                <span>Star</span>
               </ids-button>
               <ids-button icon="info">
-                <span slot="text">Info</span>
+                <span>Info</span>
               </ids-button>
             </section>
             <section title="end" slot="end">
               <ids-button icon="user">
-                <span slot="text" className="audible">
+                <span className="audible">
                   User Button
                 </span>
               </ids-button>
               <ids-button icon="mingle-share">
-                <span slot="text" className="audible">
+                <span className="audible">
                   Mingle Button
                 </span>
               </ids-button>
               <ids-button icon="bookmark-outlined">
-                <span slot="text" className="audible">
+                <span className="audible">
                   Bookmark Button
                 </span>
               </ids-button>
