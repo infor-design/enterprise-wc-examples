@@ -29,6 +29,7 @@ module.exports = {
             style: "camelCase"
           }
         ],
+        "@angular-eslint/no-empty-lifecycle-method": "off",
         "@angular-eslint/component-selector": [
           "error",
           {
