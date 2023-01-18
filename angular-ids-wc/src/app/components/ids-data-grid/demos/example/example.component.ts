@@ -135,7 +135,8 @@ export class ExampleComponent implements AfterViewInit {
 
     this.dataService.getJsonData('books')
       .subscribe(res => {
-        this.dataGrid.data = res;
+        this.dataGrid.nativeElement.columns = this.columns;
+        this.dataGrid.nativeElement.data = res;
       })
   }
 
