@@ -22,7 +22,7 @@ export class DemoListingComponent implements AfterViewInit {
       name: 'Name',
       field: 'path',
       sortable: true,
-      formatter: this.table.nativeElement.formatters.hyperlink,
+      formatter: this.table?.nativeElement?.formatters?.hyperlink,
       href: `${this.router.url}/{{value}}`,
     });
     this.columns.push({
@@ -30,14 +30,14 @@ export class DemoListingComponent implements AfterViewInit {
       name: 'Type',
       field: 'data?.type',
       sortable: true,
-      formatter: this.table.nativeElement.formatters.text
+      formatter: this.table?.nativeElement?.formatters?.text
     });
     this.columns.push({
       id: 'description',
       name: 'Description',
       field: 'data?.description',
       sortable: true,
-      formatter: this.table.nativeElement.formatters.text
+      formatter: this.table?.nativeElement?.formatters?.text
     });
 
     this.table.nativeElement.columns = this.columns;

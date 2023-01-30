@@ -25,13 +25,17 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/api"
+              "src/api",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/ids-enterprise-wc/locale-data",
+                "output": "/locale-data"
+              }
             ],
             "styles": [
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/ids-enterprise-wc/enterprise-wc.js"
             ],
             "vendorChunk": true,
             "extractLicenses": false,

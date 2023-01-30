@@ -12,18 +12,67 @@ import IdsSwapList from 'ids-enterprise-wc/components/ids-swaplist/ids-swaplist.
 import 'ids-enterprise-wc/components/ids-swappable/ids-swappable';
 ```
 
-1. Use imports in the angular.json 
+1. Using imports in the angular.json is not currently possible for ES Modules https://github.com/angular/angular-cli/issues/24592
+1. Since we ship our package as Es Modules (ESM) the best way to use the components is to import the used modules (or complete package) inside the module where its used. For example:
 
-```json
-  "scripts": [
-    "node_modules/ids-enterprise-wc/enterprise-wc.js", // Full package
-    "node_modules/ids-enterprise-wc/components/ids-tag/ids-tag.js"
-  ],
-``` 
+```js
+import { Component, OnInit } from '@angular/core';
+// Import used components
+import 'ids-enterprise-wc/components/ids-alert/ids-alert';
+
+@Component({
+  selector: 'app-example',
+  templateUrl: './example.component.html',
+  styleUrls: ['./example.component.css']
+})
+export class ExampleComponent implements OnInit {
+  constructor() { }
+  ngOnInit(): void {
+  }
+}
+```
+
+If the module is being used in the code you can change the import as follows.
+
+```js
+import { Component, AfterViewInit} from '@angular/core';
+import { routes } from './ids-tag-routing.module';
+import IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag';
+
+@Component({
+  selector: 'app-ids-tag',
+  templateUrl: './ids-tag.component.html',
+  styleUrls: ['./ids-tag.component.css']
+})
+export class IdsTagComponent implements AfterViewInit {
+  public routes = routes.filter(r => r.path !== '');
+
+  constructor() { }
+
+  ngAfterViewInit(): void {
+    console.log('Ids Tag init');
+    const dynamicTag = new IdsTag()
+    dynamicTag.textContent = 'Dynamic';
+    document.body.append(dynamicTag);
+  }
+}
+```
+
+Alternatively you could put all the imports in `angular-ids-wc/src/app/app.module.ts`. Either all of them or some of them..
+
+```js
+import 'ids-enterprise-wc/index.ts';
+
+// OR 
+import 'ids-enterprise-wc/components/ids-tag/ids-tag';
+import 'ids-enterprise-wc/components/ids-alert/ids-alert';
+...
+```
 
 1. Add `CUSTOM_ELEMENTS_SCHEMA` to `src/app/app.module.ts`
 1. `npm run start`
 1. If wanted you can shorten the import paths using this feature https://blog.bitsrc.io/short-typescript-import-paths-in-angular9-22ce34bd424d 
+1. If you wanted to you can also speed up the builds with es-build https://www.danywalls.com/maximizing-your-angular-build-performance-with-esbuild
 
 ## To Run these Examples
 
