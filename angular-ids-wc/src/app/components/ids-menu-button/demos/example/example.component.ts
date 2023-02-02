@@ -15,26 +15,28 @@ export class ExampleComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.menuButton1.nativeElement.menuEl.addEventListener('show', () => {
+    const menuEl = this.menuButton1.nativeElement.menuEl;
+
+    menuEl.addEventListener('show', () => {
       console.info(`Menu Button items were displayed`);
     });
 
-    this.menuButton1.nativeElement.menuEl.addEventListener('hide', () => {
+    menuEl.addEventListener('hide', () => {
       console.info(`Menu Button items were hidden`);
     });
 
-    this.menuButton1.nativeElement.menuEl.addEventListener('selected', (e: Event) => {
+    menuEl.addEventListener('selected', (e: Event) => {
       this.menuItemResponse(e, 'selected');
     });
 
-    this.menuButton1.nativeElement.menuEl.addEventListener('deselected', (e: Event) => {
+    menuEl.addEventListener('deselected', (e: Event) => {
       this.menuItemResponse(e, 'deselected');
     });
   }
 
   menuItemResponse = (e: any, msg: string) => {
     const target = e.detail.elem;
-    if (target !== null) {
+    if (target) {
       const text = target.textContent.trim();
       console.info(`Menu Item "${text}" was ${msg}`, e.detail.elem);
     }

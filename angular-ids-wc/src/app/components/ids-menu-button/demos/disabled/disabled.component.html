@@ -30,14 +30,14 @@
         icon="settings" 
         type="tertiary" 
         dropdown-icon
-        [attr.menu]="'my-menu'" 
+        menu="my-menu" 
         [attr.disabled]="disabled"
       >
         <span>Settings</span>
       </ids-menu-button>
       <ids-popup-menu 
         id="my-menu" 
-        [attr.trigger]="'click'"
+        trigger="click"
       >
         <ids-menu-group>
           <ids-menu-item>Item One</ids-menu-item>

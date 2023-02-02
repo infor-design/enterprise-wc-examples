@@ -12,14 +12,14 @@
         id="menu-button" 
         icon="settings" 
         dropdown-icon
-        [type]="'tertiary'" 
-        [menu]="'my-menu'"
+        type="tertiary" 
+        menu="my-menu"
       >
         <span>Settings</span>
       </ids-menu-button>
       <ids-popup-menu
         id="my-menu" 
-        trigger="'click'"
+        trigger="click"
       >
         <ids-menu-group>
           <ids-menu-item>Personalize Columns...</ids-menu-item>
@@ -44,15 +44,15 @@
       <ids-menu-button 
         icon="more"
         id="icon-button" 
-        [attr.menu]="'icon-menu'"
+        menu="icon-menu"
       >
         <span class="audible">Icon Only Button</span>
       </ids-menu-button>
       <ids-popup-menu
         id="icon-menu" 
-        [attr.trigger]="'click'"
+        trigger="click"
       >
-        <ids-menu-group select="multiple" [attr.keep-open]="true">
+        <ids-menu-group select="multiple" keep-open="true">
           <ids-menu-item value="1">Option One</ids-menu-item>
           <ids-menu-item value="2">Option Two</ids-menu-item>
           <ids-menu-item value="3">Option Three</ids-menu-item>

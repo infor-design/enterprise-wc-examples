@@ -8,15 +8,12 @@
     <ids-layout-grid-cell>
       <ids-toggle-button
         id="test-toggle-button" 
-        [icon-on]="'star-filled'" 
-        [icon-off]="'star-outlined'" 
-        [attr.text-off]="'Toggle Button (Off)'"
-        [attr.text-on]="'Toggle Button (On)'"
+        icon-on="star-filled" 
+        icon-off="star-outlined" 
+        text-off="Toggle Button (Off)"
+        text-on="Toggle Button (On)"
         (click)="handleToggle($event)"
-      >
-        <ids-icon icon="settings"></ids-icon>
-        <span></span>
-      </ids-toggle-button>
+      ></ids-toggle-button>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 </ids-container>
