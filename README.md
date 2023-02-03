@@ -1,38 +1,57 @@
 # Enterprise Web Component Examples
 
-This repo has example projects for running the new IDS web-component version components in other frameworks like React, Angular and Vue.js. The hope is to be able to use the web components directly. If using a typescript project you should get the types as well.
+This repo contains example projects showing how to run the new [IDS web components](https://github.com/infor-design/enterprise-wc) in other frameworks. The goal of the web components is that you can use them in these frameworks without any use of wrappers or containing code.
 
-We will test the following:
+General Tests
 
-1. Show a component in the page bound to data in the framework
-2. Show use of the component works
+1. Show a component in the page bound to data
+2. Show use of the component work similar to the component alone example
 3. Consider special specific framework key features and document things we should probably want to do. For example for Angular:
   * Provide binding to the model for values
-  * Catching and handling events emitted 
+  * Catching and handling events emitted
   * Setting and changing settings (color for example) 
-  * Templating like loops or text values
-  * Research common framework features (forms etc)
+  * Templating loops
+  * Research common framework features (reactive forms for example)
 4. Test the types are visible
-5. Make a unit test that includes the component
+5. Show a unit test(s) that includes the component
 
-## Vue.js 
+## Using Npm Link
+
+See the [WebComponents documentation about NPM Link](https://github.com/infor-design/enterprise-wc/blob/main/doc/PUBLISH.md#publishing-a-test-package-your-local-npm-repo) for more information
+ed Frameworks.
+
+## Debugging the Components
+
+For any framework, note that the production package in npm does not contain map files for size and security reasons. In order to debug you will have to use the debug/development package build.
+
+1. Clone the repo https://github.com/infor-design/enterprise-wc
+1. Run:
+
+```sh
+npm i
+npm run build:dist
+```
+
+1. The copy the files from `build/dist/development` to `node_modules/ids-enterprise` replacing the contents
+1. The re-run and debug
+
+### Vue.js 
 Starter Project: https://stackblitz.com/edit/vue
 [See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/vue-ids-wc/README.md)
 
-## SvelteKit
+### SvelteKit
 Starter Project: https://stackblitz.com/edit/svelte
 [See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/sveltekit-ids-wc/README.md)
 
-## React
+### React
 Starter Project: https://stackblitz.com/edit/react-un5ayt
 [See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/react-ids-wc/README.MD)
 
-## Angular
+### Angular
 [See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/angular-ids-wc/README.MD)
 
-## Typescript
+### Typescript
 [See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/typescript-ids-wc/README.md)
 
-## Using NPM Link
-
-See the [WebComponents documentation about NPM Link](https://github.com/infor-design/enterprise-wc/blob/main/doc/PUBLISH.md#publishing-a-test-package-your-local-npm-repo) for more information
+### Plain JS/Html
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/plain-html/README.md)
