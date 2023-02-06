@@ -5,7 +5,7 @@ This project demonstrates how to use the IDS Web Components in a simple react ap
 ## To Run these Examples
 
 - clone the main repo https://github.com/infor-design/enterprise-wc-examples
-- should be on node 16
+- should be on node 18
 
 ```sh
 cd react-ids-wc

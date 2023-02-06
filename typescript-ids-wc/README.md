@@ -1,6 +1,4 @@
-This repository shows how a TypeScript project can consume any IDS web component from the [Ids Library](https://github.com/infor-design/enterprise-wc). We include TypeScript type declarations so that you can perform type-checking on your code along with the library.
-
-NOTE: At the moment i cant figure out why the import in the main.ts doesnt work. Any ideas let me know.
+This repository shows that a TypeScript project can consume any IDS web component from the [Ids Component Library](https://github.com/infor-design/enterprise-wc). Note that typing in TypeScript type declarations works as they are provided from out code.
 
 # Quick start
 
@@ -11,11 +9,11 @@ npm install
 npm run start
 ```
 
-Then open [http://localhost:8080](http://localhost:8080) to view the sample page.
+Then open [http://localhost:8000](http://localhost:8000) to view the sample page.
 
 ## Instantiating IDS web component in the markup
 
-Load the source file for the desired component as a module. You can bundle it into your application using a bundler like webpack, or load it directly view a script tag.
+Load the source file for the desired component as a module. You can bundle it into your application using a bundler or load it directly view a script tag.
 
 ```html
 <html>
@@ -36,28 +34,21 @@ Each component exposes a default export that you can `import` into your TypeScri
 
 ```typescript
 // Import the components we want to use.
-// @ts-ignore
 import IdsTag from 'ids-enterprise-wc/ids-tag/ids-tag.js';
 
 // Initialize a component.
-const tag = new IdsTag();
+const tag2 = new IdsTag();
 
 // Append a component and set some properties and event handler
-tag.dismissible = true;
-tag.color = 'error';
-tag.innerText = 'Added in Code';
-tag.on('tagremoved', (a: any) => {
-  console.log(a);
-});
+tag2.dismissible = true;
+tag2.color = 'error';
+tag2.innerText = 'Added in Code';
 
 document.body.appendChild(tag);
 ```
 
-# Known Issues
+## Known Issues
 
-- [ ] this code gives a no default constructor error:
-```js
-import IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag.js';
-const tag = new IdsTag();
- ```
-- [ ] the components type to any due to https://github.com/infor-design/enterprise-wc/issues/650
+Note that some browsers don't allow bare imports https://javascript.info/modules-intro#no-bare-modules-allowed
+in order to get around this we use a simple tool to remap the import paths https://github.com/open-wc/es-dev-server.
+But this can be done many ways

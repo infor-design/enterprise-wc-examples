@@ -1,9 +1,10 @@
-import type IdsTag from 'ids-enterprise-wc/components/ids-icon/ids-icon.js';
+import IdsTag from './node_modules/ids-enterprise-wc/components/ids-tag/ids-tag';
+
 // Initialize a component.
-const tag: any = document.querySelector('ids-tag').cloneNode(false);
+const tag2 = new IdsTag();
 
 // Append a component and set some properties and event handler
-(tag as IdsTag).color = 'error';
-tag.innerText = 'Added in Code';
+tag2.color = 'error';
+tag2.innerText = 'Added in Code';
 
-document.body.appendChild(tag);
+document.body.appendChild(tag2);

@@ -3,6 +3,13 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "sourceMap": true,
+    "target": "es2022",
+    "module": "es2022",
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "ids-components/*": ["node_modules/ids-enterprise-wc/components/*"]
+    }
   },
   "files": [
     "main.ts"
