@@ -4,11 +4,11 @@
   "description": "Plain HTML example of IDS Web Components",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "python3 -m http.server"
   },
   "author": "Infor",
   "license": "Apache",
   "devDependencies": {
-    "ids-enterprise-wc": "^1.0.0-beta.3"
+    "ids-enterprise-wc": "^1.0.0-beta.6"
   }
 }

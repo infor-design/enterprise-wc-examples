@@ -18,7 +18,7 @@ npm run start
 
 ### Step 1: Create a new React Project
 
-You can skip this step if already have React Project. But if you are starting from scratch you can use the npx tooling.
+You can skip this step if already have React Project. But if you are starting from scratch you can use the `npx` tooling.
 
 ```bash
 npx create-react-app react-ids-wc
@@ -29,7 +29,7 @@ For more info see https://reactjs.org/docs/create-a-new-react-app.html
 
 ### Step 2: Install the polyfill
 
-IDS does not support IE 11 so you should add it to browserslist in `package.json`
+IDS does not support IE 11 so you should add it to `browserslist` in `package.json`
 
 ```bash
 "browserslist": {
