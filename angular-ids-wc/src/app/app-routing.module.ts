@@ -129,6 +129,15 @@ export const routes: Routes = [
     }
   },
   { 
+    path: 'ids-text', 
+    loadChildren: () => import('./components/ids-text/ids-text.module').then(m => m.IdsTextModule),
+    data: {
+      title: 'IDS Text',
+      category: 'Typography',
+      description: 'An element for plain text'
+    }
+  },
+  { 
     path: 'ids-tooltip', 
     loadChildren: () => import('./components/ids-tooltip/ids-tooltip.module').then(m => m.IdsTooltipModule),
     data: {

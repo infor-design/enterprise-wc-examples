@@ -7,7 +7,7 @@
 
   <ids-layout-grid>
     <ids-layout-grid-cell>
-      <ids-button 
+      <ids-button
         #appMenuTriggerBtn 
         id="app-menu-trigger" 
         icon="menu" 
@@ -31,13 +31,13 @@
       slot="avatar" 
       id="avatar" 
       alt="Picture of Richard Fairbanks" 
-      [attr.src]="'assets/images/avatar-placeholder.jpg'"
+      src="assets/images/avatar-placeholder.jpg"
     />
     <ids-text slot="username" font-size="24" font-weight="bold">Richard Fairbanks</ids-text>
 
     <!-- Header Toolbar -->
     <ids-toolbar slot="header">
-      <ids-toolbar-section [attr.align]="'center-even'" [attr.type]="'fluid'">
+      <ids-toolbar-section align="center-even" type="fluid">
         <ids-button id="header-btn-download" icon="download">
           <ids-text audible>Download</ids-text>
         </ids-button>
@@ -60,9 +60,9 @@
       id="search" 
       clearable
       label="Application Menu Search" 
-      [attr.color-variant]="'app-menu'" 
-      [attr.label-state]="'collapsed'" 
-      [attr.no-margins]="true"
+      color-variant="app-menu" 
+      label-state="collapsed" 
+      no-margins="true"
       slot="search"
     ></ids-search-field>
 
@@ -152,7 +152,7 @@
 
     <!-- Footer Toolbar -->
     <ids-toolbar slot="footer">
-      <ids-toolbar-section [attr.align]="'center-even'" [attr.type]="'fluid'">
+      <ids-toolbar-section align="center-even" type="fluid">
         <ids-button id="footer-btn-settings">
           <ids-icon icon="settings"></ids-icon>
           <span>Settings</span>
@@ -160,7 +160,7 @@
         <ids-button id="footer-btn-proxy" icon="employee-directory">
           <ids-text audible>Proxy as User</ids-text>
         </ids-button>
-        <ids-button id="footer-btn-about" icon="info-linear">
+        <ids-button id="footer-btn-about" icon="info">
           <ids-text audible>About This Application</ids-text>
         </ids-button>
         <ids-button id="footer-btn-logout" icon="logout">
