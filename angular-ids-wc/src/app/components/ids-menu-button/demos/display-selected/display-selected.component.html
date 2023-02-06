@@ -13,13 +13,13 @@
         icon="settings" 
         type="tertiary" 
         dropdown-icon
-        [attr.menu]="'my-menu'"
+        menu="my-menu"
       >
         <span #btnSpanEl>Choose a Program Type...</span>
       </ids-menu-button>
       <ids-popup-menu 
-        id="my-menu" 
-        [attr.trigger]="'click'"
+        id="my-menu"
+        trigger="click"
         (selected)="handleSelected($event)"
       >
         <ids-menu-group select="single" id="programs">
