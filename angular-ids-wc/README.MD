@@ -1,34 +1,89 @@
 # Ids Web Components with Angular
 
-Ids Web Components use custom elements and have a typescript definition so can work in angular without a wrapper. Use the following steps to consume a ids web component in a simple angular project.
+Ids Web Components use custom elements and have a typescript definition so can work in angular without a wrapper. Use the following steps to consume a ids web component in a simple angular project. This project was created with [angular cli](https://angular.io/cli).
 
 1. Add `ids-enterprise-wc` with `npm install ids-enterprise-wc -D`
-1. Added imports to `app/main.ts` (all imports also include the styles so no style sheets are needed)
+1. Added imports to `src/app/app.component.ts`, you can either import every component via the `enterprise-wc.js` file. Or better place all the components you actually use as imports
 
 ```js
-// Import for when the component is used in the code
-import IdsSwapList from 'ids-enterprise-wc/components/ids-swaplist/ids-swaplist.js';
-// Import for when the component is used in the code to  be included but not used in the JS
-import 'ids-enterprise-wc/components/ids-swappable/ids-swappable';
+import 'ids-enterprise-wc/index.ts';
+
+// OR 
+import 'ids-enterprise-wc/components/ids-tag/ids-tag';
+import 'ids-enterprise-wc/components/ids-alert/ids-alert';
 ```
 
-1. Use imports in the angular.json 
+1. Note that all imports also include the contained css styles so no style sheets are needed
+1. Note that using imports in the angular.json is not currently possible for ES Modules https://github.com/angular/angular-cli/issues/24592
+1. Since we ship our package as Es Modules (ESM) the best way to use the components is to import the used modules (or complete package) inside the module where its used. For example:
 
-```json
-  "scripts": [
-    "node_modules/ids-enterprise-wc/enterprise-wc.js", // Full package
-    "node_modules/ids-enterprise-wc/components/ids-tag/ids-tag.js"
-  ],
-``` 
+```js
+import { Component, OnInit } from '@angular/core';
+// Import used components
+import 'ids-enterprise-wc/components/ids-alert/ids-alert';
+
+@Component({
+  selector: 'app-example',
+  templateUrl: './example.component.html',
+  styleUrls: ['./example.component.css']
+})
+export class ExampleComponent implements OnInit {
+  constructor() { }
+  ngOnInit(): void {
+  }
+}
+```
+
+If the module is being used in the code you can change the import as follows and invoke it if needed.
+
+```js
+import { Component, AfterViewInit} from '@angular/core';
+import { routes } from './ids-tag-routing.module';
+import IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag';
+
+@Component({
+  selector: 'app-ids-tag',
+  templateUrl: './ids-tag.component.html',
+  styleUrls: ['./ids-tag.component.css']
+})
+export class IdsTagComponent implements AfterViewInit {
+  public routes = routes.filter(r => r.path !== '');
+
+  constructor() { }
+
+  ngAfterViewInit(): void {
+    console.log('Ids Tag init');
+    const dynamicTag = new IdsTag()
+    dynamicTag.textContent = 'Dynamic';
+    document.body.append(dynamicTag);
+  }
+}
+```
 
 1. Add `CUSTOM_ELEMENTS_SCHEMA` to `src/app/app.module.ts`
+1. The localization data and translations are fetched dynamically in the IDS code when a locale is set. In order to change language you will need to serve the locales. In order to do this we add the location to the assets section in `angular.json`.
+
+```json
+"assets": [
+  "src/favicon.ico",
+  "src/assets",
+  "src/api",
+  {
+    "glob": "**/*",
+    "input": "./node_modules/ids-enterprise-wc/locale-data",
+    "output": "/locale-data"
+  }
+],
+```
+
 1. `npm run start`
 1. If wanted you can shorten the import paths using this feature https://blog.bitsrc.io/short-typescript-import-paths-in-angular9-22ce34bd424d 
+1. If you wanted to you can also speed up the builds with es-build you  could https://www.danywalls.com/maximizing-your-angular-build-performance-with-esbuild
 
 ## To Run these Examples
 
 - clone the main repo https://github.com/infor-design/enterprise-wc-examples
-- should be on node 16
+- should be on node 18
 
 ```sh
 cd angular-ids-wc

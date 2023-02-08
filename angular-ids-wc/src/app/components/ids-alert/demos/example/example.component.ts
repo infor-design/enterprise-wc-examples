@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import 'ids-enterprise-wc/components/ids-alert/ids-alert';
 
 @Component({
   selector: 'app-example',

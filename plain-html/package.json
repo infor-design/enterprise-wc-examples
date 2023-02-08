@@ -1,0 +1,14 @@
+{
+  "name": "plain-html",
+  "version": "1.0.0",
+  "description": "Plain HTML example of IDS Web Components",
+  "main": "index.js",
+  "scripts": {
+    "start": "python3 -m http.server"
+  },
+  "author": "Infor",
+  "license": "Apache",
+  "devDependencies": {
+    "ids-enterprise-wc": "^1.0.0-beta.6"
+  }
+}

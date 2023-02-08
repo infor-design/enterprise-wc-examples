@@ -1,5 +1,6 @@
 import { Component, AfterViewInit} from '@angular/core';
 import { routes } from './ids-tag-routing.module';
+import IdsTag from 'ids-enterprise-wc/components/ids-tag/ids-tag';
 
 @Component({
   selector: 'app-ids-tag',
@@ -13,6 +14,8 @@ export class IdsTagComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     console.log('Ids Tag init');
+    const dynamicTag = new IdsTag()
+    dynamicTag.textContent = 'Dynamic';
+    document.body.append(dynamicTag);
   }
-
 }
