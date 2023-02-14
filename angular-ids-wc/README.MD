@@ -6,7 +6,8 @@ Ids Web Components use custom elements and have a typescript definition so can w
 1. Added imports to `src/app/app.component.ts`, you can either import every component via the `enterprise-wc.js` file. Or better place all the components you actually use as imports
 
 ```js
-import 'ids-enterprise-wc/index.ts';
+// ALL
+import 'ids-enterprise-wc/enterprise-wc.js';
 
 // OR 
 import 'ids-enterprise-wc/components/ids-tag/ids-tag';
