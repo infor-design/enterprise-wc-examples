@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>IDS Tag Component</title>
+  <title>IDS Calendar Component</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap" rel="stylesheet" />
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="Cache-control" content="max-age=31536000">
   <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-container/ids-container.js"></script>
   <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-tag/ids-tag.js"></script>
   <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-alert/ids-alert.js"></script>
   <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-text/ids-text.js"></script>
+  <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-theme-switcher/ids-theme-switcher.js"></script>
+  <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid.js"></script>
+  <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-calendar/ids-calendar.js"></script>
 </head>
 <body>
-  <ids-container locale="en-US">
-    <ids-tag color="error">Error Tag</ids-tag>
-    <ids-alert icon="error"></ids-alert>
-    <ids-text translate-text="true">Legend</ids-text>
+  <ids-container locale="en-US" padding="8">
+    <ids-theme-switcher mode="light"></ids-theme-switcher>
+    <ids-layout-grid auto="true">
+      <ids-layout-grid-column auto="true">
+        <ids-calendar></ids-calendar>
+      </ids-layout-grid-column>
+   </ids-layout-grid>
   </ids-container>
 </body>
 </html>
