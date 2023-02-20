@@ -3,3 +3,4 @@ dist
 .DS_Store
 .vscode
 svelte-ids-wc/public/build
+.DS_Store
