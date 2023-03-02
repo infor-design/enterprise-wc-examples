@@ -11,16 +11,27 @@
   <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-text/ids-text.js"></script>
   <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-theme-switcher/ids-theme-switcher.js"></script>
   <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid.js"></script>
-  <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-calendar/ids-calendar.js"></script>
+  <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-header/ids-header.js"></script>
+  <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-toolbar/ids-toolbar.js"></script>
 </head>
 <body>
-  <ids-container locale="en-US" padding="8">
-    <ids-theme-switcher mode="light"></ids-theme-switcher>
-    <ids-layout-grid auto="true">
-      <ids-layout-grid-column auto="true">
-        <ids-calendar></ids-calendar>
-      </ids-layout-grid-column>
-   </ids-layout-grid>
+  <ids-container role="main" padding="0" hidden>
+    <ids-header>
+      <ids-toolbar>
+        <ids-toolbar-section type="button">
+          <ids-button icon="menu" role="button">
+            <span slot="text" class="audible">Application Menu Trigger</span>
+          </ids-button>
+        </ids-toolbar-section>
+        <ids-toolbar-section type="title">
+          <ids-text font-size="20" type="h1">Application Example</ids-text>
+        </ids-toolbar-section>
+        <ids-toolbar-section type="button">
+          <ids-theme-switcher mode="light"></ids-theme-switcher>
+        </ids-toolbar-section>
+      </ids-toolbar>
+    </ids-header>
+  
   </ids-container>
 </body>
 </html>

@@ -2,9 +2,10 @@
 
 Ids Web Components are packages as ESM modules so can be used in any HTML document very simply.
 
-1. Make sure your using `npm` with `npm init`
+1. Make sure your using `npm` with `npm init` if not, then add the `ids-enterprise-wc` dependency. Like this repo (see package.json)
 1. Add `ids-enterprise-wc` with `npm install ids-enterprise-wc -D`
 1. Added script imports to you html page that have the `type="module"`
+1. Add the font import `<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap" rel="stylesheet" />`
 
 ```html
 <script type="module" src="/node_modules/ids-enterprise-wc/components/ids-container/ids-container.js"></script>
