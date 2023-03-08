@@ -237,6 +237,15 @@ export const routes: Routes = [
     },
   },
   { 
+    path: 'ids-validation',
+    loadChildren: () => import('./components/ids-validation/ids-validation.module').then(m => m.IdsValidationModule),
+    data: {
+      title: 'IDS Validation',
+      category: 'Form Inputs',
+      description: 'Form validation examples'
+    },
+  },
+  { 
     path: 'ids-action-sheet', 
     loadChildren: () => import('./components/ids-action-sheet/ids-action-sheet.module').then(m => m.IdsActionSheetModule),
     data: {
