@@ -16,7 +16,7 @@ export class ExampleComponent implements OnInit {
     this.testForm = new FormGroup({
       testInput: new FormControl('Original value', Validators.minLength(2)),
       testDateString: new FormControl('12/31/2020'),
-      testDateDate: new FormControl(new Date('2020-12-31'))
+      testDateDate: new FormControl(new Date())
     });
   }
 
