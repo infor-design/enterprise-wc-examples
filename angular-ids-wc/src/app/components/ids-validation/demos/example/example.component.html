@@ -5,9 +5,32 @@
       <ids-layout-grid-cell>
         <ids-text font-size="12" type="h1">Ids Input</ids-text>
         <br>
+
         <ids-input id="test-input" type="text" label="First Name" formControlName="testInput" ngDefaultControl></ids-input>
+
         <ids-date-picker id="e2e-datepicker-string" label="Date value as string" tabbable="false" mask formControlName="testDateString" ngDefaultControl></ids-date-picker>
+
         <ids-date-picker id="e2e-datepicker-date" label="Date value as Date" tabbable="false" mask formControlName="testDateDate" ngDefaultControl></ids-date-picker>
+
+        <ids-time-picker label="Time Picker - autoselect" id="e2e-timepicker-autoselect" autoselect mask="true" formControlName="testTimepicker" ngDefaultControl></ids-time-picker>
+
+        <ids-dropdown id="dropdown-4" label="Required Dropdown" validate="required" formControlName="testDropdown" ngDefaultControl>
+          <ids-list-box>
+            <ids-list-box-option value="blank" id="blank" aria-label="Blank"></ids-list-box-option>
+            <ids-list-box-option value="opt1" id="opt1-d4">Option One</ids-list-box-option>
+            <ids-list-box-option value="opt2" id="opt2-d4">Option Two</ids-list-box-option>
+            <ids-list-box-option value="opt3" id="opt3-d4">Option Three</ids-list-box-option>
+            <ids-list-box-option value="opt4" id="opt4-d4">Option Four</ids-list-box-option>
+            <ids-list-box-option value="opt5" id="opt5-d4">Option Five</ids-list-box-option>
+            <ids-list-box-option value="opt6" id="opt6-d4">Option Six</ids-list-box-option>
+          </ids-list-box>
+        </ids-dropdown>
+
+        <ids-radio-group label="Radio" formControlName="testDropdown" ngDefaultControl>
+          <ids-radio value="opt1" label="Option one"></ids-radio>
+          <ids-radio value="opt2" label="Option two" checked="true"></ids-radio>
+        </ids-radio-group>
+
         <!--
       <ids-input type="text" label="Last Name" validate="required"></ids-input>
       <ids-input type="text" label="Email Address" placeholder="Company@address.com" validate="email required"></ids-input>
