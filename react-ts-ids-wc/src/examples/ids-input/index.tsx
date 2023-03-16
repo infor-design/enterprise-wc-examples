@@ -144,7 +144,7 @@ const IdsInput = () => {
         </IdsGridCell>
       </IdsGrid>
 
-      <IdsGrid auto="true">
+      <IdsGrid auto>
         <IdsGridCell>
           <ids-text font-size="12" type="h2">
             Ids Input - Text align
