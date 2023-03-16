@@ -6,17 +6,17 @@ import 'ids-enterprise-wc/components/ids-accordion/ids-accordion-panel';
 import 'ids-enterprise-wc/components/ids-text/ids-text';
 
 
-export interface AccordionType {
+export interface IdsAccordionType {
   children: any;
-  // children: AccordionItemType | AccordionItemType[];
+  // children: IdsAccordionItemType | IdsAccordionItemType[];
 }
-export interface AccordionItemType {
+export interface IdsAccordionItemType {
   header: string;
   icon?: string;
   links?: { [href: string]: string };
 }
 
-export const AccordionItem: React.FC<AccordionItemType> = (props) => {
+export const IdsAccordionItem: React.FC<IdsAccordionItemType> = (props) => {
   const navigate = useNavigate();
 
   return (
@@ -37,8 +37,8 @@ export const AccordionItem: React.FC<AccordionItemType> = (props) => {
   );
 }
 
-export const Accordion: React.FC<AccordionType> = ({ children }) => (
+export const IdsAccordion: React.FC<IdsAccordionType> = ({ children }) => (
   <ids-accordion>{children}</ids-accordion>
 );
 
-export default Accordion;
+export default IdsAccordion;
