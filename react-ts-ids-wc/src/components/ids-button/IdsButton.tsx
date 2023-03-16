@@ -2,16 +2,16 @@ import React from 'react';
 import type IdsButtonType from 'ids-enterprise-wc/components/ids-button/ids-button';
 // import type { IdsButtonType, IdsButtonIconAlignment } from 'ids-enterprise-wc/components/ids-button/ids-button-common';
 
-interface ButtonClickEvent extends MouseEvent {
+export interface IdsButtonClickEvent extends MouseEvent {
   target: IdsButtonType;
 }
 
-interface IdsButtonProps {
+export interface IdsButtonProps {
   disabled?: boolean;
   icon?: string;
   iconAlign?: IdsButtonType['iconAlign'];
   type?: IdsButtonType['type'];
-  onClick?: (evt: ButtonClickEvent) => void;
+  onClick?: (evt: IdsButtonClickEvent) => void;
   children: any;
 }
 
@@ -31,7 +31,7 @@ export const IdsButton: React.FC<IdsButtonProps> = (props) => {
       disabled={!!props.disabled}
       icon={props.icon}
       type={props.type}
-      onClick={(evt: ButtonClickEvent) => props.onClick?.(evt)}
+      onClick={(evt: IdsButtonClickEvent) => props.onClick?.(evt)}
     >
       {props.children}
     </ids-button>

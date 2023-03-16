@@ -1,5 +1,5 @@
 import React from 'react';
-import IdsButton from '../../components/button/IdsButton';
+import IdsButton from '../../components/ids-button/IdsButton';
 import 'ids-enterprise-wc/components/ids-button/ids-button';
 
 

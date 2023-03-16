@@ -1,19 +1,21 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import IdsAbout from '../../components/ids-about/IdsAbout';
+import IdsButton from '../../components/ids-button/IdsButton';
 
-import type IdsAboutType from 'ids-enterprise-wc/components/ids-about/ids-about';
-import 'ids-enterprise-wc/components/ids-about/ids-about';
 import 'ids-enterprise-wc/components/ids-icon/ids-icon';
 import 'ids-enterprise-wc/components/ids-text/ids-text';
 
-const IdsAbout = () => {
-  const aboutRef = useRef<IdsAboutType>();
+const IdsAboutExample = () => {
+  const [modalOpen, setModalOpen] = React.useState(false);
 
   return (
     <>
-      <ids-about
-        ref={aboutRef}
-        product-name="Controls Example Application"
-        product-version="Version No. XX"
+      <IdsAbout
+        name="Controls Example Application"
+        version="Version No. XX"
+        open={modalOpen}
+        onOpen={() => setModalOpen(true)}
+        onClose={() => setModalOpen(false)}
       >
         <ids-icon slot="icon" icon="logo" viewbox="0 0 35 34" size="xxl"></ids-icon>
         <ids-text slot="appName" type="h1" font-size="24" font-weight="bold">
@@ -22,7 +24,7 @@ const IdsAbout = () => {
         <ids-text slot="content" type="p">
           Fashionable components for fashionable applications.
         </ids-text>
-      </ids-about>
+      </IdsAbout>
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
@@ -34,18 +36,17 @@ const IdsAbout = () => {
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
-          <ids-button
+          <IdsButton
             type="secondary"
-            // Trigger ids-about visibility with React onClick synthetic event
-            onClick={() => aboutRef.current?.show()}
-            disabled={aboutRef.current?.visible}
+            onClick={() => setModalOpen(!modalOpen)}
+            disabled={modalOpen}
           >
             Show About Screen
-          </ids-button>
+          </IdsButton>
         </ids-layout-grid-cell>
       </ids-layout-grid>
     </>
   );
 };
 
-export default IdsAbout;
+export default IdsAboutExample;
