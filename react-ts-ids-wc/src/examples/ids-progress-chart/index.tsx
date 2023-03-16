@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-progress-chart/ids-progress-chart';
 
@@ -8,8 +9,8 @@ const IdsProgressChart = () => {
     <>
       <IdsTitle>Progress Chart Example</IdsTitle>
 
-      <ids-layout-grid cols="3" gap="xl">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="xl">
+        <IdsGridCell>
           <ids-progress-chart
             label-progress="90%"
             progress="90"
@@ -62,9 +63,9 @@ const IdsProgressChart = () => {
             total="100"
             label="alert-yellow"
           ></ids-progress-chart>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-progress-chart
             size="small"
             progress="10"
@@ -117,9 +118,9 @@ const IdsProgressChart = () => {
             total="100"
             label="alert-yellow"
           ></ids-progress-chart>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-progress-chart
             size="small"
             label-progress="13h"
@@ -186,8 +187,8 @@ const IdsProgressChart = () => {
             total="20"
             label="alert-yellow"
           ></ids-progress-chart>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

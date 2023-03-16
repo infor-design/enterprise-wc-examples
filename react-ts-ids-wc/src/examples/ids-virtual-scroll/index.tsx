@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsVirtualScrollType from 'ids-enterprise-wc/components/ids-virtual-scroll/ids-virtual-scroll';
 import 'ids-enterprise-wc/components/ids-virtual-scroll/ids-virtual-scroll';
@@ -46,8 +47,8 @@ const IdsVirtualScroll = () => {
     <>
       <IdsTitle>Virtual Scroll Example</IdsTitle>
 
-      <ids-layout-grid cols="2" gap="xl">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="2" gap="xl">
+        <IdsGridCell>
           <ids-card auto-height>
             <div slot="card-header">
               <ids-text
@@ -75,8 +76,8 @@ const IdsVirtualScroll = () => {
               </div>
             </div>
           </ids-card>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-card auto-height overflow="hidden">
             <div slot="card-header">
               <ids-text
@@ -129,8 +130,8 @@ const IdsVirtualScroll = () => {
               </div>
             </div>
           </ids-card>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

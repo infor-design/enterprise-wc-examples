@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-search-field/ids-search-field';
 import 'ids-enterprise-wc/components/ids-header/ids-header';
@@ -9,8 +10,8 @@ const IdsSearchField = () => {
     <>
       <IdsTitle>Search Field Example</IdsTitle>
 
-      <ids-layout-grid cols="3" gap="xl">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="xl">
+        <IdsGridCell>
           <ids-search-field
             clearable
             dirty-tracker
@@ -24,8 +25,8 @@ const IdsSearchField = () => {
             label="Read-only Search Bar"
             value="Cellphone"
           ></ids-search-field>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-search-field
             clearable
             label="Search Field with Hidden Label"
@@ -39,8 +40,8 @@ const IdsSearchField = () => {
               clearable
             ></ids-search-field>
           </form>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-search-field
             disabled
             label="Disabled Search Bar"
@@ -52,11 +53,11 @@ const IdsSearchField = () => {
             label="Alternate Color Search Bar"
             value="Cellphone"
           ></ids-search-field>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-search-field
             id="search-field-autocomplete"
             label="Autocomplete Search Bar"
@@ -64,11 +65,11 @@ const IdsSearchField = () => {
             autocomplete
             search-field="label"
           ></ids-search-field>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid cols="1">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="1">
+        <IdsGridCell>
           <ids-text font-size="12" type="h1">
             Inside a Header:
           </ids-text>
@@ -100,8 +101,8 @@ const IdsSearchField = () => {
               <ids-theme-switcher mode="light"></ids-theme-switcher>
             </ids-toolbar>
           </ids-header>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

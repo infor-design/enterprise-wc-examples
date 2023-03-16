@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsRadioGroupType from 'ids-enterprise-wc/components/ids-radio/ids-radio-group';
 import 'ids-enterprise-wc/components/ids-radio/ids-radio';
@@ -11,8 +12,8 @@ const IdsRadio = () => {
     <>
       <IdsTitle>Ids Radio Example</IdsTitle>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-radio-group label="Normal">
             <ids-radio value="opt1" label="Option one"></ids-radio>
             <ids-radio
@@ -53,8 +54,8 @@ const IdsRadio = () => {
               checked="true"
             ></ids-radio>
           </ids-radio-group>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-radio-group label="Dirty tracking" dirty-tracker="true">
             <ids-radio value="opt1" label="Option one"></ids-radio>
             <ids-radio
@@ -114,8 +115,8 @@ const IdsRadio = () => {
               label="Caution"
             ></ids-radio>
           </ids-radio-group>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-radio-group
             ref={radioGroupRef}
             label="Radio with Validation"
@@ -165,8 +166,8 @@ const IdsRadio = () => {
               disabled="true"
             ></ids-radio>
           </ids-radio-group>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

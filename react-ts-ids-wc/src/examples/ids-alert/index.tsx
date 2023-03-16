@@ -5,11 +5,6 @@ import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import { data } from './data';
 import 'ids-enterprise-wc/components/ids-alert/ids-alert';
-import 'ids-enterprise-wc/components/ids-button/ids-button';
-import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell';
-import 'ids-enterprise-wc/components/ids-layout-flex/ids-layout-flex';
-import 'ids-enterprise-wc/components/ids-layout-flex/ids-layout-flex-item';
 
 
 const IdsAlert = () => {

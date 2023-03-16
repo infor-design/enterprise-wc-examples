@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-week-view/ids-week-view';
 
@@ -7,8 +8,8 @@ const IdsWeekView = () => {
     <>
       <IdsTitle>Week View Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-week-view
             first-day-of-week="1"
             show-today="true"
@@ -16,8 +17,8 @@ const IdsWeekView = () => {
             end-date="11/01/2019"
             show-timeline="false"
           ></ids-week-view>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

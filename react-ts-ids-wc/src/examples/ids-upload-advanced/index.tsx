@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsUploadAdvancedType from 'ids-enterprise-wc/components/ids-upload-advanced/ids-upload-advanced';
 import 'ids-enterprise-wc/components/ids-upload-advanced/ids-upload-advanced';
@@ -18,8 +19,8 @@ const IdsUploadAdvanced = () => {
     <>
       <IdsTitle>Ids Upload Advanced Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-text>
             <strong>
               To slow down the upload use Chrome dev tools network tab, also if
@@ -27,45 +28,45 @@ const IdsUploadAdvanced = () => {
               will fail. To see this working run locally.
             </strong>
           </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-text>Basic</ids-text>
           <ids-upload-advanced url="http://localhost:3000/upload"></ids-upload-advanced>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-text>Disabled</ids-text>
           <ids-upload-advanced
             disabled="true"
             url="http://localhost:3000/upload"
           ></ids-upload-advanced>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-text>Images &amp; PDF Only, Max (5) files</ids-text>
           <ids-upload-advanced
             accept="image/*, .pdf"
             max-files="5"
             url="http://localhost:3000/upload"
           ></ids-upload-advanced>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-text>Extra Headers to send with XHR</ids-text>
           <ids-upload-advanced
             ref={extraHeadersRef}
             url="http://localhost:3000/upload"
           ></ids-upload-advanced>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-text>Custom Send Method</ids-text>
           <ids-upload-advanced></ids-upload-advanced>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

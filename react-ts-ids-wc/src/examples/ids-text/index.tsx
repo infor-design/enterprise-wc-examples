@@ -1,15 +1,16 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import 'ids-enterprise-wc/components/ids-text/ids-text';
 
 
 const IdsText = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <ids-text font-size="12">Labels / Typography</ids-text>
-      </ids-layout-grid>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      </IdsGrid>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-text font-size="72">Size 72</ids-text>
           <ids-text font-size="60">Size 60</ids-text>
           <ids-text font-size="48">Size 48</ids-text>
@@ -22,8 +23,8 @@ const IdsText = () => {
           <ids-text font-size="14">Size 14 (sm)</ids-text>
           <ids-text font-size="12">Size 12 (xs)</ids-text>
           <ids-text font-size="10">Size 10</ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

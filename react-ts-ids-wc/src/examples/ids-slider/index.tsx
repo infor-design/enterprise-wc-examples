@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsSliderType from 'ids-enterprise-wc/components/ids-slider/ids-slider';
 import 'ids-enterprise-wc/components/ids-slider/ids-slider';
@@ -36,8 +37,8 @@ const IdsSlider = () => {
     <>
       <IdsTitle>Slider Example</IdsTitle>
 
-      <ids-layout-grid cols="3" gap="xl">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="xl">
+        <IdsGridCell>
           <ids-text font-size="12" type="h1">
             Single Slider:{' '}
           </ids-text>
@@ -47,8 +48,8 @@ const IdsSlider = () => {
             label="Single-thumb"
             value="20"
           ></ids-slider>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-text font-size="12" type="h1">
             Range Slider:{' '}
           </ids-text>
@@ -58,8 +59,8 @@ const IdsSlider = () => {
             label="Multi-thumb minimum"
             label-secondary="Multi-thumb maximum"
           ></ids-slider>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-text font-size="12" type="h1">
             Step Slider:{' '}
           </ids-text>
@@ -69,11 +70,11 @@ const IdsSlider = () => {
             show-tooltip
             label="Single-thumb with steps"
           ></ids-slider>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid cols="3" gap="xl">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="xl">
+        <IdsGridCell>
           <ids-text font-size="12" type="h1">
             Vertical Sliders:{' '}
           </ids-text>
@@ -84,8 +85,8 @@ const IdsSlider = () => {
             show-tooltip
             label="Colorful single-thumb"
           ></ids-slider>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-slider
             type="range"
             vertical
@@ -94,8 +95,8 @@ const IdsSlider = () => {
             label="Colorful multi-thumb minimum"
             label-secondary="Colorful multi-thumb maximum"
           ></ids-slider>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-slider
             ref={surveyRef}
             type="step"
@@ -104,8 +105,8 @@ const IdsSlider = () => {
             color=""
             label="Status"
           ></ids-slider>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

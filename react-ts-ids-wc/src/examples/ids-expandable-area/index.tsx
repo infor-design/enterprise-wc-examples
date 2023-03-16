@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsExpandableAreaType from 'ids-enterprise-wc/components/ids-expandable-area/ids-expandable-area';
 import 'ids-enterprise-wc/components/ids-expandable-area/ids-expandable-area';
@@ -26,8 +27,8 @@ const IdsExpandableArea = () => {
     <>
       <IdsTitle>Expandable Area Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-expandable-area>
             <ids-text slot="header" font-size="16">
               Procurement
@@ -48,8 +49,8 @@ const IdsExpandableArea = () => {
             <ids-text slot="header" font-size="16">
               Design &amp; Definition
             </ids-text>
-            <ids-layout-grid slot="pane" cols="2" no-margins="true">
-              <ids-layout-grid-cell>
+            <IdsGrid slot="pane" cols="2" noMargins>
+              <IdsGridCell>
                 <ids-text font-size="12">Company Name</ids-text>
                 <ids-text font-size="14">Building Suppliers</ids-text>
                 <br />
@@ -62,8 +63,8 @@ const IdsExpandableArea = () => {
                   <br />
                   Los Angeles, California 90001 USA
                 </ids-text>
-              </ids-layout-grid-cell>
-              <ids-layout-grid-cell>
+              </IdsGridCell>
+              <IdsGridCell>
                 <ids-text font-size="12">Phone Number</ids-text>
                 <ids-text font-size="14">(999) 810-2604</ids-text>
                 <br />
@@ -72,8 +73,8 @@ const IdsExpandableArea = () => {
                 <br />
                 <ids-text font-size="12">Estimated Delivery</ids-text>
                 <ids-text font-size="14">June 21, 2015 (4 days)</ids-text>
-              </ids-layout-grid-cell>
-            </ids-layout-grid>
+              </IdsGridCell>
+            </IdsGrid>
             <ids-hyperlink slot="expander-default">Show More</ids-hyperlink>
             <ids-hyperlink slot="expander-expanded">Show Less</ids-hyperlink>
           </ids-expandable-area>
@@ -82,8 +83,8 @@ const IdsExpandableArea = () => {
             <ids-text slot="header" font-size="16">
               Customer Information
             </ids-text>
-            <ids-layout-grid slot="header" cols="2" gap="md" no-margins="true">
-              <ids-layout-grid-cell>
+            <IdsGrid slot="header" cols="2" gap="md" noMargins>
+              <IdsGridCell>
                 <ids-input
                   size="full"
                   type="text"
@@ -91,8 +92,8 @@ const IdsExpandableArea = () => {
                   name="customer-name"
                   placeholder="Normal text Field"
                 ></ids-input>
-              </ids-layout-grid-cell>
-              <ids-layout-grid-cell>
+              </IdsGridCell>
+              <IdsGridCell>
                 <ids-input
                   size="full"
                   type="text"
@@ -100,9 +101,9 @@ const IdsExpandableArea = () => {
                   name="location"
                   placeholder="Normal text Field"
                 ></ids-input>
-              </ids-layout-grid-cell>
-            </ids-layout-grid>
-            <ids-layout-grid slot="pane" cols="2" gap="md" no-margins="true">
+              </IdsGridCell>
+            </IdsGrid>
+            <IdsGrid slot="pane" cols="2" gap="md" noMargins>
               <ids-input
                 size="full"
                 type="text"
@@ -110,7 +111,7 @@ const IdsExpandableArea = () => {
                 name="more-customer-details"
                 placeholder="Normal text Field"
               ></ids-input>
-            </ids-layout-grid>
+            </IdsGrid>
             <ids-hyperlink slot="expander-default">Show More</ids-hyperlink>
             <ids-hyperlink slot="expander-expanded">Show Less</ids-hyperlink>
           </ids-expandable-area>
@@ -137,8 +138,8 @@ const IdsExpandableArea = () => {
               generate peer-to-peer.
             </ids-text>
           </ids-expandable-area>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

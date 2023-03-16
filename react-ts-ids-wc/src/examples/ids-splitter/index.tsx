@@ -1,23 +1,24 @@
 import React from 'react';
+import IdsGrid from '../../components/ids-grid/IdsGrid';
 import 'ids-enterprise-wc/components/ids-splitter/ids-splitter';
 import './styles.css';
 
 const IdsSplitter = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <div className="demo-splitter">
           <ids-splitter>
             <ids-splitter-pane id="p1"></ids-splitter-pane>
             <ids-splitter-pane id="p2"></ids-splitter-pane>
           </ids-splitter>
         </div>
-      </ids-layout-grid>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <ids-text font-size="12">Multiple</ids-text>
-      </ids-layout-grid>
-      <ids-layout-grid auto="true">
+      </IdsGrid>
+      <IdsGrid auto>
         <div className="demo-splitter">
           <ids-splitter>
             <ids-splitter-pane></ids-splitter-pane>
@@ -26,24 +27,24 @@ const IdsSplitter = () => {
             <ids-splitter-pane></ids-splitter-pane>
           </ids-splitter>
         </div>
-      </ids-layout-grid>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <ids-text font-size="12">Vertical</ids-text>
-      </ids-layout-grid>
-      <ids-layout-grid auto="true">
+      </IdsGrid>
+      <IdsGrid auto>
         <div className="demo-splitter">
           <ids-splitter axis="y">
             <ids-splitter-pane></ids-splitter-pane>
             <ids-splitter-pane></ids-splitter-pane>
           </ids-splitter>
         </div>
-      </ids-layout-grid>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <ids-text font-size="12">Nested</ids-text>
-      </ids-layout-grid>
-      <ids-layout-grid auto="true">
+      </IdsGrid>
+      <IdsGrid auto>
         <div className="demo-splitter">
           <ids-splitter>
             <ids-splitter-pane></ids-splitter-pane>
@@ -55,7 +56,7 @@ const IdsSplitter = () => {
             </ids-splitter-pane>
           </ids-splitter>
         </div>
-      </ids-layout-grid>
+      </IdsGrid>
     </>
   );
 };

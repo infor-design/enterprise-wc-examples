@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-trigger-field/ids-trigger-field';
 
@@ -8,7 +9,7 @@ const IdsTriggerField = () => {
     <>
       <IdsTitle>Trigger Field Example</IdsTitle>
 
-      <ids-layout-grid cols="3" gap="md">
+      <IdsGrid cols="3" gap="md">
         <ids-trigger-field
           id="trigger-field-1"
           size="sm"
@@ -21,16 +22,16 @@ const IdsTriggerField = () => {
           </ids-trigger-button>
         </ids-trigger-field>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-trigger-field id="trigger-field-2" size="md" label="Timepicker">
             <ids-trigger-button slot="trigger-end">
               <ids-text audible="true">Timepicker trigger</ids-text>
               <ids-icon icon="clock"></ids-icon>
             </ids-trigger-button>
           </ids-trigger-field>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-trigger-field
             id="trigger-field-3"
             label="Products"
@@ -42,11 +43,11 @@ const IdsTriggerField = () => {
               <ids-icon icon="search-list"></ids-icon>
             </ids-trigger-button>
           </ids-trigger-field>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-trigger-field
             id="trigger-field-4"
             size="md"
@@ -59,9 +60,9 @@ const IdsTriggerField = () => {
               <ids-icon icon="search-list"></ids-icon>
             </ids-trigger-button>
           </ids-trigger-field>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-trigger-field
             id="trigger-field-5"
             size="md"
@@ -77,9 +78,9 @@ const IdsTriggerField = () => {
               <ids-icon icon="caret-down"></ids-icon>
             </ids-trigger-button>
           </ids-trigger-field>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-trigger-field
             id="trigger-field-6"
             size="md"
@@ -90,8 +91,8 @@ const IdsTriggerField = () => {
               <ids-icon icon="search"></ids-icon>
             </ids-trigger-button>
           </ids-trigger-field>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

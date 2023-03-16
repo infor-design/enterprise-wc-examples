@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-separator/ids-separator';
 
@@ -7,27 +8,27 @@ const IdsSeparator = () => {
     <>
       <IdsTitle>Separator Example</IdsTitle>
 
-      <ids-layout-grid cols="12" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="12" gap="md">
+        <IdsGridCell>
           <ids-text>Left</ids-text>
           <ids-separator></ids-separator>
           <ids-text>Right</ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <ids-text font-size="12" type="h1">
           Separator (Vertical)
         </ids-text>
-      </ids-layout-grid>
+      </IdsGrid>
 
-      <ids-layout-grid cols="12" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="12" gap="md">
+        <IdsGridCell>
           <ids-text>Top</ids-text>
           <ids-separator vertical="true"></ids-separator>
           <ids-text>Bottom</ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

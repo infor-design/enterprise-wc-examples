@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsActionPanelType from 'ids-enterprise-wc/components/ids-action-panel/ids-action-panel';
 import 'ids-enterprise-wc/components/ids-action-panel/ids-action-panel';
 import 'ids-enterprise-wc/components/ids-dropdown/ids-dropdown';
 import 'ids-enterprise-wc/components/ids-textarea/ids-textarea';
-import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell';
 
 const IdsActionPanel = () => {
   const actionPanelRef = useRef<IdsActionPanelType>();
@@ -44,8 +44,8 @@ const IdsActionPanel = () => {
           </ids-toolbar-section>
         </ids-toolbar>
 
-        <ids-layout-grid cols="2" gap="md" min-col-width="150px" style={{ textAlign: 'left' }}>
-          <ids-layout-grid-cell>
+        <IdsGrid cols="2" gap="md" minColWidth="150px" style={{ textAlign: 'left' }}>
+          <IdsGridCell>
             <ids-dropdown id="cap-dd-company-name" label="Company Name" value="">
               <ids-list-box>
                 <ids-list-box-option value="" selected>
@@ -78,8 +78,8 @@ const IdsActionPanel = () => {
             </ids-dropdown>
 
             <ids-textarea id="cap-textarea-notes" label="Notes"></ids-textarea>
-          </ids-layout-grid-cell>
-          <ids-layout-grid-cell>
+          </IdsGridCell>
+          <IdsGridCell>
             <ids-dropdown id="cap-dd-ship-terms" label="Ship Terms" value="">
               <ids-list-box>
                 <ids-list-box-option value="" selected>
@@ -112,12 +112,12 @@ const IdsActionPanel = () => {
             </ids-dropdown>
 
             <ids-checkbox id="cap-check-freight" label="Freight" checked></ids-checkbox>
-          </ids-layout-grid-cell>
-        </ids-layout-grid>
+          </IdsGridCell>
+        </IdsGrid>
       </ids-action-panel>
 
-      <ids-layout-grid>
-        <ids-layout-grid-column>
+      <IdsGrid>
+        <IdsGridCell>
           <ids-button
             type="secondary"
             onClick={() => {
@@ -126,8 +126,8 @@ const IdsActionPanel = () => {
           >
             Open Action Panel
           </ids-button>
-        </ids-layout-grid-column>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

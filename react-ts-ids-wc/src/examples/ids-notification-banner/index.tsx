@@ -1,5 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 import React, { useRef, useEffect } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsListViewType from 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
 import 'ids-enterprise-wc/components/ids-notification-banner/ids-notification-banner';
@@ -72,14 +73,14 @@ const IdsNotificationBanner = () => {
         type="fakeType"
       ></ids-notification-banner>
 
-      <ids-layout-grid cols="3" gap="md">
+      <IdsGrid cols="3" gap="md">
         <ids-text font-size="12" type="h1">
           Notification Banner in Card
         </ids-text>
-      </ids-layout-grid>
+      </IdsGrid>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-card>
             <div slot="card-header">
               <ids-text
@@ -119,8 +120,8 @@ const IdsNotificationBanner = () => {
               ></ids-list-view>
             </div>
           </ids-card>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

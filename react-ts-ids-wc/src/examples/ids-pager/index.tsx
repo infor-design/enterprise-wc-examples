@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 
 import type IdsPagerType from 'ids-enterprise-wc/components/ids-pager/ids-pager';
@@ -11,8 +12,8 @@ const IdsPager = () => {
     <>
       <IdsTitle>Ids Pager Example</IdsTitle>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-pager
             ref={pagerRef}
             page-size="20"
@@ -25,11 +26,11 @@ const IdsPager = () => {
             <ids-pager-button next></ids-pager-button>
             <ids-pager-button last></ids-pager-button>
           </ids-pager>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid cols="3" gap="lg">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="lg">
+        <IdsGridCell>
           <ids-button
             type="secondary"
             // Changing 'disabled' attribute
@@ -39,8 +40,8 @@ const IdsPager = () => {
           >
             <span>Disable</span>
           </ids-button>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

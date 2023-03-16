@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsMenuType from 'ids-enterprise-wc/components/ids-menu/ids-menu';
 import type IdsMenuItemType from 'ids-enterprise-wc/components/ids-menu/ids-menu-item';
@@ -40,8 +41,8 @@ const IdsMenu = () => {
     <>
       <IdsTitle>Menu Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-menu>
             <ids-menu-group>
               <ids-menu-item>One</ids-menu-item>
@@ -49,8 +50,8 @@ const IdsMenu = () => {
               <ids-menu-item>Three</ids-menu-item>
             </ids-menu-group>
           </ids-menu>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-menu ref={menuRef}>
             <ids-menu-group>
               <ids-menu-item value="mail">
@@ -96,8 +97,8 @@ const IdsMenu = () => {
               </ids-menu-item>
             </ids-menu-group>
           </ids-menu>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

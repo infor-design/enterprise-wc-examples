@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 
 import 'ids-enterprise-wc/components/ids-accordion/ids-accordion';
@@ -20,8 +21,8 @@ const IdsAccordion = () => {
     <>
       <IdsTitle>Accordion Example</IdsTitle>
 
-      <ids-layout-grid cols="2" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="2" gap="md">
+        <IdsGridCell>
           <ids-accordion ref={accordionRef}>
             {['Warehouse Location', 'Sort By', 'Brand Name', 'Material'].map(item => (
               <ids-accordion-panel key={item}>
@@ -47,16 +48,16 @@ const IdsAccordion = () => {
               </ids-accordion-panel>
             ))}
           </ids-accordion>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-button
             type="primary"
             onClick={() => setExpanded(!expanded)}
           >
             <span>{!expanded ? 'Expand All' : 'Collapse All'}</span>
           </ids-button>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

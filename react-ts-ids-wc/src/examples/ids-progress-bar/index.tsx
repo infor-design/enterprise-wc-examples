@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsProgressBarType from 'ids-enterprise-wc/components/ids-progress-bar/ids-progress-bar';
 import type IdsToggleButtonType from 'ids-enterprise-wc/components/ids-toggle-button/ids-toggle-button';
@@ -64,8 +65,8 @@ const IdsProgressBar = () => {
     <>
       <IdsTitle>Ids Progress Bar Example</IdsTitle>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-progress-bar
             ref={progressRef}
             label="Percent complete"
@@ -101,16 +102,16 @@ const IdsProgressBar = () => {
           >
             <span></span>
           </ids-toggle-button>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-progress-bar
             label="Progress Bar (max:1, value: 0.7)"
             max="1"
             value="0.7"
           ></ids-progress-bar>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

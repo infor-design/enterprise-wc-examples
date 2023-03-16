@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsButton from '../../components/ids-button/IdsButton';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-button/ids-button';
@@ -9,8 +10,8 @@ const IdsButtonExample = () => {
     <>
       <IdsTitle>Buttons Example</IdsTitle>
 
-      <ids-layout-grid cols="4" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="4" gap="md">
+        <IdsGridCell>
           <IdsButton
             type="primary"
             onClick={({ target }) => {
@@ -19,9 +20,9 @@ const IdsButtonExample = () => {
           >
             <span>Primary Button</span>
           </IdsButton>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <IdsButton
             icon="rocket"
             iconAlign="end"
@@ -30,15 +31,15 @@ const IdsButtonExample = () => {
           >
             <span>Secondary Button</span>
           </IdsButton>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <IdsButton
             onClick={(e) => { e.target.text = 'Clicked'; }}
           >
             <span>Plain Button</span>
           </IdsButton>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

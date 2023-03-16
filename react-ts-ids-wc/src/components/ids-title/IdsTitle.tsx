@@ -1,7 +1,6 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../ids-grid/IdsGrid';
 import type IdsTextType from 'ids-enterprise-wc/components/ids-text/ids-text';
-import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
-import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell';
 import 'ids-enterprise-wc/components/ids-text/ids-text';
 
 
@@ -13,16 +12,16 @@ interface IdsTitleProps {
 
 export const IdsTitle: React.FC<IdsTitleProps> = (props) => {
   return (
-    <ids-layout-grid auto="true">
-      <ids-layout-grid-cell>
+    <IdsGrid auto>
+      <IdsGridCell>
         <ids-text
           font-size={props.fontSize ?? 20}
           type={props.type ?? 'h1'}
         >
           <strong>{props.children}</strong>
         </ids-text>
-      </ids-layout-grid-cell>
-    </ids-layout-grid>
+      </IdsGridCell>
+    </IdsGrid>
   );
 }
 

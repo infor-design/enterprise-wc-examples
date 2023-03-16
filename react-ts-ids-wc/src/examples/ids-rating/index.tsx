@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-rating/ids-rating';
 
@@ -8,29 +9,29 @@ const IdsRating = () => {
     <>
       <IdsTitle>Rating Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <ids-text font-size="12" type="h1">
           Rating (4/5 stars)
         </ids-text>
-      </ids-layout-grid>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-rating value="4"></ids-rating>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <ids-text font-size="12" type="h2">
           Rating (3.5/5 Stars)
         </ids-text>
-      </ids-layout-grid>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-rating value="3.5" readonly="true"></ids-rating>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

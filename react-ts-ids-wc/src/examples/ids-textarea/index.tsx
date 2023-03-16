@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-textarea/ids-textarea';
 
@@ -8,43 +9,43 @@ const IdsTextarea = () => {
     <>
       <IdsTitle>Ids Textarea Example</IdsTitle>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-textarea label="Basic"></ids-textarea>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-textarea label="Disabled" disabled="true">
             Line One
           </ids-textarea>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-textarea label="Readonly" readonly="true">
             Line One
           </ids-textarea>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-textarea label="Autoselect" autoselect="true">
             Text select on focus
           </ids-textarea>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-textarea label="Required" validate="required">
             I will show an error if you clear the value and tab out.
           </ids-textarea>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-textarea label="Dirty Tracking" dirty-tracker="true">
             I will show a dirty indicator if change me and tab out.
           </ids-textarea>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-textarea
             label="Resizable"
             resizable="true"
             placeholder="Type your notes here..."
           ></ids-textarea>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-textarea label="Toggle State" id="textarea-toggle-state">
             Line One
           </ids-textarea>
@@ -57,8 +58,8 @@ const IdsTextarea = () => {
           <ids-button id="btn-textarea-readonly" type="secondary">
             <span>Readonly</span>
           </ids-button>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-textarea label="Update Value" id="textarea-update-value">
             Line One
           </ids-textarea>
@@ -68,11 +69,11 @@ const IdsTextarea = () => {
           <ids-button id="btn-textarea-reset-value" type="secondary">
             <span>Reset Value</span>
           </ids-button>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-textarea label="Max Length" maxlength="90">
             12345
           </ids-textarea>
@@ -96,8 +97,8 @@ const IdsTextarea = () => {
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </ids-textarea>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-textarea
             label="Clearable"
             clearable="true"
@@ -106,8 +107,8 @@ const IdsTextarea = () => {
           <ids-textarea label="Rows" rows="15">
             Line One
           </ids-textarea>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-textarea label="Default align (left)">
             Default align
           </ids-textarea>
@@ -120,11 +121,11 @@ const IdsTextarea = () => {
           <ids-textarea label="Right align" text-align="right">
             Right align
           </ids-textarea>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-textarea
             label="Small"
             size="sm"
@@ -145,8 +146,8 @@ const IdsTextarea = () => {
             size="full"
             placeholder="Type your notes here..."
           ></ids-textarea>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

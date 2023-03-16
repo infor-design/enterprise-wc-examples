@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsInputType from 'ids-enterprise-wc/components/ids-input/ids-input';
 import 'ids-enterprise-wc/components/ids-mask/ids-masks';
@@ -56,37 +57,37 @@ const IdsMask = () => {
     <>
       <IdsTitle>Ids Input Example</IdsTitle>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-text font-size="12" type="h1">
             Ids Input (Masked)
           </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-input
             ref={maskPhoneRef}
             label="Phone Number"
             placeholder="(###) ###-####"
           ></ids-input>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-input
             ref={maskDateRef}
             label="Date/Time"
             placeholder="M/d/yyyy HH:mm a"
           ></ids-input>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-input
             ref={maskNumberRef}
             label="Formatted Number"
             placeholder="-1,000,000.00"
           ></ids-input>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

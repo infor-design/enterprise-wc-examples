@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-card/ids-card';
 
@@ -7,8 +8,8 @@ const IdsCard = () => {
     <>
       <IdsTitle>Cards Example</IdsTitle>
 
-      <ids-layout-grid cols="2" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="2" gap="md">
+        <IdsGridCell>
           <ids-card>
             <div slot="card-header">
               <ids-text font-size="20" type="h2" overflow="ellipsis" tooltip="true">
@@ -17,8 +18,8 @@ const IdsCard = () => {
             </div>
             <div slot="card-content"></div>
           </ids-card>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-card>
             <div slot="card-header">
               <ids-text font-size="20" type="h2">
@@ -27,8 +28,8 @@ const IdsCard = () => {
             </div>
             <div slot="card-content"></div>
           </ids-card>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-card actionable="true">
             <div slot="card-content">
               <ids-text font-size="16" type="p">
@@ -36,8 +37,8 @@ const IdsCard = () => {
               </ids-text>
             </div>
           </ids-card>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-card actionable="true" href="https://www.example.com" target="_self">
             <div slot="card-content">
               <ids-text font-size="16" type="p">
@@ -45,8 +46,8 @@ const IdsCard = () => {
               </ids-text>
             </div>
           </ids-card>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import type IdsTagType from 'ids-enterprise-wc/components/ids-tag/ids-tag';
 import 'ids-enterprise-wc/components/ids-tag/ids-tag';
 
@@ -26,12 +27,12 @@ const IdsTag = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <ids-text font-size="12">Tags</ids-text>
-      </ids-layout-grid>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-tag>Normal Tag</ids-tag>
           <ids-tag color="secondary">Secondary Tags</ids-tag>
           <ids-tag color="success">Success Tag</ids-tag>
@@ -53,8 +54,8 @@ const IdsTag = () => {
           <ids-tag dismissible="true" ref={dismissibleTagRef}>
             <span>Dismissible Tag 2</span>
           </ids-tag>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

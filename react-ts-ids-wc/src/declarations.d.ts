@@ -53,7 +53,6 @@ declare namespace JSX {
     "ids-layout-flex-item": any;
     "ids-layout-grid": any;
     "ids-layout-grid-cell": any;
-    "ids-layout-grid-column": any;
     "ids-line-chart": any;
     "ids-list-box": any;
     "ids-list-box-option": any;

@@ -7,7 +7,11 @@ import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell';
 
 interface IdsGridProps {
   id?: string;
+  class?: string;
+  style?: { [key: string]: string }
   children?: any;
+  slot?: string;
+
   cols?: number | string;
   rows?: number;
   fill?: boolean;
@@ -23,13 +27,14 @@ interface IdsGridProps {
 }
 
 interface IdsGridCellProps {
-  id?: string;
   children?: any;
+  id?: string;
+  class?: string;
+  style?: { [key: string]: string }
   auto?: boolean;
-  colSpan?: number | string | 'full';
-  rowSpan?: number;
   justify?: string;
-
+  rowSpan?: number;
+  colSpan?: number | string | 'full';
   colSpanXs?: number | string;
   colSpanSm?: number | string;
   colSpanMd?: number | string;
@@ -44,6 +49,9 @@ export const IdsGrid: React.FC<IdsGridProps> = (props) => {
   return (
     <ids-layout-grid
       id={props.id}
+      class={props.class}
+      slot={props.slot}
+      style={props.style}
       auto={props.auto}
       auto-rows={props.autoRows}
       auto-flow={props.autoFlow}
@@ -66,6 +74,8 @@ export const IdsGridCell: React.FC<IdsGridCellProps> = (props) => {
   return (
     <ids-layout-grid-cell
       id={props.id}
+      class={props.class}
+      style={props.style}
       auto={props.auto}
       justify={props.justify}
       row-span={props.rowSpan}

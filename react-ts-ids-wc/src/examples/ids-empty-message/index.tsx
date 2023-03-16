@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-empty-message/ids-empty-message';
 
@@ -7,14 +8,14 @@ const IdsEmptyMessage = () => {
     <>
       <IdsTitle>Empty Message Icons Example</IdsTitle>
 
-      <ids-layout-grid cols="3" gap="md" class="icon-examples"></ids-layout-grid>
-      <ids-layout-grid auto="true">
+      <IdsGrid cols="3" gap="md" class="icon-examples"></IdsGrid>
+      <IdsGrid auto>
         <ids-text font-size="12" type="h1">
           Display Options
         </ids-text>
-      </ids-layout-grid>
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      </IdsGrid>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-card auto-height="true">
             <div className="card-content" slot="card-content">
               <ids-empty-message icon="empty-no-tasks-new">
@@ -30,8 +31,8 @@ const IdsEmptyMessage = () => {
               </ids-empty-message>
             </div>
           </ids-card>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-card auto-height="true">
             <div className="card-content" slot="card-content">
               <ids-empty-message icon="empty-new-project-new">
@@ -44,8 +45,8 @@ const IdsEmptyMessage = () => {
               </ids-empty-message>
             </div>
           </ids-card>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-card auto-height="true">
             <div className="card-content" slot="card-content">
               <ids-empty-message icon="empty-no-data-new">
@@ -58,8 +59,8 @@ const IdsEmptyMessage = () => {
               </ids-empty-message>
             </div>
           </ids-card>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-card auto-height="true">
             <ids-empty-message class="card-content" slot="card-content" icon="empty-no-events-new">
               <ids-text type="h2" font-size="20" label="true" slot="label">
@@ -70,8 +71,8 @@ const IdsEmptyMessage = () => {
               </ids-text>
             </ids-empty-message>
           </ids-card>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-empty-message icon="empty-generic-new">
             <ids-text type="h2" font-size="20" label="true" slot="label">
               Security
@@ -80,8 +81,8 @@ const IdsEmptyMessage = () => {
               Description of empty message that explains why and possible contain a hyperlink.
             </ids-text>
           </ids-empty-message>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

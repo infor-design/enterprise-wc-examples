@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsInputType from 'ids-enterprise-wc/components/ids-input/ids-input';
 import 'ids-enterprise-wc/components/ids-input/ids-input';
@@ -31,26 +32,26 @@ const IdsInput = () => {
     <>
       <IdsTitle>Ids Input Example</IdsTitle>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-text font-size="12" type="h1">
             Ids Input
           </ids-text>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-text font-size="12" type="h2">
             Ids Input - Sizes
           </ids-text>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
           <ids-text font-size="12" type="h2">
             Input - Enable/ Disable/ Readonly
           </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-input
             ref={sourceInputRef}
             type="text"
@@ -115,16 +116,16 @@ const IdsInput = () => {
             value="Text select on focus"
             autoselect="true"
           ></ids-input>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-input size="xs" label="Xtra Small"></ids-input>
           <ids-input size="sm" label="Small"></ids-input>
           <ids-input size="mm" label="Small - Medium"></ids-input>
           <ids-input size="md" label="Medium"></ids-input>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-input
             id="input-toggle-state"
             label="Text Field"
@@ -140,18 +141,18 @@ const IdsInput = () => {
           <ids-button id="btn-input-readonly" type="secondary">
             <span>Readonly</span>
           </ids-button>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto="true">
+        <IdsGridCell>
           <ids-text font-size="12" type="h2">
             Ids Input - Text align
           </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+        </IdsGridCell>
+      </IdsGrid>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-input
             label="Default align (left)"
             value="Default align"
@@ -171,8 +172,8 @@ const IdsInput = () => {
             value="Right align"
             text-align="right"
           ></ids-input>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

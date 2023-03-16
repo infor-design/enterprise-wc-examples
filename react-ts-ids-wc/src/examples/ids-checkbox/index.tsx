@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-checkbox/ids-checkbox';
 
@@ -11,8 +12,8 @@ const IdsCheckbox = () => {
     <>
       <IdsTitle>Checkbox Example</IdsTitle>
 
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid cols="3" gap="md">
+        <IdsGridCell>
           <ids-text font-size="12" type="h1">
             Ids Checkbox
           </ids-text>
@@ -33,9 +34,9 @@ const IdsCheckbox = () => {
             disabled="true"
           ></ids-checkbox>
           <ids-checkbox label="Required" validate="required"></ids-checkbox>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-text font-size="12" type="h1">
             Ids Checkbox - Colored
           </ids-text>
@@ -76,9 +77,9 @@ const IdsCheckbox = () => {
             color="caution"
             label="Caution"
           ></ids-checkbox>
-        </ids-layout-grid-cell>
+        </IdsGridCell>
 
-        <ids-layout-grid-cell>
+        <IdsGridCell>
           <ids-text font-size="12" type="h1">
             Ids Indeterminate
           </ids-text>
@@ -116,8 +117,8 @@ const IdsCheckbox = () => {
             horizontal="true"
             checked="true"
           ></ids-checkbox>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

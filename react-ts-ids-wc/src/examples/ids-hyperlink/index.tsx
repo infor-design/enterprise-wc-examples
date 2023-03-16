@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-hyperlink/ids-hyperlink';
 
@@ -8,26 +9,26 @@ const IdsHyperlink = () => {
     <>
       <IdsTitle>Hyperlink Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <ids-text font-size="12" type="h1">
           Hyperlink
         </ids-text>
-      </ids-layout-grid>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      </IdsGrid>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-hyperlink href="http://www.example.com" target="_blank">
             Normal Link
           </ids-hyperlink>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <ids-text font-size="12" type="h1">
           Hyperlink (disabled)
         </ids-text>
-      </ids-layout-grid>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      </IdsGrid>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-hyperlink
             href="http://www.example.com"
             disabled="true"
@@ -35,16 +36,16 @@ const IdsHyperlink = () => {
           >
             Disabled Link
           </ids-hyperlink>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <ids-text font-size="12" type="h1">
           Hyperlink with Multiple Text Elements
         </ids-text>
-      </ids-layout-grid>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      </IdsGrid>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-hyperlink
             href="http://www.example.com"
             target="_blank"
@@ -57,8 +58,8 @@ const IdsHyperlink = () => {
               Part Two
             </ids-text>
           </ids-hyperlink>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

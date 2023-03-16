@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsFormType from 'ids-enterprise-wc/components/ids-form/ids-form';
 import type IdsDataLabelType from 'ids-enterprise-wc/components/ids-data-label/ids-data-label';
@@ -77,8 +78,8 @@ const IdsForm = () => {
       <IdsTitle>Ids Form Example</IdsTitle>
 
       <ids-form ref={formRef} submit-button="btn-submit" id="sample-form">
-        <ids-layout-grid cols="2" gap="md">
-          <ids-layout-grid-cell>
+        <IdsGrid cols="2" gap="md">
+          <IdsGridCell>
             <ids-dropdown
               id="company-name"
               label="Company Name"
@@ -148,8 +149,8 @@ const IdsForm = () => {
             <ids-button id="btn-submit" type="primary">
               <span>Submit</span>
             </ids-button>
-          </ids-layout-grid-cell>
-          <ids-layout-grid-cell>
+          </IdsGridCell>
+          <IdsGridCell>
             <ids-color-picker
               id="ship-color"
               label="Ship Color"
@@ -203,12 +204,12 @@ const IdsForm = () => {
               label="Send notifications"
               checked="true"
             ></ids-switch>
-          </ids-layout-grid-cell>
-        </ids-layout-grid>
+          </IdsGridCell>
+        </IdsGrid>
       </ids-form>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-dropdown ref={sizeRef} label="Size" value={size} size="md">
             <ids-list-box>
               <ids-list-box-option value="xs" selected={size === 'xs'}>
@@ -253,8 +254,8 @@ const IdsForm = () => {
             </ids-list-box>
           </ids-dropdown>
           <ids-checkbox ref={compactRef} label="Compact"></ids-checkbox>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
       <ids-modal ref={modalRef} aria-labelledby="submitted-results">
         <ids-text slot="title" font-size="24" type="h2" id="submitted-results">

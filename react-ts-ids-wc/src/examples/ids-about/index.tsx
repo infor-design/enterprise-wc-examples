@@ -1,6 +1,7 @@
 import React from 'react';
 import IdsAbout from '../../components/ids-about/IdsAbout';
 import IdsButton from '../../components/ids-button/IdsButton';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-text/ids-text';
 
@@ -12,8 +13,8 @@ const IdsAboutExample = () => {
     <>
       <IdsTitle>About Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <IdsButton
             type="secondary"
             onClick={() => setModalOpen(!modalOpen)}
@@ -21,8 +22,8 @@ const IdsAboutExample = () => {
           >
             Show About Screen
           </IdsButton>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
 
       <IdsAbout
         appName="IDS Enterprise"
