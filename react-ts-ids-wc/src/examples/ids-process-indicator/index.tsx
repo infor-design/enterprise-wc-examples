@@ -1,14 +1,11 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-process-indicator/ids-process-indicator';
 
 const IdsProcessIndicator = () => {
   return (
     <>
-      <ids-layout-grid cols="1">
-        <ids-text font-size="12" type="h1">
-          Process Indicator
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Process Indicator Example</IdsTitle>
 
       <ids-layout-grid cols="1" gap="xl">
         <ids-layout-grid-cell>

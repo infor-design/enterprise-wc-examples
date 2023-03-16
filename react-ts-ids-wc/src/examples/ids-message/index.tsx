@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsMessageType from 'ids-enterprise-wc/components/ids-message/ids-message';
 import 'ids-enterprise-wc/components/ids-message/ids-message';
 
@@ -8,6 +8,8 @@ const IdsMessage = () => {
 
   return (
     <>
+      <IdsTitle>Message Example</IdsTitle>
+
       <ids-message ref={messageRef} status="error">
         <ids-text slot="title" font-size="24" type="h2">
           Lost connection
@@ -23,14 +25,6 @@ const IdsMessage = () => {
           Confirm
         </ids-modal-button>
       </ids-message>
-
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Message
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>

@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsModalType from 'ids-enterprise-wc/components/ids-modal/ids-modal';
 import 'ids-enterprise-wc/components/ids-modal/ids-modal';
 
@@ -8,6 +9,8 @@ const IdsModal = () => {
 
   return (
     <>
+      <IdsTitle>Modal Example</IdsTitle>
+
       <ids-modal ref={modalRef} aria-labelledby="my-modal-title">
         <ids-text slot="title" font-size="24" type="h2" id="my-modal-title">
           Active IDS Modal
@@ -24,11 +27,6 @@ const IdsModal = () => {
         <ids-text type="p">This is an active IDS Modal component</ids-text>
       </ids-modal>
 
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Modal
-        </ids-text>
-      </ids-layout-grid>
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-button

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsDraggableType from 'ids-enterprise-wc/components/ids-draggable/ids-draggable';
 import 'ids-enterprise-wc/components/ids-draggable/ids-draggable';
 
@@ -32,11 +33,8 @@ const IdsDraggable = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Draggable
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Draggable Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-draggable>
           <div className="ids-draggable-demo-box">

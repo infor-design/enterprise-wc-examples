@@ -1,5 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsListViewType from 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
 import 'ids-enterprise-wc/components/ids-notification-banner/ids-notification-banner';
 
@@ -35,11 +36,7 @@ const IdsNotificationBanner = () => {
 
   return (
     <>
-      <ids-layout-grid cols="3" gap="md">
-        <ids-text font-size="12" type="h1">
-          Notification Banner
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Notification Banner Example</IdsTitle>
 
       <ids-notification-banner
         id="ids-notification-banner-0"

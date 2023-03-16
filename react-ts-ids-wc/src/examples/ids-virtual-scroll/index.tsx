@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsVirtualScrollType from 'ids-enterprise-wc/components/ids-virtual-scroll/ids-virtual-scroll';
 import 'ids-enterprise-wc/components/ids-virtual-scroll/ids-virtual-scroll';
 import './styles.css';
@@ -43,11 +44,8 @@ const IdsVirtualScroll = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Virtual Scroller
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Virtual Scroll Example</IdsTitle>
+
       <ids-layout-grid cols="2" gap="xl">
         <ids-layout-grid-cell>
           <ids-card auto-height>

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsExpandableAreaType from 'ids-enterprise-wc/components/ids-expandable-area/ids-expandable-area';
 import 'ids-enterprise-wc/components/ids-expandable-area/ids-expandable-area';
 import 'ids-enterprise-wc/components/ids-toggle-button/ids-toggle-button';
@@ -23,13 +24,7 @@ const IdsExpandableArea = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Expandable Area
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+      <IdsTitle>Expandable Area Example</IdsTitle>
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>

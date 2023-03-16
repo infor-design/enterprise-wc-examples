@@ -1,15 +1,13 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-wizard/ids-wizard';
 
 
 const IdsWizard = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Wizard
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Wizard Example</IdsTitle>
+
       <ids-layout-grid cols="4">
         <ids-layout-grid-cell col-span="2" id="ex-ids-wizard-parent-clickable">
           <ids-wizard step-number="3">

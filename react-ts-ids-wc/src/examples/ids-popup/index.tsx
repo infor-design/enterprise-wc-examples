@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsPopupType from 'ids-enterprise-wc/components/ids-popup/ids-popup';
 import type IdsButtonType from 'ids-enterprise-wc/components/ids-button/ids-button';
 import 'ids-enterprise-wc/components/ids-popup/ids-popup';
@@ -32,11 +33,8 @@ const IdsPopup = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Popup
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Popup Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-button type="secondary" ref={triggerRef}>

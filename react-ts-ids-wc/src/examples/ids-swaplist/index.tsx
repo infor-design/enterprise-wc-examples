@@ -1,5 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsSwapListType from 'ids-enterprise-wc/components/ids-swaplist/ids-swaplist';
 import 'ids-enterprise-wc/components/ids-swaplist/ids-swaplist';
 
@@ -34,11 +35,7 @@ const IdsSwapList = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          SwapList
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>SwapList Example</IdsTitle>
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>

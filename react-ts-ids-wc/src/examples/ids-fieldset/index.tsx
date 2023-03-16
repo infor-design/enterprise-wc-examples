@@ -1,15 +1,13 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-fieldset/ids-fieldset';
 
 
 const IdsFieldset = () => {
   return (
     <>
-      <ids-layout-grid>
-        <ids-text font-size="12" type="h1">
-          Fieldset
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Fieldset Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <form>
           <ids-fieldset>

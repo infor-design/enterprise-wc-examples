@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsFormType from 'ids-enterprise-wc/components/ids-form/ids-form';
 import type IdsDataLabelType from 'ids-enterprise-wc/components/ids-data-label/ids-data-label';
 import type IdsDropdownType from 'ids-enterprise-wc/components/ids-dropdown/ids-dropdown';
@@ -73,11 +74,7 @@ const IdsForm = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Ids Form
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Ids Form Example</IdsTitle>
 
       <ids-form ref={formRef} submit-button="btn-submit" id="sample-form">
         <ids-layout-grid cols="2" gap="md">

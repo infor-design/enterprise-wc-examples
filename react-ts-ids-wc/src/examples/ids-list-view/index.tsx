@@ -1,5 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsListViewType from 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
 import 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
 
@@ -31,11 +32,7 @@ const IdsListView = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          List View
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>List View Example</IdsTitle>
 
       <ids-layout-grid cols="2" gap="xl">
         <ids-layout-grid-cell col-span="1">

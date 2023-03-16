@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsDropdownType from 'ids-enterprise-wc/components/ids-dropdown/ids-dropdown';
 import 'ids-enterprise-wc/components/ids-dropdown/ids-dropdown';
 import 'ids-enterprise-wc/components/ids-list-box/ids-list-box';
@@ -21,11 +22,7 @@ const IdsDropdown = () => {
 
   return (
     <>
-      <ids-layout-grid>
-        <ids-text font-size="12" type="h1">
-          Dropdown
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Dropdown Example</IdsTitle>
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>

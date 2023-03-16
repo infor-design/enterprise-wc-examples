@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsSpinboxType from 'ids-enterprise-wc/components/ids-spinbox/ids-spinbox';
 import type IdsCheckboxType from 'ids-enterprise-wc/components/ids-checkbox/ids-checkbox';
 import 'ids-enterprise-wc/components/ids-loading-indicator/ids-loading-indicator';
@@ -54,6 +55,8 @@ const IdsLoadingIndicator = () => {
 
   return (
     <>
+      <IdsTitle>Loading Indicator Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-text font-size="12" type="h1">
           Circular Loading Indicator

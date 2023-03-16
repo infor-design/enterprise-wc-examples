@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsInputType from 'ids-enterprise-wc/components/ids-input/ids-input';
 import 'ids-enterprise-wc/components/ids-mask/ids-masks';
 
@@ -53,6 +54,8 @@ const IdsMask = () => {
 
   return (
     <>
+      <IdsTitle>Ids Input Example</IdsTitle>
+
       <ids-layout-grid cols="3" gap="md">
         <ids-layout-grid-cell>
           <ids-text font-size="12" type="h1">

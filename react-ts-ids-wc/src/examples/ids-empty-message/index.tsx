@@ -1,14 +1,12 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-empty-message/ids-empty-message';
 
 const IdsEmptyMessage = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Empty Message Icons
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Empty Message Icons Example</IdsTitle>
+
       <ids-layout-grid cols="3" gap="md" class="icon-examples"></ids-layout-grid>
       <ids-layout-grid auto="true">
         <ids-text font-size="12" type="h1">

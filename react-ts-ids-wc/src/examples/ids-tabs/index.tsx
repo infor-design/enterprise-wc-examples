@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsTabsType from 'ids-enterprise-wc/components/ids-tabs/ids-tabs';
 import 'ids-enterprise-wc/components/ids-tabs/ids-tabs';
 import 'ids-enterprise-wc/components/ids-tabs/ids-tab-content';
@@ -29,11 +30,8 @@ const IdsTabs = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Tabs
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Tabs Example</IdsTitle>
+
       <ids-tabs-context>
         <ids-tabs ref={tabsRef}>
           <ids-tab value="contracts">Contracts</ids-tab>

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsBarChartType from 'ids-enterprise-wc/components/ids-bar-chart/ids-bar-chart';
 import 'ids-enterprise-wc/components/ids-bar-chart/ids-bar-chart';
 
@@ -18,11 +19,8 @@ const IdsBarChart = () => {
   }, []);
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Bar Chart
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Bar Chart Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-bar-chart

@@ -1,14 +1,11 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-time-picker/ids-time-picker';
 
 const IdsTimePicker = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Time Picker
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Time Picker Example</IdsTitle>
 
       <ids-layout-grid auto="true" cols="4">
         <ids-layout-grid-cell>

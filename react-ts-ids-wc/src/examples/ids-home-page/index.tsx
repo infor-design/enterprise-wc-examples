@@ -1,16 +1,12 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-home-page/ids-home-page';
 
 const IdsHomePage = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Home Page
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+      <IdsTitle>Home Page Example</IdsTitle>
+
       <ids-home-page>
         <ids-card slot="card" colspan="3">
           <div slot="card-header">

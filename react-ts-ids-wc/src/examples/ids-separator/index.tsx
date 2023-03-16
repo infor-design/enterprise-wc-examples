@@ -1,14 +1,11 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-separator/ids-separator';
 
 const IdsSeparator = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Separator
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Separator Example</IdsTitle>
 
       <ids-layout-grid cols="12" gap="md">
         <ids-layout-grid-cell>

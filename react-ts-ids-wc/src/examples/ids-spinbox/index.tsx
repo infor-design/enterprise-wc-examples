@@ -1,15 +1,13 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-spinbox/ids-spinbox';
 
 
 const IdsSpinbox = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Spinbox
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Spinbox Example</IdsTitle>
+
       <ids-layout-grid cols="4" gap="md">
         <ids-layout-grid-cell>
           <ids-spinbox value="0" label="Basic Spinbox"></ids-spinbox>

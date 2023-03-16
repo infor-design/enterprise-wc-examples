@@ -1,15 +1,13 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-toggle-button/ids-toggle-button';
 
 
 const IdsToggleButton = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Toggle Buttons
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Toggle Buttons Example</IdsTitle>
+
       <ids-layout-grid cols="4" gap="md">
         <ids-layout-grid-cell>
           <ids-toggle-button

@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsRadioGroupType from 'ids-enterprise-wc/components/ids-radio/ids-radio-group';
 import 'ids-enterprise-wc/components/ids-radio/ids-radio';
 
@@ -8,11 +9,7 @@ const IdsRadio = () => {
 
   return (
     <>
-      <ids-layout-grid cols="3" gap="md">
-        <ids-text font-size="12" type="h1">
-          Ids Radio
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Ids Radio Example</IdsTitle>
 
       <ids-layout-grid cols="3" gap="md">
         <ids-layout-grid-cell>

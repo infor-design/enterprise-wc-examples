@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import type IdsActionPanelType from 'ids-enterprise-wc/components/ids-action-panel/ids-action-panel';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-action-panel/ids-action-panel';
 import 'ids-enterprise-wc/components/ids-dropdown/ids-dropdown';
 import 'ids-enterprise-wc/components/ids-textarea/ids-textarea';
@@ -10,13 +11,7 @@ const IdsActionPanel = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Action Panel
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+      <IdsTitle>Action Panel Example</IdsTitle>
 
       <ids-action-panel ref={actionPanelRef} fullsize="lg">
         <ids-toolbar slot="toolbar">

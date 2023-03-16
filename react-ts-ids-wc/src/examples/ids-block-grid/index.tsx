@@ -1,15 +1,12 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-block-grid/ids-block-grid';
 
 
 const IdsBlockGrid = () => {
   return (
     <>
-      <ids-layout-grid auto="true" gap="md">
-        <ids-text font-size="12" type="h1">
-          Block Grid
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Block Grid Example</IdsTitle>
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>

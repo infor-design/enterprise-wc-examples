@@ -1,16 +1,11 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-masthead/ids-masthead';
 
 const IdsMasthead = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Masthead
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+      <IdsTitle>Masthead Example</IdsTitle>
 
       <ids-layout-grid auto="true" id="ids-masthead-list" col="1">
         <ids-layout-grid-cell>

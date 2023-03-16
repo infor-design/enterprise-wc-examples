@@ -1,14 +1,12 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-calendar/ids-calendar';
 
 const IdsCalendar = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Calendar View
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Calendar View Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell auto="true">
           <ids-calendar

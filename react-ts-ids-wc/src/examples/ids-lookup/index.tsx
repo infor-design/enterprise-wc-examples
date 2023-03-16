@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsLookupType from 'ids-enterprise-wc/components/ids-lookup/ids-lookup';
 import 'ids-enterprise-wc/components/ids-lookup/ids-lookup';
 
@@ -76,11 +77,7 @@ const IdsLookup = () => {
 
   return (
     <>
-      <ids-layout-grid>
-        <ids-text font-size="12" type="h1">
-          Lookup
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Lookup Example</IdsTitle>
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>

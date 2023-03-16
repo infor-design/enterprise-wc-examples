@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsToastType from 'ids-enterprise-wc/components/ids-toast/ids-toast';
 import 'ids-enterprise-wc/components/ids-button/ids-button';
 import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
@@ -26,11 +27,7 @@ const IdsToast = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Toast
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Toast Example</IdsTitle>
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>

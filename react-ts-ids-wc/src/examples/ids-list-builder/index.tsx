@@ -1,5 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsListBuilderType from 'ids-enterprise-wc/components/ids-list-builder/ids-list-builder';
 import 'ids-enterprise-wc/components/ids-list-builder/ids-list-builder';
 
@@ -25,11 +26,8 @@ const IdsListBuilder = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          List Builder (single selection)
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>List Builder (single selection) Example</IdsTitle>
+
       <ids-layout-grid cols="2">
         <ids-layout-grid-cell>
           <ids-list-builder height="310px" selectable="single" ref={listBuilderRef}></ids-list-builder>

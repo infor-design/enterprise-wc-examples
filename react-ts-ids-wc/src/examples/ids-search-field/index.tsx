@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-search-field/ids-search-field';
 import 'ids-enterprise-wc/components/ids-header/ids-header';
 import 'ids-enterprise-wc/components/ids-toolbar/ids-toolbar';
@@ -6,11 +7,7 @@ import 'ids-enterprise-wc/components/ids-toolbar/ids-toolbar';
 const IdsSearchField = () => {
   return (
     <>
-      <ids-layout-grid>
-        <ids-text font-size="12" type="h1">
-          Search Field
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Search Field Example</IdsTitle>
 
       <ids-layout-grid cols="3" gap="xl">
         <ids-layout-grid-cell>

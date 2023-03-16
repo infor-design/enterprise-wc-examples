@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsButtonType from 'ids-enterprise-wc/components/ids-button/ids-button';
 import type IdsTooltipType from 'ids-enterprise-wc/components/ids-tooltip/ids-tooltip';
 import 'ids-enterprise-wc/components/ids-button/ids-button';
@@ -18,11 +19,8 @@ const IdsTooltip = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Tooltips
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Tooltips Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-button ref={triggerRef} type="secondary">Hover to show a Tooltip</ids-button>

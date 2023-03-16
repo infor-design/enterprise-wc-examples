@@ -1,17 +1,12 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-textarea/ids-textarea';
 
 
 const IdsTextarea = () => {
   return (
     <>
-      <ids-layout-grid cols="3" gap="md">
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Ids Textarea
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+      <IdsTitle>Ids Textarea Example</IdsTitle>
 
       <ids-layout-grid cols="3" gap="md">
         <ids-layout-grid-cell>

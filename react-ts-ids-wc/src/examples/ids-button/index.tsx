@@ -1,16 +1,14 @@
 import React from 'react';
 import IdsButton from '../../components/ids-button/IdsButton';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-button/ids-button';
 
 
 const IdsButtonExample = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Buttons
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Buttons Example</IdsTitle>
+
       <ids-layout-grid cols="4" gap="md">
         <ids-layout-grid-cell>
           <IdsButton

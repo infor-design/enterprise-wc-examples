@@ -1,10 +1,13 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-swappable/ids-swappable';
 import 'ids-enterprise-wc/components/ids-swappable/ids-swappable-item';
 
 const IdsSwappable = () => {
   return (
     <>
+      <IdsTitle>Ids Swappable Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-text font-size="12" type="h1">
           Basic Example

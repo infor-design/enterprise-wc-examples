@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsDatePickerType from 'ids-enterprise-wc/components/ids-date-picker/ids-date-picker';
 import 'ids-enterprise-wc/components/ids-date-picker/ids-date-picker';
 
@@ -33,11 +34,8 @@ const IdsDatePicker = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Date Picker
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Date Picker Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-date-picker

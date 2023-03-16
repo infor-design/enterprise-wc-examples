@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 
 import type IdsPagerType from 'ids-enterprise-wc/components/ids-pager/ids-pager';
 import 'ids-enterprise-wc/components/ids-pager/ids-pager';
@@ -8,11 +9,7 @@ const IdsPager = () => {
 
   return (
     <>
-      <ids-layout-grid cols="3" gap="md">
-        <ids-text font-size="12" type="h1">
-          Ids Pager
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Ids Pager Example</IdsTitle>
 
       <ids-layout-grid cols="3" gap="md">
         <ids-layout-grid-cell>

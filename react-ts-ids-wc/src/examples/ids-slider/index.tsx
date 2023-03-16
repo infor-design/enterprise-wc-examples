@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsSliderType from 'ids-enterprise-wc/components/ids-slider/ids-slider';
 import 'ids-enterprise-wc/components/ids-slider/ids-slider';
 import 'ids-enterprise-wc/components/ids-draggable/ids-draggable';
@@ -33,11 +34,7 @@ const IdsSlider = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Slider
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Slider Example</IdsTitle>
 
       <ids-layout-grid cols="3" gap="xl">
         <ids-layout-grid-cell>

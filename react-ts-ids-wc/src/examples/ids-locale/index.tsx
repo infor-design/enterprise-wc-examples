@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Fragment } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsContainerType from 'ids-enterprise-wc/components/ids-container/ids-container';
 import 'ids-enterprise-wc/components/ids-locale/ids-locale';
 
@@ -20,11 +21,8 @@ const IdsLocale = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Locale (Translated Strings)
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Locale (Translated Strings) Example</IdsTitle>
+
       <ids-layout-grid cols="4" gap="sm">
         {keys.map(item => (
           <Fragment key={item}>

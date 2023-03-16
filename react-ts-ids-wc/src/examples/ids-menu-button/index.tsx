@@ -1,14 +1,12 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-menu-button/ids-menu-button';
 
 const IdsMenuButton = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Menu Buttons
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Menu Buttons Example</IdsTitle>
+
       <ids-layout-grid cols="4" gap="md">
         <ids-layout-grid-cell>
           <ids-menu-button id="menu-button" icon="settings" type="tertiary" menu="my-menu" dropdown-icon="dropdown">

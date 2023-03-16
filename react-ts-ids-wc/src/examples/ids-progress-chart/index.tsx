@@ -1,15 +1,12 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-progress-chart/ids-progress-chart';
 
 
 const IdsProgressChart = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Progress Chart
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Progress Chart Example</IdsTitle>
 
       <ids-layout-grid cols="3" gap="xl">
         <ids-layout-grid-cell>

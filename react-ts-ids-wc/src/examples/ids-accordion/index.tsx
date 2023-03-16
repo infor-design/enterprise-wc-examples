@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 
 import 'ids-enterprise-wc/components/ids-accordion/ids-accordion';
 import type IdsAccordionType from 'ids-enterprise-wc/components/ids-accordion/ids-accordion';
@@ -17,13 +18,7 @@ const IdsAccordion = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Accordion
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+      <IdsTitle>Accordion Example</IdsTitle>
 
       <ids-layout-grid cols="2" gap="md">
         <ids-layout-grid-cell>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-// import IdsButton from '../../components/button/Button'
+import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import { data } from './data';
 import 'ids-enterprise-wc/components/ids-alert/ids-alert';
 import 'ids-enterprise-wc/components/ids-button/ids-button';
@@ -11,17 +11,12 @@ import 'ids-enterprise-wc/components/ids-layout-flex/ids-layout-flex-item';
 
 const IdsAlert = () => {
   // Using state to be able to manipulate the data on button click
-  const [items, setItems] = useState(data);
+  const [items, setItems] = React.useState(data);
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Alerts
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+      <IdsTitle>Alerts Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-layout-flex gap="20" justify-content="flex-start">

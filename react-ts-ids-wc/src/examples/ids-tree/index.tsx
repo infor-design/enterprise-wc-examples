@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsTreeType from 'ids-enterprise-wc/components/ids-tree/ids-tree';
 import 'ids-enterprise-wc/components/ids-tree/ids-tree';
 
@@ -33,13 +34,7 @@ const IdsTree = () => {
 
   return (
     <>
-      <ids-layout-grid>
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Ids Tree
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+      <IdsTitle>Ids Tree Example</IdsTitle>
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>

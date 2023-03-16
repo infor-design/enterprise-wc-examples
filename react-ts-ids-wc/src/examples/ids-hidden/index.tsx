@@ -1,14 +1,11 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-hidden/ids-hidden';
 
 const IdsHidden = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Hidden
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Hidden Example</IdsTitle>
 
       <ids-hidden hide-up="md">
         <ids-card>

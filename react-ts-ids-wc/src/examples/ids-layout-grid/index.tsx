@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell';
 
@@ -6,6 +7,8 @@ import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell';
 const IdsLayoutGrid = () => {
   return (
     <>
+      <IdsTitle>Layout Grid Example</IdsTitle>
+
       <ids-layout-grid auto="true" gap="md">
         <ids-text font-size="12" type="h1">
           Layout Grid - 12 column fluid grid

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsPopupMenuType from 'ids-enterprise-wc/components/ids-popup-menu/ids-popup-menu';
 import 'ids-enterprise-wc/components/ids-popup-menu/ids-popup-menu';
 
@@ -17,6 +18,8 @@ const IdsPopupMenu = () => {
 
   return (
     <>
+      <IdsTitle>Popup Menu Example</IdsTitle>
+
       <ids-popup-menu ref={popupRef}>
         <ids-menu-group>
           <ids-menu-item>Item One</ids-menu-item>
@@ -58,14 +61,6 @@ const IdsPopupMenu = () => {
           </ids-menu-item>
         </ids-menu-group>
       </ids-popup-menu>
-
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Popup Menu
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
 
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>

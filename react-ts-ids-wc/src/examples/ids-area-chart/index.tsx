@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsAreaChartType from 'ids-enterprise-wc/components/ids-area-chart/ids-area-chart';
 import 'ids-enterprise-wc/components/ids-area-chart/ids-area-chart';
 
@@ -19,11 +20,8 @@ const IdsAreaChart = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Area Chart
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Area Chart Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-area-chart

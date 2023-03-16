@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsDataGridType from 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid';
 import 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid';
 import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
@@ -31,11 +32,8 @@ const IdsDataGrid = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Data Grid
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Data Grid Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-data-grid ref={dataGridRef} row-selection="multiple" label="Books" row-height="md"></ids-data-grid>

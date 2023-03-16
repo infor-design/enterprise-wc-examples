@@ -1,14 +1,11 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-color-picker/ids-color-picker';
 
 const IdsColorPicker = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Color Picker
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Color Picker Example</IdsTitle>
 
       <ids-layout-grid auto="true" cols="2" gap="md">
         <ids-layout-grid-cell>

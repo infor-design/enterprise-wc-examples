@@ -1,15 +1,12 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-upload/ids-upload';
 
 
 const IdsUpload = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Ids Upload
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Ids Upload Example</IdsTitle>
 
       <ids-layout-grid auto="true" gap="md">
         <ids-layout-grid-cell>

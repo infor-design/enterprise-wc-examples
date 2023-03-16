@@ -1,14 +1,12 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-card/ids-card';
 
 const IdsCard = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Cards
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Cards Example</IdsTitle>
+
       <ids-layout-grid cols="2" gap="md">
         <ids-layout-grid-cell>
           <ids-card>

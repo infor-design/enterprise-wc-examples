@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsProgressBarType from 'ids-enterprise-wc/components/ids-progress-bar/ids-progress-bar';
 import type IdsToggleButtonType from 'ids-enterprise-wc/components/ids-toggle-button/ids-toggle-button';
 import 'ids-enterprise-wc/components/ids-progress-bar/ids-progress-bar';
@@ -61,13 +62,7 @@ const IdsProgressBar = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Ids Progress Bar
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+      <IdsTitle>Ids Progress Bar Example</IdsTitle>
 
       <ids-layout-grid cols="3" gap="md">
         <ids-layout-grid-cell>

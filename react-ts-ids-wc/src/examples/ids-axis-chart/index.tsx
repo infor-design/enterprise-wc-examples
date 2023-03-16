@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsAxisChartType from 'ids-enterprise-wc/components/ids-axis-chart/ids-axis-chart';
 import 'ids-enterprise-wc/components/ids-axis-chart/ids-axis-chart';
 
@@ -19,11 +20,8 @@ const IdsAxisChart = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Axis Chart
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Axis Chart Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
           <ids-axis-chart

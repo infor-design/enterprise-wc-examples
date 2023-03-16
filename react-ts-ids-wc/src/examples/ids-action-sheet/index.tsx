@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import type IdsActionSheetType from 'ids-enterprise-wc/components/ids-action-sheet/ids-action-sheet';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-action-sheet/ids-action-sheet';
 
 const IdsActionSheet = () => {
@@ -7,13 +8,7 @@ const IdsActionSheet = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Action Sheet
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+      <IdsTitle>Action Sheet Example</IdsTitle>
 
       <ids-layout-grid auto="true" gap="md">
         <ids-layout-grid-cell>

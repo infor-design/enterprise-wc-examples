@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsUploadAdvancedType from 'ids-enterprise-wc/components/ids-upload-advanced/ids-upload-advanced';
 import 'ids-enterprise-wc/components/ids-upload-advanced/ids-upload-advanced';
 
@@ -15,11 +16,10 @@ const IdsUploadAdvanced = () => {
 
   return (
     <>
+      <IdsTitle>Ids Upload Advanced Example</IdsTitle>
+
       <ids-layout-grid auto="true">
         <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Ids Upload Advanced
-          </ids-text>
           <ids-text>
             <strong>
               To slow down the upload use Chrome dev tools network tab, also if

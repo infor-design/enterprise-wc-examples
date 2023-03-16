@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-checkbox/ids-checkbox';
 
 
@@ -8,6 +9,8 @@ const IdsCheckbox = () => {
 
   return (
     <>
+      <IdsTitle>Checkbox Example</IdsTitle>
+
       <ids-layout-grid cols="3" gap="md">
         <ids-layout-grid-cell>
           <ids-text font-size="12" type="h1">

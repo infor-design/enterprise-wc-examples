@@ -1,4 +1,5 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-scroll-view/ids-scroll-view';
 import camera1 from '../../assets/images/camera-1.png';
 import camera2 from '../../assets/images/camera-2.png';
@@ -10,11 +11,8 @@ import camera6 from '../../assets/images/camera-6.png';
 const IdsScrollView = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-text font-size="12" type="h1">
-          Scroll View
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Scroll View Example</IdsTitle>
+
       <ids-layout-grid cols="4">
         <ids-layout-grid-cell col-span="1">
           <ids-scroll-view>

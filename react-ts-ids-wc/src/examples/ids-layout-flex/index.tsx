@@ -1,15 +1,13 @@
 import React from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-layout-flex/ids-layout-flex';
 import './styles.css';
 
 const IdsLayoutFlex = () => {
   return (
     <>
-      <ids-layout-grid auto="true" gap="md">
-        <ids-text font-size="12" type="h1">
-          Layout Flex
-        </ids-text>
-      </ids-layout-grid>
+      <IdsTitle>Layout Flex Example</IdsTitle>
+
       <div className="demo-ids-layout-flex">
         <ids-layout-grid cols="2">
           <ids-layout-grid-cell col-span="1" class="fill">

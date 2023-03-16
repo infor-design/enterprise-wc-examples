@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-treemap/ids-treemap';
 import type IdsTreemapType from 'ids-enterprise-wc/components/ids-treemap/ids-treemap';
 
@@ -62,13 +63,8 @@ const IdsTreemap = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
-          <ids-text font-size="12" type="h1">
-            Ids Treemap
-          </ids-text>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+      <IdsTitle>Ids Treemap Example</IdsTitle>
+
       <ids-treemap ref={treeMapRef} title="Storage Utilization (78 GB)"></ids-treemap>
     </>
   );
