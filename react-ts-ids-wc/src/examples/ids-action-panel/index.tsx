@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import type IdsActionPanelType from 'ids-enterprise-wc/components/ids-action-panel/ids-action-panel';
 import IdsTitle from '../../components/ids-title/IdsTitle';
+import type IdsActionPanelType from 'ids-enterprise-wc/components/ids-action-panel/ids-action-panel';
 import 'ids-enterprise-wc/components/ids-action-panel/ids-action-panel';
 import 'ids-enterprise-wc/components/ids-dropdown/ids-dropdown';
 import 'ids-enterprise-wc/components/ids-textarea/ids-textarea';

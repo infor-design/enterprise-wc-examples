@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
+import IdsFlex, { IdsFlexItem } from '../../components/ids-flex/IdsFlex';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsSpinboxType from 'ids-enterprise-wc/components/ids-spinbox/ids-spinbox';
 import type IdsCheckboxType from 'ids-enterprise-wc/components/ids-checkbox/ids-checkbox';
@@ -57,24 +59,24 @@ const IdsLoadingIndicator = () => {
     <>
       <IdsTitle>Loading Indicator Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
+      <IdsGrid auto>
         <ids-text font-size="12" type="h1">
           Circular Loading Indicator
         </ids-text>
-      </ids-layout-grid>
-      <ids-layout-grid gap="md" cols="4">
-        <ids-layout-grid-cell justify="center">
+      </IdsGrid>
+      <IdsGrid gap="md" cols="4">
+        <IdsGridCell justify="center">
           <ids-loading-indicator></ids-loading-indicator>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell justify="center">
-          <ids-layout-grid gap="md" auto="true">
-            <ids-layout-grid-cell justify="center">
+        </IdsGridCell>
+        <IdsGridCell justify="center">
+          <IdsGrid gap="md" auto>
+            <IdsGridCell justify="center">
               <ids-loading-indicator
                 percentage-visible={circularPercentageVisible}
                 progress={circularProgress}
               ></ids-loading-indicator>
-            </ids-layout-grid-cell>
-            <ids-layout-grid-cell justify="center">
+            </IdsGridCell>
+            <IdsGridCell justify="center">
               <ids-spinbox
                 ref={circularSpinboxRef}
                 min="0"
@@ -84,29 +86,29 @@ const IdsLoadingIndicator = () => {
                 label="Progress Value"
               ></ids-spinbox>
               <ids-checkbox ref={circularCheckboxRef} label="Percentage Visible"></ids-checkbox>
-            </ids-layout-grid-cell>
-          </ids-layout-grid>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
-      <ids-layout-grid auto="true">
+            </IdsGridCell>
+          </IdsGrid>
+        </IdsGridCell>
+      </IdsGrid>
+      <IdsGrid auto>
         <ids-text font-size="12" type="h1">
           Linear Loading Indicator
         </ids-text>
-      </ids-layout-grid>
-      <ids-layout-grid gap="md" cols="4">
-        <ids-layout-grid-cell>
+      </IdsGrid>
+      <IdsGrid gap="md" cols="4">
+        <IdsGridCell>
           <ids-loading-indicator linear></ids-loading-indicator>
-        </ids-layout-grid-cell>
-        <ids-layout-grid-cell>
-          <ids-layout-grid gap="md" auto="true" cols="1" no-margins="true">
-            <ids-layout-grid-cell>
+        </IdsGridCell>
+        <IdsGridCell>
+          <IdsGrid cols="1" gap="md" auto noMargins>
+            <IdsGridCell>
               <ids-loading-indicator
                 percentage-visible={linearPercentageVisible}
                 progress={linearProgress}
                 linear="true"
               ></ids-loading-indicator>
-            </ids-layout-grid-cell>
-            <ids-layout-grid-cell justify="center">
+            </IdsGridCell>
+            <IdsGridCell justify="center">
               <ids-spinbox
                 ref={linearSpinboxRef}
                 min="0"
@@ -116,10 +118,10 @@ const IdsLoadingIndicator = () => {
                 label="Progress Value"
               ></ids-spinbox>
               <ids-checkbox ref={linearCheckboxRef} label="Percentage Visible"></ids-checkbox>
-            </ids-layout-grid-cell>
-          </ids-layout-grid>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+            </IdsGridCell>
+          </IdsGrid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

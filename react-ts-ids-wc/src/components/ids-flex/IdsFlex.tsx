@@ -6,6 +6,7 @@ import 'ids-enterprise-wc/components/ids-layout-flex/ids-layout-flex-item';
 
 
 interface IdsFlexProps {
+  id?: string;
   children?: any;
   gap?: React.CSSProperties['gap'];
   grow?: React.CSSProperties['flexGrow'];
@@ -18,6 +19,7 @@ interface IdsFlexProps {
 }
 
 interface IdsFlexItemProps {
+  id?: string;
   children?: any;
   alignSelf?: React.CSSProperties['alignSelf'];
   grow?: React.CSSProperties['flexGrow'];
@@ -27,6 +29,7 @@ interface IdsFlexItemProps {
 export const IdsFlex: React.FC<IdsFlexProps> = (props) => {
   return (
     <ids-layout-flex
+      id={props.id}
       gap={props.gap}
       grow={props.grow}
       display={props.display ?? 'flex'}
@@ -44,6 +47,7 @@ export const IdsFlex: React.FC<IdsFlexProps> = (props) => {
 export const IdsFlexItem: React.FC<IdsFlexItemProps> = (props) => {
   return (
     <ids-layout-flex-item
+      id={props.id}
       alignSelf={props.alignSelf}
       grow={props.grow}
       shrink={props.shrink}
