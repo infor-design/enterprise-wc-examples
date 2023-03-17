@@ -1,35 +1,19 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
+import { useEvent } from '../../hooks/useEvent';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsDraggableType from 'ids-enterprise-wc/components/ids-draggable/ids-draggable';
 import 'ids-enterprise-wc/components/ids-draggable/ids-draggable';
 
 
-// import './example.css';
-
 const IdsDraggable = () => {
+  const handleDragStart = (e: CustomEvent) => console.info('ids-dragstart', e.detail);
+  const handleDrag = (e: CustomEvent) => console.info('ids-drag', e.detail);
+  const handleDragEnd = (e: CustomEvent) => console.info('ids-dragend', e.detail);
+
   const dragRef = useRef<IdsDraggableType>();
-
-  useEffect(() => {
-    // Adding ref current element to variable to be able cleanup event listeners on unmount
-    const element = dragRef.current
-
-    // Event handlers to be used in attach and cleanup event listener
-    const handleDragStart = (e: any) => console.info('ids-dragstart', e?.detail);
-    const handleDrag = (e: any) => console.info('ids-drag', e?.detail);
-    const handleDragEnd = (e: any) => console.info('ids-dragend', e?.detail);
-
-    // Attach event listeners
-    element?.addEventListener('ids-dragstart', handleDragStart);
-    element?.addEventListener('ids-drag', handleDrag);
-    element?.addEventListener('ids-dragend', handleDragEnd);
-
-    return function cleanup() {
-      // Clean event listeners on component unmount
-      element?.removeEventListener('ids-dragstart', handleDragStart);
-      element?.removeEventListener('ids-drag', handleDrag);
-      element?.removeEventListener('ids-dragend', handleDragEnd);
-    }
-  }, [])
+  useEvent('ids-dragstart', handleDragStart, dragRef);
+  useEvent('ids-drag', handleDrag, dragRef);
+  useEvent('ids-dragend', handleDragEnd, dragRef);
 
   return (
     <>
