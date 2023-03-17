@@ -1,5 +1,5 @@
-import React, { useCallback, useRef } from 'react';
-import { useEvent } from '../../hooks/useEvent';
+import React, { useRef } from 'react';
+import useEvent from '../../hooks/useEvent';
 import type IdsDraggableType from 'ids-enterprise-wc/components/ids-draggable/ids-draggable';
 import 'ids-enterprise-wc/components/ids-draggable/ids-draggable';
 
@@ -25,13 +25,9 @@ const IdsDraggable: React.FC<IdsDraggableProps> = (props) => {
   // NOTE: Also possible to init dragRef using this approach:
   // let dragRef = useEvent<IdsDraggableType>('ids-dragstart', handleDragStart);
 
-  const handleDrag = useCallback((e: any) => props.onDrag?.(e), [props]);
-  const handleDragStart = useCallback((e: any) => props.onDragStart?.(e), [props]);
-  const handleDragEnd = useCallback((e: any) => props.onDragEnd?.(e), [props]);
-
-  useEvent('ids-dragstart', handleDragStart, dragRef);
-  useEvent('ids-drag', handleDrag, dragRef);
-  useEvent('ids-dragend', handleDragEnd, dragRef);
+  useEvent('ids-dragstart', e => props.onDragStart?.(e), dragRef);
+  useEvent('ids-drag', e => props.onDrag?.(e), dragRef);
+  useEvent('ids-dragend', e => props.onDragEnd?.(e), dragRef);
 
   return (
     <ids-draggable
