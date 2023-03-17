@@ -1,37 +1,33 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import useEvent from '../../hooks/useEvent';
 import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
+import IdsSlider from '../../components/ids-slider/IdsSlider';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsSliderType from 'ids-enterprise-wc/components/ids-slider/ids-slider';
 import 'ids-enterprise-wc/components/ids-slider/ids-slider';
 import 'ids-enterprise-wc/components/ids-draggable/ids-draggable';
 import labels from './labels';
 
-const IdsSlider = () => {
-  const surveyRef = useRef<IdsSliderType>();
 
-  useEffect(() => {
-    const getClosestLabelSettings = (targetValue: number) =>
-      labels.find(el => targetValue <= el.value);
-    const survey = surveyRef.current;
+type LabelType = {
+  value: number;
+  text: string;
+  color: string;
+};
 
-    if (survey) survey.labels = labels.map(item => item.text);
+const findLabelSettings = (targetValue: number): LabelType | undefined => {
+  return labels.find((label: LabelType) => targetValue <= label.value);
+}
 
-    // Adjust slider track/tick color when value changes
-    const fixSliderColorOnChange = (e: any) => {
-      const sliderValue = e?.detail?.value;
-      const targetLabelSettings = getClosestLabelSettings(sliderValue);
-      if (survey) survey.color = targetLabelSettings?.color ?? '';
-    };
-    if (survey) survey.color = getClosestLabelSettings(survey.value)?.color ?? '';
+const IdsSliderExample = () => {
+  const [sliderColor, setSliderColor] = useState('');
 
-    survey?.addEventListener('ids-slider-drag', fixSliderColorOnChange);
-    survey?.addEventListener('change', fixSliderColorOnChange);
-
-    return function cleanup() {
-      survey?.removeEventListener('ids-slider-drag', fixSliderColorOnChange);
-      survey?.removeEventListener('change', fixSliderColorOnChange);
-    };
-  }, []);
+  // Adjust slider track/tick color when value changes
+  const updateSliderColor = (e: any) => {
+    const sliderValue = e?.detail?.value;
+    const label = findLabelSettings(sliderValue);
+    setSliderColor(label?.color ?? '');
+  };
 
   return (
     <>
@@ -42,34 +38,34 @@ const IdsSlider = () => {
           <ids-text font-size="12" type="h1">
             Single Slider:{' '}
           </ids-text>
-          <ids-slider
+          <IdsSlider
             type="single"
-            show-tooltip
             label="Single-thumb"
+            showTooltip
             value="20"
-          ></ids-slider>
+          />
         </IdsGridCell>
         <IdsGridCell>
           <ids-text font-size="12" type="h1">
             Range Slider:{' '}
           </ids-text>
-          <ids-slider
+          <IdsSlider
             type="range"
-            show-tooltip
             label="Multi-thumb minimum"
-            label-secondary="Multi-thumb maximum"
-          ></ids-slider>
+            labelSecondary="Multi-thumb maximum"
+            showTooltip
+          />
         </IdsGridCell>
         <IdsGridCell>
           <ids-text font-size="12" type="h1">
             Step Slider:{' '}
           </ids-text>
-          <ids-slider
+          <IdsSlider
             type="step"
-            step-number="11"
-            show-tooltip
+            stepNumber={11}
+            showTooltip
             label="Single-thumb with steps"
-          ></ids-slider>
+          />
         </IdsGridCell>
       </IdsGrid>
 
@@ -78,37 +74,39 @@ const IdsSlider = () => {
           <ids-text font-size="12" type="h1">
             Vertical Sliders:{' '}
           </ids-text>
-          <ids-slider
+          <IdsSlider
             type="single"
             vertical
             color="red"
-            show-tooltip
+            showTooltip
             label="Colorful single-thumb"
-          ></ids-slider>
+          />
         </IdsGridCell>
         <IdsGridCell>
-          <ids-slider
+          <IdsSlider
             type="range"
             vertical
             color="green"
-            show-tooltip
+            showTooltip
             label="Colorful multi-thumb minimum"
             label-secondary="Colorful multi-thumb maximum"
-          ></ids-slider>
+          />
         </IdsGridCell>
         <IdsGridCell>
-          <ids-slider
-            ref={surveyRef}
+          <IdsSlider
             type="step"
-            vertical
-            step-number="6"
-            color=""
+            color={sliderColor}
             label="Status"
-          ></ids-slider>
+            labels={labels.map(item => item.text)}
+            onChange={updateSliderColor}
+            onDrag={updateSliderColor}
+            stepNumber={6}
+            vertical
+          />
         </IdsGridCell>
       </IdsGrid>
     </>
   );
 };
 
-export default IdsSlider;
+export default IdsSliderExample;
