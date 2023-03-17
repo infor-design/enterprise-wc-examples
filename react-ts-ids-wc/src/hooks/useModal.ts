@@ -10,12 +10,11 @@ export interface IdsModalProps {
 
 export function useModal(props: IdsModalProps, modalRef?: ReactUseRefType) {
   const fallbackRef = useRef<any>();
+  const ref = modalRef ?? fallbackRef;
+  const idsElement = ref?.current;
 
   const onOpen = React.useCallback(() => props.onOpen?.(), [props]);
   const onClose = React.useCallback(() => props.onClose?.(), [props]);
-
-  const ref = modalRef ?? fallbackRef;
-  const idsElement = ref?.current;
 
   React.useEffect(() => {
     idsElement?.addEventListener('aftershow', onOpen);
