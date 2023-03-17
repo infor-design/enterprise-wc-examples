@@ -1,5 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
-import IdsFlex, { IdsFlexItem } from '../../components/ids-flex/IdsFlex';
+import { useRef, useState, useEffect } from 'react';
 import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsSpinboxType from 'ids-enterprise-wc/components/ids-spinbox/ids-spinbox';

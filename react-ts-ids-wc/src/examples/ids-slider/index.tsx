@@ -2,8 +2,6 @@ import { useState } from 'react';
 import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsSlider from '../../components/ids-slider/IdsSlider';
 import IdsTitle from '../../components/ids-title/IdsTitle';
-import 'ids-enterprise-wc/components/ids-slider/ids-slider';
-import 'ids-enterprise-wc/components/ids-draggable/ids-draggable';
 import labels from './labels';
 
 
