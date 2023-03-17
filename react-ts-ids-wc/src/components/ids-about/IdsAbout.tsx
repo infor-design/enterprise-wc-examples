@@ -14,7 +14,7 @@ interface IdsAboutProps extends IdsModalProps {
 }
 
 export const IdsAbout: React.FC<IdsAboutProps> = (props) => {
-  const [modalRef, toggleModal] = useModal(props);
+  const modalRef = useModal(props);
 
   return (
     <ids-about

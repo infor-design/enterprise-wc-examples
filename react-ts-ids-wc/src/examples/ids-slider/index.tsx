@@ -1,9 +1,7 @@
-import { useRef, useEffect, useState } from 'react';
-import useEvent from '../../hooks/useEvent';
+import { useState } from 'react';
 import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsSlider from '../../components/ids-slider/IdsSlider';
 import IdsTitle from '../../components/ids-title/IdsTitle';
-import type IdsSliderType from 'ids-enterprise-wc/components/ids-slider/ids-slider';
 import 'ids-enterprise-wc/components/ids-slider/ids-slider';
 import 'ids-enterprise-wc/components/ids-draggable/ids-draggable';
 import labels from './labels';

@@ -1,42 +1,32 @@
 import React, { useRef } from 'react';
+import useEvent from './useEvent';
 
 type ReactUseRefType = ReturnType<typeof useRef<any>>;
 
 export interface IdsModalProps {
   open?: boolean;
-  onOpen?: () => void;
-  onClose?: () => void;
+  onOpen?: (e: any) => void;
+  onClose?: (e: any) => void;
 }
 
-export function useModal(props: IdsModalProps, modalRef?: ReactUseRefType) {
+export function useModal(props: IdsModalProps, modalRef?: ReactUseRefType): ReactUseRefType {
   const fallbackRef = useRef<any>();
   const ref = modalRef ?? fallbackRef;
-  const idsElement = ref?.current;
 
-  const onOpen = React.useCallback(() => props.onOpen?.(), [props]);
-  const onClose = React.useCallback(() => props.onClose?.(), [props]);
+  useEvent('aftershow', (e: any) => props.onOpen?.(e), ref);
+  useEvent('afterhide', (e: any) => props.onClose?.(e), ref);
 
   React.useEffect(() => {
-    idsElement?.addEventListener('aftershow', onOpen);
-    idsElement?.addEventListener('afterhide', onClose);
+    const idsElement = ref?.current;
 
-    return function cleanup() {
-      idsElement?.removeEventListener('aftershow', onOpen);
-      idsElement?.removeEventListener('afterhide', onClose);
-    }
-  }, [onClose, onOpen, idsElement]);
-
-  const toggleModal = React.useCallback(() => {
     if (props.open && !idsElement?.visible) {
       idsElement?.show?.();
     } else if (props.open && idsElement?.visible) {
       idsElement?.hide?.();
     }
-  }, [props, idsElement]);
+  }, [props, ref]);
 
-  React.useEffect(toggleModal, [toggleModal]);
-
-  return [ref, toggleModal];
+  return ref;
 }
 
 export default useModal;
