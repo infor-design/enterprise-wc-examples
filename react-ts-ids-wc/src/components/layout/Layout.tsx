@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navigation from '../navigation/Navigation';
+import IdsButton from '../ids-button/IdsButton';
 import 'ids-enterprise-wc/components/ids-app-menu/ids-app-menu';
-import 'ids-enterprise-wc/components/ids-button/ids-button';
 import 'ids-enterprise-wc/components/ids-container/ids-container';
 import 'ids-enterprise-wc/components/ids-header/ids-header';
 import 'ids-enterprise-wc/components/ids-icon/ids-icon';
@@ -11,11 +12,25 @@ import 'ids-enterprise-wc/components/ids-toolbar/ids-toolbar';
 import 'ids-enterprise-wc/components/ids-toolbar/ids-toolbar-section';
 
 
-interface LayoutType {
+interface BookmarkProps {
+  icon: string;
+  link: string;
+  text: string;
+}
+
+const Bookmark: React.FC<BookmarkProps> = (props) => (
+  <Link to={props.link}>
+    <IdsButton icon={props.icon}>
+      <ids-text audible>{props.text}</ids-text>
+    </IdsButton>
+  </Link>
+);
+
+interface LayoutProps {
   children: any;
 }
 
-export const Layout: React.FC<LayoutType> = ({ children }) => {
+export const Layout: React.FC<LayoutProps> = ({ children }) => {
   React.useEffect(() => {
     const appMenuDrawer: any = document.querySelector('#app-menu');
     const appMenuTriggerBtn: any = document.querySelector('#app-menu-trigger');
@@ -28,9 +43,9 @@ export const Layout: React.FC<LayoutType> = ({ children }) => {
       <ids-header>
         <ids-toolbar>
           <ids-toolbar-section type="button">
-            <ids-button id="app-menu-trigger" icon="menu">
+            <IdsButton id="app-menu-trigger" icon="menu">
               <span className="audible">Open App Menu</span>
-            </ids-button>
+            </IdsButton>
           </ids-toolbar-section>
           <ids-toolbar-section type="title">
             <ids-text font-size="20" type="h1">React Typescript Examples</ids-text>
@@ -43,27 +58,19 @@ export const Layout: React.FC<LayoutType> = ({ children }) => {
 
       <ids-app-menu id="app-menu">
         {/* <!-- Avatar/Username Area --> */}
-        <ids-icon size="xxl" slot="avatar" icon="logo"></ids-icon>
+        <Link to="/ids-button" slot="avatar">
+          <ids-icon size="xxl" icon="logo"></ids-icon>
+        </Link>
         <ids-text slot="username" font-size="24" font-weight="bold">IDS Web Components</ids-text>
 
         {/* <!-- Header Toolbar --> */}
         <ids-toolbar slot="header">
           <ids-toolbar-section align="center-even" type="fluid">
-            <ids-button id="header-btn-download" icon="download">
-              <ids-text audible>Download</ids-text>
-            </ids-button>
-            <ids-button id="header-btn-print" icon="print">
-              <ids-text audible>Print</ids-text>
-            </ids-button>
-            <ids-button id="header-btn-purchasing" icon="purchasing">
-              <ids-text audible>Purchasing</ids-text>
-            </ids-button>
-            <ids-button id="header-btn-notification" icon="notification">
-              <ids-text audible>Notification</ids-text>
-            </ids-button>
-            <ids-button id="header-btn-inventory" icon="inventory">
-              <ids-text audible>Inventory</ids-text>
-            </ids-button>
+            <Bookmark link="/ids-button" icon="stacked" text="Buttons" />
+            <Bookmark link="/ids-input" icon="day-next" text="Forms" />
+            <Bookmark link="/ids-data-grid" icon="calculator" text="Data Grid" />
+            <Bookmark link="/ids-tree" icon="detail-view" text="Tree" />
+            <Bookmark link="/ids-area-chart" icon="overlay-line" text="Area Chart" />
           </ids-toolbar-section>
         </ids-toolbar>
 
