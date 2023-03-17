@@ -8,11 +8,14 @@ export interface IdsButtonClickEvent extends MouseEvent {
 
 export interface IdsButtonProps {
   disabled?: boolean;
+  id?: string;
   icon?: string;
+  role?: string;
   iconAlign?: IdsButtonType['iconAlign'];
   type?: IdsButtonType['type'];
   onClick?: (evt: IdsButtonClickEvent) => void;
   children: any;
+  noPadding?: boolean;
 }
 
 export const IdsButton: React.FC<IdsButtonProps> = (props) => {
@@ -28,7 +31,10 @@ export const IdsButton: React.FC<IdsButtonProps> = (props) => {
   return (
     <ids-button
       ref={buttonRef}
-      disabled={!!props.disabled}
+      role={props.role ?? 'button'}
+      id={props.id}
+      disabled={props.disabled}
+      no-padding={props.noPadding}
       icon={props.icon}
       type={props.type}
       onClick={(evt: IdsButtonClickEvent) => props.onClick?.(evt)}
