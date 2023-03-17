@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import type IdsActionSheetType from 'ids-enterprise-wc/components/ids-action-sheet/ids-action-sheet';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-action-sheet/ids-action-sheet';
@@ -10,8 +11,8 @@ const IdsActionSheet = () => {
     <>
       <IdsTitle>Action Sheet Example</IdsTitle>
 
-      <ids-layout-grid auto="true" gap="md">
-        <ids-layout-grid-cell>
+      <IdsGrid auto gap="md">
+        <IdsGridCell>
           <ids-menu-button
             id="icon-button"
             menu="icon-menu"
@@ -62,8 +63,8 @@ const IdsActionSheet = () => {
               </ids-menu-group>
             </ids-menu>
           </ids-action-sheet>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

@@ -1,4 +1,6 @@
 import React from 'react';
+import IdsButton from '../../components/ids-button/IdsButton';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-toolbar/ids-toolbar';
 
@@ -7,36 +9,36 @@ const IdsToolbar = () => {
     <>
       <IdsTitle>Toolbar Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-toolbar id="my-toolbar">
             <ids-toolbar-section type="button">
-              <ids-button icon="menu" role="button">
+              <IdsButton icon="menu" role="button">
                 <span className="audible">
                   Application Menu Trigger
                 </span>
-              </ids-button>
+              </IdsButton>
             </ids-toolbar-section>
             <ids-toolbar-section type="title" favor>
               <ids-text font-size="20">My Toolbar</ids-text>
               <ids-text font-size="14">With some extra information below</ids-text>
             </ids-toolbar-section>
             <ids-toolbar-section type="buttonset" align="end">
-              <ids-button id="button-1" role="button" no-padding>
+              <IdsButton id="button-1" role="button" noPadding>
                 <span>Text 1</span>
-              </ids-button>
-              <ids-button id="button-2" role="button" no-padding>
+              </IdsButton>
+              <IdsButton id="button-2" role="button" noPadding>
                 <span>Text 2</span>
-              </ids-button>
-              <ids-button id="button-3" role="button" no-padding>
+              </IdsButton>
+              <IdsButton id="button-3" role="button" noPadding>
                 <span>Text 3</span>
-              </ids-button>
+              </IdsButton>
 
               <ids-menu-button
+                id="button-4"
                 menu="button-4-menu"
                 role="button"
                 trigger-type="click"
-                id="button-4"
                 dropdown-icon="dropdown"
                 no-padding
               >
@@ -60,19 +62,19 @@ const IdsToolbar = () => {
                 </ids-menu-group>
               </ids-popup-menu>
 
-              <ids-button id="button-5" disabled>
+              <IdsButton id="button-5" disabled>
                 <span className="audible">
                   Settings
                 </span>
                 <ids-icon icon="settings"></ids-icon>
-              </ids-button>
+              </IdsButton>
 
-              <ids-button id="button-6">
+              <IdsButton id="button-6">
                 <span className="audible">
                   Trash
                 </span>
                 <ids-icon icon="delete"></ids-icon>
-              </ids-button>
+              </IdsButton>
             </ids-toolbar-section>
 
             <ids-toolbar-more-actions overflow>
@@ -93,8 +95,8 @@ const IdsToolbar = () => {
               </ids-menu-group>
             </ids-toolbar-more-actions>
           </ids-toolbar>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

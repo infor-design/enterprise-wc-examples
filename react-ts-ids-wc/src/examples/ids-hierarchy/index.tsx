@@ -40,9 +40,9 @@ const IdsHierarchy = () => {
               <ids-text slot="micro">FT</ids-text>
               <div slot="menu">
                 <ids-menu-button
+                  id="item-menu-btn-id-one"
                   part="icon-menu"
                   menu="item-menu-id-one"
-                  id="item-menu-btn-id-one"
                 >
                   <span className="audible">Popup Menu Button</span>
                   <ids-icon icon="more"></ids-icon>

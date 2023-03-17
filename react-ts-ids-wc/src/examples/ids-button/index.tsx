@@ -10,7 +10,7 @@ const IdsButtonExample = () => {
     <>
       <IdsTitle>Buttons Example</IdsTitle>
 
-      <IdsGrid cols="4" gap="md">
+      <IdsGrid cols="6" gap="sm">
         <IdsGridCell>
           <IdsButton
             type="primary"
