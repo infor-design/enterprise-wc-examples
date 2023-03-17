@@ -1,38 +1,24 @@
 import React from 'react';
-import type IdsAboutType from 'ids-enterprise-wc/components/ids-about/ids-about';
+import { useModal, IdsModalProps } from '../../hooks/useModal';
 import 'ids-enterprise-wc/components/ids-about/ids-about';
 import 'ids-enterprise-wc/components/ids-icon/ids-icon';
 import 'ids-enterprise-wc/components/ids-text/ids-text';
 
-interface IdsAboutProps {
+interface IdsAboutProps extends IdsModalProps {
   appName?: string;
   name?: string;
   content?: string;
   icon?: string;
-  version?: string; 
-  open?: boolean;
-  onOpen?: () => void;
-  onClose?: () => void;
+  version?: string;
   children?: any;
 }
 
 export const IdsAbout: React.FC<IdsAboutProps> = (props) => {
-  const aboutRef = React.useRef<IdsAboutType>();
-
-  React.useEffect(() => {
-    aboutRef.current?.addEventListener('aftershow', () => props.onOpen?.());
-    aboutRef.current?.addEventListener('afterhide', () => props.onClose?.());
-
-    if (props.open && !aboutRef.current?.visible) {
-      aboutRef.current?.show?.();
-    } else if (props.open && aboutRef.current?.visible) {
-      aboutRef.current?.hide?.();
-    }
-  }, [props]);
+  const [modalRef, toggleModal] = useModal(props);
 
   return (
     <ids-about
-      ref={aboutRef}
+      ref={modalRef}
       product-name={props.name}
       product-version={props.version}
     >
