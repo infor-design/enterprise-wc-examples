@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import useEvent from '../../hooks/useEvent';
 import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsFormType from 'ids-enterprise-wc/components/ids-form/ids-form';
@@ -25,53 +26,36 @@ const IdsForm = () => {
   const heightRef = useRef<IdsDropdownType>();
   const compactRef = useRef<IdsCheckboxType>();
   const modalRef = useRef<IdsModalType>();
+
   const [size, setSize] = useState('md');
   const [height, setHeight] = useState('md');
   const [results, setResults] = useState([]);
 
-  useEffect(() => {
-    // Adding ref current elements to variable to be able cleanup event listeners on unmount
+  // Event handlers to be used in attach and cleanup event listener
+  const handleSubmit = (e: any) => {
     const form = formRef.current;
-    const sizeDropdown = sizeRef.current;
-    const heightDropdown = heightRef.current;
-    const compactCheckbox = compactRef.current;
 
-    // Event handlers to be used in attach and cleanup event listener
-    const handleSubmit = (e: any) => {
-      form?.checkValidation();
-      if (form?.isValid) {
-        if (modalRef.current) modalRef.current.visible = true;
-        setResults(e?.detail?.components);
-      }
-      console.info(`Form Submitted`, e?.detail, form?.isValid);
-    };
+    form?.checkValidation();
+    if (form?.isValid) {
+      if (modalRef.current) modalRef.current.visible = true;
+      setResults(e?.detail?.components);
+    }
+    console.info(`Form Submitted`, e?.detail, form?.isValid);
+  };
 
-    const handleSize = (e: any) => {
-      setSize(e?.detail?.value);
-    };
+  const handleSize = (e: any) => setSize(e?.detail?.value);
+  const handleHeight = (e: any) => setHeight(e?.detail?.value);
 
-    const handleHeight = (e: any) => {
-      setHeight(e?.detail?.value);
-    };
+  const handleCompact = (e: any) => {
+    const form = formRef.current;
+    if (form) form.compact = e?.detail?.checked;
+  };
 
-    const handleCompact = (e: any) => {
-      if (form) form.compact = e?.detail?.checked;
-    };
-
-    // Attach event listeners
-    form?.addEventListener('submit', handleSubmit);
-    sizeDropdown?.addEventListener('change', handleSize);
-    heightDropdown?.addEventListener('change', handleHeight);
-    compactCheckbox?.addEventListener('change', handleCompact);
-
-    // Cleanup event listener on React component unmount
-    return () => {
-      form?.removeEventListener('submit', handleSubmit);
-      sizeDropdown?.removeEventListener('change', handleSize);
-      heightDropdown?.removeEventListener('change', handleHeight);
-      compactCheckbox?.removeEventListener('change', handleCompact);
-    };
-  }, []);
+  // Attach event listeners
+  useEvent('submit', handleSubmit, formRef);
+  useEvent('change', handleSize, sizeRef);
+  useEvent('change', handleHeight, heightRef);
+  useEvent('change', handleCompact, compactRef);
 
   return (
     <>
