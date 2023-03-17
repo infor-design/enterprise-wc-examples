@@ -1,4 +1,5 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
+import useEvent from '../../hooks/useEvent';
 import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsSpinboxType from 'ids-enterprise-wc/components/ids-spinbox/ids-spinbox';
@@ -9,50 +10,27 @@ import 'ids-enterprise-wc/components/ids-checkbox/ids-checkbox';
 
 const IdsLoadingIndicator = () => {
   const circularSpinboxRef = useRef<IdsSpinboxType>();
+  const circularCheckboxRef = useRef<IdsCheckboxType>();
   const linearSpinboxRef = useRef<IdsSpinboxType>();
-  const circularCheckboxRef = useRef<IdsSpinboxType>();
   const linearCheckboxRef = useRef<IdsCheckboxType>();
+
   const initialCircularProgress = 30;
   const initialLinearProgress = 20;
+
   const [circularProgress, setCircularProgress] = useState(initialCircularProgress);
-  const [linearProgress, setLinearProgress] = useState(initialLinearProgress);
   const [circularPercentageVisible, setCircularPercentageVisible] = useState(false);
+  const [linearProgress, setLinearProgress] = useState(initialLinearProgress);
   const [linearPercentageVisible, setLinearPercentageVisible] = useState(false);
 
-  useEffect(() => {
-    const circularSpinbox = circularSpinboxRef.current;
-    const linearSpinbox = linearSpinboxRef.current;
-    const circularCheckbox = circularCheckboxRef.current;
-    const linearCheckbox = linearCheckboxRef.current;
+  const handleCircular = (e: any) => setCircularProgress(e?.target?.value);
+  const handleCircularCheckbox = (e: any) => setCircularPercentageVisible(e?.detail?.checked);
+  const handleLinear = (e: any) => setLinearProgress(e?.target?.value);
+  const handleLinearCheckbox = (e: any) => setLinearPercentageVisible(e.detail.checked);
 
-    const handleCircular = (e: any) => {
-      setCircularProgress(e?.target?.value);
-    };
-
-    const handleLinear = (e: any) => {
-      setLinearProgress(e?.target?.value);
-    };
-
-    const handleCircularCheckbox = (e: any) => {
-      setCircularPercentageVisible(e?.detail?.checked);
-    };
-
-    const handleLinearCheckbox = (e: any) => {
-      setLinearPercentageVisible(e.detail.checked);
-    };
-
-    circularSpinbox?.addEventListener('change', handleCircular);
-    linearSpinbox?.addEventListener('change', handleLinear);
-    circularCheckbox?.addEventListener('change', handleCircularCheckbox);
-    linearCheckbox?.addEventListener('change', handleLinearCheckbox);
-
-    return () => {
-      circularSpinbox?.removeEventListener('change', handleCircular);
-      linearSpinbox?.removeEventListener('change', handleLinear);
-      circularCheckbox?.removeEventListener('change', handleCircularCheckbox);
-      linearCheckbox?.removeEventListener('change', handleLinearCheckbox);
-    };
-  }, []);
+  useEvent('change', handleCircular, circularSpinboxRef);
+  useEvent('change', handleCircularCheckbox, circularCheckboxRef);
+  useEvent('change', handleLinear, linearSpinboxRef);
+  useEvent('change', handleLinearCheckbox, linearCheckboxRef);
 
   return (
     <>
