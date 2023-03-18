@@ -1,29 +1,16 @@
-import React, { useRef, useEffect } from 'react';
+import useEvent from '../../hooks/useEvent';
 import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
-import type IdsTagType from 'ids-enterprise-wc/components/ids-tag/ids-tag';
 import 'ids-enterprise-wc/components/ids-tag/ids-tag';
 
 
 const IdsTag = () => {
-  const dismissibleTagRef = useRef<IdsTagType>();
 
-  useEffect(() => {
-    // Adding ref current element to variable to be able cleanup event listeners on unmount
-    const dismissibleTag = dismissibleTagRef.current;
+  // Event handler to be used in attach and cleanup event listener
+  const handleTagRemove = (e: any) => {
+    console.log('Tag Removed:', e?.detail?.elem?.textContent);
+  };
 
-    // Event handler to be used in attach and cleanup event listener
-    const handleTagRemove = (e: any) => {
-      console.log('Tag Removed:', e?.detail?.elem?.textContent);
-    };
-
-    // Attach event listener
-    dismissibleTag?.addEventListener('tagremove', handleTagRemove);
-
-    // Cleanup event listener on React component unmount
-    return () => {
-      dismissibleTag?.removeEventListener('tagremove', handleTagRemove);
-    }
-  }, []);
+  const dismissibleTagRef = useEvent('tagremove', handleTagRemove);
 
   return (
     <>
