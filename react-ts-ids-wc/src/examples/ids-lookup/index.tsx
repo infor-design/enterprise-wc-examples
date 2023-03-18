@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsLookupType from 'ids-enterprise-wc/components/ids-lookup/ids-lookup';
 import 'ids-enterprise-wc/components/ids-lookup/ids-lookup';
@@ -79,8 +80,8 @@ const IdsLookup = () => {
     <>
       <IdsTitle>Lookup Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-lookup
             ref={lookupRef}
             label="Lookup Field"
@@ -136,8 +137,8 @@ const IdsLookup = () => {
             autocomplete
             field="description"
           ></ids-lookup>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

@@ -1,39 +1,31 @@
 /* eslint-disable no-template-curly-in-string */
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
+import useFetch from '../../hooks/useFetch';
 import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsListViewType from 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
+import 'ids-enterprise-wc/components/ids-list-view/ids-list-view';
+import 'ids-enterprise-wc/components/ids-card/ids-card';
 import 'ids-enterprise-wc/components/ids-notification-banner/ids-notification-banner';
 
 
 const IdsNotificationBanner = () => {
   const listViewRef = useRef<IdsListViewType>();
 
-  useEffect(() => {
-    // Adding ref current element to variable to be able cleanup event listeners on unmount
-    const element = listViewRef.current;
+  useFetch('/data/products.json', (data) => {
+    const idsElement = listViewRef.current;
 
-    const fetchData = async () => {
-      // Do an ajax request
-      const response = await fetch('/data/products.json');
-      const data = await response.json();
+    if (idsElement) {
+      idsElement.data = data;
 
-      // Set data
-      if (element) element.data = data;
-    }
-
-    if (element) {
-      // Set the default template
-      element.defaultTemplate = [
+      idsElement.defaultTemplate = [
         '<ids-text font-size="16" type="h2">${productName}</ids-text>',
         '<ids-text font-size="12" type="span">Count: ${units}</ids-text>',
         '<ids-text font-size="12" type="span">Price: $ ${unitPrice}</ids-text>'
       ].join('\n');
     }
 
-    fetchData();
-
-  }, []);
+  });
 
   return (
     <>

@@ -1,4 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
+import useEvent from '../../hooks/useEvent';
+import useFetch from '../../hooks/useFetch';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsTreeType from 'ids-enterprise-wc/components/ids-tree/ids-tree';
 import 'ids-enterprise-wc/components/ids-tree/ids-tree';
@@ -6,41 +9,26 @@ import 'ids-enterprise-wc/components/ids-tree/ids-tree';
 const IdsTree = () => {
   const treeRef = useRef<IdsTreeType>();
 
-  useEffect(() => {
-    const tree = treeRef.current;
+  const handleSelected = (e: any) => {
+    console.info('selected:', e?.detail);
+  };
 
-    const fetchData = async function () {
-      // Do an ajax request
-      const response = await fetch('/data/tree-basic.json');
-      const data = await response.json();
+  useEvent('selected', handleSelected, treeRef);
 
-      // Set data
-      if (tree) tree.data = data;
-    };
-
-    fetchData();
-
-    const handleSelected = (e: any) => {
-      console.info('selected:', e?.detail);
-    };
-
-    // On selected
-    tree?.addEventListener('selected', handleSelected);
-
-    return () => {
-      tree?.removeEventListener('selected', handleSelected);
-    };
-  }, []);
+  useFetch('/data/tree-basic.json', (data) => {
+    console.log('useFetch', data);
+    if (treeRef?.current) treeRef.current.data = data;
+  });
 
   return (
     <>
       <IdsTitle>Ids Tree Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-tree ref={treeRef} label="Tree Demo"></ids-tree>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };

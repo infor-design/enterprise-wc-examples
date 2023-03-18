@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import useEvent from './useEvent';
 
 type ReactUseRefType = ReturnType<typeof useRef<any>>;
@@ -16,7 +16,7 @@ export function useModal(props: IdsModalProps, modalRef?: ReactUseRefType): Reac
   useEvent('aftershow', (e: any) => props.onOpen?.(e), ref);
   useEvent('afterhide', (e: any) => props.onClose?.(e), ref);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const idsElement = ref?.current;
 
     if (props.open && !idsElement?.visible) {

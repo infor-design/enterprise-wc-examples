@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import useFetch from '../../hooks/useFetch';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsAxisChartType from 'ids-enterprise-wc/components/ids-axis-chart/ids-axis-chart';
 import 'ids-enterprise-wc/components/ids-axis-chart/ids-axis-chart';
@@ -6,17 +7,9 @@ import 'ids-enterprise-wc/components/ids-axis-chart/ids-axis-chart';
 const IdsAxisChart = () => {
   const axisChartRef = useRef<IdsAxisChartType>();
 
-  useEffect(() => {
-    const axisChart = axisChartRef.current;
-
-    async function fetchData() {
-      const response = await fetch('/data/components.json');
-      const data = await response.json();
-
-      if (axisChart) axisChart.data = data;
-    }
-    fetchData();
-  }, []);
+  useFetch('/data/components.json', (data) => {
+    if (axisChartRef.current) axisChartRef.current.data = data;
+  });
 
   return (
     <>

@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import useEvent from '../../hooks/useEvent';
 import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsInputType from 'ids-enterprise-wc/components/ids-input/ids-input';
@@ -10,23 +11,14 @@ const IdsInput = () => {
   const destinationInputRef = useRef<IdsInputType>();
   const [value, setValue] = useState('');
 
-  useEffect(() => {
-    // Adding ref current element to variable to be able cleanup event listeners on unmount
-    const sourceInput = sourceInputRef.current;
+  // Event handler to be used in attach and cleanup event listener
+  const handleChange = (e: any) => {
     const destinationInput = destinationInputRef.current;
+    if (destinationInput) destinationInput.value = e?.target?.value;
+    setValue(e?.target?.value);
+  };
 
-    // Event handler to be used in attach and cleanup event listener
-    const handleChange = (e: any) => {
-      setValue(e?.target?.value);
-      if (destinationInput) destinationInput.value = e?.target?.value;
-    };
-
-    // Attach event listener
-    sourceInput?.addEventListener('keyup', handleChange);
-
-    // Cleanup event listener on React component unmount
-    return () => sourceInput?.removeEventListener('keyup', handleChange);
-  }, []);
+  useEvent('keyup', handleChange, sourceInputRef);
 
   return (
     <>

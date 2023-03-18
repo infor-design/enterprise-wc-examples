@@ -45,53 +45,49 @@ interface IdsGridCellProps {
   colEnd?: number | string;
 }
 
-export const IdsGrid: React.FC<IdsGridProps> = (props) => {
-  return (
-    <ids-layout-grid
-      id={props.id}
-      class={props.class}
-      slot={props.slot}
-      style={props.style}
-      auto={props.auto}
-      auto-rows={props.autoRows}
-      auto-flow={props.autoFlow}
-      cols={props.cols}
-      rows={props.rows}
-      fill={props.fill}
-      fixed={props.fixed}
-      gap={props.gap}
-      justify-contnet={props.justify}
-      max-col-width={props.maxColWidth}
-      min-col-width={props.minColWidth}
-      no-margins={props.noMargins}
-    >
-      {props.children}
-    </ids-layout-grid>
-  );
-};
+export const IdsGrid: React.FC<IdsGridProps> = (props) => (
+  <ids-layout-grid
+    id={props.id}
+    class={props.class}
+    slot={props.slot}
+    style={props.style}
+    auto={props.auto}
+    auto-rows={props.autoRows}
+    auto-flow={props.autoFlow}
+    cols={props.cols}
+    rows={props.rows}
+    fill={props.fill}
+    fixed={props.fixed}
+    gap={props.gap}
+    justify-contnet={props.justify}
+    max-col-width={props.maxColWidth}
+    min-col-width={props.minColWidth}
+    no-margins={props.noMargins}
+  >
+    {props.children}
+  </ids-layout-grid>
+);
 
-export const IdsGridCell: React.FC<IdsGridCellProps> = (props) => {
-  return (
-    <ids-layout-grid-cell
-      id={props.id}
-      class={props.class}
-      style={props.style}
-      auto={props.auto}
-      justify={props.justify}
-      row-span={props.rowSpan}
-      col-span={props.colSpan}
-      col-span-xs={props.colSpanXs}
-      col-span-sm={props.colSpanSm}
-      col-span-md={props.colSpanMd}
-      col-span-lg={props.colSpanLg}
-      col-span-xl={props.colSpanXl}
-      col-span-xxl={props.colSpanXxl}
-      col-start={props.colStart}
-      col-end={props.colEnd}
-    >
-      {props.children}
-    </ids-layout-grid-cell>
-  );
-};
+export const IdsGridCell: React.FC<IdsGridCellProps> = (props) => (
+  <ids-layout-grid-cell
+    id={props.id}
+    class={props.class}
+    style={props.style}
+    auto={props.auto}
+    justify={props.justify}
+    row-span={props.rowSpan}
+    col-span={props.colSpan}
+    col-span-xs={props.colSpanXs}
+    col-span-sm={props.colSpanSm}
+    col-span-md={props.colSpanMd}
+    col-span-lg={props.colSpanLg}
+    col-span-xl={props.colSpanXl}
+    col-span-xxl={props.colSpanXxl}
+    col-start={props.colStart}
+    col-end={props.colEnd}
+  >
+    {props.children}
+  </ids-layout-grid-cell>
+);
 
 export default IdsGrid;

@@ -1,4 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
+import useFetch from '../../hooks/useFetch';
+import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsBarChartType from 'ids-enterprise-wc/components/ids-bar-chart/ids-bar-chart';
 import 'ids-enterprise-wc/components/ids-bar-chart/ids-bar-chart';
@@ -6,31 +8,24 @@ import 'ids-enterprise-wc/components/ids-bar-chart/ids-bar-chart';
 const IdsBarChart = () => {
   const barChartRef = useRef<IdsBarChartType>();
 
-  useEffect(() => {
-    const barChart = barChartRef.current;
+  useFetch('/data/components-colors.json', (data) => {
+    if (barChartRef.current) barChartRef.current.data = data;
+  });
 
-    async function fetchData() {
-      const response = await fetch('/data/components-colors.json');
-      const data = await response.json();
-
-      if (barChart) barChart.data = data;
-    }
-    fetchData();
-  }, []);
   return (
     <>
       <IdsTitle>Bar Chart Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
-        <ids-layout-grid-cell>
+      <IdsGrid auto>
+        <IdsGridCell>
           <ids-bar-chart
             ref={barChartRef}
             title="Bar Chart - Component Adoption"
             width="700"
             height="500"
           ></ids-bar-chart>
-        </ids-layout-grid-cell>
-      </ids-layout-grid>
+        </IdsGridCell>
+      </IdsGrid>
     </>
   );
 };
