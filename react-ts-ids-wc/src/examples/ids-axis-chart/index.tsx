@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import useFetch from '../../hooks/useFetch';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import type IdsAxisChartType from 'ids-enterprise-wc/components/ids-axis-chart/ids-axis-chart';

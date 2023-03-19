@@ -1,6 +1,4 @@
 declare namespace JSX {
-
-  interface IdsWebComponents extends HTMLAttributes {}
   interface IntrinsicElements {
     "ids-about": any;
     "ids-accordion": any;

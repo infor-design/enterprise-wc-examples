@@ -1,46 +1,133 @@
-# Getting Started with Create React App
+# Ids Web Component Used in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates how to use the IDS Web Components in a simple ReactJS app using Typescript. The IDS Web Components are pretty simple to use with React and can basically be imported from npm then used directly.
 
-## Available Scripts
+## To Run these Examples
 
-In the project directory, you can run:
+- clone the main repo https://github.com/infor-design/enterprise-wc-examples
+- should be on node 18
 
-### `npm start`
+```sh
+cd react-ts-ids-wc
+npm install
+npm run start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- open http://localhost:3000/ in the browser
+- if any errors and you have previously cloned try `rm -rf node_modules && npm i`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Step 1: Create a new React Project
 
-### `npm test`
+You can skip this step if already have React Project. But if you are starting from scratch you can use the `npx` tooling.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npx create-react-app react-ts-ids-wc --template typescript
+cd react-ts-ids-wc
+```
 
-### `npm run build`
+For more info see https://reactjs.org/docs/create-a-new-react-app.html
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Step 2: Install the polyfill
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+IDS does not support IE 11 so you should add it to `browserslist` in `package.json`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+"browserslist": {
+  "production": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "ie 11"
+  ],
+  "development": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "ie 11"
+  ]
+}
+```
 
-### `npm run eject`
+### Add the Ids Web Components to React
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**1. Install**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install ids-enterprise-wc
+````
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**2. Add the Custom Font**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`@import` ids style file to `src/App.css`
 
-## Learn More
+```css
+/* Add application styles & imports to this file! */
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap";
+```
+**3. Add the Ids Web Component type declarations**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Copy `src/declarations.d.ts` into your project's `src/` dir, so Typescript will recognize the Ids Web Components custom html-tags.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**4. Optional -- Add the custom React hooks to your project**
+
+You can also copy `src/hooks/*` into your project's `src/` dir to use these custom React hooks:
+- `useEvent(evenName, eventHandler)`
+- `useFetch(url, dataHandler)`
+- `useModal({ open, onOpen, onClose })`
+
+
+**5. Use the Components**
+
+You can now use the Ids Web Components like any other HTML tag. Replace the contents of the src/App.js with the following
+
+```Javascript
+import React from 'react';
+import './App.css';
+
+import 'ids-enterprise-wc/ids-tag/ids-tag';
+
+function App() {
+  return (
+    <div className="App" role="main">
+      <ids-tag color="error">Error Tag</ids-tag>
+    </div>
+  );
+}
+
+export default App;
+```
+
+**6. Run it**
+
+```bash
+npm run start
+```
+
+**7. See it in the browser**
+Navigate to: http://localhost:3000
+
+---
+
+## Events
+React passes all data to Custom Elements in the form of HTML attributes.
+
+Because React implements its own synthetic event system, it cannot listen for DOM events coming from Custom Elements without the use of a workaround. Developers will need to reference their Custom Elements using a ref and manually attach event listeners with addEventListener.
+
+However in case of `onClick` event it will work on most components, `ids-button` example shows `onClick` event usage as well as `addEventListener`
+
+## JSX
+Some components like `ids-list-view` are using curly braces in HTML what also is a special syntax for JSX.
+It can be attached to the element as a string using a ref.
+
+```js
+listViewRef.current.defaultTemplate = '<ids-text font-size="16" type="h2">${productName}</ids-text>'
+```
+
+## Articles
+
+https://reactjs.org/docs/web-components.html
+https://vaadin.com/learn/tutorials/using-web-components-in-react
+
+## Starter Project
+
+Starter Project: https://stackblitz.com/edit/react-un5ayt
