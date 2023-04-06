@@ -15,10 +15,10 @@ export const IdsTitle: React.FC<IdsTitleProps> = (props) => {
     <IdsGrid auto>
       <IdsGridCell>
         <ids-text
-          font-size={props.fontSize ?? 20}
+          font-size={props.fontSize ?? 12}
           type={props.type ?? 'h1'}
         >
-          <strong>{props.children}</strong>
+          {props.children}
         </ids-text>
       </IdsGridCell>
     </IdsGrid>

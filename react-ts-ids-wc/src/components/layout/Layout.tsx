@@ -57,10 +57,6 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       </ids-header>
 
       <ids-app-menu id="app-menu">
-        {/* <!-- Avatar/Username Area --> */}
-        <Link to="/ids-button" slot="avatar">
-          <ids-icon size="xxl" icon="logo"></ids-icon>
-        </Link>
         <ids-text slot="username" font-size="24" font-weight="bold">IDS Web Components</ids-text>
 
         {/* <!-- Header Toolbar --> */}
