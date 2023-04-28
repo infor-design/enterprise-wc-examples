@@ -1,0 +1,41 @@
+
+<ids-container role="main" padding="8" hidden>
+  <!-- <ids-theme-switcher mode="light"></ids-theme-switcher> -->
+  <ids-layout-grid auto="true">
+    <ids-button role="button" type="Tertiary" icon="magic-wand" (click)="onMockDataClicked()"><span>Mock
+      Data</span></ids-button>
+    <ids-text font-size="12" type="h1">Data Grid</ids-text>
+
+  </ids-layout-grid>
+  
+  <ids-layout-grid auto="true" cols="12">
+    
+<ids-layout-grid-cell col-span="12">
+  <ids-loading-indicator [style.visibility]="isLoading ? 'visible' : 'hidden'" sticky></ids-loading-indicator>
+  
+  <ids-data-grid id="instancesDataGrid" row-selection="multiple" row-height="md"
+      empty-message-icon="empty-error-loading-new" empty-message-label="No Data"
+      empty-message-description="There is no data available." auto-fit="bottom" save-user-settings
+      (dblclick)="onRowDoubleClick($event)">
+  </ids-data-grid>
+</ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>
+
+
+
+<!-- <ids-layout-grid auto="true">
+
+<ids-data-grid id="instancesDataGrid" row-selection="multiple" row-height="md"
+    empty-message-icon="empty-error-loading-new" empty-message-label="No Data"
+    empty-message-description="There is no data available." auto-fit="bottom" save-user-settings
+    (dblclick)="onRowDoubleClick($event)">
+</ids-data-grid>
+</ids-layout-grid> -->
+<!--  <ids-layout-grid auto="true">
+<ids-layout-grid-cell>
+    <ids-data-grid #dataGrid id="instancesDataGrid" >
+
+    </ids-data-grid>
+</ids-layout-grid-cell>
+</ids-layout-grid> -->
