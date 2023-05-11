@@ -17,7 +17,7 @@ import 'ids-enterprise-wc/components/ids-alert/ids-alert';
 1. Note that all imports also include the contained css styles so no style sheets are needed
 1. Note that using imports in the angular.json is not currently possible for ES Modules https://github.com/angular/angular-cli/issues/24592
 1. Since we ship our package as Es Modules (ESM) the best way to use the components is to import the used modules (or complete package) inside the module where its used. For example:
-2. Add `skipLibCheck` so that the types in the node_modules are not checked. This may happen if using a different TS version that the one we compiled with. https://github.com/infor-design/enterprise-wc-examples/blob/main/angular-ids-wc/tsconfig.json#L18
+2. Add `skipLibCheck` so that the types in the node_modules are not checked. This may be needed if using a different TS version that the one we compiled with and you experience compile errors. https://github.com/infor-design/enterprise-wc-examples/blob/main/angular-ids-wc/tsconfig.json#L18
 
 ```js
 import { Component, OnInit } from '@angular/core';
