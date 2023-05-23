@@ -62,13 +62,10 @@ export class IdsTagComponent implements AfterViewInit {
 ```
 
 1. Add `CUSTOM_ELEMENTS_SCHEMA` to `src/app/app.module.ts`
-1. The localization data and translations are fetched dynamically in the IDS code when a locale is set. In order to change language you will need to serve the locales. In order to do this we add the location to the assets section in `angular.json`.
+1. The localization data and translations are fetched dynamically in the IDS code when a locale is set. In order to change language you will need to serve the locales. To do this we add a location to the assets section in `angular.json`.
 
 ```json
 "assets": [
-  "src/favicon.ico",
-  "src/assets",
-  "src/api",
   {
     "glob": "**/*",
     "input": "./node_modules/ids-enterprise-wc/locale-data",
@@ -76,7 +73,17 @@ export class IdsTagComponent implements AfterViewInit {
   }
 ],
 ```
+1. The themes are fetched dynamically in the IDS code when a theme is set with the theme switcher. In order to change theme you will need to serve the theme css files. To do this we add a location to the assets section in `angular.json`.
 
+```json
+"assets": [
+  {
+    "glob": "**/*",
+    "input": "./node_modules/ids-enterprise-wc/themes",
+    "output": "themes"
+  }
+],
+```
 1. `npm run start`
 1. If wanted you can shorten the import paths using this feature https://blog.bitsrc.io/short-typescript-import-paths-in-angular9-22ce34bd424d 
 1. If you wanted to you can also speed up the builds with es-build you  could https://www.danywalls.com/maximizing-your-angular-build-performance-with-esbuild
