@@ -1,9 +1,6 @@
 import React from 'react';
 import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
 import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell';
-// import type IdsLayoutGrid from  'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid';
-// import type IdsLayoutGridCell from  'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell';
-
 
 interface IdsGridProps {
   id?: string;
@@ -11,13 +8,15 @@ interface IdsGridProps {
   style?: { [key: string]: string }
   children?: any;
   slot?: string;
-
+  padding?: number | string;
+  paddingY?: number | string;
+  paddingX?: number | string;
   cols?: number | string;
   rows?: number;
   fill?: boolean;
   fixed?: boolean | string;
   gap?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
-  auto?: boolean;
+  autoFit?: boolean;
   autoRows?: React.CSSProperties['gridAutoRows'];
   autoFlow?: React.CSSProperties['gridAutoFlow'];
   justify?: React.CSSProperties['justifyContent'];
@@ -31,7 +30,7 @@ interface IdsGridCellProps {
   id?: string;
   class?: string;
   style?: { [key: string]: string }
-  auto?: boolean;
+  autoFit?: boolean;
   justify?: string;
   rowSpan?: number;
   colSpan?: number | string | 'full';
@@ -51,10 +50,13 @@ export const IdsGrid: React.FC<IdsGridProps> = (props) => (
     class={props.class}
     slot={props.slot}
     style={props.style}
-    auto={props.auto}
+    auto-fit={props.autoFit}
     auto-rows={props.autoRows}
     auto-flow={props.autoFlow}
     cols={props.cols}
+    padding={props.padding}
+    padding-x={props.paddingX}
+    padding-y={props.paddingY}
     rows={props.rows}
     fill={props.fill}
     fixed={props.fixed}
@@ -73,7 +75,6 @@ export const IdsGridCell: React.FC<IdsGridCellProps> = (props) => (
     id={props.id}
     class={props.class}
     style={props.style}
-    auto={props.auto}
     justify={props.justify}
     row-span={props.rowSpan}
     col-span={props.colSpan}

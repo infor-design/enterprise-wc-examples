@@ -41,7 +41,7 @@ const IdsMenu = () => {
     <>
       <IdsTitle>Menu Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-menu>
             <ids-menu-group>

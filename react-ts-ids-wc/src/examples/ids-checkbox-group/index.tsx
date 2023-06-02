@@ -7,7 +7,7 @@ const IdsCheckboxGroup = () => {
     <>
       <IdsTitle>Checkbox Group Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-checkbox-group label="Choose from these options:">
             <ids-checkbox label="Option 1" checked="false"></ids-checkbox>

@@ -16,7 +16,7 @@ const IdsBarChart = () => {
     <>
       <IdsTitle>Bar Chart Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-bar-chart
             ref={barChartRef}

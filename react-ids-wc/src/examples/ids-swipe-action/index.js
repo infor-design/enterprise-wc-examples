@@ -5,7 +5,7 @@ import 'ids-enterprise-wc/components/ids-swipe-action/ids-swipe-action';
 const IdsSwipeAction = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Swipe Action (Reveal / One Action)
         </ids-text>
@@ -63,7 +63,7 @@ const IdsSwipeAction = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Swipe Action (Reveal / Two Actions)
         </ids-text>
@@ -129,7 +129,7 @@ const IdsSwipeAction = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Swipe Action (Continuous)
         </ids-text>

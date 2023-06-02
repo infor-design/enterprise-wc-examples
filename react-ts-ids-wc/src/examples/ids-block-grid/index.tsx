@@ -8,7 +8,7 @@ const IdsBlockGrid = () => {
     <>
       <IdsTitle>Block Grid Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-block-grid align="center">
             {Array(7)

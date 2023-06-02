@@ -9,7 +9,7 @@ const IdsCounts = () => {
     <>
       <IdsTitle>Counts Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-counts color="base" href="#">
             <ids-text count-value>7</ids-text>

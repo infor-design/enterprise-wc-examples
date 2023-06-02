@@ -8,7 +8,7 @@ const IdsColor = () => {
     <>
       <IdsTitle>Color Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-color hex="#da9e2d"></ids-color>
       </ids-layout-grid>
     </>

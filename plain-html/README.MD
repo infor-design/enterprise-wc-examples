@@ -26,6 +26,13 @@ Ids Web Components are packages as ESM modules so can be used in any HTML docume
 
 1. Note that changing locale will work. The locale files are served when locale changes from `/node_modules/ids-enterprise-wc/local-data`
 
+1. Also not that you can set the theme to an initial theme with a link. Because there is no way to setup an assets folder in this example this is the best way.
+
+```html
+<head>
+  <link rel="stylesheet" href="/node_modules/ids-enterprise-wc/themes/ids-theme-default-light.css">
+```
+
 ## To Run these Examples
 
 - clone the main repo https://github.com/infor-design/enterprise-wc-examples

@@ -1,46 +1,46 @@
 <ids-container language="en" locale="en-US" padding="8" hidden>
   <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
 
-  <ids-layout-grid auto="true">
+  <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
       <ids-text font-size="12">Tag with template reference variable</ids-text>
     </ids-layout-grid-cell>
   </ids-layout-grid>
-  <ids-layout-grid auto="true">
+  <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
       <ids-tag #myTag>{{name}}</ids-tag>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid auto="true">
+  <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
       <ids-text font-size="12">Tag with bound property</ids-text>
     </ids-layout-grid-cell>
   </ids-layout-grid>
-  <ids-layout-grid auto="true">
+  <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
       <ids-tag [color]="type" color="">{{person}}</ids-tag>
       <input [(ngModel)]="type" value="{{type}}"/>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid auto="true">
+  <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
       <ids-text font-size="12">Dismissible tag with keyboard events</ids-text>
     </ids-layout-grid-cell>
   </ids-layout-grid>
-  <ids-layout-grid auto="true">
+  <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
       <ids-tag>{{person}}<ids-icon icon="caret-right" size="small"></ids-icon></ids-tag>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid auto="true">
+  <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
       <ids-text font-size="12">Tag with events</ids-text>
     </ids-layout-grid-cell>
   </ids-layout-grid>
-  <ids-layout-grid auto="true">
+  <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
       <ids-tag dismissible="true" (tagremove)="onTagRemove($event)" (beforetagremove)="onTagRemove($event)">
         <span>Dismissible Tags</span>
@@ -48,12 +48,12 @@
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid auto="true">
+  <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
       <ids-text font-size="12">Tag list in a loop</ids-text>
     </ids-layout-grid-cell>
   </ids-layout-grid>
-  <ids-layout-grid auto="true">
+  <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
       <ids-tag *ngFor="let tag of tagList" [color]="tag.type">{{tag.name}}</ids-tag>
     </ids-layout-grid-cell>

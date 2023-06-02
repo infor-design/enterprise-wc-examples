@@ -4,13 +4,13 @@ import 'ids-enterprise-wc/components/ids-color-picker/ids-color-picker';
 const IdsColorPicker = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Color Picker
         </ids-text>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true" cols="2" gap="md">
+      <ids-layout-grid auto-fit="true" cols="2" gap="md">
         <ids-layout-grid-cell>
           <ids-color-picker id="color-picker-e2e-test" label="Default Color Picker"></ids-color-picker>
           <ids-color-picker label="Clearable Color Picker" value="ruby-80" clearable></ids-color-picker>

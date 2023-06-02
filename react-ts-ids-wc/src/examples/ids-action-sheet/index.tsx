@@ -11,7 +11,7 @@ const IdsActionSheet = () => {
     <>
       <IdsTitle>Action Sheet Example</IdsTitle>
 
-      <IdsGrid auto gap="md">
+      <IdsGrid auto-fit gap="md">
         <IdsGridCell>
           <ids-menu-button
             id="icon-button"

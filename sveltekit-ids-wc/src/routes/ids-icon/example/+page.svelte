@@ -20,7 +20,7 @@
   });
 </script>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-text font-size="12" type="h1">Icons</ids-text>
 </ids-layout-grid>
 <ids-layout-grid class="ids-icon-list" auto="true" gap="md">
@@ -35,7 +35,7 @@
   {/each}
 </ids-layout-grid>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-text font-size="12" type="h1">Empty Message Icons</ids-text>
 </ids-layout-grid>
 <ids-layout-grid class="ids-empty-icon-list" auto="true" gap="md">

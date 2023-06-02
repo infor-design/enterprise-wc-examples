@@ -10,7 +10,7 @@ const IdsFieldset = () => {
           Fieldset
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <form>
           <ids-fieldset>
             <legend>

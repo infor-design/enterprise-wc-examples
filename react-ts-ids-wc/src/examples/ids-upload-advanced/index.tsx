@@ -19,7 +19,7 @@ const IdsUploadAdvanced = () => {
     <>
       <IdsTitle>Ids Upload Advanced Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-text>
             <strong>

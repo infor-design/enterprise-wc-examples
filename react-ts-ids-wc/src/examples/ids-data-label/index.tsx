@@ -7,7 +7,7 @@ const IdsDataLabel = () => {
     <>
       <IdsTitle>Data Label Example</IdsTitle>
 
-      <ids-layout-grid auto="true" gap="md">
+      <ids-layout-grid auto-fit="true" gap="md">
         <ids-data-label label="Shipping to" label-position="left">
           Los Angeles, California 90001 USA
         </ids-data-label>

@@ -59,7 +59,7 @@
 
   <div class="ids-tabs-content">
     <ids-tab-content value="contracts">
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-text font-size="20" type="h2">Contracts</ids-text>
           <br />
@@ -72,7 +72,7 @@
       </ids-layout-grid>
     </ids-tab-content>
     <ids-tab-content value="opportunities">
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-text font-size="16" type="p">
             <ids-text font-size="20" type="h2">Opportunities</ids-text>
@@ -85,7 +85,7 @@
       </ids-layout-grid>
     </ids-tab-content>
     <ids-tab-content value="attachments">
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-text font-size="20" type="h2">Attachments</ids-text>
           <br />
@@ -100,7 +100,7 @@
       </ids-layout-grid>
     </ids-tab-content>
     <ids-tab-content value="notes">
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-text font-size="20" type="h2">Notes</ids-text>
           <br />

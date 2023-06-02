@@ -9,7 +9,7 @@ const IdsToolbar = () => {
     <>
       <IdsTitle>Toolbar Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-toolbar id="my-toolbar">
             <ids-toolbar-section type="button">

@@ -9,7 +9,7 @@ const IdsEmptyMessage = () => {
       <IdsTitle>Empty Message Icons Example</IdsTitle>
 
       <IdsGrid cols="3" gap="md" class="icon-examples"></IdsGrid>
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Display Options
         </ids-text>

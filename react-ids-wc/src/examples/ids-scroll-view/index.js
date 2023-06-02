@@ -10,7 +10,7 @@ import camera6 from '../../assets/images/camera-6.png';
 const IdsScrollView = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Scroll View
         </ids-text>

@@ -17,7 +17,7 @@ const IdsDraggableExample = () => {
     <>
       <IdsTitle>Draggable Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsDraggable
           onDragStart={onDragStart}
           onDrag={onDrag}
@@ -69,12 +69,12 @@ const IdsDraggableExample = () => {
           </div>
         </IdsDraggable>
       </IdsGrid>
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Draggable (Bounded by Div/Container)
         </ids-text>
       </IdsGrid>
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <div className="ids-draggable-demo-content">
           <IdsDraggable parentContainment>
             <DemoBox>

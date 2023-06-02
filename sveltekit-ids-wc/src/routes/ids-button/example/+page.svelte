@@ -14,11 +14,11 @@
   }
 </script>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-text font-size="12" type="h1">IDS Button (Imported into Svelte)</ids-text>
 </ids-layout-grid>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-text font-size="12" type="h2">Normal Buttons</ids-text>
 </ids-layout-grid>
 
@@ -37,7 +37,7 @@
   </ids-layout-grid-cell>
 </ids-layout-grid>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-text font-size="12" type="h2">Disabled Buttons</ids-text>
 </ids-layout-grid>
 
@@ -56,7 +56,7 @@
   </ids-layout-grid-cell>
 </ids-layout-grid>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-text font-size="12" type="h2">Icon-only Buttons</ids-text>
 </ids-layout-grid>
 
@@ -87,7 +87,7 @@
   </ids-layout-grid-cell>
 </ids-layout-grid>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-text font-size="12" type="h2">Icon + Text Buttons</ids-text>
 </ids-layout-grid>
 
@@ -118,7 +118,7 @@
   </ids-layout-grid-cell>
 </ids-layout-grid>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-text font-size="12" type="h2">Text + Icon Buttons</ids-text>
 </ids-layout-grid>
 

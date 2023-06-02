@@ -7,7 +7,7 @@ const IdsMasthead = () => {
     <>
       <IdsTitle>Masthead Example</IdsTitle>
 
-      <ids-layout-grid auto="true" id="ids-masthead-list" col="1">
+      <ids-layout-grid auto-fit="true" id="ids-masthead-list" col="1">
         <ids-layout-grid-cell>
           <ids-masthead title="Infor Application" icon="logo" role="navigation">
             <section title="start" slot="start">

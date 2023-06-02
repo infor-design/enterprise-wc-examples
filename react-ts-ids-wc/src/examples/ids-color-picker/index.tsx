@@ -8,7 +8,7 @@ const IdsColorPicker = () => {
     <>
       <IdsTitle>Color Picker Example</IdsTitle>
 
-      <IdsGrid auto cols="2" gap="md">
+      <IdsGrid auto-fit cols="2" gap="md">
         <IdsGridCell>
           <ids-color-picker id="color-picker-e2e-test" label="Default Color Picker"></ids-color-picker>
           <ids-color-picker label="Clearable Color Picker" value="ruby-80" clearable></ids-color-picker>

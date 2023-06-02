@@ -6,12 +6,12 @@
   });
 </script>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-layout-grid-cell>
     <ids-text font-size="12" type="h1">Alerts (Imported into Svelte)</ids-text>
   </ids-layout-grid-cell>
 </ids-layout-grid>
-<ids-layout-grid auto="true" id="ids-alert-list" gap="md">
+<ids-layout-grid auto-fit="true" id="ids-alert-list" gap="md">
   <ids-layout-grid-cell><ids-alert icon="alert"></ids-alert></ids-layout-grid-cell>
   <ids-layout-grid-cell><ids-alert icon="success"></ids-alert></ids-layout-grid-cell>
   <ids-layout-grid-cell><ids-alert icon="empty-circle"></ids-alert></ids-layout-grid-cell>

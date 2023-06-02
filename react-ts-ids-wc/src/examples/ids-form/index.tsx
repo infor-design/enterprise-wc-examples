@@ -192,7 +192,7 @@ const IdsForm = () => {
         </IdsGrid>
       </ids-form>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-dropdown ref={sizeRef} label="Size" value={size} size="md">
             <ids-list-box>

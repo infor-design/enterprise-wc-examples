@@ -67,7 +67,7 @@ const IdsForm = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Ids Form
         </ids-text>
@@ -204,7 +204,7 @@ const IdsForm = () => {
         </ids-layout-grid>
       </ids-form>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-dropdown ref={sizeRef} label="Size" value={size} size="md">
             <ids-list-box>

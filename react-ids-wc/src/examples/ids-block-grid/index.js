@@ -5,13 +5,13 @@ import 'ids-enterprise-wc/components/ids-block-grid/ids-block-grid';
 const IdsBlockGrid = () => {
   return (
     <>
-      <ids-layout-grid auto="true" gap="md">
+      <ids-layout-grid auto-fit="true" gap="md">
         <ids-text font-size="12" type="h1">
           Block Grid
         </ids-text>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-block-grid align="center">
             {Array(7)

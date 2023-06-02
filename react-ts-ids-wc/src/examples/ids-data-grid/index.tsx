@@ -24,7 +24,7 @@ const IdsDataGrid = () => {
     <>
       <IdsTitle>Data Grid Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-data-grid
             ref={dataGridRef}

@@ -27,27 +27,6 @@ cd react-ts-ids-wc
 
 For more info see https://reactjs.org/docs/create-a-new-react-app.html
 
-### Step 2: Install the polyfill
-
-IDS does not support IE 11 so you should add it to `browserslist` in `package.json`
-
-```bash
-"browserslist": {
-  "production": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all",
-    "ie 11"
-  ],
-  "development": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all",
-    "ie 11"
-  ]
-}
-```
-
 ### Add the Ids Web Components to React
 
 **1. Install**
@@ -64,6 +43,7 @@ npm install ids-enterprise-wc
 /* Add application styles & imports to this file! */
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap";
 ```
+
 **3. Add the Ids Web Component type declarations**
 
 Copy `src/declarations.d.ts` into your project's `src/` dir, so Typescript will recognize the Ids Web Components custom html-tags.
@@ -74,7 +54,6 @@ You can also copy `src/hooks/*` into your project's `src/` dir to use these cust
 - `useEvent(evenName, eventHandler)`
 - `useFetch(url, dataHandler)`
 - `useModal({ open, onOpen, onClose })`
-
 
 **5. Use the Components**
 

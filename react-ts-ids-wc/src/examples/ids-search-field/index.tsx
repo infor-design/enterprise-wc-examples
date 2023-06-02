@@ -56,7 +56,7 @@ const IdsSearchField = () => {
         </IdsGridCell>
       </IdsGrid>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-search-field
             id="search-field-autocomplete"

@@ -13,7 +13,7 @@ const IdsAboutExample = () => {
     <>
       <IdsTitle>About Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <IdsButton
             type="secondary"

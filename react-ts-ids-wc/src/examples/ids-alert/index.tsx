@@ -15,7 +15,7 @@ const IdsAlert = () => {
     <>
       <IdsTitle>Alerts Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <IdsFlex gap="20" justify="flex-start">
             {items.map(item => (
@@ -26,8 +26,8 @@ const IdsAlert = () => {
           </IdsFlex>
         </IdsGridCell>
       </IdsGrid>
-      <IdsGrid auto>
-        <IdsGridCell auto>
+      <IdsGrid auto-fit>
+        <IdsGridCell>
           <IdsButton type="secondary" onClick={() => setItems(items.slice(0, -1))}>
             <span>Remove item</span>
           </IdsButton>

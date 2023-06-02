@@ -9,7 +9,7 @@ const IdsSwappable = () => {
     <>
       <IdsTitle>Ids Swappable Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Basic Example
         </ids-text>
@@ -37,7 +37,7 @@ const IdsSwappable = () => {
         </IdsGridCell>
       </IdsGrid>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Multiple Selection Example
         </ids-text>

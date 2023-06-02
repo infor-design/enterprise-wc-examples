@@ -7,7 +7,7 @@ const IdsTimePicker = () => {
     <>
       <IdsTitle>Time Picker Example</IdsTitle>
 
-      <ids-layout-grid auto="true" cols="4">
+      <ids-layout-grid auto-fit="true" cols="4">
         <ids-layout-grid-cell>
           <ids-time-picker
             label="Time Picker - autoselect"

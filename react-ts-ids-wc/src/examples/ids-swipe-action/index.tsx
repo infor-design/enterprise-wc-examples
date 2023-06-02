@@ -9,7 +9,7 @@ const IdsSwipeAction = () => {
     <>
       <IdsTitle>Swipe Action Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Swipe Action (Reveal / One Action)
         </ids-text>
@@ -67,7 +67,7 @@ const IdsSwipeAction = () => {
         </IdsGridCell>
       </IdsGrid>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Swipe Action (Reveal / Two Actions)
         </ids-text>
@@ -133,7 +133,7 @@ const IdsSwipeAction = () => {
         </IdsGridCell>
       </IdsGrid>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Swipe Action (Continuous)
         </ids-text>
