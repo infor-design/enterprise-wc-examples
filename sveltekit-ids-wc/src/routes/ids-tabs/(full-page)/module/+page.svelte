@@ -51,7 +51,7 @@
       </ids-toolbar-section>
       <ids-toolbar-section type="buttonset" align="end">
         {#if $appStore.allowThemeSwitcher}
-          <ids-theme-switcher mode="light" color-variant="alternate"></ids-theme-switcher>
+          <ids-theme-switcher mode="light" self-managed color-variant="alternate"></ids-theme-switcher>
         {/if}
       </ids-toolbar-section>
     </ids-toolbar>
