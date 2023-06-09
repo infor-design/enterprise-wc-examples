@@ -7,7 +7,7 @@ const IdsBadge = () => {
     <>
       <IdsTitle>Badges Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-badge>5</ids-badge>
           <ids-badge color="error">1500</ids-badge>

@@ -36,7 +36,7 @@ const IdsLoadingIndicator = () => {
     <>
       <IdsTitle>Loading Indicator Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Circular Loading Indicator
         </ids-text>
@@ -46,7 +46,7 @@ const IdsLoadingIndicator = () => {
           <ids-loading-indicator></ids-loading-indicator>
         </IdsGridCell>
         <IdsGridCell justify="center">
-          <IdsGrid gap="md" auto>
+          <IdsGrid gap="md" auto-fit>
             <IdsGridCell justify="center">
               <ids-loading-indicator
                 percentage-visible={circularPercentageVisible}
@@ -67,7 +67,7 @@ const IdsLoadingIndicator = () => {
           </IdsGrid>
         </IdsGridCell>
       </IdsGrid>
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Linear Loading Indicator
         </ids-text>
@@ -77,7 +77,7 @@ const IdsLoadingIndicator = () => {
           <ids-loading-indicator linear></ids-loading-indicator>
         </IdsGridCell>
         <IdsGridCell>
-          <IdsGrid cols="1" gap="md" auto noMargins>
+          <IdsGrid cols="1" gap="md" auto-fit noMargins>
             <IdsGridCell>
               <ids-loading-indicator
                 percentage-visible={linearPercentageVisible}

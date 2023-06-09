@@ -27,7 +27,7 @@ const IdsModal = () => {
         <ids-text type="p">This is an active IDS Modal component</ids-text>
       </ids-modal>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-button
             type="secondary"

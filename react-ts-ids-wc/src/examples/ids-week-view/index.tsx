@@ -8,7 +8,7 @@ const IdsWeekView = () => {
     <>
       <IdsTitle>Week View Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-week-view
             first-day-of-week="1"

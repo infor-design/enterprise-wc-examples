@@ -8,8 +8,8 @@ const IdsCalendar = () => {
     <>
       <IdsTitle>Calendar View Example</IdsTitle>
 
-      <IdsGrid auto>
-        <IdsGridCell auto>
+      <IdsGrid auto-fit>
+        <IdsGridCell>
           <ids-calendar
             date="10/22/2019"
             show-legend

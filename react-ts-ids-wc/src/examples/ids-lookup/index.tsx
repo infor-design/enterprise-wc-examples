@@ -80,7 +80,7 @@ const IdsLookup = () => {
     <>
       <IdsTitle>Lookup Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-lookup
             ref={lookupRef}

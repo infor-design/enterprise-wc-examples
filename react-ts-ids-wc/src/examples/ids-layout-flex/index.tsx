@@ -25,7 +25,7 @@ const IdsLayoutFlex = () => {
           </ids-layout-grid-cell>
         </ids-layout-grid>
 
-        <ids-layout-grid auto="true" gap="md">
+        <ids-layout-grid auto-fit="true" gap="md">
           <ids-text font-size="12" type="h2">
             justify-content (center)
           </ids-text>
@@ -46,7 +46,7 @@ const IdsLayoutFlex = () => {
           </ids-layout-grid-cell>
         </ids-layout-grid>
 
-        <ids-layout-grid auto="true" gap="md">
+        <ids-layout-grid auto-fit="true" gap="md">
           <ids-text font-size="12" type="h2">
             justify-content (flex-end)
           </ids-text>
@@ -67,7 +67,7 @@ const IdsLayoutFlex = () => {
           </ids-layout-grid-cell>
         </ids-layout-grid>
 
-        <ids-layout-grid auto="true" gap="md">
+        <ids-layout-grid auto-fit="true" gap="md">
           <ids-text font-size="12" type="h2">
             justify-content (space-between)
           </ids-text>
@@ -88,7 +88,7 @@ const IdsLayoutFlex = () => {
           </ids-layout-grid-cell>
         </ids-layout-grid>
 
-        <ids-layout-grid auto="true" gap="md">
+        <ids-layout-grid auto-fit="true" gap="md">
           <ids-text font-size="12" type="h2">
             justify-content (space-around)
           </ids-text>
@@ -109,7 +109,7 @@ const IdsLayoutFlex = () => {
           </ids-layout-grid-cell>
         </ids-layout-grid>
 
-        <ids-layout-grid auto="true" gap="md">
+        <ids-layout-grid auto-fit="true" gap="md">
           <ids-text font-size="12" type="h2">
             justify-content (space-evenly)
           </ids-text>
@@ -130,7 +130,7 @@ const IdsLayoutFlex = () => {
           </ids-layout-grid-cell>
         </ids-layout-grid>
 
-        <ids-layout-grid auto="true" gap="md">
+        <ids-layout-grid auto-fit="true" gap="md">
           <ids-text font-size="12" type="h2">
             grow / shrink (items)
           </ids-text>
@@ -151,7 +151,7 @@ const IdsLayoutFlex = () => {
           </ids-layout-grid-cell>
         </ids-layout-grid>
 
-        <ids-layout-grid auto="true" gap="md">
+        <ids-layout-grid auto-fit="true" gap="md">
           <ids-text font-size="12" type="h2">
             direction (column)
           </ids-text>

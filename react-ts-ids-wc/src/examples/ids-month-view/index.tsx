@@ -7,7 +7,7 @@ const IdsMonthView = () => {
     <>
       <IdsTitle>Month View Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-month-view
             show-today="true"

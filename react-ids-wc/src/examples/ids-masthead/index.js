@@ -4,7 +4,7 @@ import 'ids-enterprise-wc/components/ids-masthead/ids-masthead';
 const IdsMasthead = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-text font-size="12" type="h1">
             Masthead
@@ -12,7 +12,7 @@ const IdsMasthead = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true" id="ids-masthead-list" col="1">
+      <ids-layout-grid auto-fit="true" id="ids-masthead-list" col="1">
         <ids-layout-grid-cell>
           <ids-masthead title="Infor Application" icon="logo" role="navigation">
             <section title="start" slot="start">

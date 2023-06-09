@@ -24,7 +24,7 @@ const IdsTree = () => {
     <>
       <IdsTitle>Ids Tree Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-tree ref={treeRef} label="Tree Demo"></ids-tree>
         </IdsGridCell>

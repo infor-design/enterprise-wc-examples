@@ -13,7 +13,7 @@
   }
 </script>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-layout-grid-cell>
     <ids-text font-size="12" type="h1">Accordion</ids-text>
   </ids-layout-grid-cell>

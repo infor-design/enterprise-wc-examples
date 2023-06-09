@@ -16,7 +16,7 @@ const IdsSeparator = () => {
         </IdsGridCell>
       </IdsGrid>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Separator (Vertical)
         </ids-text>

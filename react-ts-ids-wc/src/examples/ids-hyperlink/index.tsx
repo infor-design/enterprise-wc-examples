@@ -9,12 +9,12 @@ const IdsHyperlink = () => {
     <>
       <IdsTitle>Hyperlink Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Hyperlink
         </ids-text>
       </IdsGrid>
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-hyperlink href="http://www.example.com" target="_blank">
             Normal Link
@@ -22,12 +22,12 @@ const IdsHyperlink = () => {
         </IdsGridCell>
       </IdsGrid>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Hyperlink (disabled)
         </ids-text>
       </IdsGrid>
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-hyperlink
             href="http://www.example.com"
@@ -39,12 +39,12 @@ const IdsHyperlink = () => {
         </IdsGridCell>
       </IdsGrid>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Hyperlink with Multiple Text Elements
         </ids-text>
       </IdsGrid>
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-hyperlink
             href="http://www.example.com"

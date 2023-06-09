@@ -4,7 +4,7 @@ import 'ids-enterprise-wc/components/ids-card/ids-card';
 const IdsCard = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Cards
         </ids-text>

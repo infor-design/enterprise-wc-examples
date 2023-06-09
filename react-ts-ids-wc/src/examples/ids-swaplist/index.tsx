@@ -32,7 +32,7 @@ const IdsSwapList = () => {
     <>
       <IdsTitle>SwapList Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-swaplist
             ref={swaplistRef}

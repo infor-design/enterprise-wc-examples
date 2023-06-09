@@ -8,7 +8,7 @@ const IdsUpload = () => {
     <>
       <IdsTitle>Ids Upload Example</IdsTitle>
 
-      <ids-layout-grid auto="true" gap="md">
+      <ids-layout-grid auto-fit="true" gap="md">
         <ids-layout-grid-cell>
           <ids-upload label="Single File"></ids-upload>
           <ids-upload label="Multiple Files" multiple="true"></ids-upload>

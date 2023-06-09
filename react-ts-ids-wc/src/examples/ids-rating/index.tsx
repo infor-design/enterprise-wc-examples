@@ -9,25 +9,25 @@ const IdsRating = () => {
     <>
       <IdsTitle>Rating Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h1">
           Rating (4/5 stars)
         </ids-text>
       </IdsGrid>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-rating value="4"></ids-rating>
         </IdsGridCell>
       </IdsGrid>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12" type="h2">
           Rating (3.5/5 Stars)
         </ids-text>
       </IdsGrid>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-rating value="3.5" readonly="true"></ids-rating>
         </IdsGridCell>

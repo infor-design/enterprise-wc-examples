@@ -36,7 +36,7 @@ const IdsDatePicker = () => {
     <>
       <IdsTitle>Date Picker Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-date-picker
             label="Date Field"

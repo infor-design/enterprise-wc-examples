@@ -6,7 +6,7 @@ const IdsSkipLink = () => {
   return (
     <>
       <ids-skip-link href="#main-content">Skip to Main Content</ids-skip-link>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1" id="main-content">
           Skiplink (tab into the page)
         </ids-text>

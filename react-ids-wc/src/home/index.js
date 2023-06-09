@@ -4,14 +4,16 @@ import { categories, routes } from '../settings/routes';
 
 const Home = () => {
   return (
-    <ids-layout-grid auto="true" gap="md">
+    <ids-layout-grid auto-fit="true" gap="md">
       <ids-layout-grid-cell>
         {Object.values(categories).map(category => (
           <div key={category}>
-            <ids-text type="h1" font-size="24">
-              {category}
-            </ids-text>
-            <ids-layout-grid auto="true">
+            <ids-layout-grid auto-fit="true" padding="md">
+              <ids-text type="h1" font-size="24">
+                {category}
+              </ids-text>
+            </ids-layout-grid>
+            <ids-layout-grid auto-fit="true">
               <ids-layout-grid-cell>
                 <ids-block-grid align="center">
                   {routes

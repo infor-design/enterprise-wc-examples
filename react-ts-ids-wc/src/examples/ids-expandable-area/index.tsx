@@ -27,7 +27,7 @@ const IdsExpandableArea = () => {
     <>
       <IdsTitle>Expandable Area Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-expandable-area>
             <ids-text slot="header" font-size="16">

@@ -16,7 +16,7 @@ const IdsAreaChart = () => {
     <>
       <IdsTitle>Area Chart Example</IdsTitle>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-area-chart
             ref={areaCharRef}

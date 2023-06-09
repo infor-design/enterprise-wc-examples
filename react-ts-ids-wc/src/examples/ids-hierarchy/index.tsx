@@ -11,7 +11,7 @@ const IdsHierarchy = () => {
     <>
       <IdsTitle>Ids Hierarchy Example</IdsTitle>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-hierarchy-legend>
             <ids-hierarchy-legend-item

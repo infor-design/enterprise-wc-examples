@@ -14,11 +14,11 @@ const IdsTag = () => {
 
   return (
     <>
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <ids-text font-size="12">Tags</ids-text>
       </IdsGrid>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-tag>Normal Tag</ids-tag>
           <ids-tag color="secondary">Secondary Tags</ids-tag>

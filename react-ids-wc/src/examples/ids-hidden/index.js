@@ -4,7 +4,7 @@ import 'ids-enterprise-wc/components/ids-hidden/ids-hidden';
 const IdsHidden = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Hidden
         </ids-text>

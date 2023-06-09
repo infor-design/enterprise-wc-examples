@@ -124,7 +124,7 @@ const IdsTextarea = () => {
         </IdsGridCell>
       </IdsGrid>
 
-      <IdsGrid auto>
+      <IdsGrid auto-fit>
         <IdsGridCell>
           <ids-textarea
             label="Small"

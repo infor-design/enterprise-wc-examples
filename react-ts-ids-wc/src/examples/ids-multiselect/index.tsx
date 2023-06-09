@@ -7,7 +7,7 @@ const IdsMultiselect = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-multiselect
             ref={multiSelectRef}

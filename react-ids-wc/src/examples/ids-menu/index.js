@@ -34,13 +34,13 @@ const IdsMenu = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Menu
         </ids-text>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-menu>
             <ids-menu-group>
