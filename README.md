@@ -37,7 +37,7 @@ npm run build:dist
 
 ### Vue.js 
 Starter Project: https://stackblitz.com/edit/vue
-[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/vue-ids-wc/README.md)
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/vue-ids-wc/README.MD)
 
 ### SvelteKit
 Starter Project: https://stackblitz.com/edit/svelte
