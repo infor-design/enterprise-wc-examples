@@ -45,6 +45,6 @@
 
 <ids-layout-grid auto-fit="true">
   <ids-layout-grid-cell>
-    <ids-button type="secondary" id="about-example-trigger">Show About Screen</ids-button>
+    <ids-button appearance="secondary" id="about-example-trigger">Show About Screen</ids-button>
   </ids-layout-grid-cell>
 </ids-layout-grid>

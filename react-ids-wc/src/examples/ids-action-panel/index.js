@@ -123,7 +123,7 @@ const IdsActionPanel = () => {
       <ids-layout-grid>
         <ids-layout-grid-column>
           <ids-button
-            type="secondary"
+            appearance="secondary"
             onClick={() => {
               actionPanelRef.current.show();
             }}

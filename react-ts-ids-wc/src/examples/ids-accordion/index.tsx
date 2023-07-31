@@ -51,7 +51,7 @@ const IdsAccordion = () => {
         </IdsGridCell>
         <IdsGridCell>
           <ids-button
-            type="primary"
+            appearance="primary"
             onClick={() => setExpanded(!expanded)}
           >
             <span>{!expanded ? 'Expand All' : 'Collapse All'}</span>

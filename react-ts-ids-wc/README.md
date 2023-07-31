@@ -44,6 +44,14 @@ npm install ids-enterprise-wc
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap";
 ```
 
+**3. Add the theme file
+
+Locate the files in `node_modules/ids-enterprise-wc/themes` and copy them to `src/assets/themes`
+
+Then import them in App.css as `@import './assets/themes/ids-theme-default-light.css';`
+
+May be better ways to do this. As react does'nt like importing from node_modules/packages.
+
 **3. Add the Ids Web Component type declarations**
 
 Copy `src/declarations.d.ts` into your project's `src/` dir, so Typescript will recognize the Ids Web Components custom html-tags.

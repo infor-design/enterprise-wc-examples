@@ -33,7 +33,7 @@
 
 <ids-layout-grid auto-fit="true">
   <ids-layout-grid-cell>
-    <ids-button id="popup-trigger-btn" type="secondary">
+    <ids-button id="popup-trigger-btn" appearance="secondary">
       <span>Trigger a Popup</span>
     </ids-button>
   </ids-layout-grid-cell>

@@ -1,6 +1,5 @@
 import React from 'react';
 import type IdsButtonType from 'ids-enterprise-wc/components/ids-button/ids-button';
-// import type { IdsButtonType, IdsButtonIconAlignment } from 'ids-enterprise-wc/components/ids-button/ids-button-common';
 
 export interface IdsButtonClickEvent extends MouseEvent {
   target: IdsButtonType;
@@ -12,7 +11,7 @@ export interface IdsButtonProps {
   icon?: string;
   role?: string;
   iconAlign?: IdsButtonType['iconAlign'];
-  type?: IdsButtonType['type'];
+  appearance?: IdsButtonType['appearance'];
   onClick?: (evt: IdsButtonClickEvent) => void;
   children: any;
   noPadding?: boolean;
@@ -36,7 +35,7 @@ export const IdsButton: React.FC<IdsButtonProps> = (props) => {
       disabled={props.disabled}
       no-padding={props.noPadding}
       icon={props.icon}
-      type={props.type}
+      appearance={props.appearance}
       onClick={(evt: IdsButtonClickEvent) => props.onClick?.(evt)}
     >
       {props.children}

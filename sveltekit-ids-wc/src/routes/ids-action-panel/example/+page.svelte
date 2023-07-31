@@ -125,6 +125,6 @@
 
 <ids-layout-grid>
   <ids-layout-grid-column>
-    <ids-button type="secondary" id="cap-trigger-btn">Open Action Panel</ids-button>
+    <ids-button appearance="secondary" id="cap-trigger-btn">Open Action Panel</ids-button>
   </ids-layout-grid-column>
 </ids-layout-grid>

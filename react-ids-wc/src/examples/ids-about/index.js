@@ -32,7 +32,7 @@ const IdsAbout = () => {
       <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-button
-            type="secondary"
+            appearance="secondary"
             // Trigger ids-about visibility with React onClick synthetic event
             onClick={() => aboutRef.current?.show()}
             disabled={aboutRef.current?.visible}

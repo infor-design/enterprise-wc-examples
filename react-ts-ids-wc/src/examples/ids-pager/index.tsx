@@ -32,7 +32,7 @@ const IdsPager = () => {
       <IdsGrid cols="3" gap="lg">
         <IdsGridCell>
           <ids-button
-            type="secondary"
+            appearance="secondary"
             // Changing 'disabled' attribute
             onClick={() => {
               pagerRef.current?.setAttribute('disabled', String(!pagerRef.current.disabled))

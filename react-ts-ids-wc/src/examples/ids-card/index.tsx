@@ -8,7 +8,7 @@ const IdsCard = () => {
     <>
       <IdsTitle>Cards Example</IdsTitle>
 
-      <IdsGrid cols="2" gap="md">
+      <IdsGrid cols="1" gap="md" padding-x="md">
         <IdsGridCell>
           <ids-card>
             <div slot="card-header">
@@ -17,16 +17,11 @@ const IdsCard = () => {
               </ids-text>
             </div>
             <div slot="card-content"></div>
-          </ids-card>
-        </IdsGridCell>
-        <IdsGridCell>
-          <ids-card>
-            <div slot="card-header">
-              <ids-text font-size="20" type="h2">
-                Card Title Two
+            <div slot="card-footer">
+              <ids-text font-size="20" type="h2" overflow="ellipsis" tooltip="true">
+                Card footer One
               </ids-text>
             </div>
-            <div slot="card-content"></div>
           </ids-card>
         </IdsGridCell>
         <IdsGridCell>
@@ -34,15 +29,6 @@ const IdsCard = () => {
             <div slot="card-content">
               <ids-text font-size="16" type="p">
                 Actionable Button Card
-              </ids-text>
-            </div>
-          </ids-card>
-        </IdsGridCell>
-        <IdsGridCell>
-          <ids-card actionable="true" href="https://www.example.com" target="_self">
-            <div slot="card-content">
-              <ids-text font-size="16" type="p">
-                Actionable Link Card
               </ids-text>
             </div>
           </ids-card>

@@ -43,7 +43,7 @@ const IdsFieldset = () => {
               id="company-address"
             ></ids-input>
             <ids-checkbox label="Checked" checked="true"></ids-checkbox>
-            <ids-button type="primary">Submit</ids-button>
+            <ids-button appearance="primary">Submit</ids-button>
           </ids-fieldset>
         </form>
       </ids-layout-grid>

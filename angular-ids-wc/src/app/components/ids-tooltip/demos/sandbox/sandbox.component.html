@@ -6,13 +6,13 @@
   </ids-layout-grid>
   <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
-      <ids-button id="tooltip-top" type="secondary">Tooltip on Top</ids-button>
+      <ids-button id="tooltip-top" appearance="secondary">Tooltip on Top</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-top'" placement="top">Additional Information</ids-tooltip>
-      <ids-button id="tooltip-bottom" type="secondary">Tooltip on Bottom</ids-button>
+      <ids-button id="tooltip-bottom" appearance="secondary">Tooltip on Bottom</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-bottom'" placement="bottom">Additional Information</ids-tooltip>
-      <ids-button id="tooltip-left" type="secondary">Tooltip on Left</ids-button>
+      <ids-button id="tooltip-left" appearance="secondary">Tooltip on Left</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-left'" placement="left">Additional Information</ids-tooltip>
-      <ids-button id="tooltip-right" type="secondary">Tooltip on Right</ids-button>
+      <ids-button id="tooltip-right" appearance="secondary">Tooltip on Right</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-right'" placement="right">Additional Information</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
@@ -22,7 +22,7 @@
   </ids-layout-grid>
   <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
-      <ids-button id="tooltip-disabed" type="secondary" disabled="true">Tooltip on Disabled</ids-button>
+      <ids-button id="tooltip-disabed" appearance="secondary" disabled="true">Tooltip on Disabled</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-disabed'" placement="top">Additional Information</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
@@ -32,9 +32,9 @@
   </ids-layout-grid>
   <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
-      <ids-button id="tooltip-click" type="secondary">Tooltip on Click</ids-button>
+      <ids-button id="tooltip-click" appearance="secondary">Tooltip on Click</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-click'" trigger="click">Additional Information 1</ids-tooltip>
-      <ids-button id="tooltip-focus" type="secondary">Tooltip on Focus</ids-button>
+      <ids-button id="tooltip-focus" appearance="secondary">Tooltip on Focus</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-focus'" trigger="focus">Additional Information 2</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
@@ -44,7 +44,7 @@
   </ids-layout-grid>
   <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
-      <ids-button id="tooltip-parts" type="secondary">Custom Tooltip Css</ids-button>
+      <ids-button id="tooltip-parts" appearance="secondary">Custom Tooltip Css</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-parts'" placement="top">Customized Text</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
@@ -54,8 +54,8 @@
   </ids-layout-grid>
   <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
-      <ids-button id="tooltip-shared-1" type="secondary">Button 1</ids-button>
-      <ids-button id="tooltip-shared-2" type="secondary">Button 2</ids-button>
+      <ids-button id="tooltip-shared-1" appearance="secondary">Button 1</ids-button>
+      <ids-button id="tooltip-shared-2" appearance="secondary">Button 2</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-shared-1, #tooltip-shared-2'" placement="top">Shared Tooltip</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
@@ -65,7 +65,7 @@
   </ids-layout-grid>
   <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
-      <ids-button id="tooltip-async" type="secondary">Ajax Tooltip Content</ids-button>
+      <ids-button id="tooltip-async" appearance="secondary">Ajax Tooltip Content</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-async'" placement="top">Shared Tooltip</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
@@ -75,7 +75,7 @@
   </ids-layout-grid>
   <ids-layout-grid cols="2" gap="md">
     <ids-layout-grid-cell>
-      <ids-button type="secondary" id="test-button-mixin" tooltip="Additional Information">Normal Button</ids-button>
+      <ids-button appearance="secondary" id="test-button-mixin" tooltip="Additional Information">Normal Button</ids-button>
       <br/>
       <br/>
       <ids-input type="text" label="Text Field" tooltip="Additional Information"></ids-input>

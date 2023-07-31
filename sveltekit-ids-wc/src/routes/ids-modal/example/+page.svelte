@@ -35,7 +35,7 @@
 
 <ids-modal id="my-modal" aria-labelledby="my-modal-title">
   <ids-text slot="title" font-size="24" type="h2" id="my-modal-title">Active IDS Modal</ids-text>
-  <ids-modal-button slot="buttons" id="modal-close-btn" type="primary">
+  <ids-modal-button slot="buttons" id="modal-close-btn" appearance="primary">
     <span>OK</span>
   </ids-modal-button>
   <ids-text text-align="start">This is an active IDS Modal component</ids-text>
@@ -47,7 +47,7 @@
 
 <ids-layout-grid auto-fit="true">
   <ids-layout-grid-cell>
-    <ids-button id="modal-trigger-btn" type="secondary">
+    <ids-button id="modal-trigger-btn" appearance="secondary">
       <span>Trigger a Modal</span>
     </ids-button>
   </ids-layout-grid-cell>

@@ -22,7 +22,7 @@ const IdsTooltip = () => {
       </ids-layout-grid>
       <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
-          <ids-button ref={triggerRef} type="secondary">Hover to show a Tooltip</ids-button>
+          <ids-button ref={triggerRef} appearance="secondary">Hover to show a Tooltip</ids-button>
           <ids-tooltip ref={tooltipRef}>
             Additional Information
           </ids-tooltip>

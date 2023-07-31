@@ -85,10 +85,10 @@ const IdsCheckbox = () => {
             // Pass state value to web component attribute
             indeterminate={indeterminate}
           ></ids-checkbox>
-          <ids-button type="primary" onClick={() => setIndeterminate(true)}>
+          <ids-button appearance="primary" onClick={() => setIndeterminate(true)}>
             <span>Set</span>
           </ids-button>
-          <ids-button type="secondary" onClick={() => setIndeterminate(false)}>
+          <ids-button appearance="secondary" onClick={() => setIndeterminate(false)}>
             <span>Remove</span>
           </ids-button>
 

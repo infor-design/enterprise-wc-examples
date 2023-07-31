@@ -10,10 +10,10 @@ const IdsButtonExample = () => {
     <>
       <IdsTitle>Buttons Example</IdsTitle>
 
-      <IdsGrid cols="6" gap="sm">
+      <IdsGrid cols="1" gap="sm">
         <IdsGridCell>
           <IdsButton
-            type="primary"
+            appearance="primary"
             onClick={({ target }) => {
               target.text = 'Clicked';
             }}
@@ -26,7 +26,7 @@ const IdsButtonExample = () => {
           <IdsButton
             icon="rocket"
             iconAlign="end"
-            type="secondary"
+            appearance="secondary"
             onClick={(e) => { e.target.text = 'Clicked'; }}
           >
             <span>Secondary Button</span>

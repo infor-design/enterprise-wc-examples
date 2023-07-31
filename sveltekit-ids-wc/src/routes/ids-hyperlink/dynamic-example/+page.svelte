@@ -63,7 +63,7 @@
   <ids-layout-grid-cell>
     {#each links as link}
       <ids-button 
-        type="secondary"
+        appearance="secondary"
         data-href={link.href}
         data-link-text={link.linkText}
         on:click={handleHrefChange}>{link.buttonText}</ids-button>&nbsp;

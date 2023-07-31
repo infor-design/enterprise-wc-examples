@@ -28,10 +28,10 @@ const IdsAlert = () => {
       </IdsGrid>
       <IdsGrid auto-fit>
         <IdsGridCell>
-          <IdsButton type="secondary" onClick={() => setItems(items.slice(0, -1))}>
+          <IdsButton appearance="secondary" onClick={() => setItems(items.slice(0, -1))}>
             <span>Remove item</span>
           </IdsButton>
-          <IdsButton type="secondary" onClick={() => setItems(data)}>
+          <IdsButton appearance="secondary" onClick={() => setItems(data)}>
             <span>Reset</span>
           </IdsButton>
         </IdsGridCell>

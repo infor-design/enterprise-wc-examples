@@ -16,7 +16,7 @@ const IdsAboutExample = () => {
       <IdsGrid auto-fit>
         <IdsGridCell>
           <IdsButton
-            type="secondary"
+            appearance="secondary"
             onClick={() => setModalOpen(!modalOpen)}
             disabled={modalOpen}
           >

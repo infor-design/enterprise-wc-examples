@@ -124,7 +124,7 @@ const IdsLookup = () => {
               <ids-modal-button
                 slot="buttons"
                 id="modal-cancel-btn"
-                type="primary"
+                appearance="primary"
               >
                 <span>Apply</span>
               </ids-modal-button>

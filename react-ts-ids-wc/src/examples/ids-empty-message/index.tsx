@@ -25,7 +25,7 @@ const IdsEmptyMessage = () => {
                 <ids-text label="true" slot="description">
                   Description of empty message that explains why and possible contain a hyperlink.
                 </ids-text>
-                <ids-button class="action-button" slot="button" type="primary">
+                <ids-button class="action-button" slot="button" appearance="primary">
                   <span>Action</span>
                 </ids-button>
               </ids-empty-message>

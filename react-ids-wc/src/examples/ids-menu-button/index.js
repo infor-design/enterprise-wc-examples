@@ -11,7 +11,7 @@ const IdsMenuButton = () => {
       </ids-layout-grid>
       <ids-layout-grid cols="4" gap="md">
         <ids-layout-grid-cell>
-          <ids-menu-button id="menu-button" icon="settings" type="tertiary" menu="my-menu" dropdown-icon="dropdown">
+          <ids-menu-button id="menu-button" icon="settings" appearance="tertiary" menu="my-menu" dropdown-icon="dropdown">
             <span>Settings</span>
           </ids-menu-button>
           <ids-popup-menu id="my-menu" target="#menu-button" trigger-type="click">

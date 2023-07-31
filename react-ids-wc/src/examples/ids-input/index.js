@@ -127,13 +127,13 @@ const IdsInput = () => {
             value="Some text"
           ></ids-input>
 
-          <ids-button id="btn-input-enable" type="secondary">
+          <ids-button id="btn-input-enable" appearance="secondary">
             <span>Enable</span>
           </ids-button>
-          <ids-button id="btn-input-disable" type="secondary">
+          <ids-button id="btn-input-disable" appearance="secondary">
             <span>Disable</span>
           </ids-button>
-          <ids-button id="btn-input-readonly" type="secondary">
+          <ids-button id="btn-input-readonly" appearance="secondary">
             <span>Readonly</span>
           </ids-button>
         </ids-layout-grid-cell>
