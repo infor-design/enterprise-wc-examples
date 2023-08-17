@@ -34,8 +34,8 @@
                           font-weight="bold"
                           color="slate-100"
                           mode="light"
-                          version="new">{component.type}</ids-text>
-                        <ids-text type="h2" font-size="16" color="slate-60" mode="light" version="new">{component.description}</ids-text>
+                         >{component.type}</ids-text>
+                        <ids-text type="h2" font-size="16" color="slate-60" mode="light">{component.description}</ids-text>
                       </div>
                     </ids-card>
                   </ids-block-grid-item>
