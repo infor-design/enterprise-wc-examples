@@ -4,13 +4,13 @@ import 'ids-enterprise-wc/components/ids-editor/ids-editor';
 const IdsEditor = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Editor
         </ids-text>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-editor id="editor-demo" label="Ids Editor">
             <p>

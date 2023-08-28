@@ -5,13 +5,13 @@ import 'ids-enterprise-wc/components/ids-upload/ids-upload';
 const IdsUpload = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Ids Upload
         </ids-text>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true" gap="md">
+      <ids-layout-grid auto-fit="true" gap="md">
         <ids-layout-grid-cell>
           <ids-upload label="Single File"></ids-upload>
           <ids-upload label="Multiple Files" multiple="true"></ids-upload>

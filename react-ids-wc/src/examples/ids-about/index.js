@@ -21,7 +21,7 @@ const IdsAbout = () => {
         </ids-text>
       </ids-about>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-text font-size="12" type="h1">
             About
@@ -29,10 +29,10 @@ const IdsAbout = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-button
-            type="secondary"
+            appearance="secondary"
             // Trigger ids-about visibility with React onClick synthetic event
             onClick={() => aboutRef.current?.show()}
             disabled={aboutRef.current?.visible}

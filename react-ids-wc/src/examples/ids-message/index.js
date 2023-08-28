@@ -15,15 +15,15 @@ const IdsMessage = () => {
           This application has experienced a system error due to the lack of
           internet access. Please restart the application in order to proceed.
         </ids-text>
-        <ids-modal-button slot="buttons" type="secondary" cancel>
+        <ids-modal-button slot="buttons" appearance="secondary" cancel>
           Cancel
         </ids-modal-button>
-        <ids-modal-button slot="buttons" type="primary">
+        <ids-modal-button slot="buttons" appearance="primary">
           Confirm
         </ids-modal-button>
       </ids-message>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-text font-size="12" type="h1">
             Message
@@ -31,10 +31,10 @@ const IdsMessage = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-button
-            type="secondary"
+            appearance="secondary"
             // Trigger ids-message visibility with React onClick synthetic event
             onClick={() => {
               messageRef.current?.show()

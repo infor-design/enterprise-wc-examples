@@ -37,13 +37,15 @@ export class ExampleComponent implements AfterViewInit {
       name: 'Description',
       field: 'description',
       sortable: true,
-      formatter: this.dataGrid.nativeElement.formatters.text
+      formatter: this.dataGrid.nativeElement.formatters.text,
+      filterType: this.dataGrid.nativeElement.filters.text
     });
     this.columns.push({
       id: 'ledger',
       name: 'Ledger',
       field: 'ledger',
-      formatter: this.dataGrid.nativeElement.formatters.text
+      formatter: this.dataGrid.nativeElement.formatters.text,
+      filterType: this.dataGrid.nativeElement.filters.text
     });
     this.columns.push({
       id: 'publishDate',
@@ -68,13 +70,15 @@ export class ExampleComponent implements AfterViewInit {
       id: 'bookCurrency',
       name: 'Currency',
       field: 'bookCurrency',
-      formatter: this.dataGrid.nativeElement.formatters.text
+      formatter: this.dataGrid.nativeElement.formatters.text,
+      filterType: this.dataGrid.nativeElement.filters.text
     });
     this.columns.push({
       id: 'transactionCurrency',
       name: 'Transaction Currency',
       field: 'transactionCurrency',
       formatter: this.dataGrid.nativeElement.formatters.text,
+      filterType: this.dataGrid.nativeElement.filters.text
     });
     this.columns.push({
       id: 'integer',
@@ -94,25 +98,29 @@ export class ExampleComponent implements AfterViewInit {
       id: 'postHistory',
       name: 'Post History',
       field: 'postHistory',
-      formatter: this.dataGrid.nativeElement.formatters.text
+      formatter: this.dataGrid.nativeElement.formatters.text,
+      filterType: this.dataGrid.nativeElement.filters.text
     });
     this.columns.push({
       id: 'active',
       name: 'Active',
       field: 'active',
-      formatter: this.dataGrid.nativeElement.formatters.text
+      formatter: this.dataGrid.nativeElement.formatters.text,
+      filterType: this.dataGrid.nativeElement.filters.text
     });
     this.columns.push({
       id: 'convention',
       name: 'Convention',
       field: 'convention',
-      formatter: this.dataGrid.nativeElement.formatters.text
+      formatter: this.dataGrid.nativeElement.formatters.text,
+      filterType: this.dataGrid.nativeElement.filters.text
     });
     this.columns.push({
       id: 'methodSwitch',
       name: 'Method Switch',
       field: 'methodSwitch',
-      formatter: this.dataGrid.nativeElement.formatters.text
+      formatter: this.dataGrid.nativeElement.formatters.text,
+      filterType: this.dataGrid.nativeElement.filters.text
     });
     this.columns.push({
       id: 'trackDeprecationHistory',

@@ -111,7 +111,6 @@ import 'ids-enterprise-wc/components/ids-block-grid/ids-block-grid';
 
 const ThemeSwitcher = () => (
   <>
-    <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
     <Outlet />
   </>
 );
@@ -120,7 +119,7 @@ const App = () => {
   return (
     <Router>
       <Suspense fallback="Loading...">
-        <ids-container hidden locale="en-US">
+        <ids-container hidden locale="en-US" padding="8">
           <Routes>
             {/* Examples where theme switcher should appear by default */}
             <Route element={<ThemeSwitcher />}>

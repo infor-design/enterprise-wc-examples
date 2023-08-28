@@ -1,11 +1,11 @@
 <ids-container language="en" locale="en-US" padding="8" hidden>
-  <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
   
   <ids-layout-grid>
     <ids-text font-size="12" type="h1">Lookup</ids-text>
   </ids-layout-grid>
 
-  <ids-layout-grid auto="true">
+  <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
       <ids-lookup 
         #lookup1 
@@ -25,7 +25,7 @@
       <ids-lookup id="lookup-5" label="Custom Lookup">
         <ids-modal slot="lookup-modal" id="custom-lookup-modal" aria-labelledby="custom-lookup-modal-title">
           <ids-text slot="title" font-size="24" type="h2" id="lookup-modal-title">Custom Lookup Modal</ids-text>
-          <ids-modal-button slot="buttons" id="modal-cancel-btn" type="primary">
+          <ids-modal-button slot="buttons" id="modal-cancel-btn" appearance="primary">
             <span>Apply</span>
           </ids-modal-button>
         </ids-modal>

@@ -37,14 +37,14 @@
   <ids-text id="about-example-content" slot="content" type="p">Fashionable components for fashionable applications.</ids-text>
 </ids-about>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-layout-grid-cell>
     <ids-text font-size="12" type="h1">About</ids-text>
   </ids-layout-grid-cell>
 </ids-layout-grid>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-layout-grid-cell>
-    <ids-button type="secondary" id="about-example-trigger">Show About Screen</ids-button>
+    <ids-button appearance="secondary" id="about-example-trigger">Show About Screen</ids-button>
   </ids-layout-grid-cell>
 </ids-layout-grid>

@@ -19,7 +19,7 @@
 
 <ids-container padding="8">
   {#if $appStore.allowThemeSwitcher}
-    <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
+    <ids-theme-switcher mode="light" self-managed></ids-theme-switcher>
   {/if}
   <slot></slot>
 </ids-container>

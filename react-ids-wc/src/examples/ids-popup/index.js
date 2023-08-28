@@ -29,14 +29,14 @@ const IdsPopup = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Popup
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
-          <ids-button type="secondary" ref={triggerRef}>
+          <ids-button appearance="secondary" ref={triggerRef}>
             <span>Trigger a Popup</span>
           </ids-button>
         </ids-layout-grid-cell>

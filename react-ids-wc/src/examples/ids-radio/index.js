@@ -131,10 +131,10 @@ const IdsRadio = () => {
               disabled="true"
             ></ids-radio>
           </ids-radio-group>
-          <ids-button type="secondary" onClick={() => radioGroupRef.current.clear()}>
+          <ids-button appearance="secondary" onClick={() => radioGroupRef.current.clear()}>
             <span>Clear</span>
           </ids-button>
-          <ids-button type="secondary" onClick={() => radioGroupRef.current.checkValidation()}>
+          <ids-button appearance="secondary" onClick={() => radioGroupRef.current.checkValidation()}>
             <span>Validate</span>
           </ids-button>
 

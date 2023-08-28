@@ -5,7 +5,7 @@ import 'ids-enterprise-wc/components/ids-wizard/ids-wizard';
 const IdsWizard = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Wizard
         </ids-text>

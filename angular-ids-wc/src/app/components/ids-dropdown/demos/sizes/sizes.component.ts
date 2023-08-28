@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sizes',
+  selector: 'app-dropdown-sizes',
   templateUrl: './sizes.component.html',
   styleUrls: ['./sizes.component.css']
 })

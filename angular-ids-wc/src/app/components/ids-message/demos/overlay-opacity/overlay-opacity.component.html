@@ -1,12 +1,12 @@
 <ids-container language="en" locale="en-US" padding="8" hidden>
-  <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
   
   <!-- Opacity 0.2 Message -->
   <ids-message #messageOpacity2 id="message-opacity-2" opacity="0.2" status="error">
     <ids-text slot="title" font-size="24" type="h2" id="message-opacity-2-title">Opacity 20%</ids-text>
     <ids-text class="demo-contents" align="left">This application has experienced a system error due to the lack of internet access.
       Please restart the application in order to proceed.</ids-text>
-    <ids-modal-button slot="buttons" type="primary" id="message-opacity-2-ok">OK</ids-modal-button>
+    <ids-modal-button slot="buttons" appearance="primary" id="message-opacity-2-ok">OK</ids-modal-button>
   </ids-message>
 
   <!-- Opacity 0.4 Message -->
@@ -14,7 +14,7 @@
     <ids-text slot="title" font-size="24" type="h2" id="message-opacity-4-title">Opacity 40%</ids-text>
     <ids-text class="demo-contents" align="left">This application has experienced a system error due to the lack of internet access.
       Please restart the application in order to proceed.</ids-text>
-    <ids-modal-button slot="buttons" type="primary" id="message-opacity-4-ok">OK</ids-modal-button>
+    <ids-modal-button slot="buttons" appearance="primary" id="message-opacity-4-ok">OK</ids-modal-button>
   </ids-message>
 
   <!-- Opacity 0.6 Message -->
@@ -22,7 +22,7 @@
     <ids-text slot="title" font-size="24" type="h2" id="message-opacity-6-title">Opacity 60%</ids-text>
     <ids-text class="demo-contents" align="left">This application has experienced a system error due to the lack of internet access.
       Please restart the application in order to proceed.</ids-text>
-    <ids-modal-button slot="buttons" type="primary" id="message-opacity-6-ok">OK</ids-modal-button>
+    <ids-modal-button slot="buttons" appearance="primary" id="message-opacity-6-ok">OK</ids-modal-button>
   </ids-message>
 
   <!-- Opacity 0.8 Message -->
@@ -30,7 +30,7 @@
     <ids-text slot="title" font-size="24" type="h2" id="message-opacity-8-title">Opacity 80%</ids-text>
     <ids-text class="demo-contents" align="left">This application has experienced a system error due to the lack of internet access.
       Please restart the application in order to proceed.</ids-text>
-    <ids-modal-button slot="buttons" type="primary" id="message-opacity-8-ok">OK</ids-modal-button>
+    <ids-modal-button slot="buttons" appearance="primary" id="message-opacity-8-ok">OK</ids-modal-button>
   </ids-message>
 
   <!-- Opacity 1 Message -->
@@ -38,32 +38,32 @@
     <ids-text slot="title" font-size="24" type="h2" id="message-opacity-10-title">Opacity 100%</ids-text>
     <ids-text class="demo-contents" align="left">This application has experienced a system error due to the lack of internet access.
       Please restart the application in order to proceed.</ids-text>
-    <ids-modal-button slot="buttons" type="primary" id="message-opacity-10-ok">OK</ids-modal-button>
+    <ids-modal-button slot="buttons" appearance="primary" id="message-opacity-10-ok">OK</ids-modal-button>
   </ids-message>
 
   <!-- In-page controls for the messages are below -->
 
-  <ids-layout-grid auto="true">
+  <ids-layout-grid auto-fit="true">
     <ids-layout-grid-cell>
       <ids-text font-size="12" type="h1">Message (Opacity)</ids-text>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid auto="true" cols="1" gap="md">
+  <ids-layout-grid auto-fit="true" cols="1" gap="md">
     <ids-layout-grid-cell>
-      <ids-button #messageOpacity2Trigger type="secondary" id="message-opacity-2-trigger">Opacity 0.2</ids-button>
+      <ids-button #messageOpacity2Trigger appearance="secondary" id="message-opacity-2-trigger">Opacity 0.2</ids-button>
     </ids-layout-grid-cell>
     <ids-layout-grid-cell>
-      <ids-button #messageOpacity4Trigger type="secondary" id="message-opacity-4-trigger">Opacity 0.4</ids-button>
+      <ids-button #messageOpacity4Trigger appearance="secondary" id="message-opacity-4-trigger">Opacity 0.4</ids-button>
     </ids-layout-grid-cell>
     <ids-layout-grid-cell>
-      <ids-button #messageOpacity6Trigger type="secondary" id="message-opacity-6-trigger">Opacity 0.6</ids-button>
+      <ids-button #messageOpacity6Trigger appearance="secondary" id="message-opacity-6-trigger">Opacity 0.6</ids-button>
     </ids-layout-grid-cell>
     <ids-layout-grid-cell>
-      <ids-button #messageOpacity8Trigger type="secondary" id="message-opacity-8-trigger">Opacity 0.8</ids-button>
+      <ids-button #messageOpacity8Trigger appearance="secondary" id="message-opacity-8-trigger">Opacity 0.8</ids-button>
     </ids-layout-grid-cell>
     <ids-layout-grid-cell>
-      <ids-button #messageOpacity10Trigger type="secondary" id="message-opacity-10-trigger">Opacity 1</ids-button>
+      <ids-button #messageOpacity10Trigger appearance="secondary" id="message-opacity-10-trigger">Opacity 1</ids-button>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 </ids-container>

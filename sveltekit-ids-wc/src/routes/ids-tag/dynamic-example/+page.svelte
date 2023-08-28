@@ -153,11 +153,11 @@
   }
 </style>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-text font-size="12">Dynamic Tag (Svelte)</ids-text>
 </ids-layout-grid>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-layout-grid-cell>
     {#if $writableTagArray.length > 0}
       {#each $writableTagArray as tag, i}
@@ -218,12 +218,12 @@
       </p>
 
       <p>
-        <ids-button id="add" type="secondary" on:click={add}>Add new tag</ids-button>
+        <ids-button id="add" appearance="secondary" on:click={add}>Add new tag</ids-button>
         <ids-button id="deselect"
-          type="secondary"
+          appearance="secondary"
           disabled={hasNoCurrentTag}
           on:click={deselect}>Deselect Current Tag</ids-button>
-        <ids-button type="secondary" id="reset" on:click={reset}>Remove all tags</ids-button>
+        <ids-button appearance="secondary" id="reset" on:click={reset}>Remove all tags</ids-button>
       </p>
     </form>
   </ids-layout-grid-cell>

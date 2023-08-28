@@ -31,7 +31,7 @@ describe('ids-checkbox e2e tests', () => {
   });
 
   it('trigger buttons should toggle indeterminate ', async () => {
-    await page.click('ids-button[type="secondary"]');
+    await page.click('ids-button[appearance="secondary"]');
     let indeterminate = await page.$eval(
       'ids-checkbox[label="Indeterminate"]',
       element => element.shadowRoot.querySelector('input[type="checkbox"]').classList.contains('indeterminate')
@@ -39,7 +39,7 @@ describe('ids-checkbox e2e tests', () => {
 
     expect(indeterminate).toBeFalsy();
 
-    await page.click('ids-button[type="primary"]');
+    await page.click('ids-button[appearance="primary"]');
     indeterminate = await page.$eval(
       'ids-checkbox[label="Indeterminate"]',
       element => element.shadowRoot.querySelector('input[type="checkbox"]').classList.contains('indeterminate')

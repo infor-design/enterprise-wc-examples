@@ -13,7 +13,7 @@ const IdsModal = () => {
         </ids-text>
         <ids-modal-button
           slot="buttons"
-          type="primary"
+          appearance="primary"
           onClick={() => {
             modalRef.current?.hide()
           }}
@@ -23,15 +23,15 @@ const IdsModal = () => {
         <ids-text type="p">This is an active IDS Modal component</ids-text>
       </ids-modal>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Modal
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-button
-            type="secondary"
+            appearance="secondary"
             // Trigger ids-modal visibility with React onClick synthetic event
             onClick={() => {
               modalRef.current?.show()

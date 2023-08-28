@@ -81,7 +81,7 @@ const IdsLookup = () => {
         </ids-text>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-lookup
             ref={lookupRef}
@@ -125,7 +125,7 @@ const IdsLookup = () => {
               <ids-modal-button
                 slot="buttons"
                 id="modal-cancel-btn"
-                type="primary"
+                appearance="primary"
               >
                 <span>Apply</span>
               </ids-modal-button>

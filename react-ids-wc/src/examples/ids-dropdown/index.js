@@ -24,7 +24,7 @@ const IdsDropdown = () => {
         </ids-text>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-dropdown label="Normal Dropdown with Dirty Tracker" value="ca" dirty-tracker="true">
             <ids-list-box>

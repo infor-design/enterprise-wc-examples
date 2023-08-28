@@ -23,7 +23,7 @@ const IdsButton = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Buttons
         </ids-text>
@@ -31,7 +31,7 @@ const IdsButton = () => {
       <ids-layout-grid cols="4" gap="md">
         <ids-layout-grid-cell>
           <ids-button
-            type="primary"
+            appearance="primary"
             onClick={e => {
               e.target.text = 'Clicked';
             }}
@@ -41,7 +41,7 @@ const IdsButton = () => {
         </ids-layout-grid-cell>
 
         <ids-layout-grid-cell>
-          <ids-button type="secondary" ref={buttonRef}>
+          <ids-button appearance="secondary" ref={buttonRef}>
             <span>Manually attached event listener</span>
           </ids-button>
         </ids-layout-grid-cell>

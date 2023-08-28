@@ -16,7 +16,7 @@ const IdsAccordion = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-text font-size="12" type="h1">
             Accordion
@@ -54,7 +54,7 @@ const IdsAccordion = () => {
         </ids-layout-grid-cell>
         <ids-layout-grid-cell>
           <ids-button
-            type="primary"
+            appearance="primary"
             onClick={() => setExpanded(!expanded)}
           >
             <span>{!expanded ? 'Expand All' : 'Collapse All'}</span>

@@ -1,11 +1,11 @@
 <template>
-  <ids-container language="en" locale="en-US">
-    <ids-layout-grid auto="true">
+  <ids-container language="en" locale="en-US" padding="8">
+    <ids-layout-grid auto-fit="true">
       <ids-layout-grid-cell>
         <ids-text font-size="12">{{ title1 }}</ids-text>
       </ids-layout-grid-cell>
     </ids-layout-grid>
-    <ids-layout-grid auto="true">
+    <ids-layout-grid auto-fit="true">
       <ids-layout-grid-cell>
         <ids-tag v-for="(tag, index) in tagList" :key="index" :color="tag.color">{{ tag.label }}</ids-tag>
       </ids-layout-grid-cell>
@@ -22,12 +22,12 @@
       </ids-layout-grid-cell>
     </ids-layout-grid>
 
-   <ids-layout-grid auto="true">
+   <ids-layout-grid auto-fit="true">
       <ids-layout-grid-cell>
         <ids-text font-size="12">{{ title3 }}</ids-text>
       </ids-layout-grid-cell>
    </ids-layout-grid>
-     <ids-layout-grid auto="true">
+     <ids-layout-grid auto-fit="true">
       <ids-layout-grid-cell>
         <ids-dropdown id="dropdown-1" label="Normal Dropdown with Dirty Tracker" :value="dropdownValue" dirty-tracker="true">
           <ids-list-box>

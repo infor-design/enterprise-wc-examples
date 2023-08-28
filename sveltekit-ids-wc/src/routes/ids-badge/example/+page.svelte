@@ -6,11 +6,11 @@
   });
 </script>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-text font-size="12" type="h1">Badges</ids-text>
 </ids-layout-grid>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-layout-grid-cell>
     <ids-badge>5</ids-badge>
     <ids-badge color="error">1500</ids-badge>

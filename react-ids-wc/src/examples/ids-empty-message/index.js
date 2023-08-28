@@ -4,13 +4,13 @@ import 'ids-enterprise-wc/components/ids-empty-message/ids-empty-message';
 const IdsEmptyMessage = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Empty Message Icons
         </ids-text>
       </ids-layout-grid>
       <ids-layout-grid cols="3" gap="md" class="icon-examples"></ids-layout-grid>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Display Options
         </ids-text>
@@ -26,7 +26,7 @@ const IdsEmptyMessage = () => {
                 <ids-text label="true" slot="description">
                   Description of empty message that explains why and possible contain a hyperlink.
                 </ids-text>
-                <ids-button class="action-button" slot="button" type="primary">
+                <ids-button class="action-button" slot="button" appearance="primary">
                   <span>Action</span>
                 </ids-button>
               </ids-empty-message>

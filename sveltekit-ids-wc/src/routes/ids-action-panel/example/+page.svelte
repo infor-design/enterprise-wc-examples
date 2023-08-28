@@ -40,7 +40,7 @@
   });
 </script>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-layout-grid-cell>
     <ids-text font-size="12" type="h1">Action Panel</ids-text>
   </ids-layout-grid-cell>
@@ -125,6 +125,6 @@
 
 <ids-layout-grid>
   <ids-layout-grid-column>
-    <ids-button type="secondary" id="cap-trigger-btn">Open Action Panel</ids-button>
+    <ids-button appearance="secondary" id="cap-trigger-btn">Open Action Panel</ids-button>
   </ids-layout-grid-column>
 </ids-layout-grid>

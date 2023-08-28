@@ -27,13 +27,13 @@
   }
 </style>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-text font-size="12" type="h1">IDS Popup (Imported into Svelte)</ids-text>
 </ids-layout-grid>
 
-<ids-layout-grid auto="true">
+<ids-layout-grid auto-fit="true">
   <ids-layout-grid-cell>
-    <ids-button id="popup-trigger-btn" type="secondary">
+    <ids-button id="popup-trigger-btn" appearance="secondary">
       <span>Trigger a Popup</span>
     </ids-button>
   </ids-layout-grid-cell>

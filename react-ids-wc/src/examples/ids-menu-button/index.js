@@ -4,14 +4,14 @@ import 'ids-enterprise-wc/components/ids-menu-button/ids-menu-button';
 const IdsMenuButton = () => {
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Menu Buttons
         </ids-text>
       </ids-layout-grid>
       <ids-layout-grid cols="4" gap="md">
         <ids-layout-grid-cell>
-          <ids-menu-button id="menu-button" icon="settings" type="tertiary" menu="my-menu" dropdown-icon="dropdown">
+          <ids-menu-button id="menu-button" icon="settings" appearance="tertiary" menu="my-menu" dropdown-icon="dropdown">
             <span>Settings</span>
           </ids-menu-button>
           <ids-popup-menu id="my-menu" target="#menu-button" trigger-type="click">

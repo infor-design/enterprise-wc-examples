@@ -22,7 +22,7 @@ const IdsExpandableArea = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-text font-size="12" type="h1">
             Expandable Area
@@ -30,7 +30,7 @@ const IdsExpandableArea = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-expandable-area>
             <ids-text slot="header" font-size="16">

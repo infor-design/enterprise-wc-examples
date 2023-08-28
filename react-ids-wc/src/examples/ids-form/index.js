@@ -67,7 +67,7 @@ const IdsForm = () => {
 
   return (
     <>
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-text font-size="12" type="h1">
           Ids Form
         </ids-text>
@@ -142,7 +142,7 @@ const IdsForm = () => {
               size={size}
               field-height={height}
             ></ids-textarea>
-            <ids-button id="btn-submit" type="primary">
+            <ids-button id="btn-submit" appearance="primary">
               <span>Submit</span>
             </ids-button>
           </ids-layout-grid-cell>
@@ -204,7 +204,7 @@ const IdsForm = () => {
         </ids-layout-grid>
       </ids-form>
 
-      <ids-layout-grid auto="true">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
           <ids-dropdown ref={sizeRef} label="Size" value={size} size="md">
             <ids-list-box>
@@ -266,7 +266,7 @@ const IdsForm = () => {
         ))}
         <ids-modal-button
           slot="buttons"
-          type="primary"
+          appearance="primary"
           onClick={() => {
             modalRef.current?.hide();
           }}

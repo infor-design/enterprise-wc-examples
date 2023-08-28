@@ -14,14 +14,14 @@
   });
 </script>
 
-<ids-layout-grid auto="true" gap="md">
+<ids-layout-grid auto-fit="true" gap="md">
   <ids-layout-grid-cell>
 
     {#if $categories.length}
       {#each $categories as category}
         {#if category.components.length}
           <ids-text type="h1" font-size="24">{category.name}</ids-text>
-          <ids-layout-grid auto="true">
+          <ids-layout-grid auto-fit="true">
             <ids-layout-grid-cell>
               <ids-block-grid align="center">
                 {#each category.components as component}
@@ -34,8 +34,8 @@
                           font-weight="bold"
                           color="slate-100"
                           mode="light"
-                          version="new">{component.type}</ids-text>
-                        <ids-text type="h2" font-size="16" color="slate-60" mode="light" version="new">{component.description}</ids-text>
+                         >{component.type}</ids-text>
+                        <ids-text type="h2" font-size="16" color="slate-60" mode="light">{component.description}</ids-text>
                       </div>
                     </ids-card>
                   </ids-block-grid-item>
