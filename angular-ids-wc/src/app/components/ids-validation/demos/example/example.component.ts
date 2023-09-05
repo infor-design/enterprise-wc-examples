@@ -14,22 +14,34 @@ export class ExampleComponent implements OnInit {
 
   ngOnInit(): void {
     this.testForm = new FormGroup({
-      testInput: new FormControl('Original value', Validators.minLength(2)),
+      testCheckbox: new FormControl(),
+      testDateObject: new FormControl(new Date()),
       testDateString: new FormControl('12/31/2020'),
-      testDateDate: new FormControl(new Date()),
       testDropdown: new FormControl('opt5'),
-      testTimepicker: new FormControl(),
-      testRadio: new FormControl()
+      testInput: new FormControl('Original value', Validators.minLength(2)),
+      testLookup: new FormControl(),
+      testTextarea: new FormControl(),
+      testTimePicker: new FormControl(),
+      testRadio: new FormControl(),
+      testSearchField: new FormControl(),
+      testSpinbox: new FormControl(),
+      testSwitch: new FormControl(),
     });
   }
 
   public onFormSubmit() {
-    alert(`First name entered is: ${this.testForm.controls['testInput'].value}`);
-    alert(`String date entered is: ${this.testForm.controls['testDateString'].value}`);
-    alert(`Date date entered is: ${this.testForm.controls['testDateDate'].value}`);
-    alert(`Time entered is: ${this.testForm.controls['testTimepicker'].value}`);
-    alert(`Dropdown selected is: ${this.testForm.controls['testDropdown'].value}`);
-    alert(`Radio selected is: ${this.testForm.controls['testRadio'].value}`);
+    console.log(`testCheckbox selected is: ${this.testForm.controls['testCheckbox'].value}`);
+    console.log(`testDateObject entered is: ${this.testForm.controls['testDateObject'].value}`);
+    console.log(`testDateString entered is: ${this.testForm.controls['testDateString'].value}`);
+    console.log(`testDropdown selected is: ${this.testForm.controls['testDropdown'].value}`);
+    console.log(`testInput entered is: ${this.testForm.controls['testInput'].value}`);
+    console.log(`testLookup entered is: ${this.testForm.controls['testLookup'].value}`);
+    console.log(`testTextarea entered is: ${this.testForm.controls['testTextarea'].value}`);
+    console.log(`testTimePicker entered is: ${this.testForm.controls['testTimePicker'].value}`);
+    console.log(`testRadio selected is: ${this.testForm.controls['testRadio'].value}`);
+    console.log(`testSearchField selected is: ${this.testForm.controls['testSearchField'].value}`);
+    console.log(`testSpinbox selected is: ${this.testForm.controls['testSpinbox'].value}`);
+    console.log(`testSwitch selected is: ${this.testForm.controls['testSwitch'].value}`);
   }
 
 }
