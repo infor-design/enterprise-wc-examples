@@ -26,6 +26,8 @@ export class ExampleComponent implements OnInit {
       testSearchField: new FormControl(),
       testSpinbox: new FormControl(),
       testSwitch: new FormControl(),
+      testUpload: new FormControl(),
+      testUploadAdvanced: new FormControl(),
     });
   }
 
@@ -42,6 +44,8 @@ export class ExampleComponent implements OnInit {
     console.log(`testSearchField selected is: ${this.testForm.controls['testSearchField'].value}`);
     console.log(`testSpinbox selected is: ${this.testForm.controls['testSpinbox'].value}`);
     console.log(`testSwitch selected is: ${this.testForm.controls['testSwitch'].value}`);
+    console.log(`testUpload selected is: ${this.testForm.controls['testUpload'].value}`);
+    console.log(`testUploadAdvanced selected is: ${this.testForm.controls['testUploadAdvanced'].value}`);
   }
 
 }
