@@ -1,9 +1,9 @@
 <form [formGroup]="testForm" (ngSubmit)="onFormSubmit()">
   <ids-container language="en" locale="en-US" padding="8" hidden>
     <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
-    <ids-layout-grid cols="2" gap="md">
+    <ids-layout-grid cols="2" padding="md">
       <ids-layout-grid-cell>
-        <ids-text font-size="12" type="h1">Ids Reactiveforms</ids-text>
+        <ids-text font-size="12" type="h1">Reactive forms</ids-text>
         <br>
 
         <ids-checkbox-group label="IDS Checkbox Group" formControlName="testCheckbox" ngDefaultControl>
@@ -32,7 +32,6 @@
         <ids-lookup label="IDS Lookup" clearable formControlName="testInput" ngDefaultControl></ids-lookup>
 
         <ids-textarea label="IDS Textarea " formControlName="testTextarea" ngDefaultControl></ids-textarea>
-
       </ids-layout-grid-cell>
 
       <ids-layout-grid-cell>

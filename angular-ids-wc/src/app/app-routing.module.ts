@@ -237,12 +237,12 @@ export const routes: Routes = [
     },
   },
   { 
-    path: 'ids-validation',
-    loadChildren: () => import('./components/ids-validation/ids-validation.module').then(m => m.IdsValidationModule),
+    path: 'ids-reactive-forms',
+    loadChildren: () => import('./components/ids-reactive-forms/ids-reactive-forms.module').then(m => m.IdsReactiveFormsModule),
     data: {
-      title: 'IDS Angular Reactiveforms',
+      title: 'IDS Angular Reactive Forms',
       category: 'Form Inputs',
-      description: 'Reactiveforms examples'
+      description: 'Reactive forms examples'
     },
   },
   { 

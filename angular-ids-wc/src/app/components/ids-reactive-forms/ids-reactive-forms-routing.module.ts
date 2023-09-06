@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { IdsValidationComponent } from './ids-validation.component';
+import { IdsReactiveFormsComponent } from './ids-reactive-forms.component';
 import { ExampleComponent } from './demos/example/example.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: IdsValidationComponent
+    component: IdsReactiveFormsComponent
   },
   {
     path: 'example',
@@ -19,4 +19,4 @@ export const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class IdsValidationRoutingModule { }
+export class IdsReactiveFormsRoutingModule { }
