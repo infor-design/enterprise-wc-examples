@@ -17,7 +17,7 @@ import 'ids-enterprise-wc/components/ids-alert/ids-alert';
 1. Note that all imports also include the contained css styles so no style sheets are needed
 1. Note that using imports in the angular.json is not currently possible for ES Modules https://github.com/angular/angular-cli/issues/24592
 1. Since we ship our package as Es Modules (ESM) the best way to use the components is to import the used modules (or complete package) inside the module where its used. For example:
-2. Add `skipLibCheck` so that the types in the node_modules are not checked. This may be needed if using a different TS version that the one we compiled with and you experience compile errors. https://github.com/infor-design/enterprise-wc-examples/blob/main/angular-ids-wc/tsconfig.json#L18
+1. Add `skipLibCheck` so that the types in the node_modules are not checked. This may be needed if using a different TS version that the one we compiled with and you experience compile errors. https://github.com/infor-design/enterprise-wc-examples/blob/main/angular-ids-wc/tsconfig.json#L18
 
 ```js
 import { Component, OnInit } from '@angular/core';
@@ -84,6 +84,10 @@ export class IdsTagComponent implements AfterViewInit {
     "output": "themes"
   }
 ],
+```
+1. Add the font to index.html 
+```html
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap" rel="stylesheet">
 ```
 1. `npm run start`
 1. If wanted you can shorten the import paths using this feature https://blog.bitsrc.io/short-typescript-import-paths-in-angular9-22ce34bd424d 
