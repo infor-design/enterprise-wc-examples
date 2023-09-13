@@ -237,6 +237,15 @@ export const routes: Routes = [
     },
   },
   { 
+    path: 'ids-reactive-forms',
+    loadChildren: () => import('./components/ids-reactive-forms/ids-reactive-forms.module').then(m => m.IdsReactiveFormsModule),
+    data: {
+      title: 'IDS Angular Reactive Forms',
+      category: 'Form Inputs',
+      description: 'Reactive forms examples'
+    },
+  },
+  { 
     path: 'ids-action-sheet', 
     loadChildren: () => import('./components/ids-action-sheet/ids-action-sheet.module').then(m => m.IdsActionSheetModule),
     data: {

@@ -1,0 +1,75 @@
+<form [formGroup]="testForm" (ngSubmit)="onFormSubmit()">
+  <ids-container language="en" locale="en-US" padding="8" hidden>
+    <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
+    <ids-layout-grid cols="2" padding="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">Reactive forms</ids-text>
+        <br>
+
+        <ids-checkbox-group label="IDS Checkbox Group" formControlName="testCheckbox" ngDefaultControl>
+          <ids-checkbox value="checkbox1" label="checkbox one"></ids-checkbox>
+          <ids-checkbox value="checkbox2" label="checkbox two" checked="true"></ids-checkbox>
+        </ids-checkbox-group>
+
+        <ids-date-picker label="IDS Date Picker (object)" tabbable="false" mask formControlName="testDateObject" ngDefaultControl></ids-date-picker>
+
+        <ids-date-picker label="IDS Date Picker (string)" tabbable="false" mask formControlName="testDateString" ngDefaultControl></ids-date-picker>
+
+        <ids-dropdown label="IDS Dropdown" validate="required" formControlName="testDropdown" ngDefaultControl>
+          <ids-list-box>
+            <ids-list-box-option value="blank" id="blank" aria-label="Blank"></ids-list-box-option>
+            <ids-list-box-option value="opt1" id="opt1-d4">Option One</ids-list-box-option>
+            <ids-list-box-option value="opt2" id="opt2-d4">Option Two</ids-list-box-option>
+            <ids-list-box-option value="opt3" id="opt3-d4">Option Three</ids-list-box-option>
+            <ids-list-box-option value="opt4" id="opt4-d4">Option Four</ids-list-box-option>
+            <ids-list-box-option value="opt5" id="opt5-d4">Option Five</ids-list-box-option>
+            <ids-list-box-option value="opt6" id="opt6-d4">Option Six</ids-list-box-option>
+          </ids-list-box>
+        </ids-dropdown>
+
+        <ids-input type="text" label="IDS Input" formControlName="testInput" ngDefaultControl></ids-input>
+
+        <ids-lookup label="IDS Lookup" clearable formControlName="testLookup" ngDefaultControl></ids-lookup>
+
+        <ids-textarea label="IDS Textarea " formControlName="testTextarea" ngDefaultControl></ids-textarea>
+      </ids-layout-grid-cell>
+
+      <ids-layout-grid-cell>
+        <br>
+        <br>
+
+        <ids-time-picker label="IDS Time Picker" id="e2e-timepicker-autoselect" autoselect mask="true" formControlName="testTimePicker" ngDefaultControl></ids-time-picker>
+
+        <ids-radio-group label="IDS Radio Group" formControlName="testRadio" ngDefaultControl>
+          <ids-radio value="radio1" label="radio one"></ids-radio>
+          <ids-radio value="radio2" label="radio two" checked="true"></ids-radio>
+        </ids-radio-group>
+
+        <ids-search-field label="IDS Search Field" value="Cellphone" clearable formControlName="testSearchField" ngDefaultControl></ids-search-field>
+
+        <ids-spinbox label="IDS Spinbox" value="0" formControlName="testSpinbox" ngDefaultControl></ids-spinbox>
+
+        <ids-switch label="IDS Switch" formControlName="testSwitch" ngDefaultControl></ids-switch>
+
+        <ids-upload label="IDS Upload" formControlName="testUpload" ngDefaultControl></ids-upload>
+
+        <ids-upload-advanced label="IDS Upload Advanced" formControlName="testUploadAdvanced" ngDefaultControl></ids-upload-advanced>
+
+      </ids-layout-grid-cell>
+      <ids-layout-grid cols="1" gap="md">
+        <ids-layout-grid-cell>
+            <!--
+            <ids-input type="text" label="Last Name" validate="required"></ids-input>
+            <ids-input type="text" label="Email Address" placeholder="Company@address.com" validate="email required"></ids-input>
+            <ids-input type="text" label="Disabled" disabled="true" value="Field not editable"></ids-input>
+            <ids-input type="text" label="Readonly" readonly="true" value="02006"></ids-input>
+            <ids-input type="text" label="Dirty Tracking" dirty-tracker="true" placeholder="Dirty Tracking" value="02006"></ids-input>
+            <ids-input type="text" label="Clearable" placeholder="Clearable text Field" clearable="true"></ids-input>
+            <ids-input type="text" label="Autoselect" value="Text select on focus" autoselect="true"></ids-input>
+            -->
+          <button type="submit">Submit</button>
+        </ids-layout-grid-cell>
+      </ids-layout-grid>
+    </ids-layout-grid>
+  </ids-container>
+</form>
