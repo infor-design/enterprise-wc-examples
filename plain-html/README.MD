@@ -47,6 +47,18 @@ python3 -m http.server
 
 - open http://localhost:8000/ in the browser
  
+## Updating this project
+
+First use Angular tools to update.
+
+```sh
+npx ng update @angular/cli @angular/core
+```
+
+Second try `ncu` and do any non angular updates. Then do `npm i`.
+
+Thirdly try to run the project and see it still compiles and works. 
+
 ## Articles
 
 https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
