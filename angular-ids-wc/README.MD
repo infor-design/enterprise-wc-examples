@@ -93,6 +93,31 @@ export class IdsTagComponent implements AfterViewInit {
 1. If wanted you can shorten the import paths using this feature https://blog.bitsrc.io/short-typescript-import-paths-in-angular9-22ce34bd424d 
 1. If you wanted to you can also speed up the builds with es-build you  could https://www.danywalls.com/maximizing-your-angular-build-performance-with-esbuild
 
+
+## Native Element Helper
+
+If you do not like to use nativeElement in a viewChild you can include a [helper we picked up here](https://github.com/infor-design/enterprise-wc-examples/blob/main/angular-ids-wc/src/helpers/native-element.decorator.ts).
+
+Before:
+
+```js
+export class Example {
+  @ViewChild('myTag') tag;
+  ...
+  this.tag.nativeElement.color = 'success';
+```
+
+After:
+
+```js
+import { NativeElement } from '../helpers/native-element.decorator';
+
+export class Example {
+  @NativeElement('myTag') tag: IdsTag;
+  ...
+  this.tag.color = 'success';
+```
+
 ## To Run these Examples
 
 - clone the main repo https://github.com/infor-design/enterprise-wc-examples
