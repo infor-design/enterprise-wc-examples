@@ -15,7 +15,7 @@ const IdsAxisChart = () => {
     <>
       <IdsTitle>Axis Chart Example</IdsTitle>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-axis-chart
             ref={axisChartRef}

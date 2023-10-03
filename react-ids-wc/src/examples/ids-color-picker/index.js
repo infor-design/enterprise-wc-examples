@@ -4,7 +4,7 @@ import 'ids-enterprise-wc/components/ids-color-picker/ids-color-picker';
 const IdsColorPicker = () => {
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Color Picker
         </ids-text>

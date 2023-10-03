@@ -5,12 +5,12 @@ import 'ids-enterprise-wc/components/ids-hyperlink/ids-hyperlink';
 const IdsHyperlink = () => {
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Hyperlink
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-hyperlink href="http://www.example.com" target="_blank">
             Normal Link
@@ -18,12 +18,12 @@ const IdsHyperlink = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Hyperlink (disabled)
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-hyperlink
             href="http://www.example.com"
@@ -35,12 +35,12 @@ const IdsHyperlink = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Hyperlink with Multiple Text Elements
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-hyperlink
             href="http://www.example.com"

@@ -4,7 +4,7 @@ import 'ids-enterprise-wc/components/ids-home-page/ids-home-page';
 const IdsHomePage = () => {
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-text font-size="12" type="h1">
             Home Page

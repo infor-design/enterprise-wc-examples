@@ -25,11 +25,11 @@ const IdsTag = () => {
 
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12">Tags</ids-text>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-tag>Normal Tag</ids-tag>
           <ids-tag color="secondary">Secondary Tags</ids-tag>

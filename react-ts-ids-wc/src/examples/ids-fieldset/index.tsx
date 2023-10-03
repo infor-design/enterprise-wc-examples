@@ -8,7 +8,7 @@ const IdsFieldset = () => {
     <>
       <IdsTitle>Fieldset Example</IdsTitle>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <form>
           <ids-fieldset>
             <legend>

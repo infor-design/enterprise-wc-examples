@@ -9,11 +9,11 @@
 
 <style></style>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12">IDS Tag (Svelte)</ids-text>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     {#each TAG_COLORS as tag}
       <ids-tag color="{tag.value}">{tag.name}</ids-tag>

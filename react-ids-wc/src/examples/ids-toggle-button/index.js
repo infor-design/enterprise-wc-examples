@@ -5,7 +5,7 @@ import 'ids-enterprise-wc/components/ids-toggle-button/ids-toggle-button';
 const IdsToggleButton = () => {
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Toggle Buttons
         </ids-text>

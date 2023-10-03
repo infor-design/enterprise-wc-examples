@@ -21,7 +21,7 @@ const IdsIcon = () => {
       <ids-layout-grid>
         <ids-text font-size="12">Icons</ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true" gap="md">
+      <ids-layout-grid auto-fit="true" gap="md" padding-x="md">
         {iconList.map(iconName => getIcon(iconName))}
       </ids-layout-grid>
     </>

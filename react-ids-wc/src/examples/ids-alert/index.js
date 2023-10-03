@@ -8,14 +8,14 @@ const IdsAlert = () => {
 
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-text font-size="12" type="h1">
             Alerts
           </ids-text>
         </ids-layout-grid-cell>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true" gap="md">
+      <ids-layout-grid auto-fit="true" gap="md" padding-x="md">
         {items.map(item => (
           <ids-layout-grid-cell key={item.icon}>
             <ids-alert icon={item.icon}></ids-alert>

@@ -81,7 +81,7 @@ const IdsLookup = () => {
         </ids-text>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-lookup
             ref={lookupRef}

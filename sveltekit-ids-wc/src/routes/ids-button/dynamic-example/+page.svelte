@@ -38,13 +38,13 @@
   }
 </script>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     <ids-text font-size="12" type="h1">IdsButton (Svelte Component)</ids-text>
   </ids-layout-grid-cell>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     {#if ref}
       {@debug ref}

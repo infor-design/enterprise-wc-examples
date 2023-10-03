@@ -17,12 +17,12 @@ const IdsBarChart = () => {
   }, []);
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Bar Chart
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-bar-chart
             ref={barChartRef}

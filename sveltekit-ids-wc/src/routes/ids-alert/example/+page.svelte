@@ -6,7 +6,7 @@
   });
 </script>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     <ids-text font-size="12" type="h1">Alerts (Imported into Svelte)</ids-text>
   </ids-layout-grid-cell>

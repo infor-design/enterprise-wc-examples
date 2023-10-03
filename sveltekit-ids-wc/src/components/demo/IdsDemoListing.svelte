@@ -45,11 +45,11 @@
   });
 </script>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="20" type="h1">{componentName} Examples</ids-text>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     <ids-data-grid id="demo-listing" list-style="true" bind:this={dataGrid}></ids-data-grid>
   </ids-layout-grid-cell>

@@ -30,12 +30,12 @@ const IdsDatePicker = () => {
 
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Date Picker
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-date-picker
             label="Date Field"

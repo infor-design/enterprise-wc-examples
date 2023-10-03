@@ -52,7 +52,7 @@ const IdsLoadingIndicator = () => {
 
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Circular Loading Indicator
         </ids-text>
@@ -83,7 +83,7 @@ const IdsLoadingIndicator = () => {
           </ids-layout-grid>
         </ids-layout-grid-cell>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Linear Loading Indicator
         </ids-text>

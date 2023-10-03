@@ -4,13 +4,13 @@ import 'ids-enterprise-wc/components/ids-toolbar/ids-toolbar';
 const IdsToolbar = () => {
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Toolbar
         </ids-text>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-toolbar id="my-toolbar">
             <ids-toolbar-section type="button">

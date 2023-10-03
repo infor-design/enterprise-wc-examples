@@ -7,7 +7,7 @@ const IdsEditor = () => {
     <>
       <IdsTitle>Editor Example</IdsTitle>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-editor id="editor-demo" label="Ids Editor">
             <p>

@@ -23,7 +23,7 @@ const IdsMessage = () => {
         </ids-modal-button>
       </ids-message>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-text font-size="12" type="h1">
             Message
@@ -31,7 +31,7 @@ const IdsMessage = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-button
             appearance="secondary"

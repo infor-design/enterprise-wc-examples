@@ -14,14 +14,14 @@
   });
 </script>
 
-<ids-layout-grid auto-fit="true" gap="md">
+<ids-layout-grid auto-fit="true" gap="md" padding-x="md">
   <ids-layout-grid-cell>
 
     {#if $categories.length}
       {#each $categories as category}
         {#if category.components.length}
           <ids-text type="h1" font-size="24">{category.name}</ids-text>
-          <ids-layout-grid auto-fit="true">
+          <ids-layout-grid auto-fit="true" padding="md">
             <ids-layout-grid-cell>
               <ids-block-grid align="center">
                 {#each category.components as component}

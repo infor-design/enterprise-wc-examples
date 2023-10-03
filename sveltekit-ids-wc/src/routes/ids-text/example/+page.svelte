@@ -6,10 +6,10 @@
   });
 </script>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">Texts / Typography</ids-text>
 </ids-layout-grid>
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     <ids-text font-size="72">Size 72</ids-text>
     <ids-text font-size="60">Size 60</ids-text>

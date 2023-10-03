@@ -15,7 +15,7 @@ const IdsLineChart = () => {
     <>
       <IdsTitle>Line Chart Example</IdsTitle>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-line-chart
             ref={lineCharRef}

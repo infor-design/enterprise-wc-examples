@@ -41,11 +41,11 @@
   <ids-text text-align="start">This is an active IDS Modal component</ids-text>
 </ids-modal>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">IDS Modal (Imported into Svelte)</ids-text>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     <ids-button id="modal-trigger-btn" appearance="secondary">
       <span>Trigger a Modal</span>

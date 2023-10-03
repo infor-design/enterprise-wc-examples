@@ -25,12 +25,12 @@ const IdsDataGrid = () => {
 
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Data Grid
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-data-grid ref={dataGridRef} row-selection="multiple" label="Books" row-height="md"></ids-data-grid>
         </ids-layout-grid-cell>

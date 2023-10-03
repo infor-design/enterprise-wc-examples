@@ -10,11 +10,11 @@
   ];
 </script>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="20" type="h1">Ids Text Examples</ids-text>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     <IdsDemoListing data={listingData} componentId="ids-text"></IdsDemoListing>
   </ids-layout-grid-cell>

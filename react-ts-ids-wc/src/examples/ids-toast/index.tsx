@@ -29,7 +29,7 @@ const IdsToast = () => {
     <>
       <IdsTitle>Toast Example</IdsTitle>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-button onClick={handleToastAdd} appearance="secondary">
             <span>Toast Message</span>

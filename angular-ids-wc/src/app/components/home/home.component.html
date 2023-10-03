@@ -2,12 +2,12 @@
   <ids-theme-switcher mode="light"></ids-theme-switcher>
 
   <ng-container *ngFor="let category of categories">
-    <ids-layout-grid auto-fit="true" gap="md">
+    <ids-layout-grid auto-fit="true" gap="md" padding-x="md">
       <ids-layout-grid-cell>
         <ids-text font-size="24" type="h2">{{category.name}}</ids-text>
       </ids-layout-grid-cell>
     </ids-layout-grid>
-    <ids-layout-grid auto-fit="true" gap="md">
+    <ids-layout-grid auto-fit="true" gap="md" padding-x="md">
       <ids-layout-grid-cell>
         <ids-block-grid>
           <ng-container *ngFor="let route of routes">

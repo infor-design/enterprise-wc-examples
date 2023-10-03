@@ -62,7 +62,7 @@ const IdsPopupMenu = () => {
         </ids-menu-group>
       </ids-popup-menu>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-text>Right click anywhere to open the Popupmenu</ids-text>
         </ids-layout-grid-cell>

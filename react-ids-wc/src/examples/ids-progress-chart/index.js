@@ -5,7 +5,7 @@ import 'ids-enterprise-wc/components/ids-progress-chart/ids-progress-chart';
 const IdsProgressChart = () => {
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Progress Chart
         </ids-text>

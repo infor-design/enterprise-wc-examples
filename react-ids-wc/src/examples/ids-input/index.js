@@ -139,7 +139,7 @@ const IdsInput = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-text font-size="12" type="h2">
             Ids Input - Text align

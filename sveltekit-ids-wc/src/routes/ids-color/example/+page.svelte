@@ -6,7 +6,7 @@
   });
 </script>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">Color Swatch</ids-text>
 </ids-layout-grid>
 
@@ -17,7 +17,7 @@
   <ids-color hex="#3B1470" class="dark" checked></ids-color>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">Color Swatch Outlined</ids-text>
 </ids-layout-grid>
 
@@ -28,7 +28,7 @@
   <ids-color hex="#3B1470" class="outlined dark" checked></ids-color>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">Disabled Color Swatch with Tooltip</ids-text>
 </ids-layout-grid>
 
@@ -39,7 +39,7 @@
   <ids-color hex="#3B1470" tooltip="black" class="dark" disabled checked></ids-color>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">Color Swatch with Tooltip</ids-text>
 </ids-layout-grid>
 
@@ -50,7 +50,7 @@
   <ids-color hex="#3B1470" tooltip="black" class="dark" checked></ids-color>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">Outlined Color Swatch with Tooltip</ids-text>
 </ids-layout-grid>
 
@@ -63,7 +63,7 @@
 
 
 <!-- Color Picker Sizes -->
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">Color Swatch - Extra Small</ids-text>
 </ids-layout-grid>
 
@@ -74,7 +74,7 @@
   <ids-color hex="#3B1470" class="outlined dark" checked size="xs"></ids-color>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">Color Swatch - Small</ids-text>
 </ids-layout-grid>
 
@@ -85,7 +85,7 @@
   <ids-color hex="#3B1470" class="outlined dark" checked size="sm"></ids-color>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">Color Swatch - Small-Medium</ids-text>
 </ids-layout-grid>
 
@@ -96,7 +96,7 @@
   <ids-color hex="#3B1470" class="outlined dark" checked size="mm"></ids-color>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">Color Swatch - Medium</ids-text>
 </ids-layout-grid>
 
@@ -107,7 +107,7 @@
   <ids-color hex="#3B1470" class="outlined dark" checked size="md"></ids-color>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">Color Swatch - Large</ids-text>
 </ids-layout-grid>
 

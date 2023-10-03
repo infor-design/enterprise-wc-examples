@@ -4,12 +4,12 @@ import 'ids-enterprise-wc/components/ids-month-view/ids-month-view';
 const IdsMonthView = () => {
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Month View
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-month-view
             show-today="true"

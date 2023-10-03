@@ -37,20 +37,20 @@
   }
 </script>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     <ids-text font-size="12" type="h1">IdsHyperlink (Svelte Component)</ids-text>
   </ids-layout-grid-cell>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     <ids-text>Use the buttons below to set a URL on the link before clicking. <br/>
     Using the link won't cause the page to change, but the URL will be logged to the console.</ids-text>
   </ids-layout-grid-cell>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     <DynamicIdsHyperLink
       textDecoration="hover"
@@ -59,7 +59,7 @@
   </ids-layout-grid-cell>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     {#each links as link}
       <ids-button 

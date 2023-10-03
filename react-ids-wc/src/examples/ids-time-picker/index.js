@@ -4,7 +4,7 @@ import 'ids-enterprise-wc/components/ids-time-picker/ids-time-picker';
 const IdsTimePicker = () => {
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Time Picker
         </ids-text>

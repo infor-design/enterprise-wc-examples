@@ -4,7 +4,7 @@ import { categories, routes } from '../settings/routes';
 
 const Home = () => {
   return (
-    <ids-layout-grid auto-fit="true" gap="md">
+    <ids-layout-grid auto-fit="true" gap="md" padding-x="md">
       <ids-layout-grid-cell>
         {Object.values(categories).map(category => (
           <div key={category}>
@@ -13,7 +13,7 @@ const Home = () => {
                 {category}
               </ids-text>
             </ids-layout-grid>
-            <ids-layout-grid auto-fit="true">
+            <ids-layout-grid auto-fit="true" padding="md">
               <ids-layout-grid-cell>
                 <ids-block-grid align="center">
                   {routes

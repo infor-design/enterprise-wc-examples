@@ -7,7 +7,7 @@ import headshot from '../../assets/images/headshot-1.jpg';
 
 const IdsHierarchy = () => {
   return (
-    <ids-layout-grid auto-fit="true">
+    <ids-layout-grid auto-fit="true" padding="md">
       <ids-layout-grid-cell>
         <ids-text font-size="12" type="h1">
           Ids Hierarchy

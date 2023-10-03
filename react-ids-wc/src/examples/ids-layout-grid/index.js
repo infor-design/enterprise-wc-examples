@@ -6,7 +6,7 @@ import 'ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid-cell';
 const IdsLayoutGrid = () => {
   return (
     <>
-      <ids-layout-grid auto-fit="true" gap="md">
+      <ids-layout-grid auto-fit="true" gap="md" padding-x="md">
         <ids-text font-size="12" type="h1">
           Layout Grid - 12 column fluid grid
         </ids-text>
@@ -158,7 +158,7 @@ const IdsLayoutGrid = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true" gap="md">
+      <ids-layout-grid auto-fit="true" gap="md" padding-x="md">
         <ids-text font-size="12" type="h1">
           Layout Grid - 12 column fluid grid w/breakpoints
         </ids-text>
@@ -220,7 +220,7 @@ const IdsLayoutGrid = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true" gap="md">
+      <ids-layout-grid auto-fit="true" gap="md" padding-x="md">
         <ids-text font-size="12" type="h1">
           Layout Grid XL - 16 column fluid grid
         </ids-text>
@@ -290,7 +290,7 @@ const IdsLayoutGrid = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true" gap="md">
+      <ids-layout-grid auto-fit="true" gap="md" padding-x="md">
         <ids-text font-size="12" type="h1">
           Layout Grid
         </ids-text>
@@ -332,7 +332,7 @@ const IdsLayoutGrid = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true" gap="md">
+      <ids-layout-grid auto-fit="true" gap="md" padding-x="md">
         <ids-text font-size="12" type="h1">
           Layout Grid - min-Col-Width (200px)
         </ids-text>

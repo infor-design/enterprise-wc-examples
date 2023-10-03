@@ -4,7 +4,7 @@ import 'ids-enterprise-wc/components/ids-multiselect/ids-multiselect';
 const IdsMultiselect = () => {
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-multiselect
             id="dropdown-1"

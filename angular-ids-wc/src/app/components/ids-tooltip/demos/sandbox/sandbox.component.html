@@ -1,10 +1,10 @@
 <ids-container language="en" locale="en-US" padding="8" hidden>
   <ids-theme-switcher mode="light"></ids-theme-switcher>
   
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Tooltips (Positions)</ids-text>
   </ids-layout-grid>
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-layout-grid-cell>
       <ids-button id="tooltip-top" appearance="secondary">Tooltip on Top</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-top'" placement="top">Additional Information</ids-tooltip>
@@ -17,20 +17,20 @@
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Tooltips (Disabled Buttons)</ids-text>
   </ids-layout-grid>
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-layout-grid-cell>
       <ids-button id="tooltip-disabed" appearance="secondary" disabled="true">Tooltip on Disabled</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-disabed'" placement="top">Additional Information</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Tooltips (Trigger Options)</ids-text>
   </ids-layout-grid>
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-layout-grid-cell>
       <ids-button id="tooltip-click" appearance="secondary">Tooltip on Click</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-click'" trigger="click">Additional Information 1</ids-tooltip>
@@ -39,20 +39,20 @@
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Tooltips (Css Parts)</ids-text>
   </ids-layout-grid>
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-layout-grid-cell>
       <ids-button id="tooltip-parts" appearance="secondary">Custom Tooltip Css</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-parts'" placement="top">Customized Text</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Tooltips (Shared)</ids-text>
   </ids-layout-grid>
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-layout-grid-cell>
       <ids-button id="tooltip-shared-1" appearance="secondary">Button 1</ids-button>
       <ids-button id="tooltip-shared-2" appearance="secondary">Button 2</ids-button>
@@ -60,17 +60,17 @@
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Tooltips (Async)</ids-text>
   </ids-layout-grid>
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-layout-grid-cell>
       <ids-button id="tooltip-async" appearance="secondary">Ajax Tooltip Content</ids-button>
       <ids-tooltip [attr.target]="'#tooltip-async'" placement="top">Shared Tooltip</ids-tooltip>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Tooltips (as a Mixin)</ids-text>
   </ids-layout-grid>
   <ids-layout-grid cols="2" gap="md">
@@ -82,7 +82,7 @@
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid auto-fit="true">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Tooltips (when ellipsis text)</ids-text>
   </ids-layout-grid>
   <ids-layout-grid cols="9" gap="md">

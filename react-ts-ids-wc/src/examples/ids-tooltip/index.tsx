@@ -21,7 +21,7 @@ const IdsTooltip = () => {
     <>
       <IdsTitle>Tooltips Example</IdsTitle>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-layout-grid-cell>
           <ids-button ref={triggerRef} appearance="secondary">Hover to show a Tooltip</ids-button>
           <ids-tooltip ref={tooltipRef}>

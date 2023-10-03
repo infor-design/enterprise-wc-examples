@@ -14,11 +14,11 @@
   };
 </script>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12" type="h1">IDS List Box (Imported into Svelte)</ids-text>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
 
     <ids-list-box on:click={handleClick}>

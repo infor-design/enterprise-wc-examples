@@ -8,7 +8,7 @@ const IdsBreadcrumb = () => {
     <>
       <IdsTitle>Breadcrumb Example</IdsTitle>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-breadcrumb>
           <ids-hyperlink font-size="14" color="unset" href="#">
             First Item

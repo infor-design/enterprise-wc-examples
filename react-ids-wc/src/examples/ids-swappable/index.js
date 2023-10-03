@@ -5,7 +5,7 @@ import 'ids-enterprise-wc/components/ids-swappable/ids-swappable-item';
 const IdsSwappable = () => {
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Basic Example
         </ids-text>
@@ -33,7 +33,7 @@ const IdsSwappable = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Multiple Selection Example
         </ids-text>

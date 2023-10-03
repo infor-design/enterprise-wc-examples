@@ -4,7 +4,7 @@ import 'ids-enterprise-wc/components/ids-separator/ids-separator';
 const IdsSeparator = () => {
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Separator
         </ids-text>
@@ -18,7 +18,7 @@ const IdsSeparator = () => {
         </ids-layout-grid-cell>
       </ids-layout-grid>
 
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Separator (Vertical)
         </ids-text>

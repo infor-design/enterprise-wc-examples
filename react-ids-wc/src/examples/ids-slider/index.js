@@ -32,7 +32,7 @@ const IdsSlider = () => {
 
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Slider
         </ids-text>

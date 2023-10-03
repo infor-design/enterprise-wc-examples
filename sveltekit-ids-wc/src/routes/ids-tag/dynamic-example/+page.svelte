@@ -153,11 +153,11 @@
   }
 </style>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-text font-size="12">Dynamic Tag (Svelte)</ids-text>
 </ids-layout-grid>
 
-<ids-layout-grid auto-fit="true">
+<ids-layout-grid auto-fit="true" padding="md">
   <ids-layout-grid-cell>
     {#if $writableTagArray.length > 0}
       {#each $writableTagArray as tag, i}

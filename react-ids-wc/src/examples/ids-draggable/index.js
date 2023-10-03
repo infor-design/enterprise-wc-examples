@@ -31,12 +31,12 @@ const IdsDraggable = () => {
 
   return (
     <>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Draggable
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-draggable>
           <div className="ids-draggable-demo-box">
             <ids-text>no axis</ids-text>
@@ -82,12 +82,12 @@ const IdsDraggable = () => {
           </div>
         </ids-draggable>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <ids-text font-size="12" type="h1">
           Draggable (Bounded by Div/Container)
         </ids-text>
       </ids-layout-grid>
-      <ids-layout-grid auto-fit="true">
+      <ids-layout-grid auto-fit="true" padding="md">
         <div className="ids-draggable-demo-content">
           <ids-draggable parent-containment>
             <div className="ids-draggable-demo-box">
