@@ -1,7 +1,8 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
+import { IdsFormAccessorsModule } from 'src/app/shared/directives/ids-form-accessors.module';
 import { IdsFormsRoutingModule } from './ids-forms-routing.module';
 import { IdsFormsComponent } from './ids-forms.component';
 import { ExampleComponent } from './demos/example/example.component';
@@ -16,7 +17,7 @@ import { DemoListingModule } from '../demo-listing/demo-listing.module';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule,
+    IdsFormAccessorsModule,
     IdsFormsRoutingModule,
     DemoListingModule
   ],
