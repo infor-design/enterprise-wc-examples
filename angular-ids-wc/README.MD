@@ -118,6 +118,35 @@ export class Example {
   this.tag.color = 'success';
 ```
 
+## Using `ngModel` (without `ngDefaultControl`)
+
+To support custom form-input elements without the need to add `ngDefaultControl` to each input, just copy and import the following custom ValueAccessor directives into your project:
+
+```bash
+ - src/app/shared/directives/ids-form-accessors.module.ts
+ - src/app/shared/directives/ids-form-accessors.ts
+```
+
+```js
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { IdsDefaultValueAccessor, IdsCheckboxValueAccessor, IdsRadioValueAccessor } from './ids-form-accessors';
+
+@NgModule({
+  imports: [
+    IdsDefaultValueAccessor,
+    IdsCheckboxValueAccessor,
+    IdsRadioValueAccessor,
+  ],
+  exports: [
+    IdsDefaultValueAccessor,
+    IdsCheckboxValueAccessor,
+    IdsRadioValueAccessor,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
+export class IdsFormAccessorsModule { }
+```
+
 ## To Run these Examples
 
 - clone the main repo https://github.com/infor-design/enterprise-wc-examples
