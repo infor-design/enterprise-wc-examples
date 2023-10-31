@@ -123,8 +123,8 @@ export class Example {
 To support custom form-input elements without the need to add `ngDefaultControl` to each input, just copy and import the following custom ValueAccessor directives into your project:
 
 ```bash
- - src/app/shared/directives/ids-form-accessors.module.ts
- - src/app/shared/directives/ids-form-accessors.ts
+ - src/directives/ids-form-accessors.module.ts
+ - src/directives/ids-form-accessors.ts
 ```
 
 ```js
