@@ -22,7 +22,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:stats": "node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build --configuration=production --stats-json && webpack-bundle-analyzer dist/demo/stats.json --port auto"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.3",
@@ -42,6 +43,7 @@
     "eslint": "^8.41.0",
     "ts-node": "~10.9.1",
     "tslint": "~6.1.0",
-    "typescript": "~5.0.4"
+    "typescript": "~5.0.4",
+    "webpack-bundle-analyzer": "^4.9.1"
   }
 }
