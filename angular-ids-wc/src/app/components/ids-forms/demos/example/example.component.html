@@ -1,0 +1,69 @@
+<ids-container language="en" locale="en-US" padding="8" hidden>
+  <ids-theme-switcher mode="light" version="new"></ids-theme-switcher>
+  <ids-layout-grid cols="2" padding="md">
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">Form Inputs (ngModel)</ids-text>
+      <br>
+
+      <ids-checkbox-group
+        label="IDS Checkbox Group ({{testCheckbox.one}},{{testCheckbox.two}},{{testCheckbox.three}})"
+      >
+        <ids-checkbox value="checkbox1" label="checkbox one" (ngModelChange)="onUpdate($event)" [(ngModel)]="testCheckbox.one"></ids-checkbox>
+        <ids-checkbox value="checkbox2" label="checkbox two" (ngModelChange)="onUpdate($event)" [(ngModel)]="testCheckbox.two"></ids-checkbox>
+        <ids-checkbox value="checkbox3" label="checkbox three" checked="true" (ngModelChange)="onUpdate($event)" [(ngModel)]="testCheckbox.three"></ids-checkbox>
+      </ids-checkbox-group>
+
+      <ids-date-picker label="IDS Date Picker (object) ({{testDateObject}})" tabbable="false" mask (ngModelChange)="onUpdate($event)" [(ngModel)]="testDateObject"></ids-date-picker>
+
+      <ids-date-picker label="IDS Date Picker (string) ({{testDateString}})" tabbable="false" mask (ngModelChange)="onUpdate($event)" [(ngModel)]="testDateString"></ids-date-picker>
+
+      <ids-dropdown label="IDS Dropdown ({{testDropdown}})" validate="required" (ngModelChange)="onUpdate($event)" [(ngModel)]="testDropdown">
+        <ids-list-box>
+          <ids-list-box-option value="blank" id="blank" aria-label="Blank"></ids-list-box-option>
+          <ids-list-box-option value="opt1" id="opt1-d4">Option One</ids-list-box-option>
+          <ids-list-box-option value="opt2" id="opt2-d4">Option Two</ids-list-box-option>
+          <ids-list-box-option value="opt3" id="opt3-d4">Option Three</ids-list-box-option>
+          <ids-list-box-option value="opt4" id="opt4-d4">Option Four</ids-list-box-option>
+          <ids-list-box-option value="opt5" id="opt5-d4">Option Five</ids-list-box-option>
+          <ids-list-box-option value="opt6" id="opt6-d4">Option Six</ids-list-box-option>
+        </ids-list-box>
+      </ids-dropdown>
+
+      <ids-input type="text" label="IDS Input ({{testInput}})" (ngModelChange)="onUpdate($event)" [(ngModel)]="testInput"></ids-input>
+
+      <ids-lookup label="IDS Lookup ({{testLookup}})" clearable (ngModelChange)="onUpdate($event)" [(ngModel)]="testLookup"></ids-lookup>
+
+      <ids-textarea label="IDS Textarea ({{testTextarea}})" (ngModelChange)="onUpdate($event)" [(ngModel)]="testTextarea"></ids-textarea>
+    </ids-layout-grid-cell>
+
+    <ids-layout-grid-cell>
+      <br>
+      <br>
+
+      <ids-time-picker label="IDS Time Picker ({{testTimePicker}})" autoselect mask="true" (ngModelChange)="onUpdate($event)" [(ngModel)]="testTimePicker"></ids-time-picker>
+
+      <ids-radio-group label="IDS Radio Group ({{testRadio}})" (ngModelChange)="onUpdate($event)" [(ngModel)]="testRadio">
+        <ids-radio value="radio1" label="radio one"></ids-radio>
+        <ids-radio value="radio2" label="radio two" checked="true"></ids-radio>
+        <ids-radio value="radio3" label="radio three" checked="true"></ids-radio>
+      </ids-radio-group>
+
+      <ids-search-field label="IDS Search Field ({{testSearchField}})" value="Cellphone" clearable (ngModelChange)="onUpdate($event)" [(ngModel)]="testSearchField"></ids-search-field>
+
+      <ids-spinbox label="IDS Spinbox ({{testSpinbox}})" value="0" (ngModelChange)="onUpdate($event)" [(ngModel)]="testSpinbox"></ids-spinbox>
+
+      <ids-switch label="IDS Switch ({{testSwitch}})" (ngModelChange)="onUpdate($event)" [(ngModel)]="testSwitch"></ids-switch>
+
+      <ids-upload label="IDS Upload ({{testUpload}})" (ngModelChange)="onUpdate($event)" [(ngModel)]="testUpload"></ids-upload>
+
+      <ids-upload-advanced label="IDS Upload Advanced ({{testUploadAdvanced}})" (ngModelChange)="onUpdate($event)" [(ngModel)]="testUploadAdvanced"></ids-upload-advanced>
+      <ids-text>IDS Upload Advanced ({{testUploadAdvanced}})</ids-text>
+
+    </ids-layout-grid-cell>
+    <!-- <ids-layout-grid cols="1" gap="md">
+      <ids-layout-grid-cell>
+        <button type="submit">Submit</button>
+      </ids-layout-grid-cell>
+    </ids-layout-grid> -->
+  </ids-layout-grid>
+</ids-container>

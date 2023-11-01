@@ -236,6 +236,15 @@ export const routes: Routes = [
       description: 'Upload multiple files'
     },
   },
+  {
+    path: 'ids-forms',
+    loadChildren: () => import('./components/ids-forms/ids-forms.module').then(m => m.IdsFormsModule),
+    data: {
+      title: 'IDS Angular Forms',
+      category: 'Form Inputs',
+      description: 'Angular Forms examples'
+    },
+  },
   { 
     path: 'ids-reactive-forms',
     loadChildren: () => import('./components/ids-reactive-forms/ids-reactive-forms.module').then(m => m.IdsReactiveFormsModule),
