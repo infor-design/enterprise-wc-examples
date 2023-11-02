@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { IdsModuleNavComponent } from './ids-module-nav.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
-import { ExampleFooterComponent } from './demos/example-footer/example-footer.component';
 
 export const routes: Routes = [
   {
@@ -14,10 +13,6 @@ export const routes: Routes = [
   {
     path: 'example',
     component: ExampleComponent
-  },
-  {
-    path: 'example-footer',
-    component: ExampleFooterComponent
   },
   {
     path: 'sandbox',
