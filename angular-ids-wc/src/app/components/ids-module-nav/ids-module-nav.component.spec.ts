@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IdsModuleNavComponent } from './ids-module-nav.component';
 
-describe('IdsAppMenuComponent', () => {
+describe('IdsModuleNavComponent', () => {
   let component: IdsModuleNavComponent;
   let fixture: ComponentFixture<IdsModuleNavComponent>;
 
