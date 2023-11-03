@@ -1,12 +1,21 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, AfterContentChecked, ViewChild, ElementRef } from '@angular/core';
+import { kebabCase } from 'ids-enterprise-wc/utils/ids-string-utils/ids-string-utils';
+import { cssTransitionTimeout } from 'ids-enterprise-wc/utils/ids-timer-utils/ids-timer-utils';
 import IdsIcon from 'ids-enterprise-wc/components/ids-icon/ids-icon';
 import { IdsModuleNavDisplayMode } from 'ids-enterprise-wc/components/ids-module-nav/ids-module-nav-common';
+
+const DatasetMap = {
+  'default': '/api/accordion-module-nav-demo.json',
+  'nested-with-icons': '/api/accordion-nested-with-icons.json',
+  'nested-no-icons': '/api/accordion-nested-no-icons.json'
+};
+
 @Component({
   selector: 'app-sandbox',
   templateUrl: './sandbox.component.html',
   styleUrls: ['./sandbox.component.css']
 })
-export class SandboxComponent implements OnInit, AfterViewInit {
+export class SandboxComponent implements OnInit, AfterViewInit, AfterContentChecked {
   @ViewChild('moduleNavRef', { read: ElementRef }) moduleNavRef;
   @ViewChild('moduleNavBarRef', { read: ElementRef }) moduleNavBarRef;
   @ViewChild('moduleNavContentRef', { read: ElementRef }) moduleNavContentRef;
@@ -15,12 +24,17 @@ export class SandboxComponent implements OnInit, AfterViewInit {
   @ViewChild('displayModeDropdownRef', { read: ElementRef }) displayModeDropdownRef;
   @ViewChild('offsetContentCheckRef', { read: ElementRef }) offsetContentCheckRef;
 
+  public datasetName: string = 'default';
   public displayMode: IdsModuleNavDisplayMode = this.isWithinMobileBreakpoint() ? false : 'collapsed';
   public filterable = true;
   public oneAccordionPane = false;
   public offsetContent = true;
   public pinned = true;
   public responsive = true;
+  public accordionItems = [];
+
+  /** Needs to be changed to `true` in order for `ngAfterContentChecked` to run efficiently */
+  private viewNeedsRefresh = false;
 
   private isWithinMobileBreakpoint() {
     return this.moduleNavRef?.nativeElement.isWithinMobileBreakpoint() || false;
@@ -35,6 +49,18 @@ export class SandboxComponent implements OnInit, AfterViewInit {
     }
   }
 
+  private async updateWebComponents() {
+    await cssTransitionTimeout(1);
+    this.moduleNavAccordionRef.nativeElement.checkExpanders();
+  }
+
+  private async loadAccoridonItemData(url: string) {
+    const accordionItemRes = await fetch(url);
+    const accordionItemData = await accordionItemRes.json();
+    this.viewNeedsRefresh = true;
+    this.accordionItems = accordionItemData;
+  }
+
   private async loadAppIconData() {
     const appIconRes = await fetch('/api/icons-app.json');
     const appIconData = await appIconRes.json();
@@ -47,14 +73,31 @@ export class SandboxComponent implements OnInit, AfterViewInit {
     return typeof val !== 'string' ? '' : val;
   }
 
-  ngOnInit(): void {
-    this.loadAppIconData();
+  getItemIdFromText(val: string) {
+    return `item-${kebabCase(val)}`;
+  }
+
+  async ngOnInit() {
+    await this.loadAppIconData();
+    await this.loadAccoridonItemData(DatasetMap[this.datasetName]);
     console.log('Module Nav sandbox init');
   }
 
-  ngAfterViewInit(): void {
+  ngAfterViewInit() {
     this.moduleNavBarRef.nativeElement.target = this.moduleNavTriggerBtnRef.nativeElement;
     this.updateDisplayMode(this.isWithinMobileBreakpoint() ? false : 'collapsed');
+  }
+
+  ngAfterContentChecked() {
+    if (this.viewNeedsRefresh) {
+      this.updateWebComponents();
+      this.viewNeedsRefresh = false;
+    }
+  }
+
+  handleDatasetChange(e: CustomEvent) {
+    this.datasetName = e.detail.value;
+    this.loadAccoridonItemData(DatasetMap[this.datasetName]);
   }
 
   handleDisplayModeChange(e: CustomEvent) {

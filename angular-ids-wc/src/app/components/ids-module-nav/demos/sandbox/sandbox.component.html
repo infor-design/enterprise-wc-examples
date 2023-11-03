@@ -1,3 +1,25 @@
+<!-- Template for "depth-2" and below accordion items -->
+<ng-template #recursiveAccordionSubItemList let-list="list">
+  <ids-accordion-panel slot="content" color-variant="sub-module-nav" *ngFor="let item of list">
+    <ids-module-nav-item slot="header" color-variant="sub-module-nav" [attr.display-mode]="this.displayMode"
+      icon="{{item.icon}}" expander-type="plus-minus" id="{{getItemIdFromText(item.text)}}">
+      <ids-text font-size="14" overflow="ellipsis">{{item.text}}</ids-text>
+    </ids-module-nav-item>
+    <ng-container *ngTemplateOutlet="recursiveAccordionSubItemList; context:{ list: item.children }"></ng-container>
+  </ids-accordion-panel>
+</ng-template>
+
+<!-- Template for "depth-1" accordion items -->
+<ng-template #recursiveAccordionItemList let-list="list">
+  <ids-accordion-panel color-variant="module-nav" *ngFor="let item of list">
+    <ids-module-nav-item slot="header" color-variant="module-nav" [attr.display-mode]="this.displayMode"
+      icon="{{item.icon}}" id="{{getItemIdFromText(item.text)}}">
+      <ids-text font-size="16" overflow="ellipsis">{{item.text}}</ids-text>
+    </ids-module-nav-item>
+    <ng-container *ngTemplateOutlet="recursiveAccordionSubItemList; context:{ list: item.children }"></ng-container>
+  </ids-accordion-panel>
+</ng-template>
+
 <ids-container role="main" padding="0" hidden>
   <ids-module-nav 
     #moduleNavRef 
@@ -61,126 +83,7 @@
         [attr.allow-one-pane]="oneAccordionPane">
         <!-- Main Section -->
         <ids-accordion-section slot="" grow>
-          <ids-accordion-panel>
-            <ids-module-nav-item id="item-user" slot="header" icon="user">
-              <ids-text font-size="16" overflow="ellipsis">My Configuration and Personalization</ids-text>
-            </ids-module-nav-item>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-          </ids-accordion-panel>
-          <ids-accordion-panel>
-            <ids-module-nav-item id="item-database" slot="header" icon="database">
-              <ids-text font-size="16">Database</ids-text>
-            </ids-module-nav-item>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-          </ids-accordion-panel>
-          <ids-accordion-panel>
-            <ids-module-nav-item id="item-data-translation" slot="header" icon="translate">
-              <ids-text font-size="16">Data Translation</ids-text>
-            </ids-module-nav-item>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-          </ids-accordion-panel>
-          <ids-accordion-panel>
-            <ids-module-nav-item id="item-security" slot="header" icon="security-on">
-              <ids-text font-size="16">Security</ids-text>
-            </ids-module-nav-item>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-          </ids-accordion-panel>
-          <ids-accordion-panel>
-            <ids-module-nav-item id="item-analytics" slot="header" icon="line-bar-chart">
-              <ids-text font-size="16">Analytics</ids-text>
-            </ids-module-nav-item>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-          </ids-accordion-panel>
-          <ids-accordion-panel>
-            <ids-module-nav-item id="item-audit-monitoring" slot="header" icon="import-spreadsheet">
-              <ids-text font-size="16">Audit and Monitoring</ids-text>
-            </ids-module-nav-item>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-            <ids-accordion-panel slot="content">
-              <ids-module-nav-item slot="header">
-                <ids-text font-size="14">Label</ids-text>
-              </ids-module-nav-item>
-            </ids-accordion-panel>
-          </ids-accordion-panel>
+          <ng-container *ngTemplateOutlet="recursiveAccordionItemList; context:{ list: accordionItems }"></ng-container>
         </ids-accordion-section>
       </ids-accordion>
 
@@ -232,7 +135,7 @@
 
     <ids-module-nav-content
       #moduleNavContentRef
-      offset-content="{{offsetContent}}">
+      [attr.offset-content]="offsetContent">
       <!-- Page Header -->
       <ids-header>
         <ids-toolbar>
@@ -315,6 +218,23 @@
             </ids-list-box>
           </ids-dropdown>
         </ids-layout-grid-cell>
+      </ids-layout-grid>
+
+      <ids-layout-grid auto-fit="true" padding="md">
+        <ids-text font-size="12" type="h1">Dataset</ids-text>
+      </ids-layout-grid>
+      <ids-layout-grid gap="md" padding-x="md">
+        <ids-radio-group 
+          #datasetRadioRef
+          id="radio-dataset"
+          label="Choose the dataset to display in the accordion"
+          value="{{datasetName}}"
+          [(ngModel)]="datasetName"
+          (change)="handleDatasetChange($event)">
+          <ids-radio value="default" label="Default (Module Nav)" checked="true"></ids-radio>
+          <ids-radio value="nested-with-icons" label="Nested with icons"></ids-radio>
+          <ids-radio value="nested-no-icons" label="Nested without icons"></ids-radio>
+        </ids-radio-group>
       </ids-layout-grid>
     </ids-module-nav-content>
   </ids-module-nav>
