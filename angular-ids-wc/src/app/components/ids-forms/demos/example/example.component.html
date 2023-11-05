@@ -29,6 +29,18 @@
         </ids-list-box>
       </ids-dropdown>
 
+      <ids-multiselect label="IDS Multiselect ({{testMultiselect}})" validate="required" (ngModelChange)="onUpdate($event)" [(ngModel)]="testMultiselect">
+        <ids-list-box>
+          <ids-list-box-option value="blank" id="opt0-ms" aria-label="Blank"><ids-checkbox label="Option Blank"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option value="opt1" id="opt1-ms"><ids-checkbox label="Option One"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option value="opt2" id="opt2-ms"><ids-checkbox label="Option Two"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option value="opt3" id="opt3-ms"><ids-checkbox label="Option Three"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option value="opt4" id="opt4-ms"><ids-checkbox label="Option Four"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option value="opt5" id="opt5-ms"><ids-checkbox label="Option Five"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option value="opt6" id="opt6-ms"><ids-checkbox label="Option Six"></ids-checkbox></ids-list-box-option>
+        </ids-list-box>
+      </ids-multiselect>
+
       <ids-input type="text" label="IDS Input ({{testInput}})" (ngModelChange)="onUpdate($event)" [(ngModel)]="testInput"></ids-input>
 
       <ids-lookup label="IDS Lookup ({{testLookup}})" clearable (ngModelChange)="onUpdate($event)" [(ngModel)]="testLookup"></ids-lookup>
