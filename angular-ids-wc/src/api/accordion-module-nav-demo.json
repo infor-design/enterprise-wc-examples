@@ -1,0 +1,56 @@
+[
+  {
+    "text": "My Configuration and Personalization",
+    "icon": "user",
+    "children": [
+      { "text": "Label" },
+      { "text": "Label" },
+      { "text": "Label" }
+    ]
+  },
+  {
+    "text": "Database",
+    "icon": "database",
+    "children": [
+      { "text": "Label" },
+      { "text": "Label" },
+      { "text": "Label" }
+    ]
+  },
+  {
+    "text": "Data Translation",
+    "icon": "translate",
+    "children": [
+      { "text": "Label" },
+      { "text": "Label" },
+      { "text": "Label" }
+    ]
+  },
+  {
+    "text": "Security",
+    "icon": "security-on",
+    "children": [
+      { "text": "Label" },
+      { "text": "Label" },
+      { "text": "Label" }
+    ]
+  },
+  {
+    "text": "Analytics",
+    "icon": "line-bar-chart",
+    "children": [
+      { "text": "Label" },
+      { "text": "Label" },
+      { "text": "Label" }
+    ]
+  },
+  {
+    "text": "Audit and Monitoring",
+    "icon": "import-spreadsheet",
+    "children": [
+      { "text": "Label" },
+      { "text": "Label" },
+      { "text": "Label" }
+    ]
+  }
+]

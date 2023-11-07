@@ -1,0 +1,49 @@
+[
+  {
+    "text": "Level 1 (can expand)",
+    "children": [
+      {
+        "text": "Level 2 (can expand)",
+        "children": [
+          {
+            "text": "Level 3 (can expand)",
+            "children": [
+              {
+                "text": "Level 4 (can expand)",
+                "children": [
+                  {
+                    "text": "Level 5 (can expand)",
+                    "children": [
+                      {
+                        "text": "Level 6 (can expand)",
+                        "children": []
+                      },
+                      {
+                        "text": "Level 6 (default)"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Level 5 (default)"
+                  }
+                ]
+              },
+              {
+                "text": "Level 4 (default)"
+              }
+            ]
+          },
+          {
+            "text": "Level 3 (default)"
+          }
+        ]
+      },
+      {
+        "text": "Level 2 (default)"
+      }
+    ]
+  },
+  {
+    "text": "Level 1 (default)"
+  }
+]
