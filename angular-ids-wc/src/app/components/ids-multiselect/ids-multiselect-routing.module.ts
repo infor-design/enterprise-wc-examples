@@ -7,11 +7,11 @@ import { ExampleComponent } from './demos/example/example.component';
 export const routes: Routes = [
   { 
     path: '', 
-    component: IdsMultiselectComponent
+    component: IdsMultiselectComponent,
   },
   { 
-    path: 'example', 
-    component: ExampleComponent 
+    path: 'example',
+    component: ExampleComponent,
   }
 ];
 

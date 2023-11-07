@@ -10,7 +10,7 @@ import { DemoListingModule } from '../demo-listing/demo-listing.module';
 @NgModule({
   declarations: [
     IdsMultiselectComponent,
-    ExampleComponent
+    ExampleComponent,
   ],
   imports: [
     CommonModule,
