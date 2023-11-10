@@ -1,22 +1,23 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { IdsMultiselectRoutingModule } from './ids-multiselect-routing.module';
-import { IdsMultiselectComponent } from './ids-multiselect.component';
+import { IdsModuleNavRoutingModule } from './ids-module-nav-routing.module';
+import { IdsModuleNavComponent } from './ids-module-nav.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { SandboxComponent } from './demos/sandbox/sandbox.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
-
 
 @NgModule({
   declarations: [
-    IdsMultiselectComponent,
+    IdsModuleNavComponent,
     ExampleComponent,
+    SandboxComponent,
   ],
   imports: [
     CommonModule,
-    IdsMultiselectRoutingModule,
+    IdsModuleNavRoutingModule,
     DemoListingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
-export class IdsMultiselectModule { }
+export class IdsModuleNavModule { }

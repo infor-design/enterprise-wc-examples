@@ -14,6 +14,7 @@ export class ExampleComponent {
   testDateObject = new Date();
   testDateString = '12/31/2020';
   testDropdown = 'opt5';
+  testMultiselect = 'opt3';
   testInput = 'John Doe';
   testLookup = 'Software Engineers';
   testTextarea = 'Hello, World!';

@@ -335,6 +335,15 @@ export const routes: Routes = [
       description: 'Displays a Modal Dialog'
     },
   },
+  {
+    path: 'ids-module-nav',
+    loadChildren: () => import('./components/ids-module-nav/ids-module-nav.module').then(m => m.IdsModuleNavModule),
+    data: {
+      title: 'IDS Module Nav',
+      category: 'Navigation and Interaction',
+      description: 'Top-Level Navigation'
+    },
+  },
   { 
     path: 'ids-pager',
     loadChildren: () => import('./components/ids-pager/ids-pager.module').then(m => m.IdsPagerModule),
