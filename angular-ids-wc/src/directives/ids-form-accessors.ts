@@ -1,7 +1,7 @@
 /* eslint-disable @angular-eslint/directive-class-suffix */
 /* eslint-disable @angular-eslint/directive-selector */
-import { Directive, forwardRef } from "@angular/core";
-import { DefaultValueAccessor, CheckboxControlValueAccessor, NG_VALUE_ACCESSOR, RadioControlValueAccessor } from "@angular/forms";
+import { Directive, ElementRef, Renderer2, forwardRef, inject } from "@angular/core";
+import { DefaultValueAccessor, CheckboxControlValueAccessor, NG_VALUE_ACCESSOR, RadioControlValueAccessor, COMPOSITION_BUFFER_MODE } from "@angular/forms";
 
 @Directive({
   selector: `
@@ -29,7 +29,11 @@ import { DefaultValueAccessor, CheckboxControlValueAccessor, NG_VALUE_ACCESSOR, 
     },
   ],
 })
-export class IdsDefaultValueAccessor extends DefaultValueAccessor { }
+export class IdsDefaultValueAccessor extends DefaultValueAccessor {
+  constructor() {
+    super(inject(Renderer2), inject(ElementRef), inject(COMPOSITION_BUFFER_MODE, { optional: true }));
+  }
+}
 
 @Directive({
   selector: `
@@ -46,7 +50,11 @@ export class IdsDefaultValueAccessor extends DefaultValueAccessor { }
     },
   ],
 })
-export class IdsCheckboxValueAccessor extends CheckboxControlValueAccessor { }
+export class IdsCheckboxValueAccessor extends CheckboxControlValueAccessor {
+  constructor() {
+    super(inject(Renderer2), inject(ElementRef));
+  }
+}
 
 @Directive({
   selector: `
