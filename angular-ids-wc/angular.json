@@ -89,21 +89,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "demo:build"
+            "buildTarget": "demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "demo:build:production"
+              "buildTarget": "demo:build:production"
             },
             "development": {
-              "browserTarget": "demo:build:development"
+              "buildTarget": "demo:build:development"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "demo:build"
+            "buildTarget": "demo:build"
           }
         },
         "test": {
@@ -138,12 +138,9 @@
     }
   },
   "cli": {
-    "analytics": "d149c364-8857-4697-8fb3-a3fe471fb190",
+    "analytics": false,
     "cache": {
       "enabled": false
-    },
-    "schematicCollections": [
-      "@angular-eslint/schematics"
-    ]
+    }
   }
 }
