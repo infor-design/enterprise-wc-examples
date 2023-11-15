@@ -1,22 +1,17 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
-import type IdsContainerType from 'ids-enterprise-wc/components/ids-container/ids-container';
 import 'ids-enterprise-wc/components/ids-locale/ids-locale';
 
 const IdsLocale = () => {
   const [keys, setKeys] = useState([]);
 
   useEffect(() => {
-    const container = document.querySelector<IdsContainerType>('ids-container');
-
     const setLanguage = async () => {
-      await container?.setLanguage('tl');
+      await (window as any).IdsLocale.locale?.setLanguage('tl');
     };
 
     setKeys([]);
-    // setKeys(Object.keys(container?.language?.messages));
-
     setLanguage();
   }, []);
 
