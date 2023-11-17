@@ -2,17 +2,23 @@ import React, { useEffect, useState, Fragment } from 'react';
 import IdsGrid, { IdsGridCell } from '../../components/ids-grid/IdsGrid';
 import IdsTitle from '../../components/ids-title/IdsTitle';
 import 'ids-enterprise-wc/components/ids-locale/ids-locale';
+import IdsGlobal from 'ids-enterprise-wc/components/ids-global/ids-global';
 
 const IdsLocale = () => {
   const [keys, setKeys] = useState([]);
 
   useEffect(() => {
+    const locale = IdsGlobal.getLocale();
     const setLanguage = async () => {
-      await (window as any).IdsLocale.locale?.setLanguage('tl');
+      locale.setLanguage('de');
+    };
+    const setLocale = async () => {
+      locale.locale('de-DE');
     };
 
     setKeys([]);
     setLanguage();
+    setLocale();
   }, []);
 
   return (

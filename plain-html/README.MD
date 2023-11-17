@@ -24,7 +24,15 @@ Ids Web Components are packages as ESM modules so can be used in any HTML docume
 </ids-container>
 ```
 
-1. Note that changing locale will work. The locale files are served when locale changes from `/node_modules/ids-enterprise-wc/local-data`
+1. Note that changing locale will work. But only after copying the locale files to a location where they would be served via url like `http://localhost:8000/node_modules/ids-enterprise-wc/locale-data/de-DE.json`
+
+In this case i simply used:
+
+```sh
+cp -R node_modules/ids-enterprise-wc/locale-data locale-data
+```
+
+Can also look at the `localeDataPath` setting.
 
 1. Also not that you can set the theme to an initial theme with a link. Because there is no way to setup an assets folder in this example this is the best way.
 
@@ -37,7 +45,7 @@ Ids Web Components are packages as ESM modules so can be used in any HTML docume
 
 - clone the main repo https://github.com/infor-design/enterprise-wc-examples
 - we use node 18, but for this example it really doesn't matter.
-- we use python3's simple web server but anything can be used to server the page on a port
+- we use python3's simple web server but anything can be used to serve the page on a port
 
 ```sh
 cd angular-ids-wc
@@ -49,16 +57,14 @@ python3 -m http.server
  
 ## Updating this project
 
-First use Angular tools to update.
+First update ids try `ncu` and do any non angular updates. Then do `npm i`.
 
 ```sh
-npx ng update @angular/cli @angular/core
+cp -R node_modules/ids-enterprise-wc/locale-data locale-data
 ```
 
-Second try `ncu` and do any non angular updates. Then do `npm i`.
+Then to run the project and see it still compiles and works. 
 
-Thirdly try to run the project and see it still compiles and works. 
-
-## Articles
+## Related Articles
 
 https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
