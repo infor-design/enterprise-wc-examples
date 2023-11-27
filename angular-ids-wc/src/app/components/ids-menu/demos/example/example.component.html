@@ -30,9 +30,9 @@
             <ng-container *ngFor="let item of group.menuItems">
               <ids-menu-item
                 *ngIf="item.type !== 'separator'"
-                [attr.disabled]="item.disabled"
                 [attr.value]="item.value"
-                [attr.icon]="item.icon">
+                [disabled]="item.disabled"
+                [icon]="item.icon">
                 {{ item.label }}
               </ids-menu-item>
 
