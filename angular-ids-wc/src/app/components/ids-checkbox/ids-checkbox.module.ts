@@ -4,13 +4,15 @@ import { CommonModule } from '@angular/common';
 import { IdsCheckboxRoutingModule } from './ids-checkbox-routing.module';
 import { IdsCheckboxComponent } from './ids-checkbox.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DataDrivenComponent } from './demos/data-driven/data-driven.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
 @NgModule({
   declarations: [
     IdsCheckboxComponent,
-    ExampleComponent
+    ExampleComponent,
+    DataDrivenComponent
   ],
   imports: [
     CommonModule,

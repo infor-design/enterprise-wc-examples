@@ -1,0 +1,54 @@
+<ids-container language="en" locale="en-US" padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+  
+  <ids-layout-grid cols="4" gap="md" padding-x="md">
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">*ngIf</ids-text><br />
+      <ids-button
+        #displayCheckboxStatesBtnRef
+        appearance="secondary"
+        (click)="toggleCheckboxStatesDisplay()"
+        [attr.text]="this.displayCheckboxStates ? 'Hide Checkboxes' : 'Reveal Checkboxes'"></ids-button>
+      <br /><br />
+      <div *ngIf="this.displayCheckboxStates === true">
+        <ids-checkbox label="Unchecked"></ids-checkbox>
+        <ids-checkbox label="Checked" checked="true"></ids-checkbox>
+        <ids-checkbox label="Disabled and unchecked" disabled="true"></ids-checkbox>
+        <ids-checkbox label="Disabled and checked" checked="true" disabled="true"></ids-checkbox>
+        <ids-checkbox label="Required" validate="required"></ids-checkbox>
+        <ids-checkbox label="Not Animated" no-animation="true"></ids-checkbox>
+      </div>
+    </ids-layout-grid-cell>
+
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">*ngFor</ids-text><br />
+      <ids-button 
+        #displayCheckboxOptionsBtnRef appearance="secondary" (click)="toggleCheckboxOptionsDisplay()"
+        text="Display Random Checkboxes"></ids-button>
+      <br /><br />
+      <div 
+        *ngFor="let option of checkboxOptions; index as i">
+        <ids-checkbox
+          name="name-{{i}}" 
+          label="{{option.text}}" 
+          checked="{{option.checked}}" 
+          disabled="{{option.disabled}}"
+          [(ngModel)]="checkboxOptions[i]"
+          (change)="onCheckboxChange($event, i)"></ids-checkbox>
+      </div>
+    </ids-layout-grid-cell>
+
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">*ngModel (models the *ngFor example)</ids-text><br />
+      <code class="pre" *ngFor="let option of checkboxOptions; index as i; last as isLast">
+        <div>
+          <span>{{'{'}}</span>
+          <span>text: "{{option.text}}", </span>
+          <span>checked: {{option.checked}}, </span>
+          <span>disabled: {{option.disabled}} </span>
+          <span>{{'}'}}</span><span *ngIf="!isLast">,</span>
+        </div>
+      </code>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { IdsCheckboxComponent } from './ids-checkbox.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DataDrivenComponent } from './demos/data-driven/data-driven.component';
 
 export const routes: Routes = [
   { 
@@ -12,6 +13,10 @@ export const routes: Routes = [
   {
     path: 'example',
     component: ExampleComponent
+  },
+  {
+    path: 'data-driven',
+    component: DataDrivenComponent
   }
 ];
 
