@@ -1,12 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-
-function randomInt(max: number) { 
-  return Math.floor(Math.random() * max) 
-};
-
-function randomBool() {
-  return Math.random() < 0.5;
-}
+import { randomInt, randomBool } from '../../../../../utils/random';
 
 function generateCheckboxDataItem() {
   const id = randomInt(65536);
