@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { IdsCheckboxRoutingModule } from './ids-checkbox-routing.module';
 import { IdsCheckboxComponent } from './ids-checkbox.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { ControlFlowComponent } from './demos/control-flow/control-flow.component';
 import { DataDrivenComponent } from './demos/data-driven/data-driven.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
@@ -12,6 +13,7 @@ import { DemoListingModule } from '../demo-listing/demo-listing.module';
   declarations: [
     IdsCheckboxComponent,
     ExampleComponent,
+    ControlFlowComponent,
     DataDrivenComponent
   ],
   imports: [
