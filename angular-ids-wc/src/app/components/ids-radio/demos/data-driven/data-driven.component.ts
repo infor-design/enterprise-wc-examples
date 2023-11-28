@@ -16,7 +16,6 @@ function generateRadioDataItem(noTrue: boolean) {
   styleUrls: ['./data-driven.component.css']
 })
 export class DataDrivenComponent implements OnInit {
-  @ViewChild('validatedRadioGroupRef', { read: ElementRef }) validatedRadioGroupRef;
   @ViewChild('displayRadioItemsBtnRef', { read: ElementRef }) displayRadioItemsBtnRef;
 
   constructor() { }
@@ -30,14 +29,6 @@ export class DataDrivenComponent implements OnInit {
 
   toggleRadioGroupDisplay() {
     this.radioGroupDisplay = !this.radioGroupDisplay;
-  }
-
-  validateRadioGroup() {
-    this.validatedRadioGroupRef.nativeElement.checkValidation();
-  }
-
-  clearRadioGroupValidation() {
-    this.validatedRadioGroupRef.nativeElement.clear();
   }
 
   generateRadioItems() {

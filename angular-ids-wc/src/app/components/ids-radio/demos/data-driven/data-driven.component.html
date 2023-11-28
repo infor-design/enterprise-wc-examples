@@ -44,12 +44,12 @@
           label="{{option.text}}" 
           checked="{{option.checked}}" 
           disabled="{{option.disabled}}"
-          [(ngModel)]="radioItems" 
+          [ngModel]="radioItems" 
           (change)="onRadioChange($event, i)"></ids-radio>
       </ids-radio-group>
     </ids-layout-grid-cell>
 
-    <ids-layout-grid-cell>
+    <ids-layout-grid-cell col-span="2">
       <ids-text font-size="12" type="h1">*ngModel (models the *ngFor example)</ids-text><br />
       <code class="pre" *ngFor="let option of radioItems; index as i; last as isLast">
         <div id="line-{{i}}">
