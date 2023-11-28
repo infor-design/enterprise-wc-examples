@@ -26,16 +26,14 @@
         #displayCheckboxOptionsBtnRef appearance="secondary" (click)="toggleCheckboxOptionsDisplay()"
         text="Display Random Checkboxes"></ids-button>
       <br /><br />
-      <div 
-        *ngFor="let option of checkboxOptions; index as i">
         <ids-checkbox
+          *ngFor="let option of checkboxOptions; index as i"
           name="name-{{i}}" 
           label="{{option.text}}" 
           checked="{{option.checked}}" 
           disabled="{{option.disabled}}"
           [(ngModel)]="checkboxOptions[i]"
           (change)="onCheckboxChange($event, i)"></ids-checkbox>
-      </div>
     </ids-layout-grid-cell>
 
     <ids-layout-grid-cell>
