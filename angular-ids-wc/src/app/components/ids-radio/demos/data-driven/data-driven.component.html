@@ -10,7 +10,7 @@
       (click)="toggleRadioGroupDisplay()"
       [attr.text]="radioGroupDisplay ? 'Hide Radio Groups' : 'Show Radio Groups'"></ids-button>
       <br /><br />
-      <div *ngIf="radioGroupDisplay === true">
+      <div *ngIf="radioGroupDisplay === true; else radioGroupElseBlock">
         <ids-radio-group label="Normal">
           <ids-radio value="opt1" label="Option one"></ids-radio>
           <ids-radio value="opt2" label="Option two" checked="true"></ids-radio>
@@ -27,6 +27,9 @@
           <ids-radio value="opt3" label="Option three" disabled="true"></ids-radio>
         </ids-radio-group>
       </div>
+      <ng-template #radioGroupElseBlock>
+        <ids-text>Radio Groups are currently hidden</ids-text>
+      </ng-template>
     </ids-layout-grid-cell>
 
     <ids-layout-grid-cell>
@@ -60,6 +63,7 @@
           <span>{{'}'}}</span><span *ngIf="!isLast">,</span>
         </div>
       </code>
+      <ids-text *ngIf="!radioItems.length">No Radios were rendered (dataset is empty)</ids-text>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 </ids-container>

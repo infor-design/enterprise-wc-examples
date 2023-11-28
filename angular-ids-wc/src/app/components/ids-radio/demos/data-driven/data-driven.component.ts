@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { randomInt, randomBool } from '../../../../../utils/random';
 
 function generateRadioDataItem(noTrue: boolean) {
@@ -15,17 +15,13 @@ function generateRadioDataItem(noTrue: boolean) {
   templateUrl: './data-driven.component.html',
   styleUrls: ['./data-driven.component.css']
 })
-export class DataDrivenComponent implements OnInit {
+export class DataDrivenComponent {
   @ViewChild('displayRadioItemsBtnRef', { read: ElementRef }) displayRadioItemsBtnRef;
 
   constructor() { }
 
   radioGroupDisplay = false;
   radioItems = [];
-
-  ngOnInit(): void {
-
-  }
 
   toggleRadioGroupDisplay() {
     this.radioGroupDisplay = !this.radioGroupDisplay;

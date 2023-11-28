@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { randomInt, randomBool } from '../../../../../utils/random';
 
 function generateCheckboxDataItem() {
@@ -16,15 +16,13 @@ function generateCheckboxDataItem() {
   templateUrl: './control-flow.component.html',
   styleUrls: ['./control-flow.component.css']
 })
-export class ControlFlowComponent implements OnInit {
+export class ControlFlowComponent {
   @ViewChild('displayCheckboxStatesBtnRef', { read: ElementRef }) displayCheckboxStatesBtnRef;
 
   displayCheckboxStates = false;
   checkboxOptions = [];
 
   constructor() { }
-
-  ngOnInit(): void {}
 
   toggleCheckboxStatesDisplay() {
     this.displayCheckboxStates = !this.displayCheckboxStates;

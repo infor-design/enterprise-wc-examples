@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { randomInt, randomBool } from '../../../../../utils/random';
 
 function generateCheckboxDataItem() {
@@ -16,15 +16,13 @@ function generateCheckboxDataItem() {
   templateUrl: './data-driven.component.html',
   styleUrls: ['./data-driven.component.css']
 })
-export class DataDrivenComponent implements OnInit {
+export class DataDrivenComponent {
   @ViewChild('displayCheckboxStatesBtnRef', { read: ElementRef }) displayCheckboxStatesBtnRef;
 
   displayCheckboxStates = false;
   checkboxOptions = [];
 
   constructor() { }
-
-  ngOnInit(): void {}
 
   toggleCheckboxStatesDisplay() {
     this.displayCheckboxStates = !this.displayCheckboxStates;
