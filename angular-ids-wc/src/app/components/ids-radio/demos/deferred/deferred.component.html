@@ -1,0 +1,36 @@
+<ids-container language="en" locale="en-US" padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+  
+  <ids-layout-grid cols="4" gap="md" padding-x="md">
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">&#64;deferred IdsRadioGroup/IdsRadios</ids-text><br />
+      <ids-button
+        #displayRadiosBtnRef
+        appearance="secondary"
+        (click)="isCheckedDeferred.set(true)"
+        text="Load Deferred Content"
+        [attr.disabled]="isCheckedDeferred()"></ids-button>
+      <br /><br />
+      @defer (when isCheckedDeferred()) {
+        <ids-radio-group 
+          #deferredRadioGroupRef 
+          label="Deferred Radio Group"
+          id="ids-radio-deferred"
+          (change)="onRadioChange($event)">
+          <ids-radio value="opt1" label="Option one"></ids-radio>
+          <ids-radio value="opt2" label="Option two"></ids-radio>
+          <ids-radio value="opt3" label="Option three" checked></ids-radio>
+        </ids-radio-group>
+      }
+      @placeholder {
+        <ids-text>No Radios have been loaded yet...</ids-text>
+      }
+      @error {
+        <ids-text>There was an error loading the radios...</ids-text>
+      }
+      @loading(minimum 1s) {
+        <ids-loading-indicator></ids-loading-indicator>
+      }
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>

@@ -3,8 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { IdsRadioComponent } from './ids-radio.component';
 import { ExampleComponent } from './demos/example/example.component';
-import { DataDrivenComponent } from './demos/data-driven/data-driven.component';
 import { ControlFlowComponent } from './demos/control-flow/control-flow.component';
+import { DataDrivenComponent } from './demos/data-driven/data-driven.component';
+import { DeferredComponent } from './demos/deferred/deferred.component';
 
 export const routes: Routes = [
   { 
@@ -22,6 +23,10 @@ export const routes: Routes = [
   {
     path: 'data-driven',
     component: DataDrivenComponent
+  },
+  {
+    path: 'deferred',
+    component: DeferredComponent
   }
 ];
 
