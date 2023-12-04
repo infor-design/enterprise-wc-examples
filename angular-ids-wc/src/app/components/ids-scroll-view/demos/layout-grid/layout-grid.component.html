@@ -1,0 +1,30 @@
+<ids-container language="en" locale="en-US" padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-text font-size="12" type="h1">Scroll View</ids-text>
+  </ids-layout-grid>
+  <ids-layout-grid cols="1" cols-md="4" padding-x="md">
+    <ids-layout-grid-cell col-span="1">
+
+      <ids-scroll-view #scrollView>
+        <div *ngFor="let items of item2DArray" slot="scroll-view-item">
+          <ids-layout-grid
+            cols="4"
+            rows="3"
+            cols-sm="12"
+            rows-sm="2"
+            gap="md"
+            flow-sm="column"
+            flow="row">
+            <ids-layout-grid-cell col-span="2" *ngFor="let item of items">
+              <ids-icon [icon]="item.name"></ids-icon>
+              <ids-text font-size="20" text-align="center">{{ item.name }}</ids-text>
+            </ids-layout-grid-cell>
+          </ids-layout-grid>
+        </div>
+      </ids-scroll-view>
+
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>
