@@ -43,6 +43,7 @@
 /***************************************************************************************************
  * Zone JS is required by Angular itself.
  */
+import './zone-flags.js';
 import 'zone.js';  // Included with Angular CLI.
 
 
