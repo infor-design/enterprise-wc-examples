@@ -32,6 +32,13 @@ export class SandboxComponent implements OnInit, AfterViewInit, AfterContentChec
   public pinned = true;
   public responsive = true;
   public accordionItems = [];
+  public roleSwitcherData = [];
+  public roleSwitcherSelectedItem = {
+    "icon": "icon-app-ac",
+    "text": "Admin Console",
+    "value": "admin-console"
+  };
+  public settingsData = [];
 
   /** Needs to be changed to `true` in order for `ngAfterContentChecked` to run efficiently */
   private viewNeedsRefresh = false;
@@ -67,6 +74,18 @@ export class SandboxComponent implements OnInit, AfterViewInit, AfterContentChec
     IdsIcon.customIconData = { ...appIconData };
   }
 
+  private async loadRoleSwitcherData() {
+    const roleSwitcherRes = await fetch('/api/module-nav-switcher-list.json');
+    const roleSwitcherData = await roleSwitcherRes.json();
+    this.roleSwitcherData = roleSwitcherData;
+  }
+
+  private async loadSettingsMenuData() {
+    const settingsMenuRes = await fetch('/api/module-nav-settings-list.json');
+    const settingsMenuData = await settingsMenuRes.json();
+    this.settingsData = settingsMenuData.contents[0].items;
+  }
+
   constructor() { }
 
   getDisplayModeDropdownValue(val: IdsModuleNavDisplayMode) {
@@ -78,8 +97,10 @@ export class SandboxComponent implements OnInit, AfterViewInit, AfterContentChec
   }
 
   async ngOnInit() {
+    await this.loadRoleSwitcherData();
     await this.loadAppIconData();
     await this.loadAccoridonItemData(DatasetMap[this.datasetName]);
+    await this.loadSettingsMenuData();
     console.log('Module Nav sandbox init');
   }
 
@@ -142,5 +163,16 @@ export class SandboxComponent implements OnInit, AfterViewInit, AfterContentChec
 
   handleSelected(e: CustomEvent) {
     console.info(`Module Nav Item "${(e.target as any).textContent.trim()}" was selected.`);
+  }
+
+  handleRoleSwitcherSelected(e: CustomEvent) {
+    const text = e.detail.selectedElem.textContent.trim();
+
+    this.roleSwitcherSelectedItem = {
+      icon: e.detail.selectedElem.childIcon.icon || '',
+      text,
+      value: e.detail.selectedElem.value
+    }
+    console.info(`Role Switcher item "${text}" was selected.`);
   }
 }

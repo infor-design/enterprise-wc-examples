@@ -1,0 +1,79 @@
+{
+  "id": "module-nav-settings-menu",
+  "contents": [
+    {
+      "id": "module-nav-settings-group",
+      "select": "none",
+      "items": [
+        {
+          "id": "mns-jobs",
+          "icon": "observation-precautions",
+          "text": "Jobs",
+          "value": "jobs"
+        },
+        {
+          "id": "mns-reports",
+          "icon": "report",
+          "text": "Reports",
+          "value": "reports"
+        },
+        {
+          "id": "mns-actions",
+          "icon": "isolation",
+          "text": "Actions",
+          "value": "actions"
+        },
+        {
+          "id": "mns-personalization",
+          "icon": "edit",
+          "text": "Personalization",
+          "value": "personalization"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "mns-create-report",
+          "text": "Create Report",
+          "value": "create-report"
+        },
+        {
+          "id": "mns-proxy",
+          "text": "Proxy",
+          "value": "proxy"
+        },
+        {
+          "id": "mns-set-as-of-date",
+          "text": "Set \"As of Date\"",
+          "value": "set-as-of-date"
+        },
+        {
+          "id": "mns-user-context",
+          "text": "User Context",
+          "value": "user-context"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "id": "mns-settings",
+          "icon": "settings",
+          "text": "Settings",
+          "value": "settings"
+        },
+        {
+          "id": "mns-about",
+          "icon": "info",
+          "text": "About",
+          "value": "about"
+        },
+        {
+          "id": "mns-help",
+          "icon": "help",
+          "text": "Help",
+          "value": "help"
+        }
+      ]
+    }
+  ]
+}
