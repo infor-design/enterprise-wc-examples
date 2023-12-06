@@ -23,9 +23,10 @@ export class ExampleComponent implements OnInit, AfterViewInit {
     this.messageError.nativeElement.triggerType = 'click';
 
     this.messageError.nativeElement.onButtonClick = (buttonEl: any) => {
+      this.messageError.nativeElement.hide();
+      
       const response = buttonEl.cancel ? 'cancelled' : 'confirmed';
       console.info(`IdsMessage was ${response}`);
-      this.messageError.nativeElement.hide();
     };
   }
 
