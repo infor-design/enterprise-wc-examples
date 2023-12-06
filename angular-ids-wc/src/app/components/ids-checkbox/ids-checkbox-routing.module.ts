@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { IdsCheckboxComponent } from './ids-checkbox.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { ControlFlowComponent } from './demos/control-flow/control-flow.component';
+import { DataDrivenComponent } from './demos/data-driven/data-driven.component';
+import { DeferredComponent } from './demos/deferred/deferred.component';
 
 export const routes: Routes = [
   { 
@@ -12,7 +15,19 @@ export const routes: Routes = [
   {
     path: 'example',
     component: ExampleComponent
-  }
+  },
+  {
+    path: 'control-flow',
+    component: ControlFlowComponent
+  },
+  {
+    path: 'data-driven',
+    component: DataDrivenComponent
+  },
+  {
+    path: 'deferred',
+    component: DeferredComponent
+  },
 ];
 
 @NgModule({
