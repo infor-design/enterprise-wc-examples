@@ -1,0 +1,75 @@
+<ids-container language="en" locale="en-US" padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+
+  <ids-layout-grid cols="4" gap="md" padding-x="md">
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">&#64;if and &#64;else</ids-text><br />
+      <ids-button
+      #radioGroupDisplayBtnRef
+      appearance="secondary"
+      (click)="toggleRadioGroupDisplay()"
+      [attr.text]="radioGroupDisplay ? 'Hide Radio Groups' : 'Show Radio Groups'"></ids-button>
+      <br /><br />
+      @if (radioGroupDisplay === true) {
+        <ids-radio-group label="Normal">
+          <ids-radio value="opt1" label="Option one"></ids-radio>
+          <ids-radio value="opt2" label="Option two" checked="true"></ids-radio>
+        </ids-radio-group>
+
+        <ids-radio-group label="Disabled Group" disabled="true">
+          <ids-radio value="opt1" label="Option one" checked="true"></ids-radio>
+          <ids-radio value="opt2" label="Option two"></ids-radio>
+        </ids-radio-group>
+
+        <ids-radio-group label="Disabled Item">
+          <ids-radio value="opt1" label="Option one"></ids-radio>
+          <ids-radio value="opt2" label="Option two" checked="true"></ids-radio>
+          <ids-radio value="opt3" label="Option three" disabled="true"></ids-radio>
+        </ids-radio-group>
+      }
+      @else {
+        <ids-text>Radio Groups are currently hidden</ids-text>
+      }
+    </ids-layout-grid-cell>
+
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">&#64;for</ids-text><br />
+      <ids-button 
+        #displayRadioItemsBtnRef 
+        appearance="secondary" 
+        (click)="generateRadioItems()"
+        text="Display Random Radios"></ids-button>
+      <br /><br />
+      <ids-radio-group>
+        @for (option of radioItems; let i = $index; track option.id) {
+        <ids-radio
+          name="name-{{i}}" 
+          label="{{option.text}}" 
+          checked="{{option.checked}}" 
+          disabled="{{option.disabled}}"
+          [ngModel]="radioItems" 
+          (change)="onRadioChange($event, i)"></ids-radio>
+        }
+      </ids-radio-group>
+    </ids-layout-grid-cell>
+
+    <ids-layout-grid-cell col-span="2">
+      <ids-text font-size="12" type="h1">*ngModel (models the &#64;for example)</ids-text><br />
+      <code class="pre">
+        @for (option of radioItems; let i = $index, last = $last; track option.id) {
+          <div id="line-{{i}}">
+            <span>{{'{'}}</span>
+            <span>text: "{{option.text}}", </span>
+            <span>checked: {{option.checked}}, </span>
+            <span>disabled: {{option.disabled}} </span>
+            <span>{{'}'}}</span>
+            @if (last) { <span>,</span> }
+          </div>
+        }
+        @empty {
+          <ids-text>No Radios were rendered (dataset is empty)</ids-text>
+        }
+      </code>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>

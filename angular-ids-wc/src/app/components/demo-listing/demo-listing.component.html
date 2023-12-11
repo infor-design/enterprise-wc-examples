@@ -1,11 +1,15 @@
 <ids-container language="en" locale="en-US" padding="8" hidden>
   <ids-theme-switcher mode="light"></ids-theme-switcher>
   
-  <ids-layout-grid cols="2" gap="md">
+  <ids-layout-grid auto-fit="true" padding="md">
     <ids-layout-grid-cell>
-      <ids-text font-size="20">{{title}}</ids-text>
+      <ids-text font-size="12" type="h1">{{title}}</ids-text>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-data-grid #table list-style="true"></ids-data-grid>
+  <ids-layout-grid auto-fit="true" padding-x="md">
+    <ids-layout-grid-cell>
+      <ids-data-grid #table list-style="true"></ids-data-grid>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
 </ids-container>
