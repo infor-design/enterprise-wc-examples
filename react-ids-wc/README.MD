@@ -47,6 +47,7 @@ IDS does not support IE 11 so you should add it to `browserslist` in `package.js
   ]
 }
 ```
+
 ### Add the Ids Web Components to React
 
 **1. Install**
@@ -65,21 +66,21 @@ Add the font that Ids uses
 
 **3. Add the default styles**
 
-Add the css variable themes
+Add the css variable themes, since react doesnt like including assets from node_modules. First copy node_modules/ids-enterprise-wc/themes to src/themes or some other location. You only need the main css files for each theme. Then import them in `src/index.css`. In this project i put them in assets.
 
 ```css
-@import 'ids-enterprise-wc/themes/ids-theme-default-light.css';
+@import 'scr/themes/ids-theme-default-light.css';
 ```
 
 We have a todo of showing how to switch themes. But one general idea is to use `<ids-theme-switcher manage-styles="false"` and then watch the events.
 
-Or you can let `node_modules/ids-enterprise-wc/themes` be served as `themes/` in the URL.
+Or you can try let `node_modules/ids-enterprise-wc/themes` be served as `themes/` in the URL.
 
 **3. Use the Components**
 
 You can now use the Ids Web Components like any other HTML tag. Replace the contents of the src/App.js with the following
 
-```Javascript
+```js
 import React from 'react';
 import './App.css';
 

@@ -22,14 +22,13 @@ const IdsAlert = () => {
           </ids-layout-grid-cell>
         ))}
       </ids-layout-grid>
-      <ids-layout-grid cols="12" gap="md">
+      <ids-layout-grid auto-fit="true">
         <ids-layout-grid-cell>
+          <br></br>
           <ids-button appearance="secondary" onClick={() => setItems(items.slice(0, -1))}>
             <span>Remove item</span>
           </ids-button>
-        </ids-layout-grid-cell>
-
-        <ids-layout-grid-cell>
+          <br></br>&nbsp;
           <ids-button appearance="secondary" onClick={() => setItems(data)}>
             <span>Reset</span>
           </ids-button>
