@@ -7,11 +7,11 @@
   <ids-layout-grid cols="1" cols-md="4" padding-x="md">
     <ids-layout-grid-cell col-span="1">
 
-      <ids-scroll-view #scrollView>
+      <ids-scroll-view #scrollView hide-on-one="true">
         <div *ngFor="let items of dataset" slot="scroll-view-item">
-          <ids-layout-grid cols="4" rows="3" cols-sm="12" rows-sm="2" gap="md" flow-sm="column" flow="row">
+          <ids-layout-grid cols-sm="12" rows-sm="2" gap="md" flow-sm="column" flow="row">
             <ids-layout-grid-cell col-span="2" *ngFor="let item of items">
-              <ids-icon [icon]="item.icon" height="128" width="128"></ids-icon>
+              <ids-icon [icon]="item.icon" [attr.status-color]="item.color" height="128" width="128"></ids-icon>
               <ids-text font-size="20" text-align="center">{{ item.name }}</ids-text>
             </ids-layout-grid-cell>
           </ids-layout-grid>
@@ -28,7 +28,14 @@
         id="toggle-dataset"
         appearance="secondary"
         [attr.text]="this.toggled ? 'Show original dataset' : 'Show alternate dataset'"
-        (click)="onDatasetChange()"></ids-button>
+        (click)="onDatasetToggle()"></ids-button>
+      <ids-button
+        #showOneItemBtn
+        id="show-one-item"
+        appearance="secondary"
+        text="Show one item"
+        [disabled]="this.singlePage"
+        (click)="onDisplayOneItem()"></ids-button>
       </ids-layout-grid-cell>
   </ids-layout-grid>
 </ids-container>
