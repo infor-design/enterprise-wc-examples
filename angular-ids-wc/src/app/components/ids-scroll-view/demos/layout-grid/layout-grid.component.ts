@@ -1,46 +1,16 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, HostListener } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router'
-
-const item2DArray = [
-  [{"name": "Clock1", "icon": "clock", "color": "azure"}, {"name": "Clock2", "icon": "clock", "color": "ruby"}],
-  [{"name": "Clock3", "icon": "clock", "color": "emerald"}, {"name": "Clock4", "icon": "clock", "color": false}],
-  [{"name": "Clock5", "icon": "clock", "color": "amethyst"}, {"name": "Clock6", "icon": "clock", "color": "azure"}],
-  [{"name": "Clock7", "icon": "clock", "color": "ruby"}, {"name": "Clock8", "icon": "clock", "color": false}],
-  [{"name": "Clock9", "icon": "clock", "color": "emerald"}, {"name": "Clock10", "icon": "clock", "color": "amethyst"}],
-  [{"name": "Clock11", "icon": "clock", "color": false}, {"name": "Clock12", "icon": "clock", "color": "azure"}],
-  [{"name": "Clock13", "icon": "clock", "color": "ruby"}, {"name": "Clock14", "icon": "clock", "color": false}],
-  [{"name": "Clock15", "icon": "clock", "color": "emerald"}, {"name": "Clock16", "icon": "clock", "color": "amethyst"}],
-  [{"name": "Clock17", "icon": "clock", "color": "azure"}, {"name": "Clock18", "icon": "clock", "color": "ruby"}],
-  [{"name": "Clock19", "icon": "clock", "color": false}, {"name": "Clock20", "icon": "clock", "color": "emerald"}]
-];
-
-const alternateItem2DArray = [
-  [{"name": "Clock65", "icon": "clock", "color": "amethyst"}, {"name": "Clock66", "icon": "clock", "color": false}],
-  [{"name": "Clock67", "icon": "clock", "color": "azure"}, {"name": "Clock68", "icon": "clock", "color": "ruby"}],
-  [{"name": "Clock69", "icon": "clock", "color": false}, {"name": "Clock70", "icon": "clock", "color": "emerald"}],
-  [{"name": "Clock71", "icon": "clock", "color": "amethyst"}, {"name": "Clock72", "icon": "clock", "color": "azure"}],
-  [{"name": "Clock73", "icon": "clock", "color": "ruby"}, {"name": "Clock74", "icon": "clock", "color": false}],
-  [{"name": "Clock75", "icon": "clock", "color": "emerald"}, {"name": "Clock76", "icon": "clock", "color": "amethyst"}],
-  [{"name": "Clock77", "icon": "clock", "color": "azure"}, {"name": "Clock78", "icon": "clock", "color": "ruby"}],
-  [{"name": "Clock79", "icon": "clock", "color": false}, {"name": "Clock80", "icon": "clock", "color": "emerald"}],
-  [{"name": "Clock81", "icon": "clock", "color": "amethyst"}, {"name": "Clock82", "icon": "clock", "color": "azure"}],
-  [{"name": "Clock83", "icon": "clock", "color": "ruby"}, {"name": "Clock84", "icon": "clock", "color": false}]
-];
-
-const singlePage2DArray = [
-  [{"name": "Clock1", "icon": "clock", "color": "ruby"}, {"name": "Clock2", "icon": "clock", "color": "amethyst"}]
-];
+import { Component, AfterViewInit, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-example',
   templateUrl: './layout-grid.component.html',
   styleUrls: ['./layout-grid.component.css']
 })
-export class LayoutGridComponent implements AfterViewInit {
+export class LayoutGridComponent implements OnInit, AfterViewInit {
   @ViewChild('scrollview', { read: ElementRef }) scrollview;
   @ViewChild('toggleDatasetBtn', { read: ElementRef }) toggleDatasetBtn;
 
-  dataset = item2DArray;
+  dataset = [];
   toggled = false;
   singlePage = false;
 
@@ -48,8 +18,25 @@ export class LayoutGridComponent implements AfterViewInit {
     private router: Router
   ) { }
 
+  private layoutGridDataDictionary = {
+    primary: '/api/scroll-view-clocks-main.json',
+    secondary: '/api/scroll-view-clocks-secondary.json',
+    single: '/api/scroll-view-clocks-single.json'
+  }
+
+  private async loadLayoutGridData(type: string) {
+    const layoutGridRes = await fetch(this.layoutGridDataDictionary[type]);
+    const layoutGridData = await layoutGridRes.json();
+    this.dataset = layoutGridData;
+  }
+
+  ngOnInit(): void {
+    console.log('IdsScrollView OnInit');
+    this.loadLayoutGridData('primary');
+  }
+
   ngAfterViewInit(): void {
-    console.log('IdsScrollView AfterViewInit')
+    console.log('IdsScrollView AfterViewInit');
   }
 
   /** 
@@ -62,16 +49,18 @@ export class LayoutGridComponent implements AfterViewInit {
       this.singlePage = false;
     }
     this.toggled = !this.toggled;
-    this.dataset = this.toggled ? alternateItem2DArray : item2DArray;
-    console.log('dataset toggle: ', this.toggled);
+    const targetDataset = this.toggled ? 'secondary' : 'primary';
+
+    this.loadLayoutGridData(targetDataset);
+    console.log('dataset toggle: ', targetDataset);
   }
 
   /**
    * Forces the displayed dataset to only have one item.
    */
   onDisplayOneItem() {
-    this.dataset = singlePage2DArray;
+    this.loadLayoutGridData('single');
     this.singlePage = true;
-    console.log('showing one dataset item');
+    console.log('dataset toggle: single');
   }
 }
