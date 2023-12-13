@@ -48,4 +48,8 @@ export class ExampleComponent implements OnInit {
     console.log(`testUploadAdvanced selected is: ${this.testForm.controls['testUploadAdvanced'].value}`);
   }
 
+  public updateModel() {
+    this.testForm.controls['testSwitch'].setValue(!this.testForm.controls['testSwitch'].value); 
+  }
+
 }
