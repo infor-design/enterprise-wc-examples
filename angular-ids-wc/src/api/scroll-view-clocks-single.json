@@ -1,0 +1,7 @@
+[
+  [
+    {"name": "ClockA", "icon": "clock", "color": "ruby"}, 
+    {"name": "ClockB", "icon": "clock", "color": "amethyst"},
+    {"name": "ClockC", "icon": "clock", "color": "amber"}
+  ]
+]

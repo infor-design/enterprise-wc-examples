@@ -1,0 +1,42 @@
+[
+  [
+    {"name": "Clock1", "icon": "clock", "color": "azure"},
+    {"name": "Clock2", "icon": "clock", "color": "ruby"},
+    {"name": "Clock3", "icon": "clock", "color": "emerald"},
+    {"name": "Clock4", "icon": "clock", "color": false},
+    {"name": "Clock5", "icon": "clock", "color": "amethyst"},
+    {"name": "Clock6", "icon": "clock", "color": "amber"}
+  ],
+  [
+    {"name": "Clock7", "icon": "clock", "color": false},
+    {"name": "Clock8", "icon": "clock", "color": "emerald"},
+    {"name": "Clock9", "icon": "clock", "color": "amethyst"},
+    {"name": "Clock10", "icon": "clock", "color": "azure"},
+    {"name": "Clock11", "icon": "clock", "color": "ruby"},
+    {"name": "Clock12", "icon": "clock", "color": "amber"}
+  ],
+  [
+    {"name": "Clock13", "icon": "clock", "color": false},
+    {"name": "Clock14", "icon": "clock", "color": "emerald"},
+    {"name": "Clock15", "icon": "clock", "color": "amethyst"},
+    {"name": "Clock16", "icon": "clock", "color": "azure"},
+    {"name": "Clock17", "icon": "clock", "color": "ruby"},
+    {"name": "Clock18", "icon": "clock", "color": "amber"}
+  ],
+  [
+    {"name": "Clock19", "icon": "clock", "color": "azure"},
+    {"name": "Clock20", "icon": "clock", "color": "ruby"},
+    {"name": "Clock21", "icon": "clock", "color": false},
+    {"name": "Clock22", "icon": "clock", "color": "emerald"},
+    {"name": "Clock23", "icon": "clock", "color": "amethyst"},
+    {"name": "Clock24", "icon": "clock", "color": "amber"}
+  ],
+  [
+    {"name": "Clock25", "icon": "clock", "color": "ruby"},
+    {"name": "Clock26", "icon": "clock", "color": "emerald"},
+    {"name": "Clock27", "icon": "clock", "color": "amethyst"},
+    {"name": "Clock28", "icon": "clock", "color": "azure"},
+    {"name": "Clock29", "icon": "clock", "color": false},
+    {"name": "Clock30", "icon": "clock", "color": "amber"}
+  ]
+]
