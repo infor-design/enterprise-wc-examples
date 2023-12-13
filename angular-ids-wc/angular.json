@@ -40,10 +40,7 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-              { "input": "themes/ids-theme-default-light.css", "inject": false, "bundleName": "themes" },
-              { "input": "themes/ids-theme-default-dark.css", "inject": false, "bundleName": "themes" },
-              { "input": "themes/ids-theme-default-contrast.css", "inject": false, "bundleName": "themes" }
+              "src/styles.css"
             ],
             "scripts": [
             ],
