@@ -56,9 +56,26 @@ export class ExampleComponent implements OnInit {
   }
 
   public updateModel() {
+    const randomText = (wordCount) => Array(wordCount).fill(Math.random().toString(32).substring(2)).join(' ');
+
+    this.testForm.controls['testDateObject'].setValue(new Date());
+    this.testForm.controls['testDateString'].setValue((new Date()).toDateString());
+    this.testForm.controls['testDropdown'].setValue(!this.testForm.controls['testDropdown'].value);
+    this.testForm.controls['testInput'].setValue(randomText(2));
+    this.testForm.controls['testLookup'].setValue(!this.testForm.controls['testLookup'].value);
+    this.testForm.controls['testTextarea'].setValue(randomText(9));
+    this.testForm.controls['testTimePicker'].setValue(!this.testForm.controls['testTimePicker'].value);
+    this.testForm.controls['testRadio'].setValue(!this.testForm.controls['testRadio'].value);
+    this.testForm.controls['testSearchField'].setValue(randomText(3));
+    this.testForm.controls['testSpinbox'].setValue(!this.testForm.controls['testSpinbox'].value);
+    this.testForm.controls['testUpload'].setValue(!this.testForm.controls['testUpload'].value);
+    this.testForm.controls['testUploadAdvanced'].setValue(!this.testForm.controls['testUploadAdvanced'].value);
+
     this.testForm.controls['testSwitch'].setValue(!this.testForm.controls['testSwitch'].value);
     this.testForm.controls['testCheckbox'].setValue(!this.testForm.controls['testCheckbox'].value);
     this.testForm.controls['testCheckboxGroup'].setValue(!this.testForm.controls['testCheckboxGroup'].value);
+
+    this.onFormSubmit();
   }
 
 }
