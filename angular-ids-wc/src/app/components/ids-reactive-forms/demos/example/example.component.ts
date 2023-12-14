@@ -57,6 +57,7 @@ export class ExampleComponent implements OnInit {
 
   public updateModel() {
     const randomText = (wordCount) => Array(wordCount).fill(Math.random().toString(32).substring(2)).join(' ');
+    const randomDate = () => new Date(Math.floor(Math.random()*(10**12.5)));
 
     const nextDropdownValue = {
       blank: 'opt1',
@@ -73,22 +74,26 @@ export class ExampleComponent implements OnInit {
       radio2: 'radio1',
     }[this.testForm.controls['testRadio'].value] ?? 'radio1';
 
-    this.testForm.controls['testDateObject'].setValue(new Date());
-    this.testForm.controls['testDateString'].setValue((new Date()).toDateString());
-    this.testForm.controls['testDropdown'].setValue(nextDropdownValue);
-    this.testForm.controls['testInput'].setValue(randomText(2));
-    this.testForm.controls['testLookup'].setValue(randomText(2));
-    this.testForm.controls['testTextarea'].setValue(randomText(9));
-    this.testForm.controls['testTimePicker'].setValue(!this.testForm.controls['testTimePicker'].value);
-    this.testForm.controls['testRadio'].setValue(nextRadioValue);
-    this.testForm.controls['testSearchField'].setValue(randomText(3));
-    this.testForm.controls['testSpinbox'].setValue(Math.floor(Math.random() * 100));
-    this.testForm.controls['testUpload'].setValue(`${randomText(2).split(' ').join('/')}.txt`);
-    this.testForm.controls['testUploadAdvanced'].setValue(`${randomText(3).split(' ').join('/')}.txt`);
-
     this.testForm.controls['testSwitch'].setValue(!this.testForm.controls['testSwitch'].value);
     this.testForm.controls['testCheckbox'].setValue(!this.testForm.controls['testCheckbox'].value);
     this.testForm.controls['testCheckboxGroup'].setValue(!this.testForm.controls['testCheckboxGroup'].value);
+
+    this.testForm.controls['testDateObject'].setValue(randomDate());
+    this.testForm.controls['testDateString'].setValue(randomDate().toLocaleDateString());
+    this.testForm.controls['testTimePicker'].setValue(randomDate().toLocaleTimeString());
+
+    this.testForm.controls['testInput'].setValue(randomText(2));
+    this.testForm.controls['testLookup'].setValue(randomText(2));
+    this.testForm.controls['testTextarea'].setValue(randomText(9));
+    this.testForm.controls['testSearchField'].setValue(randomText(3));
+
+    this.testForm.controls['testDropdown'].setValue(nextDropdownValue);
+    this.testForm.controls['testRadio'].setValue(nextRadioValue);
+
+    this.testForm.controls['testSpinbox'].setValue(Math.floor(Math.random() * 100));
+
+    this.testForm.controls['testUpload'].setValue(`${randomText(2).split(' ').join('/')}.txt`);
+    this.testForm.controls['testUploadAdvanced'].setValue(`${randomText(3).split(' ').join('/')}.txt`);
 
     this.onFormSubmit();
   }

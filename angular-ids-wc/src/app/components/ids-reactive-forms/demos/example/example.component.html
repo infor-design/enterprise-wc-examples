@@ -19,17 +19,7 @@
 
         <ids-date-picker label="IDS Date Picker (string)" tabbable="false" mask formControlName="testDateString" ngDefaultControl></ids-date-picker>
 
-        <ids-dropdown label="IDS Dropdown" validate="required" formControlName="testDropdown" ngDefaultControl>
-          <ids-list-box>
-            <ids-list-box-option value="blank" id="blank" aria-label="Blank"></ids-list-box-option>
-            <ids-list-box-option value="opt1" id="opt1-d4">Option One</ids-list-box-option>
-            <ids-list-box-option value="opt2" id="opt2-d4">Option Two</ids-list-box-option>
-            <ids-list-box-option value="opt3" id="opt3-d4">Option Three</ids-list-box-option>
-            <ids-list-box-option value="opt4" id="opt4-d4">Option Four</ids-list-box-option>
-            <ids-list-box-option value="opt5" id="opt5-d4">Option Five</ids-list-box-option>
-            <ids-list-box-option value="opt6" id="opt6-d4">Option Six</ids-list-box-option>
-          </ids-list-box>
-        </ids-dropdown>
+        <ids-time-picker label="IDS Time Picker" id="e2e-timepicker-autoselect" autoselect mask="true" formControlName="testTimePicker" ngDefaultControl></ids-time-picker>
 
         <ids-input type="text" label="IDS Input" formControlName="testInput" ngDefaultControl></ids-input>
 
@@ -42,7 +32,17 @@
         <br>
         <br>
 
-        <ids-time-picker label="IDS Time Picker" id="e2e-timepicker-autoselect" autoselect mask="true" formControlName="testTimePicker" ngDefaultControl></ids-time-picker>
+        <ids-dropdown label="IDS Dropdown" validate="required" formControlName="testDropdown" ngDefaultControl>
+          <ids-list-box>
+            <ids-list-box-option value="blank" id="blank" aria-label="Blank"></ids-list-box-option>
+            <ids-list-box-option value="opt1" id="opt1-d4">Option One</ids-list-box-option>
+            <ids-list-box-option value="opt2" id="opt2-d4">Option Two</ids-list-box-option>
+            <ids-list-box-option value="opt3" id="opt3-d4">Option Three</ids-list-box-option>
+            <ids-list-box-option value="opt4" id="opt4-d4">Option Four</ids-list-box-option>
+            <ids-list-box-option value="opt5" id="opt5-d4">Option Five</ids-list-box-option>
+            <ids-list-box-option value="opt6" id="opt6-d4">Option Six</ids-list-box-option>
+          </ids-list-box>
+        </ids-dropdown>
 
         <ids-radio-group label="IDS Radio Group" formControlName="testRadio" ngDefaultControl>
           <ids-radio value="radio1" label="radio one"></ids-radio>
