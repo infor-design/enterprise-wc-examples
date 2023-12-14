@@ -67,9 +67,9 @@ export class ExampleComponent implements OnInit {
     this.testForm.controls['testTimePicker'].setValue(!this.testForm.controls['testTimePicker'].value);
     this.testForm.controls['testRadio'].setValue(!this.testForm.controls['testRadio'].value);
     this.testForm.controls['testSearchField'].setValue(randomText(3));
-    this.testForm.controls['testSpinbox'].setValue(!this.testForm.controls['testSpinbox'].value);
-    this.testForm.controls['testUpload'].setValue(!this.testForm.controls['testUpload'].value);
-    this.testForm.controls['testUploadAdvanced'].setValue(!this.testForm.controls['testUploadAdvanced'].value);
+    this.testForm.controls['testSpinbox'].setValue(Math.floor(Math.random() * 100));
+    this.testForm.controls['testUpload'].setValue(`${randomText(2).split(' ').join('/')}.txt`);
+    this.testForm.controls['testUploadAdvanced'].setValue(`${randomText(3).split(' ').join('/')}.txt`);
 
     this.testForm.controls['testSwitch'].setValue(!this.testForm.controls['testSwitch'].value);
     this.testForm.controls['testCheckbox'].setValue(!this.testForm.controls['testCheckbox'].value);
