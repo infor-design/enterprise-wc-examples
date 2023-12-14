@@ -58,14 +58,29 @@ export class ExampleComponent implements OnInit {
   public updateModel() {
     const randomText = (wordCount) => Array(wordCount).fill(Math.random().toString(32).substring(2)).join(' ');
 
+    const nextDropdownValue = {
+      blank: 'opt1',
+      opt1: 'opt2',
+      opt2: 'opt3',
+      opt3: 'opt4',
+      opt4: 'opt5',
+      opt5: 'opt6',
+      opt6: 'blank',
+    }[this.testForm.controls['testDropdown'].value] ?? 'opt1';
+
+    const nextRadioValue = {
+      radio1: 'radio2',
+      radio2: 'radio1',
+    }[this.testForm.controls['testRadio'].value] ?? 'radio1';
+
     this.testForm.controls['testDateObject'].setValue(new Date());
     this.testForm.controls['testDateString'].setValue((new Date()).toDateString());
-    this.testForm.controls['testDropdown'].setValue(!this.testForm.controls['testDropdown'].value);
+    this.testForm.controls['testDropdown'].setValue(nextDropdownValue);
     this.testForm.controls['testInput'].setValue(randomText(2));
     this.testForm.controls['testLookup'].setValue(randomText(2));
     this.testForm.controls['testTextarea'].setValue(randomText(9));
     this.testForm.controls['testTimePicker'].setValue(!this.testForm.controls['testTimePicker'].value);
-    this.testForm.controls['testRadio'].setValue(!this.testForm.controls['testRadio'].value);
+    this.testForm.controls['testRadio'].setValue(nextRadioValue);
     this.testForm.controls['testSearchField'].setValue(randomText(3));
     this.testForm.controls['testSpinbox'].setValue(Math.floor(Math.random() * 100));
     this.testForm.controls['testUpload'].setValue(`${randomText(2).split(' ').join('/')}.txt`);
