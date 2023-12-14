@@ -6,14 +6,31 @@
         <ids-text font-size="12" type="h1">Reactive forms</ids-text>
         <br>
 
-        <ids-checkbox-group label="IDS Checkbox Group" formControlName="testCheckbox" ngDefaultControl>
+        <ids-checkbox value="checkbox0" label="IDS Checkbox" formControlName="testCheckbox" ngDefaultControl></ids-checkbox>
+        <br>
+
+        <ids-checkbox-group label="IDS Checkbox Group" formControlName="testCheckboxGroup" ngDefaultControl>
           <ids-checkbox value="checkbox1" label="checkbox one"></ids-checkbox>
-          <ids-checkbox value="checkbox2" label="checkbox two" checked="true"></ids-checkbox>
+          <ids-checkbox value="checkbox2" label="checkbox two"></ids-checkbox>
         </ids-checkbox-group>
+        <br>
 
         <ids-date-picker label="IDS Date Picker (object)" tabbable="false" mask formControlName="testDateObject" ngDefaultControl></ids-date-picker>
 
         <ids-date-picker label="IDS Date Picker (string)" tabbable="false" mask formControlName="testDateString" ngDefaultControl></ids-date-picker>
+
+        <ids-time-picker label="IDS Time Picker" id="e2e-timepicker-autoselect" autoselect mask="true" formControlName="testTimePicker" ngDefaultControl></ids-time-picker>
+
+        <ids-input type="text" label="IDS Input" formControlName="testInput" ngDefaultControl></ids-input>
+
+        <ids-lookup label="IDS Lookup" clearable formControlName="testLookup" ngDefaultControl></ids-lookup>
+
+        <ids-textarea label="IDS Textarea " formControlName="testTextarea" ngDefaultControl></ids-textarea>
+      </ids-layout-grid-cell>
+
+      <ids-layout-grid-cell>
+        <br>
+        <br>
 
         <ids-dropdown label="IDS Dropdown" validate="required" formControlName="testDropdown" ngDefaultControl>
           <ids-list-box>
@@ -27,19 +44,6 @@
           </ids-list-box>
         </ids-dropdown>
 
-        <ids-input type="text" label="IDS Input" formControlName="testInput" ngDefaultControl></ids-input>
-
-        <ids-lookup label="IDS Lookup" clearable formControlName="testLookup" ngDefaultControl></ids-lookup>
-
-        <ids-textarea label="IDS Textarea " formControlName="testTextarea" ngDefaultControl></ids-textarea>
-      </ids-layout-grid-cell>
-
-      <ids-layout-grid-cell>
-        <br>
-        <br>
-
-        <ids-time-picker label="IDS Time Picker" id="e2e-timepicker-autoselect" autoselect mask="true" formControlName="testTimePicker" ngDefaultControl></ids-time-picker>
-
         <ids-radio-group label="IDS Radio Group" formControlName="testRadio" ngDefaultControl>
           <ids-radio value="radio1" label="radio one"></ids-radio>
           <ids-radio value="radio2" label="radio two" checked="true"></ids-radio>
@@ -49,7 +53,7 @@
 
         <ids-spinbox label="IDS Spinbox" value="0" formControlName="testSpinbox" ngDefaultControl></ids-spinbox>
 
-        <ids-switch label="IDS Switch" formControlName="testSwitch" ngDefaultControl></ids-switch><ids-button id="update" (click)="updateModel()">Update</ids-button>
+        <ids-switch label="IDS Switch" formControlName="testSwitch" ngDefaultControl></ids-switch>
 
         <ids-upload label="IDS Upload" formControlName="testUpload" ngDefaultControl></ids-upload>
 
@@ -68,6 +72,7 @@
             <ids-input type="text" label="Autoselect" value="Text select on focus" autoselect="true"></ids-input>
             -->
           <button type="submit">Submit</button>
+          <ids-button id="update" (click)="updateModel()">Update Values</ids-button>
         </ids-layout-grid-cell>
       </ids-layout-grid>
     </ids-layout-grid>
