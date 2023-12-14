@@ -33,21 +33,26 @@ export class ExampleComponent implements OnInit {
   }
 
   public onFormSubmit() {
-    console.log(`testCheckbox selected is: ${this.testForm.controls['testCheckbox'].value}`);
-    console.log(`testCheckboxGroup selected is: ${this.testForm.controls['testCheckboxGroup'].value}`);
-    console.log(`testDateObject entered is: ${this.testForm.controls['testDateObject'].value}`);
-    console.log(`testDateString entered is: ${this.testForm.controls['testDateString'].value}`);
-    console.log(`testDropdown selected is: ${this.testForm.controls['testDropdown'].value}`);
-    console.log(`testInput entered is: ${this.testForm.controls['testInput'].value}`);
-    console.log(`testLookup entered is: ${this.testForm.controls['testLookup'].value}`);
-    console.log(`testTextarea entered is: ${this.testForm.controls['testTextarea'].value}`);
-    console.log(`testTimePicker entered is: ${this.testForm.controls['testTimePicker'].value}`);
-    console.log(`testRadio selected is: ${this.testForm.controls['testRadio'].value}`);
-    console.log(`testSearchField selected is: ${this.testForm.controls['testSearchField'].value}`);
-    console.log(`testSpinbox selected is: ${this.testForm.controls['testSpinbox'].value}`);
-    console.log(`testSwitch selected is: ${this.testForm.controls['testSwitch'].value}`);
-    console.log(`testUpload selected is: ${this.testForm.controls['testUpload'].value}`);
-    console.log(`testUploadAdvanced selected is: ${this.testForm.controls['testUploadAdvanced'].value}`);
+    console.log(`FormControl(testCheckbox) value is: ${this.testForm.controls['testCheckbox'].value}`);
+    console.log(`FormControl(testCheckboxGroup) value is: ${this.testForm.controls['testCheckboxGroup'].value}`);
+    console.log(`FormControl(testDateObject) value is: ${this.testForm.controls['testDateObject'].value}`);
+    console.log(`FormControl(testDateString) value is: ${this.testForm.controls['testDateString'].value}`);
+    console.log(`FormControl(testDropdown) value is: ${this.testForm.controls['testDropdown'].value}`);
+    console.log(`FormControl(testInput) value is: ${this.testForm.controls['testInput'].value}`);
+    console.log(`FormControl(testLookup) value is: ${this.testForm.controls['testLookup'].value}`);
+    console.log(`FormControl(testTextarea) value is: ${this.testForm.controls['testTextarea'].value}`);
+    console.log(`FormControl(testTimePicker) value is: ${this.testForm.controls['testTimePicker'].value}`);
+    console.log(`FormControl(testRadio) value is: ${this.testForm.controls['testRadio'].value}`);
+    console.log(`FormControl(testSearchField) value is: ${this.testForm.controls['testSearchField'].value}`);
+    console.log(`FormControl(testSpinbox) value is: ${this.testForm.controls['testSpinbox'].value}`);
+    console.log(`FormControl(testSwitch) value is: ${this.testForm.controls['testSwitch'].value}`);
+    console.log(`FormControl(testUpload) value is: ${this.testForm.controls['testUpload'].value}`);
+    console.log(`FormControl(testUploadAdvanced) value is: ${this.testForm.controls['testUploadAdvanced'].value}`);
+
+
+    document.querySelectorAll<any>('[ngDefaultControl]').forEach((input) => {
+      console.log(`${input?.name} -> value is: `, input.value);
+    });
   }
 
   public updateModel() {
