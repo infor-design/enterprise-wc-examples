@@ -62,7 +62,7 @@ export class ExampleComponent implements OnInit {
     this.testForm.controls['testDateString'].setValue((new Date()).toDateString());
     this.testForm.controls['testDropdown'].setValue(!this.testForm.controls['testDropdown'].value);
     this.testForm.controls['testInput'].setValue(randomText(2));
-    this.testForm.controls['testLookup'].setValue(!this.testForm.controls['testLookup'].value);
+    this.testForm.controls['testLookup'].setValue(randomText(2));
     this.testForm.controls['testTextarea'].setValue(randomText(9));
     this.testForm.controls['testTimePicker'].setValue(!this.testForm.controls['testTimePicker'].value);
     this.testForm.controls['testRadio'].setValue(!this.testForm.controls['testRadio'].value);
