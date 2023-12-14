@@ -15,6 +15,7 @@ export class ExampleComponent implements OnInit {
   ngOnInit(): void {
     this.testForm = new FormGroup({
       testCheckbox: new FormControl(),
+      testCheckboxGroup: new FormControl(),
       testDateObject: new FormControl(new Date()),
       testDateString: new FormControl('12/31/2020'),
       testDropdown: new FormControl('opt5'),
@@ -33,6 +34,7 @@ export class ExampleComponent implements OnInit {
 
   public onFormSubmit() {
     console.log(`testCheckbox selected is: ${this.testForm.controls['testCheckbox'].value}`);
+    console.log(`testCheckboxGroup selected is: ${this.testForm.controls['testCheckboxGroup'].value}`);
     console.log(`testDateObject entered is: ${this.testForm.controls['testDateObject'].value}`);
     console.log(`testDateString entered is: ${this.testForm.controls['testDateString'].value}`);
     console.log(`testDropdown selected is: ${this.testForm.controls['testDropdown'].value}`);
@@ -49,7 +51,9 @@ export class ExampleComponent implements OnInit {
   }
 
   public updateModel() {
-    this.testForm.controls['testSwitch'].setValue(!this.testForm.controls['testSwitch'].value); 
+    this.testForm.controls['testSwitch'].setValue(!this.testForm.controls['testSwitch'].value);
+    this.testForm.controls['testCheckbox'].setValue(!this.testForm.controls['testCheckbox'].value);
+    this.testForm.controls['testCheckboxGroup'].setValue(!this.testForm.controls['testCheckboxGroup'].value);
   }
 
 }

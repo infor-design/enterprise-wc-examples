@@ -6,10 +6,14 @@
         <ids-text font-size="12" type="h1">Reactive forms</ids-text>
         <br>
 
-        <ids-checkbox-group label="IDS Checkbox Group" formControlName="testCheckbox" ngDefaultControl>
+        <ids-checkbox value="checkbox0" label="IDS Checkbox" formControlName="testCheckbox" ngDefaultControl></ids-checkbox>
+        <br>
+
+        <ids-checkbox-group label="IDS Checkbox Group" formControlName="testCheckboxGroup" ngDefaultControl>
           <ids-checkbox value="checkbox1" label="checkbox one"></ids-checkbox>
-          <ids-checkbox value="checkbox2" label="checkbox two" checked="true"></ids-checkbox>
+          <ids-checkbox value="checkbox2" label="checkbox two"></ids-checkbox>
         </ids-checkbox-group>
+        <br>
 
         <ids-date-picker label="IDS Date Picker (object)" tabbable="false" mask formControlName="testDateObject" ngDefaultControl></ids-date-picker>
 
