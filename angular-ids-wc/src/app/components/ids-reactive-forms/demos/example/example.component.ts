@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule, FormGroup, FormControl, Validators} from '@angular/forms'
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-reactive-forms',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

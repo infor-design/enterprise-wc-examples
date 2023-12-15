@@ -1,5 +1,5 @@
 <template>
-  <ids-container language="en" locale="en-US" padding="8">
+  <ids-container padding="8">
     <ids-layout-grid auto-fit="true" padding="md">
       <ids-layout-grid-cell>
         <ids-text font-size="12">{{ title1 }}</ids-text>

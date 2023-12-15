@@ -2,7 +2,7 @@ import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import eventsJSON from '../../../../../api/events.json';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-list-view',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

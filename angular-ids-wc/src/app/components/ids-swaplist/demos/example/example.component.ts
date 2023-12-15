@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-swaplist',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

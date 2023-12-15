@@ -3,7 +3,7 @@ import { DataService } from 'src/app/shared/mock/data.service';
 import IdsCalender from 'ids-enterprise-wc/components/ids-calendar/ids-calendar';
 import IdsPopupMenu from 'ids-enterprise-wc/components/ids-popup-menu/ids-popup-menu';
 @Component({
-  selector: 'app-example',
+  selector: 'app-calendar-example',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

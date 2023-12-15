@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 import IdsIcon from 'ids-enterprise-wc/components/ids-icon/ids-icon';
 import { IdsModuleNavDisplayMode } from 'ids-enterprise-wc/components/ids-module-nav/ids-module-nav-common';
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-module-nav',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

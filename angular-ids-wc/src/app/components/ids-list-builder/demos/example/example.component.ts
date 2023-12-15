@@ -2,7 +2,7 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import bikesJSON from '../../../../../api/bikes.json';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-list-builder',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

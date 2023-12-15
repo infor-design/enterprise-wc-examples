@@ -12,7 +12,7 @@ function generateCheckboxDataItem() {
 }
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-checkbox-data-driven-example',
   templateUrl: './data-driven.component.html',
   styleUrls: ['./data-driven.component.css']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-breadcrumb-example',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

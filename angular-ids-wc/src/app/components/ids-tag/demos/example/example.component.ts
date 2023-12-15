@@ -1,7 +1,7 @@
 import { Component, ViewChild, VERSION, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-tag',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

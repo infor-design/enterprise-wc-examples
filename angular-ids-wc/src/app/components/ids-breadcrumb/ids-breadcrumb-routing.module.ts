@@ -5,6 +5,9 @@ import { IdsBreadcrumbComponent } from './ids-breadcrumb.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { TruncatedComponent } from './demos/truncated/truncated.component';
 import { ToolbarComponent } from './demos/toolbar/toolbar.component';
+import { ControlFlowComponent } from './demos/control-flow/control-flow.component';
+import { DataDrivenComponent } from './demos/data-driven/data-driven.component';
+import { DeferredComponent } from './demos/deferred/deferred.component';
 
 export const routes: Routes = [
   { 
@@ -13,15 +16,51 @@ export const routes: Routes = [
   },
   { 
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Simple breadcrumb in Angular',
+    }
+  },
+  {
+    path: 'control-flow',
+    component: ControlFlowComponent,
+    data: {
+      type: 'Example',
+      description: 'Using control flow features',
+    }
+  },
+  {
+    path: 'data-driven',
+    component: DataDrivenComponent,
+    data: {
+      type: 'Example',
+      description: 'Using data driven features',
+    }
+  },
+  {
+    path: 'deferred',
+    component: DeferredComponent,
+    data: {
+      type: 'Example',
+      description: 'Using defer blocks',
+    }
   },
   { 
     path: 'truncated',
-    component: TruncatedComponent
+    component: TruncatedComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows truncation of breadcrumbs',
+    }
   },
   { 
     path: 'toolbar',
-    component: ToolbarComponent
+    component: ToolbarComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows truncation of breadcrumbs',
+    }
   }
 ];
 

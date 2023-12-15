@@ -5,16 +5,13 @@ import { IdsTreeRoutingModule } from './ids-tree-routing.module';
 import { IdsTreeComponent } from './ids-tree.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { MultiSelectComponent } from './demos/multi-select/multi-select.component';
-import { SandboxComponent } from './demos/sandbox/sandbox.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
-
 
 @NgModule({
   declarations: [
     IdsTreeComponent,
     ExampleComponent,
-    MultiSelectComponent,
-    SandboxComponent
+    MultiSelectComponent
   ],
   imports: [
     CommonModule,

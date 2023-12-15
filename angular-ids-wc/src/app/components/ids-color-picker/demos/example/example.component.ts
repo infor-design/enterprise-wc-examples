@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-color-picker',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

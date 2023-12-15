@@ -96,7 +96,7 @@ const MENU_DATA_ICONS = [
 ]
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-menu',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })
