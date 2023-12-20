@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-checkbox-deferred',
   templateUrl: './deferred.component.html',
   styleUrls: ['./deferred.component.css']
 })

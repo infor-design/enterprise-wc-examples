@@ -11,7 +11,7 @@ function generateRadioDataItem(noTrue: boolean) {
   }
 }
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-radio-data-driven',
   templateUrl: './data-driven.component.html',
   styleUrls: ['./data-driven.component.css']
 })

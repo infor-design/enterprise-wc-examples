@@ -12,7 +12,7 @@ function generateCheckboxDataItem() {
 }
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-checkbox-control-flow-example',
   templateUrl: './control-flow.component.html',
   styleUrls: ['./control-flow.component.css']
 })

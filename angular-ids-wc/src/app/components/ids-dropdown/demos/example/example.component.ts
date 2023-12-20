@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 import { DataService } from 'src/app/shared/mock/data.service';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-dropdown',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

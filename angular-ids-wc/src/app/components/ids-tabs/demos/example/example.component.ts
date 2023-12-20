@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChildren, ElementRef, QueryList } from '@angular/core';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-tabs',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

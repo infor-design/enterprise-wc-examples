@@ -1,7 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-action-sheet',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { IdsTreeComponent } from './ids-tree.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { MultiSelectComponent } from './demos/multi-select/multi-select.component';
-import { SandboxComponent } from './demos/sandbox/sandbox.component';
 
 export const routes: Routes = [
   { 
@@ -13,15 +12,19 @@ export const routes: Routes = [
   },
   { 
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows a tree loaded via JSON',
+    }
   },
   { 
     path: 'multi-select',
-    component: MultiSelectComponent
-  },
-  { 
-    path: 'sandbox',
-    component: SandboxComponent
+    component: MultiSelectComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows a tree with multiselect',
+    }
   }
 ];
 

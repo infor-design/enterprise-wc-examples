@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-app-menu',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

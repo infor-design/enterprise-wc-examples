@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-example-sizes',
+  selector: 'app-example-color-picker-sizes',
   templateUrl: './example-sizes.component.html',
   styleUrls: ['./example-sizes.component.css']
 })

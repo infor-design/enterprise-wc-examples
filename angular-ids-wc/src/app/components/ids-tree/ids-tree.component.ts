@@ -12,7 +12,5 @@ export class IdsTreeComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit(): void {
-    console.log('Ids Tree init');
   }
-
 }

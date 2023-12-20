@@ -1,0 +1,42 @@
+<ids-container padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+  
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">*ngIf</ids-text><br />
+      <ids-button
+        #displayBreadcrumbRef
+        appearance="secondary"
+        (click)="toggleBreadcrumbs()"
+        [attr.text]="this.displayBreadcrumbs ? 'Hide Breadcrumbs' : 'Reveal Breadcrumbs'"></ids-button>
+      <br /><br />
+      <div *ngIf="this.displayBreadcrumbs === true; else elseBlock">
+        <ids-breadcrumb>
+          <ids-hyperlink font-size="14" text-decoration="hover">First Item</ids-hyperlink>
+          <ids-hyperlink font-size="14" text-decoration="hover">Second Item</ids-hyperlink>
+          <ids-hyperlink font-size="14" text-decoration="hover" [disabled]="true">Disabled Item</ids-hyperlink>
+          <ids-hyperlink font-size="14" text-decoration="hover">Current Item</ids-hyperlink>
+        </ids-breadcrumb>
+      </div>
+      <ng-template #elseBlock>
+        <ids-text>Breadcrumbs are currently hidden</ids-text>
+      </ng-template>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">*ngFor</ids-text><br />
+      <ids-button 
+        #displayBreadcrumbRef 
+        appearance="secondary" 
+        (click)="toggleBreadcrumbDisplay()"
+        text="Display Random Breadcrumbs"></ids-button>
+      <br /><br />
+      <ids-breadcrumb>
+        <ids-hyperlink *ngFor="let option of breadcrumbOptions; index as i" name="name-{{i}}"
+          disabled="{{option.disabled}}" color-variant="breadcrumb" font-size="14" text-decoration="hover">{{option.text}}</ids-hyperlink>
+      </ids-breadcrumb>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>

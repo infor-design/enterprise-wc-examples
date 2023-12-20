@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { DataService } from 'src/app/shared/mock/data.service';
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-virtual-scroll',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css'],
   encapsulation: ViewEncapsulation.None

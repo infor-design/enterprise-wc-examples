@@ -2,7 +2,7 @@ import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from 'src/app/shared/mock/data.service';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-data-grid',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

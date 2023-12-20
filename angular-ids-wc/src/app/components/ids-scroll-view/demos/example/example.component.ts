@@ -2,7 +2,7 @@ import { Component, AfterViewInit, ViewChild, ElementRef, HostListener } from '@
 import { ActivatedRoute, Router } from '@angular/router'
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-scroll-view',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

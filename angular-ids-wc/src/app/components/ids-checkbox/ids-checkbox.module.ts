@@ -9,7 +9,6 @@ import { DataDrivenComponent } from './demos/data-driven/data-driven.component';
 import { DeferredComponent } from './demos/deferred/deferred.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
-
 @NgModule({
   declarations: [
     IdsCheckboxComponent,

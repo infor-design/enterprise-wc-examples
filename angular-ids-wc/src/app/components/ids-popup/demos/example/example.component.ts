@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-popup',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })

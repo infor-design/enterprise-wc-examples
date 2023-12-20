@@ -2,7 +2,7 @@ import { Component, AfterViewInit, OnInit, ViewChild, ElementRef } from '@angula
 import { Router } from '@angular/router'
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-scroll-view',
   templateUrl: './layout-grid.component.html',
   styleUrls: ['./layout-grid.component.css']
 })

@@ -1,0 +1,33 @@
+<ids-container padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+  
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">&#64;deferred IdsBreadcrumb</ids-text><br />
+      <ids-button
+        #displayBreadCrumbRef
+        appearance="secondary"
+        (click)="isCheckedDeferred.set(true)"
+        text="Load Deferred Content"
+        [attr.disabled]="isCheckedDeferred()"></ids-button>
+      <br /><br />
+      @defer (when isCheckedDeferred()) {
+        <ids-breadcrumb #deferredBreadCrumbRef>
+          <ids-hyperlink font-size="14" text-decoration="hover">First Item</ids-hyperlink>
+          <ids-hyperlink font-size="14" text-decoration="hover">Second Item</ids-hyperlink>
+          <ids-hyperlink font-size="14" text-decoration="hover" [disabled]="true">Disabled Item</ids-hyperlink>
+          <ids-hyperlink font-size="14" text-decoration="hover">Current Item</ids-hyperlink>
+        </ids-breadcrumb>
+      }
+      @placeholder {
+        <ids-text>No Breadcrumb has been loaded yet...</ids-text>
+      }
+      @error {
+        <ids-text>There was an error loading the breadcrumb...</ids-text>
+      }
+      @loading(minimum 1s) {
+        <ids-loading-indicator></ids-loading-indicator>
+      }
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>

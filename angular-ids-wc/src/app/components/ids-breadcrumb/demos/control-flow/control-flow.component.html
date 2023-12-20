@@ -1,0 +1,38 @@
+<ids-container padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+  
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">&#64;if and &#64;else</ids-text><br />
+        <ids-button #displayBreadCrumbBtnRef appearance="secondary" (click)="toggleBreadcrumbStatesDisplay()"
+          [attr.text]="this.displayBreadcrumbStates ? 'Hide Breadcrumbs' : 'Show Breadcrumbs'"></ids-button>
+        <br /><br />
+        @if (this.displayBreadcrumbStates === true) {
+          <ids-breadcrumb>
+            <ids-hyperlink font-size="14" text-decoration="hover">First Item</ids-hyperlink>
+            <ids-hyperlink font-size="14" text-decoration="hover">Second Item</ids-hyperlink>
+            <ids-hyperlink font-size="14" text-decoration="hover" [disabled]="true">Disabled Item</ids-hyperlink>
+            <ids-hyperlink font-size="14" text-decoration="hover">Current Item</ids-hyperlink>
+          </ids-breadcrumb>
+        }
+        @else {
+        <ids-text>Breadcrumb is currently hidden</ids-text>
+        }
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">&#64;for</ids-text><br />
+        <ids-button 
+          #displayBreadcrumbOptionsBtnRef appearance="secondary" (click)="toggleBreadcrumbOptionsDisplay()"
+          text="Display Random Breadcrumbs"></ids-button>
+        <br /><br />
+        <ids-breadcrumb>
+          @for (option of breadcrumbOptions; let i = $index; track option.id) {
+            <ids-hyperlink color-variant="breadcrumb" font-size="14" text-decoration="hover" disabled="{{option.disabled}}">{{option.text}}</ids-hyperlink>
+          }
+        </ids-breadcrumb>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+</ids-container>

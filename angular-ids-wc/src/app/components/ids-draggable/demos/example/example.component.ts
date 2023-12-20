@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewEncapsulation, ViewChildren, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-draggable',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css'],
   encapsulation: ViewEncapsulation.None

@@ -11,7 +11,7 @@ function generateRadioDataItem(noTrue: boolean) {
   }
 }
 @Component({
-  selector: 'app-example',
+  selector: 'app-example-radio-control-flow',
   templateUrl: './control-flow.component.html',
   styleUrls: ['./control-flow.component.css']
 })
