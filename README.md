@@ -54,4 +54,4 @@ Starter Project: https://stackblitz.com/edit/react-un5ayt
 [See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/typescript-ids-wc/README.md)
 
 ### Plain JS/Html
-[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/plain-html/README.md)
+[See README](https://github.com/infor-design/enterprise-wc-examples/blob/main/plain-html/README.MD)
