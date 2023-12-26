@@ -8,6 +8,7 @@ import { ToolbarComponent } from './demos/toolbar/toolbar.component';
 import { ControlFlowComponent } from './demos/control-flow/control-flow.component';
 import { DataDrivenComponent } from './demos/data-driven/data-driven.component';
 import { DeferredComponent } from './demos/deferred/deferred.component';
+import { TemplateComponent } from './demos/template/template.component';
 
 export const routes: Routes = [
   { 
@@ -60,6 +61,14 @@ export const routes: Routes = [
     data: {
       type: 'Example',
       description: 'Shows truncation of breadcrumbs',
+    }
+  },
+  {
+    path: 'template',
+    component: TemplateComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows using a custom template',
     }
   }
 ];

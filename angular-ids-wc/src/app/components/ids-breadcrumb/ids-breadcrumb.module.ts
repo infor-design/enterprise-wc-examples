@@ -10,11 +10,13 @@ import { ControlFlowComponent } from './demos/control-flow/control-flow.componen
 import { DataDrivenComponent } from './demos/data-driven/data-driven.component';
 import { DeferredComponent } from './demos/deferred/deferred.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
+import { TemplateComponent } from './demos/template/template.component';
 
 @NgModule({
   declarations: [
     IdsBreadcrumbComponent,
     ExampleComponent,
+    TemplateComponent,
     TruncatedComponent,
     ToolbarComponent,
     ControlFlowComponent,

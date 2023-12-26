@@ -1,0 +1,23 @@
+<ids-container padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+  
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-text font-size="12" type="h1">Breadcrumbs (using ng template)</ids-text>
+  </ids-layout-grid>
+
+  <ids-layout-grid auto-fit="true" padding="md" cols="1">
+    <ids-layout-grid-cell>
+      <ids-button (click)="addBreadcrumb()" id="modal-trigger-btn" appearance="secondary">
+        <span>Add Breadcrumb</span>
+      </ids-button>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-breadcrumb color-variant="breadcrumb" truncate="true">
+      <ng-container *ngFor="let breadCrumbItem of breadCrumbList">
+        <ids-hyperlink font-size="14" color-variant="breadcrumb" text-decoration="hover" href="#">{{breadCrumbItem.label}}</ids-hyperlink>
+      </ng-container>
+    </ids-breadcrumb>
+  </ids-layout-grid>
+</ids-container>
