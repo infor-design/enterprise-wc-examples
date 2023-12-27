@@ -17,31 +17,59 @@ export const routes: Routes = [
   },
   { 
     path: 'example', 
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows main example'
+    }
   },
   { 
     path: 'counts', 
-    component: CountsComponent
+    component: CountsComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows counts example'
+    }
   },
   { 
     path: 'dismissible', 
-    component: DismissibleComponent
+    component: DismissibleComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows dismissible tabs'
+    }
   },
   { 
     path: 'header-tabs', 
-    component: HeaderTabsComponent
+    component: HeaderTabsComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows header tabs'
+    }
   },
   { 
     path: 'modules', 
-    component: ModuleComponent
+    component: ModuleComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows module tabs'
+    }
   },
   { 
     path: 'vertical', 
-    component: VerticalComponent
+    component: VerticalComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows vertical tabs'
+    }
   },
   { 
     path: 'swappable', 
-    component: SwappableComponent
+    component: SwappableComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows sortable tabs'
+    }
   }
 ];
 
