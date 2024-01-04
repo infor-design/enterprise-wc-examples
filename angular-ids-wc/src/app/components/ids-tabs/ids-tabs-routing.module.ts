@@ -48,7 +48,7 @@ export const routes: Routes = [
     }
   },
   { 
-    path: 'modules', 
+    path: 'module', 
     component: ModuleComponent,
     data: {
       type: 'Example',
