@@ -353,6 +353,15 @@ export const routes: Routes = [
       description: 'Displays a Pager for lists'
     },
   },
+  {
+    path: 'ids-pie-chart',
+    loadChildren: () => import('./components/ids-pie-chart/ids-pie-chart.module').then(m => m.IdsPieChartModule),
+    data: {
+      title: 'IDS Pie Chart',
+      category: 'Charts and Visualizations',
+      description: 'Configurable circle chart divided into sections'
+    },
+  },
   { 
     path: 'ids-popup-menu',
     loadChildren: () => import('./components/ids-popup-menu/ids-popup-menu.module').then(m => m.IdsPopupMenuModule),
