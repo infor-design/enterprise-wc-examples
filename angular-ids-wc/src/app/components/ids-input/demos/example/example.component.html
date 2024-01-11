@@ -10,9 +10,17 @@
       <ids-input type="text" label="Email Address" placeholder="Company@address.com" validate="email required"></ids-input>
       <ids-input type="text" label="Disabled" disabled="true" value="Field not editable"></ids-input>
       <ids-input type="text" label="Readonly" readonly="true" value="02006"></ids-input>
-      <ids-input type="text" label="Dirty Tracking" dirty-tracker="true" placeholder="Dirty Tracking" value="02006"></ids-input>
+      <ids-input type="text" label="Dirty Tracking" dirty-tracker="true" placeholder="Dirty Tracking" [value]="firstName"></ids-input>
       <ids-input type="text" label="Clearable" placeholder="Clearable text Field" clearable="true"></ids-input>
       <ids-input type="text" label="Autoselect" value="Text select on focus" autoselect="true"></ids-input>
+
+      <ids-text font-size="12" type="h1">Label Variations</ids-text>
+      <br>
+      <ids-input [label]="myVariable" id="id1"></ids-input>
+      <ids-input [label]="{{ myVariable }}" id="id2"></ids-input>
+      <ids-input label="Label is shown" id="id3"></ids-input>
+      <ids-input id="id4" [label]="firstName" name="firstname" [value]="firstName"></ids-input>
+      <ids-input [label]="firstName" name="firstname" [value]="firstName"></ids-input>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 </ids-container>
