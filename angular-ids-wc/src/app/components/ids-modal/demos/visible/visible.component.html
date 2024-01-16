@@ -1,7 +1,7 @@
 <ids-container padding="8" hidden>
   <ids-theme-switcher mode="light"></ids-theme-switcher>
   
-  <ids-modal id="my-modal" visible="true" aria-labelledby="my-modal-title">
+  <ids-modal #modal id="my-modal" visible="true" aria-labelledby="my-modal-title">
     <ids-text slot="title" font-size="24" type="h2" id="my-modal-title">Active IDS Modal</ids-text>
     <ids-text>This is an active IDS Modal component</ids-text>
     <ids-modal-button slot="buttons" id="modal-close-btn" appearance="secondary" cancel>
@@ -17,7 +17,7 @@
   </ids-layout-grid>
   <ids-layout-grid auto-fit="true" padding="md">
     <ids-layout-grid-cell>
-      <ids-button id="modal-trigger-btn" appearance="secondary">
+      <ids-button id="modal-trigger-btn" appearance="secondary" (click)="handleShow()">
         <span>Trigger a Modal</span>
       </ids-button>
     </ids-layout-grid-cell>

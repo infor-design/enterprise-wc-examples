@@ -1,14 +1,18 @@
 <ids-container padding="8" hidden>
   <ids-theme-switcher mode="light"></ids-theme-switcher>
   
-  <ids-modal id="my-modal" aria-labelledby="my-modal-title">
+  <ids-modal #modal id="my-modal" aria-labelledby="my-modal-title">
     <ids-text slot="title" font-size="24" type="h2" id="my-modal-title">Active IDS Modal</ids-text>
-    <ids-modal-button slot="buttons" id="modal-close-btn" appearance="primary">
+    <ids-modal-button slot="buttons" id="modal-close-btn" appearance="primary" (click)="handleHide()">
       <span>OK</span>
     </ids-modal-button>
     <ids-text>The checkbox below controls whether or not a user can click in the overlay to close this Modal</ids-text>
     <br>
-    <ids-checkbox label="Allow the modal to close by clicking outside" checked></ids-checkbox>
+    <ids-checkbox
+      #clickOutsideCheck 
+      label="Allow the modal to close by clicking outside" 
+      checked
+      (change)="handleClickOutsideChange($event)"></ids-checkbox>
   </ids-modal>
 
   <ids-layout-grid auto-fit="true" padding="md">
@@ -16,7 +20,7 @@
   </ids-layout-grid>
   <ids-layout-grid auto-fit="true" padding="md">
     <ids-layout-grid-cell>
-      <ids-button id="modal-trigger-btn" appearance="secondary">
+      <ids-button id="modal-trigger-btn" appearance="secondary" (click)="handleShow()">
         <span>Trigger a Modal</span>
       </ids-button>
     </ids-layout-grid-cell>

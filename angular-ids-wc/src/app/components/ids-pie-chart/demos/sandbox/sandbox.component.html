@@ -1,0 +1,29 @@
+<ids-container padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+  
+  <ids-layout-grid cols="3" gap="md" padding="md">
+    <ids-text font-size="12" type="h1">Ids Pie Chart</ids-text>
+  </ids-layout-grid>
+  <ids-layout-grid cols="3" gap="md" padding-x="md">
+    <ids-layout-grid-cell>
+      <ids-pie-chart
+        #pieChartEl
+        legend-placement="{{this.model.legendPlacement}}"></ids-pie-chart>
+    </ids-layout-grid-cell>
+    <ids-layout-grid-cell></ids-layout-grid-cell>
+    <ids-layout-grid-cell>
+      <ids-text font-size="12" type="h1">Controls</ids-text>
+      <ids-radio-group 
+        #legendPlacementRadioGroupEl 
+        label="Chart Legend Placement">
+        @for (opt of legendPlacements; let i = $index; track opt.val) {
+        <ids-radio 
+          value="{{opt.val}}" 
+          label="{{opt.text}}" 
+          checked="{{i === 0}}"
+          (change)="handleRadioGroupChange($event)"></ids-radio>
+        }
+      </ids-radio-group>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>
