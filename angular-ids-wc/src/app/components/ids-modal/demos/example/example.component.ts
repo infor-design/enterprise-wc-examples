@@ -17,4 +17,7 @@ export class ExampleComponent implements AfterViewInit {
     this.modal.nativeElement.show();
   }
 
+  handleHide() {
+    this.modal.nativeElement.hide();
+  }
 }

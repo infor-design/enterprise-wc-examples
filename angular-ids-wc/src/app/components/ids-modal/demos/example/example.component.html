@@ -3,7 +3,7 @@
   
   <ids-modal #modal id="my-modal" aria-labelledby="my-modal-title">
     <ids-text slot="title" font-size="24" type="h2" id="my-modal-title">Active IDS Modal</ids-text>
-    <ids-modal-button slot="buttons" id="modal-close-btn" appearance="primary">
+    <ids-modal-button slot="buttons" id="modal-close-btn" appearance="primary" (click)="handleHide()">
       <span>OK</span>
     </ids-modal-button>
     <ids-text align="left">This is an active IDS Modal component</ids-text>
