@@ -18,8 +18,8 @@ export class HomeComponent implements AfterViewInit {
       { name: 'Messages and Alerts', icon: 'success' },
       { name: 'Lists', icon: 'spreadsheet' },
       { name: 'Layouts', icon: 'project' },
-      // { name: 'Patterns', icon: 'design-mode' },
-      // TODO: { name: 'Charts and Visualizations', icon: 'line-bar-chart' },
+      // { name: 'Patterns', ico
+      { name: 'Charts and Visualizations', icon: 'line-bar-chart' },
       { name: 'Typography', icon: '' },
     ];
   }
