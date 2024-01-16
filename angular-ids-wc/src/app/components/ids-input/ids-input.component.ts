@@ -15,5 +15,4 @@ export class IdsInputComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     console.log('Ids Input init');
   }
-
 }
