@@ -13,15 +13,27 @@ export const routes: Routes = [
   },
   { 
     path: 'example', 
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Showing various types of notifications',
+    }
   },
   { 
     path: 'dynamic', 
-    component: DynamicComponent
+    component: DynamicComponent,
+    data: {
+      type: 'Example',
+      description: 'Showing notifications created on the fly',
+    }
   },
   { 
     path: 'card', 
-    component: CardComponent
+    component: CardComponent,
+    data: {
+      type: 'Example',
+      description: 'Showing notifications inside a card',
+    }
   }
 ];
 
