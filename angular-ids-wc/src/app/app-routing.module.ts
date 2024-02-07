@@ -69,11 +69,7 @@ export const routes: Routes = [
     path: 'ids-dropdown',
     loadChildren: () => import('./components/ids-dropdown/ids-dropdown.module').then(m => m.IdsDropdownModule),
     data: {
-<<<<<<< HEAD
       title: 'Dropdown',
-=======
-      title: 'IDS Dropdown',
->>>>>>> 58dd5332d5d687bdfad654498b7ba741610dadbd
       category: 'Form Inputs',
       description: 'Select from a list of items'
     }
