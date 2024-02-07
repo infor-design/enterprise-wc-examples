@@ -69,7 +69,11 @@ export const routes: Routes = [
     path: 'ids-dropdown',
     loadChildren: () => import('./components/ids-dropdown/ids-dropdown.module').then(m => m.IdsDropdownModule),
     data: {
+<<<<<<< HEAD
       title: 'Dropdown',
+=======
+      title: 'IDS Dropdown',
+>>>>>>> 58dd5332d5d687bdfad654498b7ba741610dadbd
       category: 'Form Inputs',
       description: 'Select from a list of items'
     }
@@ -513,6 +517,15 @@ export const routes: Routes = [
       title: 'Toast',
       category: 'Messages and Alerts',
       description: 'Provides feedback after an action has taken place'
+    },
+  },
+  {
+    path: 'ids-list-box',
+    loadChildren: () => import('./components/ids-list-box/ids-list-box.module').then(m => m.IdsListBoxModule),
+    data: {
+      title: 'IDS List Box',
+      category: 'Lists',
+      description: 'Displays List Box component'
     },
   },
   { 
