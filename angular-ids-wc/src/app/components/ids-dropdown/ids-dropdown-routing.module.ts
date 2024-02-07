@@ -13,15 +13,27 @@ export const routes: Routes = [
   },
   {
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Main dropdown example',
+    }
   },
   {
     path: 'typeahead',
-    component: TypeaheadComponent
+    component: TypeaheadComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows typeahead search example',
+    }
   },
   {
     path: 'sizes',
-    component: SizesComponent
+    component: SizesComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows various sized dropdowns',
+    }
   }
 ];
 

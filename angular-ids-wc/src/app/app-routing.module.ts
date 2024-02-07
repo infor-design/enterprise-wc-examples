@@ -15,7 +15,7 @@ export const routes: Routes = [
     path: 'ids-alert', 
     loadChildren: () => import('./components/ids-alert/ids-alert.module').then(m => m.IdsAlertModule),
     data: {
-      title: 'IDS Alert',
+      title: 'Alert',
       category: 'Form Inputs',
       description: 'Alert Indicator/icon'
     },
@@ -24,7 +24,7 @@ export const routes: Routes = [
     path: 'ids-checkbox', 
     loadChildren: () => import('./components/ids-checkbox/ids-checkbox.module').then(m => m.IdsCheckboxModule),
     data: {
-      title: 'IDS Checkbox',
+      title: 'Checkbox',
       category: 'Form Inputs',
       description: 'Checkbox Input Element'
     }
@@ -33,7 +33,7 @@ export const routes: Routes = [
     path: 'ids-checkbox-group',
     loadChildren: () => import('./components/ids-checkbox-group/ids-checkbox-group.module').then(m => m.IdsCheckboxGroupModule),
     data: {
-      title: 'IDS Checkbox Group',
+      title: 'Checkbox Group',
       category: 'Form Inputs',
       description: 'Group of checkboxes with label'
     }
@@ -42,7 +42,7 @@ export const routes: Routes = [
     path: 'ids-color-picker', 
     loadChildren: () => import('./components/ids-color-picker/ids-color-picker.module').then(m => m.IdsColorPickerModule),
     data: {
-      title: 'IDS Color Picker',
+      title: 'Color Picker',
       category: 'Form Inputs',
       description: 'Input field for colors'
     }
@@ -51,7 +51,7 @@ export const routes: Routes = [
     path: 'ids-data-label', 
     loadChildren: () => import('./components/ids-data-label/ids-data-label.module').then(m => m.IdsDataLabelModule),
     data: {
-      title: 'IDS Data Label',
+      title: 'Data Label',
       category: 'Form Inputs',
       description: 'Readonly data/label component'
     }
@@ -60,7 +60,7 @@ export const routes: Routes = [
     path: 'ids-date-picker', 
     loadChildren: () => import('./components/ids-date-picker/ids-date-picker.module').then(m => m.IdsDatePickerModule),
     data: {
-      title: 'IDS Date Picker',
+      title: 'Date Picker',
       category: 'Form Inputs',
       description: 'Input field for date'
     }
@@ -69,7 +69,7 @@ export const routes: Routes = [
     path: 'ids-dropdown',
     loadChildren: () => import('./components/ids-dropdown/ids-dropdown.module').then(m => m.IdsDropdownModule),
     data: {
-      title: 'IDS Drodown',
+      title: 'Dropdown',
       category: 'Form Inputs',
       description: 'Select from a list of items'
     }
@@ -78,7 +78,7 @@ export const routes: Routes = [
     path: 'ids-editor',
     loadChildren: () => import('./components/ids-editor/ids-editor.module').then(m => m.IdsEditorModule),
     data: {
-      title: 'IDS Editor',
+      title: 'Editor',
       category: 'Form Inputs',
       description: 'An input for multi line rich text'
     }
@@ -87,7 +87,7 @@ export const routes: Routes = [
     path: 'ids-input',
     loadChildren: () => import('./components/ids-input/ids-input.module').then(m => m.IdsInputModule),
     data: {
-      title: 'IDS Input',
+      title: 'Input',
       category: 'Form Inputs',
       description: 'Input element and features'
     }
@@ -96,7 +96,7 @@ export const routes: Routes = [
     path: 'ids-lookup',
     loadChildren: () => import('./components/ids-lookup/ids-lookup.module').then(m => m.IdsLookupModule),
     data: {
-      title: 'IDS Lookups',
+      title: 'Lookups',
       category: 'Form Inputs',
       description: 'Select from a data grid list'
     }
@@ -105,7 +105,7 @@ export const routes: Routes = [
     path: 'ids-mask', 
     loadChildren: () => import('./components/ids-mask/ids-mask.module').then(m => m.IdsMaskModule),
     data: {
-      title: 'IDS Mask',
+      title: 'Mask',
       category: 'Form Inputs',
       description: 'Util for masking input'
     },
@@ -114,7 +114,7 @@ export const routes: Routes = [
     path: 'ids-swaplist', 
     loadChildren: () => import('./components/ids-swaplist/ids-swaplist.module').then(m => m.IdsSwaplistModule),
     data: {
-      title: 'IDS Swaplist',
+      title: 'Swaplist',
       category: 'Lists',
       description: 'Displays Swaplist component'
     }
@@ -123,7 +123,7 @@ export const routes: Routes = [
     path: 'ids-tag', 
     loadChildren: () => import('./components/ids-tag/ids-tag.module').then(m => m.IdsTagModule),
     data: {
-      title: 'IDS Tag',
+      title: 'Tag',
       category: 'Navigation and Interaction',
       description: 'UI Classification'
     }
@@ -132,7 +132,7 @@ export const routes: Routes = [
     path: 'ids-text', 
     loadChildren: () => import('./components/ids-text/ids-text.module').then(m => m.IdsTextModule),
     data: {
-      title: 'IDS Text',
+      title: 'Text',
       category: 'Typography',
       description: 'An element for plain text'
     }
@@ -141,7 +141,7 @@ export const routes: Routes = [
     path: 'ids-tooltip', 
     loadChildren: () => import('./components/ids-tooltip/ids-tooltip.module').then(m => m.IdsTooltipModule),
     data: {
-      title: 'IDS Tooltip',
+      title: 'Tooltip',
       category: 'Messages and Alerts',
       description: 'A message tooltip that shows on click/hover/focus'
     },
@@ -150,7 +150,7 @@ export const routes: Routes = [
     path: 'ids-multiselect',
     loadChildren: () => import('./components/ids-multiselect/ids-multiselect.module').then(m => m.IdsMultiselectModule),
     data: {
-      title: 'IDS Multiselect',
+      title: 'Multiselect',
       category: 'Form Inputs',
       description: 'Select multiple values from a list'
     },
@@ -159,7 +159,7 @@ export const routes: Routes = [
     path: 'ids-radio',
     loadChildren: () => import('./components/ids-radio/ids-radio.module').then(m => m.IdsRadioModule),
     data: {
-      title: 'IDS Radio',
+      title: 'Radio',
       category: 'Form Inputs',
       description: 'Input Radio Element'
     },
@@ -168,7 +168,7 @@ export const routes: Routes = [
     path: 'ids-search-field', 
     loadChildren: () => import('./components/ids-search-field/ids-search-field.module').then(m => m.IdsSearchFieldModule),
     data: {
-      title: 'IDS Search Field',
+      title: 'Search Field',
       category: 'Form Inputs',
       description: 'Interactive input for typing into search'
     },
@@ -177,7 +177,7 @@ export const routes: Routes = [
     path: 'ids-spinbox', 
     loadChildren: () => import('./components/ids-spinbox/ids-spinbox.module').then(m => m.IdsSpinboxModule),
     data: {
-      title: 'IDS Spinbox',
+      title: 'Spinbox',
       category: 'Form Inputs',
       description: 'Input element for numbers'
     },
@@ -186,7 +186,7 @@ export const routes: Routes = [
     path: 'ids-switch',
     loadChildren: () => import('./components/ids-switch/ids-switch.module').then(m => m.IdsSwitchModule),
     data: {
-      title: 'IDS Switch',
+      title: 'Switch',
       category: 'Form Inputs',
       description: 'Input element with on/off capabilities'
     },
@@ -195,7 +195,7 @@ export const routes: Routes = [
     path: 'ids-textarea', 
     loadChildren: () => import('./components/ids-textarea/ids-textarea.module').then(m => m.IdsTextareaModule),
     data: {
-      title: 'IDS Textarea',
+      title: 'Textarea',
       category: 'Form Inputs',
       description: 'An input for multi line text'
     },
@@ -204,7 +204,7 @@ export const routes: Routes = [
     path: 'ids-time-picker',
     loadChildren: () => import('./components/ids-time-picker/ids-time-picker.module').then(m => m.IdsTimePickerModule),
     data: {
-      title: 'IDS Time Picker',
+      title: 'Time Picker',
       category: 'Form Inputs',
       description: 'Input field for time and dates'
     },
@@ -213,7 +213,7 @@ export const routes: Routes = [
     path: 'ids-trigger-field',
     loadChildren: () => import('./components/ids-trigger-field/ids-trigger-field.module').then(m => m.IdsTriggerFieldModule),
     data: {
-      title: 'IDS Trigger Field',
+      title: 'Trigger Field',
       category: 'Form Inputs',
       description: 'An input field with an icon'
     },
@@ -222,7 +222,7 @@ export const routes: Routes = [
     path: 'ids-upload',
     loadChildren: () => import('./components/ids-upload/ids-upload.module').then(m => m.IdsUploadModule),
     data: {
-      title: 'IDS Upload',
+      title: 'Upload',
       category: 'Form Inputs',
       description: 'Upload a single file in a field'
     },
@@ -231,7 +231,7 @@ export const routes: Routes = [
     path: 'ids-upload-advanced',
     loadChildren: () => import('./components/ids-upload-advanced/ids-upload-advanced.module').then(m => m.IdsUploadAdvancedModule),
     data: {
-      title: 'IDS Upload Advanced',
+      title: 'Upload Advanced',
       category: 'Form Inputs',
       description: 'Upload multiple files'
     },
@@ -240,7 +240,7 @@ export const routes: Routes = [
     path: 'ids-forms',
     loadChildren: () => import('./components/ids-forms/ids-forms.module').then(m => m.IdsFormsModule),
     data: {
-      title: 'IDS Angular Forms',
+      title: 'Angular Forms',
       category: 'Form Inputs',
       description: 'Angular Forms examples'
     },
@@ -249,7 +249,7 @@ export const routes: Routes = [
     path: 'ids-reactive-forms',
     loadChildren: () => import('./components/ids-reactive-forms/ids-reactive-forms.module').then(m => m.IdsReactiveFormsModule),
     data: {
-      title: 'IDS Angular Reactive Forms',
+      title: 'Angular Reactive Forms',
       category: 'Form Inputs',
       description: 'Reactive forms examples'
     },
@@ -258,7 +258,7 @@ export const routes: Routes = [
     path: 'ids-action-sheet', 
     loadChildren: () => import('./components/ids-action-sheet/ids-action-sheet.module').then(m => m.IdsActionSheetModule),
     data: {
-      title: 'IDS Action Sheet',
+      title: 'Action Sheet',
       category: 'Navigation and Interaction',
       description: 'Displays a menu at the bottom of your screen on mobile devices'
     },
@@ -267,7 +267,7 @@ export const routes: Routes = [
     path: 'ids-app-menu', 
     loadChildren: () => import('./components/ids-app-menu/ids-app-menu.module').then(m => m.IdsAppMenuModule),
     data: {
-      title: 'IDS App Menu',
+      title: 'App Menu',
       category: 'Navigation and Interaction',
       description: 'Application Nav'
     },
@@ -276,7 +276,7 @@ export const routes: Routes = [
     path: 'ids-badge', 
     loadChildren: () => import('./components/ids-badge/ids-badge.module').then(m => m.IdsBadgeModule),
     data: {
-      title: 'IDS Badge',
+      title: 'Badge',
       category: 'Navigation and Interaction',
       description: 'Ui Text decoration'
     },
@@ -285,7 +285,7 @@ export const routes: Routes = [
     path: 'ids-breadcrumb',
     loadChildren: () => import('./components/ids-breadcrumb/ids-breadcrumb.module').then(m => m.IdsBreadcrumbModule),
     data: {
-      title: 'IDS Breadcrumb',
+      title: 'Breadcrumb',
       category: 'Navigation and Interaction',
       description: 'Navigational Wayfinding'
     },
@@ -294,7 +294,7 @@ export const routes: Routes = [
     path: 'ids-button',
     loadChildren: () => import('./components/ids-button/ids-button.module').then(m => m.IdsButtonModule),
     data: {
-      title: 'IDS Button',
+      title: 'Button',
       category: 'Navigation and Interaction',
       description: 'Simple HTMLButtonElement'
     },
@@ -303,7 +303,7 @@ export const routes: Routes = [
     path: 'ids-loading-indicator', 
     loadChildren: () => import('./components/ids-loading-indicator/ids-loading-indicator.module').then(m => m.IdsLoadingIndicatorModule),
     data: {
-      title: 'IDS Loading Indicator',
+      title: 'Loading Indicator',
       category: 'Navigation and Interaction',
       description: 'Animation for loading'
     },
@@ -312,7 +312,7 @@ export const routes: Routes = [
     path: 'ids-menu',
     loadChildren: () => import('./components/ids-menu/ids-menu.module').then(m => m.IdsMenuModule),
     data: {
-      title: 'IDS Menu',
+      title: 'Menu',
       category: 'Navigation and Interaction',
       description: 'A static UI menu'
     },
@@ -321,7 +321,7 @@ export const routes: Routes = [
     path: 'ids-menu-button',
     loadChildren: () => import('./components/ids-menu-button/ids-menu-button.module').then(m => m.IdsMenuButtonModule),
     data: {
-      title: 'IDS Menu Button',
+      title: 'Menu Button',
       category: 'Navigation and Interaction',
       description: 'A button with a popup menu'
     },
@@ -330,7 +330,7 @@ export const routes: Routes = [
     path: 'ids-modal',
     loadChildren: () => import('./components/ids-modal/ids-modal.module').then(m => m.IdsModalModule),
     data: {
-      title: 'IDS Modal',
+      title: 'Modal',
       category: 'Navigation and Interaction',
       description: 'Displays a Modal Dialog'
     },
@@ -339,7 +339,7 @@ export const routes: Routes = [
     path: 'ids-module-nav',
     loadChildren: () => import('./components/ids-module-nav/ids-module-nav.module').then(m => m.IdsModuleNavModule),
     data: {
-      title: 'IDS Module Nav',
+      title: 'Module Nav',
       category: 'Navigation and Interaction',
       description: 'Top-Level Navigation'
     },
@@ -348,7 +348,7 @@ export const routes: Routes = [
     path: 'ids-pager',
     loadChildren: () => import('./components/ids-pager/ids-pager.module').then(m => m.IdsPagerModule),
     data: {
-      title: 'IDS Pager',
+      title: 'Pager',
       category: 'Navigation and Interaction',
       description: 'Displays a Pager for lists'
     },
@@ -357,7 +357,7 @@ export const routes: Routes = [
     path: 'ids-pie-chart',
     loadChildren: () => import('./components/ids-pie-chart/ids-pie-chart.module').then(m => m.IdsPieChartModule),
     data: {
-      title: 'IDS Pie Chart',
+      title: 'Pie Chart',
       category: 'Charts and Visualizations',
       description: 'Configurable circle chart divided into sections'
     },
@@ -366,7 +366,7 @@ export const routes: Routes = [
     path: 'ids-popup-menu',
     loadChildren: () => import('./components/ids-popup-menu/ids-popup-menu.module').then(m => m.IdsPopupMenuModule),
     data: {
-      title: 'IDS Popup Menu',
+      title: 'Popup Menu',
       category: 'Navigation and Interaction',
       description: 'Displays a context menu'
     },
@@ -375,7 +375,7 @@ export const routes: Routes = [
     path: 'ids-scroll-view',
     loadChildren: () => import('./components/ids-scroll-view/ids-scroll-view.module').then(m => m.IdsScrollViewModule),
     data: {
-      title: 'IDS Scroll View',
+      title: 'Scroll View',
       category: 'Navigation and Interaction',
       description: 'Swipe / Scroll Container'
     },
@@ -384,7 +384,7 @@ export const routes: Routes = [
     path: 'ids-skip-link',
     loadChildren: () => import('./components/ids-skip-link/ids-skip-link.module').then(m => m.IdsSkipLinkModule),
     data: {
-      title: 'IDS Skip Link',
+      title: 'Skip Link',
       category: 'Navigation and Interaction',
       description: 'Accessibile Navigation'
     },
@@ -393,7 +393,7 @@ export const routes: Routes = [
     path: 'ids-tabs', 
     loadChildren: () => import('./components/ids-tabs/ids-tabs.module').then(m => m.IdsTabModule),
     data: {
-      title: 'IDS Tabs',
+      title: 'Tabs',
       category: 'Navigation and Interaction',
       description: 'Segment different areas'
     },
@@ -402,7 +402,7 @@ export const routes: Routes = [
     path: 'ids-theme-switcher', 
     loadChildren: () => import('./components/ids-theme-switcher/ids-theme-switcher.module').then(m => m.IdsThemeSwitcherModule),
     data: {
-      title: 'IDS Theme Switcher',
+      title: 'Theme Switcher',
       category: 'Navigation and Interaction',
       description: 'Set and control themes'
     },
@@ -411,7 +411,7 @@ export const routes: Routes = [
     path: 'ids-toggle-button',
     loadChildren: () => import('./components/ids-toggle-button/ids-toggle-button.module').then(m => m.IdsToggleButtonModule),
     data: {
-      title: 'IDS Toggle Button',
+      title: 'Toggle Button',
       category: 'Navigation and Interaction',
       description: 'An on/off toggle button'
     },
@@ -420,7 +420,7 @@ export const routes: Routes = [
     path: 'ids-tree',
     loadChildren: () => import('./components/ids-tree/ids-tree.module').then(m => m.IdsTreeModule),
     data: {
-      title: 'IDS Tree',
+      title: 'Tree',
       category: 'Navigation and Interaction',
       description: 'Hierarchical view of items and subitems'
     },
@@ -429,7 +429,7 @@ export const routes: Routes = [
     path: 'ids-virtual-scroll',
     loadChildren: () => import('./components/ids-virtual-scroll/ids-virtual-scroll.module').then(m => m.IdsVirtualScrollModule),
     data: {
-      title: 'IDS Virtual Scroll',
+      title: 'Virtual Scroll',
       category: 'Navigation and Interaction',
       description: 'Fast scrolling for lots of data'
     },
@@ -438,7 +438,7 @@ export const routes: Routes = [
     path: 'ids-wizard',
     loadChildren: () => import('./components/ids-wizard/ids-wizard.module').then(m => m.IdsWizardModule),
     data: {
-      title: 'IDS Wizard',
+      title: 'Wizard',
       category: 'Navigation and Interaction',
       description: 'A clickable 4 step wizard'
     },
@@ -447,7 +447,7 @@ export const routes: Routes = [
     path: 'ids-about',
     loadChildren: () => import('./components/ids-about/ids-about.module').then(m => m.IdsAboutModule),
     data: {
-      title: 'IDS About',
+      title: 'About',
       category: 'Messages and Alerts',
       description: 'Displays info about a product with copyright and browser specs'
     },
@@ -456,7 +456,7 @@ export const routes: Routes = [
     path: 'ids-empty-message',
     loadChildren: () => import('./components/ids-empty-message/ids-empty-message.module').then(m => m.IdsEmptyMessageModule),
     data: {
-      title: 'IDS Empty Message',
+      title: 'Empty Message',
       category: 'Messages and Alerts',
       description: 'Format for empty message alert'
     },
@@ -465,7 +465,7 @@ export const routes: Routes = [
     path: 'ids-error-page',
     loadChildren: () => import('./components/ids-error-page/ids-error-page.module').then(m => m.IdsErrorPageModule),
     data: {
-      title: 'IDS Error Page',
+      title: 'Error Page',
       category: 'Messages and Alerts',
       description: 'Displays error message'
     },
@@ -474,7 +474,7 @@ export const routes: Routes = [
     path: 'ids-icon',
     loadChildren: () => import('./components/ids-icon/ids-icon.module').then(m => m.IdsIconModule),
     data: {
-      title: 'IDS Icon',
+      title: 'Icon',
       category: 'Messages and Alerts',
       description: 'SVG icons'
     },
@@ -483,7 +483,7 @@ export const routes: Routes = [
     path: 'ids-message', 
     loadChildren: () => import('./components/ids-message/ids-message.module').then(m => m.IdsMessageModule),
     data: {
-      title: 'IDS Message',
+      title: 'Message',
       category: 'Messages and Alerts',
       description: 'Displays a Message Dialog'
     },
@@ -492,7 +492,7 @@ export const routes: Routes = [
     path: 'ids-notification-banner',
     loadChildren: () => import('./components/ids-notification-banner/ids-notification-banner.module').then(m => m.IdsNotificationBannerModule),
     data: {
-      title: 'IDS Notification Banner',
+      title: 'Notification Banner',
       category: 'Messages and Alerts',
       description: 'Displays a Top Level Application Message'
     },
@@ -501,7 +501,7 @@ export const routes: Routes = [
     path: 'ids-progress-bar',
     loadChildren: () => import('./components/ids-progress-bar/ids-progress-bar.module').then(m => m.IdsProgressBarModule),
     data: {
-      title: 'IDS Progress Bar',
+      title: 'Progress Bar',
       category: 'Messages and Alerts',
       description: 'Displays feedback on a process'
     },
@@ -510,7 +510,7 @@ export const routes: Routes = [
     path: 'ids-toast',
     loadChildren: () => import('./components/ids-toast/ids-toast.module').then(m => m.IdsToastModule),
     data: {
-      title: 'IDS Toast',
+      title: 'Toast',
       category: 'Messages and Alerts',
       description: 'Provides feedback after an action has taken place'
     },
@@ -519,7 +519,7 @@ export const routes: Routes = [
     path: 'ids-list-builder', 
     loadChildren: () => import('./components/ids-list-builder/ids-list-builder.module').then(m => m.IdsListBuilderModule),
     data: {
-      title: 'IDS List Builder',
+      title: 'List Builder',
       category: 'Lists',
       description: 'Displays List Builder component'
     },
@@ -528,7 +528,7 @@ export const routes: Routes = [
     path: 'ids-list-view',
     loadChildren: () => import('./components/ids-list-view/ids-list-view.module').then(m => m.IdsListViewModule),
     data: {
-      title: 'IDS List View',
+      title: 'List View',
       category: 'Lists',
       description: 'Use to display a list of records'
     },
@@ -537,7 +537,7 @@ export const routes: Routes = [
     path: 'ids-data-grid',
     loadChildren: () => import('./components/ids-data-grid/ids-data-grid.module').then(m => m.IdsDataGridModule),
     data: {
-      title: 'IDS Data Grid',
+      title: 'Data Grid',
       category: 'Lists',
       description: 'Tabular Data'
     },
@@ -546,7 +546,7 @@ export const routes: Routes = [
     path: 'ids-draggable',
     loadChildren: () => import('./components/ids-draggable/ids-draggable.module').then(m => m.IdsDraggableModule),
     data: {
-      title: 'IDS Draggable',
+      title: 'Draggable',
       category: 'Lists',
       description: 'Drag API'
     },
@@ -555,7 +555,7 @@ export const routes: Routes = [
     path: 'ids-accordion', 
     loadChildren: () => import('./components/ids-accordion/ids-accordion.module').then(m => m.IdsAccordionModule),
     data: {
-      title: 'IDS Accordion',
+      title: 'Accordion',
       category: 'Layouts',
       description: 'Vertically Stacked Sections'
     },
@@ -564,7 +564,7 @@ export const routes: Routes = [
     path: 'ids-block-grid',
     loadChildren: () => import('./components/ids-block-grid/ids-block-grid.module').then(m => m.IdsBlockGridModule),
     data: {
-      title: 'IDS Block Grid',
+      title: 'Block Grid',
       category: 'Layouts',
       description: 'Box/Block Grid Layout'
     },
@@ -573,7 +573,7 @@ export const routes: Routes = [
     path: 'ids-calendar',
     loadChildren: () => import('./components/ids-calendar/ids-calendar.module').then(m => m.IdsCalendarModule),
     data: {
-      title: 'IDS Calendar',
+      title: 'Calendar',
       category: 'Layouts',
       description: 'Displays month, week, day views'
     },
@@ -582,7 +582,7 @@ export const routes: Routes = [
     path: 'ids-card',
     loadChildren: () => import('./components/ids-card/ids-card.module').then(m => m.IdsCardModule),
     data: {
-      title: 'IDS Card',
+      title: 'Card',
       category: 'Layouts',
       description: 'Card / Widget Layout'
     },
@@ -591,7 +591,7 @@ export const routes: Routes = [
     path: 'ids-container',
     loadChildren: () => import('./components/ids-container/ids-container.module').then(m => m.IdsContainerModule),
     data: {
-      title: 'IDS Container',
+      title: 'Container',
       category: 'Layouts',
       description: 'Main container for themes / locale'
     },
@@ -600,7 +600,7 @@ export const routes: Routes = [
     path: 'ids-expandable-area',
     loadChildren: () => import('./components/ids-expandable-area/ids-expandable-area.module').then(m => m.IdsExpandableAreaModule),
     data: {
-      title: 'IDS Expandable Area',
+      title: 'Expandable Area',
       category: 'Layouts',
       description: 'Collapsible form sections'
     },
@@ -609,7 +609,7 @@ export const routes: Routes = [
     path: 'ids-popup', 
     loadChildren: () => import('./components/ids-popup/ids-popup.module').then(m => m.IdsPopupModule),
     data: {
-      title: 'IDS Popup',
+      title: 'Popup',
       category: 'Layouts',
       description: 'Displays a Popup container'
     }
@@ -618,7 +618,7 @@ export const routes: Routes = [
     path: 'ids-toolbar',
     loadChildren: () => import('./components/ids-toolbar/ids-toolbar.module').then(m => m.IdsToolbarModule),
     data: {
-      title: 'IDS Toolbar',
+      title: 'Toolbar',
       category: 'Layouts',
       description: 'A container for buttons'
     }
@@ -627,7 +627,7 @@ export const routes: Routes = [
     path: 'ids-masthead', 
     loadChildren: () => import('./components/ids-masthead/ids-masthead.module').then(m => m.IdsMastheadModule),
     data: {
-      title: 'IDS Masthead',
+      title: 'Masthead',
       category: 'Layouts',
       description: 'Masthead component'
     }
@@ -636,7 +636,7 @@ export const routes: Routes = [
     path: 'ids-fieldset', 
     loadChildren: () => import('./components/ids-fieldset/ids-fieldset.module').then(m => m.IdsFieldsetModule),
     data: {
-      title: 'IDS Field Set',
+      title: 'Field Set',
       category: 'Layouts',
       description: 'Divide Form Areas'
     }
