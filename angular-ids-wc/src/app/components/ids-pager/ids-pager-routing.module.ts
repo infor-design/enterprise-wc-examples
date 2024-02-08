@@ -13,15 +13,27 @@ export const routes: Routes = [
   },
   { 
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Normal pager in Angular',
+    }
   },
   { 
     path: 'list',
-    component: ListComponent
+    component: ListComponent,
+    data: {
+      type: 'Example',
+      description: 'List style pager in Angular',
+    }
   },
   { 
     path: 'sandbox',
-    component: SandboxComponent
+    component: SandboxComponent,
+    data: {
+      type: 'Example',
+      description: 'Various pager sandbox examples',
+    }
   }
 ];
 
