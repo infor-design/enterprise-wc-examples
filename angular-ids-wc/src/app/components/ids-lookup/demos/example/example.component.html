@@ -21,16 +21,16 @@
 
       <!-- <ids-lookup id="lookup-2" readonly="true" label="Readonly Lookup" value="102"></ids-lookup>
       <ids-lookup id="lookup-3" disabled="true" label="Disabled Lookup" value="103"></ids-lookup>
-      <ids-lookup id="lookup-4" label="Required Lookup" validate="required"></ids-lookup>
+      <ids-lookup id="lookup-4" label="Required Lookup" validate="required"></ids-lookup> -->
       <ids-lookup id="lookup-5" label="Custom Lookup">
         <ids-modal slot="lookup-modal" id="custom-lookup-modal" aria-labelledby="custom-lookup-modal-title">
           <ids-text slot="title" font-size="24" type="h2" id="lookup-modal-title">Custom Lookup Modal</ids-text>
-          <ids-modal-button slot="buttons" id="modal-cancel-btn" appearance="primary">
+          <ids-modal-button confirm slot="buttons" appearance="primary">
             <span>Apply</span>
           </ids-modal-button>
         </ids-modal>
       </ids-lookup>
-      <ids-lookup
+      <!-- <ids-lookup
         id="lookup-6"
         label="Autocomplete Lookup"
         title="Select an Item"
