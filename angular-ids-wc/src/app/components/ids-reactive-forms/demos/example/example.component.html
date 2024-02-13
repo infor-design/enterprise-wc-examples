@@ -6,24 +6,24 @@
         <ids-text font-size="12" type="h1">Reactive forms</ids-text>
         <br>
 
-        <ids-checkbox value="checkbox0" label="IDS Checkbox" formControlName="testCheckbox" ngDefaultControl></ids-checkbox>
+        <ids-checkbox value="checkbox0" label="IDS Checkbox" id="check-0" formControlName="testCheckbox" ngDefaultControl></ids-checkbox>
         <br>
 
         <ids-checkbox-group label="IDS Checkbox Group" formControlName="testCheckboxGroup" ngDefaultControl>
-          <ids-checkbox value="checkbox1" label="checkbox one"></ids-checkbox>
-          <ids-checkbox value="checkbox2" label="checkbox two"></ids-checkbox>
+          <ids-checkbox value="checkbox1" label="checkbox one" id="check-1"></ids-checkbox>
+          <ids-checkbox value="checkbox2" label="checkbox two" id="check-2"></ids-checkbox>
         </ids-checkbox-group>
         <br>
 
-        <ids-date-picker label="IDS Date Picker (object)" tabbable="false" mask formControlName="testDateObject" ngDefaultControl></ids-date-picker>
+        <ids-date-picker label="IDS Date Picker (object)" id="date-1" mask formControlName="testDateObject" ngDefaultControl></ids-date-picker>
 
-        <ids-date-picker label="IDS Date Picker (string)" tabbable="false" mask formControlName="testDateString" ngDefaultControl></ids-date-picker>
+        <ids-date-picker label="IDS Date Picker (string)" id="date-2" mask formControlName="testDateString" ngDefaultControl></ids-date-picker>
 
-        <ids-time-picker label="IDS Time Picker" id="e2e-timepicker-autoselect" autoselect mask="true" formControlName="testTimePicker" ngDefaultControl></ids-time-picker>
+        <ids-time-picker label="IDS Time Picker" id="timepicker-1" autoselect mask="true" formControlName="testTimePicker" ngDefaultControl></ids-time-picker>
 
         <ids-input type="text" label="IDS Input" formControlName="testInput" ngDefaultControl></ids-input>
 
-        <ids-lookup label="IDS Lookup" clearable formControlName="testLookup" ngDefaultControl></ids-lookup>
+        <ids-lookup label="IDS Lookup" clearable id="lookup-1" formControlName="testLookup" ngDefaultControl></ids-lookup>
 
         <ids-textarea label="IDS Textarea " formControlName="testTextarea" ngDefaultControl></ids-textarea>
       </ids-layout-grid-cell>
