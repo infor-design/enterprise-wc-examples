@@ -19,6 +19,7 @@ export class ExampleComponent implements OnInit {
       testDateObject: new FormControl(new Date()),
       testDateString: new FormControl('12/31/2020'),
       testDropdown: new FormControl('opt5'),
+      testMultiselect: new FormControl(['opt1', 'opt1']),
       testInput: new FormControl('Original value', Validators.minLength(2)),
       testLookup: new FormControl(),
       testTextarea: new FormControl(),
@@ -38,6 +39,7 @@ export class ExampleComponent implements OnInit {
     console.log(`FormControl(testDateObject) value is: ${this.testForm.controls['testDateObject'].value}`);
     console.log(`FormControl(testDateString) value is: ${this.testForm.controls['testDateString'].value}`);
     console.log(`FormControl(testDropdown) value is: ${this.testForm.controls['testDropdown'].value}`);
+    console.log(`FormControl(testMultiselect) value is: ${this.testForm.controls['testMultiselect'].value}`);
     console.log(`FormControl(testInput) value is: ${this.testForm.controls['testInput'].value}`);
     console.log(`FormControl(testLookup) value is: ${this.testForm.controls['testLookup'].value}`);
     console.log(`FormControl(testTextarea) value is: ${this.testForm.controls['testTextarea'].value}`);
@@ -69,6 +71,16 @@ export class ExampleComponent implements OnInit {
       opt6: 'blank',
     }[this.testForm.controls['testDropdown'].value] ?? 'opt1';
 
+    const nextMultiselectValue = {
+      blank: 'opt1',
+      opt1: 'opt2',
+      opt2: 'opt3',
+      opt3: 'opt4',
+      opt4: 'opt5',
+      opt5: 'opt6',
+      opt6: 'blank',
+    }[this.testForm.controls['testMultiselect'].value] ?? 'opt1';
+
     const nextRadioValue = {
       radio1: 'radio2',
       radio2: 'radio1',
@@ -88,6 +100,8 @@ export class ExampleComponent implements OnInit {
     this.testForm.controls['testSearchField'].setValue(randomText(3));
 
     this.testForm.controls['testDropdown'].setValue(nextDropdownValue);
+    this.testForm.controls['testMultiselect'].setValue(nextMultiselectValue);
+    
     this.testForm.controls['testRadio'].setValue(nextRadioValue);
 
     this.testForm.controls['testSpinbox'].setValue(Math.floor(Math.random() * 100));

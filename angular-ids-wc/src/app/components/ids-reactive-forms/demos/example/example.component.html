@@ -44,6 +44,25 @@
           </ids-list-box>
         </ids-dropdown>
 
+        <ids-multiselect label="IDS Multiselect" formControlName="testMultiselect" ngDefaultControl>
+          <ids-list-box>
+            <ids-list-box-option value="blank" id="opt0-ms" aria-label="Blank"><ids-checkbox
+                label="Option Blank"></ids-checkbox></ids-list-box-option>
+            <ids-list-box-option value="opt1" id="opt1-ms"><ids-checkbox
+                label="Option One"></ids-checkbox></ids-list-box-option>
+            <ids-list-box-option value="opt2" id="opt2-ms"><ids-checkbox
+                label="Option Two"></ids-checkbox></ids-list-box-option>
+            <ids-list-box-option value="opt3" id="opt3-ms"><ids-checkbox
+                label="Option Three"></ids-checkbox></ids-list-box-option>
+            <ids-list-box-option value="opt4" id="opt4-ms"><ids-checkbox
+                label="Option Four"></ids-checkbox></ids-list-box-option>
+            <ids-list-box-option value="opt5" id="opt5-ms"><ids-checkbox
+                label="Option Five"></ids-checkbox></ids-list-box-option>
+            <ids-list-box-option value="opt6" id="opt6-ms"><ids-checkbox
+                label="Option Six"></ids-checkbox></ids-list-box-option>
+          </ids-list-box>
+        </ids-multiselect>
+
         <ids-radio-group label="IDS Radio Group" formControlName="testRadio" ngDefaultControl>
           <ids-radio value="radio1" label="radio one"></ids-radio>
           <ids-radio value="radio2" label="radio two" checked="true"></ids-radio>

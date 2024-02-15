@@ -15,23 +15,43 @@ export const routes: Routes = [
   },
   {
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Basic time picker examples'
+    }
   },
   {
     path: 'sizes',
-    component: SizesComponent
+    component: SizesComponent,
+    data: {
+      type: 'Example',
+      description: 'Time picker size examples'
+    }
   },
   {
     path: 'intervals',
-    component: IntervalsComponent
+    component: IntervalsComponent,
+    data: {
+      type: 'Example',
+      description: 'Time picker interval examples'
+    }
   },
   {
     path: 'sandbox',
-    component: SandboxComponent
+    component: SandboxComponent,
+    data: {
+      type: 'Example',
+      description: 'Time picker example sandbox'
+    }
   },
   {
     path: 'open',
-    component: OpenComponent
+    component: OpenComponent,
+    data: {
+      type: 'Example',
+      description: 'Time picker open example'
+    }
   }
 ];
 
