@@ -11,7 +11,11 @@ export const routes: Routes = [
   },
   {
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'All fields in a reactive form'
+    }
   }
 ];
 
