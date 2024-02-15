@@ -18,7 +18,7 @@
           <ids-list-box-option class="multiselect-option" id="ar" value="ar"><ids-checkbox no-margin label="Arkansas" class="justify-center"></ids-checkbox></ids-list-box-option>
           <ids-list-box-option class="multiselect-option" id="ca" value="ca"><ids-checkbox no-margin label="California" class="justify-center"></ids-checkbox></ids-list-box-option>
           <ids-list-box-option class="multiselect-option" id="co" value="co" selected><ids-checkbox no-margin label="Colorado" class="justify-center"></ids-checkbox></ids-list-box-option>
-          <!-- <ids-list-box-option class="multiselect-option" id="nj" value="nj" selected><ids-checkbox no-margin label="New Jersey" class="justify-center"></ids-checkbox></ids-list-box-option> -->
+          <ids-list-box-option class="multiselect-option" id="nj" value="nj" selected><ids-checkbox no-margin label="New Jersey" class="justify-center"></ids-checkbox></ids-list-box-option>
         </ids-list-box>
       </ids-multiselect>
 
@@ -66,8 +66,13 @@
 
       <ids-multiselect id="dropdown-4" tags="true" label="Test Multiselect (using ngFor)" max="10" dirty-tracker="true">
         <ids-list-box class="options">
-          <ng-container *ngFor="let option of coldStates.concat(hotStates)">
-            <ids-list-box-option class="multiselect-option" [id]="option.id" [value]="option.value" [tooltip]="option.tooltip">
+          <ng-container *ngFor="let option of coldStates.concat(hotStates); index as i">
+            <ids-list-box-option
+              class="multiselect-option"
+              [id]="option.id"
+              [value]="option.value"
+              [tooltip]="option.tooltip"
+            >
               <ids-checkbox no-margin [label]="option.label" class="justify-center"></ids-checkbox>
             </ids-list-box-option>
           </ng-container>
