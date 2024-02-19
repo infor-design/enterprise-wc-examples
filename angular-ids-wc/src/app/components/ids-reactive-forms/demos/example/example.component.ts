@@ -16,6 +16,7 @@ export class ExampleComponent implements OnInit {
     this.testForm = new FormGroup({
       testCheckbox: new FormControl(),
       testCheckboxGroup: new FormControl(),
+      testColor: new FormControl(),
       testDateObject: new FormControl(new Date()),
       testDateString: new FormControl('12/31/2020'),
       testDropdown: new FormControl('opt5'),
@@ -36,6 +37,7 @@ export class ExampleComponent implements OnInit {
   public onFormSubmit() {
     console.log(`FormControl(testCheckbox) value is: ${this.testForm.controls['testCheckbox'].value}`);
     console.log(`FormControl(testCheckboxGroup) value is: ${this.testForm.controls['testCheckboxGroup'].value}`);
+    console.log(`FormControl(testColor) value is: ${this.testForm.controls['testColor'].value}`);
     console.log(`FormControl(testDateObject) value is: ${this.testForm.controls['testDateObject'].value}`);
     console.log(`FormControl(testDateString) value is: ${this.testForm.controls['testDateString'].value}`);
     console.log(`FormControl(testDropdown) value is: ${this.testForm.controls['testDropdown'].value}`);
