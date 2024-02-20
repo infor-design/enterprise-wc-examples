@@ -11,6 +11,7 @@ export class ExampleComponent {
     two: true,
     three: false,
   };
+  testColor = '#EFEFEF';
   testDateObject = new Date();
   testDateString = '12/31/2020';
   testDropdown = 'opt5';

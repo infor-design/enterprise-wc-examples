@@ -17,6 +17,8 @@
 
       <ids-date-picker label="IDS Date Picker (string) ({{testDateString}})" tabbable="false" mask (ngModelChange)="onUpdate($event)" [(ngModel)]="testDateString"></ids-date-picker>
 
+      <ids-color-picker label="IDS Color Picker" (ngModelChange)="onUpdate($event)" [(ngModel)]="testColor"></ids-color-picker>
+
       <ids-dropdown label="IDS Dropdown ({{testDropdown}})" validate="required" (ngModelChange)="onUpdate($event)" [(ngModel)]="testDropdown">
         <ids-list-box>
           <ids-list-box-option value="blank" id="blank" aria-label="Blank"></ids-list-box-option>
