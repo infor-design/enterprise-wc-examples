@@ -14,19 +14,35 @@ export const routes: Routes = [
   },
   {
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Simple radio example using Angular',
+    }
   },
   {
     path: 'control-flow',
-    component: ControlFlowComponent
+    component: ControlFlowComponent,
+    data: {
+      type: 'Example',
+      description: 'Using new control flow syntax',
+    }
   },
   {
     path: 'data-driven',
-    component: DataDrivenComponent
+    component: DataDrivenComponent,
+    data: {
+      type: 'Example',
+      description: 'Using angular data',
+    }
   },
   {
     path: 'deferred',
-    component: DeferredComponent
+    component: DeferredComponent,
+    data: {
+      type: 'Example',
+      description: 'Using angular deferred',
+    }
   }
 ];
 

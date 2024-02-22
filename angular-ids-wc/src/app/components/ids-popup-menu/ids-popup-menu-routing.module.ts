@@ -14,19 +14,43 @@ export const routes: Routes = [
   },
   {
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Simple popup example in angular',
+    }
   },
   {
     path: 'data-driven',
-    component: DataDrivenComponent
+    component: DataDrivenComponent,
+    data: {
+      type: 'Example',
+      description: 'Data driven angular popup example',
+    }
   },
   {
     path: 'selected-state',
-    component: SelectedStateComponent
+    component: SelectedStateComponent,
+    data: {
+      type: 'Example',
+      description: 'Data driven angular selection states',
+    }
   },
   {
     path: 'trigger-immediate',
-    component: TriggerImmediateComponent
+    component: TriggerImmediateComponent,
+    data: {
+      type: 'Example',
+      description: 'Using immediate trigger',
+    }
+  },
+  {
+    path: 'async-callback',
+    component: TriggerImmediateComponent,
+    data: {
+      type: 'Example',
+      description: 'Using viewchild to setup before show callback',
+    }
   }
 ];
 

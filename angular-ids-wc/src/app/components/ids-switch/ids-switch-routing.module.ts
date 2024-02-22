@@ -10,7 +10,11 @@ export const routes: Routes = [
   },
   {
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Simple switch example in angular',
+    }
   }
 ];
 
