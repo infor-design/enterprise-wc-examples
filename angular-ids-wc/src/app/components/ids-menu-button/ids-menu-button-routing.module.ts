@@ -13,15 +13,27 @@ export const routes: Routes = [
   },
   { 
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Various menu buttons in angular',
+    }
   },
   { 
     path: 'disabled',
-    component: DisabledComponent
+    component: DisabledComponent,
+    data: {
+      type: 'Example',
+      description: 'Disabled menu buttons in Angular',
+    }
   },
   { 
     path: 'display-selected',
-    component: DisplaySelectedComponent
+    component: DisplaySelectedComponent,
+    data: {
+      type: 'Example',
+      description: 'Change button content based on selection',
+    }
   }
 ];
 

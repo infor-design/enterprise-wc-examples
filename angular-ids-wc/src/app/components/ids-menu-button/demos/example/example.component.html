@@ -4,23 +4,13 @@
   <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Menu Buttons</ids-text>
   </ids-layout-grid>
-  <ids-layout-grid cols="4" gap="md">
+  <ids-layout-grid auto-fit="true" gap="md" padding-x="md">
     <ids-layout-grid-cell>
       <!-- When target attribute is included the parent gets set as target -->
-      <ids-menu-button
-        #menuButton1
-        id="menu-button" 
-        icon="settings" 
-        dropdown-icon
-        appearance="tertiary" 
-        menu="my-menu"
-      >
+      <ids-menu-button #menuButton1 id="menu-button" icon="settings" appearance="tertiary" menu="my-menu" dropdown-icon>
         <span>Settings</span>
       </ids-menu-button>
-      <ids-popup-menu
-        id="my-menu" 
-        trigger="click"
-      >
+      <ids-popup-menu id="my-menu" target="menu-button" trigger-type="click">
         <ids-menu-group>
           <ids-menu-item>Personalize Columns...</ids-menu-item>
         </ids-menu-group>
@@ -44,8 +34,7 @@
       <ids-menu-button 
         icon="more"
         id="icon-button" 
-        menu="icon-menu"
-      >
+        menu="icon-menu">
         <span class="audible">Icon Only Button</span>
       </ids-menu-button>
       <ids-popup-menu
