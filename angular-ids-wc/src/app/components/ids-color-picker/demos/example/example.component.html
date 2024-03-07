@@ -5,10 +5,12 @@
     <ids-text font-size="12" type="h1">Color Picker</ids-text>
   </ids-layout-grid>
 
-  <ids-layout-grid auto-fit="true" cols="2">
+  <ids-layout-grid cols="3" padding-x="md">
     <ids-layout-grid-cell>
       <ids-color-picker id="color-picker-e2e-test" label="Default Color Picker"></ids-color-picker>
-    </ids-layout-grid-cell>
+      <ids-color-picker label="Disabled Color Picker" value="#941E1E" disabled></ids-color-picker>
+      <ids-color-picker label="Readonly Color Picker" value="#941E1E" readonly="true"></ids-color-picker>
+  </ids-layout-grid-cell>
 
     <ids-layout-grid-cell>
       <ids-color-picker label="Clearable Color Picker" value="ruby-80" clearable></ids-color-picker>
@@ -91,8 +93,6 @@
     </ids-layout-grid-cell>
 
     <ids-layout-grid-cell>
-      <ids-color-picker label="Disabled Color Picker" value="#941E1E" disabled></ids-color-picker>
-      <ids-color-picker label="Readonly Color Picker" value="#941E1E" readonly="true"></ids-color-picker>
       <ids-color-picker label="Validation" validate="required" clearable></ids-color-picker>
       <ids-color-picker label="Dirty Tracker" value="#E66467" dirty-tracker></ids-color-picker>
       <ids-color-picker label="Advanced Color Picker" value="#E66467" advanced="true"></ids-color-picker>

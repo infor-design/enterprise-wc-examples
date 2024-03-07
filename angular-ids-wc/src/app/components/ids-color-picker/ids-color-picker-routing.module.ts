@@ -13,15 +13,27 @@ export const routes: Routes = [
   },
   { 
     path: 'example', 
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows various colorpicker examples',
+    },
   },
   { 
     path: 'example-sizes', 
-    component: ExampleSizesComponent
+    component: ExampleSizesComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows examples of various colorpicker sizes',
+    },
   },
   { 
     path: 'axe', 
-    component: AxeComponent
+    component: AxeComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows an axe scan page for (accessibility tests)',
+    },
   }
 ];
 
