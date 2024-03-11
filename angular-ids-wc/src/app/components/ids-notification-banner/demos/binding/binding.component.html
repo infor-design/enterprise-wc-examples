@@ -1,0 +1,21 @@
+<ids-container padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+
+  <ids-layout-grid cols="3" gap="md">
+    <ids-text font-size="12" type="h1">Notification Banner Binding Example</ids-text>
+  </ids-layout-grid>
+
+  <ids-notification-banner
+    id="ids-notification-banner-1"
+    message-text='{{errorMessageInterpolation}}'
+    type="alert"
+  >
+  </ids-notification-banner>
+
+  <ids-notification-banner
+    id="ids-notification-banner-2"
+    [attr.message-text]="errorMessageProperty"
+    type="info"
+  >
+  </ids-notification-banner>
+</ids-container>
