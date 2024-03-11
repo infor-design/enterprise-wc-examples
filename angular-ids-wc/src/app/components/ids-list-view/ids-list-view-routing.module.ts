@@ -5,6 +5,7 @@ import { IdsListViewComponent } from './ids-list-view.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SelectableSingleComponent } from './demos/selectable-single/selectable-single.component';
 import { SelectableMultipleComponent } from './demos/selectable-multiple/selectable-multiple.component';
+import { TooltipOverflowEllipsesComponent } from './demos/tooltip-overflow-ellipses/tooltip-overflow-ellipses.component';
 
 export const routes: Routes = [
   { 
@@ -22,6 +23,10 @@ export const routes: Routes = [
   { 
     path: 'selectable-multiple',
     component: SelectableMultipleComponent
+  },
+  { 
+    path: 'tooltip-overflow-ellipses',
+    component: TooltipOverflowEllipsesComponent
   }
 ];
 
