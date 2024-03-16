@@ -57,8 +57,6 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       </ids-header>
 
       <ids-app-menu id="app-menu">
-        <ids-text slot="username" font-size="24" font-weight="bold">IDS Web Components</ids-text>
-
         {/* <!-- Header Toolbar --> */}
         <ids-toolbar slot="header">
           <ids-toolbar-section align="center-even" type="fluid">
