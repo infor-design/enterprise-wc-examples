@@ -93,6 +93,14 @@ export class IdsTagComponent implements AfterViewInit {
 1. If wanted you can shorten the import paths using this feature https://blog.bitsrc.io/short-typescript-import-paths-in-angular9-22ce34bd424d 
 1. If you wanted to you can also speed up the builds with es-build you  could https://www.danywalls.com/maximizing-your-angular-build-performance-with-esbuild
 
+## Attributes and settings
+
+Sometimes angular doesnt regognize attributes as `@input` so in those cases you can try binding variables these ways:
+
+```html
+<ids-splitter-pane [attr.size]="splitterPosition">
+<ids-splitter-pane attr.size="{{splitterPosition}}">
+```
 
 ## Native Element Helper
 

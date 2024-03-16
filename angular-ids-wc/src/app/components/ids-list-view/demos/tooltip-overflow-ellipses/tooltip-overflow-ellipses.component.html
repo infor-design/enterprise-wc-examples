@@ -1,0 +1,30 @@
+<ids-container padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+  
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-text font-size="12" type="h1">List View</ids-text>
+  </ids-layout-grid>
+
+  <ids-layout-grid cols="2" gap="xl">
+    <ids-layout-grid-cell col-span="1">
+      <!-- <div class="parent-container">
+        <ids-list-view #listView item-height="76"></ids-list-view>
+      </div> -->
+      <div class="parent-container">
+        <ids-list-view
+          #listView
+          id="demo-lv-tooltip-overflow-ellipses"
+          selectable="multiple"
+          item-height="76"
+          tooltip="true"
+          x--tooltip="Tooltip text goes here"
+          max-width="150"
+          overflow="ellipsis"
+          searchable
+          (selected)="onMultiListClick($event)"
+        >
+        </ids-list-view>
+      </div>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>

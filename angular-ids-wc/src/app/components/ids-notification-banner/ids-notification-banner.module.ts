@@ -7,6 +7,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { DynamicComponent } from './demos/dynamic/dynamic.component';
 import { CardComponent } from './demos/card/card.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
+import { BindingComponent } from './demos/binding/binding.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { DemoListingModule } from '../demo-listing/demo-listing.module';
     IdsNotificationBannerComponent,
     ExampleComponent,
     DynamicComponent,
-    CardComponent
+    CardComponent,
+    BindingComponent
   ],
   imports: [
     CommonModule,
