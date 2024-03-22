@@ -30,6 +30,22 @@
         messageText="{{notification.message}}"
       >
       </ids-notification-banner>
+
+      <ids-notification-banner
+        id="ids-notification-banner-5"
+        message="{{ dynamicText }}"
+        type="info">
+      </ids-notification-banner>
+
+      <ids-notification-banner
+        id="ids-notification-banner-6"
+        [message]="dynamicText">
+      </ids-notification-banner>
+
+      <ids-notification-banner
+        #programmaticNotification
+      >
+      </ids-notification-banner>
     </div>
   </ids-card>
 </ids-container>
