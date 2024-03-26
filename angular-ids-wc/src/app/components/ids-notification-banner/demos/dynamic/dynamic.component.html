@@ -6,7 +6,46 @@
       <ids-text font-size="20" type="h2" overflow="ellipsis" tooltip="true">Card Title One</ids-text>
     </div>
     <div id="notification-container" slot="card-content">
+      
+      <ids-notification-banner
+          message-text="Success message"
+          type="success"
+      ></ids-notification-banner>
 
+      <ids-notification-banner
+          message="{{ warningBanner}}"
+          type="warning"
+      ></ids-notification-banner>
+
+      <ids-notification-banner
+          id="test"
+          messageText="{{ testBanner }}"
+          type="error"
+      ></ids-notification-banner>
+
+      <ids-notification-banner *ngFor="let notification of notifications"
+        key="{{notification.id}}"
+        id="{{notification.id}}"
+        type="{{notification.type}}"
+        messageText="{{notification.message}}"
+      >
+      </ids-notification-banner>
+
+      <ids-notification-banner
+        id="ids-notification-banner-5"
+        message="{{ dynamicText }}"
+        type="info">
+      </ids-notification-banner>
+
+      <ids-notification-banner
+        id="ids-notification-banner-6"
+        [message]="dynamicText">
+      </ids-notification-banner>
+
+      <ids-notification-banner
+        #programmaticNotification
+      >
+      </ids-notification-banner>
     </div>
   </ids-card>
 </ids-container>
