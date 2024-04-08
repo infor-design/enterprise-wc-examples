@@ -73,9 +73,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         {/* <!-- Main Content (Accordion Navigation) --> */}
         <Navigation />
       </ids-app-menu>
-      <ids-container padding="8" hidden>
+      <ids-layout-grid auto-fit cols="1" gap="none" padding="xs">
         {children}
-      </ids-container>
+      </ids-layout-grid>
     </ids-container>
   );
 }
