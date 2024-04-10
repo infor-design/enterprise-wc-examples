@@ -264,6 +264,15 @@ export const routes: Routes = [
     },
   },
   { 
+    path: 'ids-action-panel', 
+    loadChildren: () => import('./components/ids-action-panel/ids-action-panel.module').then(m => m.IdsActionPanelModule),
+    data: {
+      title: 'Action Panel',
+      category: 'Navigation and Interaction',
+      description: 'Displays a menu at the bottom of your screen on mobile devices'
+    },
+  },
+  { 
     path: 'ids-app-menu', 
     loadChildren: () => import('./components/ids-app-menu/ids-app-menu.module').then(m => m.IdsAppMenuModule),
     data: {
