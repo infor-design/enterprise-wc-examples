@@ -4,10 +4,17 @@
   "private": true,
   "dependencies": {
     "@types/jest": "^29.5.12",
+<<<<<<< HEAD
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.78",
     "@types/react-dom": "^18.2.25",
     "ids-enterprise-wc": "^1.0.0",
+=======
+    "@types/node": "^20.11.28",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "ids-enterprise-wc": "^1.0.0-beta.22",
+>>>>>>> fe9ea1600d1bf1d2ac61bd05cc680707340dd01d
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
