@@ -5,25 +5,17 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap" rel="stylesheet" />
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="Cache-control" content="max-age=31536000">
-  <script defer type="module" src="node_modules/ids-enterprise-wc/enterprise-wc.js"></script>
-  <!-- <script defer type="module" src="node_modules/ids-enterprise-wc/components/ids-dropdown/ids-dropdown.js"></script>-->
+  <script defer type="module" src="node_modules/ids-enterprise-wc/components/ids-container/ids-container.js"></script>
+  <script defer type="module" src="node_modules/ids-enterprise-wc/components/ids-container/ids-container.js"></script>
+  <script defer type="module" src="node_modules/ids-enterprise-wc/components/ids-layout-grid/ids-layout-grid.js"></script>
+  <script defer type="module" src="node_modules/ids-enterprise-wc/components/ids-hyperlink/ids-hyperlink.js"></script>
   <link rel="stylesheet" href="/node_modules/ids-enterprise-wc/themes/ids-theme-default-light.css">
 </head>
 <body>
 <ids-container role="main" padding="8" hidden>
   <ids-layout-grid auto-fit="true" padding-x="md">
     <ids-layout-grid-cell>
-      <ids-dropdown id="dropdown-4" label="Required Dropdown" value="opt1" validate="required">
-        <ids-list-box>
-          <ids-list-box-option value="blank" id="blank" aria-label="Blank"></ids-list-box-option>
-          <ids-list-box-option value="opt1" id="opt1-d4">Option One</ids-list-box-option>
-          <ids-list-box-option value="opt2" id="opt2-d4">Option Two</ids-list-box-option>
-          <ids-list-box-option value="opt3" id="opt3-d4">Option Three</ids-list-box-option>
-          <ids-list-box-option value="opt4" id="opt4-d4">Option Four</ids-list-box-option>
-          <ids-list-box-option value="opt5" id="opt5-d4">Option Five</ids-list-box-option>
-          <ids-list-box-option value="opt6" id="opt6-d4">Option Six</ids-list-box-option>
-        </ids-list-box>
-      </ids-dropdown>
+      <ids-hyperlink href="#">My Link</ids-hyperlink>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 </ids-container>
