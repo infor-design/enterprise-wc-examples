@@ -1,6 +1,6 @@
 import React from 'react';
 import IdsTitle from '../../components/ids-title/IdsTitle';
-import 'ids-enterprise-wc/components/ids-checkbox-group/ids-checkbox-group';
+import 'ids-enterprise-wc/components/ids-checkbox/ids-checkbox-group';
 
 const IdsCheckboxGroup = () => {
   return (

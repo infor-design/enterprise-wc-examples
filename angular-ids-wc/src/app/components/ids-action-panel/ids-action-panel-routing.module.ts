@@ -1,21 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { IdsAlertComponent } from './ids-alert.component';
+import { IdsActionPanelComponent } from './ids-action-panel.component';
 import { ExampleComponent } from './demos/example/example.component';
 
 export const routes: Routes = [
-  { 
-    path: '', 
-    component: IdsAlertComponent 
+  {
+    path: '',
+    component: IdsActionPanelComponent
   },
   {
     path: 'example',
-    component: ExampleComponent,
-    data: {
-      type: 'Example',
-      description: 'Shows a default alert example'
-    }
+    component: ExampleComponent
   }
 ];
 
@@ -23,4 +19,4 @@ export const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class IdsAlertRoutingModule { }
+export class IdsActionPanelRoutingModule { }

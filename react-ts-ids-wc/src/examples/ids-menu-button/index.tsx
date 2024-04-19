@@ -7,12 +7,12 @@ const IdsMenuButton = () => {
     <>
       <IdsTitle>Menu Buttons Example</IdsTitle>
 
-      <ids-layout-grid cols="4" gap="md">
+      <ids-layout-grid cols="4" gap="md" padding-x="md">
         <ids-layout-grid-cell>
           <ids-menu-button id="menu-button" icon="settings" appearance="tertiary" menu="my-menu" dropdown-icon="dropdown">
             <span>Settings</span>
           </ids-menu-button>
-          <ids-popup-menu id="my-menu" target="#menu-button" trigger-type="click">
+          <ids-popup-menu id="my-menu" target="menu-button" trigger-type="click">
             <ids-menu-group>
               <ids-menu-item>Personalize Columns...</ids-menu-item>
             </ids-menu-group>
@@ -37,11 +37,9 @@ const IdsMenuButton = () => {
             </ids-menu-group>
           </ids-popup-menu>
 
-          <ids-menu-button id="icon-button" menu="icon-menu">
-            <ids-icon slot="icon" icon="more"></ids-icon>
-            <span className="audible">Icon Only Button</span>
+          <ids-menu-button id="icon-button" menu="icon-menu" icon="more" tooltip="Multiselect">
           </ids-menu-button>
-          <ids-popup-menu id="icon-menu" target="#icon-button" trigger-type="click">
+          <ids-popup-menu id="icon-menu" target="icon-button" trigger-type="click">
             <ids-menu-group select="multiple" keep-open="true">
               <ids-menu-item value="1">Option One</ids-menu-item>
               <ids-menu-item value="2">Option Two</ids-menu-item>

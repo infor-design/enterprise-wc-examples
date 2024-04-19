@@ -14,19 +14,35 @@ export const routes: Routes = [
   },
   { 
     path: 'example', 
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows default accordion example',
+    }
   },
   { 
     path: 'disabled', 
-    component: DisabledComponent
+    component: DisabledComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows a disabled accordion example',
+    }
   },
   { 
     path: 'icon', 
-    component: IconComponent
+    component: IconComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows an accordion with icons',
+    }
   },
   { 
     path: 'nested', 
-    component: NestedComponent
+    component: NestedComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows a "tree", accordion nested example',
+    }
   }
 ];
 

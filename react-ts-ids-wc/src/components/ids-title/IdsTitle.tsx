@@ -12,7 +12,7 @@ interface IdsTitleProps {
 
 export const IdsTitle: React.FC<IdsTitleProps> = (props) => {
   return (
-    <IdsGrid paddingY="sm" autoFit>
+    <IdsGrid paddingY="sm" paddingX="md" autoFit>
       <IdsGridCell>
         <ids-text
           font-size={props.fontSize ?? 12}

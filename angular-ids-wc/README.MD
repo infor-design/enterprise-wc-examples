@@ -95,7 +95,7 @@ export class IdsTagComponent implements AfterViewInit {
 
 ## Attributes and settings
 
-Sometimes angular doesnt regognize attributes as `@input` so in those cases you can try binding variables these ways:
+Sometimes angular doesn't recognize attributes as `@input` so in those cases you can try binding variables these ways:
 
 ```html
 <ids-splitter-pane [attr.size]="splitterPosition">
