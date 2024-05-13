@@ -55,7 +55,7 @@ const IdsInput = () => {
           <ids-input
             type="text"
             label="Changing value with state"
-            readonly="true"
+            validate="required"
             value={value}
           ></ids-input>
           <ids-input
