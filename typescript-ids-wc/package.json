@@ -4,7 +4,7 @@
   "devDependencies": {
     "es-dev-server": "^2.1.0",
     "http-server": "^14.1.1",
-    "ids-enterprise-wc": "1.0.0",
+    "ids-enterprise-wc": "1.1.0",
     "typescript": "^5.4.5"
   },
   "scripts": {
