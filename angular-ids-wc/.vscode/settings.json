@@ -1,0 +1,9 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": false,
+  "html.customData": [
+    "./node_modules/ids-enterprise-wc/vscode.html-custom-data.json"
+  ]
+}
