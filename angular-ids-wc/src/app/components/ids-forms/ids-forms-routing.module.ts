@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { IdsFormsComponent } from './ids-forms.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { SubmitButtonComponent } from './demos/submit-button/submit-button.component';
 
 export const routes: Routes = [
   {
@@ -15,6 +16,14 @@ export const routes: Routes = [
     data: {
       type: 'Example',
       description: 'All fields in a form'
+    }
+  },
+  {
+    path: 'submit-button',
+    component: SubmitButtonComponent,
+    data: {
+      type: 'Example',
+      description: 'With a submit button and attached event listener'
     }
   }
 ];
