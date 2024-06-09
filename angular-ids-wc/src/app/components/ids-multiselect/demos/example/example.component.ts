@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChildren, QueryList, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-example-multiselect',
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.css']
 })
-export class ExampleComponent implements OnInit {
+export class ExampleComponent implements AfterViewInit {
+  @ViewChildren('idsMultiselect') multiselects: QueryList<ElementRef>;
 
   coldStates = [
     { id: "ak2", value: "ak", tooltip: "The State of Alaska", label: "Alaska" },
@@ -19,9 +20,27 @@ export class ExampleComponent implements OnInit {
     { id: "tx2", value: "tx", tooltip: "The State of Texas", label: "Texas" },
   ];
 
+  private isInitialized = false;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    this.multiselects.forEach((multiselect: ElementRef) => {
+      const element = multiselect.nativeElement;
+      element.addEventListener('change', this.onChangeEvent.bind(this));
+    });
+
+    setTimeout(() => {
+      this.isInitialized = true;
+    });
   }
 
+  onChangeEvent(e: any): void {
+    if (!this.isInitialized) {
+      return;
+    }
+
+    console.info(`e.target.selectedOptions`, e.target?.selectedOptions);
+    console.info(`Value Changed to :`, e.target.value, e.detail.value);
+  }
 }

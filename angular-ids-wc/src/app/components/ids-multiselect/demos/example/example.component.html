@@ -1,17 +1,14 @@
 <ids-container padding="8" hidden>
   <ids-theme-switcher mode="light"></ids-theme-switcher>
-  
+
   <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Multiselect Dropdowns</ids-text>
   </ids-layout-grid>
 
   <ids-layout-grid auto-fit="true" padding="md">
     <ids-layout-grid-cell>
-      <ids-multiselect id="dropdown-1" tags="true" disabled="true" label="Test Multiselect" max="3" dirty-tracker="true">
-        <ids-list-box class="selected-options">
-          <ids-list-box-option class="multiselect-option" id="nj" value="nj"><ids-checkbox no-margin checked="true" label="New Jersey" class="justify-center"></ids-checkbox></ids-list-box-option>
-        </ids-list-box>
-        <ids-list-box class="options">
+      <ids-multiselect #idsMultiselect id="multiselect-1" tags="true" disabled="true" label="Test Multiselect" max="3" dirty-tracker="true">
+        <ids-list-box>
           <ids-list-box-option class="multiselect-option" id="al" value="al"><ids-checkbox no-margin label="Alabama" class="justify-center"></ids-checkbox></ids-list-box-option>
           <ids-list-box-option class="multiselect-option" id="ak" value="ak"><ids-checkbox no-margin label="Alaska" class="justify-center"></ids-checkbox></ids-list-box-option>
           <ids-list-box-option class="multiselect-option" id="az" value="az"><ids-checkbox no-margin label="Arizona" class="justify-center"></ids-checkbox></ids-list-box-option>
@@ -22,22 +19,20 @@
         </ids-list-box>
       </ids-multiselect>
 
-      <ids-multiselect id="dropdown-2" label="Test Multiselect (max choices 3)" max="3" dirty-tracker="true">
-        <ids-list-box class="selected-options">
-          <ids-list-box-option class="multiselect-option" id="nj2" value="nj" tooltip="The State of New Jersey" selected><ids-checkbox no-margin checked="true" label="New Jersey" class="justify-center"></ids-checkbox></ids-list-box-option>
-        </ids-list-box>
-        <ids-list-box class="options">
+      <ids-multiselect #idsMultiselect id="multiselect-2" label="Test Multiselect (max choices 3)" max="3" dirty-tracker="true">
+        <ids-list-box>
           <ids-list-box-option class="multiselect-option" id="al2" value="al" tooltip="The State of Alabama"><ids-checkbox no-margin label="Alabama" class="justify-center"></ids-checkbox></ids-list-box-option>
           <ids-list-box-option class="multiselect-option" id="ak2" value="ak" tooltip="The State of Alaska"><ids-checkbox no-margin label="Alaska" class="justify-center"></ids-checkbox></ids-list-box-option>
           <ids-list-box-option class="multiselect-option" id="az2" value="az" tooltip="The State of Arizona"><ids-checkbox no-margin label="Arizona" class="justify-center"></ids-checkbox></ids-list-box-option>
           <ids-list-box-option class="multiselect-option" id="ar2" value="ar" tooltip="The State of Arkansas"><ids-checkbox no-margin label="Arkansas" class="justify-center"></ids-checkbox></ids-list-box-option>
           <ids-list-box-option class="multiselect-option" id="ca2" value="ca" tooltip="The State of California"><ids-checkbox no-margin label="California" class="justify-center"></ids-checkbox></ids-list-box-option>
           <ids-list-box-option class="multiselect-option" id="co2" value="co" tooltip="The State of Colorado"><ids-checkbox no-margin label="Colorado" class="justify-center"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option class="multiselect-option" id="nj2" value="nj" tooltip="The State of New Jersey" selected><ids-checkbox no-margin checked="true" label="New Jersey" class="justify-center"></ids-checkbox></ids-list-box-option>
         </ids-list-box>
       </ids-multiselect>
 
-      <ids-multiselect id="dropdown-3" label="Test Multiselect (with icons)" max="3" tags="true">
-        <ids-list-box class="options">
+      <ids-multiselect #idsMultiselect id="multiselect-3" label="Test Multiselect (with icons)" max="3" tags="true">
+        <ids-list-box>
           <ids-list-box-option value="opt1" id="opt1-d5">
             <ids-icon icon="user-profile"></ids-icon>
             <span>Option One</span>
@@ -64,8 +59,8 @@
         </ids-list-box>
       </ids-multiselect>
 
-      <ids-multiselect id="dropdown-4" tags="true" label="Test Multiselect (using ngFor)" max="10" dirty-tracker="true">
-        <ids-list-box class="options">
+      <ids-multiselect #idsMultiselect id="multiselect-4" tags="true" label="Test Multiselect (using ngFor)" max="10" dirty-tracker="true">
+        <ids-list-box>
           <ng-container *ngFor="let option of coldStates.concat(hotStates); index as i">
             <ids-list-box-option
               class="multiselect-option"
