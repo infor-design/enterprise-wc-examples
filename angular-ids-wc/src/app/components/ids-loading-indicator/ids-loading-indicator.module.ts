@@ -5,7 +5,7 @@ import { IdsLoadingIndicatorRoutingModule } from './ids-loading-indicator-routin
 import { IdsLoadingIndicatorComponent } from './ids-loading-indicator.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,6 +13,7 @@ import { DemoListingModule } from '../demo-listing/demo-listing.module';
     ExampleComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     IdsLoadingIndicatorRoutingModule,
     DemoListingModule
