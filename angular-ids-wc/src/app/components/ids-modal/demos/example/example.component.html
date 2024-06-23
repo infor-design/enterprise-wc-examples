@@ -1,8 +1,8 @@
 <ids-container padding="8" hidden>
   <ids-theme-switcher mode="light"></ids-theme-switcher>
-  
+
   <ids-modal #modal id="my-modal" aria-labelledby="my-modal-title">
-    <ids-text slot="title" font-size="24" type="h2" id="my-modal-title">Active IDS Modal</ids-text>
+    <ids-text slot="title" font-size="24" type="h2" id="my-modal-title">{{ 'Active IDS Modal' }}</ids-text>
     <ids-modal-button slot="buttons" id="modal-close-btn" appearance="primary" (click)="handleHide()">
       <span>OK</span>
     </ids-modal-button>
