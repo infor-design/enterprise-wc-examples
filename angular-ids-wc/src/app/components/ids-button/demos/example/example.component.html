@@ -1,6 +1,6 @@
 <ids-container padding="8" hidden>
   <ids-theme-switcher mode="light"></ids-theme-switcher>
-  
+
   <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Buttons</ids-text>
   </ids-layout-grid>
@@ -147,6 +147,35 @@
       <ids-button id="test-icon-end-button-tertiary" icon-align="end" appearance="tertiary">
         <span>Tertiary Button</span>
         <ids-icon icon="settings"></ids-icon>
+      </ids-button>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-text font-size="12" type="h1">Buttons with notification badges</ids-text>
+  </ids-layout-grid>
+  <ids-layout-grid cols="4" gap="md">
+    <ids-layout-grid-cell>
+      <ids-button id="test-icon-only-button-default" icon="settings" badge-color="warning" [attr.badge-position]="badgePosition[0]">
+        <span class="audible">Default Button</span>
+      </ids-button>
+    </ids-layout-grid-cell>
+
+    <ids-layout-grid-cell>
+      <ids-button id="test-icon-only-button-primary" appearance="primary" icon="settings" badge-color="error" [attr.badge-position]="badgePosition[1]">
+        <span class="audible">Primary Button</span>
+      </ids-button>
+    </ids-layout-grid-cell>
+
+    <ids-layout-grid-cell>
+      <ids-button id="test-icon-only-button-secondary" appearance="secondary" icon="settings" badge-color="neutral" [attr.badge-position]="badgePosition[2]">
+        <span class="audible">Secondary Button</span>
+      </ids-button>
+    </ids-layout-grid-cell>
+
+    <ids-layout-grid-cell>
+      <ids-button id="test-icon-only-button-tertiary" appearance="tertiary" icon="settings" badge-color="success" [attr.badge-position]="badgePosition[3]">
+        <span class="audible">Tertiary Button</span>
       </ids-button>
     </ids-layout-grid-cell>
   </ids-layout-grid>
