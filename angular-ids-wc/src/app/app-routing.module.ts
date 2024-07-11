@@ -110,6 +110,15 @@ export const routes: Routes = [
       description: 'Util for masking input'
     },
   },
+  {
+    path: 'ids-splitter',
+    loadChildren: () => import('./components/ids-splitter/ids-splitter.module').then(m => m.IdsSplitterModule),
+    data: {
+      title: 'Splitter',
+      category: 'Layouts',
+      description: 'Split Content Panes'
+    }
+  },
   { 
     path: 'ids-swaplist', 
     loadChildren: () => import('./components/ids-swaplist/ids-swaplist.module').then(m => m.IdsSwaplistModule),
