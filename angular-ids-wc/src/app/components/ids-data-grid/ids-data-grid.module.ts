@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { IdsDataGridRoutingModule } from './ids-data-grid-routing.module';
 import { IdsDataGridComponent } from './ids-data-grid.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { UserSettingsComponent } from './demos/user-settings/user-settings.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 @NgModule({
   declarations: [
     IdsDataGridComponent,
-    ExampleComponent
+    ExampleComponent,
+    UserSettingsComponent
   ],
   imports: [
     CommonModule,

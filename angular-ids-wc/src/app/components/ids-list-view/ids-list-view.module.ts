@@ -6,9 +6,9 @@ import { IdsListViewComponent } from './ids-list-view.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SelectableSingleComponent } from './demos/selectable-single/selectable-single.component';
 import { SelectableMultipleComponent } from './demos/selectable-multiple/selectable-multiple.component';
+import { ListViewItemsComponent } from './demos/list-view-items/list-view-items.component';
 import { TooltipOverflowEllipsesComponent } from './demos/tooltip-overflow-ellipses/tooltip-overflow-ellipses.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
-
 
 @NgModule({
   declarations: [
@@ -16,6 +16,7 @@ import { DemoListingModule } from '../demo-listing/demo-listing.module';
     ExampleComponent,
     SelectableSingleComponent,
     SelectableMultipleComponent,
+    ListViewItemsComponent,
     TooltipOverflowEllipsesComponent
   ],
   imports: [

@@ -7,6 +7,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { DisabledComponent } from './demos/disabled/disabled.component';
 import { IconComponent } from './demos/icon/icon.component';
 import { NestedComponent } from './demos/nested/nested.component';
+import { NestedSelectedEventComponent } from './demos/nested-selected-event/nested-selected-event.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
 
 
@@ -17,6 +18,7 @@ import { DemoListingModule } from '../demo-listing/demo-listing.module';
     DisabledComponent,
     IconComponent,
     NestedComponent,
+    NestedSelectedEventComponent
   ],
   imports: [
     CommonModule,
