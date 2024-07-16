@@ -1,11 +1,11 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'app-list-view-items',
-  templateUrl: './list-view-items.component.html',
-  styleUrls: ['./list-view-items.component.css']
+  selector: 'app-selected-event',
+  templateUrl: './selected-event.component.html',
+  styleUrls: ['./selected-event.component.css']
 })
-export class ListViewItemsComponent implements AfterViewInit {
+export class SelectedEventComponent implements AfterViewInit {
   itemDisable = null;
   items = [
     { itemType: 'type1', id: 1, comments: 'One' },
@@ -33,7 +33,7 @@ export class ListViewItemsComponent implements AfterViewInit {
   ngAfterViewInit(): void {
   }
 
-  onRowClick(item) {
-    this.itemDisable = item.itemType;
+  selectedEvent($event: any) {
+    console.log('Row selected event is logged', $event);
   }
 }
