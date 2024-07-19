@@ -6,7 +6,8 @@ import { ExampleComponent } from './demos/example/example.component';
 import { SelectableSingleComponent } from './demos/selectable-single/selectable-single.component';
 import { SelectableMultipleComponent } from './demos/selectable-multiple/selectable-multiple.component';
 import { TooltipOverflowEllipsesComponent } from './demos/tooltip-overflow-ellipses/tooltip-overflow-ellipses.component';
-import { ListViewItemsComponent } from './demos/list-view-items/list-view-items.component';
+import { DynamicDisabledItemsComponent } from './demos/dynamic-disabled-items/dynamic-disabled-items.component';
+import { SelectedEventComponent } from './demos/selected-event/selected-event.component';
 
 export const routes: Routes = [
   {
@@ -30,8 +31,12 @@ export const routes: Routes = [
     component: TooltipOverflowEllipsesComponent
   },
   {
-    path: 'list-view-items',
-    component: ListViewItemsComponent
+    path: 'dynamic-disabled-items',
+    component: DynamicDisabledItemsComponent
+  },
+  {
+    path: 'selected-event',
+    component: SelectedEventComponent
   }
 ];
 
