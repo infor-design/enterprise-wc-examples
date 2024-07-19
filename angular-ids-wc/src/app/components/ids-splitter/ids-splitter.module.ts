@@ -5,12 +5,14 @@ import { DemoListingModule } from './../demo-listing/demo-listing.module';
 import { IdsSplitterRoutingModule } from './ids-splitter-routing.module';
 import { IdsSplitterComponent } from './ids-splitter.component';
 import { InitIssueComponent } from './demos/init-issue/init-issue.component';
+import { ResponsiveSplitterComponent } from './demos/responsive-splitter/responsive-splitter.component';
 
 
 @NgModule({
   declarations: [
     IdsSplitterComponent,
-    InitIssueComponent
+    InitIssueComponent,
+    ResponsiveSplitterComponent
   ],
   imports: [
     CommonModule,

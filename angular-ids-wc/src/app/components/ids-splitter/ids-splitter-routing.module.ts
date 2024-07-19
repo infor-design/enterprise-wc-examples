@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InitIssueComponent } from './demos/init-issue/init-issue.component';
 import { IdsSplitterComponent } from './ids-splitter.component';
+import { ResponsiveSplitterComponent } from './demos/responsive-splitter/responsive-splitter.component';
 
 export const routes: Routes = [
   {
@@ -11,6 +12,10 @@ export const routes: Routes = [
   {
     path: 'init-issue',
     component: InitIssueComponent
+  },
+  {
+    path: 'responsive-splitter',
+    component: ResponsiveSplitterComponent
   }
 ];
 
