@@ -7,11 +7,11 @@ ids-container::part(container) {
   padding: 0;
 }
 
-ids-splitter-pane:first-child {
+ids-splitter-pane:not([collapsed]):first-child {
   padding: 8px;
 }
 
-ids-splitter-pane:last-child {
+ids-splitter-pane:not([collapsed]):last-child {
   white-space: normal;
   padding: 8px;
 }

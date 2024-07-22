@@ -11,11 +11,19 @@ export const routes: Routes = [
   },
   {
     path: 'init-issue',
-    component: InitIssueComponent
+    component: InitIssueComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows Init Issues',
+    }
   },
   {
     path: 'responsive-splitter',
-    component: ResponsiveSplitterComponent
+    component: ResponsiveSplitterComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows a responsive splitter',
+    }
   }
 ];
 
