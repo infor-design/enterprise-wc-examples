@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { DataService } from 'src/app/shared/mock/data.service';
 @Component({
   selector: 'app-example-lookup',
@@ -65,5 +65,14 @@ export class ExampleComponent implements AfterViewInit {
       .subscribe(res => {
         this.lookup1.nativeElement.data = res;
       });    
+  }
+
+  onSelectedStaticValueChanged(e) {
+    console.log('target normal', e.target.value);
+  }
+
+  onSelectedValueChanged(e) {
+    console.log('target input ', e.target.value);
+
   }
 }
