@@ -1,0 +1,1 @@
+{"version":3,"file":"resize-observer-mock.js","sourceRoot":"","sources":["../../../../test/helpers/resize-observer-mock.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,MAAM,cAAc;IAClB,OAAO;QACL,aAAa;IACf,CAAC;IAED,SAAS;QACP,aAAa;IACf,CAAC;IAED,UAAU;QACR,aAAa;IACf,CAAC;CACF;AAED,MAAM,CAAC,cAAc,GAAG,cAAc,CAAC;AACvC,MAAM,CAAC,cAAc,GAAG,cAAc,CAAC;AAEvC,eAAe,cAAc,CAAC"}

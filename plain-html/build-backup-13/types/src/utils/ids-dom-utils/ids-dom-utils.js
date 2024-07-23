@@ -1,0 +1,231 @@
+/**
+ * Returns the closest Shadow Root, if the provided node is contained by one.
+ * @param {HTMLElement} node the node to check
+ * @returns {ShadowRoot|undefined} the node.
+ */
+export function getClosestShadow(node) {
+    let parent = (node && node.parentNode);
+    while (parent) {
+        if (parent.toString() === '[object ShadowRoot]') {
+            return parent;
+        }
+        parent = parent.parentNode;
+    }
+    return undefined;
+}
+/**
+ * Used specifically to detect the closest Shadow Root container OR `document`.
+ * @param {HTMLElement} node the node to check
+ * @returns {Node} the parent node
+ */
+export function getClosestContainerNode(node) {
+    return getClosestShadow(node) || document;
+}
+/**
+ * Returns the closest Root Node parent of a provided element.  If the provided element is inside
+ * a Shadow Root, that Shadow Root's host's parentNode is provided. `document` is used as a
+ * fallback. This method allows for `querySelector()` in some nested Shadow Roots to work properly
+ * @param {HTMLElement} node the node to check
+ * @returns {Node} the parent node.
+ */
+export function getClosestRootNode(node) {
+    return getClosestShadow(node)?.host?.parentNode || document;
+}
+/**
+ * Traverses Shadow DOM (into Light DOM, if necessary) to find the closest reference to a
+ * parent node matching the provided selector.
+ * @param {HTMLElement} node the node to check
+ * @param {string} selector containing a CSS selector to be used for matching
+ * @returns {Node|undefined} the node if found, otherwise undefined
+ */
+export function getClosest(node, selector) {
+    let parent = (node && node.parentNode);
+    while (parent) {
+        if (parent.toString() === '[object ShadowRoot]') {
+            parent = parent.host;
+        }
+        if (parent.toString() === '[object HTMLDocument]') {
+            return undefined;
+        }
+        if (typeof parent.matches === 'function' && parent.matches(selector)) {
+            return parent;
+        }
+        parent = parent.parentNode;
+    }
+    return undefined;
+}
+/**
+ * Traverses thru Shadow DOM if necessary to find parent node until matching the provided selector or until body.
+ * @param {HTMLElement} node the node to check
+ * @param {string|undefined} selector containing a CSS selector to be used for matching
+ * @returns {Array<HTMLElement>} the list of parent elements
+ */
+export function parents(node, selector = 'body') {
+    const parentsList = [];
+    for (let parent = node?.parentNode; parent; parent = parent.toString() === '[object ShadowRoot]' ? parent.host : parent?.parentNode) {
+        parentsList.push(parent);
+        if (parent.matches?.(selector))
+            break;
+    }
+    return parentsList;
+}
+/**
+ * Traverses down until matching the provided selector is found.
+ * @param {HTMLElement} node the node to check
+ * @param {string|undefined} selector containing a CSS selector to be used
+ * @returns {Array<HTMLElement>} the list of parent elements
+ */
+export function nextUntil(node, selector) {
+    const siblings = [];
+    node = node.nextElementSibling;
+    while (node) {
+        if (node.matches(selector))
+            break;
+        siblings.push(node);
+        node = node.nextElementSibling;
+    }
+    return siblings;
+}
+/**
+ * Traverses up until matching selector is found (like jquery next)
+ * @param {HTMLElement} node the node to start
+ * @param {string|undefined} selector containing a CSS selector to be used
+ * @returns {HTMLElement} the element
+ */
+export function next(node, selector) {
+    node = node.nextElementSibling;
+    while (node) {
+        if (node.matches(selector))
+            return node;
+        node = node.nextElementSibling;
+    }
+    return node;
+}
+/**
+ * Traverses down until matching selector is found (like jquery prev)
+ * @param {HTMLElement} node the node to start
+ * @param {string|undefined} selector containing a CSS selector to be used
+ * @returns {HTMLElement} the element
+ */
+export function previous(node, selector) {
+    node = node.previousElementSibling;
+    while (node) {
+        if (node.matches(selector))
+            return node;
+        node = node.previousElementSibling;
+    }
+    return node;
+}
+/**
+ * Changes a CSS property with a transition,
+ * @param {HTMLElement} el the element to act on
+ * @param {string} property the CSS property with an attached transition to manipulate
+ * @param {any} value the target CSS value
+ * @returns {Promise} fulfulled when the CSS transition completes
+ */
+export function transitionToPromise(el, property, value) {
+    if (!el)
+        return Promise.resolve();
+    return new Promise((resolve) => {
+        el.style[property] = value;
+        const transitionEnded = (e) => {
+            if (e.propertyName !== property)
+                resolve(true);
+            el.removeEventListener('transitionend', transitionEnded);
+            resolve(true);
+        };
+        el.addEventListener('transitionend', transitionEnded);
+    });
+}
+/**
+ * Similar to `transitionToPromise`, but simply waits for the specified property's `transitionend`
+ * event to complete (allows the user to change the property outside the promise)
+ * @param {HTMLElement} el the element to act on
+ * @param {string} property the CSS property used to qualify the correct transitionend event
+ * @returns {Promise} fulfulled when the CSS transition completes
+ */
+export function waitForTransitionEnd(el, property) {
+    return new Promise((resolve) => {
+        const transitionEnded = (e) => {
+            if (e.propertyName !== property)
+                resolve(true);
+            el.removeEventListener('transitionend', transitionEnded);
+            resolve(true);
+        };
+        el.addEventListener('transitionend', transitionEnded);
+    });
+}
+/**
+ * Similar to `transitionToPromise`, but simply waits for the specified property's `animationend` event to complete
+ * @param {HTMLElement} el the element to act on
+ * @param {string} animationName the CSS animation "keyframes" definition used to qualify the correct `animationend` event
+ * @returns {Promise<boolean>} fulfulled when the CSS animation completes
+ */
+export function waitForAnimationEnd(el, animationName) {
+    return new Promise((resolve) => {
+        if (typeof AnimationEvent !== 'function')
+            resolve(true);
+        const animationEnded = (e) => {
+            if (e.animationName !== animationName)
+                return; // Don't match other applied animations
+            el.removeEventListener('animationend', animationEnded);
+            resolve(true);
+        };
+        el.addEventListener('animationend', animationEnded);
+    });
+}
+/**
+ * Converts a DOMRect to a plain object, making it's properties editable.
+ * @param {DOMRect} rect a readonly DOMRect measurement.
+ * @returns {object} with all the same properties, but editable
+ */
+export function getEditableRect(rect) {
+    const { bottom, left, right, top, height, width, x, y } = rect;
+    return {
+        bottom, left, right, top, height, width, x, y
+    };
+}
+/**
+ * Determines if the passed element is overflowing its bounds
+ * @param {HTMLElement} el The element to check
+ * @returns {boolean} true if overflowing, false otherwise
+ */
+export function checkOverflow(el) {
+    if (!el)
+        return false;
+    const curOverflow = el.style.overflow;
+    let changedOverflow = false;
+    if (!curOverflow || curOverflow === 'visible') {
+        el.style.overflow = 'hidden';
+        changedOverflow = true;
+    }
+    const isOverflowing = el.clientWidth < el.scrollWidth || el.clientHeight < el.scrollHeight;
+    if (changedOverflow) {
+        el.style.overflow = curOverflow;
+    }
+    return isOverflowing;
+}
+/**
+ * Check if given element has given css class
+ * @param {HTMLElement} el the element to act on
+ * @param {string} className The class name
+ * @returns {boolean|undefined} true, if element has given css class
+ */
+export function hasClass(el, className) {
+    return el?.classList.contains(className);
+}
+/**
+ * Quickly listens for and dispatches a `mousemove` event on the document, which
+ * then gets the current coordinates of the mouse and determines which Light DOM element is beneath them.
+ * @returns {Element | null} the element which the mouse is currently hovering
+ */
+export function getElementAtMouseLocation() {
+    let mousePos = [0, 0];
+    const getCurrentCoords = (e) => {
+        mousePos = [e.clientX, e.clientY];
+        document.removeEventListener('mousemove', getCurrentCoords);
+    };
+    document.addEventListener('mousemove', getCurrentCoords);
+    return document.elementFromPoint(...mousePos);
+}
+//# sourceMappingURL=ids-dom-utils.js.map

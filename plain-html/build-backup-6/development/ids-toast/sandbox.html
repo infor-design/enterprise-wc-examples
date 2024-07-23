@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IDS Toast Component</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;amp;display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="
+        script-src 'self' https://unpkg.com/ 'unsafe-eval';
+        style-src 'self' https://fonts.googleapis.com 'nonce-0a59a005';
+        font-src 'self' data: https://fonts.gstatic.com;
+      "><link rel="icon" href="/favicon.ico"><script type="module" src="/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-ebf8ca/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-ebf8ca.js"></script><script type="module" src="/src_core_ids-attributes_ts-src_core_ids-decorators_ts-src_core_ids-element_ts/src_core_ids-attributes_ts-src_core_ids-decorators_ts-src_core_ids-element_ts.js"></script><script type="module" src="/src_mixins_ids-events-mixin_ids-events-mixin_ts/src_mixins_ids-events-mixin_ids-events-mixin_ts.js"></script><script type="module" src="/src_components_ids-locale_ids-locale_ts/src_components_ids-locale_ids-locale_ts.js"></script><script type="module" src="/ids-container/ids-container.js"></script><script type="module" src="/vendors-node_modules_ids-identity_dist_theme-new_icons_empty_path-data_json/vendors-node_modules_ids-identity_dist_theme-new_icons_empty_path-data_json.js"></script><script type="module" src="/vendors-node_modules_ids-identity_dist_theme-new_icons_standard_path-data_json/vendors-node_modules_ids-identity_dist_theme-new_icons_standard_path-data_json.js"></script><script type="module" src="/src_mixins_ids-locale-mixin_ids-locale-mixin_ts-src_utils_ids-dom-utils_ids-dom-utils_ts-src_-0d5e42/src_mixins_ids-locale-mixin_ids-locale-mixin_ts-src_utils_ids-dom-utils_ids-dom-utils_ts-src_-0d5e42.js"></script><script type="module" src="/src_components_ids-icon_ids-icon_ts/src_components_ids-icon_ids-icon_ts.js"></script><script type="module" src="/ids-icon/ids-icon.js"></script><script type="module" src="/src_components_ids-popup_ids-popup_scss/src_components_ids-popup_ids-popup_scss.js"></script><script type="module" src="/src_components_ids-popup_ids-popup_ts/src_components_ids-popup_ids-popup_ts.js"></script><script type="module" src="/src_mixins_ids-tooltip-mixin_ids-tooltip-mixin_ts/src_mixins_ids-tooltip-mixin_ids-tooltip-mixin_ts.js"></script><script type="module" src="/src_components_ids-button_ids-button_scss/src_components_ids-button_ids-button_scss.js"></script><script type="module" src="/src_components_ids-text_ids-text_ts/src_components_ids-text_ids-text_ts.js"></script><script type="module" src="/src_components_ids-loading-indicator_ids-loading-indicator_ts/src_components_ids-loading-indicator_ids-loading-indicator_ts.js"></script><script type="module" src="/src_components_ids-button_ids-button_ts/src_components_ids-button_ids-button_ts.js"></script><script type="module" src="/src_mixins_ids-dirty-tracker-mixin_ids-dirty-tracker-mixin_ts-src_mixins_ids-validation-mixin-f0445e/src_mixins_ids-dirty-tracker-mixin_ids-dirty-tracker-mixin_ts-src_mixins_ids-validation-mixin-f0445e.js"></script><script type="module" src="/src_components_ids-checkbox_ids-checkbox_scss/src_components_ids-checkbox_ids-checkbox_scss.js"></script><script type="module" src="/src_components_ids-checkbox_ids-checkbox_ts/src_components_ids-checkbox_ids-checkbox_ts.js"></script><script type="module" src="/src_components_ids-card_ids-card_ts/src_components_ids-card_ids-card_ts.js"></script><script type="module" src="/src_components_ids-layout-grid_ids-layout-grid_scss/src_components_ids-layout-grid_ids-layout-grid_scss.js"></script><script type="module" src="/src_components_ids-layout-grid_ids-layout-grid_ts/src_components_ids-layout-grid_ids-layout-grid_ts.js"></script><script type="module" src="/ids-layout-grid/ids-layout-grid.js"></script><script type="module" src="/ids-text/ids-text.js"></script><script type="module" src="/src_core_ids-data-source_ts/src_core_ids-data-source_ts.js"></script><script type="module" src="/src_mixins_ids-attachment-mixin_ids-attachment-mixin_ts-src_mixins_ids-popup-interactions-mix-9b7040/src_mixins_ids-attachment-mixin_ids-attachment-mixin_ts-src_mixins_ids-popup-interactions-mix-9b7040.js"></script><script type="module" src="/src_components_ids-menu_ids-menu-group_scss-src_components_ids-menu_ids-menu-header_scss-src_-787682/src_components_ids-menu_ids-menu-group_scss-src_components_ids-menu_ids-menu-header_scss-src_-787682.js"></script><script type="module" src="/src_components_ids-menu_ids-menu-group_ts-src_components_ids-menu_ids-menu-item_ts-src_compon-420212/src_components_ids-menu_ids-menu-group_ts-src_components_ids-menu_ids-menu-item_ts-src_compon-420212.js"></script><script type="module" src="/src_components_ids-menu_ids-menu_ts/src_components_ids-menu_ids-menu_ts.js"></script><script type="module" src="/src_components_ids-popup-menu_ids-popup-menu_ts/src_components_ids-popup-menu_ids-popup-menu_ts.js"></script><script type="module" src="/src_components_ids-tag_ids-tag_ts/src_components_ids-tag_ids-tag_ts.js"></script><script type="module" src="/ids-theme-switcher/ids-theme-switcher.js"></script><script type="module" src="/src_components_ids-trigger-field_ids-trigger-button_scss/src_components_ids-trigger-field_ids-trigger-button_scss.js"></script><script type="module" src="/src_components_ids-hyperlink_ids-hyperlink_ts/src_components_ids-hyperlink_ids-hyperlink_ts.js"></script><script type="module" src="/src_components_ids-draggable_ids-draggable_ts/src_components_ids-draggable_ids-draggable_ts.js"></script><script type="module" src="/src_components_ids-toast_ids-toast_ts/src_components_ids-toast_ids-toast_ts.js"></script><script type="module" src="/ids-toast/ids-toast.js"></script><script type="module" src="/src_components_ids-radio_ids-radio-group_scss-src_components_ids-radio_ids-radio_scss/src_components_ids-radio_ids-radio-group_scss-src_components_ids-radio_ids-radio_scss.js"></script><script type="module" src="/src_components_ids-radio_ids-radio_ts/src_components_ids-radio_ids-radio_ts.js"></script><script type="module" src="/ids-toast-sandbox/ids-toast-sandbox.js"></script></head>
+<body>
+  <ids-container role="main" padding="8" hidden>
+    <ids-theme-switcher mode="light"></ids-theme-switcher>
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">Toast Sandbox</ids-text>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-button id="btn-toast-variant" appearance="secondary">
+          <span>Show Toast (choose settings below)</span>
+        </ids-button>
+        <br /><br />
+
+        <ids-checkbox
+          id="cb-toast-timeout"
+          label="Timeout (default 6 seconds): Set the amount of time (2 seconds), the toast should be present on-screen."
+        ></ids-checkbox>
+
+        <ids-checkbox
+          id="cb-toast-allow-link"
+          label="Allow Link: Set to put links in the toast message"
+        ></ids-checkbox>
+
+        <ids-checkbox
+          id="cb-toast-draggable"
+          label="Draggable: Set user to allows drag/drop the toast container"
+        ></ids-checkbox>
+
+        <ids-checkbox
+          id="cb-toast-progress-bar"
+          label="Progress Bar: Show the progress bar in toast message"
+           checked="true"
+        ></ids-checkbox>
+
+        <ids-checkbox
+          id="cb-toast-close-button-label"
+          label="Close Button Label: Custom text (Click here to close) for close button label in the toast message"
+        ></ids-checkbox>
+
+        <ids-checkbox
+          id="cb-toast-audible"
+          label="Audible Only: Let toast message to be invisible on the screen"
+        ></ids-checkbox>
+
+        <ids-checkbox
+          id="cb-toast-destroy-on-complete"
+          label="Destroy After Complete: Set to not destroy after complete all the toast messages"
+          checked="true"
+        ></ids-checkbox>
+
+        <ids-radio-group id="radio-toast-position" label="Position: Set position of the toast container in specific place">
+          <ids-radio value="top-start" label="Top Start"></ids-radio>
+          <ids-radio value="top-end" label="Top End" checked="true"></ids-radio>
+          <ids-radio value="bottom-start" label="Bottom Start"></ids-radio>
+          <ids-radio value="bottom-end" label="Bottom End"></ids-radio>
+        </ids-radio-group>
+
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">Toast - Save Position</ids-text>
+        <br/>
+        <ids-text>Save Position</ids-text>
+        <ids-text>1. Open Toast by clicking any `Show Toast` button below</ids-text>
+        <ids-text>2. Drag the Toast to move around and leave at different position then origin</ids-text>
+        <ids-text>3. Wait for timer timeout or click close (x) button to close the Toast</ids-text>
+        <ids-text>4. At this point it shoud be saved the current position to local storage</ids-text>
+        <ids-text>5. Refresh or close/open the page, and open the same Toast</ids-text>
+        <ids-text>6. It should open with previously saved position</ids-text>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+            <ids-button id="btn-toast-save-position-1" appearance="secondary">
+              <span>Show Toast(1)</span>
+            </ids-button>
+            <ids-button id="btn-toast-clear-position-1" appearance="secondary">
+              <span>Clear position for saved Toast(1)</span>
+            </ids-button>
+            <br/><br/>
+            <ids-button id="btn-toast-save-position-2" appearance="secondary">
+              <span>Show Toast(2)</span>
+            </ids-button>
+            <ids-button id="btn-toast-clear-position-2" appearance="secondary">
+              <span>Clear position for saved Toast(2)</span>
+            </ids-button>
+            <br /><br />
+            <ids-button id="btn-toast-clear-position-all" appearance="secondary">
+              <span>Clear all</span>
+            </ids-button>
+            <ids-text class="inline">Clear all toast related saved position from local storage</ids-text>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <br /><br />
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12" type="h1">Toast show by markup</ids-text>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-button id="btn-toast-markup" appearance="secondary">
+          <span>Toast - By markup</span>
+          <span></span>
+        </ids-button>
+        <ids-text class="inline">Toast message setup by markup</ids-text>
+        <ids-toast id="toast-markup" destroy-on-complete="false">
+          <span slot="title">Application Offline</span>
+          <span slot="message">This is a Toast message.</span>
+        </ids-toast>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+  </ids-container>
+</body>
+</html>

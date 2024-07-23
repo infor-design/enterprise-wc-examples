@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IDS Tree Component</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;amp;display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/ids-enterprise@4.60.0/dist/js/sohoxi.js"></script>
+  <link href="https://unpkg.com/ids-enterprise@4.60.0/dist/css/theme-new-light.css" rel="stylesheet"/>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><script type="module" src="/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-ebf8ca/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-ebf8ca.js"></script><script type="module" src="/src_core_ids-attributes_ts-src_core_ids-decorators_ts-src_core_ids-element_ts/src_core_ids-attributes_ts-src_core_ids-decorators_ts-src_core_ids-element_ts.js"></script><script type="module" src="/src_mixins_ids-events-mixin_ids-events-mixin_ts/src_mixins_ids-events-mixin_ids-events-mixin_ts.js"></script><script type="module" src="/src_components_ids-locale_ids-locale_ts/src_components_ids-locale_ids-locale_ts.js"></script><script type="module" src="/ids-container/ids-container.js"></script><script type="module" src="/vendors-node_modules_ids-identity_dist_theme-new_icons_empty_path-data_json/vendors-node_modules_ids-identity_dist_theme-new_icons_empty_path-data_json.js"></script><script type="module" src="/vendors-node_modules_ids-identity_dist_theme-new_icons_standard_path-data_json/vendors-node_modules_ids-identity_dist_theme-new_icons_standard_path-data_json.js"></script><script type="module" src="/src_mixins_ids-locale-mixin_ids-locale-mixin_ts-src_utils_ids-dom-utils_ids-dom-utils_ts-src_-0d5e42/src_mixins_ids-locale-mixin_ids-locale-mixin_ts-src_utils_ids-dom-utils_ids-dom-utils_ts-src_-0d5e42.js"></script><script type="module" src="/src_components_ids-icon_ids-icon_ts/src_components_ids-icon_ids-icon_ts.js"></script><script type="module" src="/ids-icon/ids-icon.js"></script><script type="module" src="/src_components_ids-popup_ids-popup_scss/src_components_ids-popup_ids-popup_scss.js"></script><script type="module" src="/src_components_ids-popup_ids-popup_ts/src_components_ids-popup_ids-popup_ts.js"></script><script type="module" src="/src_mixins_ids-tooltip-mixin_ids-tooltip-mixin_ts/src_mixins_ids-tooltip-mixin_ids-tooltip-mixin_ts.js"></script><script type="module" src="/src_components_ids-button_ids-button_scss/src_components_ids-button_ids-button_scss.js"></script><script type="module" src="/src_components_ids-text_ids-text_ts/src_components_ids-text_ids-text_ts.js"></script><script type="module" src="/src_components_ids-loading-indicator_ids-loading-indicator_ts/src_components_ids-loading-indicator_ids-loading-indicator_ts.js"></script><script type="module" src="/src_components_ids-button_ids-button_ts/src_components_ids-button_ids-button_ts.js"></script><script type="module" src="/src_mixins_ids-dirty-tracker-mixin_ids-dirty-tracker-mixin_ts-src_mixins_ids-validation-mixin-f0445e/src_mixins_ids-dirty-tracker-mixin_ids-dirty-tracker-mixin_ts-src_mixins_ids-validation-mixin-f0445e.js"></script><script type="module" src="/src_components_ids-checkbox_ids-checkbox_scss/src_components_ids-checkbox_ids-checkbox_scss.js"></script><script type="module" src="/src_components_ids-checkbox_ids-checkbox_ts/src_components_ids-checkbox_ids-checkbox_ts.js"></script><script type="module" src="/src_components_ids-card_ids-card_ts/src_components_ids-card_ids-card_ts.js"></script><script type="module" src="/src_components_ids-layout-grid_ids-layout-grid_scss/src_components_ids-layout-grid_ids-layout-grid_scss.js"></script><script type="module" src="/src_components_ids-layout-grid_ids-layout-grid_ts/src_components_ids-layout-grid_ids-layout-grid_ts.js"></script><script type="module" src="/ids-layout-grid/ids-layout-grid.js"></script><script type="module" src="/ids-text/ids-text.js"></script><script type="module" src="/src_core_ids-data-source_ts/src_core_ids-data-source_ts.js"></script><script type="module" src="/src_mixins_ids-attachment-mixin_ids-attachment-mixin_ts-src_mixins_ids-popup-interactions-mix-9b7040/src_mixins_ids-attachment-mixin_ids-attachment-mixin_ts-src_mixins_ids-popup-interactions-mix-9b7040.js"></script><script type="module" src="/src_components_ids-menu_ids-menu-group_scss-src_components_ids-menu_ids-menu-header_scss-src_-787682/src_components_ids-menu_ids-menu-group_scss-src_components_ids-menu_ids-menu-header_scss-src_-787682.js"></script><script type="module" src="/src_components_ids-menu_ids-menu-group_ts-src_components_ids-menu_ids-menu-item_ts-src_compon-420212/src_components_ids-menu_ids-menu-group_ts-src_components_ids-menu_ids-menu-item_ts-src_compon-420212.js"></script><script type="module" src="/src_components_ids-menu_ids-menu_ts/src_components_ids-menu_ids-menu_ts.js"></script><script type="module" src="/src_components_ids-popup-menu_ids-popup-menu_ts/src_components_ids-popup-menu_ids-popup-menu_ts.js"></script><script type="module" src="/src_components_ids-tag_ids-tag_ts/src_components_ids-tag_ids-tag_ts.js"></script><script type="module" src="/ids-theme-switcher/ids-theme-switcher.js"></script><script type="module" src="/src_components_ids-tree_ids-tree-node_scss-src_components_ids-tree_ids-tree_scss/src_components_ids-tree_ids-tree-node_scss-src_components_ids-tree_ids-tree_scss.js"></script><script type="module" src="/src_components_ids-tree_ids-tree_ts-src_mixins_ids-color-variant-mixin_ids-color-variant-mixi-035ec1/src_components_ids-tree_ids-tree_ts-src_mixins_ids-color-variant-mixin_ids-color-variant-mixi-035ec1.js"></script><script type="module" src="/ids-tree/ids-tree.js"></script><script type="module" src="/ids-tree-side-by-side/ids-tree-side-by-side.js"></script></head>
+<body>
+  <ids-container role="main" padding="8" hidden>
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12" type="h1">Web Component Tree</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid cols="3" padding-x="md">
+      <ids-layout-grid-cell>
+
+        <ids-tree id="tree-wc" label="Tree Web Component">
+          <ids-tree-node id="home-wc">Home</ids-tree-node>
+          <ids-tree-node id="about-us-wc">About Us</ids-tree-node>
+          <ids-tree-node id="public-folders-wc" label="Public Folders">
+            <ids-tree-node id="leadership-wc" label="Leadership">
+              <ids-tree-node id="leadership-2-wc">Leadership 2nd</ids-tree-node>
+              <ids-tree-node id="history-wc" disabled="true">History</ids-tree-node>
+              <ids-tree-node id="careers-last-wc">Careers last</ids-tree-node>
+            </ids-tree-node>
+            <ids-tree-node id="history-2-wc">History 2nd</ids-tree-node>
+            <ids-tree-node id="careers-wc">Careers</ids-tree-node>
+          </ids-tree-node>
+          <ids-tree-node id="icons-wc" label="Icons" expanded="false">
+            <ids-tree-node id="audio-wc" icon="tree-audio">Audio</ids-tree-node>
+            <ids-tree-node id="avi-wc" icon="tree-avi">Avi</ids-tree-node>
+          </ids-tree-node>
+          <ids-tree-node id="blog-wc">Blog</ids-tree-node>
+          <ids-tree-node id="contact-wc">Contact</ids-tree-node>
+        </ids-tree>
+
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <!--
+      Begin 4.x
+    -->
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12" type="h1">4.x Tree</ids-text>
+    </ids-layout-grid>
+    <div class="svg hidden">
+      <div class="svg-icons">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-icons">
+          <symbol id="icon-closed-folder" viewBox="0 0 18 18">
+            <path d="M.5 4.5h11.214M.5 16.5h11.77c2.888 0 5.23-2.442 5.23-5.454V4.5h-5.885l-5.884-3H.5v15z" stroke="currentColor" vector-effect="non-scaling-stroke"></path>
+          </symbol>
+          <symbol id="icon-open-folder" viewBox="0 0 18 18">
+            <g clip-path="url(#open-folder-clip0)">
+              <path d="M14.5 6.077V3.5H9l-3.27-2H.5v14m0 0h6.538M.5 15.5l3-9h14l-1.531 5.591c-.642 2.245-2.694 3.409-5.03 3.409H.5z" stroke="currentColor" vector-effect="non-scaling-stroke"></path>
+            </g>
+          </symbol>
+          <symbol id="icon-tree-node" viewBox="0 0 18 18">
+            <path clip-rule="evenodd" d="M1.5.5h14v11.77c0 2.888-2.28 5.23-5.09 5.23H1.5V.5z" fill-rule="evenodd" stroke="currentColor" vector-effect="non-scaling-stroke"></path>
+          </symbol>
+          <symbol id="icon-tree-audio" viewBox="0 0 18 18">
+            <path clip-rule="evenodd" d="M8.5 12.5h-6v-7h6l7-4.5v16l-7-4.5z" fill-rule="evenodd" stroke="currentColor" vector-effect="non-scaling-stroke"></path>
+          </symbol>
+          <symbol id="icon-tree-avi" viewBox="0 0 18 18">
+            <path d="M0 17.5h18M.5 6V.5h11.714c2.84 0 5.286 2.303 5.286 5.143V6m.5 8.5h-5m0-6h5m-2.5 0v6M6.5 8v5.5L9 15l2.5-1.5V8m-7 7V9.5L2.5 8l-2 1.5V15m0-2.5h4" stroke="currentColor" vector-effect="non-scaling-stroke"></path>
+          </symbol>
+        </svg>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns">
+
+        <ul id="tree-4x" role="tree" aria-label="Tree (4.x)" class="tree">
+          <li>
+            <a id="home-4x" href="#">Home</a>
+          </li>
+          <li><a id="about-us-4x" href="#">About Us</a></li>
+          <li class="is-open mycustom">
+            <a id="public-folders-4x" href="#">Public Folders</a>
+            <ul class="is-open root">
+              <li class="is-open">
+                <a id="leadership-4x" href="#">Leadership</a>
+                <ul class="is-open">
+                  <li>
+                    <a id="leadership2-4x" href="#">Leadership</a>
+                  </li>
+                  <li>
+                    <a id="history-4x" href="#" class="is-disabled">History</a>
+                  </li>
+                  <li>
+                    <a id="careers-last-4x" href="#">Careers last</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a id="history2-4x" href="#">History2</a></li>
+              <li><a id="careers-4x" href="#">Careers</a></li>
+            </ul>
+          </li>
+          <li>
+            <a id="icons-4x" href="#">Icons</a>
+            <ul class="root">
+              <li>
+                <a id="audio-4x" href="#" class="icon-tree-audio">Audio</a>
+              </li>
+              <li>
+                <a id="avi-4x" href="#" class="icon-tree-avi">Avi</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a id="blog-4x" href="#">Blog</a>
+          </li>
+          <li>
+            <a id="contact-4x" href="#">Contact</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </ids-container>
+</body>
+</html>

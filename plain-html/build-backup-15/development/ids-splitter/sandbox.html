@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IDS Splitter Component</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;amp;display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="
+        script-src 'self' https://unpkg.com/ 'unsafe-eval';
+        style-src 'self' https://fonts.googleapis.com 'nonce-0a59a005';
+        font-src 'self' data: https://fonts.gstatic.com;
+      "><link rel="icon" href="/favicon.ico"><script type="module" src="/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-ebf8ca/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-ebf8ca.js"></script><script type="module" src="/src_core_ids-attributes_ts-src_core_ids-decorators_ts-src_core_ids-element_ts/src_core_ids-attributes_ts-src_core_ids-decorators_ts-src_core_ids-element_ts.js"></script><script type="module" src="/src_mixins_ids-events-mixin_ids-events-mixin_ts/src_mixins_ids-events-mixin_ids-events-mixin_ts.js"></script><script type="module" src="/src_components_ids-locale_ids-locale_ts/src_components_ids-locale_ids-locale_ts.js"></script><script type="module" src="/ids-container/ids-container.js"></script><script type="module" src="/vendors-node_modules_ids-identity_dist_theme-new_icons_empty_path-data_json/vendors-node_modules_ids-identity_dist_theme-new_icons_empty_path-data_json.js"></script><script type="module" src="/vendors-node_modules_ids-identity_dist_theme-new_icons_standard_path-data_json/vendors-node_modules_ids-identity_dist_theme-new_icons_standard_path-data_json.js"></script><script type="module" src="/src_mixins_ids-locale-mixin_ids-locale-mixin_ts-src_utils_ids-dom-utils_ids-dom-utils_ts-src_-0d5e42/src_mixins_ids-locale-mixin_ids-locale-mixin_ts-src_utils_ids-dom-utils_ids-dom-utils_ts-src_-0d5e42.js"></script><script type="module" src="/src_components_ids-icon_ids-icon_ts/src_components_ids-icon_ids-icon_ts.js"></script><script type="module" src="/ids-icon/ids-icon.js"></script><script type="module" src="/src_components_ids-popup_ids-popup_scss/src_components_ids-popup_ids-popup_scss.js"></script><script type="module" src="/src_components_ids-popup_ids-popup_ts/src_components_ids-popup_ids-popup_ts.js"></script><script type="module" src="/src_mixins_ids-tooltip-mixin_ids-tooltip-mixin_ts/src_mixins_ids-tooltip-mixin_ids-tooltip-mixin_ts.js"></script><script type="module" src="/src_components_ids-button_ids-button_scss/src_components_ids-button_ids-button_scss.js"></script><script type="module" src="/src_components_ids-text_ids-text_ts/src_components_ids-text_ids-text_ts.js"></script><script type="module" src="/src_components_ids-loading-indicator_ids-loading-indicator_ts/src_components_ids-loading-indicator_ids-loading-indicator_ts.js"></script><script type="module" src="/src_components_ids-button_ids-button_ts/src_components_ids-button_ids-button_ts.js"></script><script type="module" src="/src_mixins_ids-dirty-tracker-mixin_ids-dirty-tracker-mixin_ts-src_mixins_ids-validation-mixin-f0445e/src_mixins_ids-dirty-tracker-mixin_ids-dirty-tracker-mixin_ts-src_mixins_ids-validation-mixin-f0445e.js"></script><script type="module" src="/src_components_ids-checkbox_ids-checkbox_scss/src_components_ids-checkbox_ids-checkbox_scss.js"></script><script type="module" src="/src_components_ids-checkbox_ids-checkbox_ts/src_components_ids-checkbox_ids-checkbox_ts.js"></script><script type="module" src="/src_components_ids-hyperlink_ids-hyperlink_ts/src_components_ids-hyperlink_ids-hyperlink_ts.js"></script><script type="module" src="/src_components_ids-card_ids-card_ts/src_components_ids-card_ids-card_ts.js"></script><script type="module" src="/src_components_ids-layout-grid_ids-layout-grid_scss/src_components_ids-layout-grid_ids-layout-grid_scss.js"></script><script type="module" src="/src_components_ids-layout-grid_ids-layout-grid_ts/src_components_ids-layout-grid_ids-layout-grid_ts.js"></script><script type="module" src="/ids-layout-grid/ids-layout-grid.js"></script><script type="module" src="/src_components_ids-draggable_ids-draggable_ts/src_components_ids-draggable_ids-draggable_ts.js"></script><script type="module" src="/src_components_ids-splitter_ids-splitter_ts/src_components_ids-splitter_ids-splitter_ts.js"></script><script type="module" src="/ids-splitter/ids-splitter.js"></script><script type="module" src="/src_components_ids-radio_ids-radio-group_scss-src_components_ids-radio_ids-radio_scss/src_components_ids-radio_ids-radio-group_scss-src_components_ids-radio_ids-radio_scss.js"></script><script type="module" src="/src_components_ids-radio_ids-radio_ts/src_components_ids-radio_ids-radio_ts.js"></script><script type="module" src="/ids-splitter-sandbox/ids-splitter-sandbox.js"></script><script type="module" src="/ids-text/ids-text.js"></script><script type="module" src="/src_core_ids-data-source_ts/src_core_ids-data-source_ts.js"></script><script type="module" src="/src_mixins_ids-attachment-mixin_ids-attachment-mixin_ts-src_mixins_ids-popup-interactions-mix-9b7040/src_mixins_ids-attachment-mixin_ids-attachment-mixin_ts-src_mixins_ids-popup-interactions-mix-9b7040.js"></script><script type="module" src="/src_components_ids-menu_ids-menu-group_scss-src_components_ids-menu_ids-menu-header_scss-src_-787682/src_components_ids-menu_ids-menu-group_scss-src_components_ids-menu_ids-menu-header_scss-src_-787682.js"></script><script type="module" src="/src_components_ids-menu_ids-menu-group_ts-src_components_ids-menu_ids-menu-item_ts-src_compon-420212/src_components_ids-menu_ids-menu-group_ts-src_components_ids-menu_ids-menu-item_ts-src_compon-420212.js"></script><script type="module" src="/src_components_ids-menu_ids-menu_ts/src_components_ids-menu_ids-menu_ts.js"></script><script type="module" src="/src_components_ids-popup-menu_ids-popup-menu_ts/src_components_ids-popup-menu_ids-popup-menu_ts.js"></script><script type="module" src="/src_components_ids-tag_ids-tag_ts/src_components_ids-tag_ids-tag_ts.js"></script><script type="module" src="/ids-theme-switcher/ids-theme-switcher.js"></script></head>
+<body>
+  <ids-container role="main" padding="8" hidden>
+    <ids-theme-switcher mode="light"></ids-theme-switcher>
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12" type="h1">Splitter Sandbox</ids-text>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter id="splitter-basic">
+          <ids-splitter-pane id="basic-p1"></ids-splitter-pane>
+          <ids-splitter-pane id="basic-p2"></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12">Align (end)</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter align="end">
+          <ids-splitter-pane></ids-splitter-pane>
+          <ids-splitter-pane></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12">Initial Size</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter>
+          <ids-splitter-pane size="30%"></ids-splitter-pane>
+          <ids-splitter-pane></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12">Minimum / Maximum (min: 10%, max:80%)</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter id="splitter-minmax">
+          <ids-splitter-pane id="minmax-p1" min-size="10%" max-size="80%"></ids-splitter-pane>
+          <ids-splitter-pane id="minmax-p2"></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12">Collapsed</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter id="splitter-collapsed">
+          <ids-splitter-pane collapsed></ids-splitter-pane>
+          <ids-splitter-pane></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12">Multiple</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter id="splitter-multiple">
+          <ids-splitter-pane id="multiple-p1"></ids-splitter-pane>
+          <ids-splitter-pane id="multiple-p2"></ids-splitter-pane>
+          <ids-splitter-pane id="multiple-p3"></ids-splitter-pane>
+          <ids-splitter-pane id="multiple-p4"></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12">Vertical</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter axis="y">
+          <ids-splitter-pane></ids-splitter-pane>
+          <ids-splitter-pane></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12">Vertical (align end)</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter align="end" axis="y">
+          <ids-splitter-pane></ids-splitter-pane>
+          <ids-splitter-pane></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12">Nested</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter>
+          <ids-splitter-pane></ids-splitter-pane>
+          <ids-splitter-pane>
+            <ids-splitter axis="y">
+              <ids-splitter-pane size="70%"></ids-splitter-pane>
+              <ids-splitter-pane></ids-splitter-pane>
+            </ids-splitter>
+          </ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12">Custom (aria-label) for Splitter Bar</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter label="Custom Resize Text">
+          <ids-splitter-pane></ids-splitter-pane>
+          <ids-splitter-pane></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12">Resize on Drag End</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter resize-on-drag-end>
+          <ids-splitter-pane class="dark" size="30%"></ids-splitter-pane>
+          <ids-splitter-pane></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text font-size="12">Disable / Enable</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-button id="btn-splitter-disable-enable" appearance="secondary">
+          <span>Enable Splitter</span>
+        </ids-button>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding="md">
+      <div class="demo-splitter">
+        <ids-splitter id="splitter-disable-enable">
+          <ids-splitter-pane></ids-splitter-pane>
+          <ids-splitter-pane></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h2" class="inline">Events</ids-text>
+        <ids-text font-size="14" class="inline">(watch the logs for the events in console)</ids-text><br />
+        <ids-text font-size="14" font-weight="bold" class="inline">&mdash; beforecollapsed:</ids-text>
+        <ids-text font-size="14" class="inline">Fire before collapse and can prevent by passing boolean value.</ids-text>
+        <br />
+        <ids-radio-group horizontal="true" id="radio-splitter-evt-beforecollapsed">
+          <ids-radio value="true" label="True" checked="true"></ids-radio>
+          <ids-radio value="false" label="False"></ids-radio>
+        </ids-radio-group>
+        <ids-text font-size="14" font-weight="bold" class="inline">&mdash; collapsed:</ids-text>
+        <ids-text font-size="14" class="inline">Will fire after collapse the splitter pane.</ids-text><br />
+        <ids-text font-size="14" font-weight="bold" class="inline">&mdash; beforeexpanded:</ids-text>
+        <ids-text font-size="14" class="inline">Fire before expand and can prevent by passing boolean value.</ids-text>
+        <br />
+        <ids-radio-group horizontal="true" id="radio-splitter-evt-beforeexpanded">
+          <ids-radio value="true" label="True" checked="true"></ids-radio>
+          <ids-radio value="false" label="False"></ids-radio>
+        </ids-radio-group>
+        <ids-text font-size="14" font-weight="bold" class="inline">&mdash; expanded:</ids-text>
+        <ids-text font-size="14" class="inline">Will fire after expand the splitter pane.</ids-text><br />
+        <ids-text font-size="14" font-weight="bold" class="inline">&mdash; beforesizechanged:</ids-text>
+        <ids-text font-size="14" class="inline">Fire before the size change and can prevent by passing boolean value.</ids-text>
+        <br />
+        <ids-radio-group horizontal="true" id="radio-splitter-evt-beforesizechanged">
+          <ids-radio value="true" label="True" checked="true"></ids-radio>
+          <ids-radio value="false" label="False"></ids-radio>
+        </ids-radio-group>
+        <ids-text font-size="14" font-weight="bold" class="inline">&mdash; sizechanged:</ids-text>
+        <ids-text font-size="14" class="inline">Will fire after the splitter pane size changed.</ids-text><br />
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-layout-grid-cell>
+        <ids-button id="btn-splitter-collapse-expand" appearance="secondary">
+          <span>Collapse</span>
+        </ids-button>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter id="splitter-events">
+          <ids-splitter-pane class="splitter-evt-p1"></ids-splitter-pane>
+          <ids-splitter-pane class="splitter-evt-p2"></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">Save Position</ids-text>
+        <ids-text>1. Drag the Splitter Bar to move panes and leave at different position then origin</ids-text>
+        <ids-text>2. At this point it should be saved the current position to local storage</ids-text>
+        <ids-text>3. Refresh or close/open the page, and see the same Splitter</ids-text>
+        <ids-text>4. It should have previously saved positions</ids-text>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-layout-grid-cell>
+        <ids-menu-button appearance="secondary" id="btn-splitter-save-clear" menu="menu-splitter-save-clear" trigger-type="click" dropdown-icon>
+          <span>Clear saved position</span>
+        </ids-menu-button>
+        <ids-popup-menu id="menu-splitter-save-clear" target="#btn-splitter-save-clear">
+          <ids-menu-group>
+            <ids-menu-item id="clear-saved-splitter-1" value="clear-saved-splitter-1">Clear position for saved Splitter(1)</ids-menu-item>
+            <ids-menu-item id="clear-saved-splitter-2" value="clear-saved-splitter-2">Clear position for saved Splitter(2)</ids-menu-item>
+            <ids-menu-item id="clear-saved-splitter-all" value="clear-saved-splitter-all">Clear position for all saved Splitters</ids-menu-item>
+          </ids-menu-group>
+        </ids-popup-menu>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-text>1. Choose Splitter(1), Splitter(2) or all saved Splitters to clear from menu button</ids-text>
+        <ids-text>2. Refresh or close/open the page, and see the same Splitter</ids-text>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text>Save Position - Splitter(1)</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter id="splitter-save1" unique-id="some-uniqueid-1" save-position>
+          <ids-splitter-pane></ids-splitter-pane>
+          <ids-splitter-pane></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-text>Save Position - Splitter(2)</ids-text>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <div class="demo-splitter">
+        <ids-splitter id="splitter-save2" unique-id="some-uniqueid-2" save-position>
+          <ids-splitter-pane></ids-splitter-pane>
+          <ids-splitter-pane></ids-splitter-pane>
+        </ids-splitter>
+      </div>
+    </ids-layout-grid>
+
+  </ids-container>
+</body>
+</html>

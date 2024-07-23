@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IDS Home Page Component</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;amp;display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="
+        script-src 'self' https://unpkg.com/ 'unsafe-eval';
+        style-src 'self' https://fonts.googleapis.com 'nonce-0a59a005';
+        font-src 'self' data: https://fonts.gstatic.com;
+      "><link rel="icon" href="/favicon.ico"><script type="module" src="/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-ebf8ca/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-ebf8ca.js"></script><script type="module" src="/src_core_ids-attributes_ts-src_core_ids-decorators_ts-src_core_ids-element_ts/src_core_ids-attributes_ts-src_core_ids-decorators_ts-src_core_ids-element_ts.js"></script><script type="module" src="/src_mixins_ids-events-mixin_ids-events-mixin_ts/src_mixins_ids-events-mixin_ids-events-mixin_ts.js"></script><script type="module" src="/src_components_ids-locale_ids-locale_ts/src_components_ids-locale_ids-locale_ts.js"></script><script type="module" src="/ids-container/ids-container.js"></script><script type="module" src="/src_components_ids-popup_ids-popup_scss/src_components_ids-popup_ids-popup_scss.js"></script><script type="module" src="/src_mixins_ids-locale-mixin_ids-locale-mixin_ts-src_utils_ids-dom-utils_ids-dom-utils_ts-src_-0d5e42/src_mixins_ids-locale-mixin_ids-locale-mixin_ts-src_utils_ids-dom-utils_ids-dom-utils_ts-src_-0d5e42.js"></script><script type="module" src="/src_components_ids-popup_ids-popup_ts/src_components_ids-popup_ids-popup_ts.js"></script><script type="module" src="/src_mixins_ids-tooltip-mixin_ids-tooltip-mixin_ts/src_mixins_ids-tooltip-mixin_ids-tooltip-mixin_ts.js"></script><script type="module" src="/src_components_ids-text_ids-text_ts/src_components_ids-text_ids-text_ts.js"></script><script type="module" src="/src_mixins_ids-dirty-tracker-mixin_ids-dirty-tracker-mixin_ts-src_mixins_ids-validation-mixin-f0445e/src_mixins_ids-dirty-tracker-mixin_ids-dirty-tracker-mixin_ts-src_mixins_ids-validation-mixin-f0445e.js"></script><script type="module" src="/src_components_ids-checkbox_ids-checkbox_scss/src_components_ids-checkbox_ids-checkbox_scss.js"></script><script type="module" src="/src_components_ids-checkbox_ids-checkbox_ts/src_components_ids-checkbox_ids-checkbox_ts.js"></script><script type="module" src="/src_components_ids-card_ids-card_ts/src_components_ids-card_ids-card_ts.js"></script><script type="module" src="/src_components_ids-home-page_ids-home-page_ts-src_mixins_ids-color-variant-mixin_ids-color-va-72e1d8/src_components_ids-home-page_ids-home-page_ts-src_mixins_ids-color-variant-mixin_ids-color-va-72e1d8.js"></script><script type="module" src="/ids-home-page/ids-home-page.js"></script><script type="module" src="/vendors-node_modules_ids-identity_dist_theme-new_icons_empty_path-data_json/vendors-node_modules_ids-identity_dist_theme-new_icons_empty_path-data_json.js"></script><script type="module" src="/vendors-node_modules_ids-identity_dist_theme-new_icons_standard_path-data_json/vendors-node_modules_ids-identity_dist_theme-new_icons_standard_path-data_json.js"></script><script type="module" src="/src_components_ids-icon_ids-icon_ts/src_components_ids-icon_ids-icon_ts.js"></script><script type="module" src="/ids-icon/ids-icon.js"></script><script type="module" src="/src_components_ids-button_ids-button_scss/src_components_ids-button_ids-button_scss.js"></script><script type="module" src="/src_components_ids-loading-indicator_ids-loading-indicator_ts/src_components_ids-loading-indicator_ids-loading-indicator_ts.js"></script><script type="module" src="/src_components_ids-button_ids-button_ts/src_components_ids-button_ids-button_ts.js"></script><script type="module" src="/src_components_ids-layout-grid_ids-layout-grid_scss/src_components_ids-layout-grid_ids-layout-grid_scss.js"></script><script type="module" src="/src_components_ids-layout-grid_ids-layout-grid_ts/src_components_ids-layout-grid_ids-layout-grid_ts.js"></script><script type="module" src="/ids-layout-grid/ids-layout-grid.js"></script><script type="module" src="/ids-text/ids-text.js"></script><script type="module" src="/src_core_ids-data-source_ts/src_core_ids-data-source_ts.js"></script><script type="module" src="/src_mixins_ids-attachment-mixin_ids-attachment-mixin_ts-src_mixins_ids-popup-interactions-mix-9b7040/src_mixins_ids-attachment-mixin_ids-attachment-mixin_ts-src_mixins_ids-popup-interactions-mix-9b7040.js"></script><script type="module" src="/src_components_ids-menu_ids-menu-group_scss-src_components_ids-menu_ids-menu-header_scss-src_-787682/src_components_ids-menu_ids-menu-group_scss-src_components_ids-menu_ids-menu-header_scss-src_-787682.js"></script><script type="module" src="/src_components_ids-menu_ids-menu-group_ts-src_components_ids-menu_ids-menu-item_ts-src_compon-420212/src_components_ids-menu_ids-menu-group_ts-src_components_ids-menu_ids-menu-item_ts-src_compon-420212.js"></script><script type="module" src="/src_components_ids-menu_ids-menu_ts/src_components_ids-menu_ids-menu_ts.js"></script><script type="module" src="/src_components_ids-popup-menu_ids-popup-menu_ts/src_components_ids-popup-menu_ids-popup-menu_ts.js"></script><script type="module" src="/src_components_ids-tag_ids-tag_ts/src_components_ids-tag_ids-tag_ts.js"></script><script type="module" src="/ids-theme-switcher/ids-theme-switcher.js"></script></head>
+<body>
+  <ids-container role="main" padding="8" hidden>
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">Home Page Sandbox</ids-text>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-hyperlink href="./scenario-a.html" target="_blank">Scenario - A</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-b.html" target="_blank">Scenario - B</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-c.html" target="_blank">Scenario - C</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-d.html" target="_blank">Scenario - D</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-e.html" target="_blank">Scenario - E</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-f.html" target="_blank">Scenario - F</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-g.html" target="_blank">Scenario - G</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-h.html" target="_blank">Scenario - H</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-i.html" target="_blank">Scenario - I</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-j.html" target="_blank">Scenario - J</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-k.html" target="_blank">Scenario - K</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-l.html" target="_blank">Scenario - L</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-m.html" target="_blank">Scenario - M</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-n.html" target="_blank">Scenario - N</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-o.html" target="_blank">Scenario - O</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-p.html" target="_blank">Scenario - P</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-q.html" target="_blank">Scenario - Q</ids-hyperlink><br/>
+        <ids-hyperlink href="./scenario-r.html" target="_blank">Scenario - R</ids-hyperlink><br/>
+        <ids-hyperlink href="./columns-4.html" target="_blank">Columns - 4</ids-hyperlink><br/>
+        <ids-hyperlink href="./columns-5.html" target="_blank">Columns - 5</ids-hyperlink><br/>
+        <ids-hyperlink href="./columns-6.html" target="_blank">Columns - 6</ids-hyperlink><br/>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h2">Small Size</ids-text>
+        <ids-hyperlink href="./small-scenario-d.html" target="_blank">Small Scenario - D</ids-hyperlink><br />
+        <ids-hyperlink href="./small-scenario-f.html" target="_blank">Small Scenario - F</ids-hyperlink><br />
+        <ids-hyperlink href="./small-scenario-i.html" target="_blank">Small Scenario - I</ids-hyperlink><br />
+        <ids-hyperlink href="./small-scenario-r.html" target="_blank">Small Scenario - R</ids-hyperlink><br />
+        <ids-hyperlink href="./small-columns-4.html" target="_blank">Small Columns - 4</ids-hyperlink><br />
+        <ids-hyperlink href="./small-columns-5.html" target="_blank">Small Columns - 5</ids-hyperlink><br />
+        <ids-hyperlink href="./small-columns-6.html" target="_blank">Small Columns - 6</ids-hyperlink>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h2">Events</ids-text>
+        <ids-hyperlink href="./events.html" target="_blank">Events</ids-hyperlink>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h2">Add / Remove Card</ids-text>
+        <ids-hyperlink href="./add-remove-card.html" target="_blank">Add / Remove Card</ids-hyperlink>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h2">Gap - Horizontal / Vertical</ids-text>
+        <ids-hyperlink href="./gap.html" target="_blank">Gap in between cards</ids-hyperlink>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h2">Side-by-Side (web-component and 4.x)</ids-text>
+        <ids-hyperlink href="./side-by-side.html" target="_blank">Gap in between cards</ids-hyperlink>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+  </ids-container>
+</body>
+</html>

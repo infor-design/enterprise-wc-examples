@@ -1,6 +1,6 @@
 <ids-container padding="8" hidden>
   <ids-theme-switcher mode="light"></ids-theme-switcher>
-  
+
   <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Ids App Menu</ids-text>
   </ids-layout-grid>
@@ -8,9 +8,9 @@
   <ids-layout-grid>
     <ids-layout-grid-cell>
       <ids-button
-        #appMenuTriggerBtn 
-        id="app-menu-trigger" 
-        icon="menu" 
+        #appMenuTriggerBtn
+        id="app-menu-trigger"
+        icon="menu"
         (click)="disableTriggerButton()"
         [attr.disabled]="disabled"
       >
@@ -19,8 +19,8 @@
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-app-menu 
-    #appMenuDrawer 
+  <ids-app-menu
+    #appMenuDrawer
     id="app-menu"
     (hide)="enableTriggerButton()"
     (selected)="handleSelected($event)"
@@ -28,12 +28,14 @@
     <!-- Avatar/Username Area -->
     <img
       #avatarImage
-      slot="avatar" 
-      id="avatar" 
-      alt="Picture of Richard Fairbanks" 
+      slot="avatar"
+      id="avatar"
+      alt="Picture of Richard Fairbanks"
       src="assets/images/avatar-placeholder.jpg"
     />
-    <ids-text slot="username" font-size="24" font-weight="bold">Richard Fairbanks</ids-text>
+    <ids-text slot="username" font-size="24" font-weight="bold"
+      >Richard Fairbanks</ids-text
+    >
 
     <!-- Header Toolbar -->
     <ids-toolbar slot="header">
@@ -56,12 +58,12 @@
       </ids-toolbar-section>
     </ids-toolbar>
 
-    <ids-search-field 
-      id="search" 
+    <ids-search-field
+      id="search"
       clearable
-      label="Application Menu Search" 
-      color-variant="app-menu" 
-      label-state="collapsed" 
+      label="Application Menu Search"
+      color-variant="app-menu"
+      label-state="collapsed"
       no-margins="true"
       slot="search"
     ></ids-search-field>
@@ -168,6 +170,5 @@
         </ids-button>
       </ids-toolbar-section>
     </ids-toolbar>
-
   </ids-app-menu>
 </ids-container>

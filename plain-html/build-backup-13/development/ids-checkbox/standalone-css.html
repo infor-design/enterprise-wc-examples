@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IDS Checkbox Component</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;amp;display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="
+        script-src 'self' https://unpkg.com/ 'unsafe-eval';
+        style-src 'self' https://fonts.googleapis.com 'nonce-0a59a005';
+        font-src 'self' data: https://fonts.gstatic.com;
+      "><link rel="icon" href="/favicon.ico"><script type="module" src="/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-ebf8ca/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-ebf8ca.js"></script><script type="module" src="/src_components_ids-checkbox_ids-checkbox_scss/src_components_ids-checkbox_ids-checkbox_scss.js"></script><script type="module" src="/src_components_ids-layout-grid_ids-layout-grid_scss/src_components_ids-layout-grid_ids-layout-grid_scss.js"></script><script type="module" src="/scripts_append-stylesheets_ts-src_components_ids-text_ids-text_scss/scripts_append-stylesheets_ts-src_components_ids-text_ids-text_scss.js"></script><script type="module" src="/ids-checkbox-standalone-css/ids-checkbox-standalone-css.js"></script></head>
+<body hidden>
+  <div class="ids-layout-grid ids-layout-grid-auto-fit ids-layout-grid-padding-md">
+    <div class="ids-layout-grid-cell">
+      <h1 class="ids-text ids-text-12">IDS Checkbox (Standalone CSS)</h1>
+    </div>
+  </div>
+  <div class="ids-layout-grid ids-layout-grid-auto-fit ids-layout-grid-padding-md">
+    <div class="ids-layout-grid-cell">
+      <h2 class="ids-text ids-text-12">Ids Checkbox</h2>
+    </div>
+  </div>
+  <div class="ids-layout-grid ids-layout-grid-auto-fit ids-layout-grid-padding-x-md">
+    <div class="ids-layout-grid-cell">
+
+      <div class="ids-checkbox">
+        <label>
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Unchecked</span>
+        </label>
+      </div>
+      <div class="ids-checkbox">
+        <label>
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Checked</span>
+        </label>
+      </div>
+      <div class="ids-checkbox disabled">
+        <label>
+          <input type="checkbox" disabled="true" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Disabled and unchecked</span>
+        </label>
+      </div>
+      <div class="ids-checkbox disabled">
+        <label>
+          <input type="checkbox" checked="checked" disabled="true" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Disabled and checked</span>
+        </label>
+      </div>
+      <!--
+      A checkbox cannot be set to indeterminate state by an HTML attribute - it must be set by a JavaScript. This `indeterminate` css class can toggle in order to get/set ui.
+    -->
+      <div class="ids-checkbox">
+        <label>
+          <input type="checkbox" class="indeterminate" checked="checked" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Indeterminate</span>
+        </label>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="ids-layout-grid ids-layout-grid-auto-fit ids-layout-grid-padding-md">
+    <div class="ids-layout-grid-cell">
+      <h2 class="ids-text ids-text-12">Ids Checkbox - Colored</h2>
+    </div>
+  </div>
+  <div class="ids-layout-grid ids-layout-grid-auto-fit ids-layout-grid-padding-x-md">
+    <div class="ids-layout-grid-cell">
+
+      <div class="ids-checkbox" color="emerald07">
+        <label>
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Emerald 07</span>
+        </label>
+      </div>
+      <div class="ids-checkbox" color="amethyst07">
+        <label>
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Amethyst 07</span>
+        </label>
+      </div>
+      <div class="ids-checkbox" color="azure07">
+        <label>
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Azure 07</span>
+        </label>
+      </div>
+      <div class="ids-checkbox" color="amber07">
+        <label>
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Amber 07</span>
+        </label>
+      </div>
+      <div class="ids-checkbox" color="ruby07">
+        <label>
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Ruby 07</span>
+        </label>
+      </div>
+      <div class="ids-checkbox disabled" color="ruby07">
+        <label>
+          <input type="checkbox" checked="checked" disabled="true" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Ruby 07 (disabled)</span>
+        </label>
+      </div>
+      <div class="ids-checkbox" color="caution">
+        <label>
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Caution</span>
+        </label>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="ids-layout-grid ids-layout-grid-auto-fit ids-layout-grid-padding-md">
+    <div class="ids-layout-grid-cell">
+      <h2 class="ids-text ids-text-12">Ids Checkbox - Horizontal</h2>
+    </div>
+  </div>
+  <div class="ids-layout-grid ids-layout-grid-auto-fit ids-layout-grid-padding-x-md">
+    <div class="ids-layout-grid-cell">
+
+      <div class="ids-checkbox horizontal">
+        <label>
+          <input type="checkbox"/>
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Option 1 I am long</span>
+        </label>
+      </div>
+      <div class="ids-checkbox horizontal">
+        <label>
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Option 2</span>
+        </label>
+      </div>
+      <div class="ids-checkbox horizontal">
+        <label>
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+          <span class="ids-text label-text">Option 3</span>
+        </label>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

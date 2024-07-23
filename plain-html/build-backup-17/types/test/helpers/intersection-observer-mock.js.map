@@ -1,0 +1,1 @@
+{"version":3,"file":"intersection-observer-mock.js","sourceRoot":"","sources":["../../../../test/helpers/intersection-observer-mock.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,MAAM,oBAAoB;IACxB,OAAO;QACL,aAAa;IACf,CAAC;IAED,SAAS;QACP,aAAa;IACf,CAAC;IAED,UAAU;QACR,aAAa;IACf,CAAC;CACF;AAED,eAAe,oBAAoB,CAAC"}
