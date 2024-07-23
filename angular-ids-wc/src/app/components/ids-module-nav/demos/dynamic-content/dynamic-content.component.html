@@ -1,0 +1,47 @@
+<ids-container role="main">
+  <ids-module-nav #moduleNav responsive>
+    <ids-module-nav-bar>
+      <ids-accordion>
+        <ids-accordion-section slot="" grow>
+          @for (action of actions; track action) {
+          <ids-accordion-panel>
+            <ids-module-nav-item slot="header" [icon]="action.icon">
+              <ids-text font-size="16" overflow="ellipsis">{{ action.text }}</ids-text>
+            </ids-module-nav-item>
+            @for (child of action.children; track child) {
+            <ids-accordion-panel slot="content">
+              <ids-module-nav-item slot="header">
+                <ids-text font-size="14">{{ child }}</ids-text>
+              </ids-module-nav-item>
+            </ids-accordion-panel>
+            }
+          </ids-accordion-panel>
+          }
+        </ids-accordion-section>
+      </ids-accordion>
+    </ids-module-nav-bar>
+
+    <ids-module-nav-content>
+      <ids-header>
+        <ids-toolbar>
+          <ids-toolbar-section type="button">
+            <ids-button icon="menu" (click)="toggleMenu()">
+            </ids-button>
+          </ids-toolbar-section>
+          <ids-toolbar-section type="title">
+            <ids-text font-size="20" type="h1">
+              Page Title
+            </ids-text>
+          </ids-toolbar-section>
+        </ids-toolbar>
+      </ids-header>
+
+      <ids-text>
+        When actions (ids-accordion-panel) are added after the Module Nav has already been created, the menu titles are
+        not visible at all. When the menu is collapsed and then expanded again, the menu titles are visible but do not
+        render properly. They get a different text color and the selection state and accordion chevron do not work.
+      </ids-text>
+
+    </ids-module-nav-content>
+  </ids-module-nav>
+</ids-container>
