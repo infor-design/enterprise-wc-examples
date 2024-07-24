@@ -5,30 +5,39 @@ import { IdsColorPickerComponent } from './ids-color-picker.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { ExampleSizesComponent } from './demos/example-sizes/example-sizes.component';
 import { AxeComponent } from './demos/axe/axe.component';
+import { NoScrollComponent } from './demos/no-scroll/no-scroll.component';
 
 export const routes: Routes = [
-  { 
-    path: '', 
-    component: IdsColorPickerComponent 
+  {
+    path: '',
+    component: IdsColorPickerComponent
   },
-  { 
-    path: 'example', 
+  {
+    path: 'example',
     component: ExampleComponent,
     data: {
       type: 'Example',
       description: 'Shows various colorpicker examples',
     },
   },
-  { 
-    path: 'example-sizes', 
+  {
+    path: 'example-sizes',
     component: ExampleSizesComponent,
     data: {
       type: 'Example',
       description: 'Shows examples of various colorpicker sizes',
     },
   },
-  { 
-    path: 'axe', 
+  {
+    path: 'no-scroll',
+    component: NoScrollComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows an example of a page that does not scroll to the color picker view',
+    },
+  },
+  {
+    path: 'axe',
     component: AxeComponent,
     data: {
       type: 'Example',

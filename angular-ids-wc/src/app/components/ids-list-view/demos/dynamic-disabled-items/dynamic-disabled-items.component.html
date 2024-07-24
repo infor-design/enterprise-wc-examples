@@ -1,0 +1,21 @@
+<ids-container padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-text font-size="12" type="h1">List View - Dynamic Disabled</ids-text>
+  </ids-layout-grid>
+
+  <ids-layout-grid cols="2" gap="xl">
+    <ids-layout-grid-cell col-span="1">
+      <div class="parent-container">
+        <ids-list-view selectable="single" item-height="76">
+          <ids-list-view-item *ngFor="let item of items" (click)="onRowClick(item)" [disabled]="item.itemType === itemDisable">
+            <ids-text font-size="16" type="h2">{{item.id}} Column</ids-text>
+            <ids-text font-size="12" type="span">ID: {{item.id}}</ids-text>
+            <ids-text font-size="12" type="span">Comments: {{item.comments}}</ids-text>
+          </ids-list-view-item>
+        </ids-list-view>
+      </div>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>

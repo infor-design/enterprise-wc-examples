@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>IDS Calendar Component</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Cache-control" content="max-age=31536000">
+  <script type="module" src="./build/dist/production/components/ids-container/ids-container.js"></script>
+  <script type="module" src="./build/dist/production/components/ids-theme-switcher/ids-theme-switcher.js"></script>
+  <script type="module" src="./build/dist/production/components/ids-layout-grid/ids-layout-grid.js"></script>
+  <script type="module" src="./build/dist/production/components/ids-card/ids-card.js"></script>
+</head>
+<body>
+  <ids-container role="main" padding="8" hidden>
+    
+    <ids-layout-grid cols="2" gap="md" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-card>
+          <div slot="card-header">
+            <ids-text font-size="20" type="h2" overflow="ellipsis" tooltip="true">Card Title One</ids-text>
+          </div>
+          <div slot="card-content">
+          </div>
+        </ids-card>
+      </ids-layout-grid-cell>
+      <ids-layout-grid-cell>
+        <ids-card>
+          <div slot="card-header">
+            <ids-text font-size="20" type="h2">Card Title Two</ids-text>
+          </div>
+          <div slot="card-content">
+          </div>
+        </ids-card>
+      </ids-layout-grid-cell>
+      <ids-layout-grid-cell>
+        <ids-card actionable="true">
+          <div slot="card-content">
+            <ids-text font-size="16" type="p">Actionable Button Card</ids-text>
+          </div>
+        </ids-card>
+      </ids-layout-grid-cell>
+      <ids-layout-grid-cell>
+        <ids-card actionable="true" href="https://www.example.com" target="_self">
+          <div slot="card-content">
+            <ids-text font-size="16" type="p">Actionable Link Card</ids-text>
+          </div>
+        </ids-card>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+  </ids-container>
+
+</body>
+</html>
