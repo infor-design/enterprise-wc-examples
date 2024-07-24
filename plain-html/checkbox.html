@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>IDS Checkbox Component</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Cache-control" content="max-age=31536000">
+  <script type="module" src="./build/dist/production/components/ids-container/ids-container.js"></script>
+  <script type="module" src="./build/dist/production/components/ids-theme-switcher/ids-theme-switcher.js"></script>
+  <script type="module" src="./build/dist/production/components/ids-layout-grid/ids-layout-grid.js"></script>
+  <script type="module" src="./build/dist/production/components/ids-checkbox/ids-checkbox.js"></script>
+</head>
+<body>
+  <ids-container role="main" padding="8" hidden>
+    <ids-layout-grid cols="3" gap="md" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">Ids Checkbox</ids-text><br />
+        <ids-checkbox label="Unchecked"></ids-checkbox>
+        <ids-checkbox label="Checked" checked="true"></ids-checkbox>
+        <ids-checkbox label="Dirty tracking" dirty-tracker="true"></ids-checkbox>
+        <ids-checkbox label="Disabled and unchecked" disabled="true"></ids-checkbox>
+        <ids-checkbox label="Disabled and checked" checked="true" disabled="true"></ids-checkbox>
+        <ids-checkbox label="Required" validate="required"></ids-checkbox>
+        <ids-checkbox label="Not Animated" no-animation="true"></ids-checkbox>
+      </ids-layout-grid-cell>
+
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">Ids Checkbox with no label</ids-text><br />
+        <ids-checkbox label="UnChecked" label-state="hidden"></ids-checkbox>
+        <ids-checkbox label="Checked" checked="true"></ids-checkbox>
+      </ids-layout-grid-cell>
+
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">Ids Checkbox - Colored</ids-text><br />
+        <ids-checkbox checked="true" color="emerald07" label="Emerald 07"></ids-checkbox>
+        <ids-checkbox checked="true" color="amethyst07" label="Amethyst 07"></ids-checkbox>
+        <ids-checkbox checked="true" color="azure07" label="Azure 07"></ids-checkbox>
+        <ids-checkbox checked="true" color="amber07" label="Amber 07"></ids-checkbox>
+        <ids-checkbox checked="true" color="ruby07" label="Ruby 07"></ids-checkbox>
+        <ids-checkbox checked="true" color="ruby07" label="Ruby 07 (disabled)" disabled="true"></ids-checkbox>
+      </ids-layout-grid-cell>
+
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">Ids Indeterminate</ids-text><br />
+        <ids-checkbox label="Indeterminate" indeterminate="true" id="cb-indeterminate"></ids-checkbox>
+        <ids-button appearance="secondary" id="btn-set-indeterminate">
+          <span>Set</span>
+        </ids-button>
+        <ids-button appearance="secondary" id="btn-remove-indeterminate">
+          <span>Remove</span>
+        </ids-button>
+
+        <br /><br />
+        <ids-text font-size="12" type="h1">Ids Checkbox - Horizontal</ids-text><br />
+
+        <ids-checkbox label="Option 1 I am long" horizontal="true"></ids-checkbox>
+        <ids-checkbox label="Option 2" horizontal="true" checked="true"></ids-checkbox>
+        <ids-checkbox label="Option 3" horizontal="true" checked="true"></ids-checkbox>
+      </ids-layout-grid-cell>
+
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">Ids Checkbox with Hitbox</ids-text><br />
+        <ids-checkbox label="Unchecked" hitbox="true"></ids-checkbox>
+        <ids-checkbox label="Checked" checked="true" hitbox="true"></ids-checkbox>
+        <ids-checkbox
+          label="Can store up to about a gigabyte of text, even though controls on forms and reports can only display the first 64,000 characters."
+          checked="true" hitbox="true"></ids-checkbox>
+        <ids-checkbox label="Dirty tracking" dirty-tracker="true" hitbox="true"></ids-checkbox>
+        <ids-checkbox label="Disabled and unchecked" disabled="true" hitbox="true"></ids-checkbox>
+        <ids-checkbox label="Disabled and checked" checked="true" disabled="true" hitbox="true"></ids-checkbox>
+        <ids-checkbox label="Required" validate="required" hitbox="true"></ids-checkbox>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+  </ids-container>
+
+</body>
+</html>
