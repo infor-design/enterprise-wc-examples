@@ -9,6 +9,7 @@ import { HeaderTabsComponent } from './demos/header-tabs/header-tabs.component';
 import { ModuleComponent } from './demos/module/module.component';
 import { VerticalComponent } from './demos/vertical/vertical.component';
 import { SwappableComponent } from './demos/swappable/swappable.component';
+import { OverflowComponent } from './demos/overflow/overflow.component';
 
 export const routes: Routes = [
   { 
@@ -53,6 +54,15 @@ export const routes: Routes = [
     data: {
       type: 'Example',
       description: 'Shows module tabs'
+    }
+  },
+  ,
+  {
+    path: 'overflow',
+    component: OverflowComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows overflow tabs'
     }
   },
   { 

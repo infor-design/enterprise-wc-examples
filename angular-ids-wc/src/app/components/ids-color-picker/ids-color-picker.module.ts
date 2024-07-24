@@ -7,6 +7,7 @@ import { ExampleComponent } from './demos/example/example.component';
 import { ExampleSizesComponent } from './demos/example-sizes/example-sizes.component';
 import { AxeComponent } from './demos/axe/axe.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
+import { NoScrollComponent } from './demos/no-scroll/no-scroll.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { DemoListingModule } from '../demo-listing/demo-listing.module';
     IdsColorPickerComponent,
     ExampleComponent,
     ExampleSizesComponent,
+    NoScrollComponent,
     AxeComponent
   ],
   imports: [

@@ -1,7 +1,7 @@
 import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { routes } from './ids-loading-indicator-routing.module';
-import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-grid';
+import 'ids-enterprise-wc/components/ids-spinbox/ids-spinbox';
 
 @Component({
   selector: 'app-ids-loading-indicator',
@@ -9,7 +9,6 @@ import IdsDataGrid from 'ids-enterprise-wc/components/ids-data-grid/ids-data-gri
   styleUrls: ['./ids-loading-indicator.component.css']
 })
 export class IdsLoadingIndicatorComponent implements AfterViewInit {
-  @ViewChild('table', { read: ElementRef }) table: IdsDataGrid;
   public routes = routes.filter(r => r.path !== '');
   public columns = [];
 
@@ -20,5 +19,4 @@ export class IdsLoadingIndicatorComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     console.log('Ids Loading Indicator init');
   }
-
 }

@@ -1,12 +1,13 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-example-popup',
   templateUrl: './example.component.html',
-  styleUrls: ['./example.component.css']
+  styleUrls: ['./example.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExampleComponent implements AfterViewInit, OnDestroy {
-  visible = false;
+  public visible = false;
 
   constructor() { }
 
@@ -18,7 +19,11 @@ export class ExampleComponent implements AfterViewInit, OnDestroy {
     this.visible = !this.visible;
   }
 
+  handleHide() {
+    this.visible = false;
+  }
+
   ngOnDestroy() {
-    console.log('destroy triggerbutton event');
+    console.log('destroy event fired');
   }
 }

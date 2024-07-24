@@ -1,0 +1,20 @@
+<ids-container padding="8" hidden>
+  <ids-form submit-button="popup-createOrd-btn" #sampleForm id="sample-form">
+    <ids-layout-grid auto-fit="true" padding-x="md">
+       <ids-layout-grid-cell>
+          <ids-input id="popOverCustNum" label="Customer Number" required></ids-input>
+          <ids-input id="popOverItemNum" label="Item Number" required></ids-input>
+          <ids-input id="popOverOrdType" label="Order Type"></ids-input>
+          <ids-input id="popOverFacility" label="Facility"></ids-input>
+          <ids-input id="popOverWarehouse" label="Warehouse"></ids-input>
+          <ids-input id="popOverQuantity" label="Quantity"></ids-input>
+          <ids-date-picker id="popOverReqDelDate" label="Requested Del Date" placeholder="true"
+             size="md" format="yyyy-MM-dd" validate="required date" validation-events="blur"
+             show-today="false" first-day-of-week="1" mask></ids-date-picker>
+          <ids-button id="primary-btn" appearance="primary" type="submit">
+             <span>Create Order</span>
+          </ids-button>
+       </ids-layout-grid-cell>
+    </ids-layout-grid>
+ </ids-form>
+</ids-container>

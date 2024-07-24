@@ -21,7 +21,7 @@
 
       <ids-dropdown label="IDS Dropdown ({{testDropdown}})" validate="required" (ngModelChange)="onUpdate($event)" [(ngModel)]="testDropdown">
         <ids-list-box>
-          <ids-list-box-option value="blank" id="blank" aria-label="Blank"></ids-list-box-option>
+          <ids-list-box-option value="blank" id="blank"></ids-list-box-option>
           <ids-list-box-option value="opt1" id="opt1-d4">Option One</ids-list-box-option>
           <ids-list-box-option value="opt2" id="opt2-d4">Option Two</ids-list-box-option>
           <ids-list-box-option value="opt3" id="opt3-d4">Option Three</ids-list-box-option>
@@ -33,7 +33,7 @@
 
       <ids-multiselect label="IDS Multiselect ({{testMultiselect}})" validate="required" (ngModelChange)="onUpdate($event)" [(ngModel)]="testMultiselect">
         <ids-list-box>
-          <ids-list-box-option value="blank" id="opt0-ms" aria-label="Blank"><ids-checkbox label="Option Blank"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option value="blank" id="opt0-ms"><ids-checkbox label="Option Blank"></ids-checkbox></ids-list-box-option>
           <ids-list-box-option value="opt1" id="opt1-ms"><ids-checkbox label="Option One"></ids-checkbox></ids-list-box-option>
           <ids-list-box-option value="opt2" id="opt2-ms"><ids-checkbox label="Option Two"></ids-checkbox></ids-list-box-option>
           <ids-list-box-option value="opt3" id="opt3-ms"><ids-checkbox label="Option Three"></ids-checkbox></ids-list-box-option>

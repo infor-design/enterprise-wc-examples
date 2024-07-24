@@ -5,7 +5,6 @@ import type IdsButtonType from 'ids-enterprise-wc/components/ids-button/ids-butt
 import 'ids-enterprise-wc/components/ids-popup/ids-popup';
 import 'ids-enterprise-wc/components/ids-button/ids-button';
 
-
 const IdsPopup = () => {
   const popupRef = useRef<IdsPopupType>();
   const triggerRef = useRef<IdsButtonType>();

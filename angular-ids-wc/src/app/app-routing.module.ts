@@ -8,7 +8,241 @@ export const routes: Routes = [
     path: "",
     component: HomeComponent,
     data: {
-      title: "Home",
+      title: 'Home',
+    }
+  },
+  { 
+    path: 'ids-alert', 
+    loadChildren: () => import('./components/ids-alert/ids-alert.module').then(m => m.IdsAlertModule),
+    data: {
+      title: 'Alert',
+      category: 'Form Inputs',
+      description: 'Alert Indicator/icon'
+    },
+  },
+  { 
+    path: 'ids-checkbox', 
+    loadChildren: () => import('./components/ids-checkbox/ids-checkbox.module').then(m => m.IdsCheckboxModule),
+    data: {
+      title: 'Checkbox',
+      category: 'Form Inputs',
+      description: 'Checkbox Input Element'
+    }
+  },
+  { 
+    path: 'ids-checkbox-group',
+    loadChildren: () => import('./components/ids-checkbox-group/ids-checkbox-group.module').then(m => m.IdsCheckboxGroupModule),
+    data: {
+      title: 'Checkbox Group',
+      category: 'Form Inputs',
+      description: 'Group of checkboxes with label'
+    }
+  },
+  { 
+    path: 'ids-color-picker', 
+    loadChildren: () => import('./components/ids-color-picker/ids-color-picker.module').then(m => m.IdsColorPickerModule),
+    data: {
+      title: 'Color Picker',
+      category: 'Form Inputs',
+      description: 'Input field for colors'
+    }
+  },
+  { 
+    path: 'ids-data-label', 
+    loadChildren: () => import('./components/ids-data-label/ids-data-label.module').then(m => m.IdsDataLabelModule),
+    data: {
+      title: 'Data Label',
+      category: 'Form Inputs',
+      description: 'Readonly data/label component'
+    }
+  },
+  { 
+    path: 'ids-date-picker', 
+    loadChildren: () => import('./components/ids-date-picker/ids-date-picker.module').then(m => m.IdsDatePickerModule),
+    data: {
+      title: 'Date Picker',
+      category: 'Form Inputs',
+      description: 'Input field for date'
+    }
+  },
+  { 
+    path: 'ids-dropdown',
+    loadChildren: () => import('./components/ids-dropdown/ids-dropdown.module').then(m => m.IdsDropdownModule),
+    data: {
+      title: 'Dropdown',
+      category: 'Form Inputs',
+      description: 'Select from a list of items'
+    }
+  },
+  { 
+    path: 'ids-editor',
+    loadChildren: () => import('./components/ids-editor/ids-editor.module').then(m => m.IdsEditorModule),
+    data: {
+      title: 'Editor',
+      category: 'Form Inputs',
+      description: 'An input for multi line rich text'
+    }
+  },
+  { 
+    path: 'ids-input',
+    loadChildren: () => import('./components/ids-input/ids-input.module').then(m => m.IdsInputModule),
+    data: {
+      title: 'Input',
+      category: 'Form Inputs',
+      description: 'Input element and features'
+    }
+  },
+  { 
+    path: 'ids-lookup',
+    loadChildren: () => import('./components/ids-lookup/ids-lookup.module').then(m => m.IdsLookupModule),
+    data: {
+      title: 'Lookups',
+      category: 'Form Inputs',
+      description: 'Select from a data grid list'
+    }
+  },
+  { 
+    path: 'ids-mask', 
+    loadChildren: () => import('./components/ids-mask/ids-mask.module').then(m => m.IdsMaskModule),
+    data: {
+      title: 'Mask',
+      category: 'Form Inputs',
+      description: 'Util for masking input'
+    },
+  },
+  {
+    path: 'ids-splitter',
+    loadChildren: () => import('./components/ids-splitter/ids-splitter.module').then(m => m.IdsSplitterModule),
+    data: {
+      title: 'Splitter',
+      category: 'Layouts',
+      description: 'Split Content Panes'
+    }
+  },
+  { 
+    path: 'ids-swaplist', 
+    loadChildren: () => import('./components/ids-swaplist/ids-swaplist.module').then(m => m.IdsSwaplistModule),
+    data: {
+      title: 'Swaplist',
+      category: 'Lists',
+      description: 'Displays Swaplist component'
+    }
+  },
+  { 
+    path: 'ids-tag', 
+    loadChildren: () => import('./components/ids-tag/ids-tag.module').then(m => m.IdsTagModule),
+    data: {
+      title: 'Tag',
+      category: 'Navigation and Interaction',
+      description: 'UI Classification'
+    }
+  },
+  { 
+    path: 'ids-text', 
+    loadChildren: () => import('./components/ids-text/ids-text.module').then(m => m.IdsTextModule),
+    data: {
+      title: 'Text',
+      category: 'Typography',
+      description: 'An element for plain text'
+    }
+  },
+  { 
+    path: 'ids-tooltip', 
+    loadChildren: () => import('./components/ids-tooltip/ids-tooltip.module').then(m => m.IdsTooltipModule),
+    data: {
+      title: 'Tooltip',
+      category: 'Messages and Alerts',
+      description: 'A message tooltip that shows on click/hover/focus'
+    },
+  },
+  { 
+    path: 'ids-multiselect',
+    loadChildren: () => import('./components/ids-multiselect/ids-multiselect.module').then(m => m.IdsMultiselectModule),
+    data: {
+      title: 'Multiselect',
+      category: 'Form Inputs',
+      description: 'Select multiple values from a list'
+    },
+  },
+  { 
+    path: 'ids-radio',
+    loadChildren: () => import('./components/ids-radio/ids-radio.module').then(m => m.IdsRadioModule),
+    data: {
+      title: 'Radio',
+      category: 'Form Inputs',
+      description: 'Input Radio Element'
+    },
+  },
+  { 
+    path: 'ids-search-field', 
+    loadChildren: () => import('./components/ids-search-field/ids-search-field.module').then(m => m.IdsSearchFieldModule),
+    data: {
+      title: 'Search Field',
+      category: 'Form Inputs',
+      description: 'Interactive input for typing into search'
+    },
+  },
+  { 
+    path: 'ids-spinbox', 
+    loadChildren: () => import('./components/ids-spinbox/ids-spinbox.module').then(m => m.IdsSpinboxModule),
+    data: {
+      title: 'Spinbox',
+      category: 'Form Inputs',
+      description: 'Input element for numbers'
+    },
+  },
+  { 
+    path: 'ids-switch',
+    loadChildren: () => import('./components/ids-switch/ids-switch.module').then(m => m.IdsSwitchModule),
+    data: {
+      title: 'Switch',
+      category: 'Form Inputs',
+      description: 'Input element with on/off capabilities'
+    },
+  },
+  { 
+    path: 'ids-textarea', 
+    loadChildren: () => import('./components/ids-textarea/ids-textarea.module').then(m => m.IdsTextareaModule),
+    data: {
+      title: 'Textarea',
+      category: 'Form Inputs',
+      description: 'An input for multi line text'
+    },
+  },
+  { 
+    path: 'ids-time-picker',
+    loadChildren: () => import('./components/ids-time-picker/ids-time-picker.module').then(m => m.IdsTimePickerModule),
+    data: {
+      title: 'Time Picker',
+      category: 'Form Inputs',
+      description: 'Input field for time and dates'
+    },
+  },
+  { 
+    path: 'ids-trigger-field',
+    loadChildren: () => import('./components/ids-trigger-field/ids-trigger-field.module').then(m => m.IdsTriggerFieldModule),
+    data: {
+      title: 'Trigger Field',
+      category: 'Form Inputs',
+      description: 'An input field with an icon'
+    },
+  },
+  { 
+    path: 'ids-upload',
+    loadChildren: () => import('./components/ids-upload/ids-upload.module').then(m => m.IdsUploadModule),
+    data: {
+      title: 'Upload',
+      category: 'Form Inputs',
+      description: 'Upload a single file in a field'
+    },
+  },
+  { 
+    path: 'ids-upload-advanced',
+    loadChildren: () => import('./components/ids-upload-advanced/ids-upload-advanced.module').then(m => m.IdsUploadAdvancedModule),
+    data: {
+      title: 'Upload Advanced',
+      category: 'Form Inputs',
+      description: 'Upload multiple files'
     },
   },
   {
@@ -21,6 +255,87 @@ export const routes: Routes = [
       title: "Alert",
       category: "Form Inputs",
       description: "Alert Indicator/icon",
+    },
+  },
+  { 
+    path: 'ids-reactive-forms',
+    loadChildren: () => import('./components/ids-reactive-forms/ids-reactive-forms.module').then(m => m.IdsReactiveFormsModule),
+    data: {
+      title: 'Angular Reactive Forms',
+      category: 'Form Inputs',
+      description: 'Reactive forms examples'
+    },
+  },
+  { 
+    path: 'ids-action-sheet', 
+    loadChildren: () => import('./components/ids-action-sheet/ids-action-sheet.module').then(m => m.IdsActionSheetModule),
+    data: {
+      title: 'Action Sheet',
+      category: 'Navigation and Interaction',
+      description: 'Displays a menu at the bottom of your screen on mobile devices'
+    },
+  },
+  { 
+    path: 'ids-action-panel', 
+    loadChildren: () => import('./components/ids-action-panel/ids-action-panel.module').then(m => m.IdsActionPanelModule),
+    data: {
+      title: 'Action Panel',
+      category: 'Navigation and Interaction',
+      description: 'Displays a menu at the bottom of your screen on mobile devices'
+    },
+  },
+  { 
+    path: 'ids-app-menu', 
+    loadChildren: () => import('./components/ids-app-menu/ids-app-menu.module').then(m => m.IdsAppMenuModule),
+    data: {
+      title: 'App Menu',
+      category: 'Navigation and Interaction',
+      description: 'Application Nav'
+    },
+  },
+  { 
+    path: 'ids-badge', 
+    loadChildren: () => import('./components/ids-badge/ids-badge.module').then(m => m.IdsBadgeModule),
+    data: {
+      title: 'Badge',
+      category: 'Navigation and Interaction',
+      description: 'Ui Text decoration'
+    },
+  },
+  { 
+    path: 'ids-breadcrumb',
+    loadChildren: () => import('./components/ids-breadcrumb/ids-breadcrumb.module').then(m => m.IdsBreadcrumbModule),
+    data: {
+      title: 'Breadcrumb',
+      category: 'Navigation and Interaction',
+      description: 'Navigational Wayfinding'
+    },
+  },
+  { 
+    path: 'ids-button',
+    loadChildren: () => import('./components/ids-button/ids-button.module').then(m => m.IdsButtonModule),
+    data: {
+      title: 'Button',
+      category: 'Navigation and Interaction',
+      description: 'Simple HTMLButtonElement'
+    },
+  },
+  { 
+    path: 'ids-loading-indicator', 
+    loadChildren: () => import('./components/ids-loading-indicator/ids-loading-indicator.module').then(m => m.IdsLoadingIndicatorModule),
+    data: {
+      title: 'Loading Indicator',
+      category: 'Navigation and Interaction',
+      description: 'Animation for loading'
+    },
+  },
+  { 
+    path: 'ids-menu',
+    loadChildren: () => import('./components/ids-menu/ids-menu.module').then(m => m.IdsMenuModule),
+    data: {
+      title: 'Menu',
+      category: 'Navigation and Interaction',
+      description: 'A static UI menu'
     },
   },
   {
