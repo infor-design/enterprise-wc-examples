@@ -1,1 +1,0 @@
-import '../ids-trigger-field';

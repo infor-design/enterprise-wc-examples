@@ -1,1 +1,0 @@
-{"version":3,"file":"process-anim-frame.js","sourceRoot":"","sources":["../../../../test/helpers/process-anim-frame.ts"],"names":[],"mappings":"AAAA;;;;;GAKG;AACH,MAAM,gBAAgB,GAAG,GAAG,EAAE,CAAC,IAAI,OAAO,CAAC,CAAC,OAAO,EAAE,EAAE;IACrD,MAAM,CAAC,qBAAqB,CAAC,GAAG,EAAE;QAChC,MAAM,CAAC,qBAAqB,CAAC,OAAO,CAAC,CAAC;IACxC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC;AAEH,eAAe,gBAAgB,CAAC"}

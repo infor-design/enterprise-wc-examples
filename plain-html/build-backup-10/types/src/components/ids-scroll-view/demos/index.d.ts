@@ -1,1 +1,0 @@
-import '../ids-scroll-view';

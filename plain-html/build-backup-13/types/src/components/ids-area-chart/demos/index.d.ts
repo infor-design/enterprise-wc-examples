@@ -1,1 +1,0 @@
-import '../ids-area-chart';

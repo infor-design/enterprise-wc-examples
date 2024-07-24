@@ -1,1 +1,0 @@
-{"version":3,"file":"listing.js","sourceRoot":"","sources":["../../../../../../src/components/ids-pie-chart/demos/listing.ts"],"names":[],"mappings":"AAAA,eAAe;AACf,OAAO,qCAAqC,CAAC;AAC7C,OAAO,SAAS,MAAM,cAAc,CAAC;AAErC,MAAM,WAAW,GAAQ,QAAQ,CAAC,aAAa,CAAC,kBAAkB,CAAC,CAAC;AACpE,IAAI,WAAW,EAAE;IACf,WAAW,CAAC,IAAI,GAAG,SAAS,CAAC,QAAQ,CAAC;CACvC"}
