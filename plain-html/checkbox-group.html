@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>IDS Checkbox Group Component</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Cache-control" content="max-age=31536000">
+  <script type="module" src="./build/dist/production/components/ids-container/ids-container.js"></script>
+  <script type="module" src="./build/dist/production/components/ids-theme-switcher/ids-theme-switcher.js"></script>
+  <script type="module" src="./build/dist/production/components/ids-layout-grid/ids-layout-grid.js"></script>
+  <script type="module" src="./build/dist/production/components/ids-checkbox-group/ids-checkbox-group.js"></script>
+</head>
+<body>
+  <ids-container role="main" padding="8" hidden>
+    <ids-layout-grid auto-fit="true" padding="md">
+      <ids-layout-grid-cell>
+        <ids-text font-size="12" type="h1">Checkbox Groups</ids-text>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+    <ids-layout-grid auto-fit="true" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-checkbox-group label="Choose from these options:">
+          <ids-checkbox label="Option 1" checked="false"></ids-checkbox>
+          <ids-checkbox label="Option 2" checked="true"></ids-checkbox>
+          <ids-checkbox label="Option 3" checked="true"></ids-checkbox>
+        </ids-checkbox-group>
+    </ids-layout-grid-cell>
+    </ids-layout-grid>
+  </ids-container>
+
+</body>
+</html>

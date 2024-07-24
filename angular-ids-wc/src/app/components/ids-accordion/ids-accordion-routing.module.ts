@@ -6,42 +6,51 @@ import { ExampleComponent } from './demos/example/example.component';
 import { DisabledComponent } from './demos/disabled/disabled.component';
 import { IconComponent } from './demos/icon/icon.component';
 import { NestedComponent } from './demos/nested/nested.component';
+import { NestedSelectedEventComponent } from './demos/nested-selected-event/nested-selected-event.component';
 
 export const routes: Routes = [
-  { 
-    path: '', 
+  {
+    path: '',
     component: IdsAccordionComponent
   },
-  { 
-    path: 'example', 
+  {
+    path: 'example',
     component: ExampleComponent,
     data: {
       type: 'Example',
       description: 'Shows default accordion example',
     }
   },
-  { 
-    path: 'disabled', 
+  {
+    path: 'disabled',
     component: DisabledComponent,
     data: {
       type: 'Example',
       description: 'Shows a disabled accordion example',
     }
   },
-  { 
-    path: 'icon', 
+  {
+    path: 'icon',
     component: IconComponent,
     data: {
       type: 'Example',
       description: 'Shows an accordion with icons',
     }
   },
-  { 
-    path: 'nested', 
+  {
+    path: 'nested',
     component: NestedComponent,
     data: {
       type: 'Example',
       description: 'Shows a "tree", accordion nested example',
+    }
+  },
+  {
+    path: 'nested-selected-event',
+    component: NestedSelectedEventComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows a "tree", accordion nested example with selected event',
     }
   }
 ];
