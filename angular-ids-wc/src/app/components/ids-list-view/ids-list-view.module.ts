@@ -8,6 +8,7 @@ import { SelectableSingleComponent } from './demos/selectable-single/selectable-
 import { SelectableMultipleComponent } from './demos/selectable-multiple/selectable-multiple.component';
 import { TooltipOverflowEllipsesComponent } from './demos/tooltip-overflow-ellipses/tooltip-overflow-ellipses.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
+import { VirtualScrollComponent } from './demos/virtual-scroll/virtual-scroll.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DemoListingModule } from '../demo-listing/demo-listing.module';
     ExampleComponent,
     SelectableSingleComponent,
     SelectableMultipleComponent,
-    TooltipOverflowEllipsesComponent
+    TooltipOverflowEllipsesComponent,
+    VirtualScrollComponent
   ],
   imports: [
     CommonModule,
