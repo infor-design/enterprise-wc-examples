@@ -5,6 +5,7 @@ import { IdsAppMenuComponent } from './ids-app-menu.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
 import { ExampleFooterComponent } from './demos/example-footer/example-footer.component';
+import { DynamicContentComponent } from './demos/dynamic-content/dynamic-content.component';
 
 export const routes: Routes = [
   {
@@ -22,6 +23,10 @@ export const routes: Routes = [
   {
     path: 'sandbox',
     component: SandboxComponent
+  },
+  {
+    path: 'dynamic-content',
+    component: DynamicContentComponent
   }
 ];
 

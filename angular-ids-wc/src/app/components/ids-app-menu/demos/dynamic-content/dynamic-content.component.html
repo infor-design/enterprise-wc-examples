@@ -1,0 +1,44 @@
+<ids-container padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+
+  <ids-layout-grid>
+    <ids-text font-size="12" type="h1">Ids App Menu</ids-text>
+  </ids-layout-grid>
+
+  <ids-layout-grid>
+    <ids-layout-grid-cell>
+      <ids-button
+        #appMenuTriggerBtn
+        id="app-menu-trigger"
+        icon="menu"
+        (click)="disableTriggerButton()"
+      >
+        <span class="audible">Open App Menu</span>
+      </ids-button>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+
+  <ids-app-menu
+    #appMenuDrawer
+    id="app-menu"
+    (hide)="enableTriggerButton()"
+    (selected)="handleSelected($event)"
+  >
+    <ids-accordion>
+      @for (action of actions; track action) {
+        <ids-accordion-panel id="p1">
+          <ids-accordion-header id="h1" slot="header" [icon]="action.icon">
+            <ids-text>{{ action.text }}</ids-text>
+          </ids-accordion-header>
+          @for (child of action.children; track child) {
+            <ids-accordion-panel slot="content" id="sp1">
+              <ids-accordion-header id="sh1" slot="header">
+                <ids-text font-size="14">{{ child }}</ids-text>
+              </ids-accordion-header>
+            </ids-accordion-panel>
+          }
+        </ids-accordion-panel>
+      }
+    </ids-accordion>
+  </ids-app-menu>
+</ids-container>
