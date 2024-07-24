@@ -10,6 +10,7 @@ import { DynamicDisabledItemsComponent } from './demos/dynamic-disabled-items/dy
 import { SelectedEventComponent } from './demos/selected-event/selected-event.component';
 import { TooltipOverflowEllipsesComponent } from './demos/tooltip-overflow-ellipses/tooltip-overflow-ellipses.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
+import { VirtualScrollComponent } from './demos/virtual-scroll/virtual-scroll.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,10 @@ import { DemoListingModule } from '../demo-listing/demo-listing.module';
     ExampleComponent,
     SelectableSingleComponent,
     SelectableMultipleComponent,
+    TooltipOverflowEllipsesComponent,
     DynamicDisabledItemsComponent,
     SelectedEventComponent,
-    TooltipOverflowEllipsesComponent
+    VirtualScrollComponent,
   ],
   imports: [
     CommonModule,

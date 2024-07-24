@@ -1,0 +1,30 @@
+<ids-container padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+  
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-text font-size="12" type="h1">List View</ids-text>
+  </ids-layout-grid>
+
+  <ids-layout-grid cols="2" gap="xl" padding="md">
+    <ids-layout-grid-cell col-span="1">
+      <ids-text font-size="12" type="h1">List View with virtual-scroll attribute</ids-text><br>
+      <div class="parent-container">
+        <ids-list-view #listView id="demo-lv-virtual-scroll" virtual-scroll="true" item-height="95" selectable="single">
+        </ids-list-view>
+      </div>
+    </ids-layout-grid-cell>
+    <ids-layout-grid-cell col-span="1">
+      <div class="parent-container">
+        <ids-text font-size="12" type="h1">List View wrapped in ids-virtual-scroll web-component</ids-text><br>
+        <ids-list-view id="demo-lv-virtual-scroll2">
+          <ids-virtual-scroll #virtualScroll height="100vh" id="virtual-scroll-1" item-height="95" buffer-size="3" item-count="1000"> 
+            <div class="ids-list-view"> 
+              <div class="ids-list-view-body" part="contents"> 
+              </div>
+            </div>
+          </ids-virtual-scroll>
+        </ids-list-view>
+      </div>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>
