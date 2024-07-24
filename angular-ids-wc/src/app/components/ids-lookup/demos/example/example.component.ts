@@ -68,11 +68,13 @@ export class ExampleComponent implements AfterViewInit {
   }
 
   onSelectedStaticValueChanged(e) {
-    console.log('target normal', e.target.value);
+    console.log('target normal value', e.target.value);
+    console.log('target normal', e.target);
   }
 
   onSelectedValueChanged(e) {
-    console.log('target input ', e.target.value);
+    console.log('target input value', e.target.value);
+    console.log('target input', e.target);
 
   }
 }
