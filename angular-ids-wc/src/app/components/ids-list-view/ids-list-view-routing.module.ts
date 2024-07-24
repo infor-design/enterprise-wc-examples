@@ -17,31 +17,59 @@ export const routes: Routes = [
   },
   {
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows default listview example',
+    }
   },
   {
     path: 'selectable-single',
-    component: SelectableSingleComponent
+    component: SelectableSingleComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows a single select listview example',
+    }
   },
   {
     path: 'selectable-multiple',
-    component: SelectableMultipleComponent
+    component: SelectableMultipleComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows a multiple select listview example',
+    }
   },
   {
     path: 'tooltip-overflow-ellipses',
-    component: TooltipOverflowEllipsesComponent
+    component: TooltipOverflowEllipsesComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows an ellipsis tooltip example',
+    }
   },
   {
     path: 'dynamic-disabled-items',
-    component: DynamicDisabledItemsComponent
+    component: DynamicDisabledItemsComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows disabled items',
+    }
   },
   {
     path: 'selected-event',
-    component: SelectedEventComponent
+    component: SelectedEventComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows the select event fires',
+    }
   },
   {
     path: 'virtual-scroll',
-    component: VirtualScrollComponent
+    component: VirtualScrollComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows using virtual scroll',
+    }
   }
 ];
 
