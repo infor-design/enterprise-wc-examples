@@ -149,5 +149,19 @@
         <ids-icon icon="settings"></ids-icon>
       </ids-button>
     </ids-layout-grid-cell>
+
+    <ids-layout-grid-cell>
+      <ids-menu-button id="menu-button" icon="settings" appearance="tertiary" menu="my-menu" dropdown-icon>
+        <span>Settings</span>
+      </ids-menu-button>
+      
+      <ids-popup-menu id="my-menu" target="menu-button" trigger-type="click">
+        <ids-menu-group>
+          <ids-menu-item value="small">Small</ids-menu-item>
+          <ids-menu-item value="medium">Medium</ids-menu-item>
+          <ids-menu-item value="large">Large</ids-menu-item>
+        </ids-menu-group>
+      </ids-popup-menu>
+    </ids-layout-grid-cell>
   </ids-layout-grid>
 </ids-container>
