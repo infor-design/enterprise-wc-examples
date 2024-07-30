@@ -3,21 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-    "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^15.0.2",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
-    "ids-enterprise-wc": "1.1.0",
-=======
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
-    "ids-enterprise-wc": "1.0.0-beta.22",
->>>>>>> fe9ea1600d1bf1d2ac61bd05cc680707340dd01d
-    "react": "^18.2.0",
+    "ids-enterprise-wc": "1.4.0",
+    "react": "^18.3.1",
     "react-app-polyfill": "^3.0.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1"
   },
   "scripts": {
@@ -41,18 +34,18 @@
   },
   "devDependencies": {
     "eslint-config-standard-react": "^13.0.0",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "@babel/eslint-parser": "^7.24.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "@babel/eslint-parser": "^7.25.1",
     "jest": "^29.7.0",
     "jest-puppeteer": "^10.0.1",
-    "postcss": "^8.4.38",
+    "postcss": "^8.4.40",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-normalize": "^10.0.1",
-    "postcss-preset-env": "^9.5.5",
+    "postcss-preset-env": "^9.6.0",
     "prettier-standard": "^16.4.1",
-    "puppeteer": "^22.6.5",
+    "puppeteer": "^22.14.0",
     "standard": "^17.1.0"
   }
 }
