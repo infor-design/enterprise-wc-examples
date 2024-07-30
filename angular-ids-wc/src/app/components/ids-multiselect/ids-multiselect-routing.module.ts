@@ -3,15 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { IdsMultiselectComponent } from './ids-multiselect.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { ExampleTypeaheadComponent } from './demos/typeahead/typeahead.component';
 
 export const routes: Routes = [
-  { 
-    path: '', 
+  {
+    path: '',
     component: IdsMultiselectComponent,
   },
-  { 
+  {
     path: 'example',
     component: ExampleComponent,
+  },
+  {
+    path: 'typeahead',
+    component: ExampleTypeaheadComponent,
   }
 ];
 
