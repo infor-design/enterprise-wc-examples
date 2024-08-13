@@ -11,7 +11,7 @@
     "@angular/platform-browser": "^18.1.2",
     "@angular/platform-browser-dynamic": "^18.1.2",
     "@angular/router": "^18.1.2",
-    "ids-enterprise-wc": "^1.4.1",
+    "ids-enterprise-wc": "1.4.2",
     "rxjs": "^7.8.1",
     "tslib": "^2.5.2",
     "zone.js": "~0.14.2"
