@@ -21,6 +21,7 @@ export class DataDrivenComponent {
 
   displayCheckboxStates = false;
   checkboxOptions = [];
+  isSelected = false;
 
   constructor() { }
 
@@ -44,5 +45,11 @@ export class DataDrivenComponent {
 
     this.checkboxOptions[i].checked = checked;
     console.info(`Checkbox ${id} updated checked state to ${checked}`, this.checkboxOptions[i]);
+  }
+
+  selectItem(event: Event) {
+    event.preventDefault();
+    this.isSelected = !this.isSelected;
+    console.log('Click event triggered on checkbox web component', event);
   }
 }
