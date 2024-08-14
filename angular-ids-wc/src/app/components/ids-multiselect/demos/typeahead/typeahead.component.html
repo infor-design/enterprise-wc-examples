@@ -1,0 +1,66 @@
+<ids-container padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-text font-size="12" type="h1">Multiselect Typeahead</ids-text>
+  </ids-layout-grid>
+
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-layout-grid-cell>
+      <ids-multiselect #idsMultiselect typeahead id="multiselect-2" label="Test Multiselect (max choices 3)" max="3">
+        <ids-list-box>
+          <ids-list-box-option class="multiselect-option" id="al2" value="al" tooltip="The State of Alabama"><ids-checkbox no-margin label="Alabama" class="justify-center"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option class="multiselect-option" id="ak2" value="ak" tooltip="The State of Alaska"><ids-checkbox no-margin label="Alaska" class="justify-center"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option class="multiselect-option" id="az2" value="az" tooltip="The State of Arizona"><ids-checkbox no-margin label="Arizona" class="justify-center"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option class="multiselect-option" id="ar2" value="ar" tooltip="The State of Arkansas"><ids-checkbox no-margin label="Arkansas" class="justify-center"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option class="multiselect-option" id="ca2" value="ca" tooltip="The State of California"><ids-checkbox no-margin label="California" class="justify-center"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option class="multiselect-option" id="co2" value="co" tooltip="The State of Colorado"><ids-checkbox no-margin label="Colorado" class="justify-center"></ids-checkbox></ids-list-box-option>
+          <ids-list-box-option class="multiselect-option" id="nj2" value="nj" tooltip="The State of New Jersey" selected><ids-checkbox no-margin checked="true" label="New Jersey" class="justify-center"></ids-checkbox></ids-list-box-option>
+        </ids-list-box>
+      </ids-multiselect>
+
+      <ids-multiselect #idsMultiselect typeahead id="multiselect-3" label="Test Multiselect (with icons)" max="3" tags="true">
+        <ids-list-box>
+          <ids-list-box-option value="opt1" id="opt1-d5">
+            <ids-icon icon="user-profile"></ids-icon>
+            <span>Option One</span>
+          </ids-list-box-option>
+          <ids-list-box-option value="opt2" id="opt2-d5">
+            <ids-icon icon="project"></ids-icon>
+            <span>Option Two</span>
+          </ids-list-box-option>
+          <ids-list-box-option value="opt3" id="opt3-d5">
+            <ids-icon icon="purchasing"></ids-icon>
+            <span>Option Three</span>
+          </ids-list-box-option>
+          <ids-list-box-option value="opt4" id="opt4-d5">
+            <ids-icon icon="quality"></ids-icon>
+            <span>Option Four</span></ids-list-box-option>
+          <ids-list-box-option value="opt5" id="opt5-d5">
+            <ids-icon icon="rocket"></ids-icon>
+            <span>Option Five</span>
+          </ids-list-box-option>
+          <ids-list-box-option value="opt6" id="opt6-d5">
+            <ids-icon icon="roles"></ids-icon>
+            <span>Option Six</span>
+          </ids-list-box-option>
+        </ids-list-box>
+      </ids-multiselect>
+
+      <ids-multiselect #idsMultiselect typeahead id="multiselect-4" tags="true" label="Test Multiselect (using ngFor)" max="10">
+        <ids-list-box>
+          <ng-container *ngFor="let option of coldStates.concat(hotStates); index as i">
+            <ids-list-box-option
+              class="multiselect-option"
+              [id]="option.id"
+              [value]="option.value"
+              [tooltip]="option.tooltip"
+            >
+              <ids-checkbox no-margin [label]="option.label" class="justify-center"></ids-checkbox>
+            </ids-list-box-option>
+          </ng-container>
+        </ids-list-box>
+      </ids-multiselect>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>

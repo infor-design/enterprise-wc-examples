@@ -14,19 +14,35 @@ export const routes: Routes = [
   },
   { 
     path: 'example',
-    component: ExampleComponent
+    component: ExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows all button examples',
+    }
   },
   { 
     path: 'responsive',
-    component: ResponsiveComponent
+    component: ResponsiveComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows 100% button width',
+    }
   },
   { 
     path: 'test-fallback-slot',
-    component: TestFallbackSlotComponent
+    component: TestFallbackSlotComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows using a fallback slot',
+    }
   },
   { 
     path: 'performance',
-    component: PerformanceComponent
+    component: PerformanceComponent,
+    data: {
+      type: 'Example',
+      description: 'Shows a performance example',
+    }
   }
 ];
 

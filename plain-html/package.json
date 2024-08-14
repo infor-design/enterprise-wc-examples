@@ -9,6 +9,6 @@
   "author": "Infor",
   "license": "Apache",
   "devDependencies": {
-    "ids-enterprise-wc": "1.2.0"
+    "ids-enterprise-wc": "1.4.0"
   }
 }

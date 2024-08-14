@@ -1,23 +1,32 @@
 <ids-container padding="8" hidden>
   <ids-theme-switcher mode="light"></ids-theme-switcher>
-  
+
   <ids-layout-grid auto-fit="true" padding="md">
     <ids-text font-size="12" type="h1">Menu Buttons</ids-text>
   </ids-layout-grid>
   <ids-layout-grid auto-fit="true" gap="md" padding-x="md">
     <ids-layout-grid-cell>
       <!-- When target attribute is included the parent gets set as target -->
-      <ids-menu-button #menuButton1 id="menu-button" icon="settings" appearance="tertiary" menu="my-menu" dropdown-icon>
+      <ids-menu-button
+        #menuButton1
+        id="menu-button"
+        icon="settings"
+        appearance="tertiary"
+        menu="my-menu"
+        dropdown-icon
+      >
         <span>Settings</span>
       </ids-menu-button>
-      <ids-popup-menu id="my-menu" target="menu-button" trigger-type="click">
+      <ids-popup-menu id="my-menu" target="menu-button">
         <ids-menu-group>
           <ids-menu-item>Personalize Columns...</ids-menu-item>
         </ids-menu-group>
         <ids-separator></ids-separator>
         <ids-menu-group select="single" id="sizes">
           <ids-menu-header>Row Height</ids-menu-header>
-          <ids-menu-item disabled="true" value="extra-small">Extra Small</ids-menu-item>
+          <ids-menu-item disabled="true" value="extra-small"
+            >Extra Small</ids-menu-item
+          >
           <ids-menu-item value="small">Small</ids-menu-item>
           <ids-menu-item value="medium">Medium</ids-menu-item>
           <ids-menu-item value="large" selected="true">Large</ids-menu-item>
@@ -31,16 +40,10 @@
         </ids-menu-group>
       </ids-popup-menu>
 
-      <ids-menu-button 
-        icon="more"
-        id="icon-button" 
-        menu="icon-menu">
+      <ids-menu-button icon="more" id="icon-button" menu="icon-menu">
         <span class="audible">Icon Only Button</span>
       </ids-menu-button>
-      <ids-popup-menu
-        id="icon-menu" 
-        trigger="click"
-      >
+      <ids-popup-menu id="icon-menu">
         <ids-menu-group select="multiple" keep-open="true">
           <ids-menu-item value="1">Option One</ids-menu-item>
           <ids-menu-item value="2">Option Two</ids-menu-item>
@@ -50,3 +53,4 @@
     </ids-layout-grid-cell>
   </ids-layout-grid>
 </ids-container>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>IDS Color Picker Component</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Cache-control" content="max-age=31536000">
+  <script type="module" src="./build/dist/production/components/ids-container/ids-container.js"></script>
+  <script type="module" src="./build/dist/production/components/ids-theme-switcher/ids-theme-switcher.js"></script>
+  <script type="module" src="./build/dist/production/components/ids-layout-grid/ids-layout-grid.js"></script>
+  <!-- <script type="module" src="./build/dist/production/components/ids-trigger-field/ids-trigger-field.js"></script> -->
+  <script type="module" src="./build/dist/production/components/ids-color-picker/ids-color-picker.js"></script>
+</head>
+<body>
+  <ids-container role="main" padding="8" hidden>
+    <ids-layout-grid auto-fit="true" cols="2" gap="md" padding-x="md">
+      <ids-layout-grid-cell>
+        <ids-color-picker id="color-picker-e2e-test" label="Default Color Picker"></ids-color-picker>
+        <ids-color-picker label="Clearable Color Picker" value="ruby-80" clearable></ids-color-picker>
+        <ids-color-picker label="Custom Colors" value="#F4ACB7">
+          <ids-color hex="#D8E2DC"></ids-color>
+          <ids-color hex="#FFE5D9"></ids-color>
+          <ids-color hex="#FFCAD4"></ids-color>
+          <ids-color hex="#F4ACB7"></ids-color>
+          <ids-color hex="#9D8189"></ids-color>
+        </ids-color-picker>
+
+        <ids-color-picker label="Suppress Labels" value="#3B1470" suppress-labels></ids-color-picker>
+        <ids-color-picker label="Suppress Tooltips" value="#3B1470" suppress-tooltips></ids-color-picker>
+        <ids-color-picker label="Suppress Labels + Tooltips" value="#3B1470" suppress-labels suppress-tooltips></ids-color-picker>
+      </ids-layout-grid-cell>
+
+      <ids-layout-grid-cell>
+        <ids-color-picker label="Disabled Color Picker" value="#941E1E" disabled></ids-color-picker>
+        <ids-color-picker label="Readonly Color Picker" value="#941E1E" readonly="true"></ids-color-picker>
+        <ids-color-picker label="Validation" validate="required" clearable></ids-color-picker>
+        <ids-color-picker label="Dirty Tracker" value="#E66467" dirty-tracker></ids-color-picker>
+        <ids-color-picker label="Advanced Color Picker" value="#E66467" advanced="true"></ids-color-picker>
+      </ids-layout-grid-cell>
+    </ids-layout-grid>
+  </ids-container>
+
+</body>
+</html>

@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IdsModuleNavComponent } from './ids-module-nav.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
+import { DynamicContentComponent } from './demos/dynamic-content/dynamic-content.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,10 @@ export const routes: Routes = [
   {
     path: 'sandbox',
     component: SandboxComponent
+  },
+  {
+    path: 'dynamic-content',
+    component: DynamicContentComponent
   }
 ];
 
