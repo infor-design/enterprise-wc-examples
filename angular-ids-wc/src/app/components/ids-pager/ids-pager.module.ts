@@ -7,6 +7,8 @@ import { ExampleComponent } from './demos/example/example.component';
 import { ListComponent } from './demos/list/list.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
+import { PagerWrapperComponent } from './demos/wrapper/pager-wrapper.component';
+import { WrapperExampleComponent } from './demos/wrapper/wrapper-example.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { DemoListingModule } from '../demo-listing/demo-listing.module';
     IdsPagerComponent,
     ExampleComponent,
     ListComponent,
-    SandboxComponent
+    SandboxComponent,
+    PagerWrapperComponent,
+    WrapperExampleComponent
   ],
   imports: [
     CommonModule,
