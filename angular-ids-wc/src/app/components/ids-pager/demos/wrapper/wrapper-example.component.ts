@@ -13,8 +13,8 @@ export class WrapperExampleComponent implements OnInit, AfterViewInit {
 
   enableFirstPage = false;
   enablePreviousPage = false;
-  enableNextPage = true;
-  enableLastPage = true;
+  enableNextPage = false;
+  enableLastPage = false;
 
   pageSize = 10;
   pageSizes = [ 5, 10, 20, 50, 100, 200 ];
@@ -26,12 +26,12 @@ export class WrapperExampleComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.enableFirstPage = true;
-    //   this.enablePreviousPage = true;
-    //   this.enableNextPage = false;
-    //   this.enableLastPage = false;
-    // });
+    setTimeout(() => {
+      this.enableFirstPage = false;
+      this.enablePreviousPage = false;
+      this.enableNextPage = true;
+      this.enableLastPage = true;
+    });
   }
 
   onFirstPage($event: any) {
