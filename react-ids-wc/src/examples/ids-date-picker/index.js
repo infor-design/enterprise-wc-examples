@@ -13,7 +13,7 @@ const IdsDatePicker = () => {
         color: 'green-60',
         dates: ['12/31/2021', '12/24/2021', '1/1/2022'],
       },
-      { name: 'Weekends', color: 'amber-60', dayOfWeek: [0, 6] },
+      { name: 'Weekends', color: 'yellow-60', dayOfWeek: [0, 6] },
       {
         name: 'Other',
         color: 'red-30',

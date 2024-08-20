@@ -5,7 +5,7 @@ describe('ids-locale e2e tests', () => {
     page.on('pageerror', error => errors.push(error.text));
 
     await page.goto('http://localhost:3000/ids-locale');
-    await page.waitForSelector('ids-text[translate-text="true"]');
+    await page.waitForSelector('ids-text[trangray-text="true"]');
   });
 
   it('renders with no errors', () => {

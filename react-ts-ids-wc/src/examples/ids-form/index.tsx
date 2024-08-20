@@ -138,7 +138,7 @@ const IdsForm = () => {
             <ids-color-picker
               id="ship-color"
               label="Ship Color"
-              value="ruby-80"
+              value="red-80"
               clearable
               dirty-tracker
               validate="required"

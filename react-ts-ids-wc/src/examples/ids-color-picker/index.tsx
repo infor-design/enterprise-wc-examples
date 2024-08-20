@@ -11,7 +11,7 @@ const IdsColorPicker = () => {
       <IdsGrid auto-fit cols="2" gap="md">
         <IdsGridCell>
           <ids-color-picker id="color-picker-e2e-test" label="Default Color Picker"></ids-color-picker>
-          <ids-color-picker label="Clearable Color Picker" value="ruby-80" clearable></ids-color-picker>
+          <ids-color-picker label="Clearable Color Picker" value="red-80" clearable></ids-color-picker>
           <ids-color-picker label="Custom Colors" value="#F4ACB7">
             <ids-color hex="#D8E2DC"></ids-color>
             <ids-color hex="#FFE5D9"></ids-color>

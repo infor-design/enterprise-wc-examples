@@ -32,10 +32,10 @@
                           type="h2"
                           font-size="16"
                           font-weight="bold"
-                          color="slate-100"
+                          color="gray-100"
                           mode="light"
                          >{component.type}</ids-text>
-                        <ids-text type="h2" font-size="16" color="slate-60" mode="light">{component.description}</ids-text>
+                        <ids-text type="h2" font-size="16" color="gray-60" mode="light">{component.description}</ids-text>
                       </div>
                     </ids-card>
                   </ids-block-grid-item>

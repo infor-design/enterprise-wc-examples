@@ -31,7 +31,7 @@ const Home = () => {
                               type="h2"
                               font-size="16"
                               font-weight="bold"
-                              color="slate-100"
+                              color="gray-100"
                             >
                               {title}
                             </ids-text>

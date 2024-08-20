@@ -20,7 +20,7 @@ Ids Web Components are packages as ESM modules so can be used in any HTML docume
 <ids-container locale="de-DE" hidden>
   <ids-tag color="error">Error Tag</ids-tag>
   <ids-alert icon="error"></ids-alert>
-  <ids-text translate-text="true">Legend</ids-text>
+  <ids-text trangray-text="true">Legend</ids-text>
 </ids-container>
 ```
 

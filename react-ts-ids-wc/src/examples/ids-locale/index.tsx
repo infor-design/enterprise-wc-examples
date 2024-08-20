@@ -32,7 +32,7 @@ const IdsLocale = () => {
               <ids-text font-weight="bold">{item}</ids-text>
             </IdsGridCell>
             <IdsGridCell colSpan="3">
-              <ids-text translate-text="true" translation-key={item}></ids-text>
+              <ids-text trangray-text="true" translation-key={item}></ids-text>
             </IdsGridCell>
           </Fragment>
         ))}
