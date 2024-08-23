@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { IdsReactiveFormsComponent } from './ids-reactive-forms.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { FormControlComponent } from './demos/form-control/form-control.component';
 
 export const routes: Routes = [
   {
@@ -14,7 +15,15 @@ export const routes: Routes = [
     component: ExampleComponent,
     data: {
       type: 'Example',
-      description: 'All fields in a reactive form'
+      description: 'All fields in a reactive form '
+    }
+  },
+  {
+    path: 'form-control',
+    component: FormControlComponent,
+    data: {
+      type: 'Example',
+      description: 'FormControl and value binding'
     }
   }
 ];

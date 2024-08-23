@@ -6,12 +6,14 @@ import { IdsReactiveFormsRoutingModule } from './ids-reactive-forms-routing.modu
 import { IdsReactiveFormsComponent } from './ids-reactive-forms.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
+import { FormControlComponent } from './demos/form-control/form-control.component';
 
 
 @NgModule({
   declarations: [
     IdsReactiveFormsComponent,
-    ExampleComponent
+    ExampleComponent,
+    FormControlComponent
   ],
   imports: [
     CommonModule,
