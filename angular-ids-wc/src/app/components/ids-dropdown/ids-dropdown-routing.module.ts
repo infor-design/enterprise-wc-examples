@@ -5,6 +5,7 @@ import { IdsDropdownComponent } from './ids-dropdown.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { TypeaheadComponent } from './demos/typeahead/typeahead.component';
 import { SizesComponent } from './demos/sizes/sizes.component';
+import { SandBoxComponent } from './demos/sandbox/sandbox.component';
 
 export const routes: Routes = [
   { 
@@ -33,6 +34,14 @@ export const routes: Routes = [
     data: {
       type: 'Example',
       description: 'Shows various sized dropdowns',
+    }
+  },
+  {
+    path: 'sandbox',
+    component: SandBoxComponent,
+    data: {
+      type: 'Sandbox',
+      description: 'Example Dropdown',
     }
   }
 ];

@@ -7,6 +7,9 @@ import { ExampleComponent } from './demos/example/example.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
 import { TypeaheadComponent } from './demos/typeahead/typeahead.component';
 import { SizesComponent } from './demos/sizes/sizes.component';
+import { SandBoxComponent } from './demos/sandbox/sandbox.component';
+import { FormsModule } from '@angular/forms';
+import { IdsFormAccessorsModule } from 'src/directives/ids-form-accessors.module';
 
 
 @NgModule({
@@ -14,10 +17,13 @@ import { SizesComponent } from './demos/sizes/sizes.component';
     IdsDropdownComponent,
     ExampleComponent,
     TypeaheadComponent,
-    SizesComponent
+    SizesComponent,
+    SandBoxComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    IdsFormAccessorsModule,
     IdsDropdownRoutingModule,
     DemoListingModule
   ],
