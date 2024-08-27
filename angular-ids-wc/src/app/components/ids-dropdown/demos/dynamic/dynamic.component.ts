@@ -1,36 +1,41 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
-import { Subject } from 'rxjs';
-import { DataService } from 'src/app/shared/mock/data.service';
+import { Component } from '@angular/core';
+
+type Product = {
+  id: string;
+  name: string;
+};
 
 @Component({
   selector: 'app-dropdown-dynamic',
   templateUrl: './dynamic.component.html',
   styleUrls: ['./dynamic.component.css']
 })
-export class DynamicComponent implements AfterViewInit {
-  @ViewChild('dropdown1', { read: ElementRef }) dropdown1;
-  @ViewChild('dropdownAsync', { read: ElementRef }) dropdownAsync;
-  @Input() options = new Subject<Array<any>>();
+export class DynamicComponent {
+  productConnections: Product[] = [
+    {
+      id: '1',
+      name: 'Product 1',
+    },
+    {
+      id: '2',
+      name: 'Product 2',
+    },
+    {
+      id: '3',
+      name: 'Product 3',
+    },
+  ];
 
-  constructor(
-    public dataService: DataService
-  ) { }
+  selectedConnection = this.productConnections[2];
 
-  ngAfterViewInit(): void {
-    this.dataService.getJsonData('states')
-      .subscribe(res => {
-        function beforeShow() {
-          return res;
-        }
-        this.dropdownAsync.nativeElement.beforeShow = beforeShow;
-      });
-  }
+  // Fake it to make it compile
+  lang = {
+    get(key: string) {
+      return 'Label';
+    },
+  };
 
-  handleChange(e: any) {
-    console.info(`Value Changed to ${e.target.value}: ${e.target.selectedOption.textContent}`);
-  }
-
-  handleFocus(e: any) {
-    console.info(`Focus Changed to ${e.target}`);
+  onSelectConnection(product: Product) {
+    this.selectedConnection = product;
   }
 }
