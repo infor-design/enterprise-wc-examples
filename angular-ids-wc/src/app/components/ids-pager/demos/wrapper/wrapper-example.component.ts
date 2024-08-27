@@ -16,8 +16,10 @@ export class WrapperExampleComponent implements OnInit, AfterViewInit {
   enableNextPage = false;
   enableLastPage = false;
 
+  pageNumber = 1;
   pageSize = 10;
   pageSizes = [ 5, 10, 20, 50, 100, 200 ];
+  totalPages = Math.ceil(this.totalRecords / this.pageSize);
 
   constructor() { }
 
@@ -36,7 +38,7 @@ export class WrapperExampleComponent implements OnInit, AfterViewInit {
 
   onFirstPage($event: any) {
     console.log('first Page Clicked')
-
+    this.pageNumber = 1;
     this.enableFirstPage = false;
     this.enablePreviousPage = false;
     this.enableNextPage = true;
@@ -45,19 +47,37 @@ export class WrapperExampleComponent implements OnInit, AfterViewInit {
 
   onPreviousPage($event: any) {
     console.log('first Page Clicked')
+    this.pageNumber--;
+    this.enableLastPage = true;
+    this.enableNextPage = true;
+
+    if (this.pageNumber === 1) {
+      this.enableFirstPage = false;
+      this.enablePreviousPage = false;
+    } else {
+      this.enableFirstPage = true;
+      this.enablePreviousPage = true;
+    }
   }
 
   onNextPage($event: any) {
     console.log('first Page Clicked')
+    this.pageNumber++;
     this.enableFirstPage = true;
     this.enablePreviousPage = true;
-    this.enableNextPage = true;
-    this.enableLastPage = true;
+
+    if (this.pageNumber === this.totalPages) {
+      this.enableLastPage = false;
+      this.enableNextPage = false;
+    } else {
+      this.enableNextPage = true;
+      this.enableLastPage = true;
+    }
   }
 
   onLastPage($event: any) {
     console.log('first Page Clicked')
-
+    this.pageNumber = this.totalPages;
     this.enableFirstPage = true;
     this.enablePreviousPage = true;
     this.enableNextPage = false;
