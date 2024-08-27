@@ -5,6 +5,7 @@ import { IdsDropdownRoutingModule } from './ids-dropdown-routing.module';
 import { IdsDropdownComponent } from './ids-dropdown.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { DemoListingModule } from '../demo-listing/demo-listing.module';
+import { DynamicComponent } from './demos/dynamic/dynamic.component';
 import { TypeaheadComponent } from './demos/typeahead/typeahead.component';
 import { SizesComponent } from './demos/sizes/sizes.component';
 import { SandBoxComponent } from './demos/sandbox/sandbox.component';
@@ -16,6 +17,7 @@ import { IdsFormAccessorsModule } from 'src/directives/ids-form-accessors.module
   declarations: [
     IdsDropdownComponent,
     ExampleComponent,
+    DynamicComponent,
     TypeaheadComponent,
     SizesComponent,
     SandBoxComponent

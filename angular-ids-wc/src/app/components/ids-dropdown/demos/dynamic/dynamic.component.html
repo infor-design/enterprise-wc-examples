@@ -1,0 +1,32 @@
+<ids-container padding="8" hidden>
+  <ids-theme-switcher mode="light"></ids-theme-switcher>
+
+  <ids-layout-grid>
+    <ids-text font-size="12" type="h1">Dropdown</ids-text>
+  </ids-layout-grid>
+  <ids-layout-grid auto-fit="true" padding="md">
+    <ids-layout-grid-cell>
+      <ids-container role="main">
+        <ids-dropdown
+          *ngIf="productConnections.length"
+          [id]="'connection-selection-dropdown'"
+          [value]="selectedConnection?.id"
+          [disabled]="productConnections.length < 2"
+          [label]="lang.get('dataConnection')"
+          class="connections-dropdown"
+        >
+          <ids-list-box>
+            <ids-list-box-option
+              *ngFor="let product of productConnections"
+              (click)="onSelectConnection(product)"
+              [value]="product.id"
+              [id]="product.id">
+              {{ product.name }}
+            </ids-list-box-option>
+          </ids-list-box>
+        </ids-dropdown>
+      </ids-container>
+
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>

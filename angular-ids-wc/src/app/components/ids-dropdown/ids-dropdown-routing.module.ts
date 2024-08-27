@@ -3,12 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { IdsDropdownComponent } from './ids-dropdown.component';
 import { ExampleComponent } from './demos/example/example.component';
+import { DynamicComponent } from './demos/dynamic/dynamic.component';
 import { TypeaheadComponent } from './demos/typeahead/typeahead.component';
 import { SizesComponent } from './demos/sizes/sizes.component';
 import { SandBoxComponent } from './demos/sandbox/sandbox.component';
 
 export const routes: Routes = [
-  { 
+  {
     path: '',
     component: IdsDropdownComponent
   },
@@ -18,6 +19,14 @@ export const routes: Routes = [
     data: {
       type: 'Example',
       description: 'Main dropdown example',
+    }
+  },
+  {
+    path: 'dynamic',
+    component: DynamicComponent,
+    data: {
+      type: 'Dynamic',
+      description: 'Main dropdown dynamic',
     }
   },
   {

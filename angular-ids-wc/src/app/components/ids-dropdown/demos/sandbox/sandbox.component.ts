@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, Input, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-sandbox-dropdown',
+  selector: 'app-dropdown-sandbox',
   templateUrl: './sandbox.component.html',
   styleUrls: ['./sandbox.component.css']
 })
