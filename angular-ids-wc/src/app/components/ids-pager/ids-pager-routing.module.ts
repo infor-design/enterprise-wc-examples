@@ -5,6 +5,7 @@ import { IdsPagerComponent } from './ids-pager.component';
 import { ExampleComponent } from './demos/example/example.component';
 import { ListComponent } from './demos/list/list.component';
 import { SandboxComponent } from './demos/sandbox/sandbox.component';
+import { WrapperExampleComponent } from './demos/wrapper/wrapper-example.component';
 
 export const routes: Routes = [
   { 
@@ -34,7 +35,16 @@ export const routes: Routes = [
       type: 'Example',
       description: 'Various pager sandbox examples',
     }
+  },
+  {
+    path: 'wrapper',
+    component: WrapperExampleComponent,
+    data: {
+      type: 'Example',
+      description: 'Illustrate making a pager wrapper',
+    }
   }
+
 ];
 
 @NgModule({

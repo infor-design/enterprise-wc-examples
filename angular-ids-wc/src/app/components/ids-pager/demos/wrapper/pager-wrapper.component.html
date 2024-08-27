@@ -1,0 +1,13 @@
+<ids-container>
+  <ids-layout-grid auto-fit="true" align-items="center">
+    <ids-layout-grid-cell>
+      <ids-pager #IdsPager page-size="{{pageSize}}">
+        <ids-pager-button first [disabled]="!enableFirstButton" (click)="onFirstPage($event)"></ids-pager-button>
+        <ids-pager-button previous [disabled]="!enablePreviousButton" (click)="onPreviousPage($event)"></ids-pager-button>
+        <ids-pager-button next [disabled]="!enableNextButton" (click)="onNextPage($event)"></ids-pager-button>
+        <ids-pager-button last [disabled]="!enableLastButton" (click)="onLastPage($event)"></ids-pager-button>
+        <ids-pager-dropdown #IdsPagerDropdown slot="end" label=""></ids-pager-dropdown>
+      </ids-pager>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>

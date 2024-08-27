@@ -1,0 +1,16 @@
+<app-pager-wrapper
+    [enableFirstButton]="enableFirstPage"
+    [enablePreviousButton]="enablePreviousPage"
+    [enableNextButton]="enableNextPage"
+    [enableLastButton]="enableLastPage"
+
+    [pageSize]="pageSize"
+    [pageSizes]="pageSizes"
+
+    (firstPage)="onFirstPage($event)"
+    (previousPage)="onPreviousPage($event)"
+    (nextPage)="onNextPage($event)"
+    (lastPage)="onLastPage($event)"
+    (pageSizeChange)="onPageSizeChange($event)"
+
+></app-pager-wrapper>
