@@ -7,13 +7,12 @@
     </ids-layout-grid-cell>
   </ids-layout-grid>
 
-  <ids-layout-grid cols="3" gap="md">
+  <ids-layout-grid cols="3" gap="md" padding="md">
     <ids-layout-grid-cell>
-      <ids-switch label="Allow notifications" checked="true"></ids-switch>
-      <ids-switch label="Allow my profile to be searched"></ids-switch>
-
-      <ids-switch label="Automatically approve requests" disabled="true"></ids-switch>
-      <ids-switch label="Allow connections" checked="true" disabled="true"></ids-switch>
+      <ids-switch label="Allow notifications" checked="true" (change)="handleChange($event)"></ids-switch>
+      <ids-switch label="Allow my profile to be searched" (change)="handleChange($event)"></ids-switch>
+      <ids-switch label="Automatically approve requests" disabled="true" (change)="handleChange($event)"></ids-switch>
+      <ids-switch label="Allow connections" checked="true" disabled="true" (change)="handleChange($event)"></ids-switch>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 </ids-container>

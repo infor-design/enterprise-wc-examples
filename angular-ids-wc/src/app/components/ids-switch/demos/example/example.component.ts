@@ -9,7 +9,9 @@ export class ExampleComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
+  handleChange(evt) {
+    console.info('IdsSwitch Change', evt.detail);
+  }
 }
