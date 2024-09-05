@@ -44,13 +44,13 @@ Can also look at the `localeDataPath` setting.
 ## To Run these Examples
 
 - clone the main repo https://github.com/infor-design/enterprise-wc-examples
-- we use node 18, but for this example it really doesn't matter.
-- we use python3's simple web server but anything can be used to serve the page on a port
+- we use node 20, but for this example it really doesn't matter.
+- we use a simple http server to serve the files.
 
 ```sh
-cd angular-ids-wc
+cd plain-html
 npm i
-python3 -m http.server
+npm run start
 ```
 
 - open http://localhost:8000/ in the browser

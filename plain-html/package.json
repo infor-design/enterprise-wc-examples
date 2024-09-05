@@ -4,11 +4,12 @@
   "description": "Plain HTML example of IDS Web Components",
   "main": "index.js",
   "scripts": {
-    "start": "python3 -m http.server"
+    "start": "http-server"
   },
   "author": "Infor",
   "license": "Apache",
   "devDependencies": {
-    "ids-enterprise-wc": "1.4.0"
+    "http-server": "^14.1.1",
+    "ids-enterprise-wc": "1.4.2"
   }
 }
