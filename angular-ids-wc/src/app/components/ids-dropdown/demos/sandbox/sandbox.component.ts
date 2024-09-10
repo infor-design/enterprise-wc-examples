@@ -7,8 +7,11 @@ import { Component, AfterViewInit, ViewChild, ElementRef, Input, signal } from '
 })
 export class SandBoxComponent implements AfterViewInit {
   @ViewChild('dropdownCar', { read: ElementRef }) dropdownCar;
+  @ViewChild('dropdownCarNgValue', { read: ElementRef }) dropdownCarNgValue;
 
-  constructor() { }
+  constructor() {
+    console.log('carOptions', this.carOptions);
+   }
 
   carOptions = [
     { name: "volvo", id: 1, idx: "1718693262079751588" },
@@ -24,6 +27,7 @@ export class SandBoxComponent implements AfterViewInit {
   sourceKey = signal("name");
 
   onSelectionChange($event: string): void {
+    console.log('onSelectionChange', $event);
     const newSelectedOption = this.carOptions.find((car) => car.idx === $event);
     this.selectedOption.set(newSelectedOption);
   }
@@ -35,5 +39,11 @@ export class SandBoxComponent implements AfterViewInit {
 
   changeSourceKey(sourceKey: string): void {
     this.sourceKey.set(sourceKey);
+  }
+
+  onSelectionChange2($event: { name: string; id: number, idx: string }): void {
+    console.log('onSelectionChange2', $event);
+    const newSelectedOption = this.carOptions.find((car) => car === $event);
+    this.selectedOption.set(newSelectedOption);
   }
 }

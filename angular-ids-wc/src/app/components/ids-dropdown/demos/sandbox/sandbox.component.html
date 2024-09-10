@@ -19,32 +19,48 @@
         Change sourceKey to 'idx'
       </ids-button>
 
-      <select
-        name="cars value"
-        id="cars-value"
-        [ngModel]="selectedOption().idx"
-        (ngModelChange)="onSelectionChange($event)"
-      >
-        @for (car of carOptions; track car.id) {
-          <option [value]="car.idx">{{ car[sourceKey()] }}</option>
-        }
-      </select>
-
-      <ids-dropdown
-        #dropdownCar
-        id="dropdown-car"
-        label="Car Dropdown"
-        [ngModel]="selectedOption().idx"
-        (ngModelChange)="onSelectionChange($event)"
-      >
+      <ids-dropdown #dropdownCar id="dropdown-car" label="Car Dropdown" [ngModel]="selectedOption().idx"
+        (ngModelChange)="onSelectionChange($event)">
         <ids-list-box>
           @for (car of carOptions; track car.id) {
-            <ids-list-box-option [value]="car.idx">
-              {{ car[sourceKey()] }}
-            </ids-list-box-option>
+          <ids-list-box-option [value]="car.idx">
+            {{ car[sourceKey()] }}
+          </ids-list-box-option>
           }
         </ids-list-box>
       </ids-dropdown>
+
+      <label for="cars-value">Car Select: </label>
+      <select name="cars value" id="cars-value" [ngModel]="selectedOption().idx"
+        (ngModelChange)="onSelectionChange($event)">
+        @for (car of carOptions; track car.id) {
+        <option [value]="car.idx">{{ car[sourceKey()] }}</option>
+        }
+      </select>
+
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+  <ids-layout-grid auto-fit="true" padding="md">
+
+    <ids-layout-grid-cell>
+
+      <ids-dropdown name="dropdown-ngval" #dropdownCarNgValue id="dropdown-car-ngValue" label="Car Dropdown (ngValue)" [ngModel]="selectedOption()"
+        (ngModelChange)="onSelectionChange2($event)">
+        <ids-list-box>
+          @for (car of carOptions; track car.id) {
+          <ids-list-box-option [ngValue]="car">
+            {{ car.name }}
+          </ids-list-box-option>
+          }
+        </ids-list-box>
+      </ids-dropdown>
+
+      <label for="cars-ngValue">Car Select (ngValue): </label>
+      <select name="cars-ngval" id="cars-ngValue" [ngModel]="selectedOption()" (ngModelChange)="onSelectionChange2($event)">
+        @for (car of carOptions; track car.id) {
+        <option [ngValue]="car">{{ car.name }}</option>
+        }
+      </select>
     </ids-layout-grid-cell>
   </ids-layout-grid>
 </ids-container>
