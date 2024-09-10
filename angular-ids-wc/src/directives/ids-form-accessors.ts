@@ -1,13 +1,26 @@
 /* eslint-disable @angular-eslint/directive-class-suffix */
 /* eslint-disable @angular-eslint/directive-selector */
-import { Directive, ElementRef, Renderer2, forwardRef, inject } from "@angular/core";
-import { DefaultValueAccessor, CheckboxControlValueAccessor, NG_VALUE_ACCESSOR, RadioControlValueAccessor, COMPOSITION_BUFFER_MODE } from "@angular/forms";
+import {
+  Directive,
+  ElementRef,
+  Renderer2,
+  forwardRef,
+  inject,
+} from "@angular/core";
+import {
+  DefaultValueAccessor,
+  CheckboxControlValueAccessor,
+  NG_VALUE_ACCESSOR,
+  RadioControlValueAccessor,
+  COMPOSITION_BUFFER_MODE,
+  NgSelectOption,
+  SelectControlValueAccessor,
+} from "@angular/forms";
 
 @Directive({
   selector: `
     ids-input[formControlName],ids-input[formControl],ids-input[ngModel],
     ids-textarea[formControlName],ids-textarea[formControl],ids-textarea[ngModel],
-    ids-dropdown[formControlName],ids-dropdown[formControl],ids-dropdown[ngModel],
     ids-multiselect[formControlName],ids-multiselect[formControl],ids-multiselect[ngModel],
     ids-radio-group[formControlName],ids-radio-group[formControl],ids-radio-group[ngModel],
     ids-lookup[formControlName],ids-lookup[formControl],ids-lookup[ngModel],
@@ -31,7 +44,11 @@ import { DefaultValueAccessor, CheckboxControlValueAccessor, NG_VALUE_ACCESSOR, 
 })
 export class IdsDefaultValueAccessor extends DefaultValueAccessor {
   constructor() {
-    super(inject(Renderer2), inject(ElementRef), inject(COMPOSITION_BUFFER_MODE, { optional: true }));
+    super(
+      inject(Renderer2),
+      inject(ElementRef),
+      inject(COMPOSITION_BUFFER_MODE, { optional: true })
+    );
   }
 }
 
@@ -69,4 +86,44 @@ export class IdsCheckboxValueAccessor extends CheckboxControlValueAccessor {
     },
   ],
 })
-export class IdsRadioValueAccessor extends RadioControlValueAccessor { }
+export class IdsRadioValueAccessor extends RadioControlValueAccessor {}
+
+@Directive({
+  selector: `
+    ids-dropdown[formControlName],ids-dropdown[formControl],ids-dropdown[ngModel],
+  `,
+  standalone: true,
+  providers: [
+    {
+      // @see https://angular.io/errors/NG01203#ng01203-you-must-register-an-ngvalueaccessor-with-a-custom-form-control
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => IdsSelectControlValueAccessor),
+      multi: true,
+    },
+  ],
+})
+export class IdsSelectControlValueAccessor extends SelectControlValueAccessor {}
+
+@Directive({
+  selector: `
+    ids-list-box-option,
+  `,
+  standalone: true,
+  providers: [
+    {
+      // @see https://angular.io/errors/NG01203#ng01203-you-must-register-an-ngvalueaccessor-with-a-custom-form-control
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => IdsNgSelectOption),
+      multi: true,
+    },
+  ],
+})
+export class IdsNgSelectOption extends NgSelectOption {
+  constructor() {
+    super(
+      inject(ElementRef),
+      inject(Renderer2),
+      inject(IdsSelectControlValueAccessor)
+    );
+  }
+}
