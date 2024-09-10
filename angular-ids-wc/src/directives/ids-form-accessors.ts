@@ -88,8 +88,6 @@ export class IdsCheckboxValueAccessor extends CheckboxControlValueAccessor {
 })
 export class IdsRadioValueAccessor extends RadioControlValueAccessor {}
 
-
-
 @Directive({
   selector: `
     ids-dropdown[formControlName],ids-dropdown[formControl],ids-dropdown[ngModel],
@@ -122,6 +120,10 @@ export class IdsSelectControlValueAccessor extends SelectControlValueAccessor {}
 })
 export class IdsNgSelectOption extends NgSelectOption {
   constructor() {
-    super(inject(ElementRef), inject(Renderer2), inject(IdsSelectControlValueAccessor));
+    super(
+      inject(ElementRef),
+      inject(Renderer2),
+      inject(IdsSelectControlValueAccessor)
+    );
   }
 }
