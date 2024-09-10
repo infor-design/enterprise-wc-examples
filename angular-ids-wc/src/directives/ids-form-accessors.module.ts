@@ -22,6 +22,7 @@ import {
     IdsSelectControlValueAccessor,
     IdsNgSelectOption,
   ],
+  providers: [IdsSelectControlValueAccessor],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class IdsFormAccessorsModule {}
