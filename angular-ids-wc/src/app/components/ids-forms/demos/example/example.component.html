@@ -45,6 +45,8 @@
 
       <ids-input type="text" label="IDS Input ({{testInput}})" (ngModelChange)="onUpdate($event)" [(ngModel)]="testInput"></ids-input>
 
+      <ids-input type="text" label="IDS Input ({{testInput}}) - readonly-value" [value]="testInput" readonly></ids-input>
+
       <ids-lookup label="IDS Lookup ({{testLookup}})" clearable (ngModelChange)="onUpdate($event)" [(ngModel)]="testLookup"></ids-lookup>
 
       <ids-textarea label="IDS Textarea ({{testTextarea}})" (ngModelChange)="onUpdate($event)" [(ngModel)]="testTextarea"></ids-textarea>
