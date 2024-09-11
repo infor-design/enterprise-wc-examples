@@ -10,6 +10,16 @@ export class ExampleComponent implements OnInit {
 
   public testForm: FormGroup;
 
+  testDropdown0IndexValues = [
+    { address: { line1: '012 Hollywood Blvd', line2: 'Suite 210', city: 'Los Angeles', state: 'CA' } },
+    { address: { line1: '123 South Beach Ave', line2: 'Suite 321', city: 'Miami', state: 'FL' } },
+    { address: { line1: '234 Main St', line2: 'Suite 432', city: 'Atlanta', state: 'GA' } },
+    { address: { line1: '345 Wall St', line2: 'Suite 543', city: 'New York City', state: 'NY' } },
+    { address: { line1: '456 State St', line2: 'Suite 654', city: 'Philadelphia', state: 'PA' } },
+    { address: { line1: '567 Rodeo Dr', line2: 'Suite 765', city: 'Dallas', state: 'TX' } },
+    { address: { line1: '678 Broad St', line2: 'Suite 876', city: 'Seattle', state: 'WA' } },
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,7 +30,8 @@ export class ExampleComponent implements OnInit {
       testDateObject: new FormControl(new Date()),
       testDateString: new FormControl('12/31/2020'),
       testDropdown: new FormControl('opt5'),
-      testMultiselect: new FormControl(['opt1', 'opt1']),
+      testDropdown0Index: new FormControl(null),
+      testMultiselect: new FormControl(['opt1', 'opt3']),
       testInput: new FormControl('Original value', Validators.minLength(2)),
       testLookup: new FormControl(),
       testTextarea: new FormControl(),
@@ -41,6 +52,7 @@ export class ExampleComponent implements OnInit {
     console.log(`FormControl(testDateObject) value is: ${this.testForm.controls['testDateObject'].value}`);
     console.log(`FormControl(testDateString) value is: ${this.testForm.controls['testDateString'].value}`);
     console.log(`FormControl(testDropdown) value is: ${this.testForm.controls['testDropdown'].value}`);
+    console.log(`FormControl(testDropdown0Index) value is: ${this.testForm.controls['testDropdown0Index'].value}`);
     console.log(`FormControl(testMultiselect) value is: ${this.testForm.controls['testMultiselect'].value}`);
     console.log(`FormControl(testInput) value is: ${this.testForm.controls['testInput'].value}`);
     console.log(`FormControl(testLookup) value is: ${this.testForm.controls['testLookup'].value}`);
@@ -73,6 +85,16 @@ export class ExampleComponent implements OnInit {
       opt6: 'blank',
     }[this.testForm.controls['testDropdown'].value] ?? 'opt1';
 
+    const nextDropdown0IndexValue = {
+      0: 1,
+      1: 2,
+      2: 3,
+      3: 4,
+      4: 5,
+      5: 6,
+      6: 0,
+    }[this.testForm.controls['testDropdown0Index'].value] ?? 1;
+
     const nextMultiselectValue = {
       blank: 'opt1',
       opt1: 'opt2',
@@ -102,8 +124,9 @@ export class ExampleComponent implements OnInit {
     this.testForm.controls['testSearchField'].setValue(randomText(3));
 
     this.testForm.controls['testDropdown'].setValue(nextDropdownValue);
+    this.testForm.controls['testDropdown0Index'].setValue(nextDropdown0IndexValue);
     this.testForm.controls['testMultiselect'].setValue(nextMultiselectValue);
-    
+
     this.testForm.controls['testRadio'].setValue(nextRadioValue);
 
     this.testForm.controls['testSpinbox'].setValue(Math.floor(Math.random() * 100));
