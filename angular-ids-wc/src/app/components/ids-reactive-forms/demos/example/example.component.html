@@ -46,6 +46,15 @@
           </ids-list-box>
         </ids-dropdown>
 
+        <ids-dropdown label="IDS Dropdown 0-indexed" validate="required" formControlName="testDropdown0Index" ngDefaultControl [attr.value]=0>
+          <ids-list-box>
+            <ids-list-box-option group-label>Destinations</ids-list-box-option>
+            <ids-list-box-option *ngFor="let field of testDropdown0IndexValues; let i = index" [attr.id]="i" [attr.value]="i"
+                >{{ field.address.line1 }} ({{ field.address.city }}, {{ field.address.state }})
+            </ids-list-box-option>
+          </ids-list-box>
+        </ids-dropdown>
+
         <ids-multiselect label="IDS Multiselect" formControlName="testMultiselect" ngDefaultControl>
           <ids-list-box>
             <ids-list-box-option value="blank" id="opt0-ms" aria-label="Blank"><ids-checkbox
