@@ -1,5 +1,8 @@
 # Enterprise Web Component Examples
 
+> [!IMPORTANT]
+> This repo has been moved to https://oxford.awsdev.infor.com/infor-design/enterprise-wc-examples
+
 This repo contains example projects showing how to run the new [IDS web components](https://github.com/infor-design/enterprise-wc) in other frameworks. The goal of the web components is that you can use them in these frameworks without any use of wrappers or containing code.
 
 General Tests
